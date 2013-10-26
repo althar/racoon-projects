@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FTwoFramework">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../FTwoFramework/out/artifacts/FTwoFramework_jar/FTwoFramework.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
