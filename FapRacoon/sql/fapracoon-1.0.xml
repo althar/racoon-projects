@@ -1,0 +1,54 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet id="1" author="althar">
+        <sql>
+            CREATE TABLE public.category (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            CREATE TABLE public.tag (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            parent_tag BIGINT,
+            type BIGINT DEFAULT 1 NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            CREATE TABLE public.tag_type (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            INSERT INTO tag_type (id,name) VALUES (1,'author');
+            INSERT INTO tag_type (id,name) VALUES (2,'character');
+            INSERT INTO tag_type (id,name) VALUES (3,'characteristic');
+            CREATE TABLE public.tag_item (
+            id BIGSERIAL NOT NULL,
+            tag_id BIGINT NOT NULL,
+            item_id BIGINT NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            CREATE TABLE public.item (
+            id BIGSERIAL NOT NULL,
+            type VARCHAR DEFAULT 'image' NOT NULL,
+            name VARCHAR,
+            category VARCHAR NOT NULL,
+            hash VARCHAR NOT NULL,
+            source_url VARCHAR,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            rating DOUBLE PRECISION,
+            PRIMARY KEY(id)
+            ) ;
+            CREATE TABLE public.comment (
+            id BIGSERIAL NOT NULL,
+            comment VARCHAR,
+            item_id BIGINT NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+        </sql>
+    </changeSet>
+</databaseChangeLog>
+

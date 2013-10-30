@@ -1,0 +1,83 @@
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.LoginForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.DeliveryLists.EditDeliveryListsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Goods.AddEditGoodForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Import.ImportGoodsDetailsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.LogoForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.MainForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.AddEditOrderForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.FindGoodsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.OrderItem.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.OrderList.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.PictureViewForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Properties.Resources.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Purchase.PurchaseEditForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Purchase.PurchaseListsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DeliveryCostForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DiscountsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DriverMetrosForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.SettingsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Statistics.GoodsHistoryForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Statistics.StatisticsForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.AddEditUserForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.UsersForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.exe.config
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Content.ContentForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\HTMLWYSIWYG.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\bin\Debug\HTMLWYSIWYG.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.SettingsEditForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.LoginHistoryForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.BrandOrderForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.exe.config
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.exe
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudio.pdb
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\HTMLWYSIWYG.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.LoginForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Content.ContentForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.DeliveryLists.EditDeliveryListsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Goods.AddEditGoodForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Import.ImportGoodsDetailsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.LogoForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.MainForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.AddEditOrderForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.FindGoodsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.OrderItem.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.OrderList.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Orders.PictureViewForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Properties.Resources.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Purchase.PurchaseEditForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Purchase.PurchaseListsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.BrandOrderForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DeliveryCostForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DiscountsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.DriverMetrosForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.SettingsEditForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.SettingsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Statistics.GoodsHistoryForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Statistics.StatisticsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.AddEditUserForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.LoginHistoryForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.UsersForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.exe
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.pdb

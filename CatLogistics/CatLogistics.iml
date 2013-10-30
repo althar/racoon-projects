@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset1" name="XML Application Context" removed="false">
+          <file>file://$MODULE_DIR$/../Chaos/src/racoonsoft/chaos/settings/security.xml</file>
+          <file>jar://$MODULE_DIR$/../RacoonFramework/lib/camel-spring-1.6.4.jar!/META-INF/services/org/apache/camel/spring/debug.xml</file>
+          <file>jar://$MODULE_DIR$/../RacoonFramework/lib/camel-spring-1.6.4.jar!/META-INF/services/org/apache/camel/spring/trace.xml</file>
+          <file>jar://$MODULE_DIR$/../RacoonFramework/lib/spring-2.0.6.jar!/org/springframework/jdbc/support/sql-error-codes.xml</file>
+          <file>jar://$MODULE_DIR$/lib/spring-jdbc-3.2.2.RELEASE.jar!/org/springframework/jdbc/support/sql-error-codes.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
+    <orderEntry type="library" name="spring-3.2.2" level="project" />
+    <orderEntry type="library" name="spring-ws-2.0.2" level="project" />
+    <orderEntry type="library" name="spring-security-3.1.3" level="project" />
+    <orderEntry type="library" name="spring-batch-2.1.9" level="project" />
+    <orderEntry type="library" name="spring-mvc-3.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="org.apache.camel:camel-spring-integration:1.6.4" level="project" />
+    <orderEntry type="library" name="org.liquibase:liquibase-core:2.0.5" level="project" />
+  </component>
+</module>
+

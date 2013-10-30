@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main">
+
+    <TextView
+        android:id="@+id/text_scan_failure1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_scan_failure1a"
+        android:textColor="#000000"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/text_scan_failure2"
+        android:layout_below="@+id/text_scan_failure1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_scan_failure2"
+        android:textColor="#000000"
+        android:textSize="32dp"/>
+     
+   	<ImageView
+        android:id="@+id/image_scan_failure"
+        android:layout_below="@+id/text_scan_failure2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/krest" />
+
+	<RelativeLayout
+    	android:id="@+id/layout_rr_number"
+        android:layout_below="@+id/image_scan_failure"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+   	    <TextView
+	        android:id="@+id/label_railroad_number"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:text="@string/label_rr_slip_number"
+	        android:textColor="#000000"
+	        android:textSize="12dp"/>
+	    <TextView
+	        android:id="@+id/rr_slip_number"
+	        android:layout_weight="1"
+	        android:layout_below="@+id/label_railroad_number"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="12345678901234"
+	        android:textColor="#000000"
+	        android:textSize="28dp"/>
+	</RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/table2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_rr_number"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+	    <Button
+	        android:id="@+id/button_scan_again"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:drawableLeft="@drawable/strelka_red"
+		    android:drawablePadding="16dp"
+		   	android:paddingLeft="24dp"
+		    android:paddingRight="24dp"
+		    android:layout_width="fill_parent"
+   	        android:text="@string/button_scan_again" />
+	    <Button
+	        android:id="@+id/button_manual"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:layout_width="fill_parent"
+	        android:text="@string/button_manual" />
+	    <Button
+	        android:id="@+id/button_multi_stop"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:drawableLeft="@drawable/galka_black"
+	        android:paddingLeft="20dp"
+			android:text="@string/button_multi_stop" />
+	    	    
+	</LinearLayout>
+ 
+</RelativeLayout>

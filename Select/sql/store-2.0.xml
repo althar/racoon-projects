@@ -1,0 +1,158 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet id="1" author="althar">
+        <sql>
+            <!-- Good improvement -->
+            ALTER TABLE public.good
+            ADD COLUMN collection VARCHAR;
+            ALTER TABLE public.good
+            ADD COLUMN status INTEGER;
+            <!-- Foreign key for order_good -->
+            ALTER TABLE public.order_good
+            ADD CONSTRAINT order_good_fk FOREIGN KEY (order_id)
+            REFERENCES public.order_list(id)
+            ON DELETE CASCADE
+            ON UPDATE NO ACTION
+            NOT DEFERRABLE;
+            <!-- View for orders -->
+            CREATE OR REPLACE VIEW public.order_detail(
+            id,
+            user_id,
+            created,
+            delivery_time,
+            comment,
+            first_order,
+            total_good_price,
+            delivery_price,
+            discount,
+            total_price,
+            status,
+            delivery_variant,
+            address,
+            good_id,
+            good_name,
+            good_price,
+            good_count,
+            delivery_variant_name)
+            AS
+            SELECT ord.id,
+            ord.user_id,
+            ord.created,
+            ord.delivery_time,
+            ord.comment,
+            ord.first_order,
+            ord.good_price AS total_good_price,
+            ord.delivery_price,
+            ord.discount,
+            ord.total_price,
+            ord.status,
+            ord.delivery_variant,
+            ord.address,
+            g.good_id,
+            g.name AS good_name,
+            g.price AS good_price,
+            g.count AS good_count,
+            dv.name AS delivery_variant_name
+            FROM order_list ord,
+            order_good g,
+            delivery_variant dv
+            WHERE ord.id = g.order_id AND
+            dv.id = ord.delivery_variant;
+            <!-- Image improvement -->
+            ALTER TABLE public.good_image
+            DROP COLUMN type;
+            ALTER TABLE public.good_image
+            DROP COLUMN is_our_side;
+            ALTER TABLE public.good_image
+            ADD COLUMN width INTEGER;
+            ALTER TABLE public.good_image
+            ADD COLUMN height INTEGER;
+            ALTER TABLE public.good_image
+            ADD COLUMN parent_id BIGINT;
+            ALTER TABLE public.good_image
+            ADD COLUMN variant VARCHAR;
+            ALTER TABLE public.good_image
+            ADD COLUMN type BIGINT;
+        </sql>
+    </changeSet>
+    <changeSet id="2" author="althar">
+        <sql>
+            CREATE TABLE public.order_status (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+
+            ALTER TABLE public.order_status
+            ALTER COLUMN id SET STATISTICS 0;
+
+            ALTER TABLE public.order_status
+            ALTER COLUMN name SET STATISTICS 0;
+
+            INSERT INTO public.order_status (name) VALUES ('Новый');
+            INSERT INTO public.order_status (name) VALUES ('Подтвержденный');
+            INSERT INTO public.order_status (name) VALUES ('Выплоненный');
+            INSERT INTO public.order_status (name) VALUES ('Удаленный');
+
+            ALTER TABLE public.user_list
+            ADD COLUMN name VARCHAR;
+            ALTER TABLE public.user_list
+            ADD COLUMN comment VARCHAR;
+        </sql>
+    </changeSet>
+    <changeSet id="3" author="althar">
+        <sql>
+            CREATE OR REPLACE VIEW public.order_detail(
+            id,
+            phone,
+            email,
+            name,
+            created,
+            delivery_time,
+            comment,
+            first_order,
+            total_good_price,
+            delivery_price,
+            discount,
+            total_price,
+            status,
+            delivery_variant,
+            address,
+            good_id,
+            good_name,
+            good_price,
+            good_count,
+            delivery_variant_name)
+            AS
+            SELECT ord.id,
+            u.login AS phone,
+            u.email,
+            u.name,
+            ord.created,
+            ord.delivery_time,
+            ord.comment,
+            ord.first_order,
+            ord.good_price AS total_good_price,
+            ord.delivery_price,
+            ord.discount,
+            ord.total_price,
+            ord.status,
+            ord.delivery_variant,
+            ord.address,
+            g.good_id,
+            g.name AS good_name,
+            g.price AS good_price,
+            g.count AS good_count,
+            dv.name AS delivery_variant_name
+            FROM order_list ord,
+            order_good g,
+            delivery_variant dv,
+            user_list u
+            WHERE ord.id = g.order_id AND
+            dv.id = ord.delivery_variant AND
+            u.id = ord.user_id;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

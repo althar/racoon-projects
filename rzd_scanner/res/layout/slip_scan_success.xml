@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Layout3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="@drawable/background_main">
+
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <TableRow android:layout_weight="1" android:gravity="center_horizontal">
+
+		<RelativeLayout
+		    android:id="@+id/RelativeLayout3"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_gravity="center_vertical"
+		    android:gravity="center_vertical"
+		    android:orientation="vertical"
+		    android:padding="8dp" >
+
+		    <TextView
+		        android:id="@+id/label_rr_slip_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:text="@string/label_rr_slip_number"
+		        android:textColor="#000000"
+		        android:textSize="12dp" />
+
+		    <TextView
+		        android:id="@+id/rr_slip_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/label_rr_slip_number"
+		        android:text="12345678901234"
+		        android:textColor="#000000"
+		        android:textSize="26dp" />
+
+		    <CheckBox
+		        android:id="@+id/button_lock"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="30dp"
+		        android:paddingRight="30dp"
+		        android:layout_alignBottom="@+id/rr_slip_number"
+		        android:layout_toRightOf="@+id/rr_slip_number"
+		        android:button="@drawable/lock_selector"
+		         />
+
+		</RelativeLayout>
+
+	</TableRow>   
+	<TableRow android:layout_weight="1" android:gravity="center_horizontal|center_vertical">
+        <TextView
+	        android:id="@+id/msg_rr_scan_success_1"
+	        android:layout_below="@+id/railroad_number"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/msg_rr_scan_success_1"
+	        android:textColor="#000000"
+	        android:textSize="24dp"/>
+	</TableRow>   
+	<TableRow android:layout_weight="1" android:gravity="center_horizontal|center_vertical">
+        <TextView
+	        android:id="@+id/msg_rr_scan_success_2"
+	        android:layout_below="@+id/msg_rr_scan_success_1"
+	        android:layout_alignParentLeft="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/msg_rr_scan_success_2"
+	        android:textColor="#000000"
+	        android:textSize="16dp"/>
+	</TableRow>   
+	<TableRow android:layout_weight="1" android:gravity="center_horizontal|center_vertical">
+	    <Button
+	        android:id="@+id/button_scan_lottery"
+		    android:layout_below="@+id/msg_rr_scan_success_2"
+	        style="@style/Button"
+	        android:layout_alignParentBottom="true"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+			android:text="@string/button_scan_lottery" />
+	</TableRow>   
+</TableLayout>
+</RelativeLayout>
+
+

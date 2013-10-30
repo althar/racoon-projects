@@ -1,0 +1,66 @@
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.AuthorizationForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.MainForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Properties.Resources.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Users.AddEditUser.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Goods.AddEditGoodForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Goods.GoodPictureHolder.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Finance.MakeTransactionForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Goods.PurchaseGoodForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Orders.EditOrderForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Administration.VariablesForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Administration.BonusForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\LowByAdmin\LowByAdmin\obj\x86\Debug\LowByAdmin.Administration.DeliverTypesForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.BonusForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.DeliverTypesForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.VariablesForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.AuthorizationForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.MainForm.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Properties.Resources.resources
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\SelectAdmin\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\LowByAdmin.exe
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\LowByAdmin.pdb
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.BonusForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.DeliverTypesForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.VariablesForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.AuthorizationForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.MainForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Properties.Resources.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Goods.FormEditGood.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Goods.PictureList.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Administration.ArticlesForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\HTMLWYSIWYG.dll
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Debug\HTMLWYSIWYG.pdb
+C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Debug\LowByAdmin.Orders.OrderForm.resources

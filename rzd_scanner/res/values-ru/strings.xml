@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="app_name">Сканер билетов</string>
+  <string name="title_about">Сканер билетов, версия </string>
+
+  <string name="status_starting">Подготовка</string>
+  <string name="status_network_on">Есть сеть</string>
+  <string name="status_network_off">Нет сети</string>
+  <string name="status_no_data">, все данные отправлены</string>
+  <string name="status_data_waiting">, данные ждут отправки</string>
+
+  <string name="app_picker_name">Программы</string>
+  
+  <string name="button_back">Назад</string>
+  <string name="button_cancel">Отмена</string>
+  <string name="button_ok">OK</string>
+  <string name="button_backspace">стереть</string>
+  <string name="button_start">Начать</string>
+  <string name="button_scan_slip">Сканировать штих-код <b>Ж/Д СЛИПА</b></string>
+  <string name="button_startstop_start">Начать</string>
+  <string name="button_startstop_stop">Завершить</string>
+  <string name="button_send_first">Сканировать</string>
+  <string name="button_send">Отправить и продолжить сканирование</string>
+  <string name="button_scan_again">Повторить сканирование</string>
+  <string name="button_manual">Ввести вручную</string>
+  <string name="button_scan_lottery">Сканировать штрих-код\nЛОТЕРЕЙНОЙ\nнаклейки</string>
+  <string name="button_continue_scan">Сканировать дальше</string>
+  <string name="button_done">Я всё отсканировал</string>
+  <string name="button_multi_stop">Наклеек \nбольше нет</string>
+  <string name="button_multi_next">Следующая наклейка</string>
+  <string name="button_check_update">Обновить</string>
+  <string name="button_continue_anyway">Все равно продолжить</string>
+  <string name="button_settings">Перейти к настройкам</string>
+  <string name="button_0">0</string>
+  <string name="button_1">1</string>
+  <string name="button_2">2</string>
+  <string name="button_3">3</string>
+  <string name="button_4">4</string>
+  <string name="button_5">5</string>
+  <string name="button_6">6</string>
+  <string name="button_7">7</string>
+  <string name="button_8">8</string>
+  <string name="button_9">9</string>
+  
+  
+  <string name="label_rr_slip_number">Номер Ж/Д слипа</string>
+  <string name="label_lt_sticker_number">Номер ЛОТЕРЕЙНОЙ наклейки</string>
+  <string name="label_lt_sticker_set">Номера Лотерейных наклеек</string>
+  <string name="label_personal_id">Табельный номер начальника поезда</string>
+  <string name="label_ticket_count">Количество билетов</string>
+  
+  <string name="menu_about">О программе</string>
+  <string name="menu_help">Помощь</string>
+  <string name="menu_settings">Настройки</string>
+  
+  <string name="msg_banner">Сканирование билетов</string>
+  <string name="msg_about">Основано на свободной библиотеке штрих-кодов ZXing</string>
+  <string name="msg_enter_id">Для продолжения работы \nвведите табельный номер начальника поезда</string>
+  <string name="msg_enter_code">Введите код</string>
+  <string name="msg_enter_rr">Введите номер Ж/Д слипа вручную</string>
+  <string name="msg_enter_lt">Введите номер ЛОТЕРЕЙНОЙ наклейки вручную</string>
+  <string name="msg_camera_framework_bug">К сожалению, возникла ошибка камеры. Вам может потребоваться перезагрузка устройства.</string>
+  <string name="msg_default_status">Поместите штрих-код так, чтобы зеленая линия его перечёркивала.</string>
+  <string name="msg_default_time">Время</string>
+  <string name="msg_default_type">Тип</string>
+  <string name="msg_scan_railroad_ticket">Поместите штрих-код Ж/Д слипа так, чтобы зеленая линия его перечёркивала.</string>
+  <string name="msg_scan_lottery_ticket">Поместите штирх-код ЛОТЕРЕЙНОЙ наклейки так, чтобы зеленая линия его перечёркивала.</string>
+  <string name="msg_instruction">Сканируйте ЛЕВЫЙ штрих-код на ж/д слипе, затем штрих-код лотерейной наклейки</string>
+  <string name="msg_scan_failure1">Номер Ж/Д слипа</string>
+  <string name="msg_scan_failure1a">Номер ЛОТЕРЕЙНОЙ наклейки</string>
+  <string name="msg_scan_failure2">НЕ РАСПОЗНАН</string>
+  <string name="msg_rr_scan_success_1">Сканируйте штрих-код\nлотерейной наклейки</string>
+  <string name="msg_rr_scan_success_2">Если на слипе\n<b>несколько лотерейных наклеек</b>,\nнажмите кнопку с замком возле\nномера Ж/Д слипа выше</string>
+  <string name="msg_mistake_rr">Пожалуйста, наведите на код Ж/Д слипа</string>
+  <string name="msg_mistake_lt">Пожалуйста, наведите на код лотерейной наклейки</string>
+  <string name="msg_same_numbers">Номер наклейки совпадает с номером Ж/Д билета</string>
+  <string name="msg_duplicate_lt">Такая наклейка уже введена</string>
+  <string name="msg_multi_mode">Режим сканирования нескольких ЛОТЕРЕЙНЫХ наклеек</string>
+  <string name="msg_unsupported_hardware">Такой телефон еще не прошел тестирование</string>
+  <string name="msg_no_sdcard">Отсутствует карта памяти. Пожалуйста, вставьте карту.</string>
+  <string name="msg_sdcard_full">Карта памяти переполнена. Пожалуйста, Замените.</string>
+  <string name="msg_sdcard_almost_full">На карте памяти заканчивается место. Пожалуйста, приготовьте замену.</string>
+  <string name="msg_non_market">Пожалуйста, разрешите установку приложений из неизвестного источника</string>
+  <string name="msg_usb_debug">Для обслуживания программы нужно разрешить отладку по USB</string>
+  
+  <string name="preferences_name">Настройки</string>
+  <string name="preferences_action_title">Обнаружив код на билете...</string>
+  <string name="preferences_play_beep_title">...пищать</string>
+  <string name="preferences_vibrate_title">...вибрировать</string>
+  <string name="preferences_general_title">При сканировании...</string>
+  <string name="preferences_front_light_summary">Улучшает распознавание в условиях низкой освещенности, но может вызвать блики. Работает не на всех устройствах.</string>
+  <string name="preferences_front_light_title">...включать фонарик</string>
+
+  <string name="numeric_dialog_short">(введены не все цифры)</string>      
+  <string name="numeric_dialog_invalid">Неверное число</string>    
+  
+  <string name="downloader_title">Сканер билетов</string>
+  <string name="downloader_description">Загрузка обновления для сканера билетов</string>
+    
+  <string name="description_img">рисунок</string>
+</resources>

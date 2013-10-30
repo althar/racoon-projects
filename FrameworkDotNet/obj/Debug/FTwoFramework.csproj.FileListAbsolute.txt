@@ -1,0 +1,21 @@
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\FTwoFramework.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\ZetaHtmlEditControl.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\HttpServer.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\SgmlReaderDll.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\ZetaHtmlEditControl.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\de\ZetaHtmlEditControl.resources.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\FTwoFramework.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.pdb

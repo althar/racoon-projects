@@ -1,0 +1,223 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="althar">
+        <sql>
+            CREATE TABLE public.user_list (
+            id BIGSERIAL NOT NULL,
+            login VARCHAR NOT NULL,
+            email VARCHAR,
+            password VARCHAR NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            address VARCHAR,
+            delivery_distance_id BIGINT,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.user_role (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT,
+            role VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.history (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT,
+            page VARCHAR NOT NULL,
+            action VARCHAR DEFAULT 'Посещение страницы' NOT NULL,
+            description VARCHAR,
+            referer VARCHAR,
+            ip VARCHAR,
+            user_agent VARCHAR,
+            tracking_id VARCHAR NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE SEQUENCE public.tracking_id_seq;
+
+            CREATE TABLE public.good (
+            id BIGSERIAL NOT NULL,
+            store_id BIGINT NOT NULL,
+            brand VARCHAR NOT NULL,
+            article VARCHAR NOT NULL,
+            name VARCHAR NOT NULL,
+            supplier VARCHAR NOT NULL,
+            category VARCHAR NOT NULL,
+            purchase_price DOUBLE PRECISION NOT NULL,
+            sell_price DOUBLE PRECISION NOT NULL,
+            available INTEGER DEFAULT 0 NOT NULL,
+            description VARCHAR,
+            short_description VARCHAR,
+            seo_description VARCHAR,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            modified TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.good_characteristic (
+            id BIGSERIAL NOT NULL,
+            good_id BIGINT NOT NULL,
+            name VARCHAR NOT NULL,
+            value VARCHAR NOT NULL,
+            description VARCHAR NOT NULL,
+            unit VARCHAR DEFAULT '' NOT NULL,
+            type VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.category_detail (
+            id BIGSERIAL NOT NULL,
+            category_name VARCHAR NOT NULL,
+            image_url VARCHAR NOT NULL,
+            description VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.good_image (
+            id BIGSERIAL NOT NULL,
+            good_id BIGINT NOT NULL,
+            is_main BOOLEAN DEFAULT FALSE NOT NULL,
+            url VARCHAR DEFAULT 'img/good/small/noimage.jpg' NOT NULL,
+            size VARCHAR DEFAULT '120' NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.order_list (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            delivery_time TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            comment VARCHAR,
+            first_order BOOLEAN DEFAULT false NOT NULL,
+            good_price DOUBLE PRECISION NOT NULL,
+            delivery_price DOUBLE PRECISION NOT NULL,
+            discount DOUBLE PRECISION NOT NULL,
+            total_price DOUBLE PRECISION NOT NULL,
+            status VARCHAR DEFAULT 'Новый' NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.order_good (
+            id BIGSERIAL NOT NULL,
+            order_id BIGINT NOT NULL,
+            good_id BIGINT NOT NULL,
+            name VARCHAR NOT NULL,
+            price DOUBLE PRECISION NOT NULL,
+            count INTEGER DEFAULT 1 NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.order_discount (
+            id BIGSERIAL NOT NULL,
+            order_id BIGINT NOT NULL,
+            discount_type VARCHAR DEFAULT 'Сертификат' NOT NULL,
+            value DOUBLE PRECISION NOT NULL,
+            certificate_id BIGINT,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.certificate (
+            id BIGSERIAL NOT NULL,
+            order_id BIGINT NOT NULL,
+            user_login VARCHAR NOT NULL,
+            key VARCHAR NOT NULL,
+            value DOUBLE PRECISION NOT NULL,
+            expires DATE DEFAULT date('2020-01-01'),
+            used BOOLEAN DEFAULT FALSE,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.delivery_variant (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            price DOUBLE PRECISION NOT NULL,
+            description VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+        </sql>
+    </changeSet>
+    <changeSet id="2" author="althar">
+        <sql>
+            <!-- Add flag for images, if they are on our side... -->
+            ALTER TABLE public.good_image
+            ADD COLUMN is_our_side BOOLEAN DEFAULT FALSE;
+        </sql>
+    </changeSet>
+    <changeSet id="3" author="althar">
+        <sql>
+            <!-- Add parent url for image -->
+            ALTER TABLE public.good_image
+            ADD COLUMN parent_url VARCHAR;
+        </sql>
+    </changeSet>
+    <changeSet id="4" author="althar">
+        <sql>
+            DROP TABLE public.category_detail;
+
+            CREATE TABLE public.category(
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            full_name VARCHAR NOT NULL,
+            parent_id BIGINT,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+        </sql>
+    </changeSet>
+    <changeSet id="5" author="althar">
+        <sql>
+            ALTER TABLE public.good
+            ADD COLUMN category_id BIGINT;
+        </sql>
+    </changeSet>
+    <changeSet id="6" author="althar">
+        <sql>
+            ALTER TABLE public.good
+            ADD COLUMN parent_id BIGINT;
+            ALTER TABLE public.good
+            ADD COLUMN special VARCHAR;
+
+            CREATE TABLE public.seo_article (
+            id BIGSERIAL NOT NULL,
+            title VARCHAR NOT NULL,
+            text VARCHAR NOT NULL,
+            page VARCHAR DEFAULT 'Каталог',
+            keyword VARCHAR DEFAULT 'Сантехника',
+            link VARCHAR DEFAULT '/Каталог/',
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+        </sql>
+    </changeSet>
+    <changeSet id="7" author="althar">
+        <sql>
+            ALTER TABLE public.seo_article
+            ADD COLUMN location VARCHAR DEFAULT 'footer' NOT NULL;
+        </sql>
+    </changeSet>
+    <changeSet id="8" author="althar">
+        <sql>
+            ALTER TABLE public.order_list
+            ADD COLUMN delivery_variant BIGINT;
+            ALTER TABLE public.order_list
+            ADD COLUMN address VARCHAR;
+        </sql>
+    </changeSet>
+    <changeSet id="9" author="althar">
+        <sql>
+            ALTER TABLE public.good
+            ADD COLUMN equipment VARCHAR;
+        </sql>
+    </changeSet>
+    <changeSet id="10" author="althar">
+        <sql>
+            ALTER TABLE public.good_image
+            ADD COLUMN type VARCHAR;
+        </sql>
+    </changeSet>
+</databaseChangeLog>
+

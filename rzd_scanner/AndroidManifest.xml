@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.octys.rzd"
+          android:versionCode="31"
+          android:versionName="1.8.10" >
+
+    <uses-sdk
+            android:minSdkVersion="9"
+            android:targetSdkVersion="9" />
+
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="true" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+            android:debuggable="true"
+            android:icon="@drawable/launcher_icon"
+            android:label="@string/app_name"
+            android:name="com.octys.rzd.TicketScannerApplication"
+            android:theme="@style/TicketScanner_Theme">
+        <activity
+                android:configChanges="keyboardHidden|orientation"
+                android:screenOrientation="portrait"
+                android:launchMode="singleTop"
+                android:name=".TicketScannerActivity" >
+            <meta-data
+                    android:name="android.dock_home"
+                    android:value="true" />
+
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:configChanges="orientation|keyboardHidden"
+                android:launchMode="singleTop"
+                android:name=".ScanActivity"
+                android:screenOrientation="landscape"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <service android:name=".TicketScannerService" >
+        </service>
+
+        <receiver
+                android:enabled="true"
+                android:exported="false"
+                android:label="ServiceLauncher"
+                android:name=".ServiceLauncher" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:enabled="true"
+                android:exported="false"
+                android:label="CarModeOffReceiver"
+                android:name=".CarModeOffReceiver" >
+            <intent-filter >
+                <action android:name="android.app.action.EXIT_CAR_MODE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>

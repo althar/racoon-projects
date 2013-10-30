@@ -1,0 +1,8 @@
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Release\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Release\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Release\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Release\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Release\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Release\Framework.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Release\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Release\OwlBusinessStudioLib.pdb

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Layout3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dip"
+    android:background="@drawable/background_main">
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:id="@+id/mode"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:gravity="center_vertical"
+	        android:text="@string/msg_multi_mode"
+	        android:textColor="#000000"
+	        android:textSize="20dp"
+	        android:minLines="3" />
+<!-- 	    
+   	   	<ImageView
+	        android:id="@+id/imageGreenCheck"
+	        android:layout_weight="2"
+	        android:layout_height="0dp"
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="center_horizontal|center_vertical"
+	        android:adjustViewBounds="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/galka" />
+
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		     android:layout_weight="1"
+		    android:orientation="vertical">
+    	    <TextView
+		        android:id="@+id/label_railroad_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:text="@string/label_rr_slip_number"
+		        android:textColor="#000000"
+		        android:textSize="12dp"/>
+		    <TextView
+		        android:id="@+id/rr_slip_number"
+		        android:layout_weight="1"
+		        android:layout_below="@+id/label_railroad_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="12345678901234"
+		        android:textColor="#000000"
+		        android:textSize="28dp"/>
+	    </RelativeLayout>
+ -->	    
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		     android:layout_weight="1"
+		    android:orientation="vertical">
+    	    <TextView
+		        android:id="@+id/label_lottery_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:text="@string/label_lt_sticker_number"
+		        android:textColor="#000000"
+		        android:textSize="12dp"/>
+		    <TextView
+		        android:id="@+id/lt_sticker_number"
+		        android:layout_weight="1"
+		        android:layout_below="@+id/label_lottery_number"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="12345678901234"
+		        android:textColor="#000000"
+		        android:textSize="28dp"/>
+	    </RelativeLayout>
+	    <Button
+	        android:id="@+id/button_multi_next"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:layout_height="wrap_content"
+	        android:drawableLeft="@drawable/strelka"
+	        android:paddingLeft="20dp"
+			android:text="@string/button_multi_next" />
+	    <Button
+	        android:id="@+id/button_multi_stop"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:layout_alignParentBottom="false"
+	        android:layout_height="wrap_content"
+	        android:drawableLeft="@drawable/galka_black"
+	        android:paddingLeft="20dp"
+			android:text="@string/button_multi_stop" />
+	</LinearLayout>
+</RelativeLayout>
+
+

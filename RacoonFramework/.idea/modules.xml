@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CatLogistics/CatLogistics.iml" filepath="$PROJECT_DIR$/../CatLogistics/CatLogistics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Chipped/Chipped.iml" filepath="$PROJECT_DIR$/../Chipped/Chipped.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RacoonFramework.iml" filepath="$PROJECT_DIR$/RacoonFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TinyHeroes/TinyHeroes.iml" filepath="$PROJECT_DIR$/../TinyHeroes/TinyHeroes.iml" />
+    </modules>
+  </component>
+</project>
+

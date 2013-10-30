@@ -1,0 +1,23 @@
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="althar">
+        <createTable tableName="users">
+            <column name="id" type="bigserial"/>
+            <column name="company" type="varchar"/>
+            <column name="role" type="integer"/>
+            <column name="parent_id" type="integer"/>
+            <column name="created" type="timestamp" defaultValueComputed="now()"/>
+            <column name="phone" type="varchar"/>
+            <column name="email" type="varchar"/>
+            <column name="password" type="varchar"/>
+        </createTable>
+        <addPrimaryKey tableName="users" columnNames="id"/>
+        <addNotNullConstraint tableName="users" columnName="company"/>
+        <addNotNullConstraint tableName="users" columnName="password"/>
+        <addNotNullConstraint tableName="users" columnName="phone"/>
+    </changeSet>
+</databaseChangeLog>
+

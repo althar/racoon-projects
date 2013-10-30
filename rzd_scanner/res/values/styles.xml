@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<style name="Button" parent="@android:style/Widget.Button">
+    <item name="android:layout_margin">4dp</item>"
+    <item name="android:background" >@drawable/button1_background_selector</item>
+    <item name="android:textSize" >20dp</item>
+    <item name="android:textColor" >@drawable/button1_text_color_selector</item>
+    <item name="android:textStyle" >bold</item>
+    <item name="android:focusable" >true</item>
+    <item name="android:clickable" >true</item>
+    <item name="android:layout_height">fill_parent</item>
+    <item name="android:layout_width">fill_parent</item>
+</style>
+
+<style name="Button_big" parent="Button">
+    <item name="android:drawablePadding" >2dp</item>
+    <item name="android:paddingLeft" >80dp</item>
+    <item name="android:paddingRight" >80dp</item>
+    <item name="android:paddingTop" >24dp</item>
+    <item name="android:paddingBottom" >24dp</item>
+    <item name="android:layout_height">wrap_content</item>
+</style>
+    
+<style name="Button_keypad" parent="Button">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:textSize" >36dp</item>
+</style>
+
+    
+<style name="NumericDialogTheme" parent="@android:style/Theme.Dialog">
+	<item name="android:windowBackground">@drawable/background</item>
+	<item name="android:windowIsFloating">true</item>
+	<item name="android:windowNoTitle">true</item>
+	<item name="android:windowFullscreen">true</item> 
+	<item name="android:buttonStyle">@style/Button_keypad</item>
+</style>
+
+<style name="FullscreenDialogTheme" parent="@android:style/Theme.Dialog">
+    <item name="android:windowBackground">@drawable/background</item>
+	<item name="android:windowFullscreen">true</item> 
+	<item name="android:windowNoTitle">true</item>
+	<item name="android:windowIsFloating">true</item>
+</style>
+    
+</resources>

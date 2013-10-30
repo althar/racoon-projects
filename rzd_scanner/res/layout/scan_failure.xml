@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main">
+
+    <TextView
+        android:id="@+id/text_scan_failure1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_scan_failure1"
+        android:textColor="#000000"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/text_scan_failure2"
+        android:layout_below="@+id/text_scan_failure1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/msg_scan_failure2"
+        android:textColor="#000000"
+        android:textSize="32dp"/>
+     
+   	<ImageView
+        android:id="@+id/image_scan_failure"
+        android:layout_below="@+id/text_scan_failure2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description_img"
+        android:src="@drawable/krest" />
+   
+    <LinearLayout
+        android:id="@+id/table2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/image_scan_failure"
+        android:orientation="vertical">
+        
+	    <Button
+	        android:id="@+id/button_scan_again"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:drawableLeft="@drawable/strelka_red"
+		    android:drawablePadding="16dp"
+		   	android:paddingLeft="24dp"
+		    android:paddingRight="24dp"
+		    android:layout_width="fill_parent"
+   	        android:text="@string/button_scan_again" />
+	    <Button
+	        android:id="@+id/button_manual"
+	        android:layout_weight="1"
+	        style="@style/Button"
+	        android:layout_width="fill_parent"
+	        android:text="@string/button_manual" />
+	</LinearLayout>
+ 
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Select:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/Select_war</output-path>
+    <root id="archive" name="Select_war.war">
+      <element id="artifact" artifact-name="Select:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.google.protobuf:protobuf-java:2.5.0" />
+          <element id="library" level="project" name="api-9.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/../RacoonFramework/lib/dbfEngine_bin-1.04.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,16 @@
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\Framework.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Debug\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Debug\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\bin\Debug\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Debug\Framework.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Debug\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\Framework\obj\Debug\OwlBusinessStudioLib.pdb

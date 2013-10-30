@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../CatLogistics/sql/catlogistics-1.0.0.0.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/sql/changelog.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/MainConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/PersistConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/SecureConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/ServiceConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/WebConfig.java" charset="UTF-8" />
+  </component>
+</project>
+

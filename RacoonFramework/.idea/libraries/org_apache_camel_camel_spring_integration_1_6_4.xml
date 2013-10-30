@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="org.apache.camel:camel-spring-integration:1.6.4" type="repository">
+    <properties maven-id="org.apache.camel:camel-spring-integration:1.6.4" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/camel-spring-integration-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/camel-core-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/camel-spring-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-core-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-beans-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-tx-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aop-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.springframework.integration-1.0.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

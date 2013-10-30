@@ -1,0 +1,90 @@
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="althar">
+        <sql>
+            CREATE TABLE public."user" (
+            id BIGSERIAL NOT NULL,
+            login VARCHAR,
+            email VARCHAR,
+            password VARCHAR NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.user_role (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT,
+            role VARCHAR NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.history (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT,
+            page VARCHAR NOT NULL,
+            action VARCHAR DEFAULT 'Посещение' NOT NULL,
+            description VARCHAR,
+            referer VARCHAR,
+            ip VARCHAR,
+            user_agent VARCHAR,
+            tracking_id VARCHAR NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.good (
+            id BIGSERIAL NOT NULL,
+            store_id BIGINT NOT NULL,
+            brand VARCHAR NOT NULL,
+            name VARCHAR NOT NULL,
+            purchase_price DOUBLE PRECISION NOT NULL,
+            sell_price DOUBLE PRECISION NOT NULL,
+            available INTEGER DEFAULT 0 NOT NULL,
+            description VARCHAR,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            modified TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+            CREATE TABLE public.good_image (
+            id BIGSERIAL NOT NULL,
+            good_id BIGINT NOT NULL,
+            is_main BOOLEAN DEFAULT FALSE NOT NULL,
+            url VARCHAR DEFAULT 'img/good/small/noimage.jpg' NOT NULL,
+            size VARCHAR DEFAULT '120' NOT NULL,
+            PRIMARY KEY(id)
+            ) WITHOUT OIDS;
+
+
+        </sql>
+    </changeSet>
+    <changeSet id="2" author="althar">
+        <sql>
+
+        </sql>
+    </changeSet>
+    <changeSet id="3" author="althar">
+        <sql>
+
+        </sql>
+    </changeSet>
+    <changeSet id="4" author="althar">
+        <sql>
+
+        </sql>
+    </changeSet>
+    <changeSet id="5" author="althar">
+        <sql>
+
+        </sql>
+    </changeSet>
+    <changeSet id="6" author="althar">
+        <sql>
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>
+
