@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="img/gui/icon_cat.gif" rel="shortcut icon" type="image/x-icon" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
+
+        <script type="text/javascript" src="js/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.timer.js"></script>
+        <script type="text/javascript" src="js/general/init.js"></script>
+        <script type="text/javascript" src="js/general/formatting.js"></script>
+        <script type="text/javascript" src="js/framework/controls.js"></script>
+        <script type="text/javascript" src="js/framework/animation.js"></script>
+        <script type="text/javascript" src="js/logic/self-delivery.js"></script>
+
+
+<title>ZooMag — интернет-магазин товаров для животных</title>
+</head>
+<body class="">
+<div id="spam"></div>
+<!-- overlay -->
+<div class="overlay hidden" id="product_form">
+	<div class="product_window_margin_t"></div>
+	<div class="product_window_margin_rl ">
+		<div class="product_window corners_10 shadow_50">
+			<div class="padding"> <a class="close corners_15" id="product_form_close"><img src="img/gui/icon_close.gif" alt="" /></a>
+				<div class="photo"> <img id="current_good_img" src="img/goods/tmp2.jpg" alt="" /> </div>
+				<p class="title" id="current_good_name">Hills 9852 Adult Ocean Fish</p>
+				<p class="desc" id="current_good_description">Цена за упаковку (24 шт по 85 г). Сохранить здоровье Вашей взрослой кошки и обеспечить ей счастливую жизнь может быть так же просто, как и открыть банку консервов Science Plan Feline Adult с морепродуктами. В корме сочетается великолепный вкус, который любит кошка, со всеми питательными веществами, которые ей необходимы для сохранения активности и здоровья на протяжении долгой жизни.</p>
+				<p class="comment" id="current_good_details">Тип корма — повседневный. Возраст — взрослый. Вес продукта — 2.04 kg</p>
+				<div id="good_weights">
+					<div class="price">
+						<div class="weight_tag">
+							<div class="value">300 г</div>
+						</div>
+						<div class="price_tag">
+							<div class="value" id="current_good_price_span">500 <span class="rur">c</span></div>
+						</div>
+						<a class="buy corners_3" id="in_basket_link"> <img src="img/basket_l.gif" alt=""/> </a> </div>
+					<div class="price">
+						<div class="weight_tag">
+							<div class="value">300 г</div>
+						</div>
+						<div class="price_tag">
+							<div class="value">500 <span class="rur">c</span></div>
+						</div>
+						<a class="buy corners_3" fast_link_in_basket="true" id="14214"> <img src="img/basket_l.gif" alt=""/> </a> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- header -->
+<div class="header">
+	<div class="padding_rl_main">
+		<div class="container">
+			<div class="col25 logo pointer" id="logo_div">
+				<div class="padding_rl10"> <img src="img/gui/logo.gif" alt="ZooMag" /> </div>
+			</div>
+			<div class="col50 contacts">
+                <div class="padding_rl10">
+                    <p class="phone" content_name="phone"><span class="prefix" >(495)</span>514-55-89</p>
+                    <p class="phone_info" content_name="work_time">С 9:00 до 21:00 по будням, с 10:00 до 22:00 по выходным</p>
+                </div>
+			</div>
+			<div class="col25 account">
+				<div class="padding_rl10">
+					<div class="auth shadow_10 corners_10 hidden" id="auth_form">
+						<div class="padding_rl20">
+							<input type="text" class="input_s corners_3" id="login_input"/>
+							<input type="text" class="input_s corners_3" id="password_input"/>
+                            <input type="button" id="login_butt" value="Войти"/>
+							<p class="error hidden" id="auth_error_hint">Ошибка авторизации: введенный вами котейка не найден</p>
+                            <p><a href="#" id="upper_recover_password">Напомнить пароль</a></p>
+						</div>
+					</div>
+                    <p class="basket" id="basket"><img src="img/gui/basket_s.gif" alt="Корзина" /><a href="basket.html" id="basket_text">Корзина пуста</a></p>
+                    <p class="user"><a href="#" id="profile_link">Личный кабинет</a></p>
+                    <p class="user"><a href="/Authentication?cmd=logout&redirect=basket.html" id="logout_link">Выйти</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="nav_wrap">
+			<div class="padding_rl10">
+                <div class="nav gradient_lime shadow_inset corners_10"> <a href="home.html">Главная</a> <span class="sep">—</span> <a href="self-delivery.html">Самовывоз</a> <span class="sep">—</span> <a href="delivery.html">Доставка</a> <span class="sep">—</span> <a href="discount.html">Скидки и акции</a> <span class="sep">—</span> <a href="about.html">О магазине</a> </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- content -->
+<div class="content" id="content_div">
+	<div class="padding_rl_main"> 
+		
+		<!-- navigation -->
+		<div class="products_nav">
+			<div class="padding_rl10">
+				<div class="section" id="dogs_category">
+					<div class="title">Для собак</div>
+					<a href="#" class="level-1">Сухой</a> <a href="#" class="level-1">Влажный</a> <a href="#" class="level-1">Лакомства</a> <a href="#" class="level-1">Диетическое питание</a> </div>
+				<div class="section" id="cats_category">
+					<div class="title">Для кошек</div>
+					<a href="#" class="level-1">Сухой</a> <a href="#" class="level-1">Влажный</a>
+					<a href="#" class="level-1">Лакомства</a> <a href="#" class="level-1">Диетическое питание</a> <a href="#" class="level-1">Наполнители для&nbsp;туалета</a> </div>
+				<div class="section" id="etc_category">
+					<div class="title">Прочее</div>
+					<a href="#" class="level-1">Уход за животными</a> <a href="#" class="level-1">Для птиц</a> <a href="#" class="level-1">Для грызунов</a> <a href="#" class="level-1">Витамины и&nbsp;добавки</a> <a href="#" class="level-1">Приучение к&nbsp;туалету</a> </div>
+			</div>
+		</div>
+		
+		<!-- information -->
+		<div class="info_page">
+			<div class="padding_rl10">
+				<div class="page_title">Самовывоз</div>
+				<div class="info_block" content_name="self_delivery_conditions">
+					<h2>Скидка 3% при самовывозе.</h2>
+					<p>Наш новый адрес: Москва, Летниковская, дом 6а, строение 9 (вход через дом 4, строение 2).<br/>
+					Режим работы: с 9 до 21 по будням, с 10 до 20 по выходным и праздникам.<br/>
+					Телефон при самовывозе: +7 926 907-08-06.</p>
+				</div>
+				<div class="map">
+					<div id="ymaps-map-id_134098577533019212929" style="width: 100%; height: 450px;"></div>
+					<script type="text/javascript">function fid_134098577533019212929(ymaps) {var map = new ymaps.Map("ymaps-map-id_134098577533019212929", {center: [37.644296999999966, 55.727237290571075], zoom: 15, type: "yandex#map"});map.controls.add("zoomControl").add("mapTools").add(new ymaps.control.TypeSelector(["yandex#map", "yandex#satellite", "yandex#hybrid", "yandex#publicMap"]));map.geoObjects.add(new ymaps.Placemark([37.644297, 55.727207], {balloonContent: "Магазин Zoomag."}, {preset: "twirl#greenDotIcon"}));};</script>
+					<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU&onload=fid_134098577533019212929"></script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="padding_rl_main">
+        <div class="container">
+            <div class="padding_rl10">
+                <div class="top_margin"></div>
+            </div>
+            <div class="col50 info">
+                <div class="padding_rl10">
+                    <p>Понравилось наше обслуживание? Остались не удовлетворены нашими услугами?
+                        У вас есть предложения по сотрудничеству? Cообщите нам об этом: <a href="mailto:myzoomag@mail.ru">myzoomag@mail.ru</a></p>
+                    <p>2009–2012 © ZooMag</p>
+                </div>
+            </div>
+            <div class="col25 info">
+                <div class="padding_rl10"> Разработка сайта — F2 </div>
+            </div>
+            <div class="col25 search">
+                <div class="padding_rl10">
+                    <div class="padding">
+                        <input type="text" class="input_s corners_15" id="search_input"/>
+                    </div>
+                    <button class="btn_act" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+        "target=_blank><img style='display: none;' src='//counter.yadro.ru/hit?t26.6;r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";"+Math.random()+
+        "' alt='' title='LiveInternet: показано число посетителей за"+
+        " сегодня' "+
+        "border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+</div>
+</body>
+</html>

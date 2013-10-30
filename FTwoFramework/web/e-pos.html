@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.timer.js"></script>
+    <script type="text/javascript" src="js/general/init.js"></script>
+    <script type="text/javascript" src="js/general/validators.js"></script>
+    <script type="text/javascript" src="js/general/messages.js"></script>
+    <script type="text/javascript" src="js/framework/controls.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-md5.js"></script>
+    <script type="text/javascript" src="js/logic/admin/phone_lists.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#pay_form").submit(function(e){
+
+                e.preventDefault();
+                //amount, amountcurr, number, description, account, секретный ключ (указывается в Личном кабинете владельца магазина), shoptype
+                var amount = $("input[name=\"amount\"]").val();
+                var amountcurr = $("input[name=\"amountcurr\"]").val();
+                var number = $("input[name=\"number\"]").val();
+                var description = $("input[name=\"description\"]").val();
+                var account = $("input[name=\"account\"]").val();
+                var secretkey = "anthill-group-secret-key";
+                var shoptype = $("input[name=\"shoptype\"]").val();
+                var signature_raw = amount+":"+amountcurr+":"+number+":"+description+":"+account+":"+secretkey+":"+shoptype;
+                alert(signature_raw);
+                var signature = MD5(signature_raw).toUpperCase();
+                $("input[name=\"signature\"]").val(signature);
+                alert($("input[name=\"signature\"]").val());
+                this.submit();
+            });
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+<form id="pay_form" action="http://www.e-pos.ru/ext/dopay.php" method=POST>
+    <input type="hidden" name="amount" value="220">
+    <input type="hidden" name="amountcurr" value="RUR">
+    <input type="hidden" name="currency" value="MMR">
+    <input type="hidden" name="number" value="5412">
+    <input type="hidden" name="description" value="Description uts">
+    <input type="hidden" name="account" value="a0a6e5f8eb16c7f3895a90575c0e1ad6">
+    <input type="hidden" name="shoptype" value="n">
+    <input type="hidden" name="signature" value="">
+
+    <input type="submit" value="Оплатить">
+</form>
+
+</body>
+</html>

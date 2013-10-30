@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="img/gui/icon_cat.gif" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="js/css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
+
+
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-localization.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.timer.js"></script>
+    <script type="text/javascript" src="js/general/init.js"></script>
+    <script type="text/javascript" src="js/general/formatting.js"></script>
+    <script type="text/javascript" src="js/framework/controls.js"></script>
+    <script type="text/javascript" src="js/framework/animation.js"></script>
+    <script type="text/javascript" src="js/framework/masks.js"></script>
+    <script type="text/javascript" src="js/logic/basket.js"></script>
+
+
+    <title>ZooMag — интернет-магазин товаров для животных</title>
+</head>
+<body class="">
+<div id="spam"></div>
+
+<!-- header -->
+<div class="header">
+    <div class="padding_rl_main">
+        <div class="container">
+            <div class="col25 logo pointer" id="logo_div">
+                <div class="padding_rl10"> <img src="img/gui/logo.gif" alt="ZooMag" /> </div>
+            </div>
+            <div class="col50 contacts">
+                <div class="padding_rl10">
+                    <p class="phone" content_name="phone"><span class="prefix" >(495)</span>514-55-89</p>
+                    <p class="phone_info" content_name="work_time">С 9:00 до 21:00 по будням, с 10:00 до 22:00 по выходным</p>
+                </div>
+            </div>
+            <div class="col25 account">
+                <div class="padding_rl10">
+                    <div class="auth shadow_10 corners_10 hidden" id="auth_form">
+                        <div class="padding_rl20">
+                            <input type="text" class="input_s corners_3" id="login_input"/>
+                            <input type="text" class="input_s corners_3" id="password_input"/>
+                            <input type="button" id="login_butt" value="Войти"/>
+                            <p class="error hidden" id="auth_error_hint">Ошибка авторизации: введенный вами котейка не найден</p>
+                            <p><a href="#" id="upper_recover_password">Напомнить пароль</a></p>
+                        </div>
+                    </div>
+                    <p class="basket" id="basket"><img src="img/gui/basket_s.gif" alt="Корзина" /><a href="basket.html" id="basket_text">Корзина пуста</a></p>
+                    <p class="user"><a href="#" id="profile_link">Личный кабинет</a></p>
+                    <p class="user"><a href="/Authentication?cmd=logout&redirect=basket.html" id="logout_link">Выйти</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="nav_wrap">
+            <div class="padding_rl10">
+                <div class="nav gradient_lime shadow_inset corners_10"> <a href="home.html">Главная</a> <span class="sep">—</span> <a href="self-delivery.html">Самовывоз</a> <span class="sep">—</span> <a href="delivery.html">Доставка</a> <span class="sep">—</span> <a href="discount.html">Скидки и акции</a> <span class="sep">—</span> <a href="about.html">О магазине</a> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay hidden" id="alert_form">
+    <div class="product_window_margin_t"></div>
+    <div class="product_window_margin_rl">
+        <div class="window corners_10 shadow_50">
+            <div class="padding"> <a class="close corners_15" id="alert_close_link"><img src="img/gui/icon_close.gif" alt="" /></a>
+                <p class="title" id="alert_title"></p>
+                <div id="alert_text">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content -->
+<div class="content" id="content_div">
+<div class="basket-alert hidden"></div>
+<div class="padding_rl_main">
+
+<!-- navigation -->
+<div class="products_nav">
+    <div class="padding_rl10">
+        <div class="section" id="dogs_category">
+
+             </div>
+        <div class="section" id="cats_category">
+
+        </div>
+        <div class="section" id="etc_category">
+
+        </div>
+    </div>
+</div>
+
+<!-- shopping -->
+<div class="shopping">
+<div class="filter">
+    <div class="padding_rl10">
+        <div class="title">Личный кабинет</div>
+        <div class="brands" id="brands_bar"> <a href="#" class="act corners_3 shadow_inset" id="basket_link">Корзина</a> <a href="#" id="history_link">История заказов</a> <a href="#" id="profile_menu_link">Личные данные</a> </div>
+    </div>
+</div>
+<div class="shopping_info corners_5">
+    <div class="value" id="discount"></div>
+    <div>Текущая скидка<br /><a href="basket.html?cmd=profile" id="discount_more">Подробнее</a></div>
+</div>
+
+<!-- basket -->
+<div class="basket" id="basket_div">
+<div class="padding_rl10">
+<table cellpadding="0" cellspacing="0" id="basket_table" class="margin_b30">
+
+</table>
+
+<!-- Order address form -->
+
+<div class="delivery margin_b30 hidden" id="address_form">
+    <div class="col">
+        <div class="padding_r10">
+            <!-- zones -->
+            <div class="group" id="distance_group" distance="Самовывоз">
+                <span class="title corners_3">Выбор доставки</span>
+                <div class="zone">
+                    <div class="padding">
+                        <div class="item"> Самовывоз Летниковская<span class="color-green">(+3% скидка)</span>
+                            <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="0" distance="Самовывоз Летниковская">
+                                <!--<div class="dot corners_5"></div>-->
+                            </div>
+                        </div>
+                        <div class="item"> Самовывоз Усачева<span class="color-green">(+3% скидка)</span>
+                            <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="0" distance="Самовывоз Усачева">
+                                <!--<div class="dot corners_5"></div>-->
+                            </div>
+                        </div>
+                        <div class="sep"></div>
+                    </div>
+                </div>
+                <div class="zone">
+                    <div class="padding">
+                        <div class="item"> В пределах МКАД
+                            <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="10056" distance="В пределах МКАД"></div>
+                        </div>
+                        <div class="sep"></div>
+                    </div>
+                </div>
+                <div class="zone">
+                    <div class="padding">
+                        <div class="item">Расстояние от МКАД:</div>
+                        <div class="item_50"> До 5 км
+                            <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="10058" distance="До 5 км от МКАД"></div>
+                        </div><!--
+											--><div class="item_50"> До 10 км
+                        <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="10065" distance="До 20 км от МКАД"></div>
+                    </div><!--
+											--><div class="item_50"> До 20 км
+                        <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="10066" distance="До 10 км от МКАД"></div>
+                    </div><!--
+											--><div class="item_50"> До 30 км
+                        <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="10067" distance="До 30 км от МКАД"></div>
+                    </div>
+                        <div class="sep"></div>
+                    </div>
+                </div>
+                <div class="zone">
+                    <div class="padding">
+                        <div class="item"> Другой город России (стоимость уточните у оператора)
+                            <div class="checkbox corners_10 shadow_inset" delivery_variant="true" distance_id="200000" distance="Другой город России"></div>
+                        </div>
+                        <div class="sep"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- date & time -->
+            <div class="group">
+                <span class="title corners_3">Дата и время доставки</span>
+                <div class="padding-datetime">
+                    <div class="datetime-tip">Дата</div>
+                    <div class="padding_rl10">
+                        <input type="text" class="input_m" id="date"/>
+                        <a class="cal"><img src="img/gui/icon-cal.gif" alt="" /></a>
+                    </div>
+                </div>
+                <div class="padding-datetime">
+                    <div class="datetime-tip">Время</div>
+                    <div class="time">
+                        <div class="from"><span id="from_hour">0</span>:<span id="from_minutes">00</span></div>
+                        <div class="to"><span id="to_hour">24</span>:<span id="to_minutes">00</span></div>
+                        <div class="padding">
+                            <div class="wrap" id="sliding_bg">
+                                <div class="bg-1">
+                                    <div class="bg-2"></div>
+                                    <div class="slider_l">
+                                        <div class="slider corners_10 shadow_emboss"></div>
+                                    </div>
+                                    <div class="slider_r">
+                                        <div class="slider corners_10 shadow_emboss"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment">Крайне желательно указать дополнительные телефонные номера. Если указанным номером пользуетесь не только вы, укажите, пожалуйста, контактное лицо.
+        </div>
+    </div><!--
+						--><div class="col">
+    <div class="padding_l10">
+        <!-- adress -->
+        <div class="group">
+            <span class="title corners_3">Адрес доставки</span>
+            <div class="adress-tip">Город *</div>
+            <div class="padding_rl10"><input type="text" class="input_m" id="input_city"/></div>
+            <div class="adress-tip">Улица *</div>
+            <div class="padding_rl10"><input type="text" class="input_m" id="input_street"/></div>
+            <div id="street_autocompleat"></div>
+            <div class="col-2">
+                <div class="adress-tip">Дом, корп./стр. *</div>
+                <div class="padding_rl10"><input type="text" class="input_m" id="house"/></div>
+            </div><!--
+									--><div class="col-sep"></div><!--
+									--><div class="col-2">
+            <div class="adress-tip">Домофон</div>
+            <div class="padding_rl10"><input type="text" class="input_m" id="domophone"/></div>
+        </div>
+            <div class="col-3">
+                <div class="adress-tip">Кв./офис</div>
+                <div class="padding_rl10"><input type="text" class="input_m" id="room"/></div>
+            </div><!--
+									--><div class="col-sep"></div><!--
+									--><div class="col-3">
+            <div class="adress-tip">Подъезд</div>
+            <div class="padding_rl10"><input type="text" class="input_m" id="porch"/></div>
+        </div><!--
+									--><div class="col-sep"></div><!--
+									--><div class="col-3">
+            <div class="adress-tip">Этаж</div>
+            <div class="padding_rl10"><input type="text" class="input_m" id="floor"/></div>
+        </div>
+            <div class="adress-tip">Ближайшее метро *</div>
+            <div class="padding_rl10"><input class="input_m" id="metro"/></div>
+            <div id="metro_autocompleat"></div>
+        </div>
+        <!-- misc -->
+        <div class="group"> <span class="title corners_3">Дополнительные телефон для связи</span>
+            <!--<div class="adress-tip">Номер телефона</div>-->
+            <div class="padding_rl10"><input type="text" class="input_m" maxlength="10" id="phone_1"/></div>
+            <!--<div class="adress-tip">Еще один номер телефона</div>-->
+            <div class="padding_rl10"><input type="text" class="input_m" maxlength="10" id="phone_2"/></div>
+            <div class="comments shadow_inset corners_5">
+                <div class="padding_rl10">
+                    <textarea rows="3" id="description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Summary form -->
+<div class="col66"><div class="padding_r10">
+    <div class="summ margin_b30 corners_5 hidden" id="summary">
+        <div class="col-left">
+            Стоимость товаров без скидки:
+        </div>
+        <div class="col-right">
+            <span sum="true" >44 970</span> <span class="rur">a</span>
+        </div>
+        <div class="col-left">
+            Скидка (<span discount_span="true">5% + 3%</span>):
+        </div>
+        <div class="col-right">
+            <span discount="true">44 970</span> <span class="rur">a</span>
+        </div>
+        <div class="col-left">
+            Cтоимость доставки:
+        </div>
+        <div class="col-right">
+            <span delivery_price_span="true">45 893</span> <span class="rur">a</span>
+        </div>
+        <div class="col-left result">
+            Итого к оплате:
+        </div>
+        <div class="col-right result">
+            <span total_price_span="true">8 990 540</span> <span class="rur">c</span>
+        </div>
+    </div>
+</div></div>
+<div class="col33"><div class="padding_l10">
+    <div class="order_btn hidden" id="make_order_butt">
+        <button class="corners_5 btn_lime act" id="butt_make_order">Оформить заказ</button>
+    </div>
+    <div id="loader" class="hidden">
+        <img src="img/gui/preloader.gif">
+    </div>
+</div></div>
+
+<!-- Auth form -->
+<div class="col66"><div class="padding_r10">
+    <div class="auth margin_b30 hidden" id="reg_auth_form">
+        <div class="bg corners_5 shadow_inset" id="auth_block">
+            <div class="alert_wrap hidden" id="alert_div">
+                <span class="alert corners_3">Да ты просто дурак, придумал бы пароль посерьезнее…</span>
+            </div>
+            <div class="padding_rl20">
+                <div class="col" id="phone_col">
+                    <div class="padding">
+                        <input type="text" class="input_l" maxlength="10" value="Номер телефона" id="order_phone_input"/>
+                        <div class="icon"><img src="img/gui/icon_phone.gif" alt="" /></div>
+                    </div>
+                </div>
+                <div class="col hidden" id="password_col">
+                    <div class="padding">
+                        <input type="text" class="input_l " value="Пароль" id="order_password_input"/>
+                        <div class="icon"><img src="img/gui/icon_pass.gif" alt="" /></div>
+                    </div>
+                </div>
+                <div class="col hidden" id="email_col">
+                    <div class="padding">
+                        <input type="text" class="input_l " value="Электронная почта" id="order_email_input"/>
+                        <div class="icon"><img src="img/gui/icon_mail.gif" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment hidden" id="recover_link_block">Судя по всему, вы уже зарегистрированы на сайте. введите, пожалуйста свой пароль. Если вы забыли пароль, воспользуйтесь <a id="recover_password_link">этой ссылкой</a>.</div>
+    </div>
+</div></div>
+<div class="col66">
+    <div class="order_btn" id="next">
+        <button class="corners_5 btn_lime act" id="next_butt">Далее</button>
+    </div>
+</div>
+
+</div>
+</div>
+
+<!-- history -->
+<div class="history hidden" id="history_div"> <img src="img/gui/preloader.gif" id="history_preloader"/>
+    <div id="no_orders_comment">К сожалению у вас нет заказов...</div>
+    <div class="padding_rl10" id="order_list">
+        <table cellpadding="0" cellspacing="0" id="history_table">
+            <tr>
+                <td rowspan="2" class="order_info"><p class="info">Заказ</p>
+                    <p class="value">№ 34148</p>
+                    <p class="info">Дата доставки</p>
+                    <p class="value">10.04.2012</p>
+                    <p class="info">Сумма заказа</p>
+                    <p class="value">4 800 Р</p></td>
+                <td class="photo"><img src="img/goods/tmp1.jpg" alt="" /></td>
+                <td class="desc"><p class="title"><a href="#">Hills 6515 Adult Ocean Fish (паучи)</a> <span class="article">(арт.&nbsp;547)</span></p>
+                    <p class="info">Консервы Хиллс для взрослых кошек в возрасте от 1 года до 7 лет с Океанической рыбой. Цена за упаковку (24 шт x 85 г).</p></td>
+                <td class="quantity"> 173 шт. </td>
+                <td class="price"> 694 850<span class="rur"> c</span></td>
+                <td class="buy"><a class="corners_3"><img src="img/gui/basket_s.gif" alt=""/></a></td>
+            </tr>
+            <tr>
+                <td class="photo"><img src="img/goods/tmp2.jpg" alt="" /></td>
+                <td class="desc"><p class="title"><a href="#">Hills 6515 Adult Ocean Fish (паучи)</a> <span class="article">(арт.&nbsp;547)</span></p>
+                    <p class="info">Консервы Хиллс для взрослых кошек в возрасте от 1 года до 7 лет с Океанической рыбой. Цена за упаковку (24 шт x 85 г).</p></td>
+                <td class="quantity"> 4 шт. </td>
+                <td class="price"> 4 850<span class="rur"> c</span></td>
+                <td class="buy"><a class="corners_3"><img src="img/gui/basket_s.gif" alt=""/></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- account -->
+<div class="account hidden" id="profile_div">
+    <div class="padding_rl10">
+        <div class="auth margin_b30">
+            <div class="bg corners_5 shadow_inset">
+                <div class="alert_wrap hidden" id="profile_alert_div">
+                    <span class="alert corners_3">Да ты просто дурак, придумал бы пароль посерьезнее…</span>
+                </div>
+                <div class="padding_rl20">
+                    <div class="col">
+                        <div class="padding">
+                            <input id="input_profile_phone" type="text" class="input_l" value="9859722245" />
+                            <div class="icon"><img src="img/gui/icon_phone.gif" alt="" /></div>
+                        </div>
+                    </div><!--
+								--><div class="col">
+                    <div class="padding">
+                        <input id="input_profile_password" type="password" class="input_l" value="*******" />
+                        <div class="icon"><img src="img/gui/icon_pass.gif" alt="" /></div>
+                    </div>
+                </div>
+                    <div class="col">
+                        <div class="padding">
+                            <input id="input_profile_email" type="text" class="input_l" value="victor@f-two.ru" />
+                            <div class="icon"><img src="img/gui/icon_mail.gif" alt="" /></div>
+                        </div>
+                    </div><!--
+								--><div class="col">
+                    <div class="padding">
+                        <button id="save_profile_butt" class="send_pass corners_3 btn_grey act">Сохранить данные</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="comment"> Чтобы изменить ваши личные данные, просто введите новые в соответствующее поле. </div>
+        </div>
+        <div class="account_info">
+            <p>Текущая накопленная скидка <span class="value" id="discount_span_1">7%</span></p>
+            <p>Сумма всех ваших покупок <span class="value" id="total_spent">184 367<span class="rur"> c</span></span></p>
+            <p>До следующей скидки осталось <span class="value" id="total_left_1">14 800<span class="rur"> c</span></span></p>
+        </div>
+    </div>
+</div>
+</div>
+<!-- end of shopping -->
+</div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="padding_rl_main">
+        <div class="container">
+            <div class="padding_rl10">
+                <div class="top_margin"></div>
+            </div>
+            <div class="col50 info">
+                <div class="padding_rl10">
+                    <p>Понравилось наше обслуживание? Остались не удовлетворены нашими услугами?
+                        У вас есть предложения по сотрудничеству? Cообщите нам об этом: <a href="mailto:myzoomag@mail.ru">myzoomag@mail.ru</a></p>
+                    <p>2009–2012 © ZooMag</p>
+                </div>
+            </div>
+            <div class="col25 info">
+                <div class="padding_rl10"> Разработка сайта — F2 </div>
+            </div>
+            <div class="col25 search">
+                <div class="padding_rl10">
+                    <div class="padding">
+                        <input type="text" class="input_s corners_15" id="search_input"/>
+                    </div>
+                    <button class="btn_act" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+        "target=_blank><img style='display: none;' src='//counter.yadro.ru/hit?t26.6;r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";"+Math.random()+
+        "' alt='' title='LiveInternet: показано число посетителей за"+
+        " сегодня' "+
+        "border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+</div>
+</body>
+</html>

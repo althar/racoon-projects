@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <title></title>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <a href="#" class="logo">Админка</a>
+        <div class="search">
+            <input type="text" />
+            <input type="submit" value="поиск" />
+        </div>
+    </div><!--/header-->
+    <ul class="top_menu">
+        <li class="active"><a href="/admin/phone_lists.html">Специальные номера </a></li>
+        <li><a href="/admin/users.html">Участники программы</a></li>
+        <li><a href="/admin/cards.html">Бонус-карты</a></li>
+        <li><a href="/admin/orders.html">Заказы</a></li>
+        <li><a href="/admin/statistics.html">Статистика</a></li>
+    </ul>
+    <div id="main">
+        <div class="left-column">
+            <h2>Черный список</h2>
+            <form action="#">
+                <div class="file">
+                    <input type="file" class="fileInput" id="fileInput_black" size="49"/>
+                    <div id="mask_black" class="mask">
+                        <input type="text" id="fileInputText_black" class="fileInputText" />
+                    </div>
+                    <input type="submit" value="upload" />
+                </div>
+            </form>
+            <p>Все номера <strong>черного списка</strong></p>
+            <table id="black_list" class="tab1" border="0" cellspacing="0">
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right-column">
+            <h2>Белый список</h2>
+            <form action="http://localhost:8080/UploadServlet" enctype="multipart/form-data" method="post">
+                <div class="file">
+                    <input type="file" class="fileInput" name="uploadFile" id="fileInput_white" size="49"/>
+                    <div id="mask_white" class="mask">
+                        <input type="text" id="fileInputText_white" class="fileInputText"/>
+                    </div>
+                    <input type="submit" value="upload" />
+                </div>
+            </form>
+            <p>Все номера <strong>белого списка</strong></p>
+            <table id="white_list" class="tab1" border="0" cellspacing="0">
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+                <tr>
+                    <td>8 912 825 7000</td>
+                </tr>
+            </table>
+        </div>
+    </div><!--/main-->
+    <div id="footer">
+    </div><!--/footer-->
+</div><!--/wrap-->
+
+</body>
+</html>

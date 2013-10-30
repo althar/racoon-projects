@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="FTwoFramework:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/FTwoFramework_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FTwoFramework" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mail" />
+          <element id="library" level="project" name="postgresql-9.1-902.jdbc4" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="FTwoFramework/web/Web" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/web/META-INF/context.xml" />
+        <element id="file-copy" path="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

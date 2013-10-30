@@ -1,0 +1,47 @@
+package ftwo.zoomag.structure;
+
+import ftwo.library.database.DBRecord;
+import java.util.HashMap;
+
+public class BasketItem extends DBRecord
+{
+    public BasketItem(int good_id,int quantity,String name,String photo_url,int price,String desc,String weight)
+    {
+        super(new HashMap<String, Object>());
+        Fields.put("good_id", good_id);
+        Fields.put("quantity", quantity);
+        Fields.put("name", name);
+        Fields.put("photo_url", photo_url);
+        Fields.put("price", price);
+        Fields.put("description", desc);
+        Fields.put("weight", weight);
+    }
+    public void add(int quantity)
+    {
+	setValue("quantity", getQuantity()+quantity);
+    }
+    public int getGoodID()
+    {
+	return (int)getIntValue("good_id");
+    }
+    public int getQuantity()
+    {
+	return (int)getIntValue("quantity");
+    }
+    public String getName()
+    {
+	return (String)getStringValue("name");
+    }
+    public String getPhotoUrl()
+    {
+	return (String)getStringValue("photo_url");
+    }
+    public int getTotalPrice()
+    {
+        return getGoodPrice()*getIntValue("quantity");
+    }
+    public int getGoodPrice()
+    {
+        return Warehouse.getGood(getIntValue("good_id")).getIntValue("price");
+    }
+}
