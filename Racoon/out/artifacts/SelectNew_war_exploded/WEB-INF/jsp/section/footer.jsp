@@ -7,64 +7,28 @@
             <dl class="footer-menu_section">
                 <dt class="footer-menu_title">ПОМОЩЬ</dt>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Служба поддержки</a>
+                    <a href="/delivery" class="link_type-footer">Доставка товара</a>
                 </dd>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Оформление заказа</a>
+                    <a href="/payment" class="link_type-footer">Способы оплаты</a>
                 </dd>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Доставка товара</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Способы оплаты</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer"Возврат></a>
-                </dd>
-            </dl>
-            <dl class="footer-menu_section">
-                <dt class="footer-menu_title">ЛИЧНЫЙ КАБИНЕТ</dt>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Войти</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">История заказов</a>
+                    <a href="/guarantees" class="link_type-footer">Возврат</a>
                 </dd>
             </dl>
             <dl class="footer-menu_section">
                 <dt class="footer-menu_title">SELECT</dt>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">О компании</a>
+                    <a href="/contact" class="link_type-footer">Реквизиты и контакты</a>
                 </dd>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Реквизиты</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Контакты</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Сотрудничество</a>
+                    <a href="mailto:selectsanteh@gmail.com?subject=Сотрудничество" class="link_type-footer">Сотрудничество</a>
                 </dd>
             </dl>
             <dl class="footer-menu_section">
                 <dt class="footer-menu_title">ДОПОЛНИТЕЛЬНО</dt>
                 <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Сотрудничество</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Бренды</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Карта сайта</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Часто задаваемые вопросы</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Моя корзина</a>
-                </dd>
-                <dd class="footer-menu_item">
-                    <a href="" class="link_type-footer">Отдел контроля качества</a>
+                    <a href="/brands" class="link_type-footer">Бренды</a>
                 </dd>
             </dl>
         </div>

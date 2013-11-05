@@ -14,10 +14,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import racoonsoft.library.access.UserProcessor;
 import racoonsoft.library.sms.SMSProcessor;
 import racoonsoft.select.database.PGSQLDataSource;
-import racoonsoft.select.interceptor.AccessInterceptor;
+import racoonsoft.select.interceptor.DataInterceptor;
 import racoonsoft.select.interceptor.HistoryInterceptor;
 import racoonsoft.select.service.AerseService;
-import racoonsoft.select.structure.Basket;
 import racoonsoft.select.structure.BasketStorage;
 
 @Configuration
@@ -92,7 +91,7 @@ public class MainConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        AccessInterceptor access = new AccessInterceptor();
+        DataInterceptor access = new DataInterceptor();
         HistoryInterceptor history = new HistoryInterceptor();
         try
         {

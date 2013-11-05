@@ -5,6 +5,7 @@ import racoonsoft.library.xml.XMLProcessor;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import javax.xml.parsers.ParserConfigurationException;
@@ -94,6 +95,28 @@ public class DBRecord extends Object
         try
         {
             return (Date)getValue(name);
+        }
+        catch(Exception ex)
+        {
+            return null;
+        }
+    }
+    public ArrayList<DBRecord> getRecords(String name)
+    {
+        try
+        {
+            return (ArrayList<DBRecord>)getValue(name);
+        }
+        catch(Exception ex)
+        {
+            return null;
+        }
+    }
+    public DBRecord getRecord(String name)
+    {
+        try
+        {
+            return (DBRecord)getValue(name);
         }
         catch(Exception ex)
         {

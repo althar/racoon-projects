@@ -4,12 +4,6 @@
 <header class="top-menu">
     <nav class="top-menu_inner row">
         <ul>
-            <li class="top-menu_item active">
-                <a href="/" class="link_type-topmenu">Главная</a>
-            </li>
-            <li class="top-menu_item">
-                <a href="/catalog" class="link_type-topmenu">Каталог</a>
-            </li>
             <li class="top-menu_item">
                 <a href="/delivery" class="link_type-topmenu">Доставка</a>
             </li>

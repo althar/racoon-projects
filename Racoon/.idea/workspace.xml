@@ -51,8 +51,8 @@
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
-    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378478723955" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380884544717" ignored="false" />
+    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383654116214" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656724259" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377610427855" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380722664444" ignored="false" />
@@ -68,7 +68,7 @@
     <file path="/library.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367757459283" ignored="false" />
     <file path="/library.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367761505354" ignored="false" />
     <file path="/DBConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365582087448" ignored="false" />
-    <file path="/PGSQLDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1381125737206" ignored="false" />
+    <file path="/PGSQLDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383657748571" ignored="false" />
     <file path="/BookDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366375971540" ignored="false" />
     <file path="$USER_HOME$/Racoon Soft/Chaos/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365585302328" ignored="false" />
     <file path="/DBProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368715518089" ignored="false" />
@@ -101,7 +101,7 @@
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/Manifest.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/BuildConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/Store/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366030016029" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382960685696" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383661077366" ignored="false" />
     <file path="/Store.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366033053749" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/persist/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366039891777" ignored="false" />
     <file path="/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366038895443" ignored="false" />
@@ -122,7 +122,7 @@
     <file path="/2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367314241711" ignored="false" />
     <file path="/SessionProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367329064151" ignored="false" />
     <file path="/Facebook.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367329696456" ignored="false" />
-    <file path="/DBRecord.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378467460352" ignored="false" />
+    <file path="/DBRecord.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383658162333" ignored="false" />
     <file path="/1.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367325101316" ignored="false" />
     <file path="/main_choose.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369036999362" ignored="false" />
     <file path="/UserController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382953596932" ignored="false" />
@@ -171,7 +171,7 @@
     <file path="/wish_goods.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377511631799" ignored="false" />
     <file path="/no_item_error.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368701055189" ignored="false" />
     <file path="/AdminController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382700535437" ignored="false" />
-    <file path="/StoreController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380535919218" ignored="false" />
+    <file path="/StoreController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383660847239" ignored="false" />
     <file path="/UserProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371552887062" ignored="false" />
     <file path="/ActionResult.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1370251754913" ignored="false" />
     <file path="/UserSession.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371553057820" ignored="false" />
@@ -225,9 +225,9 @@
     <file path="/TaxWizardDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380803790636" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/FSSWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380885883063" ignored="false" />
     <file path="/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380801757231" ignored="false" />
-    <file path="/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371032664117" ignored="false" />
+    <file path="/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383650927982" ignored="false" />
     <file path="/about.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371561316299" ignored="false" />
-    <file path="/contact.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380536437414" ignored="false" />
+    <file path="/contact.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383650715042" ignored="false" />
     <file path="/basket.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1375687589141" ignored="false" />
     <file path="/discount.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369837170974" ignored="false" />
     <file path="/delivery.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369837189536" ignored="false" />
@@ -429,7 +429,7 @@
     <file path="/TypeHelper.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378712519225" ignored="false" />
     <file path="/MathHelper.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378810374065" ignored="false" />
     <file path="/main_menu.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380536274405" ignored="false" />
-    <file path="/head.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378889822833" ignored="false" />
+    <file path="/head.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383660210524" ignored="false" />
     <file path="/banner.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378890098325" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/finsaas-1200.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380798361104" ignored="false" />
     <file path="/finsaas-1200.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380798028475" ignored="false" />
@@ -490,8 +490,8 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/fss/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380801181061" ignored="false" />
     <file path="/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380801181061" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/fss/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380801757938" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382359062651" ignored="false" />
-    <file path="/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382357371383" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383654802287" ignored="false" />
+    <file path="/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383654749653" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/settings/AddressClassifierController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622672984" ignored="false" />
     <file path="/AddressClassifierController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622672345" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/settings/AddressClassifierDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622046118" ignored="false" />
@@ -502,6 +502,12 @@
     <file path="/order_info.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382710114809" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/counterparty_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382954089276" ignored="false" />
     <file path="/counterparty_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382954089276" ignored="false" />
+    <file path="/good.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383660999699" ignored="false" />
+    <file path="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656414314" ignored="false" />
+    <file path="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656414314" ignored="false" />
+    <file path="/DataInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656490583" ignored="false" />
+    <file path="/cart.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383659888896" ignored="false" />
+    <file path="/good.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383661029631" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -516,7 +522,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -585,6 +590,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -594,107 +600,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/UserController.java">
+      <file leaf-file-name="contact.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/contact.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="385" column="32" selection-start="16084" selection-end="16084" vertical-scroll-proportion="1.4898876">
+            <state line="19" column="35" selection-start="737" selection-end="737" vertical-scroll-proportion="-11.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/controller/StoreController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="49" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1446#1457#0" expanded="false" />
-                <element signature="n#!!doc;n#domain#0;n#UserController#0" expanded="false" />
-                <element signature="method#initBinder#0;class#UserController#0" expanded="false" />
-                <element signature="method#handleIOException#0;class#UserController#0" expanded="false" />
-                <element signature="n#!!doc;n#home#0;n#UserController#0" expanded="false" />
-                <element signature="method#home#0;class#UserController#0" expanded="false" />
-                <element signature="method#mainChoose#0;class#UserController#0" expanded="false" />
-                <element signature="method#termsOfService#0;class#UserController#0" expanded="false" />
-                <element signature="method#termsOfPayment#0;class#UserController#0" expanded="false" />
-                <element signature="method#catalogue#0;class#UserController#0" expanded="false" />
-                <element signature="method#getGoods#0;class#UserController#0" expanded="false" />
-                <element signature="method#wishGoods#0;class#UserController#0" expanded="false" />
-                <element signature="method#makeWish#0;class#UserController#0" expanded="false" />
-                <element signature="e#7106#7163#0" expanded="false" />
-                <element signature="method#makeFriendWish#0;class#UserController#0" expanded="false" />
-                <element signature="method#friendsWish#0;class#UserController#0" expanded="false" />
-                <element signature="method#payment#0;class#UserController#0" expanded="false" />
-                <element signature="method#deliveryChoose#0;class#UserController#0" expanded="false" />
-                <element signature="method#getRegions#0;class#UserController#0" expanded="false" />
-                <element signature="method#deliveryChoose#1;class#UserController#0" expanded="false" />
-                <element signature="method#orderInfo#0;class#UserController#0" expanded="false" />
-                <element signature="e#25013#25073#0" expanded="false" />
-                <element signature="method#clearCart#0;class#UserController#0" expanded="false" />
+                <element signature="e#686#697#0" expanded="false" />
+                <element signature="method#about#0;class#StoreController#0" expanded="false" />
+                <element signature="method#delivery#0;class#StoreController#0" expanded="false" />
+                <element signature="method#contact#0;class#StoreController#0" expanded="false" />
+                <element signature="method#guarantees#0;class#StoreController#0" expanded="false" />
+                <element signature="method#payment#0;class#StoreController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OzonProcessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java">
+      <file leaf-file-name="DataInterceptor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/interceptor/DataInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="4" selection-start="8781" selection-end="8781" vertical-scroll-proportion="0.0">
+            <state line="31" column="53" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/web/js/logic/order.js">
+      <file leaf-file-name="good.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/good.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="44" selection-start="6112" selection-end="6112" vertical-scroll-proportion="-2.0">
+            <state line="38" column="39" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.20795107">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/order.jsp">
+      <file leaf-file-name="Basket.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/structure/Basket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="701" selection-end="712" vertical-scroll-proportion="-2.5769231">
+            <state line="149" column="19" selection-start="4834" selection-end="4834" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PGSQLDataSource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/database/PGSQLDataSource.java">
+      <file leaf-file-name="good.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SelectNew/web/js/logic/good.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="46" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1305#1321#0" expanded="true" />
-                <element signature="e#1809#1825#0" expanded="true" />
-                <element signature="e#2334#2350#0" expanded="true" />
-                <element signature="e#2621#2637#0" expanded="true" />
-                <element signature="e#4331#4347#0" expanded="true" />
-                <element signature="e#5396#5412#0" expanded="true" />
-                <element signature="e#9027#9043#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wish_goods.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_goods.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="74" selection-start="2409" selection-end="3077" vertical-scroll-proportion="-8.0">
-              <folding>
-                <marker date="1382706838167" expanded="true" signature="2409:3077" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wish_details.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_details.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="10" selection-start="2087" selection-end="2087" vertical-scroll-proportion="-2.4313726">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="29" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.0">
+            <state line="13" column="57" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -715,22 +676,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/YandexController.java" />
-        <option value="$PROJECT_DIR$/../../FTwo Projects/Projects/NewMethod/Sources/src/ftwo/newmethod/servlets/OrderServlet.java" />
-        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java" />
-        <option value="$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/error/unknown_error.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/error/message.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/payment.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_goods.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/js/logic/wish_edit.js" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/error/order_info.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/database/PGSQLDataSource.java" />
-        <option value="$PROJECT_DIR$/../Chipped/web/js/logic/payment.js" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/order.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_details.jsp" />
-        <option value="$PROJECT_DIR$/../Chipped/web/js/logic/order.js" />
-        <option value="$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/interceptor/DataInterceptor.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/contact.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/banner.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/main_menu.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/database/PGSQLDataSource.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBRecord.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/structure/Basket.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/header.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/service/StoreService.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/js/framework/jquery.js" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/cart.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/head.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/empty.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/controller/StoreController.java" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/good.jsp" />
+        <option value="$PROJECT_DIR$/../SelectNew/web/js/logic/good.js" />
       </list>
     </option>
   </component>
@@ -794,7 +755,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Chipped" />
+              <option name="myItemId" value="SelectNew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -804,7 +765,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Chipped" />
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="section" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="body" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -818,15 +849,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Chipped" />
+              <option name="myItemId" value="SelectNew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wish" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -836,7 +871,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Chipped" />
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -844,7 +901,91 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wish" />
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interceptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -860,13 +1001,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -885,8 +1026,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -911,7 +1052,7 @@
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\Select\web\css\new" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Chipped">
+  <component name="RunManager" selected="Tomcat Server.SelectNew">
     <configuration default="false" name="Test1" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1048,19 +1189,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1089,6 +1217,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1109,13 +1250,6 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1139,11 +1273,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1160,6 +1294,13 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1591,15 +1732,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41917503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4470457" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21293199" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
@@ -1614,7 +1756,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14194237" sideWeight="0.5529543" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14194237" sideWeight="0.787068" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23188406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1622,7 +1764,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41917503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1695,135 +1836,174 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/payment.jsp">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/main_menu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-11.115385">
+        <state line="6" column="38" selection-start="322" selection-end="322" vertical-scroll-proportion="0.19465649">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/error/message.jsp">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/database/PGSQLDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="512" vertical-scroll-proportion="-0.0">
+        <state line="25" column="20" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#PGSQLDataSource#0;class#PGSQLDataSource#0" expanded="false" />
+            <element signature="method#getRelatedGoods#0;class#PGSQLDataSource#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="34" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#DBRecord#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#DBRecord#1;class#DBRecord#0" expanded="false" />
+            <element signature="method#DBRecord#2;class#DBRecord#0" expanded="false" />
+            <element signature="method#DBRecord#3;class#DBRecord#0" expanded="false" />
+            <element signature="method#getFields#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getIntValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getLongValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getStringValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getDoubleValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getDateValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getNames#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getValues#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#setValue#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#hasName#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getID#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#getString#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#toXML#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#toString#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#loadFromDB#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#loadFromDB#1;class#DBRecord#0" expanded="false" />
+            <element signature="method#createInDB#0;class#DBRecord#0" expanded="false" />
+            <element signature="method#saveToDB#0;class#DBRecord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="1413" selection-end="1413" vertical-scroll-proportion="-18.307692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/error/order_info.jsp">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/service/StoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="516" selection-end="516" vertical-scroll-proportion="-5.230769">
+        <state line="91" column="4" selection-start="3424" selection-end="3424" vertical-scroll-proportion="0.4647482">
+          <folding>
+            <element signature="method#getBasketStorage#0;class#StoreService#0" expanded="false" />
+            <element signature="n#!!doc;n#getGoods#0;n#StoreService#0" expanded="false" />
+            <element signature="method#getGoods#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getCategoryDetails#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getCategories#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getSubcategories#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getBrands#0;class#StoreService#0" expanded="false" />
+            <element signature="n#!!doc;n#RebindBasket#0;n#StoreService#0" expanded="false" />
+            <element signature="method#RebindBasket#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getBasket#0;class#StoreService#0" expanded="false" />
+            <element signature="method#addGood#0;class#StoreService#0" expanded="false" />
+            <element signature="method#setGood#0;class#StoreService#0" expanded="false" />
+            <element signature="method#removeGood#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getGoodsPrice#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getDeliveryPrice#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getDiscount#0;class#StoreService#0" expanded="false" />
+            <element signature="method#getTotalPrice#0;class#StoreService#0" expanded="false" />
+            <element signature="method#removeCertificate#0;class#StoreService#0" expanded="false" />
+            <element signature="method#setAddress#0;class#StoreService#0" expanded="false" />
+            <element signature="method#setComment#0;class#StoreService#0" expanded="false" />
+            <element signature="n#!!doc;n#makeOrder#0;n#StoreService#0" expanded="false" />
+            <element signature="method#makeOrder#0;class#StoreService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/js/framework/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19453" selection-start="83613" selection-end="83613" vertical-scroll-proportion="0.12463343">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Select/web/js/logic/basket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="12" selection-start="319" selection-end="725" vertical-scroll-proportion="0.5381295">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/js/logic/wish_edit.js">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/cart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="68" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0">
+        <state line="11" column="30" selection-start="528" selection-end="528" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/FacebookController.java">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="37" selection-start="5440" selection-end="5440" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/js/logic/payment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="956" selection-end="958" vertical-scroll-proportion="0.33333334">
+        <state line="13" column="55" selection-start="653" selection-end="653" vertical-scroll-proportion="0.33034378">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/spring-web.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.7845118">
+        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.80517507">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_goods.jsp">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/structure/Basket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="74" selection-start="2409" selection-end="3077" vertical-scroll-proportion="-8.0">
+        <state line="149" column="19" selection-start="4834" selection-end="4834" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/empty.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/controller/StoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="49" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1382706838167" expanded="true" signature="2409:3077" placeholder="..." />
+            <element signature="e#686#697#0" expanded="false" />
+            <element signature="method#about#0;class#StoreController#0" expanded="false" />
+            <element signature="method#delivery#0;class#StoreController#0" expanded="false" />
+            <element signature="method#contact#0;class#StoreController#0" expanded="false" />
+            <element signature="method#guarantees#0;class#StoreController#0" expanded="false" />
+            <element signature="method#payment#0;class#StoreController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/wish_details.jsp">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/interceptor/DataInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="10" selection-start="2087" selection-end="2087" vertical-scroll-proportion="-2.4313726">
+        <state line="31" column="53" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/js/logic/good.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="4" selection-start="8781" selection-end="8781" vertical-scroll-proportion="0.0">
+        <state line="13" column="57" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/js/logic/order.js">
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/good.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="44" selection-start="6112" selection-end="6112" vertical-scroll-proportion="-2.0">
+        <state line="38" column="39" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.20795107">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="701" selection-end="712" vertical-scroll-proportion="-2.5769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/database/PGSQLDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="46" selection-start="1656" selection-end="1656" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1305#1321#0" expanded="true" />
-            <element signature="e#1809#1825#0" expanded="true" />
-            <element signature="e#2334#2350#0" expanded="true" />
-            <element signature="e#2621#2637#0" expanded="true" />
-            <element signature="e#4331#4347#0" expanded="true" />
-            <element signature="e#5396#5412#0" expanded="true" />
-            <element signature="e#9027#9043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="385" column="32" selection-start="16084" selection-end="16084" vertical-scroll-proportion="1.4898876">
-          <folding>
-            <element signature="e#1446#1457#0" expanded="false" />
-            <element signature="n#!!doc;n#domain#0;n#UserController#0" expanded="false" />
-            <element signature="method#initBinder#0;class#UserController#0" expanded="false" />
-            <element signature="method#handleIOException#0;class#UserController#0" expanded="false" />
-            <element signature="n#!!doc;n#home#0;n#UserController#0" expanded="false" />
-            <element signature="method#home#0;class#UserController#0" expanded="false" />
-            <element signature="method#mainChoose#0;class#UserController#0" expanded="false" />
-            <element signature="method#termsOfService#0;class#UserController#0" expanded="false" />
-            <element signature="method#termsOfPayment#0;class#UserController#0" expanded="false" />
-            <element signature="method#catalogue#0;class#UserController#0" expanded="false" />
-            <element signature="method#getGoods#0;class#UserController#0" expanded="false" />
-            <element signature="method#wishGoods#0;class#UserController#0" expanded="false" />
-            <element signature="method#makeWish#0;class#UserController#0" expanded="false" />
-            <element signature="e#7106#7163#0" expanded="false" />
-            <element signature="method#makeFriendWish#0;class#UserController#0" expanded="false" />
-            <element signature="method#friendsWish#0;class#UserController#0" expanded="false" />
-            <element signature="method#payment#0;class#UserController#0" expanded="false" />
-            <element signature="method#deliveryChoose#0;class#UserController#0" expanded="false" />
-            <element signature="method#getRegions#0;class#UserController#0" expanded="false" />
-            <element signature="method#deliveryChoose#1;class#UserController#0" expanded="false" />
-            <element signature="method#orderInfo#0;class#UserController#0" expanded="false" />
-            <element signature="e#25013#25073#0" expanded="false" />
-            <element signature="method#clearCart#0;class#UserController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

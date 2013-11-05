@@ -8,6 +8,7 @@
     <![endif]-->
     <script src="/js/framework/browser.js"></script>
     <script src="/js/framework/modernizr.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/js/framework/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>

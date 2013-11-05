@@ -63,7 +63,6 @@ public class Basket
         }
         xml.addNode("basket","firstOrderDiscount",firstOrderDiscount);
         xml.addNode("basket","deliveryPrice",getDeliveryPrice());
-        xml.addNode("basket","deliveryDistance",getDeliveryDistance());
         xml.addNode("basket","deliveryDate",deliveryDate);
         xml.addNode("basket","address",address);
         xml.addNode("basket","comment",comment);
@@ -84,15 +83,6 @@ public class Basket
         Date deliveryDate = null;
         String address = null;
         String comment = null;
-    }
-    public String getDeliveryDistance() throws Exception
-    {
-        DBRecord variant = BasketStorage.dbProc.getDeliveryVariant(deliveryVariant);
-        if(variant!=null)
-        {
-            return variant.getStringValue("name");
-        }
-        return "";
     }
     public Date getDeliveryDate() {
         return deliveryDate;
@@ -157,11 +147,6 @@ public class Basket
     }
     public Double getDeliveryPrice() throws Exception
     {
-        DBRecord variant = BasketStorage.dbProc.getDeliveryVariant(deliveryVariant);
-        if(variant!=null)
-        {
-            return round(variant.getDoubleValue("price"));
-        }
         return 0.0;
     }
     public Long getDeliveryVariant()

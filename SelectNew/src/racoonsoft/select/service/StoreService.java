@@ -132,16 +132,6 @@ public class StoreService
         Basket b = getBasket(sessionId);
         return b.getTotalPrice();
     }
-    public boolean addCertificate(String key,Long userId,String SessionId) throws SQLException
-    {
-        DBRecord cert = dbProc.getCertificate(userId,key);
-        if(cert==null)
-        {
-            return false;
-        }
-        getBasket(SessionId).setCertificate(cert.getStringValue("key"),cert.getDoubleValue("value"));
-        return true;
-    }
     public void removeCertificate(String sessionId,String key) throws SQLException
     {
         getBasket(sessionId).removeCertificate(key);
@@ -190,11 +180,6 @@ public class StoreService
             orderGoodsPrams.put("count", good.getCount());
             dbProc.executeInsert("order_good",orderGoodsPrams);
         }
-
-        // 3 - Update used certificates
-
-        // 4 - Create new certificate
-
         // 5 - Notify client by sms
         String phone = "7"+u.getStringValue("login").replace("(","").replace(")","").replace("-","");
         SMSMessage clientMessage = new SMSMessage(phone,"Ваш заказ (№ "+orderId+") успешно принят.","select-st");
@@ -205,15 +190,6 @@ public class StoreService
         smsProc.sendSMS(sellerMessage);
 
         return orderId;
-    }
-    public Double getFirstOrderDiscount(Basket b,User u) throws Exception
-    {
-        DBRecord rec = dbProc.getRecord("SELECT count(id) AS count FROM order_list WHERE user_id="+u.getID());
-        if(rec.getLongValue("count")==null||rec.getLongValue("count")==0l)
-        {
-            return b.getTotalGoodPrice()*0.1;
-        }
-        return 0.0;
     }
     //</editor-fold>
 }
