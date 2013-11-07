@@ -39,11 +39,13 @@ public class Warehouse
             b = new Basket(user_id);
         }
         String name = Goods.get(good_id).getStringValue("name_for_shop");
+        String nameForOrder = Goods.get(good_id).getStringValue("name_for_order");
         String description = Goods.get(good_id).getStringValue("description");
         String weight_product = Goods.get(good_id).getStringValue("weight_product");
+        String article = Goods.get(good_id).getStringValue("articul");
         String photo_url = URLEncoder.encode(Goods.get(good_id).getStringValue("photo_url"),"UTF-8");
         int price = Goods.get(good_id).getIntValue("price");
-        b.setGood(good_id, quantity,name,photo_url,price,description,weight_product);
+        b.setGood(good_id, quantity,name,photo_url,price,description,weight_product,article,nameForOrder);
     }
     public static void putGoodInBasket(int user_id,int good_id) throws UnsupportedEncodingException
     {
@@ -54,11 +56,13 @@ public class Warehouse
             Baskets.put(user_id, b);
         }
         String name = Goods.get(good_id).getStringValue("name_for_shop");
+        String nameForOrder = Goods.get(good_id).getStringValue("name_for_order");
         String description = Goods.get(good_id).getStringValue("description");
         String weight_product = Goods.get(good_id).getStringValue("weight_product");
+        String article = Goods.get(good_id).getStringValue("articul");
         String photo_url = URLEncoder.encode(Goods.get(good_id).getStringValue("photo_url"),"UTF-8");
         int price = Goods.get(good_id).getIntValue("price");
-        b.addGood(good_id, 1, name, photo_url,price,description,weight_product);
+        b.addGood(good_id, 1, name, photo_url,price,description,weight_product,article,nameForOrder);
     }
     public static Basket getBasket(int user_id)
     {

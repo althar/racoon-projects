@@ -300,11 +300,11 @@ function loadBasket() {
                     var price = $("price", curr_item).text();
                     var description = $("description", curr_item).text();
                     var weight = $("weight", curr_item).text();
-
+                    var article = $("article", curr_item).text();
                     table_html += "<tr item_id=\"" + id + "\">";
                     table_html += "<td class=\"photo\"><img src=\"" + photo_base_url + photo_url + "\" alt=\"\" />";
                     table_html += "<td class=\"desc\">";
-                    table_html += "<p class=\"title\"><a href=\"products.html?id=" + id + "\">" + name + "</a> <span class=\"article\"></span></p>";
+                    table_html += "<p class=\"title\"><a href=\"products.html?id=" + id + "\">" + name +" (арт. "+article+")</a> <span class=\"article\"></span></p>";
                     table_html += "<p class=\"info\">" + description.substr(0, 260) + "...</p></td>";
                     table_html += "<td class=\"quantity\"><a class=\"minus\" item_id=\"" + id + "\"></a>";
                     table_html += "<input type=\"text\" maxlength=\"2\" class=\"input_quantity quantity_regular\" q=\"" + quantity + "\" item_id=\"" + id + "\" value=\"" + quantity + "\"/>";
@@ -852,6 +852,7 @@ function loadHistory() {
                         {
 
                             var deliver_date = $(current_row).find("deliver_date").text();
+                            var deliver_address = $(current_row).find("address").text();
                             var total_price = $(current_row).find("total_price").text();
 
                             list_html += order_html.replace("rowspan=x", "rowspan=\"" + goods_in_order + "\"");
@@ -864,6 +865,8 @@ function loadHistory() {
                             order_html += "<p class=\"value\">" + deliver_date + "</p>";
                             order_html += "<p class=\"info\">Сумма заказа</p>";
                             order_html += "<p class=\"value\">" + total_price + " Р</p>";
+                            order_html += "<p class=\"info\">Адрес доставки</p>";
+                            order_html += "<p class=\"value\">" + deliver_address + " Р</p>";
                             order_html += "</td>";
                             goods_in_order = 0;
                         }

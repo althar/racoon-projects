@@ -25,19 +25,19 @@
                     </div>
                 </article>
 
-                <div class="certificates">
-                    <ul class="row">
-                        <li class="certificates_item">
-                            <img src="images/cert1.jpg">
-                        </li>
-                        <li class="certificates_item">
-                            <img src="images/cert2.jpg">
-                        </li>
-                        <li class="certificates_item">
-                            <img src="images/cert3.jpg">
-                        </li>
-                    </ul>
-                </div>
+                <%--<div class="certificates">--%>
+                    <%--<ul class="row">--%>
+                        <%--<li class="certificates_item">--%>
+                            <%--<img src="images/cert1.jpg">--%>
+                        <%--</li>--%>
+                        <%--<li class="certificates_item">--%>
+                            <%--<img src="images/cert2.jpg">--%>
+                        <%--</li>--%>
+                        <%--<li class="certificates_item">--%>
+                            <%--<img src="images/cert3.jpg">--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
 
             </div>
         </div>

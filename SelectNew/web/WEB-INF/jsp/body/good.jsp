@@ -36,37 +36,38 @@
 
                     <div class="product-char_foto">
                         <div class="product_main-foto">
-                            <a href="">
-                                <img src="/img/products/1.jpg" class="img_type-products">
+                            <a href="${good.getRecords('images').get(0).getStringValue('url')}"
+                               data-lightbox="roadtrip">
+                                <c:choose>
+                                    <c:when test="${empty good.getRecords('images').get(0).getStringValue('preview_url')}">
+                                        <img src="${good.getRecords('images').get(0).getStringValue('url')}"
+                                             class="img_type-products">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <img src="${good.getRecords('images').get(0).getStringValue('url')}"
+                                             class="img_type-products">
+                                    </c:otherwise>
+                                </c:choose>
                             </a>
                         </div>
                         <div class="product_main-foto_preview">
                             <ul class="row">
-                                <li class="main-foto_preview-item">
-                                    <a href="">
-                                        <img src="/img/products/small_pic/1.png" class="img_type-products">
-                                    </a>
-                                </li>
-                                <li class="main-foto_preview-item">
-                                    <a href="">
-                                        <img src="/img/products/small_pic/1.png" class="img_type-products">
-                                    </a>
-                                </li>
-                                <li class="main-foto_preview-item">
-                                    <a href="">
-                                        <img src="/img/products/small_pic/1.png" class="img_type-products">
-                                    </a>
-                                </li>
-                                <li class="main-foto_preview-item">
-                                    <a href="">
-                                        <img src="/img/products/small_pic/1.png" class="img_type-products">
-                                    </a>
-                                </li>
-                                <li class="main-foto_preview-item">
-                                    <a href="">
-                                        <img src="/img/products/small_pic/1.png" class="img_type-products">
-                                    </a>
-                                </li>
+                                <c:forEach items="${good.getRecords('images')}" var="img">
+                                    <li class="main-foto_preview-item">
+                                        <a href="${img.getStringValue('url')}" data-lightbox="roadtrip">
+                                            <c:choose>
+                                                <c:when test="${empty img.getStringValue('preview_url')}">
+                                                    <img src="${img.getStringValue('url')}"
+                                                         class="img_type-products">
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <img src="${img.getStringValue('url')}"
+                                                         class="img_type-products">
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </a>
+                                    </li>
+                                </c:forEach>
                             </ul>
                         </div>
                     </div>
@@ -76,7 +77,9 @@
 
                         <div class="product-buy">
                             <div class="product-price">Цена ${good.getDoubleValue('sell_price')} руб.</div>
-                            <button class="button blue button-buy">Купить</button>
+                            <button class="button blue button-buy" id="order-button"
+                                    good_id="${good.getLongValue('id')}">Купить
+                            </button>
                             <span class="product-delivery"><i class="icon icon-delivery"></i> Бесплатная доставка</span>
                         </div>
                         <div class="product-description">

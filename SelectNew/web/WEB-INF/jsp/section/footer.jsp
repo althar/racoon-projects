@@ -25,12 +25,12 @@
                     <a href="mailto:selectsanteh@gmail.com?subject=Сотрудничество" class="link_type-footer">Сотрудничество</a>
                 </dd>
             </dl>
-            <dl class="footer-menu_section">
-                <dt class="footer-menu_title">ДОПОЛНИТЕЛЬНО</dt>
-                <dd class="footer-menu_item">
-                    <a href="/brands" class="link_type-footer">Бренды</a>
-                </dd>
-            </dl>
+            <%--<dl class="footer-menu_section">--%>
+                <%--<dt class="footer-menu_title">ДОПОЛНИТЕЛЬНО</dt>--%>
+                <%--<dd class="footer-menu_item">--%>
+                    <%--<a href="/brands" class="link_type-footer">Бренды</a>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
         </div>
     </nav>
 </footer>

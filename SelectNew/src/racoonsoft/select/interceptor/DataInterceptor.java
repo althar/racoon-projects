@@ -30,7 +30,10 @@ public class DataInterceptor implements HandlerInterceptor
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception
     {
-        modelAndView.addObject("static_data",getStatic());
+        if(modelAndView!=null)
+        {
+            modelAndView.addObject("static_data",getStatic());
+        }
     }
 
     @Override

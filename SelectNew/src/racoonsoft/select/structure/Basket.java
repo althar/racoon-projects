@@ -19,6 +19,8 @@ public class Basket
     private Date deliveryDate = null;
     private String address;
     private String comment;
+    private String name;
+    private String phone;
 
     public HashMap<Long, Good> getGoods() {
         return goods;
@@ -37,7 +39,6 @@ public class Basket
     public void setGoods(HashMap<Long, Good> goods) {
         this.goods = goods;
     }
-
     public XMLProcessor getXml() throws Exception
     {
         XMLProcessor xml = new XMLProcessor(true,"<?xml version=\"1.0\" encoding=\"utf-8\"?><basket></basket>");
@@ -73,7 +74,6 @@ public class Basket
 
         return xml;
     }
-
     public void clear()
     {
         goods = new HashMap<Long, Good>();
@@ -84,6 +84,23 @@ public class Basket
         String address = null;
         String comment = null;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Date getDeliveryDate() {
         return deliveryDate;
     }
@@ -107,7 +124,7 @@ public class Basket
         Good g = goods.get(goodId);
         if(g==null)
         {
-            g = new Good(BasketStorage.dbProc.getRecord("SELECT g.*,im.url AS good_image FROM good g, good_image im WHERE im.good_id=g.id AND im.is_main=TRUE AND g.id="+goodId+" LIMIT 1"));
+            g = new Good(BasketStorage.dbProc.getRecord("SELECT g.*,im.url AS good_image FROM good g, good_image im WHERE im.good_id=g.id AND g.id="+goodId+" LIMIT 1"));
             goods.put(goodId, g);
         }
         if(count==0)

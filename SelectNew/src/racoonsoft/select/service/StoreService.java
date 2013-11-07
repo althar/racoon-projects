@@ -149,19 +149,19 @@ public class StoreService
     //</editor-fold>
 
     //<editor-fold desc="Order">
-    public Long makeOrder(Basket b, User u) throws Exception
+    public Long makeOrder(Basket b) throws Exception
     {
         Long orderId = 0l;
         // 1 - Create order
         HashMap<String,Object> orderPrams = new HashMap<String, Object>();
-        orderPrams.put("user_id", u.getID());
-        orderPrams.put("delivery_time", b.getDeliveryDate());
+        orderPrams.put("user_id", 0);
         orderPrams.put("comment", b.getComment());
         orderPrams.put("good_price", b.getTotalGoodPrice());
         orderPrams.put("delivery_price", b.getDeliveryPrice());
-        orderPrams.put("discount", b.getTotalDiscount());
-        orderPrams.put("delivery_variant", b.getDeliveryVariant());
+        orderPrams.put("discount", 0);
         orderPrams.put("address", b.getAddress());
+        orderPrams.put("phone", b.getPhone());
+        orderPrams.put("name", b.getName());
         orderPrams.put("total_price", b.getTotalPrice());
         orderId = dbProc.executeInsert("order_list",orderPrams);
 
@@ -181,15 +181,19 @@ public class StoreService
             dbProc.executeInsert("order_good",orderGoodsPrams);
         }
         // 5 - Notify client by sms
-        String phone = "7"+u.getStringValue("login").replace("(","").replace(")","").replace("-","");
+        String phone = b.getPhone();
         SMSMessage clientMessage = new SMSMessage(phone,"Ваш заказ (№ "+orderId+") успешно принят.","select-st");
         SMSMessage adminMessage = new SMSMessage("79265713850","Заказ (№ "+orderId+")."+b.getTotalPrice()+" руб.","select-st");
         SMSMessage sellerMessage = new SMSMessage("74993907351","Заказ (№ "+orderId+")."+b.getTotalPrice()+" руб.","select-st");
         smsProc.sendSMS(clientMessage);
         smsProc.sendSMS(adminMessage);
         smsProc.sendSMS(sellerMessage);
-
         return orderId;
+    }
+    public void orderCall(String phone) throws Exception
+    {
+        SMSMessage mess = new SMSMessage("74993907351","Заказан звонок на номер "+phone,"select-st");
+        smsProc.sendSMS(mess);
     }
     //</editor-fold>
 }

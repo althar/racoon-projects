@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 @Controller
-@RequestMapping("/")
 public class StoreController
 {
     @Autowired
@@ -38,6 +37,7 @@ public class StoreController
     @RequestMapping("/order_call")
     public ModelAndView orderCall(String phone,HttpServletResponse resp) throws Exception
     {
+        store.orderCall(phone);
         resp.getWriter().print("ok");
         resp.getWriter().close();
         return new ModelAndView("section/empty");
@@ -45,13 +45,13 @@ public class StoreController
     //</editor-fold>
 
     //<editor-fold desc="Pages">
-    @RequestMapping("/about")
+    @RequestMapping(value = {"/about"})
     public ModelAndView about() throws Exception
     {
         ModelAndView model = new ModelAndView("body/about");
         return model;
     }
-    @RequestMapping("/delivery")
+    @RequestMapping(value = {"/delivery","/"})
     public ModelAndView delivery() throws Exception
     {
         ModelAndView model = new ModelAndView("body/delivery");

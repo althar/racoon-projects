@@ -1462,3 +1462,15 @@ span.arrow { font-family: Arial; }
 {
     cursor: pointer;
 }
+.article-tag
+{
+    width: 150px;
+    height: 38px;
+    float: left;
+    position: relative;
+    /*position: absolute;*/
+    top: 5px;
+    left: 80px;
+    font-size: 180%;
+    font-style: italic;
+}

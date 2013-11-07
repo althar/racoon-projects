@@ -228,7 +228,6 @@ function loadBrandsAndCategories()
 }
 function initProductForm()
 {
-
     $("a[good_link=\"true\"]").click(function(){
         var scrollTop = $(window).scrollTop();
 
@@ -276,14 +275,15 @@ function initProductForm()
             var w = $(this).find("div[good_info=\"weight\"]").attr("value");
             var p = $(this).find("div[good_info=\"price\"]").attr("value");
             var id = $(this).find("input[good_info=\"id\"]").attr("value");
-
+            var art = $(this).find("input[good_info=\"article\"]").attr("value");
             price_weight_html += "<div class=\"price\">";
             price_weight_html += "<input type=\"hidden\" good_info=\"id\" value=\""+id+"\"/>";
             price_weight_html += "<div class=\"weight_tag\"><div class=\"value\"  good_info=\"weight\" value=\""+w+"\">"+w+"</div></div>";
             price_weight_html += "<div class=\"price_tag\"><div class=\"value\"  good_info=\"price\" value=\""+p+"\">"+p+"<span class=\"rur\"> c</span></div></div>";
             price_weight_html += "<a class=\"buy corners_3\" fast_link_in_basket=\"true\" good_id=\""+id+"\">";
             price_weight_html += "<img src=\"img/gui/basket_l.gif\" alt=\"\"/>";
-            price_weight_html += "</a></div>";
+            price_weight_html += "";
+            price_weight_html += "</a><div class=\"article-tag\" good_info=\"article\" > артикул "+art+"</div></div>";
         });
 
 
@@ -421,6 +421,7 @@ function loadCurrentGoods()
                         item_html +=" <input type=\"hidden\" good_info=\"price\" value=\""+price+"\"/>";
                         item_html +=" <input type=\"hidden\" good_info=\"animal\" value=\""+animal+"\"/>";
                         item_html +=" <input type=\"hidden\" good_info=\"id\" value=\""+id+"\"/>";
+                        item_html +=" <input type=\"hidden\" good_info=\"article\" value=\""+articul+"\"/>";
                         item_html +=" <input type=\"hidden\" good_info=\"food_type\" value=\""+food_type+"\"/>";
                         item_html +=" <input type=\"hidden\" good_info=\"category\" value=\""+removeDigits(category)+"\"/>";
                         item_html +=" <input type=\"hidden\" good_info=\"brand\" value=\""+brand+"\"/>";
@@ -433,6 +434,7 @@ function loadCurrentGoods()
 
                         item_html += "<div class=\"price\">";
                         item_html += "<input type=\"hidden\" good_info=\"id\" value=\""+id+"\"/>";
+                        item_html += "<input type=\"hidden\" good_info=\"article\" value=\""+articul+"\"/>";
                         item_html += "<div class=\"weight_tag\"><div class=\"value\"  good_info=\"weight\" value=\""+weight_product+"\">"+weight_product+"</div>";
                         if(admin=="true")
                         {
@@ -455,6 +457,7 @@ function loadCurrentGoods()
                         //alert("Same good..."+name_for_order);
                         item_html += "<div class=\"price\">";
                         item_html += "<input type=\"hidden\" good_info=\"id\" value=\""+id+"\"/>";
+                        item_html += "<input type=\"hidden\" good_info=\"article\" value=\""+articul+"\"/>";
                         item_html += "<div class=\"weight_tag\"><div class=\"value\"  good_info=\"weight\" value=\""+weight_product+"\">"+weight_product+"</div>";
 
                         if(admin=="true")

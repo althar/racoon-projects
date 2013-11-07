@@ -66,7 +66,7 @@ public class BasketController
     }
 
     @RequestMapping("/add")
-    public void addGood(HttpServletRequest request, HttpServletResponse response,Long good_id,Integer count) throws Exception
+    public ModelAndView addGood(HttpServletRequest request, HttpServletResponse response,Long good_id,Integer count) throws Exception
     {
         response.setCharacterEncoding("UTF-8");
         String sessionId = UserProcessor.getCookie(request,"session_id");
@@ -80,30 +80,30 @@ public class BasketController
         }
         Basket b = store.getBasket(sessionId);
         response.getWriter().print(b.getXml().toXMLString());
+        return new ModelAndView("section/empty");
     }
 
     //<editor-fold desc="Make order">
     @RequestMapping("/make_order")
-    public Object save(HttpServletRequest request, HttpServletResponse response,String comment,Date date,Long delivery_variant,String address) throws Exception
+    public ModelAndView save(HttpServletRequest request, HttpServletResponse response,String comment,String address,String city,String name,String phone) throws Exception
     {
         String sessionId = UserProcessor.getSessionId(request);
         Basket b = store.getBasketStorage().getBasket(sessionId);
-        b.setAddress(address);
+        b.setAddress(city+", "+address);
         b.setComment(comment);
-        b.setDeliveryDate(date);
-        b.setDeliveryVariant(delivery_variant);
+        b.setDeliveryVariant(4l);
+        phone = phone.replace(" ","").replace("(","").replace(")","").replace("-","");
+        if(phone.substring(0,1).equalsIgnoreCase("8"))
+        {
+            phone = "+7"+phone.substring(1);
+        }
+        b.setPhone(phone);
+        b.setName(name);
         store.getBasketStorage().addBasket(sessionId,b);
-        ActionResult res = UserProcessor.authorization(request, response, dbProc, false, false);
-        if(!res.success())
-        {
-            return new ModelAndView("redirect:/%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0/%D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F");
-        }
-        if(b.isEmpty())
-        {
-            return new ModelAndView("redirect:/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3");
-        }
-        response.getWriter().print(true);
-        return null;
+        Long orderId = store.makeOrder(b);
+        ModelAndView model = new ModelAndView("body/thank_you");
+        model.addObject("order_id",orderId);
+        return model;
     }
     //</editor-fold>
 }

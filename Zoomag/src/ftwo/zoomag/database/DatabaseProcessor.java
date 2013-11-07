@@ -153,7 +153,7 @@ public class DatabaseProcessor extends DBProcessor
             og_pars.put("order_id", order_id);
             og_pars.put("good_id", item.getGoodID());
             og_pars.put("count", item.getQuantity());
-            og_pars.put("good_name", item.getName());
+            og_pars.put("good_name", item.getNameForOrder());
             og_pars.put("price", item.getGoodPrice());
             executeInsert("order_goods", og_pars);
         }
@@ -409,6 +409,8 @@ public class DatabaseProcessor extends DBProcessor
                 builder.append("AND (lower(name_rus) LIKE '%");
                 builder.append(keyword.replace("'", "").toLowerCase());
                 builder.append("%' OR lower(name_for_shop) LIKE '%");
+                builder.append(keyword.replace("'", "").toLowerCase());
+                builder.append("%' OR lower(articul) LIKE '%");
                 builder.append(keyword.replace("'", "").toLowerCase());
                 builder.append("%') ");
             }

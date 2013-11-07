@@ -11,7 +11,7 @@ public class Basket
 
     public Basket(int user_id)
     {
-	UserIdedtifier = user_id;
+	    UserIdedtifier = user_id;
     }
     public int getIdentifier()
     {
@@ -28,7 +28,7 @@ public class Basket
     }
     public HashMap<Integer,Object> getItems()
     {
-	return BasketItems;
+	    return BasketItems;
     }
     public BasketItem getItem(int good_id)
     {
@@ -49,23 +49,23 @@ public class Basket
         }
         return total_price;
     }
-    public void addGood(int id,int quantity,String name,String photo_url,int price,String desc,String weight)
+    public void addGood(int id,int quantity,String name,String photo_url,int price,String desc,String weight,String articul,String nameForOwl)
     {
         BasketItem item = (BasketItem)BasketItems.get(id);
         if(item==null)
         {
-                setGood(id, quantity,name,photo_url,price,desc,weight);
+                setGood(id, quantity,name,photo_url,price,desc,weight,articul,nameForOwl);
         }
         else
         {
                 item.add(quantity);
         }
     }
-    public void setGood(int id,int quantity,String name,String photo_url,int price,String desc,String weight)
+    public void setGood(int id,int quantity,String name,String photo_url,int price,String desc,String weight,String articul,String nameForOwl)
     {
         if(quantity>0)
         {
-                BasketItem item = new BasketItem(id, quantity,name,photo_url,price,desc,weight);
+                BasketItem item = new BasketItem(id, quantity,name,photo_url,price,desc,weight,articul,nameForOwl);
                 BasketItems.put(id, item);
         }
         else

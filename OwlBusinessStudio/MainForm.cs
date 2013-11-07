@@ -2048,11 +2048,17 @@ namespace OwlBusinessStudio
 
 
                         excel.makeFont(2, currentOrderItemIndex + 8, 6, currentOrderItemIndex + 8, true, false, false, 12);
-
                         excel.text(currentOrderItemIndex + 10, 2, "Отпуск товара разрешил: ");
-                        excel.text(currentOrderItemIndex + 10, 5, "");
+                        //Заказ получил, претензий по комплекту, упаковке и внешнему виду товаров не имею, правее слова "Подпись Клиента" и "Фамилия И.О.". Если влезет, то ниже две черты, над которыми клиент предположительно ставит подпись и ее расшифровку.
+                        excel.text(currentOrderItemIndex + 11, 2, "Заказ получил, претензий по комплекту, упаковке и внешнему виду товаров не имею.");
+                        excel.text(currentOrderItemIndex + 12, 2, "Подпись клиента ____ ФИО _______________");
                         excel.text(currentOrderItemIndex + 10, 6, seller_fio);
-                        excel.mergeCells(2, currentOrderItemIndex + 10, 3, currentOrderItemIndex + 10);
+                        excel.text(currentOrderItemIndex + 10, 3, "Отпуск товара разрешил: ");
+                        excel.mergeCells(2, currentOrderItemIndex + 10, 4, currentOrderItemIndex + 10);
+                        excel.mergeCells(2, currentOrderItemIndex + 11, 6, currentOrderItemIndex + 11);
+                        excel.setHeight(currentOrderItemIndex + 11, 2,30);
+                        excel.setTextAlignment(currentOrderItemIndex + 11, 2, currentOrderItemIndex + 11, 2, ExcelTextHorizontalAlignment.AlignLeft, ExcelTextVerticalAlignment.AlignJustify);
+                        excel.mergeCells(2, currentOrderItemIndex + 12, 6, currentOrderItemIndex + 12);
 
 
                         excel.makeBorder(2, 5, 6, currentOrderItemIndex + 7, Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin, true);
