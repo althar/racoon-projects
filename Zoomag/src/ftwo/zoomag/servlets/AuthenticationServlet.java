@@ -8,6 +8,7 @@ import ftwo.zoomag.structure.Warehouse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.TimeZone;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -46,6 +47,7 @@ public class AuthenticationServlet extends ftwo.library.web.AuthenticationServle
                 {
                     out.print(BaseServlet.generateResponseXML(AUTHENTICATION_WRONG_LOGIN_OR_PASSWORD, cmd, "session_id",session_id));
                     out.close();
+
                     return;
                 }
                 else

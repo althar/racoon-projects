@@ -37,7 +37,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     @Override
     public void process()
     {
-        doSite(mySqlProc1,"site_1_order_id");
+        //doSite(mySqlProc1,"site_1_order_id");
     }
 
     private void doSite(DBProcessor proc,String seqName)

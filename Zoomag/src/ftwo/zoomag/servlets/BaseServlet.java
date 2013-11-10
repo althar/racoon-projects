@@ -10,6 +10,7 @@ import ftwo.zoomag.structure.Warehouse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.TimeZone;
 import java.util.logging.Level;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -55,6 +56,11 @@ public class BaseServlet extends ftwo.library.web.BaseServlet
         if(!IsStarted)
         {
             System.out.println("Starting application...");
+            System.out.println("TZ: old: "+TimeZone.getDefault());
+            TimeZone zone = TimeZone.getTimeZone("Europe/Moscow");
+            zone.setRawOffset(14400000);
+            TimeZone.setDefault(zone);
+            System.out.println("TZ: new"+TimeZone.getDefault());
             SessionProc = new SessionProcessor();
             String db_host = getParameter("db_host");
             String db_name = getParameter("db_name");

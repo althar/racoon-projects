@@ -35,8 +35,7 @@ public class Test
     final StringBuilder str_3 = new StringBuilder("string 3");
     public static void main(String[] args)
     {
-	    Test t = new Test();
-        t.doTest();
+        System.out.println(java.util.TimeZone.getDefault());
 
     }
     private void doTest()
