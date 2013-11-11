@@ -44,7 +44,9 @@ public class PGSQLDataSource extends DBProcessor
             String query = "SELECT DISTINCT g.id FROM good g";
             query +=" LEFT JOIN good_characteristic gc ON gc.good_id=g.id";
             query +=" LEFT JOIN good_image gi ON gi.good_id=g.id";
-            query +=" WHERE gi.is_main = TRUE AND g.available>0";
+            query +=" WHERE" +
+//                    " gi.is_main = TRUE AND " +
+                    " g.available>=0";
             if(category!=null&&!category.equalsIgnoreCase("")&&!category.equalsIgnoreCase("сантехника"))
             {
                 query +=" AND g.category LIKE '"+category.replace("'","`");
@@ -76,7 +78,7 @@ public class PGSQLDataSource extends DBProcessor
             query +=" LEFT JOIN good_characteristic gc ON gc.good_id=g.id";
             query +=" LEFT JOIN good_image gi ON gi.good_id=g.id";
             query +=idsCondition;
-            query +=" AND gi.is_main=TRUE";
+            query +=" AND gi.url IS NOT NULL ORDER BY g.id";
             ArrayList<DBRecord> recs = getRecords(query);
 
             long currentGoodId = 0l;
@@ -94,7 +96,12 @@ public class PGSQLDataSource extends DBProcessor
                     currentGood.Fields = rec.Fields;
                 }
                 currentGood.addCharacteristic(rec.getStringValue("characteristic_name"),rec.getStringValue("characteristic_value"));
-                currentGood.setMainImageUrl(rec.getStringValue("url"));
+                String url = rec.getStringValue("url").replace("\\","/");
+                if(url.substring(0,3).equalsIgnoreCase("img"))
+                {
+                    url = "/"+url;
+                }
+                currentGood.setMainImageUrl(url);
             }
             goods.add(currentGood);
             return goods;
