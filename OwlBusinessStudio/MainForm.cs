@@ -553,7 +553,7 @@ namespace OwlBusinessStudio
                 }
                 LabelTotalPages.Text = total_pages.ToString();
                 LabelCurrentPage.Text = current_page.ToString();
-                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
+                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.modifier_name,owd.modified,owd.status_id,owd.user_name,owd.created FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
                 goods = dbProc.executeGet(query);
 
                 DataGridViewOrders.DataSource = goods;
@@ -1062,7 +1062,7 @@ namespace OwlBusinessStudio
                 view.Columns[11].Width = 70;
 
                 view.Columns[12].Width = 90;
-                view.Columns[13].Visible = false;
+                //view.Columns[13].Visible = false;
                 view.Columns[16].Visible = false;
                 Padding newPadding = new Padding(0, 0, 0, 0);
 

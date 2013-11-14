@@ -541,6 +541,14 @@ namespace OwlBusinessStudio.Orders
                 {
                     #region order
                     Hashtable orderParams = new Hashtable();
+
+                    DataTable userTab = MainForm.dbProc.executeGet("SELECT user_id FROM orders WHERE id=" + orderID);
+                    
+                    if (userTab == null || userTab.Rows.Count == 1)
+                    {
+                        orderParams.Add("user_id", MainForm.currentUser.ID);    
+                    }
+                    
                     orderParams.Add("client_id", clientID);
                     orderParams.Add("deliver", CheckDeliver.Checked);
                     orderParams.Add("deliver_date", TimePickerDate.Value);

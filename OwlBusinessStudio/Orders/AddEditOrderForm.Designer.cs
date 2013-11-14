@@ -593,13 +593,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 428);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(984, 438);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.TxtDescription);
             this.Controls.Add(this.ButtSaveOrder);
             this.Controls.Add(this.GroupBoxGoods);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1000, 680);
             this.Name = "AddEditOrderForm";
             this.Text = "Заказ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddEditOrderForm_FormClosed);
