@@ -24,6 +24,7 @@ public class DataInterceptor implements HandlerInterceptor
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o) throws Exception {
+        request.setCharacterEncoding("UTF-8");
         return true;
     }
 

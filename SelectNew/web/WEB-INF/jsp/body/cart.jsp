@@ -99,9 +99,9 @@
             </div>
             <div class="create-order">
                 <div class="create-order_inner">
-                    <h2>Оформление заказа</h2>
+                    <%--<h2>Оформление заказа</h2>--%>
 
-                    <form class="create-order_form" action="/cart/make_order" method="post">
+                    <form class="create-order_form" action="/cart/make_order" method="post" accept-charset="UTF-8">
                         <div class="control-group">
                             <label class="control-label">Имя</label>
 

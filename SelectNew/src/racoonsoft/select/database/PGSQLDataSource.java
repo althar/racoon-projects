@@ -4,6 +4,7 @@ import racoonsoft.library.database.DBProcessor;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.select.structure.CatalogueCategory;
 import racoonsoft.select.structure.CatalogueGood;
+import racoonsoft.select.structure.Order;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -223,5 +224,11 @@ public class PGSQLDataSource extends DBProcessor
         }
 
         return goods;
+    }
+    public Order getOrder(Long id) throws SQLException
+    {
+        Order order = new Order(getRecord("SELECT ord.*,'Доставка' AS delivery_name,ord.phone AS login,'',ord.name AS user_name FROM order_list ord WHERE ord.id="+id));
+        order.setGoods(getRecords("SELECT * FROM order_good WHERE order_id="+id.toString()));
+        return order;
     }
 }
