@@ -387,7 +387,7 @@ public class DatabaseProcessor extends DBProcessor
             }
             if(food_type_age != null && !food_type_age.equalsIgnoreCase(""))
             {
-                builder.append("AND food_type_age='");
+                builder.append("AND btrim(food_type_age, '0123456789')='");
                 builder.append(food_type_age.replace("'", ""));
                 builder.append("' ");
             }
@@ -444,11 +444,11 @@ public class DatabaseProcessor extends DBProcessor
     {
         if(animal.equalsIgnoreCase("прочее"))
         {
-            return getRecords("SELECT DISTINCT(food_type_age) FROM goods WHERE food_type_age IS NOT null AND food_type_age!='' AND food_type_category LIKE '%" + category.replace("'", "") + "' AND (animal!='Кошка' AND animal!='Собака')");
+            return getRecords("SELECT DISTINCT(btrim(food_type_age, '0123456789')) AS food_type_age FROM goods WHERE food_type_age IS NOT null AND food_type_age!='' AND food_type_category LIKE '%" + category.replace("'", "") + "' AND (animal!='Кошка' AND animal!='Собака') ORDER BY food_type_age");
         }
         else
         {
-            return getRecords("SELECT DISTINCT(food_type_age) FROM goods WHERE food_type_age IS NOT null AND food_type_age!='' AND food_type_category LIKE '%" + category.replace("'", "") + "' AND animal='" + animal.replace("'", "") + "'");
+            return getRecords("SELECT DISTINCT(btrim(food_type_age, '0123456789')) AS food_type_age FROM goods WHERE food_type_age IS NOT null AND food_type_age!='' AND food_type_category LIKE '%" + category.replace("'", "") + "' AND animal='" + animal.replace("'", "") + "' ORDER BY food_type_age");
         }
     }
 

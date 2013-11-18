@@ -8,16 +8,33 @@ public class StringHelper
 {
     public static String getCharEncodedString(String charString)
     {
-        StringBuffer decodedInput = new StringBuffer();
+        String result = charString;
         Matcher match = Pattern.compile("\\\\u([0-9a-fA-F]{4})| ").matcher(charString);
         while (match.find()) {
             String character = match.group(1);
             if (character == null)
-                decodedInput.append(match.group());
-            else
-                decodedInput.append((char)Integer.parseInt(character, 16));
+            {
+                character = match.group();
+            }
+            if(character.length()==4)
+            {
+                char ch = (char)Integer.parseInt(character.replace("\\u",""),16);
+                result = result.replace("\\u"+character,new String(new char[]{ch}));
+            }
         }
-        return decodedInput.toString();
+//        return decodedInput.toString();
+        return result;
+    }
+    public static String getCharEncodedString2(String str)
+    {
+        str = str.replace("\\","");
+        String[] arr = str.split("u");
+        String text = "";
+        for(int i = 1; i < arr.length; i++){
+            int hexVal = Integer.parseInt(arr[i].trim(), 16);
+            text += (char)hexVal;
+        }
+        return text;
     }
     public static ArrayList<String> findSubstring(String text,String regexp,boolean distinct)
     {

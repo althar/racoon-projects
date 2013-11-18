@@ -372,7 +372,7 @@ function loadCurrentGoods()
                 var item_list_html = "";
                 var item_html = "";
                 //alert($(xml).find("root").find("data").text());
-                var current_name_for_order = "";
+                var current_name_for_shop = "";
                 while($(xml).find("root").find("data").find("item_"+index).text()!="")
                 {
                     current_item = $(xml).find("root").find("data").find("item_"+index);
@@ -383,8 +383,8 @@ function loadCurrentGoods()
                     description = htmlDecode(description);
                     var food_type_age = $(current_item).find("food_type_age").text();
                     var name_for_shop = $(current_item).find("name_for_shop").text();
-                    name_for_shop = htmlDecode(name_for_shop);
-                    var name_for_order = $(current_item).find("name_for_order").text(); // For groups!!!
+                    name_for_shop = htmlDecode(name_for_shop); // For groups!!!
+                    var name_for_order = $(current_item).find("name_for_order").text();
                     name_for_order = htmlDecode(name_for_order);
                     var photo_url = $(current_item).find("photo_url").text();
                     var brand = $(current_item).find("company").text();
@@ -394,10 +394,10 @@ function loadCurrentGoods()
                     var id = $(current_item).find("id").text();
                     var left = $(current_item).find("left").text();
 
-
-                    if(name_for_order!=current_name_for_order)// New good...
+                    //alert(name_for_order);
+                    if(name_for_shop!=current_name_for_shop)// New good...
                     {
-                        current_name_for_order = name_for_order;
+                        current_name_for_shop = name_for_shop;
                         // Close previous good (if any). Add it to html
                         if(item_html!="")
                         {

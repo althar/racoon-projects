@@ -46,13 +46,13 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377610567260" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384354025357" ignored="false" />
-    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384171246859" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384771598586" ignored="false" />
+    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384777275775" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
     <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383654116214" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656724259" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784167651" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377610427855" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380722664444" ignored="false" />
@@ -101,7 +101,7 @@
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/Manifest.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/BuildConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/Store/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366030016029" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384354671437" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784559690" ignored="false" />
     <file path="/Store.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366033053749" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/persist/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366039891777" ignored="false" />
     <file path="/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366038895443" ignored="false" />
@@ -139,11 +139,11 @@
     <file path="/FileTransferHandler.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367589965963" ignored="false" />
     <file path="/FileUploadProcessorItem.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590981563" ignored="false" />
     <file path="/FileHandler.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367591569285" ignored="false" />
-    <file path="/Test.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384417573943" ignored="false" />
+    <file path="/Test.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384772876999" ignored="false" />
     <file path="/FileUploadProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367764808608" ignored="false" />
     <file path="/TestProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382366366146" ignored="false" />
     <file path="/FacebookController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368629274664" ignored="false" />
-    <file path="/StringHelper.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1374141280952" ignored="false" />
+    <file path="/StringHelper.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384768119450" ignored="false" />
     <file path="/gift_friends_list.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368520781221" ignored="false" />
     <file path="/gift_friends_list.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368519501832" ignored="false" />
     <file path="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/APIRequest.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367953061399" ignored="false" />
@@ -188,7 +188,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxCalendarDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383746926203" ignored="false" />
     <file path="/TaxCalendarDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369145470437" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/TaxCalendarWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369145057356" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/log/server.log" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380795482126" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/log/server.log" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504186544" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/taxcalendar_grid.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369145794847" ignored="false" />
     <file path="/taxcalendar_grid.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369145794847" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/taxcalendar_list.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369391866392" ignored="false" />
@@ -221,7 +221,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/pfr/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/pfr/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/PFRWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380795480559" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxWizardDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380885883063" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxWizardDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504182125" ignored="false" />
     <file path="/TaxWizardDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380803790636" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/FSSWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380885883063" ignored="false" />
     <file path="/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170076759" ignored="false" />
@@ -276,7 +276,7 @@
     <file path="/good_detail.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1375685207100" ignored="false" />
     <file path="/YandexController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382432129483" ignored="false" />
     <file path="/XMLProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377256785582" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384767187663" ignored="false" />
     <file path="/BasketController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383736683039" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/modx/ModxProxyController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380534028339" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/helper/HTTPClient.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371713039905" ignored="false" />
@@ -330,7 +330,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/Transaction.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372239155973" ignored="false" />
     <file path="/Transaction.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372239127359" ignored="false" />
     <file path="/good_page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373271647537" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/report/ReportGenerator.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380804092403" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/report/ReportGenerator.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504182125" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/taxes/fss/PfrDataForEmployee.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378382158934" ignored="false" />
     <file path="/PfrDataForEmployee.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378301588008" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/config/FinanceWebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373368857137" ignored="false" />
@@ -437,7 +437,7 @@
     <file path="$PROJECT_DIR$/../../IdeaProjects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/Marketing.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1379592728074" ignored="false" />
     <file path="$PROJECT_DIR$/../../IdeaProjects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/Home.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1379592448568" ignored="false" />
     <file path="$PROJECT_DIR$/../../IdeaProjects/erdicto/admin/src/main/webapp/WEB-INF/jsp/marketing.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1379592611912" ignored="false" />
-    <file path="/marketing.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1379592611438" ignored="false" />
+    <file path="/marketing.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384774794990" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/persist/MarketingDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380207961754" ignored="false" />
     <file path="/MarketingDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380207961754" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/entity/MarketingList.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380204422027" ignored="false" />
@@ -490,8 +490,8 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/fss/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
     <file path="/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384168586489" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/fss/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383746155158" ignored="false" />
-    <file path="/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383746076541" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384777270644" ignored="false" />
+    <file path="/finsaas-1300.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384776926004" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/settings/AddressClassifierController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622672984" ignored="false" />
     <file path="/AddressClassifierController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622672345" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/settings/AddressClassifierDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382622046118" ignored="false" />
@@ -503,14 +503,27 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/counterparty_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382954089276" ignored="false" />
     <file path="/counterparty_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1382954089276" ignored="false" />
     <file path="/good.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383740844748" ignored="false" />
-    <file path="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656414314" ignored="false" />
-    <file path="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383656414314" ignored="false" />
     <file path="/DataInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384354046495" ignored="false" />
     <file path="/cart.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384353422979" ignored="false" />
     <file path="/good.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383729656898" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/resources/config-dev.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383741374436" ignored="false" />
     <file path="/thank_you.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383737805850" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/TenantDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
+    <file path="/ContentAPIProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384439752578" ignored="false" />
+    <file path="/TrackUserFilter.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384503863266" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/TrackUserFilter.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384503864146" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/settings_finance_general.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384777126799" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/AverageWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384777126799" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/average/step2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504182125" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/config-prod.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504182125" ignored="false" />
+    <file path="/settings_finance_general.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384766438538" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/logic/settings/address-classifier.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384766992137" ignored="false" />
+    <file path="/address-classifier.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384766989079" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/webapp/WEB-INF/jsp/marketing.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384774794990" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/MarketingController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384776231742" ignored="false" />
+    <file path="/MarketingController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384774897074" ignored="false" />
+    <file path="/BankAccountType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784204593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/BankAccountType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784221135" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -558,21 +571,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/structure/BasketStorage.java" line="45" class="racoonsoft.select.structure.BasketStorage" package="racoonsoft.select.structure">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java" line="27" class="racoonsoft.library.test.Test" package="racoonsoft.library.test">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -636,9 +634,36 @@
       <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="12" selection-start="945" selection-end="945" vertical-scroll-proportion="0.5450902">
+            <state line="40" column="70" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.7590361">
               <folding>
-                <element signature="e#597#613#0" expanded="true" />
+                <element signature="method#extractCategories#0;class#Test#0" expanded="false" />
+                <element signature="e#1668#1678#0" expanded="true" />
+                <element signature="e#2451#2467#0" expanded="true" />
+                <element signature="method#extractSubcategories#0;class#Test#0" expanded="false" />
+                <element signature="e#3121#3127#0" expanded="true" />
+                <element signature="e#3973#3989#0" expanded="true" />
+                <element signature="e#6996#7012#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="59" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="325" column="48" selection-start="11082" selection-end="11082" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#9988#9996#0" expanded="true" />
+                <element signature="e#10054#10062#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -659,10 +684,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Select/src/racoonsoft/select/database/PGSQLDataSource.java" />
-        <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/controller/StoreController.java" />
-        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/guarantees.jsp" />
-        <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/footer.jsp" />
         <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/controller/YandexController.java" />
         <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/good.jsp" />
         <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/delivery.jsp" />
@@ -674,7 +695,11 @@
         <option value="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/interceptor/DataInterceptor.java" />
         <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/admin/order.jsp" />
         <option value="$PROJECT_DIR$/../SelectNew/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/mailru/torg/ContentAPIProcessor.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java" />
         <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java" />
+        <option value="$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/7b2a43d32612.jsp" />
       </list>
     </option>
   </component>
@@ -724,7 +749,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -733,22 +758,204 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SelectNew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="select" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chipped" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wish" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IDEA Projects/erdicto" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
@@ -765,8 +972,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -868,34 +1075,6 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="racoonsoft.library.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="racoonsoft.library.test.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="RacoonFramework" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -928,19 +1107,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -969,6 +1135,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -989,13 +1168,6 @@
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1019,11 +1191,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1040,6 +1212,13 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1394,6 +1573,34 @@
         </option>
       </method>
     </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="racoonsoft.library.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="racoonsoft.library.test.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RacoonFramework" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <list size="14">
       <item index="0" class="java.lang.String" itemvalue="Android Application.rzd_scanner_emulator" />
       <item index="1" class="java.lang.String" itemvalue="Android Application.scanner_device" />
@@ -1405,18 +1612,17 @@
       <item index="7" class="java.lang.String" itemvalue="Tomcat Server.Chipped" />
       <item index="8" class="java.lang.String" itemvalue="Tomcat Server.Select" />
       <item index="9" class="java.lang.String" itemvalue="Tomcat Server.SelectNew" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Test1" />
-      <item index="11" class="java.lang.String" itemvalue="Application.TestProcessor" />
-      <item index="12" class="java.lang.String" itemvalue="Application.PaytureTest" />
-      <item index="13" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="10" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Test1" />
+      <item index="12" class="java.lang.String" itemvalue="Application.TestProcessor" />
+      <item index="13" class="java.lang.String" itemvalue="Application.PaytureTest" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestProcessor" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PaytureTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Test" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestProcessor" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PaytureTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1480,13 +1686,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4147157" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41583055" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20512821" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3154961" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17982924" sideWeight="0.24860647" order="2" side_tool="true" content_ui="tabs" />
@@ -1495,8 +1701,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14194237" sideWeight="0.5852843" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44816053" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14194237" sideWeight="0.58416945" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31772575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1576,65 +1782,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/BasketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="54" selection-start="7242" selection-end="7242" vertical-scroll-proportion="4.0334396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="115" selection-start="5125" selection-end="5125" vertical-scroll-proportion="-6.5384617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Select/src/racoonsoft/select/database/PGSQLDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="515" column="4" selection-start="21582" selection-end="22035" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Select/web/WEB-INF/jsp/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="69" selection-start="64" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/section/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="92" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Select/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="81" selection-start="653" selection-end="653" vertical-scroll-proportion="-5.84">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Select/Select.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="88" selection-start="557" selection-end="557" vertical-scroll-proportion="0.10952381" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SelectNew/SelectNew.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="85" selection-start="461" selection-end="461" vertical-scroll-proportion="0.082539685" />
@@ -1656,9 +1803,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/admin/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="36" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="36" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/web.xml">
@@ -1666,9 +1811,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="82" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="82" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
@@ -1691,11 +1834,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/mailru/torg/ContentAPIProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="136" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#527#543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="64" selection-start="882" selection-end="882" vertical-scroll-proportion="-4.450902">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.5714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="59" selection-start="1353" selection-end="1353" vertical-scroll-proportion="1.3156823">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/settings/MainConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="33" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.796334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="325" column="48" selection-start="11082" selection-end="11082" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#9988#9996#0" expanded="true" />
+            <element signature="e#10054#10062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/7b2a43d32612.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="59" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="945" selection-end="945" vertical-scroll-proportion="0.5450902">
+        <state line="40" column="70" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.7590361">
           <folding>
-            <element signature="e#597#613#0" expanded="true" />
+            <element signature="method#extractCategories#0;class#Test#0" expanded="false" />
+            <element signature="e#1668#1678#0" expanded="true" />
+            <element signature="e#2451#2467#0" expanded="true" />
+            <element signature="method#extractSubcategories#0;class#Test#0" expanded="false" />
+            <element signature="e#3121#3127#0" expanded="true" />
+            <element signature="e#3973#3989#0" expanded="true" />
+            <element signature="e#6996#7012#0" expanded="true" />
           </folding>
         </state>
       </provider>

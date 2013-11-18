@@ -24,4 +24,12 @@ public class BaseController
 
         return model;
     }
+    @RequestMapping("/7b2a43d32612.html")
+    public ModelAndView html2()
+    {
+        ModelAndView model = new ModelAndView("7b2a43d32612");
+
+        return model;
+    }
+
 }
