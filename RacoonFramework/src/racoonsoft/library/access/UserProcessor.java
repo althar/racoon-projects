@@ -43,14 +43,11 @@ public class UserProcessor
     public static void setUserTableName(String userTableName) {
         UserProcessor.userTableName = userTableName;
     }
+
     public static ActionResult logout(HttpServletRequest request)
     {
         String sessionId = getCookie(request,"session_id");
-        User anonymous = new User();
-        anonymous.setValue("id",-1l);
-        UserSession s = sessions.get(sessionId);
-        s.setAnonymous(anonymous);
-        sessions.put(sessionId,s);
+        sessions.remove(sessionId);
         ActionResult res = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
         return res;
     }
@@ -58,7 +55,7 @@ public class UserProcessor
     {
         try
         {
-            String sessionId = getCookie(request,"session_id");
+            logout(request);
             // Check existence
             DBRecord existent = dbProc.getRecord("SELECT id FROM "+userTableName+" WHERE "+loginColumnName+"='"+login.replace("'","")+"'");
             if(existent!=null)
@@ -69,24 +66,26 @@ public class UserProcessor
             parameters.put(loginColumnName,login);
             parameters.put(passwordColumnName,password);
             Long id = dbProc.executeInsert(userTableName,parameters);
-            if(sessionId==null)
-            {
-                DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + id);
-                sessionId=sessionRec.getStringValue("session_id")+id.toString();
-            }
+            DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + id);
+            String sessionId = sessionRec.getStringValue("session_id");
+
             // Insert user roles
             for(String role:roles)
             {
                 dbProc.executeNonQuery("INSERT INTO user_role (user_id,role) VALUES ("+id+",'"+role.replace("'","")+"')");
             }
+
             // Add cookie
             setCookie(response,"session_id",sessionId,8640000);
+
             // Add session
             UserSession session = new UserSession(8640000,id,sessionId);
             cleanSessions();
             sessions.put(sessionId,session);
+
             // Get registered user
             User u = getUser(id,dbProc);
+
             // Return result
             ActionResult res = new ActionResult(ActionResult.REGISTRATION_SUCCESSFUL);
             res.setData("sessionId",sessionId);
@@ -101,132 +100,63 @@ public class UserProcessor
             return res;
         }
     }
-    public static ActionResult authorization(HttpServletRequest request,HttpServletResponse response,DBProcessor dbProc,boolean allowAnonymous,boolean returnUser) throws SQLException
+    public static ActionResult authorization(HttpServletRequest request,HttpServletResponse response,DBProcessor dbProc) throws SQLException
     {
         try
         {
-            String logout = request.getParameter("logout");
-            if(logout!=null&&logout.equalsIgnoreCase("true"))
-            {
-                logout(request);
-            }
             ActionResult result = new ActionResult(ActionResult.AUTHORIZATION_SUCCESSFUL);
             String sessionId = getCookie(request,"session_id");
             String login = request.getParameter("login");
             String password = request.getParameter("password");
 
+            // Auth by login & password
             if(login!=null&&password!=null)
             {
+                logout(request);
                 User u = getUser(login,password,dbProc);
                 UserSession session = sessions.get(sessionId);
                 if(u==null)
                 {
-                    if(allowAnonymous)
-                    {
-
-                        User anonymous = new User(new HashMap<String, Object>());
-                        anonymous.setValue("id",-1l);
-                        DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
-                        sessionId=sessionRec.getStringValue("session_id")+sessionIdSeed;
-                        sessionIdSeed++;
-                        setCookie(response,"session_id",sessionId,8640000);
-                        result.setData("session_id",sessionId);
-                        // Add session
-                        session = new UserSession(8640000,anonymous.getID(),sessionId);
-                        session.setAnonymous(anonymous);
-                        cleanSessions();
-                        sessions.put(sessionId,session);
-                        result.setUser(anonymous);
-                        return result;
-                    }
-                    return new ActionResult(ActionResult.AUTHORIZATION_FAILED_WROG_LOGIN_PASSWORD);
+                    result = new ActionResult(ActionResult.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
                 }
-                // Add cookie
+                else
+                {
+                    DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + u.getID());
+                    sessionId = sessionRec.getStringValue("session_id");
+                    UserSession s = new UserSession(8640000,u.getID(),sessionId);
+                    sessions.put(sessionId,s);
+                    setCookie(response,"session_id",sessionId,8640000);
+                    result.setUser(u);
+                }
+                return result;
+            }
+            else
+            {
                 if(sessionId==null)
                 {
-                    DBRecord sessionRec = dbProc.getRecord("SELECT md5("+loginColumnName+"||"+passwordColumnName+"||random())||md5("+loginColumnName+"||"+passwordColumnName+"||random()) AS session_id FROM "+userTableName+" WHERE id="+u.getID());
-                    sessionId=sessionRec.getStringValue("session_id")+u.getID().toString();
+                    sessionId="";
                 }
-                setCookie(response,"session_id",sessionId,8640000);
-                result.setData("session_id",sessionId);
-                // Add session
-                session = new UserSession(8640000,u.getID(),sessionId);
-                cleanSessions();
-                sessions.put(sessionId,session);
-                if(returnUser)
-                {
-                    result.setUser(u);
-                }
-                return result;
-            }
-            else if(sessionId!=null)
-            {
                 UserSession session = sessions.get(sessionId);
                 if(session==null)
-                {
-                    if(allowAnonymous)
-                    {
-                        User anonymous = new User(new HashMap<String, Object>());
-                        anonymous.setValue("id",-1l);
-                        DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
-                        sessionId=sessionRec.getStringValue("session_id")+sessionIdSeed;
-                        sessionIdSeed++;
-                        setCookie(response,"session_id",sessionId,8640000);
-                        result.setData("session_id",sessionId);
-                        // Add session
-                        session = new UserSession(8640000,anonymous.getID(),sessionId);
-                        session.setAnonymous(anonymous);
-                        cleanSessions();
-                        sessions.put(sessionId,session);
-                        result.setUser(anonymous);
-                        return result;
-                    }
-                    return new ActionResult(ActionResult.AUTHORIZATION_FAILED_WRONG_SESSION_ID);
-                }
-                Long id = session.getUserId();
-                User u = null;
-                if(returnUser)
-                {
-                    if(session.isAnonymous())
-                    {
-                        u = session.getAnonymous();
-                    }
-                    else
-                    {
-                        u = getUser(id,dbProc);
-                    }
-                    result.setUser(u);
-                }
-                if(session==null||(session.isAnonymous()&&!allowAnonymous))
-                {
-                    return new ActionResult(ActionResult.AUTHORIZATION_FAILED_NO_SUCH_USER);
-                }
-
-                return result;
-            }
-            else // No session ID, no login, no password
-            {
-                if(allowAnonymous)
                 {
                     User anonymous = new User(new HashMap<String, Object>());
                     anonymous.setValue("id",-1l);
                     DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
-                    sessionId=sessionRec.getStringValue("session_id")+sessionIdSeed;
-                    sessionIdSeed++;
+                    sessionId = sessionRec.getStringValue("session_id");
                     setCookie(response,"session_id",sessionId,8640000);
-                    result.setData("session_id",sessionId);
                     // Add session
-                    UserSession session = new UserSession(8640000,anonymous.getID(),sessionId);
+                    session = new UserSession(8640000,anonymous.getID(),sessionId);
                     session.setAnonymous(anonymous);
                     cleanSessions();
                     sessions.put(sessionId,session);
                     result.setUser(anonymous);
-                    return result;
                 }
                 else
                 {
-                    return new ActionResult(ActionResult.AUTHORIZATION_FAILED_NO_AUTHORIZATION_DATA);
+                    User u = getUser(session.getUserId(),dbProc);
+                    result.setUser(u);
                 }
+                return result;
             }
         }
         catch(Exception ex)

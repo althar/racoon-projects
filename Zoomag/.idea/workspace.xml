@@ -10,11 +10,11 @@
     <file path="/basket.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383824131131" ignored="false" />
     <file path="/basket.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383824330855" ignored="false" />
     <file path="/delivery.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1365490081677" ignored="false" />
-    <file path="/fragment.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383835611314" ignored="false" />
+    <file path="/fragment.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385021193738" ignored="false" />
     <file path="/DBProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382550713368" ignored="false" />
     <file path="/UserServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384089231706" ignored="false" />
     <file path="/DatabaseProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383833631388" ignored="false" />
-    <file path="/a.dummy" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384432741799" ignored="false" />
+    <file path="/a.dummy" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953489374" ignored="false" />
     <file path="/web.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384089646502" ignored="false" />
     <file path="/AuthenticationServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384092143331" ignored="false" />
     <file path="/products.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383815984555" ignored="false" />
@@ -45,26 +45,37 @@
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382561397397" ignored="false" />
     <file path="/SQLExpression.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382548261889" ignored="false" />
     <file path="/Warehouse.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383833390535" ignored="false" />
-    <file path="/Dummy.txt" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383824793427" ignored="false" />
+    <file path="/Dummy.txt" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385033147404" ignored="false" />
     <file path="$PROJECT_DIR$/../Chipped/web/js/logic/order.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382804943731" ignored="false" />
     <file path="$PROJECT_DIR$/../Chipped/src/racoonsoft/wish/controller/UserController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382804943731" ignored="false" />
     <file path="$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/order.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382804943731" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/sass/style.scss" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/css/style.css" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820277369" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384438583263" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385111061450" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/log/server.log" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837544372" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxCalendarDao.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820406954" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxCalendarDao.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385032861166" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/pfr/step3.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820664249" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/logic/wizards/fss_step1.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383821034839" ignored="false" />
     <file path="/fss_step1.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820961500" ignored="false" />
     <file path="/Basket.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383833283268" ignored="false" />
     <file path="/BasketItem.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383833615639" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/modx/ModxProxyController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837415161" ignored="false" />
-    <file path="/ModxProxyController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837384754" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/modx/ModxProxyController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022610847" ignored="false" />
+    <file path="/ModxProxyController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022093242" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/finsaas-security.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837579743" ignored="false" />
     <file path="/Test.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384091534388" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/sql/changelog.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384432736834" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/main.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953595607" ignored="false" />
+    <file path="/main.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953590294" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/bill_elem.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384949639950" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/document.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384949507855" ignored="false" />
+    <file path="/document.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384949356421" ignored="false" />
+    <file path="/bill_elem.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384949583574" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/document_item_orders.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953473450" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/MarketingController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022644940" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/AbstractEntityController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953611267" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/config-prod.properties" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022650177" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/webapp/WEB-INF/jsp/marketing.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022644940" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +180,7 @@
       <file leaf-file-name="products.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/logic/products.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="-4.12">
+            <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +192,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="-12.24">
+            <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,7 +216,7 @@
       <file leaf-file-name="DatabaseProcessor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="407" column="78" selection-start="17645" selection-end="17645" vertical-scroll-proportion="0.7627388">
+            <state line="432" column="123" selection-start="18719" selection-end="18719" vertical-scroll-proportion="0.2767442">
               <folding>
                 <element signature="method#DatabaseProcessor#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="n#!!doc;n#getUser#0;n#DatabaseProcessor#0" expanded="false" />
@@ -313,30 +324,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,150 +356,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -529,7 +394,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="usage.statistics" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Racoon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -911,7 +776,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979933" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24431819" sideWeight="0.21904762" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -919,13 +783,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18036287" sideWeight="0.74358976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14407684" sideWeight="0.74358976" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15814507" sideWeight="0.48025614" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979933" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1044,9 +909,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="868" column="81" selection-start="31948" selection-end="31948" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="868" column="81" selection-start="31948" selection-end="31948" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java">
@@ -1072,9 +935,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/OldSiteIntegrator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.019767443">
-          <folding />
-        </state>
+        <state line="39" column="10" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.019767443" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
@@ -1086,16 +947,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="39" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.37199125">
-          <folding />
-        </state>
+        <state line="36" column="39" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.37199125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/web/AuthenticationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="0" selection-start="8445" selection-end="8445" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="206" column="0" selection-start="8445" selection-end="8445" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java">
@@ -1122,7 +979,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="-12.24">
+        <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1135,7 +992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/logic/products.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="-4.12">
+        <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1156,7 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="78" selection-start="17645" selection-end="17645" vertical-scroll-proportion="0.7627388">
+        <state line="432" column="123" selection-start="18719" selection-end="18719" vertical-scroll-proportion="0.2767442">
           <folding>
             <element signature="method#DatabaseProcessor#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="n#!!doc;n#getUser#0;n#DatabaseProcessor#0" expanded="false" />

@@ -15,7 +15,7 @@ public class ActionResult
     public static int AUTHORIZATION_SUCCESSFUL = 2000;
     public static int AUTHORIZATION_FAILED_NO_AUTHORIZATION_DATA = -2001;
     public static int AUTHORIZATION_FAILED_WRONG_SESSION_ID = -2002;
-    public static int AUTHORIZATION_FAILED_WROG_LOGIN_PASSWORD = -2003;
+    public static int AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD = -2003;
     public static int AUTHORIZATION_FAILED_NO_SUCH_USER = -2004;
     public static int AUTHORIZATION_FAILED_UNKNOWN = -2005;
 
