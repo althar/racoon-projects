@@ -347,7 +347,14 @@ public class DatabaseProcessor extends DBProcessor
         }
         return results;
     }
-
+    public ArrayList<DBRecord> getDeliveryVariants(Boolean pickup) throws Exception
+    {
+        if(pickup==null)
+        {
+            pickup = false;
+        }
+        return getRecords("SELECT DISTINCT ON (distance) distance, discount,id FROM delivery_costs WHERE pickup="+pickup+" GROUP BY distance, discount,id ORDER BY distance,id");
+    }
     public ArrayList<Good> findGoods(String keyword, String weight, String company, String food_type, String food_type_age, String food_type_category, String animal, String id) throws SQLException
     {
         StringBuilder builder = new StringBuilder();
@@ -529,5 +536,14 @@ public class DatabaseProcessor extends DBProcessor
             next = 0;
         }
         return next - total;
+    }
+
+    public DBRecord getDeliveryPrice(String distance, Double order_price) throws SQLException
+    {
+        return getRecord("SELECT * FROM get_delivery_price('"+distance.replace("'","`")+"',CAST("+order_price+" AS DOUBLE PRECISION))");
+    }
+    public DBRecord getDiscount(Double order_price,Integer client_id, Integer start_discount) throws SQLException
+    {
+        return getRecord("SELECT * FROM get_discount(CAST("+order_price+" AS DOUBLE PRECISION),"+client_id+","+start_discount+")");
     }
 }

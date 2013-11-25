@@ -13,6 +13,7 @@ $(document).ready(function () {
     initMenu();
     initOrderAuthForm();
     initAddressForm();
+    loadDeliveryVariants();
     authorization(true);
     checkBasket();
     loadBrandsAndCategories();
@@ -34,9 +35,76 @@ $(document).ready(function () {
         $("#profile_menu_link").click();
     }
     loadContent();
+
     $("body").show();
 });
 
+function loadDeliveryVariants()
+{
+    var url_string = base_app_url + "/Catalogue?cmd=get_delivery_variants&pickup=true";
+
+    $.ajax({
+        async:false,
+        cache:false,
+        url:url_string,
+        context:document.body,
+        dataTypeString:"xml",
+        success:function (xml) {
+            var code = $(xml).find("root").find("code").text();
+            if (code == "100000")// success
+            {
+                var pinups = "";
+                var index = 1;
+                var curr = "";
+                while ((curr = $("root > data > item_" + index, xml)).text() != "")
+                {
+                    var name = $("distance",curr).text();
+                    var discount = $("discount",curr).text();
+                    var pinup = '<div class="item">'+name+'<span class="color-green">(+'+discount+'% скидка)</span>';
+                    pinup+='<div class="checkbox corners_10 shadow_inset" delivery_variant="true" pickup="true" distance="'+name+'">';
+                    pinup+='</div></div>';
+                    pinups+=pinup;
+                    index++;
+                }
+                $(".pinup-div").prepend(pinups);
+                $("div[delivery_variant=\"true\"]").first().click();
+            }
+            else {
+                showMessage("", "Серверная ошибка.", 2000);
+            }
+        }
+    });
+
+    var url_string = base_app_url + "/Catalogue?cmd=get_delivery_variants&pickup=false";
+    $.ajax({
+        async:false,
+        cache:false,
+        url:url_string,
+        context:document.body,
+        dataTypeString:"xml",
+        success:function (xml) {
+            var code = $(xml).find("root").find("code").text();
+            if (code == "100000")// success
+            {
+                var deliveries = "";
+                var index = 1;
+                var curr = "";
+                while ((curr = $("root > data > item_" + index, xml)).text() != "")
+                {
+                    var name = $("distance",curr).text();
+                    var delivery = '<div class="item_50">'+name+'<div class="checkbox corners_10 shadow_inset" delivery_variant="true" pickup="false" distance="'+name+'"></div></div>';
+                    deliveries+=delivery;
+                    index++;
+                }
+                $(".delivery-div").append(deliveries);
+            }
+            else
+            {
+                showMessage("", "Серверная ошибка.", 2000);
+            }
+        }
+    });
+}
 function blinkBasket(){
     blink("#basket",0.2,200);
 }
@@ -622,13 +690,13 @@ function initAddressForm() {
     });
 
     $("div[delivery_variant=\"true\"]").click(function () {
+        alert("click");
         $("div[delivery_variant=\"true\"]").html("");
         $(this).html("<div class=\"dot corners_5\">");
         current_distance = $(this).attr("distance");
+        var pickup = $(this).attr("pickup");
         $("#distance_group").attr("distance", current_distance);
-        //current_distance = $("#distance_group").attr("distance");
-        current_distance_id = $(this).attr("distance_id");
-        if(current_distance_id=="0")
+        if(pickup=="true")
         {
             $(".padding_l10 .group input").not("#phone_1,#phone_2").attr("disabled","true");
         }
@@ -637,7 +705,7 @@ function initAddressForm() {
             $(".padding_l10 .group input").not("#phone_1,#phone_2").removeAttr("disabled");
         }
         //alert(current_distance+"  "+current_distance_id);
-        checkOrder(current_distance_id);
+        checkOrder();
     });
 }
 function getStreets(street_part) {

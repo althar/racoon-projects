@@ -41,7 +41,14 @@ public class CatalogueServlet extends BaseServlet
             if (cmd == null)
             {
                 out.print(generateResponseXML(BASE_COMMAND_UNDEFINED, cmd, null));
-            } 
+            }
+            else if(cmd.equalsIgnoreCase("get_delivery_variants"))
+            {
+                XMLProcessor proc = new XMLProcessor();
+                proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
+                proc.addNode("root", "data", dbProc().getDeliveryVariants(Boolean.valueOf(request.getParameter("pickup"))));
+                out.print(proc.toXMLString());
+            }
             else if (cmd.equalsIgnoreCase("get_categories"))
             {
                 XMLProcessor proc = new XMLProcessor();

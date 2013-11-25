@@ -4,7 +4,7 @@ var main_brands = ["Royal Canin", "Hills", "Eukanuba", "Purina", "Pro Plan", "Ha
 var main_brands_pics = ["brand-royalcanin.gif", "brand-hills.gif", "brand-eukanuba.gif", "brand-purina.gif", "brand-proplan.gif", "brand-happydog.gif", "brand-iams.gif", "brand-ag.gif", "brand-acana.gif", "brand-orijen.gif"];
 var photo_base_url = "/img/goods/big/";
 var small_photo_base_url = "/img/goods/";
-var current_distance = "Самовывоз";
+var current_distance = "";
 var current_distance_id = "null";
 var basket_size = 0;
 var basket_price = 0;
@@ -492,7 +492,7 @@ function showAlert(alert_div_selector, alert_div_text_selector, text, period) {
         , period);
 }
 function checkOrder() {
-    var url_string = base_app_url + "/User?cmd=check_order&distance_id=" + current_distance_id;
+    var url_string = base_app_url + "/User?cmd=check_order&distance=" + current_distance;
     $.ajax({
         async: true,
         cache: false,
@@ -511,7 +511,9 @@ function checkOrder() {
                 var goods_with_discount = $(xml).find("root > data > goods_with_discount").text();
                 var goods_count = $(xml).find("root > data > goods_count").text();
                 var discount_in_rub = $(xml).find("root > data > discount_in_rub").text();
-                //alert(current_distance_id);
+                var minimum_price = $(xml).find("root > data > minimum_order_price").text();
+                var can_deliver = $(xml).find("root > data > can_deliver").text();
+
                 if (current_distance_id == "0") {
                     $("span[discount_span=\"true\"]").html(discount + "% самовывоз");
                 }
@@ -525,6 +527,23 @@ function checkOrder() {
                 $("span[goods_count=\"true\"]").html("(" + goods_count + " " + formatGoods(goods_count) + ")");
                 $("span[delivery_price_span=\"true\"]").html(formatPrice(delivery_price));
                 $("span[total_price_span=\"true\"]").html(formatPrice(total_price));
+                if(goods_without_discount*1.0<minimum_price*1.0)
+                {
+                    $("span[minimum_price=\"true\"]").css("color","red");
+                    $("#butt_make_order").removeClass("focus");
+                    $("#butt_make_order").removeClass("act");
+                    $("#butt_make_order").addClass("inact");
+                    $("#butt_make_order").attr("disabled",true);
+                }
+                else
+                {
+                    $("span[minimum_price=\"true\"]").css("color","black");
+                    $("#butt_make_order").removeClass("focus");
+                    $("#butt_make_order").removeClass("inact");
+                    $("#butt_make_order").addClass("act");
+                    $("#butt_make_order").removeAttr("disabled");
+                }
+                $("span[minimum_price=\"true\"]").html(formatPrice(minimum_price));
 
 
                 //alert(order_without_discount+", "+discount+", "+delivery_price+", "+total_price);

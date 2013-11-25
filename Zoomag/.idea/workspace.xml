@@ -6,16 +6,16 @@
     </list>
     <ignored path="Zoomag.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/init.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1379859572793" ignored="false" />
-    <file path="/basket.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383824131131" ignored="false" />
-    <file path="/basket.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383824330855" ignored="false" />
+    <file path="/init.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385386296345" ignored="false" />
+    <file path="/basket.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385383120422" ignored="false" />
+    <file path="/basket.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385384849732" ignored="false" />
     <file path="/delivery.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1365490081677" ignored="false" />
-    <file path="/fragment.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385021193738" ignored="false" />
+    <file path="/fragment.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385375611518" ignored="false" />
     <file path="/DBProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1382550713368" ignored="false" />
-    <file path="/UserServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384089231706" ignored="false" />
-    <file path="/DatabaseProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383833631388" ignored="false" />
+    <file path="/UserServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385382583338" ignored="false" />
+    <file path="/DatabaseProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385382313502" ignored="false" />
     <file path="/a.dummy" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953489374" ignored="false" />
-    <file path="/web.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384089646502" ignored="false" />
+    <file path="/web.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385376181768" ignored="false" />
     <file path="/AuthenticationServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384092143331" ignored="false" />
     <file path="/products.html" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383815984555" ignored="false" />
     <file path="/products.js" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384431816248" ignored="false" />
@@ -52,7 +52,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/sass/style.scss" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/css/style.css" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820277369" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385111061450" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385386549777" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/log/server.log" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837544372" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxCalendarDao.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385032861166" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/pfr/step3.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820664249" ignored="false" />
@@ -76,6 +76,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/AbstractEntityController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1384953611267" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/config-prod.properties" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022650177" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/webapp/WEB-INF/jsp/marketing.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385022644940" ignored="false" />
+    <file path="/CatalogueServlet.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385375471542" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,38 +92,7 @@
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java" line="64" class="ftwo.zoomag.servlets.AuthenticationServlet" package="ftwo.zoomag.servlets">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java" line="186" class="ftwo.zoomag.servlets.AuthenticationServlet" package="ftwo.zoomag.servlets">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -171,17 +141,249 @@
       <file leaf-file-name="CatalogueServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/CatalogueServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="61" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
+            <state line="112" column="58" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/logic/products.js">
+      <file leaf-file-name="UserServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="0.0">
+            <state line="224" column="81" selection-start="9618" selection-end="9618" vertical-scroll-proportion="0.27304965">
+              <folding>
+                <element signature="e#2351#2367#0" expanded="true" />
+                <element signature="e#11225#11241#0" expanded="true" />
+                <element signature="e#16779#16795#0" expanded="true" />
+                <element signature="e#17483#17499#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="692" column="53" selection-start="24952" selection-end="24952" vertical-scroll-proportion="-2.76">
+              <folding>
+                <element signature="e#672#715#0" expanded="false" />
+                <element signature="e#742#790#0" expanded="false" />
+                <element signature="e#2100#2175#0" expanded="false" />
+                <element signature="e#3210#3285#0" expanded="false" />
+                <element signature="n#!!block;n#blinkBasket#0" expanded="false" />
+                <element signature="n#!!block;n#initOrderAuthForm#0" expanded="false" />
+                <element signature="n#!!block;n#checkUserExists#0" expanded="false" />
+                <element signature="e#4188#4661#0" expanded="false" />
+                <element signature="e#4348#4655#0" expanded="false" />
+                <element signature="e#4470#4552#0" expanded="false" />
+                <element signature="e#4570#4645#0" expanded="false" />
+                <element signature="n#!!block;n#showHint#0" expanded="false" />
+                <element signature="e#4775#4890#0" expanded="false" />
+                <element signature="e#5032#5192#0" expanded="false" />
+                <element signature="n#!!block;n#setOrderStep#0" expanded="false" />
+                <element signature="e#5339#5782#0" expanded="false" />
+                <element signature="e#5572#5691#0" expanded="false" />
+                <element signature="e#5626#5681#0" expanded="false" />
+                <element signature="e#5802#7232#0" expanded="false" />
+                <element signature="e#5832#5879#0" expanded="false" />
+                <element signature="e#5893#7226#0" expanded="false" />
+                <element signature="e#6032#7000#0" expanded="false" />
+                <element signature="e#6219#6815#0" expanded="false" />
+                <element signature="e#6392#6522#0" expanded="false" />
+                <element signature="e#6548#6758#0" expanded="false" />
+                <element signature="e#6837#6986#0" expanded="false" />
+                <element signature="e#7052#7214#0" expanded="false" />
+                <element signature="e#7085#7132#0" expanded="false" />
+                <element signature="e#7154#7200#0" expanded="false" />
+                <element signature="e#7588#7635#0" expanded="false" />
+                <element signature="e#7663#7691#0" expanded="false" />
+                <element signature="n#!!block;n#showBasket#0" expanded="false" />
+                <element signature="n#!!block;n#showHistory#0" expanded="false" />
+                <element signature="e#8084#8215#0" expanded="false" />
+                <element signature="e#8225#8268#0" expanded="false" />
+                <element signature="n#!!block;n#showProfile#0" expanded="false" />
+                <element signature="e#8321#8452#0" expanded="false" />
+                <element signature="e#8462#8505#0" expanded="false" />
+                <element signature="n#!!block;n#initMenu#0" expanded="false" />
+                <element signature="e#8572#8849#0" expanded="false" />
+                <element signature="e#8892#8921#0" expanded="false" />
+                <element signature="e#8965#8995#0" expanded="false" />
+                <element signature="e#9044#9074#0" expanded="false" />
+                <element signature="n#!!block;n#loadBrandsAndCategories#0" expanded="false" />
+                <element signature="e#9218#11018#0" expanded="false" />
+                <element signature="e#9378#11012#0" expanded="false" />
+                <element signature="e#9501#10909#0" expanded="false" />
+                <element signature="e#9938#10070#0" expanded="false" />
+                <element signature="e#10327#10459#0" expanded="false" />
+                <element signature="e#10712#10844#0" expanded="false" />
+                <element signature="e#10927#11002#0" expanded="false" />
+                <element signature="n#!!block;n#loadBasket#0" expanded="false" />
+                <element signature="e#11118#14357#0" expanded="false" />
+                <element signature="e#11278#14351#0" expanded="false" />
+                <element signature="e#11401#14307#0" expanded="false" />
+                <element signature="e#11733#13828#0" expanded="false" />
+                <element signature="e#13274#13564#0" expanded="false" />
+                <element signature="e#13389#13480#0" expanded="false" />
+                <element signature="e#13938#14041#0" expanded="false" />
+                <element signature="e#14205#14259#0" expanded="false" />
+                <element signature="e#14325#14341#0" expanded="false" />
+                <element signature="e#14891#15109#0" expanded="false" />
+                <element signature="n#!!block;n#initChangeItems#0" expanded="false" />
+                <element signature="e#15175#15455#0" expanded="false" />
+                <element signature="e#15350#15449#0" expanded="false" />
+                <element signature="e#15491#15772#0" expanded="false" />
+                <element signature="e#15667#15766#0" expanded="false" />
+                <element signature="e#15810#15970#0" expanded="false" />
+                <element signature="e#16016#16451#0" expanded="false" />
+                <element signature="e#16142#16226#0" expanded="false" />
+                <element signature="e#16240#16330#0" expanded="false" />
+                <element signature="n#!!block;n#refreshItem#0" expanded="false" />
+                <element signature="e#16572#16605#0" expanded="false" />
+                <element signature="n#!!block;n#reg#0" expanded="false" />
+                <element signature="e#16780#16851#0" expanded="false" />
+                <element signature="e#17167#17332#0" expanded="false" />
+                <element signature="e#17411#17559#0" expanded="false" />
+                <element signature="e#17660#17722#0" expanded="false" />
+                <element signature="e#17732#17845#0" expanded="false" />
+                <element signature="n#!!block;n#auth#0" expanded="false" />
+                <element signature="e#18018#18169#0" expanded="false" />
+                <element signature="e#18310#18459#0" expanded="false" />
+                <element signature="e#18562#18767#0" expanded="false" />
+                <element signature="e#18724#18761#0" expanded="false" />
+                <element signature="e#18777#18874#0" expanded="false" />
+                <element signature="n#!!block;n#setValNotEmpty#0" expanded="false" />
+                <element signature="e#18959#18998#0" expanded="false" />
+                <element signature="e#19067#19191#0" expanded="false" />
+                <element signature="e#19139#19185#0" expanded="false" />
+                <element signature="e#19349#19395#0" expanded="false" />
+                <element signature="e#19459#19684#0" expanded="false" />
+                <element signature="e#19530#19648#0" expanded="false" />
+                <element signature="e#19567#19632#0" expanded="false" />
+                <element signature="e#19791#19826#0" expanded="false" />
+                <element signature="e#20226#22327#0" expanded="false" />
+                <element signature="e#20386#22321#0" expanded="false" />
+                <element signature="e#20508#22218#0" expanded="false" />
+                <element signature="e#20663#20929#0" expanded="false" />
+                <element signature="e#20971#21402#0" expanded="false" />
+                <element signature="e#21064#21401#0" expanded="false" />
+                <element signature="e#21124#21383#0" expanded="false" />
+                <element signature="e#21196#21361#0" expanded="false" />
+                <element signature="e#21458#22202#0" expanded="false" />
+                <element signature="e#21561#22184#0" expanded="false" />
+                <element signature="e#21685#22160#0" expanded="false" />
+                <element signature="e#21779#22159#0" expanded="false" />
+                <element signature="e#21849#22133#0" expanded="false" />
+                <element signature="e#21929#22103#0" expanded="false" />
+                <element signature="e#22236#22311#0" expanded="false" />
+                <element signature="e#22435#24835#0" expanded="false" />
+                <element signature="e#22595#24829#0" expanded="false" />
+                <element signature="e#22717#24724#0" expanded="false" />
+                <element signature="e#24443#24710#0" expanded="false" />
+                <element signature="e#24504#24692#0" expanded="false" />
+                <element signature="e#24742#24819#0" expanded="false" />
+                <element signature="n#!!block;n#getStreets#0" expanded="false" />
+                <element signature="e#25708#26491#0" expanded="false" />
+                <element signature="e#25868#26485#0" expanded="false" />
+                <element signature="e#25990#26382#0" expanded="false" />
+                <element signature="e#26145#26368#0" expanded="false" />
+                <element signature="e#26400#26475#0" expanded="false" />
+                <element signature="n#!!block;n#saveOrder#0" expanded="false" />
+                <element signature="e#26568#30742#0" expanded="false" />
+                <element signature="e#27479#27516#0" expanded="false" />
+                <element signature="e#27558#27595#0" expanded="false" />
+                <element signature="e#27637#27674#0" expanded="false" />
+                <element signature="e#27713#27751#0" expanded="false" />
+                <element signature="e#27784#27819#0" expanded="false" />
+                <element signature="e#27856#27895#0" expanded="false" />
+                <element signature="e#27925#27960#0" expanded="false" />
+                <element signature="e#28012#28053#0" expanded="false" />
+                <element signature="e#29066#30734#0" expanded="false" />
+                <element signature="e#29249#30724#0" expanded="false" />
+                <element signature="e#29453#30605#0" expanded="false" />
+                <element signature="e#29612#29742#0" expanded="false" />
+                <element signature="e#29852#29883#0" expanded="false" />
+                <element signature="e#30462#30585#0" expanded="false" />
+                <element signature="e#30627#30710#0" expanded="false" />
+                <element signature="n#!!block;n#validateOrder#0" expanded="false" />
+                <element signature="e#30804#30853#0" expanded="false" />
+                <element signature="e#30887#30935#0" expanded="false" />
+                <element signature="e#31049#31147#0" expanded="false" />
+                <element signature="e#31183#31879#0" expanded="false" />
+                <element signature="e#31240#31366#0" expanded="false" />
+                <element signature="e#31424#31554#0" expanded="false" />
+                <element signature="e#31605#31721#0" expanded="false" />
+                <element signature="e#31773#31873#0" expanded="false" />
+                <element signature="n#!!block;n#loadHistory#0" expanded="false" />
+                <element signature="e#31962#37087#0" expanded="false" />
+                <element signature="e#32164#37078#0" expanded="false" />
+                <element signature="e#32347#37068#0" expanded="false" />
+                <element signature="e#32481#36818#0" expanded="false" />
+                <element signature="e#32878#36264#0" expanded="false" />
+                <element signature="e#33091#34471#0" expanded="false" />
+                <element signature="e#34501#34578#0" expanded="false" />
+                <element signature="e#36300#36646#0" expanded="false" />
+                <element signature="e#36672#36800#0" expanded="false" />
+                <element signature="e#36859#36949#0" expanded="false" />
+                <element signature="e#36971#37054#0" expanded="false" />
+                <element signature="e#37097#37177#0" expanded="false" />
+                <element signature="n#!!block;n#loadProfile#0" expanded="false" />
+                <element signature="e#37315#38454#0" expanded="false" />
+                <element signature="e#37474#38448#0" expanded="false" />
+                <element signature="e#37596#38345#0" expanded="false" />
+                <element signature="e#37896#38038#0" expanded="false" />
+                <element signature="e#38089#38221#0" expanded="false" />
+                <element signature="e#38363#38438#0" expanded="false" />
+                <element signature="n#!!block;n#initProfile#0" expanded="false" />
+                <element signature="e#38529#38572#0" expanded="false" />
+                <element signature="n#!!block;n#saveProfile#0" expanded="false" />
+                <element signature="e#39169#39339#0" expanded="false" />
+                <element signature="e#39584#39773#0" expanded="false" />
+                <element signature="e#39854#40022#0" expanded="false" />
+                <element signature="e#40047#40217#0" expanded="false" />
+                <element signature="e#40382#40996#0" expanded="false" />
+                <element signature="e#40541#40990#0" expanded="false" />
+                <element signature="e#40663#40788#0" expanded="false" />
+                <element signature="e#40806#40980#0" expanded="false" />
+                <element signature="n#!!block;n#initTimePicker#0" expanded="false" />
+                <element signature="e#41035#41436#0" expanded="false" />
+                <element signature="e#41589#41712#0" expanded="false" />
+                <element signature="e#41757#41882#0" expanded="false" />
+                <element signature="e#41929#44337#0" expanded="false" />
+                <element signature="e#41957#43190#0" expanded="false" />
+                <element signature="e#42230#42273#0" expanded="false" />
+                <element signature="e#42301#42343#0" expanded="false" />
+                <element signature="e#42562#43180#0" expanded="false" />
+                <element signature="e#42746#42788#0" expanded="false" />
+                <element signature="e#43002#43062#0" expanded="false" />
+                <element signature="e#43218#44331#0" expanded="false" />
+                <element signature="e#43433#43476#0" expanded="false" />
+                <element signature="e#43504#43546#0" expanded="false" />
+                <element signature="e#43765#44321#0" expanded="false" />
+                <element signature="e#44153#44211#0" expanded="false" />
+                <element signature="e#44374#44674#0" expanded="false" />
+                <element signature="e#44516#44552#0" expanded="false" />
+                <element signature="e#44632#44668#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/general/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="535" column="51" selection-start="19698" selection-end="19698" vertical-scroll-proportion="-7.08">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/basket.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="295" column="31" selection-start="14790" selection-end="14790" vertical-scroll-proportion="-5.4313726">
+              <folding>
+                <marker date="1385383140567" expanded="true" signature="22783:22797" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +394,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+            <state line="8" column="48" selection-start="492" selection-end="492" vertical-scroll-proportion="-5.44">
               <folding />
             </state>
           </provider>
@@ -204,19 +406,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Warehouse.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java">
+      <file leaf-file-name="AuthenticationServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="56" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+            <state line="203" column="52" selection-start="8260" selection-end="8260" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseProcessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Warehouse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="56" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#320#337#0" expanded="false" />
+                <element signature="e#401#416#0" expanded="false" />
+                <element signature="e#479#487#0" expanded="false" />
+                <element signature="e#573#600#0" expanded="false" />
+                <element signature="e#707#749#0" expanded="false" />
+                <element signature="e#3826#3870#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseProcessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="432" column="123" selection-start="18719" selection-end="18719" vertical-scroll-proportion="0.2767442">
+            <state line="546" column="52" selection-start="23377" selection-end="23377" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#DatabaseProcessor#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="n#!!doc;n#getUser#0;n#DatabaseProcessor#0" expanded="false" />
@@ -236,6 +455,7 @@
                 <element signature="method#getAnimalFoodTypes#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="method#getBrandAnimalFoodTypes#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="method#getGoods#0;class#DatabaseProcessor#0" expanded="false" />
+                <element signature="method#findGoods#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="method#getAges#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="method#getLastOrder#0;class#DatabaseProcessor#0" expanded="false" />
                 <element signature="method#getOrderHistory#0;class#DatabaseProcessor#0" expanded="false" />
@@ -261,22 +481,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/database/DBProcessor.java" />
-        <option value="$PROJECT_DIR$/web/products.html" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/basket.html" />
-        <option value="$PROJECT_DIR$/web/js/logic/basket.js" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/structure/BasketItem.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java" />
-        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/service/OldSiteIntegrator.java" />
         <option value="$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java" />
         <option value="$PROJECT_DIR$/web/js/logic/products.js" />
+        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/CatalogueServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java" />
+        <option value="$PROJECT_DIR$/web/basket.html" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java" />
+        <option value="$PROJECT_DIR$/web/js/general/init.js" />
+        <option value="$PROJECT_DIR$/web/js/logic/basket.js" />
       </list>
     </option>
   </component>
@@ -324,6 +544,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -356,6 +590,104 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -364,20 +696,6 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zoomag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -399,13 +717,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\AlThar\Documents\IdeaProjects\Zoomag\lib" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\Users\AlThar\Documents\IdeaProjects\Zoomag\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -527,19 +845,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -568,6 +873,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -590,6 +908,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -609,13 +934,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -770,12 +1088,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25641027" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31438127" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31256953" sideWeight="0.21237993" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979933" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24431819" sideWeight="0.21904762" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -783,14 +1102,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14407684" sideWeight="0.74358976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12646745" sideWeight="0.68561876" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15814507" sideWeight="0.48025614" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979933" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -907,25 +1225,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="868" column="81" selection-start="31948" selection-end="31948" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="141" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.4276808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Good.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.08343558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/BasketItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="18" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
@@ -938,13 +1237,6 @@
         <state line="39" column="10" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.019767443" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="31" selection-start="12082" selection-end="12082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="39" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.37199125" />
@@ -955,22 +1247,57 @@
         <state line="206" column="0" selection-start="8445" selection-end="8445" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/database/DBProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="222" column="44" selection-start="7608" selection-end="7608" vertical-scroll-proportion="0.9699769" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/logic/products.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="0.019473081">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="12" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.25315005">
+        <state line="89" column="27" selection-start="3262" selection-end="3262" vertical-scroll-proportion="0.49066213">
+          <folding>
+            <element signature="method#processRequest#0;class#BaseServlet#0" expanded="false" />
+            <element signature="method#setUp#0;class#BaseServlet#0" expanded="false" />
+            <element signature="e#2870#2903#0" expanded="false" />
+            <element signature="method#dbProc#0;class#BaseServlet#0" expanded="false" />
+            <element signature="method#mailProc#0;class#BaseServlet#0" expanded="false" />
+            <element signature="e#3419#3538#0" expanded="false" />
+            <element signature="docComment;method#doGet#0;class#BaseServlet#0" expanded="false" />
+            <element signature="method#doGet#0;class#BaseServlet#0" expanded="false" />
+            <element signature="docComment;method#doPost#0;class#BaseServlet#0" expanded="false" />
+            <element signature="method#doPost#0;class#BaseServlet#0" expanded="false" />
+            <element signature="docComment;method#getServletInfo#0;class#BaseServlet#0" expanded="false" />
+            <element signature="method#getServletInfo#0;class#BaseServlet#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/AuthenticationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="52" selection-start="8260" selection-end="8260" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="56" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#320#337#0" expanded="false" />
+            <element signature="e#401#416#0" expanded="false" />
+            <element signature="e#479#487#0" expanded="false" />
+            <element signature="e#573#600#0" expanded="false" />
+            <element signature="e#707#749#0" expanded="false" />
+            <element signature="e#3826#3870#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -979,7 +1306,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="69" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+        <state line="8" column="48" selection-start="492" selection-end="492" vertical-scroll-proportion="-5.44">
           <folding />
         </state>
       </provider>
@@ -990,30 +1317,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/logic/products.js">
+    <entry file="file://$PROJECT_DIR$/web/basket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="397" column="60" selection-start="13699" selection-end="13699" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/CatalogueServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="61" selection-start="1798" selection-end="1798" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="56" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="295" column="31" selection-start="14790" selection-end="14790" vertical-scroll-proportion="-5.4313726">
+          <folding>
+            <marker date="1385383140567" expanded="true" signature="22783:22797" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="432" column="123" selection-start="18719" selection-end="18719" vertical-scroll-proportion="0.2767442">
+        <state line="546" column="52" selection-start="23377" selection-end="23377" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#DatabaseProcessor#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="n#!!doc;n#getUser#0;n#DatabaseProcessor#0" expanded="false" />
@@ -1033,6 +1348,7 @@
             <element signature="method#getAnimalFoodTypes#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getBrandAnimalFoodTypes#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getGoods#0;class#DatabaseProcessor#0" expanded="false" />
+            <element signature="method#findGoods#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getAges#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getLastOrder#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getOrderHistory#0;class#DatabaseProcessor#0" expanded="false" />
@@ -1043,6 +1359,237 @@
             <element signature="method#getUserDiscount#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getUserDiscountByID#0;class#DatabaseProcessor#0" expanded="false" />
             <element signature="method#getUserTotalToNext#0;class#DatabaseProcessor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/general/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="535" column="51" selection-start="19698" selection-end="19698" vertical-scroll-proportion="-7.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/CatalogueServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="58" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="692" column="53" selection-start="24952" selection-end="24952" vertical-scroll-proportion="-2.76">
+          <folding>
+            <element signature="e#672#715#0" expanded="false" />
+            <element signature="e#742#790#0" expanded="false" />
+            <element signature="e#2100#2175#0" expanded="false" />
+            <element signature="e#3210#3285#0" expanded="false" />
+            <element signature="n#!!block;n#blinkBasket#0" expanded="false" />
+            <element signature="n#!!block;n#initOrderAuthForm#0" expanded="false" />
+            <element signature="n#!!block;n#checkUserExists#0" expanded="false" />
+            <element signature="e#4188#4661#0" expanded="false" />
+            <element signature="e#4348#4655#0" expanded="false" />
+            <element signature="e#4470#4552#0" expanded="false" />
+            <element signature="e#4570#4645#0" expanded="false" />
+            <element signature="n#!!block;n#showHint#0" expanded="false" />
+            <element signature="e#4775#4890#0" expanded="false" />
+            <element signature="e#5032#5192#0" expanded="false" />
+            <element signature="n#!!block;n#setOrderStep#0" expanded="false" />
+            <element signature="e#5339#5782#0" expanded="false" />
+            <element signature="e#5572#5691#0" expanded="false" />
+            <element signature="e#5626#5681#0" expanded="false" />
+            <element signature="e#5802#7232#0" expanded="false" />
+            <element signature="e#5832#5879#0" expanded="false" />
+            <element signature="e#5893#7226#0" expanded="false" />
+            <element signature="e#6032#7000#0" expanded="false" />
+            <element signature="e#6219#6815#0" expanded="false" />
+            <element signature="e#6392#6522#0" expanded="false" />
+            <element signature="e#6548#6758#0" expanded="false" />
+            <element signature="e#6837#6986#0" expanded="false" />
+            <element signature="e#7052#7214#0" expanded="false" />
+            <element signature="e#7085#7132#0" expanded="false" />
+            <element signature="e#7154#7200#0" expanded="false" />
+            <element signature="e#7588#7635#0" expanded="false" />
+            <element signature="e#7663#7691#0" expanded="false" />
+            <element signature="n#!!block;n#showBasket#0" expanded="false" />
+            <element signature="n#!!block;n#showHistory#0" expanded="false" />
+            <element signature="e#8084#8215#0" expanded="false" />
+            <element signature="e#8225#8268#0" expanded="false" />
+            <element signature="n#!!block;n#showProfile#0" expanded="false" />
+            <element signature="e#8321#8452#0" expanded="false" />
+            <element signature="e#8462#8505#0" expanded="false" />
+            <element signature="n#!!block;n#initMenu#0" expanded="false" />
+            <element signature="e#8572#8849#0" expanded="false" />
+            <element signature="e#8892#8921#0" expanded="false" />
+            <element signature="e#8965#8995#0" expanded="false" />
+            <element signature="e#9044#9074#0" expanded="false" />
+            <element signature="n#!!block;n#loadBrandsAndCategories#0" expanded="false" />
+            <element signature="e#9218#11018#0" expanded="false" />
+            <element signature="e#9378#11012#0" expanded="false" />
+            <element signature="e#9501#10909#0" expanded="false" />
+            <element signature="e#9938#10070#0" expanded="false" />
+            <element signature="e#10327#10459#0" expanded="false" />
+            <element signature="e#10712#10844#0" expanded="false" />
+            <element signature="e#10927#11002#0" expanded="false" />
+            <element signature="n#!!block;n#loadBasket#0" expanded="false" />
+            <element signature="e#11118#14357#0" expanded="false" />
+            <element signature="e#11278#14351#0" expanded="false" />
+            <element signature="e#11401#14307#0" expanded="false" />
+            <element signature="e#11733#13828#0" expanded="false" />
+            <element signature="e#13274#13564#0" expanded="false" />
+            <element signature="e#13389#13480#0" expanded="false" />
+            <element signature="e#13938#14041#0" expanded="false" />
+            <element signature="e#14205#14259#0" expanded="false" />
+            <element signature="e#14325#14341#0" expanded="false" />
+            <element signature="e#14891#15109#0" expanded="false" />
+            <element signature="n#!!block;n#initChangeItems#0" expanded="false" />
+            <element signature="e#15175#15455#0" expanded="false" />
+            <element signature="e#15350#15449#0" expanded="false" />
+            <element signature="e#15491#15772#0" expanded="false" />
+            <element signature="e#15667#15766#0" expanded="false" />
+            <element signature="e#15810#15970#0" expanded="false" />
+            <element signature="e#16016#16451#0" expanded="false" />
+            <element signature="e#16142#16226#0" expanded="false" />
+            <element signature="e#16240#16330#0" expanded="false" />
+            <element signature="n#!!block;n#refreshItem#0" expanded="false" />
+            <element signature="e#16572#16605#0" expanded="false" />
+            <element signature="n#!!block;n#reg#0" expanded="false" />
+            <element signature="e#16780#16851#0" expanded="false" />
+            <element signature="e#17167#17332#0" expanded="false" />
+            <element signature="e#17411#17559#0" expanded="false" />
+            <element signature="e#17660#17722#0" expanded="false" />
+            <element signature="e#17732#17845#0" expanded="false" />
+            <element signature="n#!!block;n#auth#0" expanded="false" />
+            <element signature="e#18018#18169#0" expanded="false" />
+            <element signature="e#18310#18459#0" expanded="false" />
+            <element signature="e#18562#18767#0" expanded="false" />
+            <element signature="e#18724#18761#0" expanded="false" />
+            <element signature="e#18777#18874#0" expanded="false" />
+            <element signature="n#!!block;n#setValNotEmpty#0" expanded="false" />
+            <element signature="e#18959#18998#0" expanded="false" />
+            <element signature="e#19067#19191#0" expanded="false" />
+            <element signature="e#19139#19185#0" expanded="false" />
+            <element signature="e#19349#19395#0" expanded="false" />
+            <element signature="e#19459#19684#0" expanded="false" />
+            <element signature="e#19530#19648#0" expanded="false" />
+            <element signature="e#19567#19632#0" expanded="false" />
+            <element signature="e#19791#19826#0" expanded="false" />
+            <element signature="e#20226#22327#0" expanded="false" />
+            <element signature="e#20386#22321#0" expanded="false" />
+            <element signature="e#20508#22218#0" expanded="false" />
+            <element signature="e#20663#20929#0" expanded="false" />
+            <element signature="e#20971#21402#0" expanded="false" />
+            <element signature="e#21064#21401#0" expanded="false" />
+            <element signature="e#21124#21383#0" expanded="false" />
+            <element signature="e#21196#21361#0" expanded="false" />
+            <element signature="e#21458#22202#0" expanded="false" />
+            <element signature="e#21561#22184#0" expanded="false" />
+            <element signature="e#21685#22160#0" expanded="false" />
+            <element signature="e#21779#22159#0" expanded="false" />
+            <element signature="e#21849#22133#0" expanded="false" />
+            <element signature="e#21929#22103#0" expanded="false" />
+            <element signature="e#22236#22311#0" expanded="false" />
+            <element signature="e#22435#24835#0" expanded="false" />
+            <element signature="e#22595#24829#0" expanded="false" />
+            <element signature="e#22717#24724#0" expanded="false" />
+            <element signature="e#24443#24710#0" expanded="false" />
+            <element signature="e#24504#24692#0" expanded="false" />
+            <element signature="e#24742#24819#0" expanded="false" />
+            <element signature="n#!!block;n#getStreets#0" expanded="false" />
+            <element signature="e#25708#26491#0" expanded="false" />
+            <element signature="e#25868#26485#0" expanded="false" />
+            <element signature="e#25990#26382#0" expanded="false" />
+            <element signature="e#26145#26368#0" expanded="false" />
+            <element signature="e#26400#26475#0" expanded="false" />
+            <element signature="n#!!block;n#saveOrder#0" expanded="false" />
+            <element signature="e#26568#30742#0" expanded="false" />
+            <element signature="e#27479#27516#0" expanded="false" />
+            <element signature="e#27558#27595#0" expanded="false" />
+            <element signature="e#27637#27674#0" expanded="false" />
+            <element signature="e#27713#27751#0" expanded="false" />
+            <element signature="e#27784#27819#0" expanded="false" />
+            <element signature="e#27856#27895#0" expanded="false" />
+            <element signature="e#27925#27960#0" expanded="false" />
+            <element signature="e#28012#28053#0" expanded="false" />
+            <element signature="e#29066#30734#0" expanded="false" />
+            <element signature="e#29249#30724#0" expanded="false" />
+            <element signature="e#29453#30605#0" expanded="false" />
+            <element signature="e#29612#29742#0" expanded="false" />
+            <element signature="e#29852#29883#0" expanded="false" />
+            <element signature="e#30462#30585#0" expanded="false" />
+            <element signature="e#30627#30710#0" expanded="false" />
+            <element signature="n#!!block;n#validateOrder#0" expanded="false" />
+            <element signature="e#30804#30853#0" expanded="false" />
+            <element signature="e#30887#30935#0" expanded="false" />
+            <element signature="e#31049#31147#0" expanded="false" />
+            <element signature="e#31183#31879#0" expanded="false" />
+            <element signature="e#31240#31366#0" expanded="false" />
+            <element signature="e#31424#31554#0" expanded="false" />
+            <element signature="e#31605#31721#0" expanded="false" />
+            <element signature="e#31773#31873#0" expanded="false" />
+            <element signature="n#!!block;n#loadHistory#0" expanded="false" />
+            <element signature="e#31962#37087#0" expanded="false" />
+            <element signature="e#32164#37078#0" expanded="false" />
+            <element signature="e#32347#37068#0" expanded="false" />
+            <element signature="e#32481#36818#0" expanded="false" />
+            <element signature="e#32878#36264#0" expanded="false" />
+            <element signature="e#33091#34471#0" expanded="false" />
+            <element signature="e#34501#34578#0" expanded="false" />
+            <element signature="e#36300#36646#0" expanded="false" />
+            <element signature="e#36672#36800#0" expanded="false" />
+            <element signature="e#36859#36949#0" expanded="false" />
+            <element signature="e#36971#37054#0" expanded="false" />
+            <element signature="e#37097#37177#0" expanded="false" />
+            <element signature="n#!!block;n#loadProfile#0" expanded="false" />
+            <element signature="e#37315#38454#0" expanded="false" />
+            <element signature="e#37474#38448#0" expanded="false" />
+            <element signature="e#37596#38345#0" expanded="false" />
+            <element signature="e#37896#38038#0" expanded="false" />
+            <element signature="e#38089#38221#0" expanded="false" />
+            <element signature="e#38363#38438#0" expanded="false" />
+            <element signature="n#!!block;n#initProfile#0" expanded="false" />
+            <element signature="e#38529#38572#0" expanded="false" />
+            <element signature="n#!!block;n#saveProfile#0" expanded="false" />
+            <element signature="e#39169#39339#0" expanded="false" />
+            <element signature="e#39584#39773#0" expanded="false" />
+            <element signature="e#39854#40022#0" expanded="false" />
+            <element signature="e#40047#40217#0" expanded="false" />
+            <element signature="e#40382#40996#0" expanded="false" />
+            <element signature="e#40541#40990#0" expanded="false" />
+            <element signature="e#40663#40788#0" expanded="false" />
+            <element signature="e#40806#40980#0" expanded="false" />
+            <element signature="n#!!block;n#initTimePicker#0" expanded="false" />
+            <element signature="e#41035#41436#0" expanded="false" />
+            <element signature="e#41589#41712#0" expanded="false" />
+            <element signature="e#41757#41882#0" expanded="false" />
+            <element signature="e#41929#44337#0" expanded="false" />
+            <element signature="e#41957#43190#0" expanded="false" />
+            <element signature="e#42230#42273#0" expanded="false" />
+            <element signature="e#42301#42343#0" expanded="false" />
+            <element signature="e#42562#43180#0" expanded="false" />
+            <element signature="e#42746#42788#0" expanded="false" />
+            <element signature="e#43002#43062#0" expanded="false" />
+            <element signature="e#43218#44331#0" expanded="false" />
+            <element signature="e#43433#43476#0" expanded="false" />
+            <element signature="e#43504#43546#0" expanded="false" />
+            <element signature="e#43765#44321#0" expanded="false" />
+            <element signature="e#44153#44211#0" expanded="false" />
+            <element signature="e#44374#44674#0" expanded="false" />
+            <element signature="e#44516#44552#0" expanded="false" />
+            <element signature="e#44632#44668#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="81" selection-start="9618" selection-end="9618" vertical-scroll-proportion="0.27304965">
+          <folding>
+            <element signature="e#2351#2367#0" expanded="true" />
+            <element signature="e#11225#11241#0" expanded="true" />
+            <element signature="e#16779#16795#0" expanded="true" />
+            <element signature="e#17483#17499#0" expanded="true" />
           </folding>
         </state>
       </provider>

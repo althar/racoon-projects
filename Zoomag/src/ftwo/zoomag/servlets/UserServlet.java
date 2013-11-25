@@ -198,29 +198,29 @@ public class UserServlet extends BaseServlet {
                 {
 
                     Basket b = Warehouse.getBasket(user.getID());
-                    int goods_price = 0;
+                    Integer goods_price = 0;
                     int discount = 0;
-                    int deliver_price = 0;
+                    Double deliver_price = 0.0;
+                    boolean is_pickup = false;
+                    boolean can_deliver = false;
+                    Double minimum_order_price = 0.0;
+                    int delivery_discount = 0;
                     int goods_with_discount = 0;
                     int goods_count = 0;
                     if(b!=null)
                     {
                         goods_price = b.getPrice();
                         goods_count = b.size();
-                        String distance_id = request.getParameter("distance_id");
-                        discount = dbProc().getUserDiscountByID(user.getID());
-                        if(distance_id.equalsIgnoreCase("null"))
-                        {
-                            discount+=0;
-                        }
-                        else if(!distance_id.equalsIgnoreCase("0"))
-                        {
-                            deliver_price = dbProc().getDeliverPrice(b.getPrice(),user.getID(),Integer.valueOf(distance_id));
-                        }
-                        else// +3% discount...
-                        {
-                            discount+=3;
-                        }
+                        String distance = request.getParameter("distance");
+                        DBRecord del_price_record = dbProc().getDeliveryPrice(distance,Double.valueOf(goods_price.toString()));
+                        can_deliver = del_price_record.getBooleanValue("can_deliver");
+                        is_pickup = del_price_record.getBooleanValue("is_pickup");
+                        minimum_order_price = del_price_record.getDoubleValue("minimum_order_price");
+                        delivery_discount = del_price_record.getIntValue("discount");
+                        DBRecord discount_record = dbProc().getDiscount(Double.valueOf(goods_price.toString()), user.getID(),delivery_discount);
+                        discount = discount_record.getDoubleValue("total_discount").intValue();
+
+
                         goods_with_discount = (int)Math.round((double)goods_price*((100-discount)/100.0));
                         BigDecimal rounded = new BigDecimal(goods_with_discount/1000.0).round(new MathContext(3, RoundingMode.HALF_UP));
                         goods_with_discount = (int)(rounded.doubleValue()*1000);
@@ -234,6 +234,8 @@ public class UserServlet extends BaseServlet {
                     proc.addNode("root.data","goods_count",goods_count);
                     proc.addNode("root.data","goods_with_discount",goods_with_discount);
                     proc.addNode("root.data","delivery_price",deliver_price);
+                    proc.addNode("root.data","can_deliver",can_deliver);
+                    proc.addNode("root.data","minimum_order_price",minimum_order_price);
                     proc.addNode("root.data","total_price",goods_with_discount+deliver_price);
                     out.print(proc.toXMLString());
                     out.close();
