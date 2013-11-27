@@ -52,7 +52,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/sass/style.scss" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/css/style.css" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820255154" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820277369" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385552815646" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385574624819" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/log/server.log" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383837544372" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/persist/taxes/TaxCalendarDao.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1385032861166" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/pfr/step3.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1383820664249" ignored="false" />
@@ -150,13 +150,13 @@
       <file leaf-file-name="UserServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="220" column="144" selection-start="9287" selection-end="9287" vertical-scroll-proportion="0.615257">
+            <state line="231" column="65" selection-start="10140" selection-end="10140" vertical-scroll-proportion="0.90879476">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2351#2367#0" expanded="true" />
-                <element signature="e#11938#11954#0" expanded="true" />
-                <element signature="e#17258#17274#0" expanded="true" />
-                <element signature="e#18012#18028#0" expanded="true" />
+                <element signature="e#11887#11903#0" expanded="true" />
+                <element signature="e#17207#17223#0" expanded="true" />
+                <element signature="e#17961#17977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -484,9 +484,9 @@
         <option value="$PROJECT_DIR$/web/basket.html" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java" />
-        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java" />
         <option value="$PROJECT_DIR$/web/js/logic/basket.js" />
         <option value="$PROJECT_DIR$/web/js/general/init.js" />
+        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java" />
       </list>
     </option>
   </component>
@@ -1078,7 +1078,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25641027" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24414715" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31256953" sideWeight="0.21237993" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1092,7 +1092,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12646745" sideWeight="0.74358976" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12646745" sideWeight="0.7558528" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1565,13 +1565,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="220" column="144" selection-start="9287" selection-end="9287" vertical-scroll-proportion="0.615257">
+        <state line="231" column="65" selection-start="10140" selection-end="10140" vertical-scroll-proportion="0.90879476">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2351#2367#0" expanded="true" />
-            <element signature="e#11938#11954#0" expanded="true" />
-            <element signature="e#17258#17274#0" expanded="true" />
-            <element signature="e#18012#18028#0" expanded="true" />
+            <element signature="e#11887#11903#0" expanded="true" />
+            <element signature="e#17207#17223#0" expanded="true" />
+            <element signature="e#17961#17977#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -204,7 +204,6 @@ public class UserServlet extends BaseServlet {
                     boolean can_deliver = false;
                     Double minimum_order_price = 0.0;
                     int delivery_discount = 0;
-//                    int goods_with_discount = 0;
                     int goods_count = 0;
                     if(b!=null)
                     {
