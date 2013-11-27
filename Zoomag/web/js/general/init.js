@@ -5,6 +5,7 @@ var main_brands_pics = ["brand-royalcanin.gif", "brand-hills.gif", "brand-eukanu
 var photo_base_url = "/img/goods/big/";
 var small_photo_base_url = "/img/goods/";
 var current_distance = "";
+var pickup = "false";
 var current_distance_id = "null";
 var basket_size = 0;
 var basket_price = 0;
@@ -225,7 +226,7 @@ function recoverPassword(phone) {
                 //showMessage("", "Нет такого пользователя.", 2000);
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. recPass", 2000);
             }
         }
     });
@@ -522,6 +523,7 @@ function checkOrder() {
                 }
 
                 //alert(order_without_discount);
+                alert(goods_without_discount);
                 $("span[sum=\"true\"]").html(formatPrice(goods_without_discount));
                 $("span[discount=\"true\"]").html(formatPrice(discount_in_rub));
                 $("span[goods_count=\"true\"]").html("(" + goods_count + " " + formatGoods(goods_count) + ")");
@@ -549,7 +551,7 @@ function checkOrder() {
                 //alert(order_without_discount+", "+discount+", "+delivery_price+", "+total_price);
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                //showMessage("", "Серверная ошибка. checkOrder", 2000);
             }
         }
     });
@@ -593,7 +595,7 @@ function loadContent() {
                 }
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. loadContent", 2000);
             }
         }
     });

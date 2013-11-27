@@ -21,9 +21,10 @@
                             <img class="product-image-big" src="${good.imageMediumPath}"/></p>
                         </div>
                         <div class="span5">
+                            ${good.description}<br>
                             <p class="product-text">
                                 <c:forEach var="characteristic" items="${good.characteristics}">
-                                    ${characteristic.key} : ${characteristic.value}<br>
+                                    <b>${characteristic.key}</b> : ${characteristic.value}<br>
                                 </c:forEach>
                             </p>
 

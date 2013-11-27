@@ -27,26 +27,41 @@ namespace OwlBusinessStudio.Settings
         }
         private void loadTable()
         {
-            DataTable tab = MainForm.dbProc.executeGet("SELECT distance,high_low_price_separator,low_price_delivery_cost,high_price_delivery_cost FROM delivery_costs ORDER BY low_price_delivery_cost");
+            DataTable tab = MainForm.dbProc.executeGet("SELECT id,distance,\"from\",\"to\",price,pickup,discount FROM delivery_costs ORDER BY distance");
             DataGridTable.DataSource = tab;
             Configurator.translateToRussian(DataGridTable);
+            DataTable distances = MainForm.dbProc.executeGet("SELECT DISTINCT distance FROM delivery_costs");
+            ComboDistance.DataSource = distances;
+            ComboDistance.DisplayMember = "distance";
+            ComboDistance.ValueMember = "distance";
         }
 
         private void ButtSave_Click(object sender, EventArgs e)
         {
-            if (TxtDistance.Text.Trim().Length < 2)
+            if (ComboDistance.Text.Trim().Length < 2)
             {
                 MessageBox.Show("Введите нормальное расстояние доставки");
             }
-            MainForm.dbProc.delete("delivery_costs", "distance='" + TxtDistance.Text + "'");
             Hashtable pars = new Hashtable();
-            pars.Add("distance", TxtDistance.Text);
-            pars.Add("high_low_price_separator", (int)NumCostSeparator.Value);
-            pars.Add("low_price_delivery_cost", (int)NumCheapOrderDeliveryCost.Value);
-            pars.Add("high_price_delivery_cost", (int)NumExpensiveOrderDeliveryCost.Value);
+            pars.Add("distance", ComboDistance.Text);
+            pars.Add("\"from\"", (int)NumOrderFrom.Value);
+            pars.Add("\"to\"", (int)NumOrderTo.Value);
+            pars.Add("price", (int)NumDeliveryPrice.Value);
+            pars.Add("discount", (int)NumDiscount.Value);
+            pars.Add("pickup", checkboxPickup.Checked);
             MainForm.dbProc.insert("delivery_costs", pars);
 
             loadTable();
+        }
+
+        private void ButtDelete_Click(object sender, EventArgs e)
+        {
+            Object id = Configurator.getValueFromDataGrid(DataGridTable, "id");
+            if (id != null)
+            {
+                MainForm.dbProc.delete("delivery_costs", (int)id);
+                loadTable();
+            }
         }
     }
 }

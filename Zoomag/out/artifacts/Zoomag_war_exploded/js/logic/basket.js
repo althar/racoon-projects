@@ -70,7 +70,7 @@ function loadDeliveryVariants()
                 $("div[delivery_variant=\"true\"]").first().click();
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. loadDrVars", 2000);
             }
         }
     });
@@ -100,7 +100,7 @@ function loadDeliveryVariants()
             }
             else
             {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. loadDeliveryVars", 2000);
             }
         }
     });
@@ -135,7 +135,7 @@ function checkUserExists() {
                 res = $("root>data>exists", xml).text() == "true";
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. checkUserExists", 2000);
             }
         }
     });
@@ -217,6 +217,12 @@ function setOrderStep(step, authorization_flag) {
         }
     }
     if (step == 3) {
+
+        $("#butt_make_order").removeClass("focus");
+        $("#butt_make_order").removeClass("act");
+        $("#butt_make_order").addClass("inact");
+        $("#butt_make_order").attr("disabled",true);
+
         $("#reg_auth_form").hide();
         $("#next_butt").hide();
 //        $("div[delivery_variant=\"true\"]").first().click();
@@ -336,7 +342,7 @@ function loadBrandsAndCategories() {
                 $("#etc_category").html(etc_html);
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. loadBrAndCat", 2000);
             }
         }
     });
@@ -624,7 +630,7 @@ function initAddressForm() {
                 });
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. initAddrForm", 2000);
             }
         }
     });
@@ -690,11 +696,10 @@ function initAddressForm() {
     });
 
     $("div[delivery_variant=\"true\"]").click(function () {
-        alert("click");
         $("div[delivery_variant=\"true\"]").html("");
         $(this).html("<div class=\"dot corners_5\">");
         current_distance = $(this).attr("distance");
-        var pickup = $(this).attr("pickup");
+        pickup = $(this).attr("pickup");
         $("#distance_group").attr("distance", current_distance);
         if(pickup=="true")
         {
@@ -732,7 +737,7 @@ function getStreets(street_part) {
                 }
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. gs", 2000);
             }
         }
     });
@@ -799,12 +804,11 @@ function saveOrder() {
             + "&domophone=" + urlEncode(domophone)
             + "&floor=" + urlEncode(floor)
             + "&distance=" + urlEncode(distance)
-            + "&distance_id=" + urlEncode(distance_id)
+            + "&pickup=" + urlEncode(pickup)
             + "&phone_2=" + urlEncode(phone_2)
             + "&phone_3=" + urlEncode(phone_3)
             + "&metro_id=" + urlEncode(metro_id)
             + "&description=" + urlEncode(description);
-
         $.ajax({
             async:true,
             cache:false,
@@ -833,13 +837,22 @@ function saveOrder() {
                     showMessage("Спасибо!", "Ваш заказ №" + $(xml).find("root").find("order_id").text() + " успешно оформлен.<br>" +
                         "В ближайшее время наши операторы с вами свяжутся," +
                         "но в любом случае ваш заказ уже передан в сборку и доставку.");
-                        $("#alert_close_link").click(function () {
-                        $("#history_link").click();
-                        setOrderStep(1, false);
+
+                        $("#alert_close_link").click(function ()
+                        {
+                            current_distance = "";
+                            pickup = "false";
+                            current_distance_id = "null";
+                            $("span[sum=\"true\"]").html("0");
+                            $("span[discount=\"true\"]").html("0");
+                            $("span[delivery_price_span=\"true\"]").html("0");
+                            $("span[total_price_span=\"true\"]").html("0");
+                            $("#history_link").click();
+                            setOrderStep(1, false);
                     });
                 }
                 else {
-                    showMessage("", "Серверная ошибка.", 2000);
+                    showMessage("", "Серверная ошибка. save", 2000);
                 }
             }
         });
@@ -859,7 +872,7 @@ function validateOrder() {
         $("#date").addClass("red_error");
         res = false;
     }
-    if(current_distance_id!=0)
+    if(pickup!="true")
     {
         if (!validateNotEmpty($("#input_city").val())) {
             $("#input_city").addClass("red_error");
@@ -1025,7 +1038,7 @@ function loadProfile() {
 
             }
             else {
-                showMessage("", "Серверная ошибка.", 2000);
+                showMessage("", "Серверная ошибка. loadProf", 2000);
             }
         }
     });

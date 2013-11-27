@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ButtClear = new System.Windows.Forms.Button();
+            this.CheckCumulative = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridTab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumDiscount)).BeginInit();
@@ -48,10 +49,10 @@
             this.DataGridTab.AllowUserToAddRows = false;
             this.DataGridTab.AllowUserToDeleteRows = false;
             this.DataGridTab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridTab.Location = new System.Drawing.Point(12, 88);
+            this.DataGridTab.Location = new System.Drawing.Point(12, 112);
             this.DataGridTab.Name = "DataGridTab";
             this.DataGridTab.ReadOnly = true;
-            this.DataGridTab.Size = new System.Drawing.Size(299, 186);
+            this.DataGridTab.Size = new System.Drawing.Size(395, 186);
             this.DataGridTab.TabIndex = 0;
             // 
             // NumPrice
@@ -90,9 +91,9 @@
             // 
             // ButtSave
             // 
-            this.ButtSave.Location = new System.Drawing.Point(117, 64);
+            this.ButtSave.Location = new System.Drawing.Point(117, 88);
             this.ButtSave.Name = "ButtSave";
-            this.ButtSave.Size = new System.Drawing.Size(194, 23);
+            this.ButtSave.Size = new System.Drawing.Size(290, 23);
             this.ButtSave.TabIndex = 3;
             this.ButtSave.Text = "Сохранить";
             this.ButtSave.UseVisualStyleBackColor = true;
@@ -136,7 +137,7 @@
             // 
             // ButtClear
             // 
-            this.ButtClear.Location = new System.Drawing.Point(12, 64);
+            this.ButtClear.Location = new System.Drawing.Point(12, 88);
             this.ButtClear.Name = "ButtClear";
             this.ButtClear.Size = new System.Drawing.Size(99, 23);
             this.ButtClear.TabIndex = 8;
@@ -144,11 +145,22 @@
             this.ButtClear.UseVisualStyleBackColor = true;
             this.ButtClear.Click += new System.EventHandler(this.ButtClear_Click);
             // 
+            // CheckCumulative
+            // 
+            this.CheckCumulative.AutoSize = true;
+            this.CheckCumulative.Location = new System.Drawing.Point(12, 65);
+            this.CheckCumulative.Name = "CheckCumulative";
+            this.CheckCumulative.Size = new System.Drawing.Size(105, 17);
+            this.CheckCumulative.TabIndex = 9;
+            this.CheckCumulative.Text = "Накопительная";
+            this.CheckCumulative.UseVisualStyleBackColor = true;
+            // 
             // DiscountsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 286);
+            this.ClientSize = new System.Drawing.Size(413, 309);
+            this.Controls.Add(this.CheckCumulative);
             this.Controls.Add(this.ButtClear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,5 +192,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ButtClear;
+        private System.Windows.Forms.CheckBox CheckCumulative;
     }
 }

@@ -22,9 +22,16 @@ namespace FTwoFramework.DB
             decryptor = man.CreateDecryptor(key, vector);
             encryptor = man.CreateEncryptor(key, vector);
 
+            dict.Add("order_price", "Стоимость заказа");
+            dict.Add("cumulative", "Накопительная");
+            dict.Add("discount", "Скидка");
+            dict.Add("distance", "Расстояние");
+            dict.Add("from", "С");
+            dict.Add("to", "По");
             dict.Add("on_warehouse", "На складе");
             dict.Add("date_to", "Приход закупки на склад");
             dict.Add("user_name", "Оператора");
+            dict.Add("pickup", "Самовывоз");
             dict.Add("article", "Артикул производителя");
             dict.Add("total_sum", "Сумма");
             dict.Add("total_count", "Общее кол-во");

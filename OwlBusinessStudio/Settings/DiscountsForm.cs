@@ -24,6 +24,7 @@ namespace OwlBusinessStudio.Settings
             Hashtable tab = new Hashtable();
             tab.Add("order_price", (int)NumPrice.Value);
             tab.Add("discount_percent", (int)NumDiscount.Value);
+            tab.Add("cumulative", CheckCumulative.Checked);
             MainForm.dbProc.delete("discounts", "order_price="+NumPrice.Value.ToString());
             MainForm.dbProc.insert("discounts", tab);
             loadTab();
@@ -36,7 +37,7 @@ namespace OwlBusinessStudio.Settings
         }
         private void loadTab()
         {
-            DataGridTab.DataSource = MainForm.dbProc.executeGet("SELECT order_price,discount_percent FROM discounts");
+            DataGridTab.DataSource = MainForm.dbProc.executeGet("SELECT order_price,discount_percent,cumulative FROM discounts");
             Configurator.translateToRussian(DataGridTab);
         }
     }

@@ -1,5 +1,8 @@
 package ftwo.zoomag.structure;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -8,6 +11,34 @@ public class Basket
     private int UserIdedtifier;
 
     private HashMap<Integer,Object> BasketItems = new HashMap<Integer,Object>();
+
+    private Integer deliveryPrice = 0;
+    private Integer discount = 0;
+
+    public Integer getGoodPriceWithDiscount()
+    {
+        return round(getPrice() - (getPrice()*(discount/100.0)));
+    }
+
+    public Integer getTotalPrice()
+    {
+        return getGoodPriceWithDiscount()+getDeliveryPrice();
+    }
+    public Integer getDeliveryPrice() {
+        return deliveryPrice;
+    }
+
+    public void setDeliveryPrice(Integer deliveryPrice) {
+        this.deliveryPrice = deliveryPrice;
+    }
+
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
+    }
 
     public Basket(int user_id)
     {
@@ -80,5 +111,11 @@ public class Basket
     public void clearGood(int id)
     {
 	    BasketItems.remove(id);
+    }
+
+    public Integer round(Double value)
+    {
+        BigDecimal rounded = new BigDecimal(value/1000.0).round(new MathContext(3, RoundingMode.HALF_UP));
+        return (int)(rounded.doubleValue()*1000);
     }
 }

@@ -196,7 +196,6 @@ public class UserServlet extends BaseServlet {
             {
                 if (user != null)
                 {
-
                     Basket b = Warehouse.getBasket(user.getID());
                     Integer goods_price = 0;
                     int discount = 0;
@@ -205,7 +204,7 @@ public class UserServlet extends BaseServlet {
                     boolean can_deliver = false;
                     Double minimum_order_price = 0.0;
                     int delivery_discount = 0;
-                    int goods_with_discount = 0;
+//                    int goods_with_discount = 0;
                     int goods_count = 0;
                     if(b!=null)
                     {
@@ -213,17 +212,27 @@ public class UserServlet extends BaseServlet {
                         goods_count = b.size();
                         String distance = request.getParameter("distance");
                         DBRecord del_price_record = dbProc().getDeliveryPrice(distance,Double.valueOf(goods_price.toString()));
+                        if(distance.equalsIgnoreCase(""))
+                        {
+                            del_price_record.setValue("can_deliver",false);
+                            del_price_record.setValue("is_pickup",false);
+                            del_price_record.setValue("minimum_order_price",0);
+                            del_price_record.setValue("discount",0);
+                            del_price_record.setValue("delivery_price",0);
+                        }
                         can_deliver = del_price_record.getBooleanValue("can_deliver");
                         is_pickup = del_price_record.getBooleanValue("is_pickup");
                         minimum_order_price = del_price_record.getDoubleValue("minimum_order_price");
                         delivery_discount = del_price_record.getIntValue("discount");
+                        deliver_price = del_price_record.getDoubleValue("delivery_price");
                         DBRecord discount_record = dbProc().getDiscount(Double.valueOf(goods_price.toString()), user.getID(),delivery_discount);
                         discount = discount_record.getDoubleValue("total_discount").intValue();
-
-
-                        goods_with_discount = (int)Math.round((double)goods_price*((100-discount)/100.0));
-                        BigDecimal rounded = new BigDecimal(goods_with_discount/1000.0).round(new MathContext(3, RoundingMode.HALF_UP));
-                        goods_with_discount = (int)(rounded.doubleValue()*1000);
+                        b.setDeliveryPrice(deliver_price.intValue());
+                        b.setDiscount(discount);
+//
+//                        goods_with_discount = (int)Math.round((double)goods_price*((100-discount)/100.0));
+//                        BigDecimal rounded = new BigDecimal(goods_with_discount/1000.0).round(new MathContext(3, RoundingMode.HALF_UP));
+//                        goods_with_discount = (int)(rounded.doubleValue()*1000);
                     }
                     XMLProcessor proc = new XMLProcessor();
                     proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
@@ -232,11 +241,11 @@ public class UserServlet extends BaseServlet {
                     proc.addNode("root.data","discount",discount);
                     proc.addNode("root.data","discount_in_rub",Math.round(goods_price*(discount/100.0)));
                     proc.addNode("root.data","goods_count",goods_count);
-                    proc.addNode("root.data","goods_with_discount",goods_with_discount);
-                    proc.addNode("root.data","delivery_price",deliver_price);
+                    proc.addNode("root.data","goods_with_discount",b.getGoodPriceWithDiscount());
+                    proc.addNode("root.data","delivery_price",b.getDeliveryPrice());
                     proc.addNode("root.data","can_deliver",can_deliver);
-                    proc.addNode("root.data","minimum_order_price",minimum_order_price);
-                    proc.addNode("root.data","total_price",goods_with_discount+deliver_price);
+                    proc.addNode("root.data","minimum_order_price",minimum_order_price.intValue());
+                    proc.addNode("root.data","total_price",b.getTotalPrice());
                     out.print(proc.toXMLString());
                     out.close();
                 }
@@ -279,7 +288,7 @@ public class UserServlet extends BaseServlet {
                     String domophone = request.getParameter("domophone");
                     String floor = request.getParameter("floor");
                     String distance = request.getParameter("distance");
-                    String distance_id = request.getParameter("distance_id");
+                    //String distance_id = request.getParameter("distance_id");
                     String phone_2 = request.getParameter("phone_2");
                     String phone_3 = request.getParameter("phone_3");
                     if(phone_2.equalsIgnoreCase("Телефон"))
@@ -292,17 +301,18 @@ public class UserServlet extends BaseServlet {
                     }
                     String metro_id = request.getParameter("metro_id");
                     String description = request.getParameter("description");
-                    int discount = dbProc().getUserDiscountByID(user.getID());
-                    int driver_id = dbProc().getDriverID(Integer.valueOf(metro_id));
-                    boolean deliver = !distance_id.equalsIgnoreCase("0");
-                    int deliver_price = 0;
-                    if(distance_id==null||distance_id.equalsIgnoreCase("null"))
+                    int discount = b.getDiscount();
+                    int driver_id = 0;
+
+                    boolean deliver = !Boolean.valueOf(request.getParameter("pickup"));
+                    if(deliver)
                     {
-                        distance_id = "0";
+                        driver_id = dbProc().getDriverID(Integer.valueOf(metro_id));
                     }
-                    if(!distance_id.equalsIgnoreCase("0"))
+                    int deliver_price = 0;
+                    if(deliver)
                     {
-                        deliver_price = dbProc().getDeliverPrice(b.getPrice(),user.getID(),Integer.valueOf(distance_id));
+                        deliver_price = b.getDeliveryPrice();
                         pars.put("street",street);
                         pars.put("house",house);
                         pars.put("porch",porch);
@@ -311,14 +321,11 @@ public class UserServlet extends BaseServlet {
                         pars.put("domophone",domophone);
                         pars.put("room",room);
                         pars.put("city",city);
+                        pars.put("metro_id",Integer.valueOf(metro_id));
                     }
                     else// +3% discount...
                     {
-                        if(discount>4)
-                        {
-                            discount=4;
-                        }
-                        pars.put("street",distance);
+                        pars.put("street","");
                         pars.put("house","");
                         pars.put("porch","");
                         pars.put("building","");
@@ -326,6 +333,7 @@ public class UserServlet extends BaseServlet {
                         pars.put("domophone","");
                         pars.put("room","");
                         pars.put("city","");
+                        pars.put("metro_id",0);
                     }
                     pars.put("driver_id",driver_id);
                     pars.put("client_id",user.getID());
@@ -336,7 +344,6 @@ public class UserServlet extends BaseServlet {
                     pars.put("phone_1",user.getStringValue("phone_1"));
                     pars.put("phone_2",phone_2);
                     pars.put("phone_3",phone_3);
-                    pars.put("metro_id",Integer.valueOf(metro_id));
                     pars.put("discount_percent",discount);
 
                     pars.put("deliver_distance",distance);
@@ -360,10 +367,17 @@ public class UserServlet extends BaseServlet {
                     cli_pars.put("distance",distance);
 
                     dbProc().executeUpdate("clients",cli_pars,"id="+user.getID());
-                    HashMap<String,Object> email_pars = new HashMap<String, Object>();
-                    email_pars.put("order_id",String.valueOf(order_id));
-                    MailMessage mess = new MailMessage(Settings.getStringSetting("order_saved_email_address"),user.getStringValue("email"),"Заказ успешно принят", Settings.getStringSetting("order_saved_email"),email_pars);
-                    mailProc().sendMail(mess);
+                    try
+                    {
+                        HashMap<String,Object> email_pars = new HashMap<String, Object>();
+                        email_pars.put("order_id",String.valueOf(order_id));
+                        MailMessage mess = new MailMessage(Settings.getStringSetting("order_saved_email_address"),user.getStringValue("email"),"Заказ успешно принят", Settings.getStringSetting("order_saved_email"),email_pars);
+                        mailProc().sendMail(mess);
+                    }
+                    catch(Exception exx)
+                    {
+
+                    }
                     XMLProcessor proc = new XMLProcessor();
                     proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
                     proc.addNode("root", "order_id", order_id);
