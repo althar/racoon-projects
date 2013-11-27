@@ -42,9 +42,11 @@
 <div id="cont">
     <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
     <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
-    <a href="mailto://support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
     <span></span>
-    <a href="#">Сделано в Newmethod</a>
+    <div style="text-align:center;">
+    <img style="margin-top:10px;" src="../../img/pay.png" />
+    </div>
 </div>
 </body>
 

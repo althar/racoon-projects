@@ -12,7 +12,9 @@
             <div class="product_block">
                 <div class='row-fluid'>
                     <div class='span7'>
+					    <p style="text-align:center; width:300px;">
                         <img class="product-image-big" src="${good.imageMediumPath}"/>
+						</p>
                     </div>
                     <div class="span5">
                         <p class="product-text">
@@ -62,7 +64,7 @@
         <div class='button-bar span9'>
             <div class='span6'>
                 <a href="/user/payment?wish_id=${wish_id}&to_pay=${to_pay}&friends_wish=${friends_wish}" target="_blank">
-                    <button class="btn button button-medium pay-wish">Доплатить</button>
+                    <button class="btn button button-medium pay-wish">Скинуться</button>
                 </a>
             </div>
             <c:if test="${(!friends_wish) && (progress==100)}">
@@ -79,5 +81,13 @@
 </div>
 </div>
 </section>
+<div id="cont">
+<img src="../../img/line.png">
+    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
+    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <span></span>
+    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+</div>
 </body>
 </html>	

@@ -18,7 +18,7 @@ public class HistoryInterceptor implements HandlerInterceptor
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        ActionResult res = UserProcessor.authorization(request, response, dbProc, true, true);
+        ActionResult res = UserProcessor.authorization(request, response, dbProc);
         Long userId = res.getUser().getID();
         String trackingId = WebHelper.getCookie(request,"tracking_id");
         if(trackingId==null)

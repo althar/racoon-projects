@@ -48,6 +48,9 @@
             </form>
         </div>
         <a href="/user/terms_of_payment">Условия оплаты подарков</a>
+		<p>
+		<input type="checkbox" name="checkbox" value="checked" /> Вы прочитали условия оплаты
+		</p>
         <div class="payment-system"></div>
     </div>
 
@@ -55,5 +58,13 @@
     <img id="loader" class="hidden" src="/img/loader.gif">
 </div>
 </section>
+<div id="cont">
+<img src="../../img/line.png">
+    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
+    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <span></span>
+    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+</div>
 </body>
 </html>	

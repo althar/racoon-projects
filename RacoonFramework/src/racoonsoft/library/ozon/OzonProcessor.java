@@ -91,8 +91,18 @@ public class OzonProcessor extends APIProcessor
             ArrayList<HashMap<String,Object>> itemAttributes = null;
             for(HashMap<String,Object> map:attributes)
             {
+                if(!((String)map.get("Name")).equalsIgnoreCase("Изображение"))
+                {
+                    String name = (String)map.get("Name");
+                    String value = (String)map.get("Value");
+                    if(name!=null&&value!=null&&value.length()<=50)
+                    {
+                        result.put(name,value.replace("\\/",""));
+                    }
+                }
                 if(((String)map.get("Name")).equalsIgnoreCase("Характеристики"))
                 {
+                    result = new HashMap<String, String>();
                     HashMap<String,Object> details = (HashMap<String,Object>)map.get("Detail");
                     itemAttributes =  (ArrayList<HashMap<String,Object>>)details.get("ClassAttributes");
                     for(HashMap<String,Object> attr:itemAttributes)
@@ -104,6 +114,7 @@ public class OzonProcessor extends APIProcessor
                             result.put(name,value.replace("\\/",""));
                         }
                     }
+                    break;
                 }
             }
         }

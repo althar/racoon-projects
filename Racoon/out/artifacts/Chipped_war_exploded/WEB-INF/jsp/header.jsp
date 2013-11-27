@@ -22,6 +22,8 @@
 
 </head>
 <body>
+<div id="main-header2">
+  </div>
 <section class="main">
     <header id="main-header">
         <nav>

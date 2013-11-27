@@ -29,5 +29,15 @@
     </div>
 </div>
 </section>
+<div id="cont">
+<img src="../../img/line.png">
+    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
+    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <span></span>
+    <div style="text-align:center;">
+    <img src="../../img/pay.png" style="margin-top:10px;">
+    </div>
+</div>
 </body>
 </html>	

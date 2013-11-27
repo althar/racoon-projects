@@ -24,10 +24,11 @@
             </ul>
         </div>
         <div class="span9">
+            <h2 style="font-size:21px;"> Выбери подарок для себя или своего друга</h2>		   
             <h2 id="category"></h2><img src="../../img/loader.gif" id="loader">
             <ul class="breadcrumb" id="navigation">
             </ul>
-            Выбери подарок для себя или своего друга
+           
             <div id="catalogue_body">
             </div>
             <div class="row-fluid button-bar">
@@ -42,5 +43,13 @@
     </div>
 </div>
 </section>
+<div id="cont">
+<img src="../../img/line.png">
+    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
+    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <span></span>
+    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+</div>
 </body>
 </html>	

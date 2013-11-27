@@ -11,7 +11,7 @@ body {
 }
 
 body>section {
-    background-color: #a9ccf7;
+   
     width: 700px;
     position: relative;
     margin: 0 auto;
@@ -56,9 +56,10 @@ a:hover {
     color: #0a8bdd;
     text-decoration: none;
 }
-
+.button:hover {
+text-decoration: none;
+}
 .button,
-.button:hover,
 .button:active,
 .button:focus {
     background: url("../img/button-bg.png") no-repeat -2px 0;
@@ -118,7 +119,7 @@ a:hover {
     position: relative;
     width: 100%;
     background: none;
-    z-index: 2;
+    z-index: 1;
 }
 
 .button.button-medium:before,
@@ -170,11 +171,20 @@ a:hover {
 }
 
 #main-header {
-    width: 700px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-size:100%;
+	margin-top:-60px;
+}
+#main-header2 {
+     width: 100%;
     height: 40px;
     background: #ff7200 url("../img/header.png") no-repeat 0 0;
     box-shadow: 0 1px 2px rgba(0,0,0,0.5);
     margin-bottom: 20px;
+    background-size:100%
+	
 }
 
 #main-header h1 {
@@ -234,7 +244,7 @@ h2 {
     margin: 0;
     margin-top: 5px;
     color: #2772cd;
-    font-size: 25px;
+    font-size: 19px;
 }
 
 .breadcrumb {
@@ -268,8 +278,15 @@ h2 {
     font-size: 18px;
 }
 
-.product_block,
-.friends_block,
+
+.friends_block{ 
+  border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;}
+	
+	
 .terms_block,
 .payment_block {
     border-radius: 10px;
@@ -277,6 +294,16 @@ h2 {
     padding: 10px;
     margin-bottom: 10px;
     position: relative;
+	
+}
+
+.product_block {
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+	height: 120px;
 }
 
 .product-image {
@@ -284,6 +311,7 @@ h2 {
     margin: 0 auto;
     display: block;
     margin-bottom: 10px;
+	height:60px;
 }
 
 .product_block label {
@@ -420,7 +448,7 @@ h2 {
 }
 
 .friends_line-wrapper{
-    height: 30px;
+    height: 40px;
     overflow-y: hidden;
     overflow-x: auto;
     padding-bottom: 20px;

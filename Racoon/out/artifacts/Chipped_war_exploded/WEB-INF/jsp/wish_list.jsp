@@ -11,6 +11,7 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="friends_block">
+			    <h3>Выберите подарок и скиньтесь любой суммой на подарок своему другу.</h3>
                 <div class="wish-list">
                     <c:forEach var="friend" items="${wishList}" varStatus="rowStatus">
                         <div class="wish-list_item">

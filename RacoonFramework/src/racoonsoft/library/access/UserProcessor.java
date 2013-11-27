@@ -20,30 +20,29 @@ public class UserProcessor
     private static String passwordColumnName = "password";
     private static String userTableName = "user";
 
+
+    //<editor-fold desc="Init">
     public static String getLoginColumnName() {
         return loginColumnName;
     }
-
     public static void setLoginColumnName(String loginColumnName) {
         UserProcessor.loginColumnName = loginColumnName;
     }
-
     public static String getPasswordColumnName() {
         return passwordColumnName;
     }
-
     public static void setPasswordColumnName(String passwordColumnName) {
         UserProcessor.passwordColumnName = passwordColumnName;
     }
-
     public static String getUserTableName() {
         return userTableName;
     }
-
     public static void setUserTableName(String userTableName) {
         UserProcessor.userTableName = userTableName;
     }
+    //</editor-fold>
 
+    //<editor-fold desc="Main">
     public static ActionResult logout(HttpServletRequest request)
     {
         String sessionId = getCookie(request,"session_id");
@@ -167,6 +166,7 @@ public class UserProcessor
             return res;
         }
     }
+    //</editor-fold>
 
     //<editor-fold desc="Helpers">
     private static User getUser(Long id, DBProcessor dbProc) throws SQLException

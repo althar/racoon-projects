@@ -15,8 +15,10 @@
                 <div class="product_block">
                     <div class='row-fluid'>
                         <div class='span7'>
-                            <b>${good.name}</b>
-                            <img class="product-image-big" src="${good.imageMediumPath}"/>
+                            <p style="width:300px;"><b>${good.name}</b>
+							</p>
+							<p style="text-align:center; width:300px">
+                            <img class="product-image-big" src="${good.imageMediumPath}"/></p>
                         </div>
                         <div class="span5">
                             <p class="product-text">
@@ -26,8 +28,8 @@
                             </p>
 
                             <p class="product-price">
-                                <span class="price">${good.price},-</span><br/>
-                                Цена с доставкой
+                                <span class="price">${good.price},- руб</span><br/>
+                                Без доставки
                             </p>
                         </div>
                     </div>
@@ -42,6 +44,31 @@
                 <label>Дата:</label>
                 <input type="text" class="span3 datepicker" id="date-picker">
                 <i id="calendar-icon" class="icon icon-calendar"></i>
+				<script type="text/javascript">
+
+$(function(){
+  $.datepicker.setDefaults($.extend(
+    $.datepicker.regional["ru"])
+  );
+  $("#datepicker").datepicker({
+    beforeShow: function(input) {
+      $(input).css("background-color","#ff9");
+    },
+    onSelect: function(dateText, inst) {
+      $(this).css("background-color","");
+      alert("Выбрано: " + dateText +
+        "\n\nid: " + inst.id +
+        "\nselectedDay: " + inst.selectedDay +
+        "\nselectedMonth: " + inst.selectedMonth +
+        "\nselectedYear: " + inst.selectedYear);
+    },
+    onClose: function(dateText, inst) {
+      $(this).css("background-color","");
+    }
+  });
+});
+</script>
+
                 <label>Повод:</label>
                 <select class="span4" id="reason">
                     <option>День рождения</option>
@@ -77,5 +104,13 @@
 </div>
 </div>
 </section>
+<div id="cont">
+<img src="../../img/line.png">
+    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
+    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
+    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
+    <span></span>
+    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+</div>
 </body>
 </html>	
