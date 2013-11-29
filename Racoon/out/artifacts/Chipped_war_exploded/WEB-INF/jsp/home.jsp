@@ -33,20 +33,31 @@
             <div class="input-prepend button-prepend">
                 <a href="/facebook/login"><span class="add-on"><i class="icon icon-facebook"></i></span><button class="btn button">Войти через Facebook</button></a>
             </div>
+			<!--
             <div class="input-prepend button-prepend">
                 <span class="add-on"><i class="icon icon-vk"></i></span><button class="btn button">Войти через Vkontakte</button>
             </div>
+			-->
         </div>
     </div>
 </section>
 <div id="cont">
+	<!--
     <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
     <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
     <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
-    <span></span>
+	-->
+	<center>
+		<div>По вопросам технической поддержки обращайтесь на <a href="mailto:ask@htmlbook.ru">support@v-skladchinu.ru</a> или по телефону +7 (495) 648 6251</div> 
+		<div>ООО "Креативные концепции"</div>
+	</center>
+	
+	<!--
+    <span> </span>
     <div style="text-align:center;">
     <img style="margin-top:10px;" src="../../img/pay.png" />
     </div>
+	-->
 </div>
 </body>
 

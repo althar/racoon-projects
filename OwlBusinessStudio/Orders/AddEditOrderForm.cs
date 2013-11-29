@@ -45,12 +45,12 @@ namespace OwlBusinessStudio.Orders
             ComboMetros.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             ComboMetros.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            DataTable deliverWays = MainForm.dbProc.executeGet("SELECT * FROM delivery_costs ORDER BY id ASC");
-            ComboDeliver.DataSource = deliverWays;
-            ComboDeliver.DisplayMember = "distance";
-            ComboDeliver.ValueMember = "id";
-            ComboDeliver.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            ComboDeliver.AutoCompleteSource = AutoCompleteSource.ListItems;
+            DataTable deliverWays = MainForm.dbProc.executeGet("SELECT DISTINCT distance,pickup FROM delivery_costs");
+            ComboDelivery.DataSource = deliverWays;
+            ComboDelivery.DisplayMember = "distance";
+            ComboDelivery.ValueMember = "pickup";
+            ComboDelivery.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ComboDelivery.AutoCompleteSource = AutoCompleteSource.ListItems;
 
             #endregion
         }
@@ -72,19 +72,12 @@ namespace OwlBusinessStudio.Orders
                 return;
             }
             clientID = (int)order.Rows[0]["client_id"];
-            CheckDeliver.Checked = (bool)order.Rows[0]["deliver"];
+            bool deliver = (bool)order.Rows[0]["deliver"];
+            //CheckDeliver.Checked = (bool)order.Rows[0]["deliver"];
             TxtName.Text = (string)order.Rows[0]["client_name"];
             TxtPhone1.Text = (string)order.Rows[0]["phone_1"];
             TxtPhone2.Text = (string)order.Rows[0]["phone_2"];
             TxtPhone3.Text = (string)order.Rows[0]["phone_3"];
-            if (CheckDeliver.Checked)
-            {
-                LabelDeliver.Text = "Доставка";
-            }
-            else
-            {
-                LabelDeliver.Text = "Самовывоз";
-            }
             TimePickerDate.Value = (DateTime)order.Rows[0]["deliver_date"];
             TimePickerFrom1.Value = (DateTime)order.Rows[0]["deliver_time_from_1"];
             TimePickerTo1.Value = (DateTime)order.Rows[0]["deliver_time_to_1"];
@@ -97,7 +90,7 @@ namespace OwlBusinessStudio.Orders
             TxtDiscount.Text = order.Rows[0]["discount_percent"].ToString();
             int delPrice = (int)order.Rows[0]["deliver_price"];
             TxtDescription.Text = order.Rows[0]["description"].ToString();
-            ComboDeliver.Text = order.Rows[0]["deliver_distance"].ToString();
+            ComboDelivery.Text = order.Rows[0]["deliver_distance"].ToString();
             orderTable.setDeliverPrice((int)order.Rows[0]["deliver_price"]);
         }
         
@@ -133,10 +126,6 @@ namespace OwlBusinessStudio.Orders
                 {
                     ComboStreet.Text = (string)client.Rows[0]["street"];
                 }
-                if (client.Rows[0]["street"] is DBNull || client.Rows[0]["street"].ToString().Replace(" ","") == "")
-                {
-                    CheckDeliver.Checked = false;
-                }
                 if (!(client.Rows[0]["city"] is DBNull))
                 {
                     TxtCIty.Text = (string)client.Rows[0]["city"];
@@ -158,13 +147,13 @@ namespace OwlBusinessStudio.Orders
                 // Distance...
                 try
                 {
-                    for (int i = 0; i < ComboDeliver.Items.Count; i++)
+                    for (int i = 0; i < ComboDelivery.Items.Count; i++)
                     {
                         if (!(client.Rows[0]["distance"] is DBNull))
                         {
-                            if ((string)((DataRowView)ComboDeliver.Items[i]).Row["distance"] == (string)client.Rows[0]["distance"])
+                            if ((string)((DataRowView)ComboDelivery.Items[i]).Row["distance"] == (string)client.Rows[0]["distance"])
                             {
-                                ComboDeliver.SelectedIndex = i;
+                                ComboDelivery.SelectedIndex = i;
                                 break;
                             }
                         }
@@ -280,13 +269,13 @@ namespace OwlBusinessStudio.Orders
                 // Distance...
                 try
                 {
-                    for (int i = 0; i < ComboDeliver.Items.Count; i++)
+                    for (int i = 0; i < ComboDelivery.Items.Count; i++)
                     {
                         if (!(order.Rows[0]["deliver_distance"] is DBNull))
                         {
-                            if ((string)((DataRowView)ComboDeliver.Items[i]).Row["distance"] == (string)order.Rows[0]["deliver_distance"])
+                            if ((string)((DataRowView)ComboDelivery.Items[i]).Row["distance"] == (string)order.Rows[0]["deliver_distance"])
                             {
-                                ComboDeliver.SelectedIndex = i;
+                                ComboDelivery.SelectedIndex = i;
                                 break;
                             }
                         }
@@ -381,52 +370,52 @@ namespace OwlBusinessStudio.Orders
         }
         private void CheckDeliver_CheckedChanged(object sender, EventArgs e)
         {
-            ComboDeliver.Enabled = CheckDeliver.Checked;
-            if (!ComboDeliver.Enabled)
-            {
-                orderTable.setDeliverPriceID(0);
-                LabelDopDiscount.Text = "3";
-                LabelDopDiscount.Visible = true;
-                LabelPlus.Visible = true;
+            //ComboDelivery.Enabled = CheckDeliver.Checked;
+            //if (!ComboDelivery.Enabled)
+            //{
+            //    orderTable.setDeliverPriceID(0);
+            //    LabelDopDiscount.Text = "3";
+            //    LabelDopDiscount.Visible = true;
+            //    LabelPlus.Visible = true;
 
-                TxtCIty.Enabled = false;
-                TxtCIty.Text = "";
-                ComboStreet.Enabled = false;
-                ComboStreet.SelectedIndex = -1;
-                ComboStreet.Text = "";
-                ComboMetros.Enabled = false;
-                ComboMetros.SelectedIndex = -1;
-                TxtHouse.Enabled = false;
-                TxtHouse.Text = "";
-                TxtPorch.Enabled = false;
-                TxtPorch.Text = "";
-                TxtFloor.Enabled = false;
-                TxtFloor.Text = "";
-                TxtRoom.Enabled = false;
-                TxtRoom.Text = "";
-                TxtDomophone.Enabled = false;
-                TxtDomophone.Text = "";
-                //clientID = 0;
-                LabelDeliver.Text = "Самовывоз";
-            }
-            else
-            {
-                ComboDeliver.SelectedIndex = 0;
-                TxtDeliver_SelectedValueChanged(null, null);
-                LabelDopDiscount.Text = "0";
-                LabelDopDiscount.Visible = false;
-                LabelPlus.Visible = false;
+            //    TxtCIty.Enabled = false;
+            //    TxtCIty.Text = "";
+            //    ComboStreet.Enabled = false;
+            //    ComboStreet.SelectedIndex = -1;
+            //    ComboStreet.Text = "";
+            //    ComboMetros.Enabled = false;
+            //    ComboMetros.SelectedIndex = -1;
+            //    TxtHouse.Enabled = false;
+            //    TxtHouse.Text = "";
+            //    TxtPorch.Enabled = false;
+            //    TxtPorch.Text = "";
+            //    TxtFloor.Enabled = false;
+            //    TxtFloor.Text = "";
+            //    TxtRoom.Enabled = false;
+            //    TxtRoom.Text = "";
+            //    TxtDomophone.Enabled = false;
+            //    TxtDomophone.Text = "";
+            //    //clientID = 0;
+            //    LabelDeliver.Text = "Самовывоз";
+            //}
+            //else
+            //{
+            //    ComboDelivery.SelectedIndex = 0;
+            //    TxtDeliver_SelectedValueChanged(null, null);
+            //    LabelDopDiscount.Text = "0";
+            //    LabelDopDiscount.Visible = false;
+            //    LabelPlus.Visible = false;
 
-                TxtCIty.Enabled = true;
-                ComboStreet.Enabled = true;
-                ComboMetros.Enabled = true;
-                TxtHouse.Enabled = true;
-                TxtPorch.Enabled = true;
-                TxtFloor.Enabled = true;
-                TxtRoom.Enabled = true;
-                TxtDomophone.Enabled = true;
-                LabelDeliver.Text = "Доставка";
-            }
+            //    TxtCIty.Enabled = true;
+            //    ComboStreet.Enabled = true;
+            //    ComboMetros.Enabled = true;
+            //    TxtHouse.Enabled = true;
+            //    TxtPorch.Enabled = true;
+            //    TxtFloor.Enabled = true;
+            //    TxtRoom.Enabled = true;
+            //    TxtDomophone.Enabled = true;
+            //    LabelDeliver.Text = "Доставка";
+            //}
         }
         private bool checkFilling()
         {
@@ -505,7 +494,7 @@ namespace OwlBusinessStudio.Orders
                 {
                     clientParams.Add("phone_3", "");
                 }
-                clientParams.Add("distance", ComboDeliver.Text);
+                clientParams.Add("distance", ComboDelivery.Text);
                 if (TxtDomophone.Enabled||true)
                 {
                     clientParams.Add("street", Configurator.fromUpper(ComboStreet.Text.TrimStart(new char[1] { ' ' }).TrimEnd(new char[1] { ' ' })));
@@ -550,7 +539,10 @@ namespace OwlBusinessStudio.Orders
                     }
                     
                     orderParams.Add("client_id", clientID);
-                    orderParams.Add("deliver", CheckDeliver.Checked);
+                    if (ComboDelivery.SelectedValue != null)
+                    {
+                        orderParams.Add("deliver", ComboDelivery.SelectedValue);
+                    }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
                     if (CheckSecondDeliverTime.Checked)
@@ -596,7 +588,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("discount_percent", Int32.Parse(TxtDiscount.Text));
                     orderParams.Add("metro_id", current_metro_id);
                     orderParams.Add("city", Configurator.fromUpper(TxtCIty.Text));
-                    orderParams.Add("deliver_distance", ComboDeliver.Text);
+                    orderParams.Add("deliver_distance", ComboDelivery.Text);
                     orderParams.Add("description", TxtDescription.Text);
                     orderParams.Add("client_name", TxtName.Text);
 
@@ -637,7 +629,10 @@ namespace OwlBusinessStudio.Orders
                     Hashtable orderParams = new Hashtable();
                     orderParams.Add("user_id", MainForm.currentUser.ID);
                     orderParams.Add("client_id", clientID);
-                    orderParams.Add("deliver", CheckDeliver.Checked);
+                    if (ComboDelivery.SelectedValue != null)
+                    {
+                        orderParams.Add("deliver", ComboDelivery.SelectedValue);
+                    }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
                     if (CheckSecondDeliverTime.Checked)
@@ -682,7 +677,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("discount_percent", Double.Parse(TxtDiscount.Text));
                     orderParams.Add("metro_id", current_metro_id);
                     orderParams.Add("city", Configurator.fromUpper(TxtCIty.Text));
-                    orderParams.Add("deliver_distance", ComboDeliver.Text);
+                    orderParams.Add("deliver_distance", ComboDelivery.Text);
                     orderParams.Add("description", TxtDescription.Text);
                     orderParams.Add("client_name", TxtName.Text);
 
@@ -724,26 +719,13 @@ namespace OwlBusinessStudio.Orders
                 MessageBox.Show(ex.ToString());
             }
         }
-        private void LabelDeliver_Click(object sender, EventArgs e)
-        {
-            if (CheckDeliver.Checked)
-            {
-                CheckDeliver.Checked = false;
-                LabelDeliver.Text = "Самовывоз";
-            }
-            else
-            {
-                CheckDeliver.Checked = true;
-                LabelDeliver.Text = "Доставка";
-            }
-        }
         private void TxtDeliver_SelectedValueChanged(object sender, EventArgs e)
         {
             try
             {
-                if (ComboDeliver.SelectedValue != null && ComboDeliver.SelectedValue is int)
+                if (ComboDelivery.SelectedValue != null && ComboDelivery.SelectedValue is int)
                 {
-                    orderTable.setDeliverPriceID((int)ComboDeliver.SelectedValue);
+                    orderTable.setDeliverDistance(ComboDelivery.Text);
                 }
             }
             catch (Exception ex)
@@ -803,6 +785,11 @@ namespace OwlBusinessStudio.Orders
                 ComboStreet.Select(ComboStreet.Text.Length, 0);
                 needSearchForStreet = true;
             }
+        }
+
+        private void NumDeliveryPrice_ValueChanged(object sender, EventArgs e)
+        {
+            orderTable.setDeliverPrice((int)NumDeliveryPrice.Value);
         }
     }
 }

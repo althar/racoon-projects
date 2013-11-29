@@ -8,7 +8,7 @@
     <h2>${good.name}</h2>
 
     <div class="row-fluid">
-        <div class="span12">
+        <div class="span13">
             <div class="product_block">
                 <div class='row-fluid'>
                     <div class='span7'>
@@ -17,6 +17,7 @@
 						</p>
                     </div>
                     <div class="span5">
+                        ${description}
                         <p class="product-text">
                             <c:forEach var="characteristic" items="${characteristics}">
                                 ${characteristic.key} : ${characteristic.value}<br>
@@ -31,6 +32,7 @@
                 </div>
                 <div class="tape"></div>
             </div>
+		</div>
         </div>
     </div>
     <div class="friends-line">
@@ -82,12 +84,11 @@
 </div>
 </section>
 <div id="cont">
-<img src="../../img/line.png">
-    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
-    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
-    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
-    <span></span>
-    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+	<img src="../../img/line.png">
+	<center>
+		<div>По вопросам технической поддержки обращайтесь на <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a> или по телефону +7 (495) 648 6251</div> 
+		<div>ООО "Креативные концепции"</div>
+	</center>
 </div>
 </body>
 </html>	

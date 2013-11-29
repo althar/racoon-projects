@@ -38,34 +38,34 @@
                 <label>Тип Доставки:</label>
                 <select class="span12" id="delivery-group">
                 </select>
-                <label>Тип Доставки:</label>
-                <select class="span12" id="delivery-variant">
+                <label class="hidden">Тип Доставки:</label>
+                <select class="span12 hidden" id="delivery-variant">
                 </select>
                 <label>Почтовый индекс:</label>
-                <input type="text" class="span12" id="zip" value="143980"/>
+                <input type="text" class="span12" id="zip" value=""/>
                 <label>Страна:</label>
-                <input type="text" class="span12" id="country" value="Россия"/>
+                <input type="text" class="span12" id="country" value=""/>
                 </select>
                 <label>Регион:</label>
-                <input type="text" class="span12" id="reg" value="Приомурск"/>
+                <input type="text" class="span12" id="reg" value=""/>
                 <label>Область:</label>
-                <input type="text" class="span12" id="district" value="Чудовищная"/>
+                <input type="text" class="span12" id="district" value=""/>
                 <label>Город:</label>
-                <input type="text" class="span12" id="city" value="Лосьск"/>
+                <input type="text" class="span12" id="city" value=""/>
                 <%--<label>Получатель:</label>--%>
                 <%--<input type="text" class="span12" id="name"/>--%>
                 <label>Адрес:</label>
                 <div class="row-fluid">
-                    <input type="text" class="span8" placeholder="улица" id="street" value="Партизанская"/>
-                    <input type="text" class="span2" placeholder="дом" id="house" value="23"/>
-                    <input type="text" class="span2" placeholder="кв." id="room" value="1"/>
+                    <input type="text" class="span8" placeholder="улица" id="street" value=""/>
+                    <input type="text" class="span2" placeholder="дом" id="house" value=""/>
+                    <input type="text" class="span2" placeholder="кв." id="room" value=""/>
                 </div>
                 <label>Телефон получателя:</label>
-                <input type="text" class="span12" placeholder="8/___/_______" id="phone" value="89265713850"/>
+                <input type="text" class="span12" placeholder="8/___/_______" id="phone" value=""/>
                 <label>Имя получателя</label>
-                <input type="text" class="span12" id="name" value="Вовка"/>
+                <input type="text" class="span12" id="name" value=""/>
                 <label>Фамилия получателя:</label>
-                <input type="text" class="span12" id="soname" value="Стыдный"/>
+                <input type="text" class="span12" id="soname" value=""/>
             </form>
         </div>
     </div>

@@ -11,7 +11,6 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="friends_block">
-			    <h3>Выберите подарок и скиньтесь любой суммой на подарок своему другу.</h3>
                 <div class="wish-list">
                     <c:forEach var="friend" items="${wishList}" varStatus="rowStatus">
                         <div class="wish-list_item">
@@ -55,5 +54,12 @@
     </div>
 </div>
 </section>
+<div id="cont">
+	<img src="../../img/line.png">
+	<center>
+		<div>По вопросам технической поддержки обращайтесь на <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a> или по телефону +7 (495) 648 6251</div> 
+		<div>ООО "Креативные концепции"</div>
+	</center>
+</div>
 </body>
 </html>	

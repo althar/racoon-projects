@@ -31,6 +31,11 @@
 </section>
 <div id="cont">
 <img src="../../img/line.png">
+	<center>
+		<div>По вопросам технической поддержки обращайтесь на <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a> или по телефону +7 (495) 648 6251</div> 
+		<div>ООО "Креативные концепции"</div>
+	</center>
+<!--
     <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
     <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
     <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
@@ -38,6 +43,7 @@
     <div style="text-align:center;">
     <img src="../../img/pay.png" style="margin-top:10px;">
     </div>
+-->
 </div>
 </body>
 </html>	

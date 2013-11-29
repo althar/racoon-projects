@@ -7,10 +7,10 @@
 <script type="text/javascript" src="/js/logic/wish_edit.js"></script>
 <input type="hidden" id="ids" value="${ids}">
 <input type="hidden" id="to-friends" value="${toFriends}">
-
+<div style="margin-bottom: 10px;"><h2 style="font-size:21px;"> Выбери подарок для себя или своего друга</h2></div>
 <div class="catalog product-preview">
     <div class="row-fluid">
-        <div class="span12">
+        <div class="span13">
             <c:forEach var="good" items="${goods}" varStatus="rowStatus">
                 <div class="product_block">
                     <div class='row-fluid'>
@@ -106,12 +106,11 @@ $(function(){
 </div>
 </section>
 <div id="cont">
-<img src="../../img/line.png">
-    <a href="/user/terms_of_service" target="_blank">Политиа конфиденциальности</a>
-    <a href="/user/terms_of_payment" target="_blank">Условия пользования сервиса</a>
-    <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a>
-    <span></span>
-    <a href="http://www.newmethod.ru" target="_blank">Сделано в Newmethod</a>
+	<img src="../../img/line.png">
+	<center>
+		<div>По вопросам технической поддержки обращайтесь на <a href="mailto:support@v-skladchinu.ru">support@v-skladchinu.ru</a> или по телефону +7 (495) 648 6251</div> 
+		<div>ООО "Креативные концепции"</div>
+	</center>
 </div>
 </body>
 </html>	

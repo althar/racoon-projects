@@ -28,7 +28,7 @@ body>section {
 }
 
 .welcome-screen .control-bar {
-    margin-top: 40px;
+    margin-top: 140px;
 }
 
 .logo-big {
@@ -210,14 +210,14 @@ text-decoration: none;
 }
 
 #main-header ul li a {
-    text-decoration: underline;
+    text-decoration: none;
     color: white;
     background: none;
     line-height: 20px;
 }
 
 #main-header ul li a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .content {
@@ -236,7 +236,7 @@ text-decoration: none;
 }
 
 .catalog {
-    padding: 0 25px 25px 25px;
+    padding-bottom: 25px;
     text-shadow: 1px 1px 0 #d1e6ff;
 }
 
@@ -266,7 +266,7 @@ h2 {
 
 .category > li > a {
     color: #333333;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     line-height: 27px;
@@ -275,7 +275,7 @@ h2 {
 .categoty_sub-menu > li > a {
     color: #2772cd;
     line-height: 27px;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 
@@ -351,7 +351,7 @@ h2 {
 }
 
 .product-preview .product_block {
-    height: 276px;
+   /* height: 276px;*/
     text-shadow: none;
 }
 
@@ -362,10 +362,12 @@ h2 {
 .product-text {
     font-size: 12px;
     line-height: 14px;
-    margin-top: 60px;
     padding-left: 10px;
+	/*
+	margin-top: 60px;
     height: 130px;
     overflow: auto;
+	*/
 }
 
 .product-preview .price {
@@ -597,9 +599,11 @@ h2 {
 
 .terms_block h3 {
     font-weight: normal;
-    font-size: 11px;
+    font-size: 15px;
     line-height: 13px;
     margin: 0;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .terms_block li {
@@ -650,6 +654,12 @@ input[type='text'] {
 .product-preview select {
     border: none;
 }
+
+.span13{
+background: #fff url("../img/red-line.png") repeat-y 51.7%;
+border-radius: 10px;
+min-height: 300px;
+}
 #cont{
     height:15px;
     width:600px;
@@ -657,11 +667,11 @@ input[type='text'] {
     font-size:10px;
 }
 #cont a{
-    color:black;
+    /*color:black;
     text-decoration:none;
-    display: block;
+    /*display: block;
     float: left;
-    margin-left: 10px;
+    margin-left: 10px;*/
 }
 #cont span{
     display:block;
@@ -669,7 +679,14 @@ input[type='text'] {
     height:1px;
     float: left;
 }
+
+#cont div{
+	margin-top: -4px;
+}
 .hidden
 {
     display:none;
+}
+.titleCatalog{
+
 }

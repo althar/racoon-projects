@@ -33,22 +33,17 @@
             this.CheckSecondDeliverTime = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.TxtPhone3 = new System.Windows.Forms.MaskedTextBox();
-            this.ComboDeliver = new System.Windows.Forms.ComboBox();
-            this.LabelPlus = new System.Windows.Forms.Label();
-            this.LabelDopDiscount = new System.Windows.Forms.Label();
+            this.ComboDelivery = new System.Windows.Forms.ComboBox();
             this.TxtCIty = new System.Windows.Forms.TextBox();
             this.LabelDiscount = new System.Windows.Forms.Label();
-            this.LabelDeliver = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.TimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.TxtRoom = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.ComboMetros = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.TxtDiscount = new System.Windows.Forms.TextBox();
-            this.CheckDeliver = new System.Windows.Forms.CheckBox();
             this.TimePickerTo2 = new System.Windows.Forms.DateTimePicker();
             this.TimePickerFrom2 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
@@ -79,30 +74,32 @@
             this.ButtSaveOrder = new System.Windows.Forms.Button();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.NumDeliveryPrice = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumDeliveryPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.NumDeliveryPrice);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CheckSecondDeliverTime);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.TxtPhone3);
-            this.groupBox1.Controls.Add(this.ComboDeliver);
-            this.groupBox1.Controls.Add(this.LabelPlus);
-            this.groupBox1.Controls.Add(this.LabelDopDiscount);
+            this.groupBox1.Controls.Add(this.ComboDelivery);
             this.groupBox1.Controls.Add(this.TxtCIty);
             this.groupBox1.Controls.Add(this.LabelDiscount);
-            this.groupBox1.Controls.Add(this.LabelDeliver);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.TimePickerDate);
             this.groupBox1.Controls.Add(this.TxtRoom);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.ComboMetros);
-            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.TxtDiscount);
-            this.groupBox1.Controls.Add(this.CheckDeliver);
             this.groupBox1.Controls.Add(this.TimePickerTo2);
             this.groupBox1.Controls.Add(this.TimePickerFrom2);
             this.groupBox1.Controls.Add(this.label14);
@@ -164,34 +161,14 @@
             this.TxtPhone3.Size = new System.Drawing.Size(114, 20);
             this.TxtPhone3.TabIndex = 14;
             // 
-            // ComboDeliver
+            // ComboDelivery
             // 
-            this.ComboDeliver.FormattingEnabled = true;
-            this.ComboDeliver.Location = new System.Drawing.Point(762, 107);
-            this.ComboDeliver.Name = "ComboDeliver";
-            this.ComboDeliver.Size = new System.Drawing.Size(121, 21);
-            this.ComboDeliver.TabIndex = 48;
-            this.ComboDeliver.SelectedValueChanged += new System.EventHandler(this.TxtDeliver_SelectedValueChanged);
-            // 
-            // LabelPlus
-            // 
-            this.LabelPlus.AutoSize = true;
-            this.LabelPlus.Location = new System.Drawing.Point(870, 140);
-            this.LabelPlus.Name = "LabelPlus";
-            this.LabelPlus.Size = new System.Drawing.Size(13, 13);
-            this.LabelPlus.TabIndex = 47;
-            this.LabelPlus.Text = "+";
-            this.LabelPlus.Visible = false;
-            // 
-            // LabelDopDiscount
-            // 
-            this.LabelDopDiscount.AutoSize = true;
-            this.LabelDopDiscount.Location = new System.Drawing.Point(880, 140);
-            this.LabelDopDiscount.Name = "LabelDopDiscount";
-            this.LabelDopDiscount.Size = new System.Drawing.Size(13, 13);
-            this.LabelDopDiscount.TabIndex = 46;
-            this.LabelDopDiscount.Text = "0";
-            this.LabelDopDiscount.Visible = false;
+            this.ComboDelivery.FormattingEnabled = true;
+            this.ComboDelivery.Location = new System.Drawing.Point(646, 107);
+            this.ComboDelivery.Name = "ComboDelivery";
+            this.ComboDelivery.Size = new System.Drawing.Size(193, 21);
+            this.ComboDelivery.TabIndex = 48;
+            this.ComboDelivery.SelectedValueChanged += new System.EventHandler(this.TxtDeliver_SelectedValueChanged);
             // 
             // TxtCIty
             // 
@@ -205,22 +182,11 @@
             // 
             this.LabelDiscount.AutoSize = true;
             this.LabelDiscount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LabelDiscount.Location = new System.Drawing.Point(698, 140);
+            this.LabelDiscount.Location = new System.Drawing.Point(584, 140);
             this.LabelDiscount.Name = "LabelDiscount";
             this.LabelDiscount.Size = new System.Drawing.Size(44, 13);
             this.LabelDiscount.TabIndex = 44;
             this.LabelDiscount.Text = "Скидка";
-            // 
-            // LabelDeliver
-            // 
-            this.LabelDeliver.AutoSize = true;
-            this.LabelDeliver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LabelDeliver.Location = new System.Drawing.Point(698, 110);
-            this.LabelDeliver.Name = "LabelDeliver";
-            this.LabelDeliver.Size = new System.Drawing.Size(57, 13);
-            this.LabelDeliver.TabIndex = 43;
-            this.LabelDeliver.Text = "Доставка";
-            this.LabelDeliver.Click += new System.EventHandler(this.LabelDeliver_Click);
             // 
             // label20
             // 
@@ -273,19 +239,10 @@
             this.ComboMetros.Size = new System.Drawing.Size(157, 21);
             this.ComboMetros.TabIndex = 3;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(895, 140);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(15, 13);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "%";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(895, 110);
+            this.label16.Location = new System.Drawing.Point(907, 110);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(25, 13);
             this.label16.TabIndex = 34;
@@ -294,24 +251,12 @@
             // TxtDiscount
             // 
             this.TxtDiscount.BackColor = System.Drawing.SystemColors.Window;
-            this.TxtDiscount.Location = new System.Drawing.Point(764, 137);
+            this.TxtDiscount.Location = new System.Drawing.Point(646, 137);
             this.TxtDiscount.Name = "TxtDiscount";
-            this.TxtDiscount.Size = new System.Drawing.Size(100, 20);
+            this.TxtDiscount.Size = new System.Drawing.Size(193, 20);
             this.TxtDiscount.TabIndex = 33;
             this.TxtDiscount.Text = "0";
             this.TxtDiscount.TextChanged += new System.EventHandler(this.TxtDiscount_TextChanged);
-            // 
-            // CheckDeliver
-            // 
-            this.CheckDeliver.AutoSize = true;
-            this.CheckDeliver.Checked = true;
-            this.CheckDeliver.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckDeliver.Location = new System.Drawing.Point(681, 110);
-            this.CheckDeliver.Name = "CheckDeliver";
-            this.CheckDeliver.Size = new System.Drawing.Size(15, 14);
-            this.CheckDeliver.TabIndex = 30;
-            this.CheckDeliver.UseVisualStyleBackColor = true;
-            this.CheckDeliver.CheckedChanged += new System.EventHandler(this.CheckDeliver_CheckedChanged);
             // 
             // TimePickerTo2
             // 
@@ -589,6 +534,43 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Примечание";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(845, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Руб";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label17.Location = new System.Drawing.Point(584, 110);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 53;
+            this.label17.Text = "Доставка";
+            // 
+            // NumDeliveryPrice
+            // 
+            this.NumDeliveryPrice.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.NumDeliveryPrice.Location = new System.Drawing.Point(845, 107);
+            this.NumDeliveryPrice.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.NumDeliveryPrice.Name = "NumDeliveryPrice";
+            this.NumDeliveryPrice.Size = new System.Drawing.Size(56, 20);
+            this.NumDeliveryPrice.TabIndex = 54;
+            this.NumDeliveryPrice.ValueChanged += new System.EventHandler(this.NumDeliveryPrice_ValueChanged);
+            // 
             // AddEditOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,6 +591,7 @@
             this.Shown += new System.EventHandler(this.AddEditOrderForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumDeliveryPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,10 +628,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker TimePickerTo1;
         private System.Windows.Forms.DateTimePicker TimePickerFrom1;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox TxtDiscount;
-        private System.Windows.Forms.CheckBox CheckDeliver;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox ComboMetros;
         private System.Windows.Forms.TextBox TxtRoom;
@@ -656,16 +637,16 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DateTimePicker TimePickerDate;
         private System.Windows.Forms.Label LabelDiscount;
-        private System.Windows.Forms.Label LabelDeliver;
         private System.Windows.Forms.TextBox TxtCIty;
-        private System.Windows.Forms.Label LabelDopDiscount;
-        private System.Windows.Forms.Label LabelPlus;
-        private System.Windows.Forms.ComboBox ComboDeliver;
+        private System.Windows.Forms.ComboBox ComboDelivery;
         private System.Windows.Forms.TextBox TxtDescription;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MaskedTextBox TxtPhone3;
         private System.Windows.Forms.CheckBox CheckSecondDeliverTime;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown NumDeliveryPrice;
 
     }
 }

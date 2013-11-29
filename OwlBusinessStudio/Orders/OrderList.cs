@@ -21,11 +21,8 @@ namespace OwlBusinessStudio.Orders
         public List<PictureBox> DeletePics = new List<PictureBox>();
         public int Discount = 0;
         public int DeliverPrice = 0;
+        public string distance = "";
         private int orderID = 0;
-        private int deliveryDistanceID = 0;
-        private int lowCost = 0;
-        private int highCost = 0;
-        private int separator = 0;
 
         public OrderList(int order_id)
         {
@@ -42,22 +39,9 @@ namespace OwlBusinessStudio.Orders
             Discount = discount;
             firstItem_onSumChanged();
         }
-        public void setDeliverPriceID(int id)
+        public void setDeliverDistance(string distance)
         {
-            deliveryDistanceID = id;
-            if (deliveryDistanceID != 0)
-            {
-                DataTable t = MainForm.dbProc.get("delivery_costs", "id=" + deliveryDistanceID.ToString());
-                lowCost = (int)t.Rows[0]["low_price_delivery_cost"];
-                highCost = (int)t.Rows[0]["high_price_delivery_cost"];
-                separator = (int)t.Rows[0]["high_low_price_separator"];
-            }
-            else
-            {
-                lowCost = 0;
-                highCost = 0;
-                separator = 0;
-            }
+            this.distance = distance;
             firstItem_onSumChanged();
         }
         public void setDeliverPrice(int price)
@@ -66,50 +50,7 @@ namespace OwlBusinessStudio.Orders
             DeliverPrice = price;
             calc_total();
         }
-        private void rebuildeList()
-        {
-            for (int i = 0; i < Items.Count; i++)
-            {
-                Items[i].Top = i * 27 + 15;
-                DeletePics[i].Top = i * 27 + 15;
-            }
-
-            ButtAddGood.Top = 15 + 27 * Items.Count;
-
-            label3.Top = ButtAddGood.Top + 7;
-            label4.Top = ButtAddGood.Top + 7;
-            LabelItogo.Top = ButtAddGood.Top + 7;
-            TxtPrice.Top = ButtAddGood.Top + 25;
-            TxtDeliveryPrice.Top = ButtAddGood.Top + 25;
-            TxtTotalPrice.Top = ButtAddGood.Top + 25;
-            Height = Items.Count * 27 + 65;
-            calc_total();
-        }
-        void delBox_Click(object sender, EventArgs e)
-        {
-            OrderItem itemToDel = ((OrderItem)((PictureBox)sender).Tag);
-            Controls.Remove(itemToDel);
-            Items.Remove(itemToDel);
-            Controls.Remove((PictureBox)sender);
-            DeletePics.Remove((PictureBox)sender);
-            rebuildeList();
-            if (onlistItemAdded != null)
-            {
-                onlistItemAdded();
-            }
-        }
-        public void removeItem(OrderItem item)
-        {
-            Controls.Remove(item);
-            Items.Remove(item);
-            Controls.Remove((PictureBox)item.Tag);
-            DeletePics.Remove((PictureBox)item.Tag);
-            rebuildeList();
-            if (onlistItemAdded != null)
-            {
-                onlistItemAdded();
-            }
-        }
+        
         public void calc_total()
         {
             int goodsPrice = 0;
@@ -167,10 +108,13 @@ namespace OwlBusinessStudio.Orders
                 onListSumChanged();
             }
         }
+
+        #region UI
+
         public void AddItem(int good_id, int quantity, string goodName, int goodPrice)
         {
             // Add control...
-            OrderItem item = new OrderItem(this,orderID);
+            OrderItem item = new OrderItem(this, orderID);
             //item.loadItem(good_id, quantity,goodName,goodPrice);
             item.Top = Items.Count * 27 + 15;
             item.Left = 0;
@@ -206,7 +150,7 @@ namespace OwlBusinessStudio.Orders
         public void AddItem()
         {
             // Add control...
-            OrderItem item = new OrderItem(this,orderID);
+            OrderItem item = new OrderItem(this, orderID);
             item.Top = Items.Count * 27 + 15;
             item.Left = 0;
             Items.Add(item);
@@ -246,41 +190,56 @@ namespace OwlBusinessStudio.Orders
             AddItem();
             calc_total();
             Items[Items.Count - 1].PicFind_Click(null, null);
-            if (onlistItemAdded!= null)
+            if (onlistItemAdded != null)
             {
                 onlistItemAdded();
             }
         }
-        string deliver_price_text = "0";
-
-        bool changedByHands = false;
-        private void TxtDeliveryPrice_KeyPress(object sender, KeyPressEventArgs e)
+        private void rebuildeList()
         {
-            changedByHands = true;
-        }
-
-        private void TxtDeliveryPrice_TextChanged(object sender, EventArgs e)
-        {
-            if (changedByHands)
+            for (int i = 0; i < Items.Count; i++)
             {
-                try
-                {
-                    if (TxtDeliveryPrice.Text == "")
-                    {
-                        TxtDeliveryPrice.Text = "0";
-                    }
-                    DeliverPrice = Int32.Parse(TxtDeliveryPrice.Text);
-                    deliver_price_text = DeliverPrice.ToString();
-                    lowCost = DeliverPrice;
-                    highCost = DeliverPrice;
-                    calc_total();
-                }
-                catch (Exception ex)
-                {
-                    TxtDeliveryPrice.Text = deliver_price_text;
-                }
-                changedByHands = false;
+                Items[i].Top = i * 27 + 15;
+                DeletePics[i].Top = i * 27 + 15;
+            }
+
+            ButtAddGood.Top = 15 + 27 * Items.Count;
+
+            label3.Top = ButtAddGood.Top + 7;
+            label4.Top = ButtAddGood.Top + 7;
+            LabelItogo.Top = ButtAddGood.Top + 7;
+            TxtPrice.Top = ButtAddGood.Top + 25;
+            TxtDeliveryPrice.Top = ButtAddGood.Top + 25;
+            TxtTotalPrice.Top = ButtAddGood.Top + 25;
+            Height = Items.Count * 27 + 65;
+            calc_total();
+        }
+        void delBox_Click(object sender, EventArgs e)
+        {
+            OrderItem itemToDel = ((OrderItem)((PictureBox)sender).Tag);
+            Controls.Remove(itemToDel);
+            Items.Remove(itemToDel);
+            Controls.Remove((PictureBox)sender);
+            DeletePics.Remove((PictureBox)sender);
+            rebuildeList();
+            if (onlistItemAdded != null)
+            {
+                onlistItemAdded();
             }
         }
+        public void removeItem(OrderItem item)
+        {
+            Controls.Remove(item);
+            Items.Remove(item);
+            Controls.Remove((PictureBox)item.Tag);
+            DeletePics.Remove((PictureBox)item.Tag);
+            rebuildeList();
+            if (onlistItemAdded != null)
+            {
+                onlistItemAdded();
+            }
+        }
+
+        #endregion
     }
 }
