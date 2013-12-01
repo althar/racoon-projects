@@ -50,13 +50,15 @@ public class UserProcessor
         ActionResult res = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
         return res;
     }
-    public static ActionResult registration(DBProcessor dbProc,HttpServletRequest request, HttpServletResponse response, String login,String password,HashMap<String,Object> parameters,String[] roles) throws SQLException
+    public static ActionResult registration(DBProcessor dbProc,HttpServletRequest request, HttpServletResponse response, HashMap<String,Object> parameters,String[] roles) throws SQLException
     {
         try
         {
+            String login  = request.getParameter("login");
+            String password  = request.getParameter("password");
             logout(request);
             // Check existence
-            DBRecord existent = dbProc.getRecord("SELECT id FROM "+userTableName+" WHERE "+loginColumnName+"='"+login.replace("'","")+"'");
+            DBRecord existent = dbProc.getRecord("SELECT id FROM \""+userTableName+"\" WHERE "+loginColumnName+"='"+login.replace("'","")+"'");
             if(existent!=null)
             {
                 return new ActionResult(ActionResult.REGISTRATION_FAILED_ALREADY_EXISTS);
@@ -65,7 +67,7 @@ public class UserProcessor
             parameters.put(loginColumnName,login);
             parameters.put(passwordColumnName,password);
             Long id = dbProc.executeInsert(userTableName,parameters);
-            DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + id);
+            DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM \"" + userTableName + "\" WHERE id=" + id);
             String sessionId = sessionRec.getStringValue("session_id");
 
             // Insert user roles
@@ -120,7 +122,7 @@ public class UserProcessor
                 }
                 else
                 {
-                    DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + u.getID());
+                    DBRecord sessionRec = dbProc.getRecord("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM \"" + userTableName + "\" WHERE id=" + u.getID());
                     sessionId = sessionRec.getStringValue("session_id");
                     UserSession s = new UserSession(8640000,u.getID(),sessionId);
                     sessions.put(sessionId,s);
@@ -171,7 +173,7 @@ public class UserProcessor
     //<editor-fold desc="Helpers">
     private static User getUser(Long id, DBProcessor dbProc) throws SQLException
     {
-        DBRecord rec = dbProc.getRecord("SELECT * FROM "+userTableName+" WHERE id=" + id);
+        DBRecord rec = dbProc.getRecord("SELECT * FROM \""+userTableName+"\" WHERE id=" + id);
         if(rec == null)
         {
             return null;
@@ -188,7 +190,7 @@ public class UserProcessor
     }
     private static User getUser(String login,String password, DBProcessor dbProc) throws SQLException
     {
-        DBRecord rec = dbProc.getRecord("SELECT * FROM "+userTableName+" WHERE "+loginColumnName+"='" + login.replace("'","") + "' AND "+passwordColumnName+"='" + password.replace("'","") + "'");
+        DBRecord rec = dbProc.getRecord("SELECT * FROM \""+userTableName+"\" WHERE "+loginColumnName+"='" + login.replace("'","") + "' AND "+passwordColumnName+"='" + password.replace("'","") + "'");
         if(rec == null)
         {
             return null;

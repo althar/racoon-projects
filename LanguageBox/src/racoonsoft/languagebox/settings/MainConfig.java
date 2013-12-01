@@ -54,12 +54,20 @@ public class MainConfig extends WebMvcConfigurerAdapter
 	}
     
     @Bean
-    public PostgresqlDataSource pgsqlDataSource() throws Exception
+    public PostgresqlDataSource pgsqlDataSource()
     {
-        System.out.println("Get data source - start: "+dbHost);
-        PostgresqlDataSource result = new PostgresqlDataSource(dbHost,dbName,5432,dbLogin,dbPassword,"org.postgresql.Driver","jdbc:postgresql:");
-        System.out.println("Get data source - success");
-        return result;
+        try
+        {
+            System.out.println("Get data source - start: "+dbHost);
+            PostgresqlDataSource result = new PostgresqlDataSource(dbHost,dbName,5432,dbLogin,dbPassword,"org.postgresql.Driver","jdbc:postgresql:");
+            System.out.println("Get data source - success");
+            return result;
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex.toString());
+            return null;
+        }
     }
 
     @Bean
@@ -73,6 +81,8 @@ public class MainConfig extends WebMvcConfigurerAdapter
         AccessInterceptor access = new AccessInterceptor();
         HistoryInterceptor history = new HistoryInterceptor();
         registry.addInterceptor(history).addPathPatterns("/**");
-        registry.addInterceptor(access).addPathPatterns("/**");
+        registry.addInterceptor(access).addPathPatterns("/service/**");
+        access.dbProc = pgsqlDataSource();
+        access.dbProc = pgsqlDataSource();
     }
 }

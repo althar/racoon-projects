@@ -38,8 +38,8 @@
                 <label>Тип Доставки:</label>
                 <select class="span12" id="delivery-group">
                 </select>
-                <%--<label>Тип Доставки:</label>--%>
-                <%--<select class="span12" id="delivery-variant">--%>
+                <label class="hidden">Тип Доставки:</label>
+                <select class="span12 hidden" id="delivery-variant">
                 </select>
                 <label>Почтовый индекс:</label>
                 <input type="text" class="span12" id="zip" value=""/>

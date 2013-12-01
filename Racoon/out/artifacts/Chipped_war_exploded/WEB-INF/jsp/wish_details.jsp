@@ -17,13 +17,12 @@
 						</p>
                     </div>
                     <div class="span5">
-                        ${description}
+                        ${good.description}
                         <p class="product-text">
                             <c:forEach var="characteristic" items="${characteristics}">
                                 ${characteristic.key} : ${characteristic.value}<br>
                             </c:forEach>
                         </p>
-
                         <p class="product-price">
                             <span class="price">${good.price},-</span><br/>
                             Цена с доставкой

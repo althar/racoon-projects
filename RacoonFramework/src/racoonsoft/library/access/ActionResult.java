@@ -24,24 +24,26 @@ public class ActionResult
     private ArrayList<String> events = new ArrayList<String>();
     private HashMap<String,Object> data = new HashMap<String, Object>();
 
-    public ActionResult(int result)
-    {
+    public ActionResult(int result) {
         this.result = result;
     }
-    public ActionResult(int result,String event)
-    {
+    public ActionResult(int result,String event) {
         this.result = result;
         this.events.add(event);
     }
-    public ActionResult(int result,String event,String dataName,Object data)
-    {
+    public ActionResult(int result,String event,String dataName,Object data) {
         this.result = result;
         this.events.add(event);
         this.data.put(dataName,data);
     }
 
-    public User getUser()
-    {
+    public boolean hasRole(String role) {
+        return getUser().hasRole(role);
+    }
+    public ArrayList<String> getRoles() {
+        return getUser().getRoles();
+    }
+    public User getUser() {
         try
         {
             return (User)data.get("user");
@@ -51,49 +53,40 @@ public class ActionResult
             return null;
         }
     }
-    public void setUser(User user)
-    {
+    public void setUser(User user) {
         setData("user",user);
     }
-    public int getResult()
-    {
+    public int getResult() {
         return result;
     }
-
+    public boolean anonymous() {
+        return getUser().isAnonymous();
+    }
     public void setResult(int result) {
         this.result = result;
     }
-
     public ArrayList<String> getEvents() {
         return events;
     }
-
     public void setEvents(ArrayList<String> events) {
         this.events = events;
     }
-    public void addEvent(String event)
-    {
+    public void addEvent(String event) {
         this.events.add(event);
     }
-
     public HashMap<String, Object> getData() {
         return data;
     }
-    public Object getData(String name)
-    {
+    public Object getData(String name) {
         return data.get(name);
     }
-
     public void setData(HashMap<String, Object> data) {
         this.data = data;
     }
-    public void setData(String dataName,Object data)
-    {
+    public void setData(String dataName,Object data) {
         this.data.put(dataName,data);
     }
-
-    public boolean success()
-    {
+    public boolean success() {
         return result>0;
     }
 }
