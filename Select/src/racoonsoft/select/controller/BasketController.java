@@ -117,7 +117,7 @@ public class BasketController
         {
             if(!dbProc.userExists(login))
             {
-                res = UserProcessor.registration(dbProc,request,response,login,password,new HashMap<String, Object>(),new String[]{"CLIENT"});
+                res = UserProcessor.registration(dbProc,request,response,new HashMap<String, Object>(),new String[]{"CLIENT"});
                 if(res.success())
                 {
                     response.getWriter().print(true);

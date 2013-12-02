@@ -51,4 +51,23 @@ public class StringHelper
         }
         return result;
     }
+
+    public static String getDomainByLevel(String domain, int level)
+    {
+        String[] domainParts = domain.split("\\.");
+        if(level<=domainParts.length)
+        {
+            StringBuilder builder = new StringBuilder();
+            for(int i=domainParts.length-level; i<domainParts.length; i++)
+            {
+                builder.append(domainParts[i]);
+                if(i<domainParts.length-1)
+                {
+                    builder.append(".");
+                }
+            }
+            return builder.toString();
+        }
+        return null;
+    }
 }

@@ -8,6 +8,7 @@ import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.library.access.ActionResult;
 import racoonsoft.library.access.User;
 import racoonsoft.library.access.UserProcessor;
+import racoonsoft.library.helper.StringHelper;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -61,15 +62,15 @@ public class LoginController
         String domain = new URL(request.getRequestURL().toString()).getHost();
         if(user.hasRole("TUTOR"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+domain+"/service/tutor");
+            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/tutor");
         }
         else if(user.hasRole("SCHOOL"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+domain+"/service/school");
+            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/school");
         }
         else if(user.hasRole("STUDENT"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+domain+"/service/student");
+            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
         }
         UserProcessor.logout(request);
         ModelAndView model = new ModelAndView("page/access");

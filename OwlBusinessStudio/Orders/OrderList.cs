@@ -54,19 +54,24 @@ namespace OwlBusinessStudio.Orders
         public void calc_total()
         {
             int goodsPrice = 0;
+            int totalDiscount = 0;
+            int deliveryPrice = 0;
+            int priceWithDiscount = 0;
+
+            // 1 - Calculate goods price
             for (int i = 0; i < Items.Count; i++)
             {
                 goodsPrice += (int)(Items[i].getSum());
             }
+            // 2 - Calculate delivery price
+
+            // 3 - Calculate total discount and price with discount
+            priceWithDiscount = goodsPrice - (int)(goodsPrice * ((totalDiscount) / 100.0));
+
+            // 4 - Fill controll with data
             TxtPrice.Text = goodsPrice.ToString();
-            int plusDisc = 0;
-            if (deliveryDistanceID == 0)
-            {
-                plusDisc = 3;
-            }
-            int priceWithDiscount = goodsPrice - (int)(goodsPrice * ((Discount + plusDisc) / 100.0));
-            TxtDeliveryPrice.Text = DeliverPrice.ToString();
-            TxtTotalPrice.Text = (DeliverPrice + priceWithDiscount).ToString();
+            TxtDeliveryPrice.Text = deliveryPrice.ToString();
+            TxtTotalPrice.Text = (deliveryPrice + priceWithDiscount).ToString();
         }
         void firstItem_onSumChanged()
         {
