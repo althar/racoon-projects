@@ -197,7 +197,7 @@ public class UserServlet extends BaseServlet {
                 if (user != null)
                 {
                     Basket b = Warehouse.getBasket(user.getID());
-                    Integer goods_price = 0;                                                                                                                                                                                 `
+                    Integer goods_price = 0;
                     int discount = 0;
                     Double deliver_price = 0.0;
                     boolean is_pickup = false;

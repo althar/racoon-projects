@@ -23,13 +23,17 @@ namespace OwlBusinessStudio.Orders
         public int DeliverPrice = 0;
         public string distance = "";
         private int orderID = 0;
+        private int clientID = 0;
 
         public OrderList(int order_id)
         {
             InitializeComponent();
             orderID = order_id;
         }
-
+        public int getDiscount()
+        {
+            return Discount;
+        }
         private void OrderList_Load(object sender, EventArgs e)
         {
 
@@ -44,13 +48,10 @@ namespace OwlBusinessStudio.Orders
             this.distance = distance;
             firstItem_onSumChanged();
         }
-        public void setDeliverPrice(int price)
+        public void setClientId(int id)
         {
-            deliverPriceSet = true;
-            DeliverPrice = price;
-            calc_total();
+            clientID = id;
         }
-        
         public void calc_total()
         {
             int goodsPrice = 0;
@@ -64,54 +65,36 @@ namespace OwlBusinessStudio.Orders
                 goodsPrice += (int)(Items[i].getSum());
             }
             // 2 - Calculate delivery price
-
+            DataTable deliveryPriceTab = MainForm.dbProc.executeGet("SELECT * FROM get_delivery_price('"+distance+"',CAST("+goodsPrice+" AS DOUBLE PRECISION))");
+            deliveryPrice = (int)((double)deliveryPriceTab.Rows[0]["delivery_price"]);
+            int pickupDiscount = 0;
+            if (!(deliveryPriceTab.Rows[0]["discount"] is DBNull))
+            {
+                pickupDiscount += (int)deliveryPriceTab.Rows[0]["discount"];
+            }
+            
             // 3 - Calculate total discount and price with discount
+            DataTable discountTab = MainForm.dbProc.executeGet("SELECT * FROM get_discount(CAST(" + goodsPrice + " AS DOUBLE PRECISION),"+clientID+","+pickupDiscount+")");
+            if (!(discountTab.Rows[0]["total_discount"] is DBNull))
+            {
+                totalDiscount = (int)((double)discountTab.Rows[0]["total_discount"]);
+            }
             priceWithDiscount = goodsPrice - (int)(goodsPrice * ((totalDiscount) / 100.0));
 
             // 4 - Fill controll with data
             TxtPrice.Text = goodsPrice.ToString();
             TxtDeliveryPrice.Text = deliveryPrice.ToString();
             TxtTotalPrice.Text = (deliveryPrice + priceWithDiscount).ToString();
-        }
-        void firstItem_onSumChanged()
-        {
-            int goodsPrice = 0;
-            for (int i = 0; i < Items.Count; i++)
-            {
-                goodsPrice += (int)(Items[i].getSum());
-            }
-            TxtPrice.Text = goodsPrice.ToString();
-            
-            
-            int plusDisc = 0;
-            if (deliveryDistanceID == 0)
-            {
-                plusDisc = 3;
-            }
-            int priceWithDiscount = goodsPrice-(int)(goodsPrice*((Discount+plusDisc)/100.0));
-            
-
-            // ---------------------------------- Deliver price using discount... 
-            if (!deliverPriceSet)
-            {
-                if (priceWithDiscount >= separator)
-                {
-                    TxtDeliveryPrice.Text = highCost.ToString();
-                    DeliverPrice = highCost;
-                }
-                else
-                {
-                    TxtDeliveryPrice.Text = lowCost.ToString();
-                    DeliverPrice = lowCost;
-                }
-            }
-            TxtTotalPrice.Text = (DeliverPrice + priceWithDiscount).ToString();
-
-
+            Discount = totalDiscount;
             if (onListSumChanged != null)
             {
                 onListSumChanged();
             }
+        }
+        void firstItem_onSumChanged()
+        {
+            calc_total();
+            
         }
 
         #region UI

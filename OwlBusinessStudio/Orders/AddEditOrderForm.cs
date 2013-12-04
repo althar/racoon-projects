@@ -91,7 +91,9 @@ namespace OwlBusinessStudio.Orders
             int delPrice = (int)order.Rows[0]["deliver_price"];
             TxtDescription.Text = order.Rows[0]["description"].ToString();
             ComboDelivery.Text = order.Rows[0]["deliver_distance"].ToString();
-            orderTable.setDeliverPrice((int)order.Rows[0]["deliver_price"]);
+            //orderTable.setDeliverPrice((int)order.Rows[0]["deliver_price"]);
+            orderTable.setDeliverDistance(ComboDelivery.Text);
+            orderTable.setClientId((int)clientID);
         }
         
         private void loadClient()
@@ -214,7 +216,13 @@ namespace OwlBusinessStudio.Orders
             orderList.Left = 10;
             orderTable = orderList;
             orderTable.onlistItemAdded += new OrderList.listItemAddedHandler(orderTable_onlistItemAdded);
+            orderTable.onListSumChanged += new OrderList.sumListChangedHandler(orderTable_onListSumChanged);
             loadStaticData();
+        }
+
+        void orderTable_onListSumChanged()
+        {
+            TxtDiscount.Text = orderTable.getDiscount().ToString();
         }
         private void loadClientAddress()
         {
@@ -541,7 +549,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("client_id", clientID);
                     if (ComboDelivery.SelectedValue != null)
                     {
-                        orderParams.Add("deliver", ComboDelivery.SelectedValue);
+                        orderParams.Add("deliver", !(bool)ComboDelivery.SelectedValue);
                     }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
@@ -631,7 +639,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("client_id", clientID);
                     if (ComboDelivery.SelectedValue != null)
                     {
-                        orderParams.Add("deliver", ComboDelivery.SelectedValue);
+                        orderParams.Add("deliver", !(bool)ComboDelivery.SelectedValue);
                     }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
@@ -723,10 +731,7 @@ namespace OwlBusinessStudio.Orders
         {
             try
             {
-                if (ComboDelivery.SelectedValue != null && ComboDelivery.SelectedValue is int)
-                {
-                    orderTable.setDeliverDistance(ComboDelivery.Text);
-                }
+                orderTable.setDeliverDistance(ComboDelivery.Text);                
             }
             catch (Exception ex)
             {
@@ -762,6 +767,7 @@ namespace OwlBusinessStudio.Orders
                 else
                 {
                     clientID = (int)clients_by_phone.Rows[0]["id"];
+                    orderTable.setClientId((int)clientID);
                     loadClient();
                 }
             }
@@ -789,7 +795,7 @@ namespace OwlBusinessStudio.Orders
 
         private void NumDeliveryPrice_ValueChanged(object sender, EventArgs e)
         {
-            orderTable.setDeliverPrice((int)NumDeliveryPrice.Value);
+            //orderTable.setDeliverPrice((int)NumDeliveryPrice.Value);
         }
     }
 }

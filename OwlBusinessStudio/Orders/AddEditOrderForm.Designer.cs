@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditOrderForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.CheckSecondDeliverTime = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.TxtPhone3 = new System.Windows.Forms.MaskedTextBox();
@@ -74,16 +76,11 @@
             this.ButtSaveOrder = new System.Windows.Forms.Button();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.NumDeliveryPrice = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumDeliveryPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.NumDeliveryPrice);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CheckSecondDeliverTime);
@@ -133,6 +130,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Клиент";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label17.Location = new System.Drawing.Point(584, 110);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 53;
+            this.label17.Text = "Доставка";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(870, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 13);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "%";
+            // 
             // CheckSecondDeliverTime
             // 
             this.CheckSecondDeliverTime.AutoSize = true;
@@ -166,7 +182,7 @@
             this.ComboDelivery.FormattingEnabled = true;
             this.ComboDelivery.Location = new System.Drawing.Point(646, 107);
             this.ComboDelivery.Name = "ComboDelivery";
-            this.ComboDelivery.Size = new System.Drawing.Size(193, 21);
+            this.ComboDelivery.Size = new System.Drawing.Size(218, 21);
             this.ComboDelivery.TabIndex = 48;
             this.ComboDelivery.SelectedValueChanged += new System.EventHandler(this.TxtDeliver_SelectedValueChanged);
             // 
@@ -242,7 +258,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(907, 110);
+            this.label16.Location = new System.Drawing.Point(870, 110);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(25, 13);
             this.label16.TabIndex = 34;
@@ -253,7 +269,8 @@
             this.TxtDiscount.BackColor = System.Drawing.SystemColors.Window;
             this.TxtDiscount.Location = new System.Drawing.Point(646, 137);
             this.TxtDiscount.Name = "TxtDiscount";
-            this.TxtDiscount.Size = new System.Drawing.Size(193, 20);
+            this.TxtDiscount.ReadOnly = true;
+            this.TxtDiscount.Size = new System.Drawing.Size(218, 20);
             this.TxtDiscount.TabIndex = 33;
             this.TxtDiscount.Text = "0";
             this.TxtDiscount.TextChanged += new System.EventHandler(this.TxtDiscount_TextChanged);
@@ -534,43 +551,6 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Примечание";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(845, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Руб";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label17.Location = new System.Drawing.Point(584, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 13);
-            this.label17.TabIndex = 53;
-            this.label17.Text = "Доставка";
-            // 
-            // NumDeliveryPrice
-            // 
-            this.NumDeliveryPrice.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.NumDeliveryPrice.Location = new System.Drawing.Point(845, 107);
-            this.NumDeliveryPrice.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.NumDeliveryPrice.Name = "NumDeliveryPrice";
-            this.NumDeliveryPrice.Size = new System.Drawing.Size(56, 20);
-            this.NumDeliveryPrice.TabIndex = 54;
-            this.NumDeliveryPrice.ValueChanged += new System.EventHandler(this.NumDeliveryPrice_ValueChanged);
-            // 
             // AddEditOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,7 +571,6 @@
             this.Shown += new System.EventHandler(this.AddEditOrderForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumDeliveryPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,7 +625,6 @@
         private System.Windows.Forms.CheckBox CheckSecondDeliverTime;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown NumDeliveryPrice;
 
     }
 }
