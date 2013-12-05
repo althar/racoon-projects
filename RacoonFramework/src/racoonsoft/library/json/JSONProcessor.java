@@ -6,6 +6,8 @@ import racoonsoft.library.xml.XMLProcessor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
@@ -97,8 +99,68 @@ public class JSONProcessor
 	{
 		return toXMLProcessor().toXMLString();
 	}
+    private String jsonValue(Object val)
+    {
+        StringBuilder builder = new StringBuilder();
+        if(val==null)
+        {
+            return "\"null\"";
+        }
+        if(val instanceof DBRecord)
+        {
+            val = ((DBRecord)val).Fields;
+        }
+        if(val instanceof HashMap)
+        {
+            builder.append("{");
+            Iterator<String> keyIter = ((HashMap<String,Object>)val).keySet().iterator();
+            while(keyIter.hasNext())
+            {
+                Object key = keyIter.next();
+                Object value = ((HashMap<String,Object>)val).get(key);
+                builder.append("\""+key+"\"");
+                builder.append(":");
+                builder.append(jsonValue(value));
+                if(keyIter.hasNext())
+                {
+                    builder.append(",");
+                }
+            }
+            builder.append("}");
+        }
+        else if(val instanceof List)
+        {
+            builder.append("[");
+            for(int i=0; i<((List)val).size(); i++)
+            {
+                builder.append(jsonValue(((List)val).get(i)));
+                if(i<((List)val).size()-1)
+                {
+                    builder.append(",");
+                }
+            }
+            builder.append("]");
+        }
+        else if(val instanceof Integer||val instanceof Long||val instanceof Double||val instanceof Boolean)
+        {
+            builder.append(val.toString());
+        }
+        else if(val instanceof String)
+        {
+            builder.append("\""+val.toString()+"\"");
+        }
+        else
+        {
+            builder.append("\""+val.toString()+"\"");
+        }
+        return builder.toString();
+    }
+    public String jsonString()
+    {
+        return jsonValue(getStructure());
+    }
     public String toJsonString()
     {
-        return new JSONObject(getStructure()).toString();
+        return jsonString();
     }
 }

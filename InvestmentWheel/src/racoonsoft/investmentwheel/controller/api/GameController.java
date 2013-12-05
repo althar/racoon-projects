@@ -28,7 +28,8 @@ public class GameController
         JSONProcessor json = new JSONProcessor(jsonMap);
 
         ModelAndView model = new ModelAndView("json");
-        model.addObject("json",json.toJsonString());
+        //model.addObject("json",json.toJsonString());
+        model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/add_game")
@@ -42,7 +43,7 @@ public class GameController
         JSONProcessor json = new JSONProcessor(jsonMap);
 
         ModelAndView model = new ModelAndView("json");
-        model.addObject("json",json.toJsonString());
+        model.addObject("json",json.jsonString());
         return model;
     }
 }
