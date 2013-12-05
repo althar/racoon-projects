@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="InvestmentWheel:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/InvestmentWheel_war_exploded2</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="InvestmentWheel/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="InvestmentWheel" />
+          <element id="module-output" name="RacoonFramework" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="spring-3.2.2" />
+          <element id="library" level="project" name="spring-mvc-3.2.2.RELEASE" />
+          <element id="file-copy" path="$PROJECT_DIR$/../RacoonFramework/lib/dbfEngine_bin-1.04.jar" />
+          <element id="library" level="project" name="org.json:json:20090211" />
+          <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
+          <element id="library" level="project" name="postgresql:postgresql:9.2-1002.jdbc4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

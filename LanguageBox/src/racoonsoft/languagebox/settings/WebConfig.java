@@ -18,7 +18,7 @@ import java.util.List;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "racoonsoft.select")
+@ComponentScan(basePackages = "racoonsoft.languagebox")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean

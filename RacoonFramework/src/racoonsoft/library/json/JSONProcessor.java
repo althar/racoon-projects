@@ -1,6 +1,7 @@
 package racoonsoft.library.json;
 
 import org.json.JSONObject;
+import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.xml.XMLProcessor;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,6 +49,10 @@ public class JSONProcessor
 			{
 				current_leaf = ((HashMap)current_leaf).get(leafs[i]);
 			}
+            else if(current_leaf instanceof DBRecord)// Object
+            {
+                current_leaf = ((DBRecord)current_leaf).Fields.get(leafs[i]);
+            }
 			else if(current_leaf instanceof ArrayList)
 			{
 				current_leaf = ((ArrayList)current_leaf).get(Integer.valueOf(leafs[i]));
