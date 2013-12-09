@@ -26,17 +26,21 @@ public class LoginController
     public ModelAndView registration(HttpServletRequest request, HttpServletResponse response,String school,String role,Boolean do_registration) throws Exception
     {
         HashMap<String,Object> params = new HashMap<String, Object>();
-        params.put("school",school);
+        if(school!=null)
+        {
+            params.put("school",school);
+        }
         String[] roles = new String[]{role};
         ActionResult res = UserProcessor.registration(dbProc,request,response,params,roles);
         if(res.success())
         {
-            User u = res.getUser();
-            String domain = new URL(request.getRequestURL().toString()).getHost();
-            return new ModelAndView("redirect:/http://"+school+"."+domain+"/service/"+role.toLowerCase());
+//            User u = res.getUser();
+//            String domain = new URL(request.getRequestURL().toString()).getHost();
+//            return new ModelAndView("redirect:/http://"+school+"."+domain+"/service/"+role.toLowerCase());
+            return new ModelAndView("redirect:/login");
         }
         ModelAndView model = new ModelAndView("page/access");
-        model.addObject("form","registration");
+        model.addObject("widget","registration");
         if(do_registration!=null)
         {
             model.addObject("error","Пользователь уже существует");
@@ -51,7 +55,7 @@ public class LoginController
         if(user.isAnonymous())
         {
             ModelAndView model = new ModelAndView("page/access");
-            model.addObject("form","login");
+            model.addObject("widget","login");
             if(do_login!=null)
             {
                 model.addObject("error","Неверный логин и пароль");
@@ -70,11 +74,11 @@ public class LoginController
         }
         else if(user.hasRole("STUDENT"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
+            return new ModelAndView("redirect:http://"+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
         }
         UserProcessor.logout(request);
         ModelAndView model = new ModelAndView("page/access");
-        model.addObject("form","login");
+        model.addObject("widget","login");
         model.addObject("error","Сбой при входе. Попробуйте еще раз.");
         return model;
     }

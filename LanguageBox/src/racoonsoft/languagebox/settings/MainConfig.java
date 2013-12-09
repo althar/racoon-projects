@@ -14,6 +14,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.languagebox.interceptor.AccessInterceptor;
 import racoonsoft.languagebox.interceptor.HistoryInterceptor;
+import racoonsoft.languagebox.service.CourseService;
+import racoonsoft.languagebox.service.LibraryService;
+import racoonsoft.languagebox.service.MarketService;
 import racoonsoft.library.sms.SMSProcessor;
 
 @Configuration
@@ -46,6 +49,22 @@ public class MainConfig extends WebMvcConfigurerAdapter
         pspc.setIgnoreUnresolvablePlaceholders( true );
         return pspc;
 	}
+
+//    @Bean
+//    public LibraryService libraryService()
+//    {
+//        return new LibraryService();
+//    }
+//    @Bean
+//    public MarketService marketService()
+//    {
+//        return new MarketService();
+//    }
+//    @Bean
+//    public CourseService courseService()
+//    {
+//        return new CourseService();
+//    }
 
 	@Bean
 	public ScheduledAnnotationBeanPostProcessor scheduledAnnotationBeanPostProcessor()

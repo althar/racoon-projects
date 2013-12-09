@@ -48,12 +48,13 @@ public class AccessInterceptor implements HandlerInterceptor
         User user = res.getUser();
         ArrayList<String> roles = res.getRoles();
         boolean anonymous = res.anonymous();
-
+        request.setAttribute("user_id",user.getID());
+        request.setAttribute("user",user);
+        request.setAttribute("roles",roles);
         if(anonymous// Anonymous
                 ||!user.getStringValue("school").equalsIgnoreCase(school) // Wrong school
-                ||(!res.hasRole("TUTOR")&&path.contains("/service/tutor")) // Not tutor tries to access tutor`s page
-                ||(!res.hasRole("STUDENT")&&path.contains("/service/student"))
-                ||(!res.hasRole("SCHOOL")&&path.contains("/service/school"))) // Not school tries to access school`s page
+                ||(!res.hasRole("TUTOR")&&!res.hasRole("SCHOOL")&&path.contains("/service/teacher")) // Not tutor and not school tries to access teacher`s page
+                ||(!res.hasRole("STUDENT")&&path.contains("/service/student"))) // Not school tries to access school`s page
         {
             response.sendRedirect("/page/no_access");
         }
