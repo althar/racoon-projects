@@ -199,6 +199,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
+            this.ButtAdv = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -305,7 +306,8 @@
             this.ButtGoodsHistory,
             this.ButtGenerateYandexXML,
             this.toolStripMenuItem7,
-            this.toolStripMenuItem11});
+            this.toolStripMenuItem11,
+            this.ButtAdv});
             this.ToolStripMenuAdministration.Name = "ToolStripMenuAdministration";
             this.ToolStripMenuAdministration.Size = new System.Drawing.Size(134, 20);
             this.ToolStripMenuAdministration.Text = "Администрирование";
@@ -1830,6 +1832,13 @@
             // 
             this.DialogSaveYandexXML.Filter = "Яндекс маркет XML|*.yml";
             // 
+            // ButtAdv
+            // 
+            this.ButtAdv.Name = "ButtAdv";
+            this.ButtAdv.Size = new System.Drawing.Size(301, 22);
+            this.ButtAdv.Text = "Рекламный блок";
+            this.ButtAdv.Click += new System.EventHandler(this.ButtAdv_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2061,6 +2070,7 @@
         private System.Windows.Forms.TextBox TxtPurchaseName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button ButtCreatePurchase;
+        private System.Windows.Forms.ToolStripMenuItem ButtAdv;
     }
 }
 

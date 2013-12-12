@@ -39,3 +39,4 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Mono.Sec
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.pdb
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.AdvForm.resources

@@ -9,6 +9,7 @@ import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.languagebox.service.CourseService;
 import racoonsoft.languagebox.service.LibraryService;
 import racoonsoft.languagebox.service.MarketService;
+import racoonsoft.languagebox.service.StudentService;
 import racoonsoft.library.database.DBRecord;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +32,10 @@ public class TeacherController extends LanguageBoxController
     @Autowired
     private MarketService market;
 
-    //<editor-fold desc="Main page">
+    @Autowired
+    private StudentService student;
+
+    //<editor-fold desc="Page">
     @RequestMapping("/main")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
@@ -41,6 +45,30 @@ public class TeacherController extends LanguageBoxController
         ArrayList<DBRecord> sells = market.getTeacherSells(user_id);
         model.addObject("courses",courses);
         model.addObject("sells",sells);
+        return model;
+    }
+    @RequestMapping("/courses")
+    public ModelAndView courses(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/teacher/courses");
+        Long user_id = id(request);
+
+        return model;
+    }
+    @RequestMapping("/students")
+    public ModelAndView students(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/teacher/students");
+        Long user_id = id(request);
+
+        return model;
+    }
+    @RequestMapping("/profile")
+    public ModelAndView profile(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/teacher/profile");
+        Long user_id = id(request);
+
         return model;
     }
     //</editor-fold>

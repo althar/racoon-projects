@@ -165,6 +165,22 @@ namespace FTwoFramework.DB
             t.TableName = tableName;
             return t;
         }
+        public long setSetting(string name, string value)
+        {
+            delete("settings", "name='" + name + "'");
+            Hashtable tab = new Hashtable();
+            tab.Add("name",name);
+            tab.Add("value",value);
+            return insert("settings",tab);
+        }
+        public long setContent(string name, string value)
+        {
+            delete("content", "name='" + name + "'");
+            Hashtable tab = new Hashtable();
+            tab.Add("name", name);
+            tab.Add("value", value);
+            return insert("content", tab);
+        }
         public long insert(string tableName, Hashtable parameters)
         {
             connect();

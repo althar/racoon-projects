@@ -1,9 +1,11 @@
 package racoonsoft.investmentwheel.game.structure;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import racoonsoft.investmentwheel.database.PostgresqlDataSource;
+import racoonsoft.investmentwheel.game.structure.enums.GameMode;
+import racoonsoft.investmentwheel.game.structure.enums.StatusCode;
+import racoonsoft.library.json.JSONProcessor;
 
 import java.util.HashMap;
 
@@ -29,11 +31,101 @@ public class GameWorld
         return games;
     }
 
-    public Long createGame(String name, GameMode mode) throws Exception
+    public JSONProcessor createGame(String name, GameMode mode) throws Exception
     {
         Long id = dbProc.createGame(name,mode);
         Game game = new Game(id,mode,name);
         games.put(id,game);
-        return id;
+        StatusCode statusCode = StatusCode.SUCCESS;
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("game_id", id);
+        jsonMap.put("games", getGames());
+        jsonMap.put("status_code", statusCode);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
+    }
+    public JSONProcessor getGame(Long id) throws Exception
+    {
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("games", getGames());
+        jsonMap.put("status_code", StatusCode.SUCCESS);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
+    }
+    public JSONProcessor setupGame(Long game_id,HashMap<String,Object> params) throws Exception
+    {
+        Game g = games.get(game_id);
+        StatusCode statusCode = StatusCode.SUCCESS;
+        if(g==null)
+        {
+            statusCode=StatusCode.NO_SUCH_GAME;
+        }
+        else
+        {
+            statusCode = g.setup(params);
+        }
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("status_code", statusCode);
+        jsonMap.put("game", g);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
+    }
+    public JSONProcessor startGame(Long game_id) throws Exception
+    {
+        Game g = games.get(game_id);
+        StatusCode statusCode = StatusCode.SUCCESS;
+        if(g==null)
+        {
+            statusCode=StatusCode.NO_SUCH_GAME;
+        }
+        else
+        {
+            statusCode = g.start();
+        }
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("status_code", statusCode);
+        jsonMap.put("game", g);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
+    }
+    public JSONProcessor joinGame(Long game_id,Player player) throws Exception
+    {
+        Game g = games.get(game_id);
+        StatusCode statusCode = StatusCode.SUCCESS;
+        if(g==null)
+        {
+            statusCode=StatusCode.NO_SUCH_GAME;
+        }
+        else if(player==null)
+        {
+            statusCode=StatusCode.NO_SUCH_USER;
+        }
+        else
+        {
+            statusCode = g.addPlayer(player);
+        }
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("status_code", statusCode);
+        jsonMap.put("game", g);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
+    }
+    public JSONProcessor turnGame(Long game_id) throws Exception
+    {
+        Game g = games.get(game_id);
+        StatusCode statusCode = StatusCode.SUCCESS;
+        if(g==null)
+        {
+            statusCode=StatusCode.NO_SUCH_GAME;
+        }
+        else
+        {
+            statusCode = g.turn();
+        }
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        jsonMap.put("status_code", statusCode);
+        jsonMap.put("game", g);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        return json;
     }
 }

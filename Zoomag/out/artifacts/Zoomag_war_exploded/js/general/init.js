@@ -590,6 +590,10 @@ function loadContent() {
 
                     var name = $("name", item).text();
                     var value = $("value", item).text();
+                    if(name=="banner_script")
+                    {
+                        eval(value);
+                    }
                     $("[content_name=\"" + name + "\"]").html(value);
                     index++;
                 }

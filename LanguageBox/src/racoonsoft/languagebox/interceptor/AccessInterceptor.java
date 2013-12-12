@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 @Controller
-public class AccessInterceptor implements HandlerInterceptor
+public class AccessInterceptor extends LanguageBoxInterceptor
 {
     @Autowired
     public PostgresqlDataSource dbProc;
@@ -41,8 +41,6 @@ public class AccessInterceptor implements HandlerInterceptor
 
     public void checkAccess(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        String domain = new URL(request.getRequestURL().toString()).getHost();
-        String school = domain.split("\\.")[0];
         String path = request.getServletPath();
         ActionResult res = UserProcessor.authorization(request,response,dbProc);
         User user = res.getUser();
@@ -51,8 +49,10 @@ public class AccessInterceptor implements HandlerInterceptor
         request.setAttribute("user_id",user.getID());
         request.setAttribute("user",user);
         request.setAttribute("roles",roles);
+        request.setAttribute("school",school(request));
+        request.setAttribute("roles",roles);
         if(anonymous// Anonymous
-                ||!user.getStringValue("school").equalsIgnoreCase(school) // Wrong school
+                ||!user.getStringValue("school").equalsIgnoreCase(school(request)) // Wrong school
                 ||(!res.hasRole("TUTOR")&&!res.hasRole("SCHOOL")&&path.contains("/service/teacher")) // Not tutor and not school tries to access teacher`s page
                 ||(!res.hasRole("STUDENT")&&path.contains("/service/student"))) // Not school tries to access school`s page
         {

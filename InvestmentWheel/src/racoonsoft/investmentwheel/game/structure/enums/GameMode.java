@@ -1,4 +1,4 @@
-package racoonsoft.investmentwheel.game.structure;
+package racoonsoft.investmentwheel.game.structure.enums;
 
 public enum GameMode
 {

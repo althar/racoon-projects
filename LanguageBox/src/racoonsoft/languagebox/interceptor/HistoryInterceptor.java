@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-public class HistoryInterceptor implements HandlerInterceptor
+public class HistoryInterceptor extends LanguageBoxInterceptor
 {
     @Autowired
     private PostgresqlDataSource dbProc;

@@ -1,10 +1,9 @@
 package racoonsoft.investmentwheel.database;
 
-import racoonsoft.investmentwheel.game.structure.GameMode;
+import racoonsoft.investmentwheel.game.structure.enums.GameMode;
 import racoonsoft.library.database.DBProcessor;
-import racoonsoft.library.database.DBRecord;
+
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 

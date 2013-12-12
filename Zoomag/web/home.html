@@ -7,6 +7,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css' />
 <script type="text/javascript" src="js/jquery/jquery.js"></script>
+<script type="text/javascript" src="js/jquery/slides.js"></script>
 <script type="text/javascript" src="js/jquery/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery/jquery.timer.js"></script>
 <script type="text/javascript" src="js/general/init.js"></script>
@@ -15,6 +16,72 @@
 <script type="text/javascript" src="js/logic/home.js"></script>
     <script type="text/javascript" src="js/framework/masks.js"></script>
 <title>ZooMag — интернет-магазин товаров для животных</title>
+    <style>
+
+        #slides {
+            display: none
+        }
+
+        #slides .slidesjs-navigation {
+            margin-top:3px;
+        }
+
+        #slides .slidesjs-previous {
+            font-family: FontAwesome;
+            margin-right: 5px;
+            float: left;
+        }
+
+        #slides .slidesjs-next {
+            margin-right: 5px;
+            float: left;
+        }
+
+        .slidesjs-pagination {
+            margin: 6px 0 0;
+            float: right;
+            list-style: none;
+        }
+
+        .slidesjs-pagination li {
+            float: left;
+            margin: 0 1px;
+        }
+
+        .slidesjs-pagination li a {
+            display: block;
+            width: 13px;
+            height: 0;
+            padding-top: 13px;
+            background-image: url('http://www.slidesjs.com/img/pagination.png');
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+        }
+
+        .slidesjs-pagination li a.active,
+        .slidesjs-pagination li a:hover.active {
+            background-position: 0 -13px
+        }
+
+        .slidesjs-pagination li a:hover {
+            background-position: 0 -26px
+        }
+
+        #slides a:link,
+        #slides a:visited {
+            color: #333
+        }
+
+        #slides a:hover,
+        #slides a:active {
+            color: #9e2020
+        }
+
+        .navbar {
+            overflow: hidden
+        }
+    </style>
 </head>
 <body>
 
@@ -22,9 +89,22 @@
 <div class="header">
 	<div class="padding_rl_main">
 		<div class="container">
-			<div class="col25 logo pointer" id="logo_div">
-				<div class="padding_rl10"> <img src="img/gui/logo.gif" alt="ZooMag" /> </div>
+			<div class="col25 logo pointer">
+				<div class="padding_rl10" id="logo_div"> <img src="img/gui/logo.gif" alt="ZooMag" /> </div>
+                <div class="padding">
+                    <input type="text" class="input_s corners_15" id="search_input"/>
+                    <button class="btn_act search-butt" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>
+                </div>
+
 			</div>
+            <!--<div class="col25 search">-->
+                <!--<div class="padding_rl10">-->
+                    <!--<div class="padding">-->
+                        <!--<input type="text" class="input_s corners_15" id="search_input"/>-->
+                    <!--</div>-->
+                    <!--<button class="btn_act" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>-->
+                <!--</div>-->
+            <!--</div>-->
 			<div class="col50 contacts">
 				<div class="padding_rl10">
 					<p class="phone" content_name="phone"><span class="prefix" >(495)</span>514-55-89</p>
@@ -60,35 +140,20 @@
 <div class="content hidden" id="content_div">
 	<div class="padding_rl_main">
 
-		<!-- brands -->
-		<div class="home_brands">
-			<a class="arrow_l" id="brands_prev"><img src="img/gui/brands_arrow_l.gif" alt="" /></a>
-			<a class="arrow_r" id="brands_next"><img src="img/gui/brands_arrow_r.gif" alt="" /></a>
-			<div class="container" id="brand_container" page="1" brand_count="5">
-				<div class="item hidden"> <img src="img/gui/brand-royalcanin.gif" />
-					<div class="nav_wrap">
-						<div class="nav home_brands_nav_3col shadow_10 corners_10" id="brand_menu">
-							<div class="arrow"><img src="img/gui/brands_nav_arrow.png" alt="" /></div>
-							<div class="padding_rl10" >
-								<div class="col">
-									<div class="padding_rl10"> <img src="img/gui/icon_dog.gif" alt="" /> <a href="1">Сухой корм</a> <a href="2">Влажный корм</a> <a href="3">Лакомства</a> <a href="4">Диетическое питание</a> </div>
-								</div>
-								<div class="col">
-									<div class="padding_rl10"> <img src="img/gui/icon_cat.gif" alt="" /> <a href="5">Сухой корм</a> <a href="6">Влажный корм</a> <a href="7">Лакомства</a> <a href="8">Диетическое питание</a> <a href="9">Наполнители для&nbsp;туалета</a> </div>
-								</div>
-								<div class="col">
-									<div class="padding_rl10"> <img src="img/gui/icon_elephant.gif" alt="" /> <a href="5">Сухой корм</a> <a href="6">Влажный корм</a> <a href="7">Лакомства</a> <a href="8">Диетическое питание</a> <a href="9">Наполнители для&nbsp;туалета</a> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item"><img src="img/gui/brand-hills.gif" /></div>
-				<div class="item"><img src="img/gui/brand-eukanuba.gif" /></div>
-				<div class="item"><img src="img/gui/brand-proplan.gif" /></div>
-				<div class="item"><img src="img/gui/brand-happydog.gif" /></div>
-			</div>
-		</div>
+        <!-- news -->
+        <div class="news">
+            <div class="padding_rl10">
+                <div class="bg">
+                    <div class="item">
+                        <div class="bg_left"></div>
+                        <div class="bg_right"></div>
+                        <div class="hidden" content_name="banner_script"></div>
+                        <div id="banner_place" content_name="banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<!-- navigation -->
 		<div class="home_nav">
@@ -123,19 +188,36 @@
 			</div>
 		</div>
 		
-		<!-- news -->
-		<div class="news">
-			<div class="padding_rl10">
-				<div class="bg">
-					<div class="item">
-						<div class="bg_left"></div>
-						<div class="bg_right"></div>
-						<div id="banner_place" content_name="banner">Третий пересадочный контур московского метрополитена протяженностью 42 километра планируется построить до 2020 года, сообщил в среду заместитель мэра по вопросам градостроительной политики и строительства Марат Хуснуллин.</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+
+        <!-- brands -->
+        <div class="home_brands">
+            <a class="arrow_l" id="brands_prev"><img src="img/gui/brands_arrow_l.gif" alt="" /></a>
+            <a class="arrow_r" id="brands_next"><img src="img/gui/brands_arrow_r.gif" alt="" /></a>
+            <div class="container" id="brand_container" page="1" brand_count="5">
+                <div class="item hidden"> <img src="img/gui/brand-royalcanin.gif" />
+                    <div class="nav_wrap">
+                        <div class="nav home_brands_nav_3col shadow_10 corners_10" id="brand_menu">
+                            <div class="arrow"><img src="img/gui/brands_nav_arrow.png" alt="" /></div>
+                            <div class="padding_rl10" >
+                                <div class="col">
+                                    <div class="padding_rl10"> <img src="img/gui/icon_dog.gif" alt="" /> <a href="1">Сухой корм</a> <a href="2">Влажный корм</a> <a href="3">Лакомства</a> <a href="4">Диетическое питание</a> </div>
+                                </div>
+                                <div class="col">
+                                    <div class="padding_rl10"> <img src="img/gui/icon_cat.gif" alt="" /> <a href="5">Сухой корм</a> <a href="6">Влажный корм</a> <a href="7">Лакомства</a> <a href="8">Диетическое питание</a> <a href="9">Наполнители для&nbsp;туалета</a> </div>
+                                </div>
+                                <div class="col">
+                                    <div class="padding_rl10"> <img src="img/gui/icon_elephant.gif" alt="" /> <a href="5">Сухой корм</a> <a href="6">Влажный корм</a> <a href="7">Лакомства</a> <a href="8">Диетическое питание</a> <a href="9">Наполнители для&nbsp;туалета</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item"><img src="img/gui/brand-hills.gif" /></div>
+                <div class="item"><img src="img/gui/brand-eukanuba.gif" /></div>
+                <div class="item"><img src="img/gui/brand-proplan.gif" /></div>
+                <div class="item"><img src="img/gui/brand-happydog.gif" /></div>
+            </div>
+        </div>
 	</div>
 </div>
 
@@ -156,18 +238,18 @@
             <div class="col25 info">
                 <div class="padding_rl10"> Разработка сайта — F2 </div>
             </div>
-            <div class="col25 search">
-                <div class="padding_rl10">
-                    <div class="padding">
-                        <input type="text" class="input_s corners_15" id="search_input"/>
-                    </div>
-                    <button class="btn_act" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>
-                </div>
-            </div>
+            <!--<div class="col25 search">-->
+                <!--<div class="padding_rl10">-->
+                    <!--<div class="padding">-->
+                        <!--<input type="text" class="input_s corners_15" id="search_input"/>-->
+                    <!--</div>-->
+                    <!--<button class="btn_act" id="search_butt"><img src="img/gui/icon_search_arrow_s.gif" alt="" /></button>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
     <!--LiveInternet counter--><script type="text/javascript"><!--
-document.write("<a href='http://www.liveinternet.ru/click' "+
+    document.write("<a href='http://www.liveinternet.ru/click' "+
         "target=_blank><img style='display: none;' src='//counter.yadro.ru/hit?t26.6;r"+
         escape(document.referrer)+((typeof(screen)=="undefined")?"":
         ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?

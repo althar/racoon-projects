@@ -393,14 +393,14 @@ span.rur {
 	height: 100%;
 	position: absolute;
 	top: 0; left: 0; bottom: 0;
-	background: url('../img/gui/news_l_bg.png') top left no-repeat;
+	/*background: url('../img/gui/news_l_bg.png') top left no-repeat;*/
 }
 .news .item .bg_right {
 	width: 6px;
 	height: 100%;
 	position: absolute;
 	top: 0; right: 0; bottom: 0;
-	background: url('../img/gui/news_r_bg.png') top right no-repeat;
+	/*background: url('../img/gui/news_r_bg.png') top right no-repeat;*/
 }
 
 
@@ -1423,6 +1423,14 @@ span.rur {
 	margin: 0;
 	border-radius: 15px;
 	cursor: pointer;
+}
+.search-butt
+{
+    width: 23px;
+    height: 23px;
+    margin: 0;
+    border-radius: 15px;
+    cursor: pointer;
 }
 button.btn_act {
 	background: #e2e2e2;

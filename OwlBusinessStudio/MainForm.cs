@@ -2689,5 +2689,12 @@ namespace OwlBusinessStudio
             f.Visible = true;
             PanelAddPurchase.Visible = false;
         }
+
+        private void ButtAdv_Click(object sender, EventArgs e)
+        {
+            Settings.AdvForm form = new Settings.AdvForm();
+            form.Activate();
+            form.Visible = true;
+        }
     }
 }

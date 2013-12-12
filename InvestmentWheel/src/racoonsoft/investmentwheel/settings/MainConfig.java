@@ -74,6 +74,11 @@ public class MainConfig extends WebMvcConfigurerAdapter
     }
 
     @Bean
+    public GameWorld gameWorld()
+    {
+        return GameWorld.instance();
+    }
+    @Bean
     public SMSProcessor smsService()
     {
         return new SMSProcessor(smsLogin,smsPassword);
