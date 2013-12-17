@@ -5,33 +5,33 @@ import java.util.HashMap;
 
 public class ActionResult
 {
-    public static int ACTION_SUCCESSFUL = 9000;
+//    public static int ACTION_SUCCESSFUL = 9000;
+//
+//    public static int REGISTRATION_SUCCESSFUL = 1000;
+//    public static int REGISTRATION_FAILED_ALREADY_EXISTS = -1001;
+//    public static int REGISTRATION_FAILED_LACK_OF_DATA = -1002;
+//    public static int REGISTRATION_FAILED_UNKNOWN = -1003;
+//
+//    public static int AUTHORIZATION_SUCCESSFUL = 2000;
+//    public static int AUTHORIZATION_FAILED_NO_AUTHORIZATION_DATA = -2001;
+//    public static int AUTHORIZATION_FAILED_WRONG_SESSION_ID = -2002;
+//    public static int AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD = -2003;
+//    public static int AUTHORIZATION_FAILED_NO_SUCH_USER = -2004;
+//    public static int AUTHORIZATION_FAILED_UNKNOWN = -2005;
 
-    public static int REGISTRATION_SUCCESSFUL = 1000;
-    public static int REGISTRATION_FAILED_ALREADY_EXISTS = -1001;
-    public static int REGISTRATION_FAILED_LACK_OF_DATA = -1002;
-    public static int REGISTRATION_FAILED_UNKNOWN = -1003;
 
-    public static int AUTHORIZATION_SUCCESSFUL = 2000;
-    public static int AUTHORIZATION_FAILED_NO_AUTHORIZATION_DATA = -2001;
-    public static int AUTHORIZATION_FAILED_WRONG_SESSION_ID = -2002;
-    public static int AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD = -2003;
-    public static int AUTHORIZATION_FAILED_NO_SUCH_USER = -2004;
-    public static int AUTHORIZATION_FAILED_UNKNOWN = -2005;
-
-
-    private int result;
+    private ActionResultCode result;
     private ArrayList<String> events = new ArrayList<String>();
     private HashMap<String,Object> data = new HashMap<String, Object>();
 
-    public ActionResult(int result) {
+    public ActionResult(ActionResultCode result) {
         this.result = result;
     }
-    public ActionResult(int result,String event) {
+    public ActionResult(ActionResultCode result,String event) {
         this.result = result;
         this.events.add(event);
     }
-    public ActionResult(int result,String event,String dataName,Object data) {
+    public ActionResult(ActionResultCode result,String event,String dataName,Object data) {
         this.result = result;
         this.events.add(event);
         this.data.put(dataName,data);
@@ -56,13 +56,17 @@ public class ActionResult
     public void setUser(User user) {
         setData("user",user);
     }
-    public int getResult() {
+    public ActionResultCode getResult() {
         return result;
     }
     public boolean anonymous() {
+        if(getUser()==null)
+        {
+            return true;
+        }
         return getUser().isAnonymous();
     }
-    public void setResult(int result) {
+    public void setResult(ActionResultCode result) {
         this.result = result;
     }
     public ArrayList<String> getEvents() {
@@ -87,6 +91,6 @@ public class ActionResult
         this.data.put(dataName,data);
     }
     public boolean success() {
-        return result>0;
+        return (result==ActionResultCode.ACTION_SUCCESSFUL||result==ActionResultCode.AUTHORIZATION_SUCCESSFUL||result==ActionResultCode.REGISTRATION_SUCCESSFUL);
     }
 }

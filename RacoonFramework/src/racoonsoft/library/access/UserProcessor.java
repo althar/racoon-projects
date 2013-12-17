@@ -14,7 +14,6 @@ import java.util.*;
 
 public class UserProcessor
 {
-    private static Integer sessionIdSeed = 0;
     private static HashMap<String,UserSession> sessions = new HashMap<String, UserSession>();
     private static String loginColumnName = "login";
     private static String passwordColumnName = "password";
@@ -47,7 +46,7 @@ public class UserProcessor
     {
         String sessionId = getCookie(request,"session_id");
         sessions.remove(sessionId);
-        ActionResult res = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
+        ActionResult res = new ActionResult(ActionResultCode.ACTION_SUCCESSFUL);
         return res;
     }
     public static ActionResult registration(DBProcessor dbProc,HttpServletRequest request, HttpServletResponse response, HashMap<String,Object> parameters,String[] roles) throws SQLException
@@ -61,7 +60,7 @@ public class UserProcessor
             DBRecord existent = dbProc.getRecord("SELECT id FROM "+userTableName+" WHERE "+loginColumnName+"='"+login.replace("'","")+"'");
             if(existent!=null)
             {
-                return new ActionResult(ActionResult.REGISTRATION_FAILED_ALREADY_EXISTS);
+                return new ActionResult(ActionResultCode.REGISTRATION_FAILED_ALREADY_EXISTS);
             }
             // Insert user
             parameters.put(loginColumnName,login);
@@ -73,6 +72,10 @@ public class UserProcessor
             // Insert user roles
             for(String role:roles)
             {
+                if(role==null)
+                {
+                    return new ActionResult(ActionResultCode.REGISTRATION_FAILED_LACK_OF_DATA);
+                }
                 dbProc.executeNonQuery("INSERT INTO user_role (user_id,role) VALUES ("+id+",'"+role.replace("'","")+"')");
             }
 
@@ -88,14 +91,14 @@ public class UserProcessor
             User u = getUser(id,dbProc);
 
             // Return result
-            ActionResult res = new ActionResult(ActionResult.REGISTRATION_SUCCESSFUL);
+            ActionResult res = new ActionResult(ActionResultCode.REGISTRATION_SUCCESSFUL);
             res.setData("sessionId",sessionId);
             res.setUser(u);
             return res;
         }
         catch(Exception ex)
         {
-            ActionResult res = new ActionResult(ActionResult.REGISTRATION_FAILED_UNKNOWN);
+            ActionResult res = new ActionResult(ActionResultCode.REGISTRATION_FAILED_UNKNOWN);
             res.addEvent("exception");
             res.setData("exception",Helper.getStackTraceString(ex));
             return res;
@@ -105,10 +108,14 @@ public class UserProcessor
     {
         try
         {
-            ActionResult result = new ActionResult(ActionResult.AUTHORIZATION_SUCCESSFUL);
+            ActionResult result = new ActionResult(ActionResultCode.AUTHORIZATION_SUCCESSFUL);
             String sessionId = getCookie(request,"session_id");
             String login = request.getParameter("login");
             String password = request.getParameter("password");
+            if(sessionId==null&&request.getParameter("session_id")!=null)
+            {
+                sessionId = request.getParameter("session_id");
+            }
 
             // Auth by login & password
             if(login!=null&&password!=null)
@@ -118,7 +125,7 @@ public class UserProcessor
                 UserSession session = sessions.get(sessionId);
                 if(u==null)
                 {
-                    result = new ActionResult(ActionResult.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
+                    result = new ActionResult(ActionResultCode.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
                 }
                 else
                 {
@@ -128,6 +135,7 @@ public class UserProcessor
                     sessions.put(sessionId,s);
                     setCookie(response,"session_id",sessionId,8640000);
                     result.setUser(u);
+                    result.setData("session_id",sessionId);
                 }
                 return result;
             }
@@ -151,10 +159,12 @@ public class UserProcessor
                     cleanSessions();
                     sessions.put(sessionId,session);
                     result.setUser(anonymous);
+                    result.setData("session_id",sessionId);
                 }
                 else
                 {
                     User u = getUser(session.getUserId(),dbProc);
+                    result.setData("session_id",sessionId);
                     result.setUser(u);
                 }
                 return result;
@@ -162,7 +172,7 @@ public class UserProcessor
         }
         catch(Exception ex)
         {
-            ActionResult res = new ActionResult(ActionResult.AUTHORIZATION_FAILED_UNKNOWN);
+            ActionResult res = new ActionResult(ActionResultCode.AUTHORIZATION_FAILED_UNKNOWN);
             res.addEvent("exception");
             res.setData("exception",Helper.getStackTraceString(ex));
             return res;

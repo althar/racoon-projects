@@ -4,6 +4,7 @@ package racoonsoft.select.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import racoonsoft.library.access.ActionResult;
+import racoonsoft.library.access.ActionResultCode;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.database.DBTable;
 import racoonsoft.select.database.PGSQLDataSource;
@@ -31,7 +32,7 @@ public class AerseService
 
     public ActionResult extractCharacteristics() throws SQLException
     {
-        ActionResult res = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
+        ActionResult res = new ActionResult(ActionResultCode.ACTION_SUCCESSFUL);
 //        Integer successCount = 0;
 //        Integer failureCount = 0;
 //        ArrayList<String> failureGoods = new ArrayList<String>();
@@ -81,7 +82,7 @@ public class AerseService
     }
     public ActionResult extractImages() throws SQLException
     {
-        ActionResult res = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
+        ActionResult res = new ActionResult(ActionResultCode.ACTION_SUCCESSFUL);
 //        Integer successCount = 0;
 //        Integer failureCount = 0;
 //        ArrayList<String> failureGoods = new ArrayList<String>();

@@ -3,6 +3,7 @@ package racoonsoft.select.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import racoonsoft.library.access.ActionResult;
+import racoonsoft.library.access.ActionResultCode;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.helper.StringHelper;
 import racoonsoft.library.http.HTTPClient;
@@ -30,7 +31,7 @@ public class GoodFindService
     {
         int success = 0;
         int failure = 0;
-        ActionResult result = new ActionResult(ActionResult.ACTION_SUCCESSFUL);
+        ActionResult result = new ActionResult(ActionResultCode.ACTION_SUCCESSFUL);
         int[][] waterprint = new int[104][37];
         int[][] waterprint_small = new int[89][14];
         BufferedImage water_img = ImageIO.read(new File("C://materials/select-waterprint.png"));

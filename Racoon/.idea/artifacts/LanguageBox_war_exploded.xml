@@ -16,6 +16,12 @@
           <element id="library" level="project" name="org.json:json:20090211" />
           <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
           <element id="library" level="project" name="postgresql:postgresql:9.2-1002.jdbc4" />
+          <element id="library" level="project" name="spring-ws-2.0.2" />
+          <element id="library" level="project" name="spring-webflow-2.3.2" />
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="spring-batch-2.1.9" />
+          <element id="library" level="project" name="spring-data-jpa-1.0.0" />
+          <element id="library" level="project" name="spring-integration-2.2.3" />
         </element>
       </element>
     </root>

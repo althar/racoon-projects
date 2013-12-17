@@ -30,7 +30,7 @@ public class StudentController extends LanguageBoxController
     @RequestMapping("/main")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        ModelAndView model = new ModelAndView("page/teacher/main");
+        ModelAndView model = new ModelAndView("page/student/main");
         Long user_id = id(request);
         ArrayList<DBRecord> courses = course.getTeacherCourses(user_id);
         ArrayList<DBRecord> sells = market.getTeacherSells(user_id);

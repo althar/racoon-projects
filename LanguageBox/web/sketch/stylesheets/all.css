@@ -1,0 +1,1203 @@
+/* Grid HTML Classes */
+/* line 106, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1; }
+  /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+  .row:after {
+    clear: both; }
+  /* line 110, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .column,
+  .row .columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    float: left; }
+  /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row.collapse .column,
+  .row.collapse .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+  /* line 117, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .row {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1; }
+    /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+    .row .row:after {
+      clear: both; }
+    /* line 118, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+    .row .row.collapse {
+      width: auto;
+      margin: 0;
+      max-width: none;
+      *zoom: 1; }
+      /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+      .row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table; }
+      /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+      .row .row.collapse:after {
+        clear: both; }
+
+@media only screen {
+  /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .column,
+  .row .columns {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-1 {
+    position: relative;
+    width: 8.33333%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-2 {
+    position: relative;
+    width: 16.66667%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-3 {
+    position: relative;
+    width: 25%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-4 {
+    position: relative;
+    width: 33.33333%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-5 {
+    position: relative;
+    width: 41.66667%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-6 {
+    position: relative;
+    width: 50%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-7 {
+    position: relative;
+    width: 58.33333%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-8 {
+    position: relative;
+    width: 66.66667%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-9 {
+    position: relative;
+    width: 75%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-10 {
+    position: relative;
+    width: 83.33333%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-11 {
+    position: relative;
+    width: 91.66667%; }
+
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-12 {
+    position: relative;
+    width: 100%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-1 {
+    position: relative;
+    margin-left: 8.33333%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-2 {
+    position: relative;
+    margin-left: 16.66667%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-3 {
+    position: relative;
+    margin-left: 25%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-4 {
+    position: relative;
+    margin-left: 33.33333%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-5 {
+    position: relative;
+    margin-left: 41.66667%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-6 {
+    position: relative;
+    margin-left: 50%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-7 {
+    position: relative;
+    margin-left: 58.33333%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-8 {
+    position: relative;
+    margin-left: 66.66667%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-9 {
+    position: relative;
+    margin-left: 75%; }
+
+  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .small-offset-10 {
+    position: relative;
+    margin-left: 83.33333%; }
+
+  /* line 135, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+
+  /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  [class*="column"] + [class*="column"].end {
+    float: left; }
+
+  /* line 139, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .column.small-centered,
+  .columns.small-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; } }
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 48em) {
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-1 {
+    position: relative;
+    width: 8.33333%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-2 {
+    position: relative;
+    width: 16.66667%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-3 {
+    position: relative;
+    width: 25%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-4 {
+    position: relative;
+    width: 33.33333%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-5 {
+    position: relative;
+    width: 41.66667%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-6 {
+    position: relative;
+    width: 50%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-7 {
+    position: relative;
+    width: 58.33333%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-8 {
+    position: relative;
+    width: 66.66667%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-9 {
+    position: relative;
+    width: 75%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-10 {
+    position: relative;
+    width: 83.33333%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-11 {
+    position: relative;
+    width: 91.66667%; }
+
+  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-12 {
+    position: relative;
+    width: 100%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-1 {
+    position: relative;
+    margin-left: 8.33333%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-2 {
+    position: relative;
+    margin-left: 16.66667%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-3 {
+    position: relative;
+    margin-left: 25%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-4 {
+    position: relative;
+    margin-left: 33.33333%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-5 {
+    position: relative;
+    margin-left: 41.66667%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-6 {
+    position: relative;
+    margin-left: 50%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-7 {
+    position: relative;
+    margin-left: 58.33333%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-8 {
+    position: relative;
+    margin-left: 66.66667%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-9 {
+    position: relative;
+    margin-left: 75%; }
+
+  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .row .large-offset-10 {
+    position: relative;
+    margin-left: 83.33333%; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-2 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-2 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-3 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-3 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-4 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-4 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-5 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-5 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-6 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-6 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-7 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-7 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-8 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-8 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-9 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-9 {
+    right: inherit; }
+
+  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-push-10 {
+    left: inherit; }
+
+  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .small-pull-10 {
+    right: inherit; }
+
+  /* line 164, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  .column.large-centered,
+  .columns.large-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; } }
+/*
+ *  Core Owl Carousel CSS File
+ *  v1.24
+ */
+/* clearfix */
+/* line 8, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* display none until init */
+/* line 17, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y; }
+
+/* line 23, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+/* line 28, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+/* line 33, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out; }
+
+/* line 41, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-item {
+  float: left; }
+
+/* line 45, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer; }
+
+/* line 48, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* mouse grab icon */
+/* line 58, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move; }
+
+/* fix */
+/* line 64, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+/* CSS3 Transitions */
+/* line 75, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-origin {
+  -webkit-perspective: 1200px;
+  -webkit-perspective-origin-x: 50%;
+  -webkit-perspective-origin-y: 50%;
+  -moz-perspective: 1200px;
+  -moz-perspective-origin-x: 50%;
+  -moz-perspective-origin-y: 50%;
+  perspective: 1200px; }
+
+/* fade */
+/* line 85, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-fade-out {
+  z-index: 10;
+  -webkit-animation: fadeOut .7s both ease;
+  -moz-animation: fadeOut .7s both ease;
+  animation: fadeOut .7s both ease; }
+
+/* line 91, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-fade-in {
+  -webkit-animation: fadeIn .7s both ease;
+  -moz-animation: fadeIn .7s both ease;
+  animation: fadeIn .7s both ease; }
+
+/* backSlide */
+/* line 97, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-backSlide-out {
+  -webkit-animation: backSlideOut 1s both ease;
+  -moz-animation: backSlideOut 1s both ease;
+  animation: backSlideOut 1s both ease; }
+
+/* line 102, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-backSlide-in {
+  -webkit-animation: backSlideIn 1s both ease;
+  -moz-animation: backSlideIn 1s both ease;
+  animation: backSlideIn 1s both ease; }
+
+/* goDown */
+/* line 108, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-goDown-out {
+  -webkit-animation: scaleToFade .7s ease both;
+  -moz-animation: scaleToFade .7s ease both;
+  animation: scaleToFade .7s ease both; }
+
+/* line 113, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-goDown-in {
+  -webkit-animation: goDown .6s ease both;
+  -moz-animation: goDown .6s ease both;
+  animation: goDown .6s ease both; }
+
+/* scaleUp */
+/* line 119, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-fadeUp-in {
+  -webkit-animation: scaleUpFrom .5s ease both;
+  -moz-animation: scaleUpFrom .5s ease both;
+  animation: scaleUpFrom .5s ease both; }
+
+/* line 125, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+.owl-fadeUp-out {
+  -webkit-animation: scaleUpTo .5s ease both;
+  -moz-animation: scaleUpTo .5s ease both;
+  animation: scaleUpTo .5s ease both; }
+
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+  /* line 133, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; } }
+
+@-moz-keyframes empty {
+  /* line 136, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; } }
+
+@keyframes empty {
+  /* line 139, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  /* line 142, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 143, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  /* line 146, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 147, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  /* line 150, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 151, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeOut {
+  /* line 154, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; }
+
+  /* line 155, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fadeOut {
+  /* line 158, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; }
+
+  /* line 159, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  /* line 162, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0% {
+    opacity: 1; }
+
+  /* line 163, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes backSlideOut {
+  /* line 166, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  25% {
+    opacity: .5;
+    -webkit-transform: translateZ(-500px); }
+
+  /* line 167, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    -webkit-transform: translateZ(-500px) translateX(-200%); }
+
+  /* line 168, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: .5;
+    -webkit-transform: translateZ(-500px) translateX(-200%); } }
+
+@-moz-keyframes backSlideOut {
+  /* line 171, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  25% {
+    opacity: .5;
+    -moz-transform: translateZ(-500px); }
+
+  /* line 172, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    -moz-transform: translateZ(-500px) translateX(-200%); }
+
+  /* line 173, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: .5;
+    -moz-transform: translateZ(-500px) translateX(-200%); } }
+
+@keyframes backSlideOut {
+  /* line 176, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  25% {
+    opacity: .5;
+    transform: translateZ(-500px); }
+
+  /* line 177, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    transform: translateZ(-500px) translateX(-200%); }
+
+  /* line 178, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: .5;
+    transform: translateZ(-500px) translateX(-200%); } }
+
+@-webkit-keyframes backSlideIn {
+  /* line 181, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0%, 25% {
+    opacity: .5;
+    -webkit-transform: translateZ(-500px) translateX(200%); }
+
+  /* line 182, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    -webkit-transform: translateZ(-500px); }
+
+  /* line 183, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0) translateX(0); } }
+
+@-moz-keyframes backSlideIn {
+  /* line 186, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0%, 25% {
+    opacity: .5;
+    -moz-transform: translateZ(-500px) translateX(200%); }
+
+  /* line 187, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    -moz-transform: translateZ(-500px); }
+
+  /* line 188, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1;
+    -moz-transform: translateZ(0) translateX(0); } }
+
+@keyframes backSlideIn {
+  /* line 191, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  0%, 25% {
+    opacity: .5;
+    transform: translateZ(-500px) translateX(200%); }
+
+  /* line 192, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  75% {
+    opacity: .5;
+    transform: translateZ(-500px); }
+
+  /* line 193, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  100% {
+    opacity: 1;
+    transform: translateZ(0) translateX(0); } }
+
+@-webkit-keyframes scaleToFade {
+  /* line 196, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.8); } }
+
+@-moz-keyframes scaleToFade {
+  /* line 199, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    -moz-transform: scale(0.8); } }
+
+@keyframes scaleToFade {
+  /* line 202, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    transform: scale(0.8); } }
+
+@-webkit-keyframes goDown {
+  /* line 205, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    -webkit-transform: translateY(-100%); } }
+
+@-moz-keyframes goDown {
+  /* line 208, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    -moz-transform: translateY(-100%); } }
+
+@keyframes goDown {
+  /* line 211, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    transform: translateY(-100%); } }
+
+@-webkit-keyframes scaleUpFrom {
+  /* line 215, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.5); } }
+
+@-moz-keyframes scaleUpFrom {
+  /* line 218, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    opacity: 0;
+    -moz-transform: scale(1.5); } }
+
+@keyframes scaleUpFrom {
+  /* line 221, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  from {
+    opacity: 0;
+    transform: scale(1.5); } }
+
+@-webkit-keyframes scaleUpTo {
+  /* line 225, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.5); } }
+
+@-moz-keyframes scaleUpTo {
+  /* line 228, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    -moz-transform: scale(1.5); } }
+
+@keyframes scaleUpTo {
+  /* line 231, C:/Sites/middleman/languagebox/source/stylesheets/owl.carousel.scss */
+  to {
+    opacity: 0;
+    transform: scale(1.5); } }
+
+/* line 4, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 6, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+html {
+  height: 100%;
+  font-size: 100%; }
+
+/* line 9, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+body {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #8d8d8d;
+  background: #fbfbfb;
+  position: relative; }
+
+/* line 22, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.1;
+  color: #4982b2; }
+  /* line 27, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  a.underline {
+    border-bottom: 1px solid; }
+  /* line 29, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  a:hover {
+    color: #00a4d9; }
+
+/* line 34, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.column, .row {
+  font-size: 16px !important; }
+  /* line 36, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  .column *:not([class*='column']),
+  .column *:not([class*='row']), .row *:not([class*='column']),
+  .row *:not([class*='row']) {
+    font-size: 13px; }
+
+/* line 40, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+ul {
+  margin: 0;
+  padding: 0; }
+
+/* line 44, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+h1 {
+  font-size: 28px !important;
+  line-height: 1;
+  font-weight: 300; }
+
+/* line 49, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+h2 {
+  font-size: 22px !important;
+  line-height: 1;
+  margin-bottom: 15px;
+  font-weight: 400; }
+
+/* line 54, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+h3 {
+  font-size: 13px !important;
+  line-height: 1;
+  margin-bottom: 5px;
+  font-weight: 700; }
+
+/* line 60, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.main_content {
+  padding-bottom: 35px;
+  padding-top: 10px; }
+
+/* line 64, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.text-center {
+  text-align: center; }
+
+/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.text-left {
+  text-align: left; }
+
+/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.text-right {
+  text-align: right; }
+
+/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.right {
+  float: right; }
+
+/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.left {
+  float: left; }
+
+/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.clearfix {
+  *zoom: 1; }
+  /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .clearfix:after {
+    clear: both; }
+
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+.main_header,
+.top_header {
+  width: 100%;
+  position: relative;
+  min-width: 960px; }
+
+/* line 8, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+.top_header .top_header-inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+  background: white; }
+  /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .top_header .top_header-inner:before, .top_header .top_header-inner:after {
+    content: " ";
+    display: table; }
+  /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .top_header .top_header-inner:after {
+    clear: both; }
+  /* line 11, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .top_header .top_header-inner .logotype_block {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left; }
+    /* line 13, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .top_header .top_header-inner .logotype_block .link_type-logo {
+      display: inline-block;
+      line-height: 50px;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      background: url("/images/logo.png") no-repeat 0 center;
+      background-size: auto 90%;
+      color: #2177a0;
+      padding-left: 55px; }
+      /* line 24, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+      .top_header .top_header-inner .logotype_block .link_type-logo span {
+        color: #8fb4d2;
+        font-size: 14px; }
+  /* line 27, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .top_header .top_header-inner .contacts_block {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left;
+    line-height: 50px;
+    height: 50px; }
+    /* line 31, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .top_header .top_header-inner .contacts_block p {
+      margin: 0;
+      text-align: center;
+      font-size: 11px;
+      text-transform: uppercase; }
+  /* line 36, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .top_header .top_header-inner .log_in {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left;
+    line-height: 50px;
+    height: 50px;
+    text-align: right;
+    font-weight: 400; }
+    /* line 42, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .top_header .top_header-inner .log_in a {
+      margin-left: 5px;
+      font-size: 11px; }
+
+/* line 46, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+.logotype {
+  margin: 0; }
+
+/* line 49, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+.main_menu {
+  *zoom: 1;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  background-color: #61a7cf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #61a7cf), color-stop(100%, #1b6896));
+  background-image: -webkit-linear-gradient(#61a7cf 0%, #1b6896 100%);
+  background-image: linear-gradient(#61a7cf 0%, #1b6896 100%);
+  border-bottom: 1px solid #2177a0;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 2px 3px rgba(0, 0, 0, 0.3); }
+  /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .main_menu:before, .main_menu:after {
+    content: " ";
+    display: table; }
+  /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+  .main_menu:after {
+    clear: both; }
+  /* line 58, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .main_menu .main_menu-item {
+    display: inline-block;
+    float: left;
+    height: 25px;
+    text-align: center;
+    margin-left: 30px;
+    padding: 5px 0; }
+    /* line 65, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .main_menu .main_menu-item:first-child {
+      margin-left: 75px; }
+    /* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .main_menu .main_menu-item:last-child .main_menu-link {
+      border: none; }
+  /* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .main_menu .main_menu-link {
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+    line-height: 15px;
+    padding-right: 30px;
+    font-weight: 400;
+    border-right: 1px solid #8d8d8d; }
+
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+.main_footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25px; }
+  /* line 7, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+  .main_footer .main_footer-inner {
+    background: #f5f9fc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3); }
+    /* line 10, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+    .main_footer .main_footer-inner .footer_menu, .main_footer .main_footer-inner .support_block {
+      position: relative;
+      padding-left: 0.9375em;
+      padding-right: 0.9375em;
+      width: 50%;
+      float: left; }
+    /* line 12, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+    .main_footer .main_footer-inner .support_block p {
+      margin: 0;
+      font-size: 10px;
+      line-height: 25px;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: right;
+      color: black; }
+
+/* line 21, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+.footer_menu {
+  list-style: none; }
+  /* line 23, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+  .footer_menu .footer_menu-item {
+    display: inline-block;
+    float: left;
+    height: 25px;
+    margin-left: 10px; }
+    /* line 28, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+    .footer_menu .footer_menu-item:first-child {
+      margin: 0; }
+    /* line 30, C:/Sites/middleman/languagebox/source/stylesheets/_footer.sass */
+    .footer_menu .footer_menu-item .footer_menu-link {
+      color: black;
+      font-size: 10px;
+      line-height: 25px;
+      text-transform: uppercase;
+      padding-right: 10px;
+      font-weight: 400; }
+
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+.slider {
+  margin-bottom: 30px; }
+  /* line 3, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+  .slider .slider-item {
+    text-align: center; }
+
+/* line 5, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+.owl-controls {
+  position: absolute;
+  left: 0;
+  right: 0; }
+  /* line 9, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+  .owl-controls .owl-pagination {
+    padding: 10px 0;
+    *zoom: 1;
+    text-align: center; }
+    /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+    .owl-controls .owl-pagination:before, .owl-controls .owl-pagination:after {
+      content: " ";
+      display: table; }
+    /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+    .owl-controls .owl-pagination:after {
+      clear: both; }
+  /* line 13, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+  .owl-controls .owl-page {
+    display: inline-block;
+    margin-right: 3px; }
+    /* line 16, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+    .owl-controls .owl-page span {
+      border-radius: 100%;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #869791;
+      background: transparent;
+      display: inline-block; }
+    /* line 23, C:/Sites/middleman/languagebox/source/stylesheets/_mainpage_slider.sass */
+    .owl-controls .owl-page.active span {
+      background: #869791; }
+
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_page.sass */
+.page_body-inner {
+  padding: 25px 0; }
+
+/* line 3, C:/Sites/middleman/languagebox/source/stylesheets/_page.sass */
+.page_article {
+  width: 50%; }
+  /* line 5, C:/Sites/middleman/languagebox/source/stylesheets/_page.sass */
+  .page_article p {
+    margin: 5px 0; }

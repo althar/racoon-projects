@@ -27,6 +27,12 @@
     <orderEntry type="library" name="spring-security-3.1.3" level="project" />
     <orderEntry type="library" name="spring-mvc-3.2.2.RELEASE" level="project" />
     <orderEntry type="module" module-name="RacoonFramework" />
+    <orderEntry type="library" name="spring-webflow-2.3.2" level="project" />
+    <orderEntry type="library" name="spring-ws-2.0.2" level="project" />
+    <orderEntry type="library" name="spring-integration-2.2.3" level="project" />
+    <orderEntry type="library" name="spring-data-jpa-1.0.0" level="project" />
+    <orderEntry type="library" name="spring-batch-2.1.9" level="project" />
+    <orderEntry type="library" name="jstl-1.2" level="project" />
   </component>
 </module>
 

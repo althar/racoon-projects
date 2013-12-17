@@ -22,6 +22,11 @@ public class LoginController
     @Autowired
     private PostgresqlDataSource dbProc;
 
+    @RequestMapping("/choose_registration")
+    public ModelAndView chooseRegistration(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        return new ModelAndView("page/public/choose_registration");
+    }
     @RequestMapping("/registration")
     public ModelAndView registration(HttpServletRequest request, HttpServletResponse response,String school,String role,Boolean do_registration) throws Exception
     {
@@ -39,8 +44,9 @@ public class LoginController
 //            return new ModelAndView("redirect:/http://"+school+"."+domain+"/service/"+role.toLowerCase());
             return new ModelAndView("redirect:/login");
         }
-        ModelAndView model = new ModelAndView("page/access");
+        ModelAndView model = new ModelAndView("page/public/access");
         model.addObject("widget","registration");
+        model.addObject("role",role);
         if(do_registration!=null)
         {
             model.addObject("error","Пользователь уже существует");
@@ -54,7 +60,7 @@ public class LoginController
         User user = res.getUser();
         if(user.isAnonymous())
         {
-            ModelAndView model = new ModelAndView("page/access");
+            ModelAndView model = new ModelAndView("page/public/access");
             model.addObject("widget","login");
             if(do_login!=null)
             {
@@ -77,7 +83,7 @@ public class LoginController
             return new ModelAndView("redirect:http://"+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
         }
         UserProcessor.logout(request);
-        ModelAndView model = new ModelAndView("page/access");
+        ModelAndView model = new ModelAndView("page/public/access");
         model.addObject("widget","login");
         model.addObject("error","Сбой при входе. Попробуйте еще раз.");
         return model;
