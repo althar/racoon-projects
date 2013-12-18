@@ -17,25 +17,25 @@
             <div class='log_in column push-4'>
                 <ul class='top_menu inline-list right'>
                     <li>
-                        <span class='top_menu-text'>Иванова Анна</span>
+                        <span class='top_menu-text'>Ульяна</span>
                     </li>
                     <li class='divider'>
                         <span class='top_menu-text'></span>
                     </li>
                     <li>
-                        <a href="#">Сообщения</a>
+                        <a href="/service/messages">Сообщения</a>
                     </li>
                     <li class='divider'>
                         <span class='top_menu-text'></span>
                     </li>
                     <li>
-                        <a href="#">Помощь</a>
+                        <a href="/service/help">Помощь</a>
                     </li>
                     <li class='divider'>
                         <span class='top_menu-text'></span>
                     </li>
                     <li>
-                        <a href="/">Выход</a>
+                        <a href="/logout">Выход</a>
                     </li>
                 </ul>
             </div>
@@ -44,19 +44,13 @@
     <nav class='main_header-menu row'>
         <ul class='main_menu'>
             <li class='main_menu-item'>
-                <a class="main_menu-link" href="/">Главная</a>
+                <a class="main_menu-link" href="/service/student">Главная</a>
             </li>
             <li class='main_menu-item'>
-                <a class="main_menu-link" href="/teacher/courses.html">Курсы</a>
+                <a class="main_menu-link" href="/service/market">Магазин курсов</a>
             </li>
             <li class='main_menu-item'>
-                <a class="main_menu-link" href="#">Ученики</a>
-            </li>
-            <li class='main_menu-item'>
-                <a class="main_menu-link" href="#">Магазин курсов</a>
-            </li>
-            <li class='main_menu-item'>
-                <a class="main_menu-link" href="#">Настройки</a>
+                <a class="main_menu-link" href="/service/student/profile">Профиль</a>
             </li>
         </ul>
     </nav>

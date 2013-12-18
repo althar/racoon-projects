@@ -27,7 +27,15 @@ public class StudentController extends LanguageBoxController
     @Autowired
     private MarketService market;
 
-    @RequestMapping("/main")
+    @RequestMapping("/header")
+    public ModelAndView header(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/header_student");
+        Long user_id = id(request);
+
+        return model;
+    }
+    @RequestMapping("")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/main");
@@ -41,15 +49,7 @@ public class StudentController extends LanguageBoxController
     @RequestMapping("/courses")
     public ModelAndView courses(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        ModelAndView model = new ModelAndView("page/teacher/courses");
-        Long user_id = id(request);
-
-        return model;
-    }
-    @RequestMapping("/students")
-    public ModelAndView students(HttpServletRequest request, HttpServletResponse response) throws Exception
-    {
-        ModelAndView model = new ModelAndView("page/teacher/students");
+        ModelAndView model = new ModelAndView("page/student/courses");
         Long user_id = id(request);
 
         return model;
@@ -57,7 +57,7 @@ public class StudentController extends LanguageBoxController
     @RequestMapping("/profile")
     public ModelAndView profile(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        ModelAndView model = new ModelAndView("page/teacher/profile");
+        ModelAndView model = new ModelAndView("page/student/profile");
         Long user_id = id(request);
 
         return model;

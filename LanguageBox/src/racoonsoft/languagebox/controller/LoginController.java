@@ -88,4 +88,13 @@ public class LoginController
         model.addObject("error","Сбой при входе. Попробуйте еще раз.");
         return model;
     }
+    @RequestMapping("/logout")
+    public ModelAndView logout(HttpServletRequest request,HttpServletResponse response,Boolean do_login) throws Exception
+    {
+        ActionResult res = UserProcessor.logout(request);
+        ModelAndView model = new ModelAndView("page/public/main");
+        model.addObject("widget","login");
+        model.addObject("error","Сбой при входе. Попробуйте еще раз.");
+        return model;
+    }
 }

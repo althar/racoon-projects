@@ -24,56 +24,7 @@
 <body class='devise devise_registration'>
 <%@ include file="/WEB-INF/jsp/section/header.jsp" %>
 <div class='main_content'>
-    <div class='main_content-inner row'>
-        <div class='page_body'>
-            <div class='page_body-inner'>
-                <h1 class='text-center'>Выберите в качесте кого вы будете регистрироваться</h1>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Ученик</li>
-                        <li class='bullet-item'>Выполнение домашних заданий</li>
-                        <li class='bullet-item'>Доступ к курсам через интернет</li>
-                        <li class='bullet-item'>Возможность заниматься: на работе, в дороге, дома.</li>
-                        <li class='bullet-item'>Приобретение курсов</li>
-                        <li class='bullet-item'>Возможность самостоятельного обучения</li>
-                        <li class='bullet-item'>Измерение роста знаний</li>
-                        <li class='bullet-item'>Геймификация процесса обучения</li>
-                        <li class='bullet-item'>Удобное взаимодействие с репетитором</li>
-                        <li class='cta-button'>
-                            <a class='button' href='../students/index.html'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Репетитор</li>
-                        <li class='bullet-item'>Создание курсов</li>
-                        <li class='bullet-item'>Продажа курсов</li>
-                        <li class='bullet-item'>Приобретение готовых методик</li>
-                        <li class='bullet-item'>Вся библиотека в одном месте</li>
-                        <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                        <li class='cta-button'>
-                            <a class='button' href='../teacher/index.html'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Школа иностранных языков</li>
-                        <li class='bullet-item'>Создание курсов</li>
-                        <li class='bullet-item'>Продажа курсов</li>
-                        <li class='bullet-item'>Приобретение готовых методик</li>
-                        <li class='bullet-item'>Геймификация процесса обучения</li>
-                        <li class='bullet-item'>Маркетинговый бонус для  ученика</li>
-                        <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                        <li class='cta-button'>
-                            <a class='button' href='../school/index.html'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    Форма регистрации... ${widget} ${role}
 </div>
 <%@ include file="/WEB-INF/jsp/section/footer.jsp" %>
 </body>

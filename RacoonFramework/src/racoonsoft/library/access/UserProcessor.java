@@ -164,6 +164,11 @@ public class UserProcessor
                 else
                 {
                     User u = getUser(session.getUserId(),dbProc);
+                    if(session.isAnonymous()||u==null)
+                    {
+                        u = new User();
+                        u.setValue("id",session.getUserId());
+                    }
                     result.setData("session_id",sessionId);
                     result.setUser(u);
                 }

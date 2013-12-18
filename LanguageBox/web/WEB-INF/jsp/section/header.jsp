@@ -25,4 +25,26 @@
             </div>
         </div>
     </div>
+    <nav class='main_header-menu row'>
+        <ul class='main_menu'>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/">Главная</a>
+            </li>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/functions">Возможности</a>
+            </li>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/price">Цены</a>
+            </li>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/about">Компания</a>
+            </li>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/faq">Вопросы и ответы</a>
+            </li>
+            <li class='main_menu-item'>
+                <a class="main_menu-link" href="/partners">Кто уже использует</a>
+            </li>
+        </ul>
+    </nav>
 </header>

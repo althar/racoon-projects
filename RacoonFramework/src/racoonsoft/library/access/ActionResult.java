@@ -41,6 +41,10 @@ public class ActionResult
         return getUser().hasRole(role);
     }
     public ArrayList<String> getRoles() {
+        if(getUser()==null)
+        {
+            return null;
+        }
         return getUser().getRoles();
     }
     public User getUser() {
