@@ -48,13 +48,13 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385388633295" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387364591254" ignored="false" />
-    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384777275775" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387444842973" ignored="false" />
+    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454316369" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
     <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366099807" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387365076327" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387443178823" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170940237" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380722664444" ignored="false" />
@@ -103,7 +103,7 @@
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/Manifest.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/BuildConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/Store/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366030016029" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386679012088" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387455288297" ignored="false" />
     <file path="/Store.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366033053749" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/persist/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366039891777" ignored="false" />
     <file path="/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366038895443" ignored="false" />
@@ -174,7 +174,7 @@
     <file path="/no_item_error.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368701055189" ignored="false" />
     <file path="/AdminController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386165467695" ignored="false" />
     <file path="/StoreController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383739770763" ignored="false" />
-    <file path="/UserProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387364504962" ignored="false" />
+    <file path="/UserProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387444938022" ignored="false" />
     <file path="/ActionResult.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387363630275" ignored="false" />
     <file path="/UserSession.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371553057820" ignored="false" />
     <file path="/store-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377163169697" ignored="false" />
@@ -280,9 +280,9 @@
     <file path="/XMLProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377256785582" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/tags/tabs.tag" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384767187663" ignored="false" />
     <file path="/BasketController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383736683039" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/modx/ModxProxyController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386073879428" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/modx/ModxProxyController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454284243" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/helper/HTTPClient.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371713039905" ignored="false" />
-    <file path="/ModxProxyController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386073863678" ignored="false" />
+    <file path="/ModxProxyController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454084886" ignored="false" />
     <file path="/login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385914097536" ignored="false" />
     <file path="/login.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372140710441" ignored="false" />
     <file path="/mask.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371467741561" ignored="false" />
@@ -303,8 +303,8 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/bill_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371716116289" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/salary/salary_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371816535692" ignored="false" />
     <file path="/salary_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371816525866" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373368725957" ignored="false" />
-    <file path="/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373368725957" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454133980" ignored="false" />
+    <file path="/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454131785" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/MoneyOrderOperationType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372238723660" ignored="false" />
     <file path="/MoneyOrderOperationType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371810902586" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/salary/advance_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371819852181" ignored="false" />
@@ -528,9 +528,9 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/BankAccountType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784221135" ignored="false" />
     <file path="/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169662362" ignored="false" />
     <file path="/StudentController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387364242564" ignored="false" />
-    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387363443254" ignored="false" />
+    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387445654383" ignored="false" />
     <file path="/registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385913705603" ignored="false" />
-    <file path="/access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366641236" ignored="false" />
+    <file path="/access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387446564117" ignored="false" />
     <file path="/no_access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385914719749" ignored="false" />
     <file path="$PROJECT_DIR$/../Zoomag/src/ftwo/zoomag/servlets/UserServlet.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386068447567" ignored="false" />
     <file path="$PROJECT_DIR$/../InvestmentWheel/src/investmentwheel/controller/StudentController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386165211319" ignored="false" />
@@ -551,7 +551,7 @@
     <file path="/init.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386682558224" ignored="false" />
     <file path="/TeacherController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386763757727" ignored="false" />
     <file path="/market.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386764370749" ignored="false" />
-    <file path="/LanguageBoxController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386765175966" ignored="false" />
+    <file path="/LanguageBoxController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387449103407" ignored="false" />
     <file path="/LanguageBoxInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386765407275" ignored="false" />
     <file path="/BusinessPlan.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386846543398" ignored="false" />
     <file path="/Player.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386852501436" ignored="false" />
@@ -562,7 +562,7 @@
     <file path="/ErrorCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386856000100" ignored="false" />
     <file path="/InvestmentWheelInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387191627205" ignored="false" />
     <file path="/StatusCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387288397536" ignored="false" />
-    <file path="/ActionResultCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387285605881" ignored="false" />
+    <file path="/ActionResultCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387444921556" ignored="false" />
     <file path="/all.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387271776699" ignored="false" />
     <file path="/application.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387271789545" ignored="false" />
     <file path="/devise.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387271794329" ignored="false" />
@@ -581,6 +581,17 @@
     <file path="/price.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366859543" ignored="false" />
     <file path="/faq.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366892561" ignored="false" />
     <file path="/partners.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366918623" ignored="false" />
+    <file path="$PROJECT_DIR$/../../languagebox/stylesheets/application.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387443861568" ignored="false" />
+    <file path="$PROJECT_DIR$/../../languagebox/stylesheets/devise.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387443861568" ignored="false" />
+    <file path="$PROJECT_DIR$/../../languagebox/stylesheets/all.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387443861568" ignored="false" />
+    <file path="/CourseService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387448589827" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/service/BillingTransactionService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/APICashflow.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/service/SimpleTaxDeclarationService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/service/FinanceCompanyService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/SimpleTaxDeclarationController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/BillingRobocassaController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454297101" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/model/BillingPlanType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454312169" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -703,30 +714,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="26" selection-start="2535" selection-end="3886" vertical-scroll-proportion="-8.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/functions.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="22" selection-start="6013" selection-end="6013" vertical-scroll-proportion="0.94266444">
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="header.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="49" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-6.9615383">
+            <state line="30" column="49" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-7.4615383">
               <folding />
             </state>
           </provider>
@@ -741,12 +732,88 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="StudentController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="5" selection-start="777" selection-end="2317" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="35" selection-start="951" selection-end="1149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LanguageBoxController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LanguageBoxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="4" selection-start="844" selection-end="844" vertical-scroll-proportion="0.36744186">
+              <folding>
+                <element signature="method#id#0;class#LanguageBoxController#0" expanded="false" />
+                <element signature="method#user#0;class#LanguageBoxController#0" expanded="false" />
+                <element signature="method#roles#0;class#LanguageBoxController#0" expanded="false" />
+                <element signature="method#hasRole#0;class#LanguageBoxController#0" expanded="false" />
+                <element signature="method#school#0;class#LanguageBoxController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/CourseService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="47" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/ContentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="55" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="44" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
+            <state line="91" column="104" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1283#1299#0" expanded="true" />
+                <element signature="e#1320#1336#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/UserProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="85" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#527#548#0" expanded="true" />
+                <element signature="n#!!doc;n#getLoginColumnName#0;n#UserProcessor#0" expanded="false" />
+                <element signature="method#getLoginColumnName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#setLoginColumnName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#getPasswordColumnName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#setPasswordColumnName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#getUserTableName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#setUserTableName#0;class#UserProcessor#0" expanded="false" />
+                <element signature="e#8436#8444#0" expanded="true" />
+                <element signature="method#getUser#1;class#UserProcessor#0" expanded="false" />
+                <element signature="method#setCookie#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#getCookieExpires#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#getSessionId#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#getCookie#0;class#UserProcessor#0" expanded="false" />
+                <element signature="method#cleanSessions#0;class#UserProcessor#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -755,8 +822,12 @@
       <file leaf-file-name="access.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/access.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="42" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-16.26923">
-              <folding />
+            <state line="40" column="57" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-7.4615383">
+              <folding>
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -776,15 +847,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/achivments.jsp" />
-        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/UserProcessor.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/student/main.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses_bought.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/how_to_use.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header_student.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/main.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/access.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/price.jsp" />
@@ -792,6 +856,13 @@
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/faq.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/partners.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/functions.jsp" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/ActionResultCode.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/UserProcessor.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/access.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LanguageBoxController.java" />
       </list>
     </option>
   </component>
@@ -951,6 +1022,36 @@
               <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1024,28 +1125,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LanguageBox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1072,7 +1151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interceptor" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1148,11 +1227,11 @@
       <recent name="racoonsoft.languagebox.database" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\sketch" />
+      <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\css" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\WEB-INF\jsp\page\public" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\WEB-INF\jsp\section" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\WEB-INF\jsp" />
-      <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\img" />
-      <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\js\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web" />
@@ -1926,10 +2005,10 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41917503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2664437" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25195095" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
@@ -1944,7 +2023,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20864461" sideWeight="0.7335563" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20864461" sideWeight="0.7480491" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35117057" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2024,39 +2103,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/student/main.jsp">
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/ActionResultCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="68" selection-start="978" selection-end="1291" vertical-scroll-proportion="0.6171617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header_student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="19" selection-start="1733" selection-end="1733" vertical-scroll-proportion="-28.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/sketch/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="1133" selection-end="2647" vertical-scroll-proportion="-9.846154">
-          <folding>
-            <element signature="tag#header#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/interceptor/AccessInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.4620253">
+        <state line="9" column="67" selection-start="379" selection-end="379" vertical-scroll-proportion="0.2372093">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/access/UserProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="21" selection-start="7348" selection-end="7348" vertical-scroll-proportion="0.0">
+        <state line="61" column="85" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#527#548#0" expanded="true" />
             <element signature="n#!!doc;n#getLoginColumnName#0;n#UserProcessor#0" expanded="false" />
@@ -2066,7 +2122,7 @@
             <element signature="method#setPasswordColumnName#0;class#UserProcessor#0" expanded="false" />
             <element signature="method#getUserTableName#0;class#UserProcessor#0" expanded="false" />
             <element signature="method#setUserTableName#0;class#UserProcessor#0" expanded="false" />
-            <element signature="e#8292#8300#0" expanded="true" />
+            <element signature="e#8436#8444#0" expanded="true" />
             <element signature="method#getUser#1;class#UserProcessor#0" expanded="false" />
             <element signature="method#setCookie#0;class#UserProcessor#0" expanded="false" />
             <element signature="method#getCookieExpires#0;class#UserProcessor#0" expanded="false" />
@@ -2077,67 +2133,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="21" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="44" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1283#1299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/access.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="1522" selection-end="1522" vertical-scroll-proportion="-16.26923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="1232" selection-end="1232" vertical-scroll-proportion="-6.9615383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/price.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="1488" selection-end="1488" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="1492" selection-end="1492" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/faq.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="1487" selection-end="1487" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/partners.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.7453626">
-          <folding />
+        <state line="40" column="57" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-7.4615383">
+          <folding>
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="38" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="5" selection-start="777" selection-end="2317" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="104" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1320#1336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/students.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="35" selection-start="951" selection-end="1149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2149,11 +2209,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/ContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="55" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/functions.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="22" selection-start="6013" selection-end="6013" vertical-scroll-proportion="0.94266444">
+        <state line="79" column="179" selection-start="5034" selection-end="5034" vertical-scroll-proportion="-14.961538">
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/CourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="586" selection-end="602" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/LanguageBoxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="4" selection-start="844" selection-end="844" vertical-scroll-proportion="0.36744186">
+          <folding>
+            <element signature="method#id#0;class#LanguageBoxController#0" expanded="false" />
+            <element signature="method#user#0;class#LanguageBoxController#0" expanded="false" />
+            <element signature="method#roles#0;class#LanguageBoxController#0" expanded="false" />
+            <element signature="method#hasRole#0;class#LanguageBoxController#0" expanded="false" />
+            <element signature="method#school#0;class#LanguageBoxController#0" expanded="false" />
           </folding>
         </state>
       </provider>

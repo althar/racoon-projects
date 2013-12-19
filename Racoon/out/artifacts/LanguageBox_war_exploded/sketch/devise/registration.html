@@ -42,49 +42,222 @@
       <div class='main_content-inner row'>
         <div class='page_body'>
           <div class='page_body-inner'>
-            <h1 class='text-center'>Выберите в качесте кого вы будете регистрироваться</h1>
-            <div class='small-4 column'>
-              <ul class='pricing-table'>
-                <li class='title'>Ученик</li>
-                <li class='bullet-item'>Выполнение домашних заданий</li>
-                <li class='bullet-item'>Доступ к курсам через интернет</li>
-                <li class='bullet-item'>Возможность заниматься: на работе, в дороге, дома.</li>
-                <li class='bullet-item'>Приобретение курсов</li>
-                <li class='bullet-item'>Возможность самостоятельного обучения</li>
-                <li class='bullet-item'>Измерение роста знаний</li>
-                <li class='bullet-item'>Геймификация процесса обучения</li>
-                <li class='bullet-item'>Удобное взаимодействие с репетитором</li>
-                <li class='cta-button'>
-                  <a class='button' href='../students/index.html'>Регистрация</a>
-                </li>
-              </ul>
+            <div class='student_registr small-6 column small-centered'>
+              <h2 class='text-center'>Регистрация нового ученика</h2>
+              <form class='simple_form'>
+                <h3>Данные для входа</h3>
+                <div class='control-group error'>
+                  <label class='control-label' for='email'>
+                    E-mail
+                  </label>
+                  <div class='controls'>
+                    <input id='email' name='email' type='email'>
+                    <span class='error'>
+                      Введите корректный e-mail
+                    </span>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password'>
+                    Пароль
+                  </label>
+                  <div class='controls'>
+                    <input id='password' name='password' type='password'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password_confirmation'>
+                    Подтверждение пароля
+                  </label>
+                  <div class='controls'>
+                    <input id='password_confirmation' name='password_confirmation' type='password'>
+                  </div>
+                </div>
+                <h3>Личные данные</h3>
+                <div class='control-group'>
+                  <label class='control-label' for='name'>
+                    Имя
+                  </label>
+                  <div class='controls'>
+                    <input id='name' name='name' type='text'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='age'>
+                    Возраст
+                  </label>
+                  <div class='controls'>
+                    <input id='age' name='age' type='text'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='tel'>
+                    Номер телефона
+                  </label>
+                  <div class='controls'>
+                    <input id='tel' name='tel' type='tel'>
+                  </div>
+                </div>
+                <div class='form-action row'>
+                  <div class='small-8 small-offset-4 column'>
+                    <div class='custom_checkbox'>
+                      <input id='remember_me' name='remember_me' type='checkbox'>
+                      <label class='checkbox' for='remember_me'>
+                        <span class='fake_checkbox'></span>
+                        Запомнить меня
+                      </label>
+                    </div>
+                    <button class='button' type='submit'>
+                      Зарегистрироваться и войти
+                    </button>
+                    <div class='note'>
+                      Используя сервис, вы соглашаетесь
+                      соблюдать условия
+                      <a href="#">Лицензионного договора</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class='small-4 column'>
-              <ul class='pricing-table'>
-                <li class='title'>Репетитор</li>
-                <li class='bullet-item'>Создание курсов</li>
-                <li class='bullet-item'>Продажа курсов</li>
-                <li class='bullet-item'>Приобретение готовых методик</li>
-                <li class='bullet-item'>Вся библиотека в одном месте</li>
-                <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                <li class='cta-button'>
-                  <a class='button' href='../teacher/index.html'>Регистрация</a>
-                </li>
-              </ul>
+            <div class='teacher_registr small-6 column small-centered' style='display: none'>
+              <h2 class='text-center'>Регистрация репетитора</h2>
+              <form class='simple_form'>
+                <h3>Данные для входа</h3>
+                <div class='control-group'>
+                  <label class='control-label' for='email'>
+                    E-mail
+                  </label>
+                  <div class='controls'>
+                    <input id='email' name='email' type='email'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password'>
+                    Пароль
+                  </label>
+                  <div class='controls'>
+                    <input id='password' name='password' type='password'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password_confirmation'>
+                    Подтверждение пароля
+                  </label>
+                  <div class='controls'>
+                    <input id='password_confirmation' name='password_confirmation' type='password'>
+                  </div>
+                </div>
+                <h3>Личные данные</h3>
+                <div class='control-group'>
+                  <label class='control-label' for='name'>
+                    Имя
+                  </label>
+                  <div class='controls'>
+                    <input id='name' name='name' type='text'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='last_name'>
+                    Фамилия
+                  </label>
+                  <div class='controls'>
+                    <input id='last_name' name='last_name' type='text'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='tel'>
+                    Номер телефона
+                  </label>
+                  <div class='controls'>
+                    <input id='tel' name='tel' type='tel'>
+                  </div>
+                </div>
+                <div class='form-action row'>
+                  <div class='small-8 small-offset-4 column'>
+                    <div class='custom_checkbox'>
+                      <input id='remember_me' name='remember_me' type='checkbox'>
+                      <label class='checkbox' for='remember_me'>
+                        <span class='fake_checkbox'></span>
+                        Запомнить меня
+                      </label>
+                    </div>
+                    <button class='button' type='submit'>
+                      Зарегистрироваться и войти
+                    </button>
+                    <div class='note'>
+                      Используя сервис, вы соглашаетесь
+                      соблюдать условия
+                      <a href="#">Лицензионного договора</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class='small-4 column'>
-              <ul class='pricing-table'>
-                <li class='title'>Школа иностранных языков</li>
-                <li class='bullet-item'>Создание курсов</li>
-                <li class='bullet-item'>Продажа курсов</li>
-                <li class='bullet-item'>Приобретение готовых методик</li>
-                <li class='bullet-item'>Геймификация процесса обучения</li>
-                <li class='bullet-item'>Маркетинговый бонус для  ученика</li>
-                <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                <li class='cta-button'>
-                  <a class='button' href='../school/index.html'>Регистрация</a>
-                </li>
-              </ul>
+            <div class='school_registr small-6 column small-centered' style='display: none'>
+              <h2 class='text-center'>Регистрация языковой школы</h2>
+              <form class='simple_form'>
+                <h3>Данные для входа</h3>
+                <div class='control-group'>
+                  <label class='control-label' for='email'>
+                    E-mail
+                  </label>
+                  <div class='controls'>
+                    <input id='email' name='email' type='email'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password'>
+                    Пароль
+                  </label>
+                  <div class='controls'>
+                    <input id='password' name='password' type='password'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='password_confirmation'>
+                    Подтверждение пароля
+                  </label>
+                  <div class='controls'>
+                    <input id='password_confirmation' name='password_confirmation' type='password'>
+                  </div>
+                </div>
+                <h3>Личные данные</h3>
+                <div class='control-group'>
+                  <label class='control-label' for='name'>
+                    Название
+                  </label>
+                  <div class='controls'>
+                    <input id='name' name='name' type='text'>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label' for='tel'>
+                    Номер телефона
+                  </label>
+                  <div class='controls'>
+                    <input id='tel' name='tel' type='tel'>
+                  </div>
+                </div>
+                <div class='form-action row'>
+                  <div class='small-8 small-offset-4 column'>
+                    <div class='custom_checkbox'>
+                      <input id='remember_me' name='remember_me' type='checkbox'>
+                      <label class='checkbox' for='remember_me'>
+                        <span class='fake_checkbox'></span>
+                        Запомнить меня
+                      </label>
+                    </div>
+                    <button class='button' type='submit'>
+                      Зарегистрироваться и войти
+                    </button>
+                    <div class='note'>
+                      Используя сервис, вы соглашаетесь
+                      соблюдать условия
+                      <a href="#">Лицензионного договора</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

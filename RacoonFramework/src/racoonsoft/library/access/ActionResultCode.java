@@ -7,6 +7,7 @@ public enum ActionResultCode
     REGISTRATION_SUCCESSFUL("Регистрация успешна"),
     REGISTRATION_FAILED_ALREADY_EXISTS("Ошибка регистрации. Уже существует."),
     REGISTRATION_FAILED_LACK_OF_DATA("Ошибка регистрации. Недостаточно данных"),
+    REGISTRATION_FAILED_NO_LOGIN("Ошибка регистрации. Нет логина"),
     REGISTRATION_FAILED_ROLE_NOT_SET("Ошибка регистрации. Роль не указана (параметр role=null)"),
     REGISTRATION_FAILED_UNKNOWN("Ошибка регистрации. Причина неизвестна."),
     AUTHORIZATION_SUCCESSFUL("Авторизация успешна"),

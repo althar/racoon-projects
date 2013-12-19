@@ -6461,42 +6461,44 @@ h1 {
 h2 {
   font-size: 22px !important;
   line-height: 1;
+  margin: 0;
   margin-bottom: 15px;
   font-weight: 400; }
 
-/* line 54, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 55, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 h3 {
   font-size: 13px !important;
   line-height: 1;
+  margin: 0;
   margin-bottom: 5px;
   font-weight: 700; }
 
-/* line 60, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .main_content {
   padding-bottom: 35px;
   padding-top: 10px; }
 
-/* line 64, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-center {
   text-align: center; }
 
-/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-left {
   text-align: left; }
 
-/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-right {
   text-align: right; }
 
-/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .right {
   float: right; }
 
-/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .left {
   float: left; }
 
-/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 76, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .clearfix {
   *zoom: 1; }
   /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
@@ -6506,6 +6508,133 @@ h3 {
   /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
   .clearfix:after {
     clear: both; }
+
+/* line 4, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+.student_registr .simple_form,
+.teacher_registr .simple_form,
+.school_registr .simple_form {
+  background: white;
+  border: 1px dotted #d2d2d2;
+  border-radius: 13px;
+  padding: 15px 20px;
+  margin-bottom: 20px; }
+
+/* line 11, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+.simple_form {
+  padding: 15px 20px;
+  margin-bottom: 20px; }
+  /* line 14, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  .simple_form h3 {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #8fb4d2; }
+  /* line 20, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  .simple_form .control-group {
+    width: auto;
+    margin-left: -0.9375em;
+    margin-right: -0.9375em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+    *zoom: 1;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+    .simple_form .control-group:before, .simple_form .control-group:after {
+      content: " ";
+      display: table; }
+    /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+    .simple_form .control-group:after {
+      clear: both; }
+    /* line 26, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+    .simple_form .control-group.error .controls input[type='text'],
+    .simple_form .control-group.error .controls input[type='email'],
+    .simple_form .control-group.error .controls input[type='password'],
+    .simple_form .control-group.error .controls input[type='tel'],
+    .simple_form .control-group.error .controls input[type='url'],
+    .simple_form .control-group.error .controls input[type='date'],
+    .simple_form .control-group.error .controls input[type='number'] {
+      border: 1px solid #9a0000; }
+    /* line 34, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+    .simple_form .control-group.error span.error {
+      color: #9a0000;
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      margin-top: 3px; }
+    /* line 40, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+    .simple_form .control-group .control-label {
+      position: relative;
+      padding-left: 0.9375em;
+      padding-right: 0.9375em;
+      width: 33.33333%;
+      float: left;
+      color: #6b6b6b;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 10px; }
+    /* line 47, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+    .simple_form .control-group .controls {
+      position: relative;
+      padding-left: 0.9375em;
+      padding-right: 0.9375em;
+      width: 66.66667%;
+      float: left; }
+      /* line 49, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+      .simple_form .control-group .controls input[type='text'],
+      .simple_form .control-group .controls input[type='email'],
+      .simple_form .control-group .controls input[type='password'],
+      .simple_form .control-group .controls input[type='tel'],
+      .simple_form .control-group .controls input[type='url'],
+      .simple_form .control-group .controls input[type='date'],
+      .simple_form .control-group .controls input[type='number'] {
+        width: 100%; }
+  /* line 58, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  .simple_form .form-action .note, .simple_form .form-action .note a {
+    font-size: 11px;
+    font-weigth: bold; }
+
+/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+.custom_checkbox {
+  display: block;
+  margin: 10px 0; }
+  /* line 65, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  .custom_checkbox label.checkbox {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: normal;
+    padding-left: 20px;
+    margin-left: -20px; }
+
+/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='date'],
+input[type='number'] {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #dbdada;
+  height: 22px;
+  width: 250px;
+  margin: 0;
+  color: black;
+  font-size: 11px !important;
+  padding: 0 5px; }
+  /* line 88, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='password']:focus,
+  input[type='tel']:focus,
+  input[type='url']:focus,
+  input[type='date']:focus,
+  input[type='number']:focus {
+    outline: none; }
 
 /* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
 .main_header,

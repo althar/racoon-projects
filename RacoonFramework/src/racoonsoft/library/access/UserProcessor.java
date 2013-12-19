@@ -57,6 +57,10 @@ public class UserProcessor
             String password  = request.getParameter("password");
             logout(request);
             // Check existence
+            if(login==null)
+            {
+                return new ActionResult(ActionResultCode.REGISTRATION_FAILED_NO_LOGIN);
+            }
             DBRecord existent = dbProc.getRecord("SELECT id FROM "+userTableName+" WHERE "+loginColumnName+"='"+login.replace("'","")+"'");
             if(existent!=null)
             {

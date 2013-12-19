@@ -931,42 +931,44 @@ h1 {
 h2 {
   font-size: 22px !important;
   line-height: 1;
+  margin: 0;
   margin-bottom: 15px;
   font-weight: 400; }
 
-/* line 54, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 55, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 h3 {
   font-size: 13px !important;
   line-height: 1;
+  margin: 0;
   margin-bottom: 5px;
   font-weight: 700; }
 
-/* line 60, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .main_content {
   padding-bottom: 35px;
   padding-top: 10px; }
 
-/* line 64, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-center {
   text-align: center; }
 
-/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-left {
   text-align: left; }
 
-/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-right {
   text-align: right; }
 
-/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .right {
   float: right; }
 
-/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .left {
   float: left; }
 
-/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 76, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .clearfix {
   *zoom: 1; }
   /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */

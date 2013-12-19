@@ -28,20 +28,29 @@ public class LoginController
         return new ModelAndView("page/public/choose_registration");
     }
     @RequestMapping("/registration")
-    public ModelAndView registration(HttpServletRequest request, HttpServletResponse response,String school,String role,Boolean do_registration) throws Exception
+    public ModelAndView registration(HttpServletRequest request, HttpServletResponse response,String school,String role,Boolean do_registration,String name,Integer age,String phone) throws Exception
     {
         HashMap<String,Object> params = new HashMap<String, Object>();
         if(school!=null)
         {
             params.put("school",school);
         }
+        if(name!=null)
+        {
+            params.put("name",name);
+        }
+        if(age!=null)
+        {
+            params.put("age",age);
+        }
+        if(name!=phone)
+        {
+            params.put("phone",phone);
+        }
         String[] roles = new String[]{role};
         ActionResult res = UserProcessor.registration(dbProc,request,response,params,roles);
         if(res.success())
         {
-//            User u = res.getUser();
-//            String domain = new URL(request.getRequestURL().toString()).getHost();
-//            return new ModelAndView("redirect:/http://"+school+"."+domain+"/service/"+role.toLowerCase());
             return new ModelAndView("redirect:/login");
         }
         ModelAndView model = new ModelAndView("page/public/access");
@@ -72,15 +81,18 @@ public class LoginController
         String domain = new URL(request.getRequestURL().toString()).getHost();
         if(user.hasRole("TUTOR"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/tutor");
+//            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/tutor");
+            return new ModelAndView("redirect:http://localhost:8080/service/teacher");
         }
         else if(user.hasRole("SCHOOL"))
         {
-            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/school");
+//            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/school");
+            return new ModelAndView("redirect:http://localhost:8080/service/teacher");
         }
         else if(user.hasRole("STUDENT"))
         {
-            return new ModelAndView("redirect:http://"+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
+//            return new ModelAndView("redirect:http://"+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
+            return new ModelAndView("redirect:http://localhost:8080/service/student");
         }
         UserProcessor.logout(request);
         ModelAndView model = new ModelAndView("page/public/access");

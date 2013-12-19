@@ -36,7 +36,7 @@ public class TeacherController extends LanguageBoxController
     private StudentService student;
 
     //<editor-fold desc="Page">
-    @RequestMapping("/main")
+    @RequestMapping("")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/teacher/main");
