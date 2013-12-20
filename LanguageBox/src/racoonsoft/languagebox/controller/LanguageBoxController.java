@@ -3,6 +3,7 @@ package racoonsoft.languagebox.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
+import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.languagebox.service.*;
 import racoonsoft.library.access.User;
 import racoonsoft.library.database.DBRecord;
@@ -16,19 +17,17 @@ import java.util.ArrayList;
 public abstract class LanguageBoxController
 {
     @Autowired
-    private CourseService course;
-
+    protected PostgresqlDataSource dbProc;
     @Autowired
-    private LibraryService library;
-
+    protected CourseService course;
     @Autowired
-    private MarketService market;
-
+    protected LibraryService library;
     @Autowired
-    private StudentService student;
-
+    protected MarketService market;
     @Autowired
-    private ContentService content;
+    protected ContentService content;
+    @Autowired
+    protected StudentService student;
 
     public Long id(HttpServletRequest request)
     {
@@ -64,5 +63,22 @@ public abstract class LanguageBoxController
         model.addObject("bought_courses",bought_courses);
         return model;
     }
-
+    public ModelAndView addTeacherStudents(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        ArrayList<DBRecord> bought_courses = student.getTeacherStudents(id(request));
+        model.addObject("teacher_students",bought_courses);
+        return model;
+    }
+    public ModelAndView addSells(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        ArrayList<DBRecord> bought_courses = market.getSells(id(request));
+        model.addObject("sells",bought_courses);
+        return model;
+    }
+    public ModelAndView addAchievement(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        ArrayList<DBRecord> bought_courses = student.getStudentAchievements(id(request));
+        model.addObject("achievements",bought_courses);
+        return model;
+    }
 }

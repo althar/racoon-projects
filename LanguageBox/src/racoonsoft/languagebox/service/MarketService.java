@@ -13,8 +13,8 @@ public class MarketService
     @Autowired
     private PostgresqlDataSource dbProc;
 
-    public ArrayList<DBRecord> getTeacherSells(Long user_id) throws Exception
+    public ArrayList<DBRecord> getSells(Long user_id) throws Exception
     {
-        return dbProc.getRecords("SELECT * FROM transaction WHERE TYPE='' AND user_id="+user_id);
+        return dbProc.getRecords("SELECT * FROM transaction WHERE type='TEACHER_FEE' AND status='APPROVED' AND user_id="+user_id);
     }
 }

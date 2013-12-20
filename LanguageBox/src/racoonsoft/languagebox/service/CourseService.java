@@ -20,6 +20,6 @@ public class CourseService
     public ArrayList<DBRecord> getBoughtCourses(Long user_id) throws Exception
     {
         return dbProc.getRecords("SELECT c.*,cp.status AS purchase_status,cp.created AS purchase_created,cp.payment_transaction FROM course_purchase cp, course c " +
-                " WHERE c.id=cp.course_id AND cp.user_id="+user_id);
+                " WHERE cp.status = 'APPROVED' AND cp.user_id = c.user_id AND c.user_id="+user_id);
     }
 }

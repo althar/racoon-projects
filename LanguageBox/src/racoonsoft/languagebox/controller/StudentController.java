@@ -5,9 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.languagebox.database.PostgresqlDataSource;
-import racoonsoft.languagebox.service.CourseService;
-import racoonsoft.languagebox.service.LibraryService;
-import racoonsoft.languagebox.service.MarketService;
+import racoonsoft.languagebox.service.*;
 import racoonsoft.library.database.DBRecord;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,21 +16,11 @@ import java.util.ArrayList;
 @RequestMapping("/service/student")
 public class StudentController extends LanguageBoxController
 {
-    @Autowired
-    private PostgresqlDataSource dbProc;
-    @Autowired
-    private CourseService course;
-    @Autowired
-    private LibraryService library;
-    @Autowired
-    private MarketService market;
-
     @RequestMapping("/header")
     public ModelAndView header(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("section/header_student");
         Long user_id = id(request);
-
         return model;
     }
     @RequestMapping("")
@@ -40,10 +28,11 @@ public class StudentController extends LanguageBoxController
     {
         ModelAndView model = new ModelAndView("page/student/main");
         Long user_id = id(request);
-        ArrayList<DBRecord> courses = course.getTeacherCourses(user_id);
-        ArrayList<DBRecord> sells = market.getTeacherSells(user_id);
-        model.addObject("courses",courses);
-        model.addObject("sells",sells);
+        model = addBoughtCourses(model,request);
+        model = addNews(model);
+        model = addSells(model,request);
+        model = addBoughtCourses(model,request);
+
         return model;
     }
     @RequestMapping("/courses")

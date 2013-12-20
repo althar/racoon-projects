@@ -20,21 +20,6 @@ import java.util.ArrayList;
 @RequestMapping("/service/teacher")
 public class TeacherController extends LanguageBoxController
 {
-    @Autowired
-    private PostgresqlDataSource dbProc;
-
-    @Autowired
-    private CourseService course;
-
-    @Autowired
-    private LibraryService library;
-
-    @Autowired
-    private MarketService market;
-
-    @Autowired
-    private StudentService student;
-
     //<editor-fold desc="Page">
     @RequestMapping("")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
@@ -42,9 +27,8 @@ public class TeacherController extends LanguageBoxController
         ModelAndView model = new ModelAndView("page/teacher/main");
         Long user_id = id(request);
         ArrayList<DBRecord> courses = course.getTeacherCourses(user_id);
-        ArrayList<DBRecord> sells = market.getTeacherSells(user_id);
+        model = addSells(model,request);
         model.addObject("courses",courses);
-        model.addObject("sells",sells);
         return model;
     }
     @RequestMapping("/courses")
