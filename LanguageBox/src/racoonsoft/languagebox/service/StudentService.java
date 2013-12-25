@@ -8,11 +8,8 @@ import racoonsoft.library.database.DBRecord;
 import java.util.ArrayList;
 
 @Service
-public class StudentService
+public class StudentService extends LanguageBoxService
 {
-    @Autowired
-    private PostgresqlDataSource dbProc;
-
     public ArrayList<DBRecord> getTeacherStudents(Long user_id) throws Exception
     {
         return dbProc.getRecords("SELECT * FROM \"user\" WHERE user_id="+user_id);

@@ -7,186 +7,48 @@
     <div class='white_block'>
         <h3>Курсы</h3>
         <div class='courses_list'>
-            <div class='courses_list-item'>
-                <div class='courses-image'>
-                    <img src="/img/course_preview.png" />
+            <c:forEach items="${bought_courses}" var="item">
+                <div class='courses_list-item'>
+                    <div class='courses-image'>
+                        <img src="/img/course_preview.png" />
+                    </div>
+                    <div class='courses-features'>
+                        <ul class='features_list no-bullet'>
+                            <li>
+                                <label>Курс:</label>
+                                <span class='feature'>${item.getStringValue('name')}</span>
+                            </li>
+                            <li>
+                                <label>Уровень:</label>
+                                <span class='feature'>${item.getStringValue('level')}</span>
+                            </li>
+                            <li>
+                                <label>Автор:</label>
+                                <span class='feature'>${item.getStringValue('author')}</span>
+                            </li>
+                            <li>
+                                <label>Дата заказа:</label>
+                                <span class='feature'><fmt:formatDate pattern="dd.MM.yyyy" value="${item.getDateValue('created')}" /></span>
+                            </li>
+                            <li>
+                                <label>Цена:</label>
+                                <span class='feature'>${item.getDoubleValue('price')} руб</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='courses-status'>
+                        <c:choose>
+                            <c:when test="${item.getStringValue('purchase_status')=='APPROVED'}">
+                                <button class='button small secondary' disabled>Оплачено</button>
+                            </c:when>
+                            <c:otherwise>
+                                <button class='button small secondary'>Оплатить</button>
+                            </c:otherwise>
+                        </c:choose>
+
+                    </div>
                 </div>
-                <div class='courses-features'>
-                    <ul class='features_list no-bullet'>
-                        <li>
-                            <label>Курс:</label>
-                            <span class='feature'>Straightforward</span>
-                        </li>
-                        <li>
-                            <label>Уровень:</label>
-                            <span class='feature'>Pre-intermediate</span>
-                        </li>
-                        <li>
-                            <label>Автор:</label>
-                            <span class='feature'>Иванова Анна</span>
-                        </li>
-                        <li>
-                            <label>Дата покупки:</label>
-                            <span class='feature'>01.10.2013</span>
-                        </li>
-                        <li>
-                            <label>Баллы:</label>
-                            <span class='feature'>145 из 475</span>
-                        </li>
-                        <li>
-                            <label>Цена:</label>
-                            <span class='feature'>2'000,00 руб</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class='courses-status'>
-                    <button class='button small secondary' disabled>Оплачено</button>
-                </div>
-            </div>
-            <div class='courses_list-item'>
-                <div class='courses-image'>
-                    <img src="/img/course_preview.png" />
-                </div>
-                <div class='courses-features'>
-                    <ul class='features_list no-bullet'>
-                        <li>
-                            <label>Курс:</label>
-                            <span class='feature'>Straightforward</span>
-                        </li>
-                        <li>
-                            <label>Уровень:</label>
-                            <span class='feature'>Pre-intermediate</span>
-                        </li>
-                        <li>
-                            <label>Автор:</label>
-                            <span class='feature'>Иванова Анна</span>
-                        </li>
-                        <li>
-                            <label>Дата покупки:</label>
-                            <span class='feature'>01.10.2013</span>
-                        </li>
-                        <li>
-                            <label>Баллы:</label>
-                            <span class='feature'>145 из 475</span>
-                        </li>
-                        <li>
-                            <label>Цена:</label>
-                            <span class='feature'>2'000,00 руб</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class='courses-status'>
-                    <button class='button small secondary' disabled>Оплачено</button>
-                </div>
-            </div>
-            <div class='courses_list-item'>
-                <div class='courses-image'>
-                    <img src="/img/course_preview.png" />
-                </div>
-                <div class='courses-features'>
-                    <ul class='features_list no-bullet'>
-                        <li>
-                            <label>Курс:</label>
-                            <span class='feature'>Straightforward</span>
-                        </li>
-                        <li>
-                            <label>Уровень:</label>
-                            <span class='feature'>Pre-intermediate</span>
-                        </li>
-                        <li>
-                            <label>Автор:</label>
-                            <span class='feature'>Иванова Анна</span>
-                        </li>
-                        <li>
-                            <label>Дата покупки:</label>
-                            <span class='feature'>01.10.2013</span>
-                        </li>
-                        <li>
-                            <label>Баллы:</label>
-                            <span class='feature'>145 из 475</span>
-                        </li>
-                        <li>
-                            <label>Цена:</label>
-                            <span class='feature'>2'000,00 руб</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class='courses-status'>
-                    <button class='button small secondary' disabled>Оплачено</button>
-                </div>
-            </div>
-            <div class='courses_list-item'>
-                <div class='courses-image'>
-                    <img src="/img/course_preview.png" />
-                </div>
-                <div class='courses-features'>
-                    <ul class='features_list no-bullet'>
-                        <li>
-                            <label>Курс:</label>
-                            <span class='feature'>Straightforward</span>
-                        </li>
-                        <li>
-                            <label>Уровень:</label>
-                            <span class='feature'>Pre-intermediate</span>
-                        </li>
-                        <li>
-                            <label>Автор:</label>
-                            <span class='feature'>Иванова Анна</span>
-                        </li>
-                        <li>
-                            <label>Дата покупки:</label>
-                            <span class='feature'>01.10.2013</span>
-                        </li>
-                        <li>
-                            <label>Баллы:</label>
-                            <span class='feature'>145 из 475</span>
-                        </li>
-                        <li>
-                            <label>Цена:</label>
-                            <span class='feature'>2'000,00 руб</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class='courses-status'>
-                    <button class='button small secondary' disabled>Оплачено</button>
-                </div>
-            </div>
-            <div class='courses_list-item'>
-                <div class='courses-image'>
-                    <img src="/img/course_preview.png" />
-                </div>
-                <div class='courses-features'>
-                    <ul class='features_list no-bullet'>
-                        <li>
-                            <label>Курс:</label>
-                            <span class='feature'>Straightforward</span>
-                        </li>
-                        <li>
-                            <label>Уровень:</label>
-                            <span class='feature'>Pre-intermediate</span>
-                        </li>
-                        <li>
-                            <label>Автор:</label>
-                            <span class='feature'>Иванова Анна</span>
-                        </li>
-                        <li>
-                            <label>Дата покупки:</label>
-                            <span class='feature'>01.10.2013</span>
-                        </li>
-                        <li>
-                            <label>Баллы:</label>
-                            <span class='feature'>145 из 475</span>
-                        </li>
-                        <li>
-                            <label>Цена:</label>
-                            <span class='feature'>2'000,00 руб</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class='courses-status'>
-                    <button class='button small secondary' disabled>Оплачено</button>
-                </div>
-            </div>
+            </c:forEach>
         </div>
     </div>
 </div>

@@ -8,10 +8,8 @@ import racoonsoft.library.database.DBRecord;
 import java.util.ArrayList;
 
 @Service
-public class ContentService extends LanguageBoxService
+public abstract class LanguageBoxService
 {
-    public ArrayList<DBRecord> getNews() throws Exception
-    {
-        return dbProc.getRecords("SELECT * FROM content WHERE type='NEWS'");
-    }
+    @Autowired
+    protected PostgresqlDataSource dbProc;
 }

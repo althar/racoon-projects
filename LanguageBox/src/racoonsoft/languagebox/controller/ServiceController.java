@@ -38,7 +38,7 @@ public class ServiceController extends LanguageBoxController
     public ModelAndView sells(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("section/sells");
-        ArrayList<DBRecord> sells = market.getTeacherSells(id(request));
+        ArrayList<DBRecord> sells = market.getSells(id(request));
         model.addObject("sells",sells);
         return model;
     }

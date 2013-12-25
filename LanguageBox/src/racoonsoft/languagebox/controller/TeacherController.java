@@ -36,7 +36,6 @@ public class TeacherController extends LanguageBoxController
     {
         ModelAndView model = new ModelAndView("page/teacher/courses");
         Long user_id = id(request);
-
         return model;
     }
     @RequestMapping("/students")

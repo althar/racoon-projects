@@ -1,9 +1,37 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <head>
-    <title></title>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Language Box</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
 </head>
 <body>
-    Teacher Main
+<%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>
+<div class='main_content'>
+<div class='main_content-inner row'>
+<div class='row'>
+    <%@include file="/WEB-INF/jsp/section/news.jsp" %>
+    <%@include file="/WEB-INF/jsp/section/how_to_use.jsp" %>
+</div>
+<div class='row'>
+    <%@include file="/WEB-INF/jsp/section/students.jsp" %>
+    <%@include file="/WEB-INF/jsp/section/sells.jsp" %>
+</div>
+</div>
+</div>
+<%@include file="/WEB-INF/jsp/section/footer.jsp" %>
 </body>
 </html>

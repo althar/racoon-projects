@@ -8,61 +8,23 @@
         <h3>Новости</h3>
         <table class='table'>
             <tbody>
-            <tr>
-                <td>
-                    Возможность добавления pdf файлов
-                </td>
-                <td>
-                    <i class='icons-star'></i>
-                </td>
-                <td>
-                    55
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Возможность добавления pdf файлов
-                </td>
-                <td>
-                    <i class='icons-star'></i>
-                </td>
-                <td>
-                    55
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Возможность добавления pdf файлов
-                </td>
-                <td>
-                    <i class='icons-star'></i>
-                </td>
-                <td>
-                    55
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Возможность добавления pdf файлов
-                </td>
-                <td>
-                    <i class='icons-star'></i>
-                </td>
-                <td>
-                    55
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Возможность добавления pdf файлов
-                </td>
-                <td>
-                    <i class='icons-star'></i>
-                </td>
-                <td>
-                    55
-                </td>
-            </tr>
+            <c:forEach items="${news}" var="item">
+                <tr>
+                    <td>
+                        <b>
+                            ${item.getStringValue('title')}
+                        </b>
+                        <br>
+                            ${item.getStringValue('text')}
+                    </td>
+                    <td>
+                        <i class='icons-star'></i>
+                    </td>
+                    <td>
+                        <fmt:formatDate pattern="dd.MM.yyyy" value="${item.getDateValue('created')}" />
+                    </td>
+                </tr>
+            </c:forEach>
             </tbody>
         </table>
         <a href="#">Все новости</a>

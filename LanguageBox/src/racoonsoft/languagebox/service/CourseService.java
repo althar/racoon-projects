@@ -8,18 +8,15 @@ import racoonsoft.library.database.DBRecord;
 import java.util.ArrayList;
 
 @Service
-public class CourseService
+public class CourseService extends LanguageBoxService
 {
-    @Autowired
-    private PostgresqlDataSource dbProc;
-
     public ArrayList<DBRecord> getTeacherCourses(Long user_id) throws Exception
     {
         return dbProc.getRecords("SELECT * FROM course WHERE user_id="+user_id);
     }
     public ArrayList<DBRecord> getBoughtCourses(Long user_id) throws Exception
     {
-        return dbProc.getRecords("SELECT c.*,cp.status AS purchase_status,cp.created AS purchase_created,cp.payment_transaction FROM course_purchase cp, course c " +
-                " WHERE cp.status = 'APPROVED' AND cp.user_id = c.user_id AND c.user_id="+user_id);
+        return dbProc.getRecords("SELECT c.*,cp.status AS purchase_status,cp.created AS purchase_created, cp.payment_transaction_id FROM course_purchase cp, course c " +
+                " WHERE (cp.status='APPROVED' OR cp.status='NEW') AND cp.course_id = c.id AND cp.user_id="+user_id);
     }
 }

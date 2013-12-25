@@ -4,6 +4,11 @@ public enum ActionResultCode
 {
 
     ACTION_SUCCESSFUL("Успех"),
+    ACTION_FAILED("Неудача"),
+
+    ACTION_FAILED_ALREADY_EXISTS("Неудача. Уже существует."),
+    ACTION_FAILED_DOES_NOT_EXIST("Неудача. Не существует."),
+
     REGISTRATION_SUCCESSFUL("Регистрация успешна"),
     REGISTRATION_FAILED_ALREADY_EXISTS("Ошибка регистрации. Уже существует."),
     REGISTRATION_FAILED_LACK_OF_DATA("Ошибка регистрации. Недостаточно данных"),

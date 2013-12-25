@@ -498,4 +498,29 @@ public class DBProcessor implements DataSource{
     {
         return getRecord("SELECT * FROM user WHERE login='"+login.replace("'","`")+" AND password='"+password.replace("'","`")+"'");
     }
+
+    public void setAutoCommit(boolean autoCommit) throws SQLException
+    {
+        getConnection().setAutoCommit(autoCommit);
+    }
+    public void rollback(Savepoint savepoint) throws SQLException
+    {
+        if(savepoint==null)
+        {
+            getConnection().rollback();
+        }
+        else
+        {
+            getConnection().rollback(savepoint);
+        }
+    }
+    public Savepoint setSavepoint(String name) throws Exception
+    {
+        setAutoCommit(false);
+        if(name==null)
+        {
+            return getConnection().setSavepoint();
+        }
+        return getConnection().setSavepoint(name);
+    }
 }
