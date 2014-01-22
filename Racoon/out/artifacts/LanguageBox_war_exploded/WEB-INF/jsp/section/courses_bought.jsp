@@ -30,10 +30,6 @@
                                 <label>Дата заказа:</label>
                                 <span class='feature'><fmt:formatDate pattern="dd.MM.yyyy" value="${item.getDateValue('created')}" /></span>
                             </li>
-                            <%--<li>--%>
-                                <%--<label>Баллы:</label>--%>
-                                <%--<span class='feature'>145 из 475</span>--%>
-                            <%--</li>--%>
                             <li>
                                 <label>Цена:</label>
                                 <span class='feature'>${item.getDoubleValue('price')} руб</span>

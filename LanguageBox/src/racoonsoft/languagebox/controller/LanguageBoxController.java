@@ -57,6 +57,12 @@ public abstract class LanguageBoxController
         model.addObject("news",news);
         return model;
     }
+    public ModelAndView addUser(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        User u = user(request);
+        model.addObject("user",u);
+        return model;
+    }
     public ModelAndView addBoughtCourses(ModelAndView model,HttpServletRequest request) throws Exception
     {
         ArrayList<DBRecord> bought_courses = course.getBoughtCourses(id(request));

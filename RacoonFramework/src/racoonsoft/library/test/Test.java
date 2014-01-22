@@ -29,22 +29,13 @@ public class Test
 	    long start = new Date().getTime();
         try
         {
-//            dbProc = new DBProcessor("racoonsoft.ru","select",5432,"althar","bredokbredok2000","org.postgresql.Driver","jdbc:postgresql:");
-//            dbProc.connect();
-//            proc = new ContentAPIProcessor("eY2OlZ7tCC42upkyvShmq6jj2XKQ5H","http://content.api.torg.mail.ru/1.0/");
-//
-////            extractCategories();
-////            extractSubcategories(null);
-//            extractModels("24");
-//            extractModels("26");
-//            extractModels("28");
+            String val = "ham";
             HashMap<String,Object> map1 = new HashMap<String, Object>();
-            map1.put("inner","in");
-            HashMap<String,Object> map = new HashMap<String, Object>();
-            map.put("do",22);
-            map.put("do22","222");
-            map.put("map",map1);
-            System.out.println(map.toString());
+            map1.put("val",val);
+            val = (String)map1.get("val");
+            val = "ham1";
+
+            System.out.println(map1.toString());
 
         }
         catch(Exception ex)

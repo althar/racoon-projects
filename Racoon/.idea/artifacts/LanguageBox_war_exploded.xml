@@ -22,6 +22,8 @@
           <element id="library" level="project" name="spring-batch-2.1.9" />
           <element id="library" level="project" name="spring-data-jpa-1.0.0" />
           <element id="library" level="project" name="spring-integration-2.2.3" />
+          <element id="library" level="project" name="org.springframework:org.springframework.web:3.2.5.RELEASE" />
+          <element id="library" level="project" name="commons-io:commons-io:2.1" />
         </element>
       </element>
     </root>

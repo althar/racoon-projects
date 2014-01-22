@@ -1,36 +1,47 @@
+/* line 264, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
+meta.foundation-mq-small {
+  font-family: "only screen and (min-width: 768px)";
+  width: 768px; }
+
+/* line 269, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "only screen and (min-width:1280px)";
+  width: 1280px; }
+
+/* line 274, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
+meta.foundation-mq-large {
+  font-family: "only screen and (min-width:1440px)";
+  width: 1440px; }
+
 /* Grid HTML Classes */
-/* line 106, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+/* line 116, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
 .row {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 1000px;
   *zoom: 1; }
-  /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+  /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
   .row:before, .row:after {
     content: " ";
     display: table; }
-  /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+  /* line 122, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
   .row:after {
     clear: both; }
-  /* line 110, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .column,
-  .row .columns {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 100%;
-    float: left; }
-  /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row.collapse .column,
-  .row.collapse .columns {
+  /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .row.collapse > .column,
+  .row.collapse > .columns {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     float: left; }
-  /* line 117, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 123, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .row.collapse .row {
+    margin-left: 0;
+    margin-right: 0; }
+  /* line 126, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .row {
     width: auto;
     margin-left: -0.9375em;
@@ -39,155 +50,169 @@
     margin-bottom: 0;
     max-width: none;
     *zoom: 1; }
-    /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+    /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
     .row .row:before, .row .row:after {
       content: " ";
       display: table; }
-    /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+    /* line 122, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
     .row .row:after {
       clear: both; }
-    /* line 118, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+    /* line 127, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
     .row .row.collapse {
       width: auto;
       margin: 0;
       max-width: none;
       *zoom: 1; }
-      /* line 184, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+      /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
       .row .row.collapse:before, .row .row.collapse:after {
         content: " ";
         display: table; }
-      /* line 185, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
+      /* line 122, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_global.scss */
       .row .row.collapse:after {
         clear: both; }
 
+/* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+.column,
+.columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
 @media only screen {
-  /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .column,
-  .row .columns {
+  /* line 137, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .column,
+  .columns {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
     float: left; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-1 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-1 {
     position: relative;
     width: 8.33333%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-2 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-2 {
     position: relative;
     width: 16.66667%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-3 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-3 {
     position: relative;
     width: 25%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-4 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-4 {
     position: relative;
     width: 33.33333%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-5 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-5 {
     position: relative;
     width: 41.66667%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-6 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-6 {
     position: relative;
     width: 50%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-7 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-7 {
     position: relative;
     width: 58.33333%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-8 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-8 {
     position: relative;
     width: 66.66667%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-9 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-9 {
     position: relative;
     width: 75%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-10 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-10 {
     position: relative;
     width: 83.33333%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-11 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-11 {
     position: relative;
     width: 91.66667%; }
 
-  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-12 {
+  /* line 140, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-12 {
     position: relative;
     width: 100%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-1 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-0 {
+    position: relative;
+    margin-left: 0%; }
+
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-1 {
     position: relative;
     margin-left: 8.33333%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-2 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-2 {
     position: relative;
     margin-left: 16.66667%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-3 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-3 {
     position: relative;
     margin-left: 25%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-4 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-4 {
     position: relative;
     margin-left: 33.33333%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-5 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-5 {
     position: relative;
     margin-left: 41.66667%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-6 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-6 {
     position: relative;
     margin-left: 50%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-7 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-7 {
     position: relative;
     margin-left: 58.33333%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-8 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-8 {
     position: relative;
     margin-left: 66.66667%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-9 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-9 {
     position: relative;
     margin-left: 75%; }
 
-  /* line 132, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .small-offset-10 {
+  /* line 144, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .small-offset-10 {
     position: relative;
     margin-left: 83.33333%; }
 
-  /* line 135, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 147, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   [class*="column"] + [class*="column"]:last-child {
     float: right; }
 
-  /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 148, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   [class*="column"] + [class*="column"].end {
     float: left; }
 
-  /* line 139, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 151, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .column.small-centered,
   .columns.small-centered {
     position: relative;
@@ -195,315 +220,289 @@
     margin-right: auto;
     float: none !important; } }
 /* Styles for screens that are atleast 768px; */
-@media only screen and (min-width: 48em) {
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-1 {
+@media only screen and (min-width: 768px) {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-1 {
     position: relative;
     width: 8.33333%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-2 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-2 {
     position: relative;
     width: 16.66667%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-3 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-3 {
     position: relative;
     width: 25%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-4 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-4 {
     position: relative;
     width: 33.33333%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-5 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-5 {
     position: relative;
     width: 41.66667%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-6 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-6 {
     position: relative;
     width: 50%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-7 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-7 {
     position: relative;
     width: 58.33333%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-8 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-8 {
     position: relative;
     width: 66.66667%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-9 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-9 {
     position: relative;
     width: 75%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-10 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-10 {
     position: relative;
     width: 83.33333%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-11 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-11 {
     position: relative;
     width: 91.66667%; }
 
-  /* line 146, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .row .large-12 {
+  /* line 158, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .large-12 {
     position: relative;
     width: 100%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .row .large-offset-0 {
+    position: relative;
+    margin-left: 0%; }
+
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-1 {
     position: relative;
     margin-left: 8.33333%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-2 {
     position: relative;
     margin-left: 16.66667%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-3 {
     position: relative;
     margin-left: 25%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-4 {
     position: relative;
     margin-left: 33.33333%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-5 {
     position: relative;
     margin-left: 41.66667%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-6 {
     position: relative;
     margin-left: 50%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-7 {
     position: relative;
     margin-left: 58.33333%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-8 {
     position: relative;
     margin-left: 66.66667%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-9 {
     position: relative;
     margin-left: 75%; }
 
-  /* line 150, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .row .large-offset-10 {
     position: relative;
     margin-left: 83.33333%; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 162, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .row .large-offset-11 {
+    position: relative;
+    margin-left: 91.66667%; }
+
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-2 {
     position: relative;
     left: 16.66667%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-2 {
     position: relative;
     right: 16.66667%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-3 {
     position: relative;
     left: 25%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-3 {
     position: relative;
     right: 25%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-4 {
     position: relative;
     left: 33.33333%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-4 {
     position: relative;
     right: 33.33333%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-5 {
     position: relative;
     left: 41.66667%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-5 {
     position: relative;
     right: 41.66667%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-6 {
     position: relative;
     left: 50%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-6 {
     position: relative;
     right: 50%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-7 {
     position: relative;
     left: 58.33333%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-7 {
     position: relative;
     right: 58.33333%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-8 {
     position: relative;
     left: 66.66667%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-8 {
     position: relative;
     right: 66.66667%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-9 {
     position: relative;
     left: 75%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-9 {
     position: relative;
     right: 75%;
     left: auto; }
 
-  /* line 154, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .push-10 {
     position: relative;
     left: 83.33333%;
     right: auto; }
 
-  /* line 155, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .pull-10 {
     position: relative;
     right: 83.33333%;
     left: auto; }
 
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-2 {
-    left: inherit; }
+  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
 
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-2 {
-    right: inherit; }
+  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
 
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-3 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-3 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-4 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-4 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-5 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-5 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-6 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-6 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-7 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-7 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-8 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-8 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-9 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-9 {
-    right: inherit; }
-
-  /* line 159, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-push-10 {
-    left: inherit; }
-
-  /* line 160, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
-  .small-pull-10 {
-    right: inherit; }
-
-  /* line 164, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_grid.scss */
+  /* line 171, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
   .column.large-centered,
   .columns.large-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  /* line 174, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; }
+
+  /* line 181, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_grid.scss */
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right !important; } }
 /* Pricing Tables */
-/* line 120, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+/* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
 .pricing-table {
   border: solid 1px #dddddd;
   margin-left: 0;
   margin-bottom: 1.25em; }
-  /* line 60, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 61, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table * {
     list-style: none;
     line-height: 1; }
-  /* line 123, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 124, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table .title {
     background-color: #dddddd;
     padding: 0.9375em 1.25em;
@@ -511,7 +510,7 @@
     color: #333333;
     font-weight: bold;
     font-size: 1em; }
-  /* line 124, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table .price {
     background-color: #eeeeee;
     padding: 0.9375em 1.25em;
@@ -519,7 +518,7 @@
     color: #333333;
     font-weight: normal;
     font-size: 1.25em; }
-  /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 126, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table .description {
     background-color: white;
     padding: 0.9375em;
@@ -529,7 +528,7 @@
     font-weight: normal;
     line-height: 1.4;
     border-bottom: dotted 1px #dddddd; }
-  /* line 126, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 127, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table .bullet-item {
     background-color: white;
     padding: 0.9375em;
@@ -538,227 +537,13 @@
     font-size: 0.875em;
     font-weight: normal;
     border-bottom: dotted 1px #dddddd; }
-  /* line 127, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_pricing-tables.scss */
+  /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_pricing-tables.scss */
   .pricing-table .cta-button {
     background-color: whitesmoke;
     text-align: center;
     padding: 1.25em 1.25em 0; }
 
-/* line 161, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-button, .button {
-  border-style: solid;
-  border-width: 1px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0 0 1.25em;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  padding-top: 0.75em;
-  padding-right: 1.5em;
-  padding-bottom: 0.8125em;
-  padding-left: 1.5em;
-  font-size: 1em;
-  background-color: #2ba6cb;
-  border-color: #2284a1;
-  color: white; }
-  /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #2284a1; }
-  /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button:hover, button:focus, .button:hover, .button:focus {
-    color: white; }
-  /* line 166, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.secondary, .button.secondary {
-    background-color: #e9e9e9;
-    border-color: #d0d0d0;
-    color: #333333; }
-    /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-      background-color: #d0d0d0; }
-    /* line 120, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-      color: #333333; }
-  /* line 167, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.success, .button.success {
-    background-color: #5da423;
-    border-color: #457a1a;
-    color: white; }
-    /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-      background-color: #457a1a; }
-    /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-      color: white; }
-  /* line 168, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.alert, .button.alert {
-    background-color: #c60f13;
-    border-color: #970b0e;
-    color: white; }
-    /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-      background-color: #970b0e; }
-    /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-      color: white; }
-  /* line 170, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.large, .button.large {
-    padding-top: 1em;
-    padding-right: 2em;
-    padding-bottom: 1.0625em;
-    padding-left: 2em;
-    font-size: 1.25em; }
-  /* line 171, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.small, .button.small {
-    padding-top: 0.5625em;
-    padding-right: 1.125em;
-    padding-bottom: 0.625em;
-    padding-left: 1.125em;
-    font-size: 0.8125em; }
-  /* line 172, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.tiny, .button.tiny {
-    padding-top: 0.4375em;
-    padding-right: 0.875em;
-    padding-bottom: 0.5em;
-    padding-left: 0.875em;
-    font-size: 0.6875em; }
-  /* line 173, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.expand, .button.expand {
-    padding-top: false;
-    padding-right: 0px;
-    padding-bottom: false0.0625em;
-    padding-left: 0px;
-    width: 100%; }
-  /* line 175, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.left-align, .button.left-align {
-    text-align: left;
-    text-indent: 0.75em; }
-  /* line 176, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.right-align, .button.right-align {
-    text-align: right;
-    padding-right: 0.75em; }
-  /* line 178, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  button.disabled, button[disabled], .button.disabled, .button[disabled] {
-    background-color: #2ba6cb;
-    border-color: #2284a1;
-    color: white;
-    cursor: default;
-    opacity: 0.6;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-    /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2284a1; }
-    /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      color: white; }
-    /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2ba6cb; }
-    /* line 179, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #e9e9e9;
-      border-color: #d0d0d0;
-      color: #333333;
-      cursor: default;
-      opacity: 0.6;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-      /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #d0d0d0; }
-      /* line 120, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        color: #333333; }
-      /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #e9e9e9; }
-    /* line 180, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
-      background-color: #5da423;
-      border-color: #457a1a;
-      color: white;
-      cursor: default;
-      opacity: 0.6;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-      /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #457a1a; }
-      /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        color: white; }
-      /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #5da423; }
-    /* line 181, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
-      background-color: #c60f13;
-      border-color: #970b0e;
-      color: white;
-      cursor: default;
-      opacity: 0.6;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
-      /* line 114, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        background-color: #970b0e; }
-      /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        color: white; }
-      /* line 136, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        background-color: #c60f13; }
-
-/* line 187, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-input.button,
-button.button {
-  padding-top: 0.8125em;
-  padding-bottom: 0.75em; }
-  /* line 189, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  input.button.tiny,
-  button.button.tiny {
-    padding-top: 0.5em;
-    padding-bottom: 0.4375em; }
-  /* line 190, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  input.button.small,
-  button.button.small {
-    padding-top: 0.625em;
-    padding-bottom: 0.5625em; }
-  /* line 191, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  input.button.large,
-  button.button.large {
-    padding-top: 1.03125em;
-    padding-bottom: 1.03125em; }
-
-@media only screen {
-  /* line 197, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  .button {
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    -webkit-transition: background-color 300ms ease-out;
-    -moz-transition: background-color 300ms ease-out;
-    transition: background-color 300ms ease-out; }
-    /* line 141, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/_foundation-global.scss */
-    .button:active {
-      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
-    /* line 205, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    .button.radius {
-      -webkit-border-radius: 3px;
-      border-radius: 3px; }
-    /* line 206, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-    .button.round {
-      -webkit-border-radius: 1000px;
-      border-radius: 1000px; } }
-@media only screen and (min-width: 48em) {
-  /* line 213, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_buttons.scss */
-  .button {
-    display: inline-block; } }
-/* line 104, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+/* line 109, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
 .reveal-modal-bg {
   position: fixed;
   height: 100%;
@@ -770,7 +555,7 @@ button.button {
   top: 0;
   left: 0; }
 
-/* line 106, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+/* line 111, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
 .reveal-modal {
   visibility: hidden;
   display: none;
@@ -778,7 +563,6 @@ button.button {
   left: 50%;
   z-index: 99;
   height: auto;
-  background-color: #fff;
   margin-left: -40%;
   width: 80%;
   background-color: white;
@@ -787,17 +571,17 @@ button.button {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   top: 50px; }
-  /* line 60, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+  /* line 62, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
   .reveal-modal .column,
   .reveal-modal .columns {
     min-width: 0; }
-  /* line 63, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+  /* line 65, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
   .reveal-modal > :first-child {
     margin-top: 0; }
-  /* line 64, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+  /* line 66, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
   .reveal-modal > :last-child {
     margin-bottom: 0; }
-  /* line 110, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+  /* line 115, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
   .reveal-modal .close-reveal-modal {
     font-size: 1.375em;
     line-height: 1;
@@ -808,47 +592,47 @@ button.button {
     font-weight: bold;
     cursor: pointer; }
 
-@media only screen and (min-width: 48em) {
-  /* line 116, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
+@media only screen and (min-width: 768px) {
+  /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
   .reveal-modal {
     padding: 1.875em;
     top: 6.25em; }
-    /* line 119, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-    .reveal-modal.small {
+    /* line 124, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+    .reveal-modal.tiny {
       margin-left: -15%;
       width: 30%; }
-    /* line 120, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-    .reveal-modal.medium {
+    /* line 125, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+    .reveal-modal.small {
       margin-left: -20%;
       width: 40%; }
-    /* line 121, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-    .reveal-modal.large {
+    /* line 126, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+    .reveal-modal.medium {
       margin-left: -30%;
       width: 60%; }
-    /* line 122, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-    .reveal-modal.xlarge {
+    /* line 127, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+    .reveal-modal.large {
       margin-left: -35%;
       width: 70%; }
-    /* line 123, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-    .reveal-modal.expand {
+    /* line 128, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+    .reveal-modal.xlarge {
       margin-left: -47.5%;
       width: 95%; } }
 @media print {
-  /* line 129, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.9/scss/foundation/components/_reveal.scss */
-  div:not(.reveal-modal) {
-    display: none; } }
-/* line 4, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  /* line 134, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.3.2/scss/foundation/components/_reveal.scss */
+  .reveal-modal {
+    background: #fff !important; } }
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 6, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 3, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 html {
   height: 100%;
   font-size: 100%; }
 
-/* line 9, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 6, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 body {
   height: auto !important;
   height: 100%;
@@ -862,40 +646,51 @@ body {
   background: #fbfbfb;
   position: relative; }
 
-/* line 22, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 19, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 a {
   text-decoration: none;
-  display: inline-block;
-  line-height: 1.1;
   color: #4982b2; }
-  /* line 27, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  /* line 22, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
   a.underline {
-    border-bottom: 1px solid; }
-  /* line 29, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+    text-decoration: underline; }
+  /* line 24, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
   a:hover {
     color: #00a4d9; }
-
-/* line 34, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
-.column, .row {
-  font-size: 16px !important; }
+  /* line 28, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  a [class^='fa-'] {
+    color: black;
+    text-decoration: none !important;
+    font-size: 14px !important; }
+  /* line 33, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+  a.button [class^='fa-'] {
+    color: white;
+    margin-left: 5px; }
   /* line 36, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
-  .column *:not([class*='column']),
-  .column *:not([class*='row']), .row *:not([class*='column']),
-  .row *:not([class*='row']) {
-    font-size: 13px; }
+  a.button .fa-sort-down {
+    position: relative;
+    top: -2px; }
 
 /* line 40, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+[class^='fa-'] {
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0px !important; }
+
+/* line 44, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+img {
+  max-width: 100%; }
+
+/* line 47, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 ul {
   margin: 0;
   padding: 0; }
 
-/* line 44, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 51, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 h1 {
   font-size: 28px !important;
   line-height: 1;
   font-weight: 300; }
 
-/* line 49, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 56, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 h2 {
   font-size: 22px !important;
   line-height: 1;
@@ -903,7 +698,7 @@ h2 {
   margin-bottom: 15px;
   font-weight: 400; }
 
-/* line 55, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 h3 {
   font-size: 13px !important;
   line-height: 1;
@@ -911,32 +706,39 @@ h3 {
   margin-bottom: 5px;
   font-weight: 700; }
 
-/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+hr.dotted_blue {
+  background: none;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dotted #4982b2; }
+
+/* line 76, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .main_content {
   padding-bottom: 35px;
   padding-top: 10px; }
 
-/* line 66, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 80, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-center {
   text-align: center; }
 
-/* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 82, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-left {
   text-align: left; }
 
-/* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 84, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .text-right {
   text-align: right; }
 
-/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 86, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .right {
   float: right; }
 
-/* line 74, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 88, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .left {
   float: left; }
 
-/* line 76, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+/* line 90, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
 .clearfix {
   *zoom: 1; }
   /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
@@ -946,6 +748,27 @@ h3 {
   /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
   .clearfix:after {
     clear: both; }
+
+/* line 93, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.mini-text {
+  font-size: 11px !important;
+  line-height: 1 !important; }
+
+/* line 97, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.no-bullet {
+  list-style: none; }
+
+/* line 100, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+img.bordered {
+  display: inline-block;
+  border: 5px solid white; }
+
+/* line 104, C:/Sites/middleman/languagebox/source/stylesheets/_global.sass */
+.white_block {
+  background: white;
+  border: 1px dotted #d4d4d4;
+  padding: 20px;
+  margin: 15px 0; }
 
 /* line 4, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
 .student_registr .simple_form,
@@ -1028,26 +851,36 @@ h3 {
       .simple_form .control-group .controls input[type='tel'],
       .simple_form .control-group .controls input[type='url'],
       .simple_form .control-group .controls input[type='date'],
-      .simple_form .control-group .controls input[type='number'] {
+      .simple_form .control-group .controls input[type='number'],
+      .simple_form .control-group .controls select, .simple_form .control-group .controls textarea {
         width: 100%; }
-  /* line 58, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+      /* line 58, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+      .simple_form .control-group .controls select {
+        width: 85%; }
+      /* line 60, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+      .simple_form .control-group .controls input[type='number'] {
+        width: 50px; }
+    /* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+    .simple_form .control-group .custom_checkbox {
+      margin: 10px 0; }
+  /* line 65, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
   .simple_form .form-action .note, .simple_form .form-action .note a {
     font-size: 11px;
     font-weigth: bold; }
 
-/* line 62, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+/* line 69, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
 .custom_checkbox {
-  display: block;
-  margin: 10px 0; }
-  /* line 65, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  display: block; }
+  /* line 71, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
   .custom_checkbox label.checkbox {
     text-transform: uppercase;
     font-size: 11px;
     font-weight: normal;
     padding-left: 20px;
-    margin-left: -20px; }
+    margin-left: -20px;
+    display: inline-block; }
 
-/* line 72, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+/* line 79, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
 input[type='text'],
 input[type='email'],
 input[type='password'],
@@ -1064,7 +897,7 @@ input[type='number'] {
   color: black;
   font-size: 11px !important;
   padding: 0 5px; }
-  /* line 88, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+  /* line 95, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='password']:focus,
@@ -1073,6 +906,14 @@ input[type='number'] {
   input[type='date']:focus,
   input[type='number']:focus {
     outline: none; }
+
+/* line 99, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+.pricing-table .bullet-item {
+  font-size: 1em; }
+/* line 102, C:/Sites/middleman/languagebox/source/stylesheets/_registration.sass */
+.pricing-table .cta-button {
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
 /* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
 .main_header,
@@ -1088,7 +929,7 @@ input[type='number'] {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 1000px;
   *zoom: 1;
   background: white; }
   /* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
@@ -1099,13 +940,24 @@ input[type='number'] {
   .top_header .top_header-inner:after {
     clear: both; }
   /* line 11, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  .personal_page .top_header .top_header-inner {
+    border-bottom: 1px dotted #2177a0;
+    margin-bottom: 25px; }
+  /* line 14, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
   .top_header .top_header-inner .logotype_block {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
     width: 33.33333%;
     float: left; }
-    /* line 13, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    /* line 16, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    .personal_page .top_header .top_header-inner .logotype_block {
+      position: relative;
+      padding-left: 0.9375em;
+      padding-right: 0.9375em;
+      width: 100%;
+      float: left; }
+    /* line 18, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
     .top_header .top_header-inner .logotype_block .link_type-logo {
       display: inline-block;
       line-height: 50px;
@@ -1117,11 +969,11 @@ input[type='number'] {
       background-size: auto 90%;
       color: #2177a0;
       padding-left: 55px; }
-      /* line 24, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+      /* line 29, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
       .top_header .top_header-inner .logotype_block .link_type-logo span {
         color: #8fb4d2;
         font-size: 14px; }
-  /* line 27, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  /* line 32, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
   .top_header .top_header-inner .contacts_block {
     position: relative;
     padding-left: 0.9375em;
@@ -1130,13 +982,13 @@ input[type='number'] {
     float: left;
     line-height: 50px;
     height: 50px; }
-    /* line 31, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    /* line 36, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
     .top_header .top_header-inner .contacts_block p {
       margin: 0;
       text-align: center;
       font-size: 11px;
       text-transform: uppercase; }
-  /* line 36, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  /* line 41, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
   .top_header .top_header-inner .log_in {
     position: relative;
     padding-left: 0.9375em;
@@ -1147,16 +999,16 @@ input[type='number'] {
     height: 50px;
     text-align: right;
     font-weight: 400; }
-    /* line 42, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    /* line 47, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
     .top_header .top_header-inner .log_in a {
       margin-left: 5px;
       font-size: 11px; }
 
-/* line 46, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+/* line 51, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
 .logotype {
   margin: 0; }
 
-/* line 49, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+/* line 54, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
 .main_menu {
   *zoom: 1;
   list-style: none;
@@ -1176,7 +1028,7 @@ input[type='number'] {
   /* line 23, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
   .main_menu:after {
     clear: both; }
-  /* line 58, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  /* line 63, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
   .main_menu .main_menu-item {
     display: inline-block;
     float: left;
@@ -1184,13 +1036,13 @@ input[type='number'] {
     text-align: center;
     margin-left: 30px;
     padding: 5px 0; }
-    /* line 65, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    /* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
     .main_menu .main_menu-item:first-child {
       margin-left: 75px; }
-    /* line 68, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+    /* line 73, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
     .main_menu .main_menu-item:last-child .main_menu-link {
       border: none; }
-  /* line 70, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
+  /* line 75, C:/Sites/middleman/languagebox/source/stylesheets/_header.sass */
   .main_menu .main_menu-link {
     color: white;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
@@ -1259,6 +1111,113 @@ input[type='number'] {
   .page_article p {
     margin: 5px 0; }
 
-/* line 13, C:/Sites/middleman/languagebox/source/stylesheets/devise.sass */
+/* line 1, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+button,
+.button,
+input[type='submit'],
+button.tiny, button.large, button.small {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  margin: 5px 0;
+  height: 27px;
+  line-height: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #00abe5;
+  background-color: #00cdef;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00cdef), color-stop(100%, #00a4e3));
+  background-image: -webkit-linear-gradient(#00cdef, #00a4e3);
+  background-image: linear-gradient(#00cdef, #00a4e3);
+  box-shadow: inset 0 1px 0 #00e0f5, 0 1px 2px rgba(0, 0, 0, 0.5); }
+  /* line 20, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button:hover,
+  .button:hover,
+  input[type='submit']:hover,
+  button.tiny:hover, button.large:hover, button.small:hover {
+    background-color: #23e0ff;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #23e0ff), color-stop(100%, #00a4e3));
+    background-image: -webkit-linear-gradient(#23e0ff, #00a4e3);
+    background-image: linear-gradient(#23e0ff, #00a4e3);
+    color: white; }
+  /* line 23, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button.secondary,
+  .button.secondary,
+  input[type='submit'].secondary,
+  button.tiny.secondary, button.large.secondary, button.small.secondary {
+    border: 1px solid #a6a6a6;
+    background-color: #b7b7b7;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b7b7b7), color-stop(100%, #a4a4a4));
+    background-image: -webkit-linear-gradient(#b7b7b7, #a4a4a4);
+    background-image: linear-gradient(#b7b7b7, #a4a4a4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.5); }
+    /* line 27, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+    button.secondary:hover,
+    .button.secondary:hover,
+    input[type='submit'].secondary:hover,
+    button.tiny.secondary:hover, button.large.secondary:hover, button.small.secondary:hover {
+      color: white;
+      background-color: #d1d1d1;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1d1d1), color-stop(100%, #a4a4a4));
+      background-image: -webkit-linear-gradient(#d1d1d1, #a4a4a4);
+      background-image: linear-gradient(#d1d1d1, #a4a4a4); }
+    /* line 30, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+    button.secondary:active, button.secondary:focus,
+    .button.secondary:active,
+    .button.secondary:focus,
+    input[type='submit'].secondary:active,
+    input[type='submit'].secondary:focus,
+    button.tiny.secondary:active,
+    button.tiny.secondary:focus, button.large.secondary:active, button.large.secondary:focus, button.small.secondary:active, button.small.secondary:focus {
+      color: white; }
+  /* line 32, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button.tiny,
+  .button.tiny,
+  input[type='submit'].tiny,
+  button.tiny.tiny, button.large.tiny, button.small.tiny {
+    color: white;
+    padding: 0 10px;
+    font-size: 11px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  /* line 38, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button + button, button + .button, button + input[type='submit'],
+  .button + button,
+  .button + .button,
+  .button + input[type='submit'],
+  input[type='submit'] + button,
+  input[type='submit'] + .button,
+  input[type='submit'] + input[type='submit'],
+  button.tiny + button,
+  button.tiny + .button,
+  button.tiny + input[type='submit'], button.large + button, button.large + .button, button.large + input[type='submit'], button.small + button, button.small + .button, button.small + input[type='submit'] {
+    margin-left: 3px; }
+  /* line 42, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button:focus,
+  .button:focus,
+  input[type='submit']:focus,
+  button.tiny:focus, button.large:focus, button.small:focus {
+    outline: none; }
+  /* line 45, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+  button[disabled],
+  .button[disabled],
+  input[type='submit'][disabled],
+  button.tiny[disabled], button.large[disabled], button.small[disabled] {
+    text-shadow: none !important;
+    background: #e9e9e9; }
+    /* line 48, C:/Sites/middleman/languagebox/source/stylesheets/_buttons.sass */
+    button[disabled]:hover,
+    .button[disabled]:hover,
+    input[type='submit'][disabled]:hover,
+    button.tiny[disabled]:hover, button.large[disabled]:hover, button.small[disabled]:hover {
+      background: #e9e9e9; }
+
+/* line 16, C:/Sites/middleman/languagebox/source/stylesheets/devise.sass */
 .top_header-inner {
   border-bottom: 1px dotted #6092bc; }

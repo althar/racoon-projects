@@ -27,7 +27,10 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-
+a
+{
+    cursor: pointer;
+}
 audio,
 canvas,
 video {
@@ -408,4 +411,8 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+.hidden
+{
+    display:none;
 }

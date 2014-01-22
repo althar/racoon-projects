@@ -3,6 +3,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<div id="dialog-message" class="hidden" title="Внимание">
+    <p>
+        Уверены?
+    </p>
+</div>
 <header class='main_header'>
     <div class='top_header'>
         <div class='top_header-inner row'>
@@ -17,7 +22,7 @@
             <div class='log_in column push-4'>
                 <ul class='top_menu inline-list right'>
                     <li>
-                        <span class='top_menu-text'>${user.name}</span>
+                        <span class='top_menu-text'>${user.getStringValue('name')}</span>
                     </li>
                     <li class='divider'>
                         <span class='top_menu-text'></span>
@@ -47,7 +52,7 @@
                 <a class="main_menu-link" href="/">Главная</a>
             </li>
             <li class='main_menu-item'>
-                <a class="main_menu-link" href="/teacher/courses.html">Курсы</a>
+                <a class="main_menu-link" href="/service/teacher/courses.html">Курсы</a>
             </li>
             <li class='main_menu-item'>
                 <a class="main_menu-link" href="#">Ученики</a>

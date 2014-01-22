@@ -129,7 +129,20 @@ public class UserProcessor
                 UserSession session = sessions.get(sessionId);
                 if(u==null)
                 {
-                    result = new ActionResult(ActionResultCode.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
+                    User anonymous = new User(new HashMap<String, Object>());
+                    anonymous.setValue("id",-1l);
+                    DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
+                    sessionId = sessionRec.getStringValue("session_id");
+                    setCookie(response,"session_id",sessionId,8640000);
+                    // Add session
+                    session = new UserSession(8640000,anonymous.getID(),sessionId);
+                    session.setAnonymous(anonymous);
+                    cleanSessions();
+                    sessions.put(sessionId,session);
+                    result.setResult(ActionResultCode.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
+                    result.setUser(anonymous);
+                    result.setData("session_id",sessionId);
+                    return result;
                 }
                 else
                 {

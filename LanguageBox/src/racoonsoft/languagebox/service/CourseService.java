@@ -16,7 +16,7 @@ public class CourseService extends LanguageBoxService
     }
     public ArrayList<DBRecord> getBoughtCourses(Long user_id) throws Exception
     {
-        return dbProc.getRecords("SELECT c.*,cp.status AS purchase_status,cp.created AS purchase_created, cp.payment_transaction_id FROM course_purchase cp, course c " +
+        return dbProc.getRecords("SELECT c.*,cp.status AS purchase_status,cp.created AS purchase_created, cp.seller_fee_transaction_id FROM course_purchase cp, course c " +
                 " WHERE (cp.status='APPROVED' OR cp.status='NEW') AND cp.course_id = c.id AND cp.user_id="+user_id);
     }
 }

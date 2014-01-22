@@ -11,12 +11,16 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
-    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet"
+          type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic"
+          media="screen" rel="stylesheet" type="text/css"/>
+
+    <link href="/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/css/application.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script src="/js/jq/jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="/js/common/all.js" type="text/javascript"></script>
 </head>
 <body>
 <%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>

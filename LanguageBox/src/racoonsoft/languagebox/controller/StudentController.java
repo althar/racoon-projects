@@ -16,23 +16,15 @@ import java.util.ArrayList;
 @RequestMapping("/service/student")
 public class StudentController extends LanguageBoxController
 {
-    @RequestMapping("/header")
-    public ModelAndView header(HttpServletRequest request, HttpServletResponse response) throws Exception
-    {
-        ModelAndView model = new ModelAndView("section/header_student");
-        Long user_id = id(request);
-        return model;
-    }
     @RequestMapping("")
     public ModelAndView mainPage(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/main");
-        Long user_id = id(request);
+        model = addUser(model,request);
         model = addBoughtCourses(model,request);
         model = addNews(model);
         model = addSells(model,request);
         model = addBoughtCourses(model,request);
-
         return model;
     }
     @RequestMapping("/courses")
