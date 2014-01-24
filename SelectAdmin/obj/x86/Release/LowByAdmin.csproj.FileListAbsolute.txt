@@ -25,7 +25,6 @@ C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Release\LowByAdmin
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\obj\x86\Release\LowByAdmin.pdb
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\LowByAdmin.exe
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\LowByAdmin.pdb
-C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\HTMLWYSIWYG.dll
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\SelectAdmin\bin\Release\HTMLWYSIWYG.pdb

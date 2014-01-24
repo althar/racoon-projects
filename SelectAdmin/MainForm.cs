@@ -90,13 +90,13 @@ namespace LowByAdmin
             if (cells.Length >= 3)
             {
                 string brand = cells[0].Trim();
-                string article = cells[1].Trim();
-                string sell_price = cells[3].ToLower().Replace("руб.", "").Replace("рублей", "").Trim();
+                string article = cells[2].Trim();
+                string sell_price = cells[3].ToLower().Replace("руб.", "").Replace("рублей", "").Replace("р.", "").Trim();
                 string name = cells[2];
                 string purchase_price = "";
                 if (cells.Length > 4 && cells[4].ToString() != "")
                 {
-                    purchase_price = cells[4].ToLower().Replace("руб.", "").Replace("рублей", "").Trim();
+                    purchase_price = cells[4].ToLower().Replace("руб.", "").Replace("рублей", "").Replace("р.", "").Trim();
                 }
                 
                 double sell_price_double = 0;

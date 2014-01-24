@@ -17,6 +17,7 @@ import racoonsoft.languagebox.interceptor.HistoryInterceptor;
 import racoonsoft.languagebox.service.CourseService;
 import racoonsoft.languagebox.service.LibraryService;
 import racoonsoft.languagebox.service.MarketService;
+import racoonsoft.languagebox.service.UploadProcessor;
 import racoonsoft.library.sms.SMSProcessor;
 
 @Configuration
@@ -38,6 +39,9 @@ public class MainConfig extends WebMvcConfigurerAdapter
     @Value("${sms.password}")
     private String smsPassword;
 
+    @Value("${upload.material_path}")
+    private String materialPath;
+
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer()
     {
@@ -49,22 +53,6 @@ public class MainConfig extends WebMvcConfigurerAdapter
         pspc.setIgnoreUnresolvablePlaceholders( true );
         return pspc;
 	}
-
-//    @Bean
-//    public LibraryService libraryService()
-//    {
-//        return new LibraryService();
-//    }
-//    @Bean
-//    public MarketService marketService()
-//    {
-//        return new MarketService();
-//    }
-//    @Bean
-//    public CourseService courseService()
-//    {
-//        return new CourseService();
-//    }
 
 	@Bean
 	public ScheduledAnnotationBeanPostProcessor scheduledAnnotationBeanPostProcessor()
@@ -93,6 +81,22 @@ public class MainConfig extends WebMvcConfigurerAdapter
     public SMSProcessor smsService()
     {
         return new SMSProcessor(smsLogin,smsPassword);
+    }
+
+    @Bean
+    public UploadProcessor uploadProcessor()
+    {
+        try
+        {
+            UploadProcessor proc = new UploadProcessor(materialPath);
+            proc.start();
+            return proc;
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex.toString());
+            return null;
+        }
     }
 
     @Override

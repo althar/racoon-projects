@@ -14,7 +14,8 @@ public class MultipartFilesStructure
         return files;
     }
 
-    public void setFiles( CommonsMultipartFile[] files ) {
+    public void setFiles( CommonsMultipartFile[] files )
+    {
         this.files = files;
     }
 }

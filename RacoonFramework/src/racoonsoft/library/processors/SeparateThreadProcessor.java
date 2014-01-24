@@ -6,9 +6,25 @@ import racoonsoft.library.logging.Logger;
 
 public abstract class SeparateThreadProcessor implements Runnable
 {
-    private Thread t;
-    private boolean IsRunning;
-    private String Name;
+    protected Thread t;
+    protected boolean IsRunning;
+    protected String Name;
+
+    public Thread getT() {
+        return t;
+    }
+
+    public boolean isRunning() {
+        return IsRunning;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
 
     public SeparateThreadProcessor(String processor_name)
     {
@@ -52,5 +68,5 @@ public abstract class SeparateThreadProcessor implements Runnable
         }
     }
 
-    public abstract void process();
+    public abstract void process() throws Exception;
 }

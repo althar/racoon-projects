@@ -83,9 +83,9 @@
             this.ButtMenuGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtMenuImportGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtMenuUpdatePrices = new System.Windows.Forms.ToolStripMenuItem();
+            this.ButtMenuHideGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtArticles = new System.Windows.Forms.ToolStripMenuItem();
             this.DialogOpenImportGoods = new System.Windows.Forms.OpenFileDialog();
-            this.ButtMenuHideGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControlMain.SuspendLayout();
             this.TabGoods.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridGoods)).BeginInit();
@@ -596,6 +596,13 @@
             this.ButtMenuUpdatePrices.Text = "Обновление цен ассортимента";
             this.ButtMenuUpdatePrices.Click += new System.EventHandler(this.ButtMenuUpdatePrices_Click);
             // 
+            // ButtMenuHideGoods
+            // 
+            this.ButtMenuHideGoods.Name = "ButtMenuHideGoods";
+            this.ButtMenuHideGoods.Size = new System.Drawing.Size(250, 22);
+            this.ButtMenuHideGoods.Text = "Убрать товары из ассортимента";
+            this.ButtMenuHideGoods.Click += new System.EventHandler(this.ButtMenuHideGoods_Click);
+            // 
             // ButtArticles
             // 
             this.ButtArticles.Name = "ButtArticles";
@@ -606,13 +613,6 @@
             // DialogOpenImportGoods
             // 
             this.DialogOpenImportGoods.Filter = "Excel|*.csv";
-            // 
-            // ButtMenuHideGoods
-            // 
-            this.ButtMenuHideGoods.Name = "ButtMenuHideGoods";
-            this.ButtMenuHideGoods.Size = new System.Drawing.Size(250, 22);
-            this.ButtMenuHideGoods.Text = "Убрать товары из ассортимента";
-            this.ButtMenuHideGoods.Click += new System.EventHandler(this.ButtMenuHideGoods_Click);
             // 
             // MainForm
             // 

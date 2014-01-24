@@ -3,6 +3,10 @@ package racoonsoft.languagebox.service;
 import org.springframework.stereotype.Service;
 import racoonsoft.library.database.DBRecord;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -55,5 +59,51 @@ public class LibraryService extends LanguageBoxService
         folder.setValue("path",path);
         folder.setValue("folders",folders);
         return folder;
+    }
+
+    public Long addMaterial(Long userId,Long folderId,String name,Long size) throws Exception
+    {
+        HashMap<String,Object> pars = new HashMap<String, Object>();
+        pars.put("library_id",folderId);
+        pars.put("name",name);
+        pars.put("size",size);
+        return dbProc.executeInsert("material",pars);
+    }
+
+    public void delete(String type,Long id,Long userId) throws Exception
+    {
+        if(type.equalsIgnoreCase("folder"))
+        {
+            dbProc.executeNonQuery("DELETE FROM library WHERE id="+id+" AND user_id="+userId);
+        }
+        else if(type.equalsIgnoreCase("material"))
+        {
+            dbProc.executeNonQuery("DELETE FROM material WHERE id="+id+" AND library_id IN (SELECT id FROM library WHERE user_id="+userId+")");
+        }
+    }
+    public void rename(String type,Long id,Long userId,String name) throws Exception
+    {
+        if(type.equalsIgnoreCase("folder"))
+        {
+            dbProc.executeNonQuery("UPDATE library SET name='"+name.replace("'","`")+"' WHERE id="+id+" AND user_id="+userId);
+        }
+        else if(type.equalsIgnoreCase("material"))
+        {
+            dbProc.executeNonQuery("UPDATE material SET name='"+name.replace("'","`")+"' WHERE id="+id+" AND library_id IN (SELECT id FROM library WHERE user_id="+userId+")");
+        }
+    }
+    public DBRecord getMaterial(Long userId,Long id) throws Exception
+    {
+        DBRecord rec = dbProc.getRecord("SELECT * FROM material WHERE id=" + id + " AND library_id IN (SELECT id FROM library WHERE user_id=" + userId + ")");
+        return rec;
+    }
+    public BufferedInputStream getMaterialStream(Long id) throws Exception
+    {
+        DBRecord rec = dbProc.getRecord("SELECT id FROM material WHERE id=" + id);
+        if(rec!=null)
+        {
+            return new BufferedInputStream(new FileInputStream(UploadProcessor.uploadMaterialPath+rec.getID()));
+        }
+        return null;
     }
 }

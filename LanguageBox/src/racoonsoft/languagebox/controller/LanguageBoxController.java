@@ -29,6 +29,9 @@ public abstract class LanguageBoxController
     @Autowired
     protected StudentService student;
 
+    @Autowired
+    protected UploadProcessor uploader;
+
     public Long id(HttpServletRequest request)
     {
         return (Long)request.getAttribute("user_id");

@@ -24,6 +24,8 @@
     <script src="/js/common/all.js" type="text/javascript"></script>
     <script src="/js/logic/service/teacher/courses.js" type="text/javascript"></script>
     <script src="/js/jq/jquery-ui-1.10.4.js" type="text/javascript"></script>
+    <script src="/js/jq/ajax-addon.js" type="text/javascript"></script>
+    <script src="/js/jq/ajax-download-addon.js" type="text/javascript"></script>
 </head>
 <body>
 <%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>

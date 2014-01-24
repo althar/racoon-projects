@@ -79,13 +79,21 @@
             </c:forEach>
             <c:forEach items="${folder.getRecords('materials')}" var="material">
                 <li class='library_list-item' entity-type="material" entity-id="${material.getLongValue('id')}">
-                    <div class='item_icon'>
-                        <i class='fa-folder-open'></i>
-                    </div>
+                    <%--<div class='item_icon'>--%>
+                        <%--<i class='fa-folder-open'></i>--%>
+                    <%--</div>--%>
                     <div class='item_name'>
-                        <a class="entity-link" folder-id="${folder.getID()}">${folder.getStringValue('name')}</a>
+                        <a class="entity-link" folder-id="${folder.getID()}" entity-type="material" entity-id="${material.getLongValue('id')}">${material.getStringValue('name')}</a>
+                        <input type="text" class="hidden entity-input" entity-type="material" entity-id="${material.getLongValue('id')}" value="${material.getStringValue('name')}">
                         <div class='library_list-controls'>
                             <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">Удалить
+                                <i class='fa-arrow-right'></i>
+                            </a>
+                            <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">Переименовать
+                                <i class='fa-arrow-right'></i>
+                            </a>
+                            <%--<a href="/service/teacher/download_material?id=${material.getLongValue('id')}">Скачать--%>
+                            <a onclick="$.fileDownload('/service/teacher/download_material?id=${material.getLongValue('id')}')">Скачать
                                 <i class='fa-arrow-right'></i>
                             </a>
                         </div>
