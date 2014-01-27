@@ -2,6 +2,7 @@ var fileCount = 0;
 
 $(document).ready(function () {
     library.bindFolderControls();
+    library.checkUploadFiles();
 });
 function uploadProcess(e) {
     alert(e);
@@ -37,6 +38,11 @@ library =
     showAddFile: function (folder_id) {
         //1. Hide all other library sections
         $(".library-section").hide();
+        //2 . Remove previous
+        $(".add-file-list li").remove();
+        $("#add-file-form>input[type=\"file\"]").remove();
+        $(".add-file-input").replaceWith("<input type='file' class='add-file-input' name='files' multiple>");
+        library.bindAddFileChange();
         //3. Show add file form
         $("#add-file").show();
     },
@@ -52,6 +58,7 @@ library =
         $('.dropdown').dropit({
             triggerParentEl: '.dropdown_inner'
         });
+
         $(".add-folder-link").unbind("click");
         $(".add-folder-link").bind("click", function () {
             library.createFolder();
@@ -150,7 +157,7 @@ library =
         $(".add-file-link").bind("click", function () {
             library.showAddFile();
         });
-        library.bindAddFileChange();
+
         $(".cancel-add-file").unbind('click');
         $(".cancel-add-file").click(function () {
             var currentFolderId = $("#current-folder-id").val();
@@ -165,16 +172,33 @@ library =
                 url: "/service/teacher/upload_files",  //Server script to process data
                 type: 'POST',
                 success: function () {
-                    alert("done upload");
                     $(".library-loader").hide();
+                    isCheckingUpload = true;
                 },
                 error: function () {
-                    alert("error upload");
+                    alert("Что-то пошло не так. Попробуйте снова через час.");
                     $(".library-loader").hide();
                 },
                 uploadProgress: function(evt) {
                     if (evt.lengthComputable) {
-                        document.title = "Loaded " + parseInt( (evt.loaded / evt.total * 100), 10) + "%";
+                        isCheckingUpload = false;
+                        var loaded = parseInt((evt.loaded / evt.total * 100), 10)*0.8;
+
+                        $.ajax({
+                            url: "/service/teacher/upload_progress",
+                            async: true,
+                            dataType: "xml",
+                            success: function (xml) {
+                                var progress = $("root>progress",xml).text();
+                                var totalProgress = progress*0.2+loaded*0.8;
+                                totalProgress = Math.round(totalProgress).toFixed(2);
+                                $("#progress-bar").show();
+                                $("#upload-details").html(totalProgress+"%");
+                                $("#upload-progress-bar").progressbar("value",parseInt(totalProgress));
+
+                            }
+                        });
+
                     }
                     else {
                         console.log("Length not computable.");
@@ -189,9 +213,11 @@ library =
                 processData: false
             });
         });
+
+        // Check uploading
+        $("#upload-progress-bar").progressbar({value:30});
     },
     bindAddFileChange: function () {
-
         $(".add-file-input").unbind('change');
         $(".add-file-input").change(function () {
             for (var i = 0; i < this.files.length; ++i) {
@@ -201,8 +227,9 @@ library =
                 +"<div class='item_delete'><a><i class='fa-times'></i></a></div></div></li>";
                 $(".add-file-list").append(fileItem);
             }
-            $("#add-file-form").prepend("<input type='file' class='add-file-input' name='files' multiple>");
-            $(this).hide();
+            $(this).appendTo("#add-file-form");
+            $("#add-file-form").after("<input type='file' class='add-file-input' name='files' multiple>");
+            $("#add-file-form>input[type=\"file\"]").hide();
 
             library.bindAddFileChange();
         });
@@ -216,5 +243,42 @@ library =
         $(".new-folder-name").select();
 
 
+    },
+    checkUploadFiles: function () {
+        var check = function(){
+            $.ajax({
+                url: "/service/teacher/upload_progress",
+                async: true,
+                dataType: "xml",
+                success: function (xml) {
+
+                    if(isCheckingUpload)
+                    {
+                        var uploaded = $("root>progress",xml).text();
+                        var isUploading = $("root>is_uploading",xml).text();
+
+                        if(isUploading=="true"&&uploaded*1!=100)
+                        {
+                            uploaded = uploaded*0.2+80;
+                            uploaded = Math.round(uploaded).toFixed(2);
+                            $("#progress-bar").show();
+                            $("#upload-details").html(uploaded+"%");
+                            $("#upload-progress-bar").progressbar("value",parseInt(uploaded));
+                        }
+                        else
+                        {
+                            $("#progress-bar").hide();
+                        }
+                    }
+                    setTimeout(check,300);
+                },
+                failure: function () {
+                    alert("Серверная ошибка. Попробуйте позже");
+                    $(".library-loader").show();
+                }
+            });
+        };
+        check();
     }
 }
+var isCheckingUpload = true;

@@ -19,6 +19,7 @@
     <link href="/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="/css/application.css" media="screen" rel="stylesheet" type="text/css"/>
     <link href="/css/ui-lightness/jquery-ui-1.10.4.custom.css" media="screen" rel="stylesheet" type="text/css"/>
+    <%--<link href="/css/jquery-ui.css" media="screen" rel="stylesheet" type="text/css"/>--%>
 
     <script src="/js/jq/jquery-2.0.3.js" type="text/javascript"></script>
     <script src="/js/common/all.js" type="text/javascript"></script>

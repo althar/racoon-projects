@@ -16,9 +16,10 @@ public class UploadingFile
     private String extension;
     private Long size;
     private Long writtenSize;
+    private Long folderId;
 
 
-    public UploadingFile(String name,Long size,InputStream in,Long materialId) throws Exception
+    public UploadingFile(String name,Long size,InputStream in,Long materialId,Long folderId) throws Exception
     {
         this.name = name;
         inputStream = in;
@@ -28,8 +29,21 @@ public class UploadingFile
         extension = ""; // TODO
         this.size = size;
         writtenSize = 0l;
+        this.folderId = folderId;
     }
 
+    public Long getFolderId() {
+        return folderId;
+    }
+
+    public void setFolderId(Long folderId) {
+        this.folderId = folderId;
+    }
+
+    public Integer getUploadPercent()
+    {
+        return (int)((writtenSize*1.0/size)*100.0);
+    }
     public String getName() {
         return name;
     }

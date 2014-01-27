@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.languagebox.structure.UploadingFile;
+import racoonsoft.languagebox.structure.UploadingFileStatus;
+import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.processors.SeparateThreadProcessor;
 
 import java.io.InputStream;
@@ -47,7 +49,7 @@ public class UploadProcessor extends SeparateThreadProcessor
             String name = multipartFile.getFileItem().getName();
             Long id = library.addMaterial(userId,folderId,name,size);
 
-            UploadingFile file = new UploadingFile(name,size,in,id);
+            UploadingFile file = new UploadingFile(name,size,in,id,folderId);
             ArrayList<UploadingFile> files = userUploadingFiles.get(userId);
             if(files == null)
             {
@@ -80,5 +82,45 @@ public class UploadProcessor extends SeparateThreadProcessor
         }
         Thread.sleep(1);
     }
+
+    public DBRecord getFolderUploadInfo(Long userId, Long folderId)
+    {
+        DBRecord rec = new DBRecord();
+        rec.setValue("user_id",userId);
+        rec.setValue("folder_id",folderId);
+        ArrayList<DBRecord> items = new ArrayList<DBRecord>();
+        ArrayList<UploadingFile> files = userUploadingFiles.get(userId);
+        Long totalSize = 0l;
+        Long totalWrittenSize = 0l;
+        Integer totalProgress = 0;
+        boolean isUploading = false;
+        if(files!=null)
+        {
+            for(UploadingFile file: files)
+            {
+                if(folderId==null||folderId == file.getFolderId())
+                {
+                    if(file.getStatus()== UploadingFileStatus.IN_PROGRESS)
+                    {
+                        DBRecord fileInfo = new DBRecord();
+                        fileInfo.setValue("name",file.getName());
+                        fileInfo.setValue("size", file.getSize());
+                        fileInfo.setValue("written",file.getWrittenSize());
+                        fileInfo.setValue("progress",file.getUploadPercent());
+                        totalSize+=file.getSize();
+                        totalWrittenSize+=file.getWrittenSize();
+                        items.add(fileInfo);
+                        isUploading = true;
+                    }
+                }
+            }
+        }
+        totalProgress = (int)((totalWrittenSize*1.0/totalSize)*100.0);
+        rec.setValue("progress",totalProgress);
+        rec.setValue("is_uploading",isUploading);
+        rec.setValue("files",items);
+        return rec;
+    }
+
 
 }

@@ -12,10 +12,10 @@
             </ul>
             <form:form method="post" modelAttribute="add-file-form" enctype="multipart/form-data" action="/service/teacher/upload_files" >
                 <input type="hidden" id="form-folder-id" value="" name="folder_id">
-                <input type='file' class="add-file-input" name="files" multiple>
-                <a class='button tiny accept-add-file'>Загрузить</a>
-                <a class='button tiny secondary cancel-add-file'>Отменить</a>
             </form:form>
+            <input type='file' class="add-file-input" name="files" multiple>
+            <a class='button tiny accept-add-file'>Загрузить</a>
+            <a class='button tiny secondary cancel-add-file'>Отменить</a>
         </div>
     </div>
 </div>

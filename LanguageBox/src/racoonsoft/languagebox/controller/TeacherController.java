@@ -82,8 +82,7 @@ public class TeacherController extends LanguageBoxController
                                     Model map,Long folder_id,HttpServletRequest request) throws Exception
     {
         uploader.addFilesToUpload(id(request),folder_id,uploadForm.getFiles());
-        String str = "";
-        return new ModelAndView("");
+        return new ModelAndView("document/plain");
     }
     @RequestMapping("/delete")
     public ModelAndView delete(HttpServletRequest request, HttpServletResponse response, Long id,String type) throws Exception
@@ -130,7 +129,14 @@ public class TeacherController extends LanguageBoxController
             response.getOutputStream().flush();
             response.getOutputStream().close();
         }
-
+    }
+    @RequestMapping("/upload_progress")
+    public ModelAndView uploadProgress(HttpServletRequest request, Long folder_id) throws Exception
+    {
+        DBRecord rec = uploader.getFolderUploadInfo(id(request),folder_id);
+        ModelAndView model = new ModelAndView("document/plain");
+        model.addObject("value",rec.toXML());
+        return model;
     }
 
     //</editor-fold>

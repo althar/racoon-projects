@@ -10,6 +10,10 @@
             <dd class='active'>
                 <a href="#tab1">Библиотека</a>
             </dd>
+            <div id="progress-bar" class="hidden">
+            <div id="upload-details"></div>
+            <div id="upload-progress-bar"></div>
+            </div>
         </dl>
 
         <img src="/img/loader.gif" class="library-loader hidden">
