@@ -126,7 +126,7 @@ public class UserProcessor
             {
                 logout(request);
                 User u = getUser(login,password,dbProc);
-                UserSession session = sessions.get(sessionId);
+                UserSession session = null;
                 if(u==null)
                 {
                     User anonymous = new User(new HashMap<String, Object>());
@@ -134,6 +134,7 @@ public class UserProcessor
                     DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
                     sessionId = sessionRec.getStringValue("session_id");
                     setCookie(response,"session_id",sessionId,8640000);
+                    setCookie(response,"u_id","-1",8640000);
                     // Add session
                     session = new UserSession(8640000,anonymous.getID(),sessionId);
                     session.setAnonymous(anonymous);
@@ -151,6 +152,7 @@ public class UserProcessor
                     UserSession s = new UserSession(8640000,u.getID(),sessionId);
                     sessions.put(sessionId,s);
                     setCookie(response,"session_id",sessionId,8640000);
+                    setCookie(response,"u_id",u.getID().toString(),8640000);
                     result.setUser(u);
                     result.setData("session_id",sessionId);
                 }
@@ -170,6 +172,7 @@ public class UserProcessor
                     DBRecord sessionRec = dbProc.getRecord("SELECT md5(CAST(random() AS VARCHAR))||md5(CAST(random() AS VARCHAR)) AS session_id");
                     sessionId = sessionRec.getStringValue("session_id");
                     setCookie(response,"session_id",sessionId,8640000);
+                    setCookie(response,"u_id","-1",8640000);
                     // Add session
                     session = new UserSession(8640000,anonymous.getID(),sessionId);
                     session.setAnonymous(anonymous);
@@ -181,6 +184,10 @@ public class UserProcessor
                 else
                 {
                     User u = getUser(session.getUserId(),dbProc);
+                    if(u!=null)
+                    {
+                        setCookie(response,"u_id",u.getID().toString(),8640000);
+                    }
                     if(session.isAnonymous()||u==null)
                     {
                         u = new User();
@@ -241,7 +248,8 @@ public class UserProcessor
     private static void setCookie(HttpServletResponse response,String name,String value,Integer duration)
     {
         String cookie = name+"="+value+"; path=/; Expires="+getCookieExpires(duration);
-        response.setHeader("Set-Cookie", cookie);
+        //response.setHeader("Set-Cookie", cookie);
+        response.addHeader("Set-Cookie",cookie);
     }
     private static String getCookieExpires(Integer duration)
     {

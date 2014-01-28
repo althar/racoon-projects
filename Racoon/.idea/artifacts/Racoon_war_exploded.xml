@@ -22,6 +22,7 @@
           <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
           <element id="library" level="project" name="com.google.zxing:core:2.1" />
           <element id="library" level="project" name="api-9.0" />
+          <element id="library" level="project" name="commons-fileupload:commons-fileupload:1.2.2" />
         </element>
       </element>
     </root>

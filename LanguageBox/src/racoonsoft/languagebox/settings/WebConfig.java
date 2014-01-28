@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import racoonsoft.languagebox.resolvers.AsyncMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,9 +31,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         resolver.setSuffix(".jsp");
         return resolver;
     }
+//    @Bean
+//    public CommonsMultipartResolver multipartResolver() {
+//        CommonsMultipartResolver result = new CommonsMultipartResolver();
+//        result.setMaxUploadSize(Long.MAX_VALUE);
+//        return result;
+//    }
     @Bean
-    public CommonsMultipartResolver multipartResolver() {
-        CommonsMultipartResolver result = new CommonsMultipartResolver();
+    public AsyncMultipartResolver multipartResolver() {
+        AsyncMultipartResolver result = new AsyncMultipartResolver();
         result.setMaxUploadSize(Long.MAX_VALUE);
         return result;
     }

@@ -1,9 +1,9 @@
 package racoonsoft.languagebox.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import racoonsoft.languagebox.database.PostgresqlDataSource;
+import racoonsoft.languagebox.structure.FileTransferProgress;
 import racoonsoft.languagebox.structure.UploadingFile;
 import racoonsoft.languagebox.structure.UploadingFileStatus;
 import racoonsoft.library.database.DBRecord;
@@ -23,7 +23,8 @@ public class UploadProcessor extends SeparateThreadProcessor
 
     public static String uploadMaterialPath;
 
-    private HashMap<Long,ArrayList<UploadingFile>> userUploadingFiles = new HashMap<Long, ArrayList<UploadingFile>>();
+    private static HashMap<Long,ArrayList<UploadingFile>> userUploadingFiles = new HashMap<Long, ArrayList<UploadingFile>>();
+    private static HashMap<Long,FileTransferProgress> userTransferringFiles = new HashMap<Long, FileTransferProgress>();
 
     public UploadProcessor()
     {
@@ -66,6 +67,26 @@ public class UploadProcessor extends SeparateThreadProcessor
         {
             addFileToUpload(userId,folderId,multipartFiles[i]);
         }
+    }
+
+    public synchronized static void setFileTransfer(Long userId, Long transferId, Long total, Long transferred)
+    {
+        FileTransferProgress progress = userTransferringFiles.get(userId);
+        if(progress == null)
+        {
+            progress = new FileTransferProgress();
+        }
+        progress.setProgress(transferId,total,transferred);
+        userTransferringFiles.put(userId,progress);
+    }
+    public synchronized static Integer getTransferProgress(Long userId)
+    {
+        FileTransferProgress prog = userTransferringFiles.get(userId);
+        if(prog!=null)
+        {
+            return prog.getProgress();
+        }
+        return 10000;
     }
 
     @Override
@@ -115,12 +136,16 @@ public class UploadProcessor extends SeparateThreadProcessor
                 }
             }
         }
-        totalProgress = (int)((totalWrittenSize*1.0/totalSize)*100.0);
-        rec.setValue("progress",totalProgress);
+        totalProgress = (int)(totalWrittenSize*10000.0/totalSize);
+        Integer totalTransfer = getTransferProgress(userId);
+        Integer totalResult = (int)(totalProgress*0.8+totalTransfer*0.2);
+        if(totalTransfer!=10000)
+        {
+            isUploading = true;
+        }
+        rec.setValue("progress",totalResult);
         rec.setValue("is_uploading",isUploading);
         rec.setValue("files",items);
         return rec;
     }
-
-
 }

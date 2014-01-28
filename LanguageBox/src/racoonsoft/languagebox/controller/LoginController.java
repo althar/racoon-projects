@@ -82,17 +82,17 @@ public class LoginController
         if(user.hasRole("TUTOR"))
         {
 //            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/tutor");
-            return new ModelAndView("redirect:http://localhost:8080/service/teacher");
+            return new ModelAndView("redirect:/service/teacher");
         }
         else if(user.hasRole("SCHOOL"))
         {
 //            return new ModelAndView("redirect:http://"+school+"."+ StringHelper.getDomainByLevel(domain,2) +"/service/school");
-            return new ModelAndView("redirect:http://localhost:8080/service/teacher");
+            return new ModelAndView("redirect:/service/teacher");
         }
         else if(user.hasRole("STUDENT"))
         {
 //            return new ModelAndView("redirect:http://"+ StringHelper.getDomainByLevel(domain,2) +"/service/student");
-            return new ModelAndView("redirect:http://localhost:8080/service/student");
+            return new ModelAndView("redirect:/service/student");
         }
         UserProcessor.logout(request);
         ModelAndView model = new ModelAndView("page/public/access");

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Language Box</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class='main_header'>
+      <div class='top_header'>
+        <div class='top_header-inner row'>
+          <div class='logotype_block small-4 column'>
+            <h1 class='logotype'>
+                            <a class="link_type-logo" href="/">Language
+              <span>Box</span>
+              </a>
+
+            </h1>
+          </div>
+          <div class='log_in column push-4'>
+            <ul class='top_menu inline-list right'>
+              <li>
+                <span class='top_menu-text'>Иванова Анна</span>
+              </li>
+              <li class='divider'>
+                <span class='top_menu-text'></span>
+              </li>
+              <li>
+                <a href="#">Сообщения</a>
+              </li>
+              <li class='divider'>
+                <span class='top_menu-text'></span>
+              </li>
+              <li>
+                <a href="#">Помощь</a>
+              </li>
+              <li class='divider'>
+                <span class='top_menu-text'></span>
+              </li>
+              <li>
+                <a href="/">Выход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class='main_header-menu row'>
+        <ul class='main_menu'>
+          <li class='main_menu-item'>
+            <a class="main_menu-link" href="/teacher/">Главная</a>
+          </li>
+          <li class='main_menu-item'>
+            <a class="main_menu-link" href="/teacher/courses.html">Курсы</a>
+          </li>
+          <li class='main_menu-item'>
+            <a class="main_menu-link" href="/teacher/students.html">Ученики</a>
+          </li>
+          <li class='main_menu-item'>
+            <a class="main_menu-link" href="#">Магазин курсов</a>
+          </li>
+          <li class='main_menu-item'>
+            <a class="main_menu-link" href="#">Настройки</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class='main_content'>
+      <div class='main_content-inner row'>
+        <div class='white_block tabs_wrapper'>
+          <div class='row'>
+            <div class='small-7 column'>
+              <div id='teacher-library'>
+                <dl class='tabs'>
+                  <dd class='active'>
+                    <a href="#tab1">Библиотека</a>
+                  </dd>
+                </dl>
+                <div class='tabs-content'>
+                  <div class='content active' id='tab1'>
+                    <ul class='breadcrumbs'>
+                      <li>
+                        <a href="#">Моя папка</a>
+                      </li>
+                      <li>
+                        <a href="#">Разговорный курс</a>
+                      </li>
+                      <li class='current'>
+                        <a href="#">Адаптированные материалы</a>
+                      </li>
+                    </ul>
+                    <div class='library_controls'>
+                      <div class='row'>
+                        <div class='small-6 column'>
+                          <div class='dropdown'>
+                            <div class='dropdown_inner'>
+                              <a class='button tiny' href='#'>
+                                Добавить
+                                <i class='fa-sort-down'></i>
+                              </a>
+                              <ul class='f-dropdown'>
+                                <li>
+                                  <a href='courses_library_addfile.html'>Файл</a>
+                                </li>
+                                <li>
+                                  <a href='courses_library_addfolder.html'>Папку</a>
+                                </li>
+                                <li>
+                                  <a href='courses_library_addtest.html'>Тест</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class='small-6 column text-right'>
+                          <button class='tiny'>Поиск</button>
+                          <button class='tiny secondary'>
+                            <i class='fa-th-large'></i>
+                          </button>
+                          <button class='tiny secondary'>
+                            <i class='fa-list-ul'></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- change class "vertical_list" to "horizontal_list" -->
+                    <ul class='library_list vertical_list'>
+                      <li class='library_list-item active'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          <input onClick='this.select()' type='text' value='Тест 1'>
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 2
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 3
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 4
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 5
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 6
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 7
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 8
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 9
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 10
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 11
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 12
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 13
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 14
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 15
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 16
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 17
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 18
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 19
+                        </div>
+                      </li>
+                      <li class='library_list-item'>
+                        <div class='item_icon'>
+                          <i class='fa-file-o'></i>
+                        </div>
+                        <div class='item_name'>
+                          Тест 20
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='small-5 column'>
+              <div id='teacher-courses'>
+                <dl class='tabs'>
+                  <dd class='active'>
+                    <a href="#tab1">Редактирование теста</a>
+                  </dd>
+                </dl>
+                <div class='tabs-content'>
+                  <div class='content active' id='tab1'>
+                    <div class='library_controls'>
+                      <div class='text-right'>
+                        <button class='tiny'>Просмотр</button>
+                      </div>
+                    </div>
+                    <div class='test_edit-block'>
+                      <div class='test_edit-block__inner'>
+                        <div class='test_edit-block__header'>
+                          <div class='test_type'>
+                            Перевод с русского языка на английский
+                          </div>
+                        </div>
+                        <div class='test_edit-block__content'>
+                          <form class='simple_form'>
+                            <div class='control-group'>
+                              <label class='control-label'>
+                                Название теста
+                              </label>
+                              <div class='controls'>
+                                <input type='text'>
+                              </div>
+                            </div>
+                            <div class='control-group'>
+                              <label class='control-label'>
+                                Тип задания
+                              </label>
+                              <div class='controls'>
+                                <select class='custom_selectbox'>
+                                  <option selected='selected'>Перевод с русского на английский</option>
+                                  <option>Перевод с английского на русский</option>
+                                  <option>Заполните пропуски словами</option>
+                                  <option>Заполните пропуски из предложенных вариантов</option>
+                                  <option>Составьте предложения</option>
+                                  <option>Прослушайте аудио и ответьте на вопросы</option>
+                                  <option>Прослушайте аудио и заишите текст</option>
+                                  <option>Сделайте summary</option>
+                                  <option>Напишите пересказ на русском</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class='control-group'>
+                              <label class='control-label'>
+                                Описание задания
+                              </label>
+                              <div class='controls'>
+                                <textarea rows='5'></textarea>
+                              </div>
+                            </div>
+                            <div class='control-group'>
+                              <label class='control-label'>
+                                Количество баллов за тест
+                              </label>
+                              <div class='controls'>
+                                <input max='10' min='1' type='number' value='1'>
+                              </div>
+                            </div>
+                            <hr class='dotted_blue'>
+                            <div class='ru-en_translate'>
+                              <div class='ru-en_translate__row'>
+                                <a class='delete' href='#'>
+                                  <i class='fa-times'></i>
+                                </a>
+                                <div class='control-group'>
+                                  <label class='control-label'>
+                                    Русский текст
+                                  </label>
+                                  <div class='controls'>
+                                    <input type='text'>
+                                  </div>
+                                </div>
+                                <div class='control-group'>
+                                  <label class='control-label'>
+                                    Перевод
+                                  </label>
+                                  <div class='controls'>
+                                    <input type='text'>
+                                  </div>
+                                </div>
+                              </div>
+                              <a class='mini-text underline' href='#'>Добавить строку</a>
+                            </div>
+                            <hr class='dotted_blue'>
+                            <div class='form-action'>
+                              <button class='button tiny'>Сохранить и закрыть</button>
+                              <a class='button tiny secondary' href='#'>Отменить</a>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class='main_footer'>
+      <nav class='main_footer-inner row'>
+        <ul class='footer_menu column'>
+          <li class='footer_menu-item'>
+            <a class="footer_menu-link" href="#">О компании</a>
+          </li>
+          <li class='footer_menu-item'>
+            <a class="footer_menu-link" href="#">Контакты</a>
+          </li>
+          <li class='footer_menu-item'>
+            <a class="footer_menu-link" href="#">Условия использования</a>
+          </li>
+          <li class='footer_menu-item'>
+            <a class="footer_menu-link" href="#">Помощь</a>
+          </li>
+        </ul>
+        <div class='support_block column'>
+          <p>
+            Поддержка: 8-800-457-85-41, +7 (452) 415-74-89
+          </p>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
