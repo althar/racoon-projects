@@ -17,6 +17,7 @@ public class FileTransferProgress
     {
         Long total = 0l;
         Long transferred = 0l;
+        Integer result = 10000;
         Iterator<Long> transferIdIter = bytesTotal.keySet().iterator();
         while(transferIdIter.hasNext())
         {
@@ -25,14 +26,14 @@ public class FileTransferProgress
             Long totalThis = bytesTotal.get(transId);
             if(transThis.longValue()!=totalThis.longValue())
             {
-                total+=totalThis;
-                transferred+=transThis;
+                Integer currentResult = (int)(transThis*10000.0/totalThis);
+                if(currentResult<result)
+                {
+                    result = currentResult;
+                }
             }
         }
-        if(total!=transferred)
-        {
-            return (int)(transferred*10000.0/total);
-        }
-        return 10000;
+
+        return result;
     }
 }

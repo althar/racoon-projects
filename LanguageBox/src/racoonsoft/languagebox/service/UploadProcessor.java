@@ -98,7 +98,7 @@ public class UploadProcessor extends SeparateThreadProcessor
             ArrayList<UploadingFile> uploadingFiles = iterator.next();
             for(int i=0; i<uploadingFiles.size(); i++)
             {
-                uploadingFiles.get(i).uploadPart(402048);
+                uploadingFiles.get(i).uploadPart(4020400);
             }
         }
         Thread.sleep(1);
@@ -111,9 +111,7 @@ public class UploadProcessor extends SeparateThreadProcessor
         rec.setValue("folder_id",folderId);
         ArrayList<DBRecord> items = new ArrayList<DBRecord>();
         ArrayList<UploadingFile> files = userUploadingFiles.get(userId);
-        Long totalSize = 0l;
-        Long totalWrittenSize = 0l;
-        Integer totalProgress = 0;
+        Integer totalProgress = 10000;
         boolean isUploading = false;
         if(files!=null)
         {
@@ -128,23 +126,36 @@ public class UploadProcessor extends SeparateThreadProcessor
                         fileInfo.setValue("size", file.getSize());
                         fileInfo.setValue("written",file.getWrittenSize());
                         fileInfo.setValue("progress",file.getUploadPercent());
-                        totalSize+=file.getSize();
-                        totalWrittenSize+=file.getWrittenSize();
+
+                        Integer currentProgress =(int)(file.getWrittenSize()*10000.0/file.getSize());
+                        if(currentProgress<totalProgress)
+                        {
+                            totalProgress = currentProgress;
+                        }
+
                         items.add(fileInfo);
                         isUploading = true;
                     }
                 }
             }
         }
-        totalProgress = (int)(totalWrittenSize*10000.0/totalSize);
+        if(!isUploading)
+        {
+            totalProgress = 0;
+        }
         Integer totalTransfer = getTransferProgress(userId);
-        Integer totalResult = (int)(totalProgress*0.8+totalTransfer*0.2);
+        boolean isTransferring = false;
         if(totalTransfer!=10000)
         {
-            isUploading = true;
+            isTransferring = true;
         }
+
+        Integer totalResult = (int)(totalProgress*0.2+totalTransfer*0.8);
         rec.setValue("progress",totalResult);
-        rec.setValue("is_uploading",isUploading);
+        boolean totalUploading = isUploading||isTransferring;
+        System.out.println(isTransferring+" "+isUploading+" : "+totalTransfer+" | "+totalProgress+"   "+totalUploading);
+
+        rec.setValue("is_uploading",totalUploading);
         rec.setValue("files",items);
         return rec;
     }

@@ -92,8 +92,7 @@
                             <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">Переименовать
                                 <i class='fa-arrow-right'></i>
                             </a>
-                            <%--<a href="/service/teacher/download_material?id=${material.getLongValue('id')}">Скачать--%>
-                            <a onclick="$.fileDownload('/service/teacher/download_material?id=${material.getLongValue('id')}')">Скачать
+                            <a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">Скачать
                                 <i class='fa-arrow-right'></i>
                             </a>
                         </div>

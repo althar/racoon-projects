@@ -10,7 +10,7 @@
             <h2>Добавить файл</h2>
             <ul class='library_list vertical_list add-file-list'>
             </ul>
-            <form:form method="post" modelAttribute="add-file-form" enctype="multipart/form-data" action="/service/teacher/upload_files" >
+            <form:form method="post" modelAttribute="add-file-form" enctype="multipart/form-data" action="/service/teacher/upload_files" accept-charset="UTF-8">
                 <input type="hidden" id="form-folder-id" value="" name="folder_id">
             </form:form>
             <input type='file' class="add-file-input" name="files" multiple>

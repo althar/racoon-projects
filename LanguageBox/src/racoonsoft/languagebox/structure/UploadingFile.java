@@ -1,6 +1,7 @@
 package racoonsoft.languagebox.structure;
 
 import racoonsoft.languagebox.service.UploadProcessor;
+import racoonsoft.library.helper.Helper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -133,6 +134,7 @@ public class UploadingFile
         }
         catch(Exception ex)
         {
+            System.out.println(Helper.getStackTraceString(ex));
             status = UploadingFileStatus.ABORTED;
         }
     }

@@ -3,10 +3,9 @@ var isCheckingUpload = true;
 $(document).ready(function () {
     library.bindFolderControls();
     library.checkUploadFiles();
+    // Check uploading
+    $("#upload-progress-bar").progressbar();
 });
-function uploadProcess(e) {
-    alert(e);
-}
 library =
 {
     showFolder: function (folder_id) {
@@ -20,7 +19,7 @@ library =
             folderParam = "?folder_id=" + folder_id;
         }
         $.ajax({
-            url: "/service/teacher/get_folder" + folderParam,
+            url: "/service/get_folder" + folderParam,
             context: document.body,
             async: true,
             success: function (html) {
@@ -63,12 +62,13 @@ library =
         $(".add-folder-link").bind("click", function () {
             library.createFolder();
         })
+        $(".new-folder-name").unbind("keypress");
         $(".new-folder-name").keypress(function (e) {
             var name = $(this).val();
             var folder_id = $("#current-folder-id").val();
             if (e.which == 13 && name.length > 0) {
                 $.ajax({
-                    url: "/service/teacher/create_folder?folder_name=" + name + "&folder_id=" + folder_id,
+                    url: "/service/create_folder?folder_name=" + name + "&folder_id=" + folder_id,
                     context: document.body,
                     async: true,
                     success: function (html) {
@@ -94,7 +94,7 @@ library =
                         $(this).dialog('close');
                         $(".library-loader").show();
                         $.ajax({
-                            url: "/service/teacher/delete?type=" + type + "&id=" + id,
+                            url: "/service/delete?type=" + type + "&id=" + id,
                             context: document.body,
                             async: true,
                             success: function (html) {
@@ -115,6 +115,7 @@ library =
         });
 
         // Rename folder or material
+        $(".entity-input").unbind("keypress");
         $(".entity-input").keypress(function (e) {
             var name = $(this).val();
             if (e.which == 13 && name.length > 0) {
@@ -123,7 +124,7 @@ library =
 
                 $(".library-loader").show();
                 $.ajax({
-                    url: "/service/teacher/rename?id=" + id + "&type=" + type + "&name=" + name,
+                    url: "/service/rename?id=" + id + "&type=" + type + "&name=" + name,
                     context: document.body,
                     async: true,
                     success: function (html) {
@@ -144,6 +145,7 @@ library =
                 });
             }
         });
+        $(".rename-link").unbind("click");
         $(".rename-link").click(function () {
             var type = $(this).attr("entity-type");
             var id = $(this).attr("entity-id");
@@ -170,42 +172,16 @@ library =
             var formData = new FormData($("#add-file-form")[0]);
             $(".library-loader").show();
             $.ajax({
-                url: "/service/teacher/upload_files",  //Server script to process data
+                url: "/service/upload_files",  //Server script to process data
                 type: 'POST',
                 success: function () {
                     $(".library-loader").hide();
                     isCheckingUpload = true;
                 },
                 error: function () {
-                    alert("Что-то пошло не так. Попробуйте снова через час.");
-                    $(".library-loader").hide();
+                    //alert("Что-то пошло не так. Попробуйте снова через час.");
+                    //$(".library-loader").hide();
                 },
-//                uploadProgress: function(evt) {
-//                    if (evt.lengthComputable) {
-//                        isCheckingUpload = false;
-//                        var loaded = parseInt((evt.loaded / evt.total * 100), 10)*0.8;
-//
-//                        $.ajax({
-//                            url: "/service/teacher/upload_progress",
-//                            async: true,
-//                            dataType: "xml",
-//                            success: function (xml) {
-//                                var progress = $("root>progress",xml).text();
-//                                var totalProgress = progress*0.2+loaded*0.8;
-//                                totalProgress = Math.round(totalProgress).toFixed(2);
-//                                $("#progress-bar").show();
-//                                $("#upload-details").html(totalProgress+"%");
-//                                $("#upload-progress-bar").progressbar("value",parseInt(totalProgress));
-//
-//                            }
-//                        });
-//
-//                    }
-//                    else {
-//                        console.log("Length not computable.");
-//                    }
-//                },
-
                 // Form data
                 data: formData,
                 //Options to tell jQuery not to process data or worry about content-type.
@@ -216,9 +192,6 @@ library =
             var currentFolderId = $("#current-folder-id").val();
             library.showFolder(currentFolderId);
         });
-
-        // Check uploading
-        $("#upload-progress-bar").progressbar({value:30});
     },
     bindAddFileChange: function () {
         $(".add-file-input").unbind('change');
@@ -248,9 +221,10 @@ library =
 
     },
     checkUploadFiles: function () {
+        // For progress bar
         var check = function(){
             $.ajax({
-                url: "/service/teacher/upload_progress",
+                url: "/service/upload_progress",
                 async: true,
                 dataType: "xml",
                 success: function (xml) {
@@ -260,27 +234,82 @@ library =
                         var uploaded = $("root>progress",xml).text();
                         var isUploading = $("root>is_uploading",xml).text();
 
+                        document.title =isUploading;
                         if(isUploading=="true")
                         {
-//                            document.title = uploaded/100.0;
+                            uploadDelay = 0;
                             uploaded = uploaded/100.0;
-                            $("#progress-bar").show();
+                            fileProgressBar(true);
                             $("#upload-details").html(uploaded+"%");
                             $("#upload-progress-bar").progressbar("value",parseInt(uploaded));
                         }
                         else
                         {
-                            $("#progress-bar").hide();
+                            uploadDelay++;
+                            showNewFiles();
+                            if(uploadDelay>3)
+                            {
+                                fileProgressBar(false);
+                            }
                         }
                     }
-                    setTimeout(check,300);
+                    setTimeout(check,1000);
                 },
                 failure: function () {
-                    alert("Серверная ошибка. Попробуйте позже");
+//                    alert("Серверная ошибка. Попробуйте позже");
                     $(".library-loader").show();
                 }
             });
         };
         check();
+        // For appearing new files
+        var showNewFiles = function(){
+            var folder_id = $(this).attr("folder-id");
+            var folderParam = "";
+            if (folder_id != null)
+            {
+                folderParam = "?folder_id=" + folder_id;
+            }
+            $.ajax({
+                url: "/service/get_folder" + folderParam,
+                context: document.body,
+                async: true,
+                success: function (html) {
+
+                    var wasUpdate = false;
+                    $(".library_list-item[entity-type=\"material\"]",html).each(function(){
+                        var material_id = $(this).attr("entity-id");
+                        var new_li = $(this);
+                        var found = $(".library_list-item[entity-type=\"material\"][entity-id=\""+material_id+"\"]");
+                        if($(found).length==0)// New one
+                        {
+                            $(".folder-body").append($(this));
+                            wasUpdate = true;
+                        }
+                    });
+                    if(wasUpdate)
+                    {
+                        library.bindFolderControls();
+                    }
+                },
+                failure: function () {
+//                    alert("Серверная ошибка. Попробуйте позже");
+                    $(".library-loader").show();
+                }
+            });
+        };
+
+    }
+}
+var uploadDelay = 0;
+function fileProgressBar(show)
+{
+    if(show)
+    {
+        $("#progress-bar").finish().show();
+    }
+    else
+    {
+        $("#progress-bar").finish().hide();
     }
 }

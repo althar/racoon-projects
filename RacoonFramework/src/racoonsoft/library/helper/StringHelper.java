@@ -70,4 +70,20 @@ public class StringHelper
         }
         return null;
     }
+
+    public static String getContentDespositionFilename(String agent, String fileName) throws Exception
+    {
+        if(agent==null)
+        {
+            agent="";
+        }
+        boolean isInternetExplorer = (agent.toLowerCase().indexOf("msie") > -1);
+        byte[] fileNameBytes = fileName.getBytes((isInternetExplorer) ? ("windows-1251") : ("utf-8"));
+        String dispositionFileName = "";
+        for (byte b : fileNameBytes)
+        {
+            dispositionFileName += (char) (b & 0xff);
+        }
+        return dispositionFileName;
+    }
 }

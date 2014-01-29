@@ -41,6 +41,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public AsyncMultipartResolver multipartResolver() {
         AsyncMultipartResolver result = new AsyncMultipartResolver();
         result.setMaxUploadSize(Long.MAX_VALUE);
+        result.setDefaultEncoding("UTF-8");
         return result;
     }
     @Override

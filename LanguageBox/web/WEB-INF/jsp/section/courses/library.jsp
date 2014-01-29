@@ -19,7 +19,7 @@
         <img src="/img/loader.gif" class="library-loader hidden">
 
         <%-- Folder section --%>
-        <c:import url="/service/teacher/get_folder"></c:import>
+        <c:import url="/service/get_folder"></c:import>
 
         <%-- Add file section --%>
         <%@include file="/WEB-INF/jsp/section/courses/add_file_body.jsp" %>

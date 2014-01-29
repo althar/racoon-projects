@@ -42,7 +42,7 @@ public class AsyncMultipartResolver extends CommonsMultipartResolver
         {
             Long userIdLong = Long.valueOf(userId);
             UploadProcessor.setFileTransfer(userIdLong, transId, bytesTotal, bytesRead);
-            System.out.println("Read: "+UploadProcessor.getTransferProgress(userIdLong)+" % ");
+//            System.out.println("Read: "+UploadProcessor.getTransferProgress(userIdLong)+" % ");
         }
     }
 

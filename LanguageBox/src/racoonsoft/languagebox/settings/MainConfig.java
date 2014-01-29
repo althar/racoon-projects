@@ -67,6 +67,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
         {
             System.out.println("Get data source - start: "+dbHost);
             PostgresqlDataSource result = new PostgresqlDataSource(dbHost,dbName,5432,dbLogin,dbPassword,"org.postgresql.Driver","jdbc:postgresql:");
+
             System.out.println("Get data source - success");
             return result;
         }
