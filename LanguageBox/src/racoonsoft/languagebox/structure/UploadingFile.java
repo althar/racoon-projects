@@ -109,7 +109,7 @@ public class UploadingFile
         this.writtenSize = writtenSize;
     }
 
-    public synchronized void uploadPart(int maxSize) throws Exception
+    public synchronized boolean uploadPart(int maxSize) throws Exception
     {
         try
         {
@@ -130,12 +130,15 @@ public class UploadingFile
                     file = null;
                     status = UploadingFileStatus.UPLOADED;
                 }
+                return true;
             }
+            return false;
         }
         catch(Exception ex)
         {
             System.out.println(Helper.getStackTraceString(ex));
             status = UploadingFileStatus.ABORTED;
+            return false;
         }
     }
 }

@@ -93,15 +93,23 @@ public class UploadProcessor extends SeparateThreadProcessor
     public void process() throws Exception
     {
         Iterator<ArrayList<UploadingFile>> iterator = userUploadingFiles.values().iterator();
+        boolean gotFiles = false;
         while(iterator.hasNext())
         {
             ArrayList<UploadingFile> uploadingFiles = iterator.next();
             for(int i=0; i<uploadingFiles.size(); i++)
             {
-                uploadingFiles.get(i).uploadPart(4020400);
+                boolean uploading = uploadingFiles.get(i).uploadPart(40204);
+                if(uploading)
+                {
+                    gotFiles = true;
+                }
             }
         }
-        Thread.sleep(1);
+        if(!gotFiles)
+        {
+            Thread.sleep(10);
+        }
     }
 
     public DBRecord getFolderUploadInfo(Long userId, Long folderId)

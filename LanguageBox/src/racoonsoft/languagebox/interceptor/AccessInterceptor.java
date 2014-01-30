@@ -23,8 +23,7 @@ public class AccessInterceptor extends LanguageBoxInterceptor
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception
     {
-        checkAccess(request,response);
-        return true;
+        return checkAccess(request,response);
     }
 
     @Override
@@ -39,7 +38,7 @@ public class AccessInterceptor extends LanguageBoxInterceptor
 
     }
 
-    public void checkAccess(HttpServletRequest request, HttpServletResponse response) throws Exception
+    public boolean checkAccess(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         String path = request.getServletPath();
         ActionResult res = UserProcessor.authorization(request,response,dbProc);
@@ -52,11 +51,12 @@ public class AccessInterceptor extends LanguageBoxInterceptor
         request.setAttribute("school",school(request));
         request.setAttribute("roles",roles);
         if(anonymous// Anonymous
-                ||!user.getStringValue("school").equalsIgnoreCase(school(request)) // Wrong school
                 ||(!res.hasRole("TUTOR")&&!res.hasRole("SCHOOL")&&path.contains("/service/teacher")) // Not tutor and not school tries to access teacher`s page
                 ||(!res.hasRole("STUDENT")&&path.contains("/service/student"))) // Not school tries to access school`s page
         {
-            //response.sendRedirect("/page/no_access");
+            response.sendRedirect("/login");
+            return false;
         }
+        return true;
     }
 }

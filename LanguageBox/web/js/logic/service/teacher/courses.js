@@ -1,5 +1,5 @@
 var isCheckingUpload = true;
-
+var checkInterval = 1000;
 $(document).ready(function () {
     library.bindFolderControls();
     library.checkUploadFiles();
@@ -234,7 +234,6 @@ library =
                         var uploaded = $("root>progress",xml).text();
                         var isUploading = $("root>is_uploading",xml).text();
 
-                        document.title =isUploading;
                         if(isUploading=="true")
                         {
                             uploadDelay = 0;
@@ -253,7 +252,7 @@ library =
                             }
                         }
                     }
-                    setTimeout(check,1000);
+                    setTimeout(check,checkInterval);
                 },
                 failure: function () {
 //                    alert("Серверная ошибка. Попробуйте позже");
@@ -310,6 +309,9 @@ function fileProgressBar(show)
     }
     else
     {
-        $("#progress-bar").finish().hide();
+        $("#upload-details").html("100%");
+        $("#upload-progress-bar").progressbar("value",100);
+        $("#progress-bar").finish();
+        $("#progress-bar").delay(500).hide(0);
     }
 }

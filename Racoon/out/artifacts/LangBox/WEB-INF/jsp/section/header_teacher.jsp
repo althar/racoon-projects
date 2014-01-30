@@ -52,7 +52,7 @@
                 <a class="main_menu-link" href="/">Главная</a>
             </li>
             <li class='main_menu-item'>
-                <a class="main_menu-link" href="/service/teacher/courses.html">Курсы</a>
+                <a class="main_menu-link" href="/service/teacher/courses">Курсы</a>
             </li>
             <li class='main_menu-item'>
                 <a class="main_menu-link" href="#">Ученики</a>

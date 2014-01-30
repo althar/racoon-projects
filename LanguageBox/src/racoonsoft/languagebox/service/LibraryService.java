@@ -13,6 +13,46 @@ import java.util.HashMap;
 @Service
 public class LibraryService extends LanguageBoxService
 {
+    public static final ArrayList<String> audioFormats = new ArrayList<String>();
+    public static final ArrayList<String> videoFormats = new ArrayList<String>();
+    public static final ArrayList<String> documentFormats = new ArrayList<String>();
+    public static final ArrayList<String> imageFormats = new ArrayList<String>();
+    static
+    {
+        audioFormats.add("mp3");
+        audioFormats.add("3gp");
+        audioFormats.add("flac");
+        audioFormats.add("wav");
+        audioFormats.add("wma");
+
+        videoFormats.add("aaf");
+        videoFormats.add("3gp");
+        videoFormats.add("avi");
+        videoFormats.add("flv");
+        videoFormats.add("m4v");
+        videoFormats.add("mpeg");
+        videoFormats.add("ogg");
+        videoFormats.add("wmv");
+        videoFormats.add("mkv");
+
+        documentFormats.add("doc");
+        documentFormats.add("docx");
+        documentFormats.add("xls");
+        documentFormats.add("xlsx");
+        documentFormats.add("ppt");
+        documentFormats.add("pptx");
+        documentFormats.add("rtf");
+        documentFormats.add("txt");
+        documentFormats.add("djvu");
+        documentFormats.add("pdf");
+
+        imageFormats.add("jpg");
+        imageFormats.add("jpeg");
+        imageFormats.add("bmp");
+        imageFormats.add("png");
+        imageFormats.add("gif");
+        imageFormats.add("ico");
+    }
     public void addFolder(Long folderId,String folderName,Long userId) throws Exception
     {
         HashMap<String,Object> params = new HashMap<String, Object>();
@@ -63,10 +103,35 @@ public class LibraryService extends LanguageBoxService
 
     public Long addMaterial(Long userId,Long folderId,String name,Long size) throws Exception
     {
+        int ind = name.lastIndexOf(".");
+        String ext = "";
+        String type = "CUSTOM_FILE";
+        if(ind!=-1&&name.length()>ind+1)
+        {
+            ext = name.substring(ind+1).toLowerCase();
+            if(documentFormats.contains(ext))
+            {
+                type = "DOCUMENT_FILE";
+            }
+            else if(audioFormats.contains(ext))
+            {
+                type = "AUDIO_FILE";
+            }
+            else if(videoFormats.contains(ext))
+            {
+                type = "VIDEO_FILE";
+            }
+             else if(imageFormats.contains(ext))
+            {
+                type = "IMAGE_FILE";
+            }
+        }
         HashMap<String,Object> pars = new HashMap<String, Object>();
         pars.put("library_id",folderId);
         pars.put("name",name);
+        pars.put("extension",ext);
         pars.put("size",size);
+        pars.put("type",type);
         return dbProc.executeInsert("material",pars);
     }
 
