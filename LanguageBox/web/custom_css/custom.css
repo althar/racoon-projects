@@ -1,0 +1,68 @@
+#login-wrap .note {
+  color: #ccc;
+  font-size: 11px;
+  line-height: 13px;
+  margin: 10px 0 0;
+}
+
+.search-form select {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.widget>.widget-content.studentslist,.widget>.widget-content.courseslist{padding:0}
+.studentslist>ul,.courseslist>ul{margin:0;list-style:none}
+.studentslist ul li,.courseslist>ul{*zoom:1;display:block;position:relative}
+.studentslist ul li:before,.studentslist ul li:after,.courseslist ul li:before,.courseslist ul li:after{display:table;content:""}
+.studentslist ul li:after,.courseslist ul li:after{clear:both}
+.studentslist>ul li .thumbnail{width:64px;float:left}
+.courseslist>ul li .thumbnail{width:120px;float:left}
+.studentslist>ul li .info{margin-left:84px;display:block}
+.courseslist>ul li .info{margin-left:140px;display:block;max-width: 500px;}
+.studentslist>ul>li,.courseslist>ul>li{
+  padding:15px;
+  margin:0;
+  float:none;
+  border-bottom:1px dotted #b1afac;
+  display:block;
+  position: relative;
+}
+
+.studentslist>ul>li:last-child,.courseslist>ul>li:last-child{border-bottom:0}
+
+.studentslist>ul>li .info .name{font-size:14px;display:block;margin-bottom:4px}
+.studentslist>ul>li .info .lvl{font-weight:bold;display:block;color:#95204e}
+.studentslist>ul>li .rating,.courseslist>ul>li .actions{
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  margin-top:-12px;
+}
+.courseslist>ul>li .actions{
+  opacity:0;
+  -moz-opacity:0;
+  -webkit-transition:opacity 150ms linear;
+  -moz-transition:opacity 150ms linear;
+  -ms-transition:opacity 150ms linear;
+  -o-transition:opacity 150ms linear;
+  transition:opacity 150ms linear
+}
+.courseslist>ul>li:hover .actions{opacity:1;-moz-opacity:1}
+.courseslist>ul>li .actions ul{margin:0}
+.courseslist>ul>li .actions ul,
+.courseslist>ul>li .actions ul li{float:left}
+.courseslist>ul>li .actions li{
+  list-style:none;
+  font-size:16px;
+  line-height:24px;
+  margin:0 4px;
+  display:block
+}
+.courseslist>ul>li .actions li a,.courseslist>ul>li .actions li span{color:#666}
+
+.studentslist>ul>li .rating li a,
+.studentslist>ul>li .rating li span{color:#666}
+.courseslist>ul>li .head{margin-bottom:10px;display:block;clear:both}
+.courseslist>ul>li .head h2{font-size:16px;margin:0;line-height:1.5}
+.courseslist>ul>li .head h2 a{color:#444;display:block}
+.courseslist>ul>li .head .note{color:#999;font-size:11px}
