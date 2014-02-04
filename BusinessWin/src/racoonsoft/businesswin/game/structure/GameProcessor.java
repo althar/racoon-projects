@@ -13,7 +13,7 @@ public class GameProcessor
         {
             return StatusCode.GAME_ALREADY_STARTED;
         }
-        g.Fields.putAll(params);
+//        g.Fields.putAll(params);
         g.setStatus(GameStatus.READY);
         return  StatusCode.SUCCESS;
     }
@@ -49,7 +49,7 @@ public class GameProcessor
         {
             return StatusCode.GAME_NOT_IN_PROGRESS;
         }
-        g.setValue("turn",g.getIntValue("turn")+1);
+        g.turn = g.turn+1;
         return StatusCode.SUCCESS;
     }
 }

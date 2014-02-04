@@ -3,147 +3,65 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<div class='small-8 column'>
-    <div class='white_block'>
-        <h3>Продажи</h3>
-        <table class='table'>
-            <tfoot>
-            <tr>
-                <td class='text-center' colspan='4'>
-                    всего за сентябрь
-                    <strong>28 000 руб.</strong>
-                </td>
-            </tr>
-            </tfoot>
-            <tbody>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/images/avatar.png" />
-                </td>
-                <td>
-                    Михеев Иван
-                </td>
-                <td>
-                    1000 руб.
-                </td>
-                <td>
-                    21.10.2013 г.
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <a href="#">Все оплаты</a>
+
+<div class="span6 widget">
+  <div class="widget-header">
+    <span class="title">
+      Последние оплаты
+    </span>
+    <div class="toolbar">
+      <div class="btn-group">
+        <a class="btn" href="#">Show more</a>
+      </div>
     </div>
+  </div>
+  <div class="widget-content table-container">
+    <table class="table table-striped table-detail-view">
+      <tbody>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>3000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>8000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>13000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>30000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>24000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>24000 руб.</td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td>02.02.2014</td>
+          <td>24000 руб.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">
+            <strong>Всего</strong>
+          </td>
+          <td><strong>24000 руб.</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </div>

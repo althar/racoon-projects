@@ -1,25 +1,43 @@
 package racoonsoft.businesswin.game.structure;
 
+import racoonsoft.businesswin.game.structure.data.StartSettings;
 import racoonsoft.businesswin.game.structure.enums.GameMode;
 import racoonsoft.businesswin.game.structure.enums.GameStatus;
 import racoonsoft.businesswin.game.structure.enums.StatusCode;
 import racoonsoft.businesswin.game.structure.model.BusinessPlan;
+import racoonsoft.library.annotations.DataStructure;
+import racoonsoft.library.annotations.DataStructureField;
 import racoonsoft.library.database.DBRecord;
 
 import java.util.HashMap;
 
-public class Game extends DBRecord
+@DataStructure(name="game")
+public class Game
 {
-    private HashMap<Long,Player> players = new HashMap<Long, Player>();
+
+    @DataStructureField(name="players")
+    public HashMap<Long,Player> players = new HashMap<Long, Player>();
+    @DataStructureField(name="start_settings")
+    public StartSettings startSettings = new StartSettings();
+
+    @DataStructureField(name="id")
+    public Long id;
+    @DataStructureField(name="name")
+    public String name;
+    @DataStructureField(name="mode")
+    public GameMode mode;
+    @DataStructureField(name="status")
+    public GameStatus status;
+    @DataStructureField(name="turn")
+    public Integer turn;
 
     public Game(Long id, GameMode mode,String name)
     {
-        setValue("id",id);
-        setValue("name",name);
-        setValue("mode",mode);
-        setValue("status", GameStatus.NEW);
-        setValue("players", new HashMap<Long, Player>());
-        setValue("turn",0);
+        this.id = id;
+        this.name = name;
+        this.mode = mode;
+        this.status = GameStatus.NEW;
+        this.turn = 0;
     }
     public BusinessPlan getPlan(Long player_id)
     {
@@ -48,21 +66,19 @@ public class Game extends DBRecord
     }
     public GameStatus getStatus()
     {
-        return (GameStatus)getValue("status");
+        return status;
     }
     public void setStatus(GameStatus status)
     {
-        setValue("status",status);
+        this.status = status;
     }
     public HashMap<Long, Player> players()
     {
-        return (HashMap<Long, Player>)getValue("players");
+        return players;
     }
     public StatusCode addPlayer(Player p)
     {
-        HashMap<Long, Player> players = players();
-        players.put(p.getID(),p);
-        setValue("players", players);
+        players.put(p.id,p);
         return StatusCode.SUCCESS;
     }
 }

@@ -1,9 +1,13 @@
 package racoonsoft.library.json;
 
 import org.json.JSONObject;
+import racoonsoft.library.annotations.DataStructure;
+import racoonsoft.library.annotations.DataStructureField;
+import racoonsoft.library.annotations.DataStructureValue;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.xml.XMLProcessor;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -99,7 +103,7 @@ public class JSONProcessor
 	{
 		return toXMLProcessor().toXMLString();
 	}
-    private String jsonValue(Object val)
+    private String jsonValue(Object val) throws Exception
     {
         StringBuilder builder = new StringBuilder();
         if(val==null)
@@ -109,6 +113,16 @@ public class JSONProcessor
         if(val instanceof DBRecord)
         {
             val = ((DBRecord)val).Fields;
+        }
+        Field[] fs = val.getClass().getDeclaredFields();
+        for(Field f:fs)
+        {
+            f.setAccessible(true);
+            if(f.isAnnotationPresent(DataStructureValue.class))
+            {
+                Object value = f.get(val);
+                return jsonValue(value);
+            }
         }
         if(val instanceof HashMap)
         {
@@ -141,6 +155,29 @@ public class JSONProcessor
             }
             builder.append("]");
         }
+        else if(val.getClass().isAnnotationPresent(DataStructure.class))
+        {
+            Field[] fields = val.getClass().getFields();
+            builder.append("{");
+            for(int i=0; i<fields.length; i++)
+            {
+                Field f = fields[i];
+                if(f.isAnnotationPresent(DataStructureField.class))
+                {
+                    DataStructureField ff = (DataStructureField)f.getAnnotation(DataStructureField.class);
+                    String name = ff.name();
+                    Object value = f.get(val);
+                    builder.append("\""+name+"\"");
+                    builder.append(":");
+                    builder.append(jsonValue(value));
+                    if(i<fields.length-1)
+                    {
+                        builder.append(",");
+                    }
+                }
+            }
+            builder.append("}");
+        }
         else if(val instanceof Integer||val instanceof Long||val instanceof Double||val instanceof Boolean)
         {
             builder.append(val.toString());
@@ -155,11 +192,11 @@ public class JSONProcessor
         }
         return builder.toString();
     }
-    public String jsonString()
+    public String jsonString() throws Exception
     {
         return jsonValue(getStructure());
     }
-    public String toJsonString()
+    public String toJsonString() throws Exception
     {
         return jsonString();
     }

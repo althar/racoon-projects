@@ -66,8 +66,8 @@ public class GameController extends BusinessWinController
     {
         User u = user(request);
         Player p = new Player();
-        p.setValue("login",u.getStringValue("login"));
-        p.setValue("id",u.getLongValue("id"));
+        p.login = u.getStringValue("login");
+        p.id = u.getLongValue("id");
         JSONProcessor json = gameWorld.joinGame(id,p);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
