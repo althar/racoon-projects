@@ -328,11 +328,11 @@ public class DBProcessor implements DataSource{
     }
 
     // Update...
-    public Integer executeUpdate(String table_name, HashMap<String,Object> fields,String condition) throws SQLException
+    public Long executeUpdate(String table_name, HashMap<String,Object> fields,String condition) throws SQLException
     {
         if(fields==null||fields.isEmpty())
         {
-            return 0;
+            return 0l;
         }
         StringBuilder query = new StringBuilder();
         query.append("UPDATE ");
@@ -364,9 +364,9 @@ public class DBProcessor implements DataSource{
             query.append(" WHERE ");
             query.append(condition);
         }
-        return db_connection.createStatement().executeUpdate(query.toString());
+        return ((Integer)db_connection.createStatement().executeUpdate(query.toString())).longValue();
     }
-    public Integer executeUpdate(String table_name,DBRecord rec) throws SQLException
+    public Long executeUpdate(String table_name,DBRecord rec) throws SQLException
     {
         return executeUpdate(table_name,rec.getFields(),"id="+rec.getID());
     }

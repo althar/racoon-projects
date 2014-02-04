@@ -3,322 +3,172 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
 <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <title>Language Box</title>
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet"
-          type="text/css"/>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic"
-          media="screen" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
 
-    <link href="/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="/css/devise.css" media="screen" rel="stylesheet" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <script src="/js/jq/jquery-2.0.3.js" type="text/javascript"></script>
-    <script src="/js/common/all.js" type="text/javascript"></script>
+  <!-- Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="screen">
+
+  <!-- Uniform Stylesheet -->
+  <link rel="stylesheet" href="/plugins/uniform/css/uniform.default.css" media="screen">
+
+  <!-- Plugin Stylsheets first to ease overrides -->
+
+  <!-- End Plugin Stylesheets -->
+
+  <!-- Main Layout Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/fonts/icomoon/style.css" media="screen">
+  <link rel="stylesheet" href="/assets/css/login.css" media="screen">
+  <link rel="stylesheet" href="/plugins/zocial/zocial.css" media="screen">
+
+  <link rel="stylesheet" href="/custom_css/custom.css" media="screen">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <title>LanguageBox - Login</title>
+
 </head>
-<body class='devise devise_registration'>
-<%@ include file="/WEB-INF/jsp/section/header.jsp" %>
-<div class='main_content'>
-<div class='main_content-inner row'>
-<div class='page_body'>
-<div class='page_body-inner'>
-<c:choose>
-<c:when test="${widget == 'login'}">
-    <div class='student_registr small-6 column small-centered'>
 
-        <h2 class='text-center'>Вход в сервис</h2>
+<body>
 
-        <form class='simple_form' action="/login">
-            <h3>Данные для входа</h3>
+  <div id="login-wrap">
+    <div id="login-ribbon"><i class="icon-lock"></i></div>
+
+    <div id="login-buttons">
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-inverse" data-target="#login-form"><i class="icon-key"></i></button>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-inverse" data-target="#register-form"><i class="icon-edit"></i></button>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-inverse" data-target="#forget-form"><i class="icon-question-sign"></i></button>
+      </div>
+    </div>
+
+    <div id="login-inner" class="login-inset">
+      <div id="login-circle">
+
+        <section id="login-form" class="login-inner-form" data-angle="0">
+          <h1>Вход</h1>
+          <form class="form-vertical" action="/login">
             <input type="hidden" value="true" name="do_login">
-            <div class='control-group'>
-                <label class='control-label'>
-                    E-mail
-                </label>
-
-                <div class='controls'>
-                    <input name='login' type='email'>
-                    <span class='error'>
-                    </span>
-                </div>
+            <div class="control-group-merged">
+              <div class="control-group">
+                <input type="text" placeholder="Имя пользователя" name="login" id="input-username" class="big required">
+              </div>
+              <div class="control-group">
+                <input type="password" placeholder="Пароль" name="password" id="input-password" class="big required">
+              </div>
             </div>
-            <div class='control-group'>
-                <label class='control-label' for='password'>
-                    Пароль
-                </label>
-
-                <div class='controls'>
-                    <input name='password' type='password'>
-                </div>
+            <div class="control-group">
+              <label class="checkbox">
+                <input type="checkbox" name="remember_me" class="uniform"> Запомнить меня
+              </label>
             </div>
-            <div class='form-action row'>
-                <div class='small-8 small-offset-4 column'>
-                    <div class='custom_checkbox'>
-                        <label class='checkbox'>
-                                ${error}
-                        </label>
-                    </div>
-                    <button class='button' type='submit'>
-                        Войти
-                    </button>
-                </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-success btn-block btn-large">Войти</button>
             </div>
-        </form>
-    </div>
-</c:when>
-<c:otherwise>
-<c:choose>
-<c:when test="${role == 'STUDENT'}">
-    <div class='student_registr small-6 column small-centered'>
+          </form>
+        </section>
 
-        <h2 class='text-center'>Регистрация нового ученика</h2>
-
-        <form class='simple_form' action="/registration">
-            <h3>Данные для входа</h3>
-            <input type="hidden" value="STUDENT" name="role">
+        <section id="register-form" class="login-inner-form" data-angle="90">
+          <h1>Регистрация</h1>
+          <form class="form-vertical" action="/registration">
             <input type="hidden" value="true" name="do_registration">
-            <div class='control-group error'>
-                <label class='control-label'>
-                    E-mail
-                </label>
+            <input type="hidden" value="${role}" name="role">
+            <div class="control-group">
+              <label class="control-label">Email</label>
+              <div class="controls">
+                <input type="text" name="login" class="required email">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Пароль</label>
+              <div class="controls">
+                <input type="password" name="password" class="required">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Ваше имя</label>
+              <div class="controls">
+                <input type="text" name="name" class="required">
+              </div>
+            </div>
 
-                <div class='controls'>
-                    <input name='login' type='email'>
-                    <span class='error'>
-                      Введите корректный e-mail
-                    </span>
+
+            <c:if test="${role == 'STUDENT'}">
+              <div class="control-group">
+                <label class="control-label">Возраст</label>
+                <div class="controls">
+                  <input type="text" name="age" class="required">
                 </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='password'>
-                    Пароль
-                </label>
+              </div>
+            </c:if>
 
-                <div class='controls'>
-                    <input name='password' type='password'>
-                </div>
+            <div class="control-group">
+              <label class="control-label">Телефон</label>
+              <div class="controls">
+                <input type="text" name="phone" class="required">
+              </div>
             </div>
-            <div class='control-group'>
-                    <%--<label class='control-label' for='password_confirmation'>--%>
-                    <%--Подтверждение пароля--%>
-                    <%--</label>--%>
 
-                    <%--<div class='controls'>--%>
-                    <%--<input name='password_confirmation' type='password'>--%>
-                    <%--</div>--%>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-danger btn-block btn-large">Зарегистрироваться</button>
+              <p class='note'>
+                Используя сервис, вы соглашаетесь
+                соблюдать условия
+                <a href="#">Лицензионного договора</a>
+              </p>
             </div>
-            <h3>Личные данные</h3>
 
-            <div class='control-group'>
-                <label class='control-label' for='name'>
-                    Имя
-                </label>
+          </form>
+        </section>
 
-                <div class='controls'>
-                    <input name='name' type='text'>
-                </div>
+        <section id="forget-form" class="login-inner-form" data-angle="180">
+          <h1>Забыли пароль?</h1>
+          <form class="form-vertical" action="dashboard.html">
+            <div class="control-group">
+              <div class="controls">
+                <input type="text" name="login" class="big required email" placeholder="Введите свой Email...">
+              </div>
             </div>
-            <div class='control-group'>
-                <label class='control-label' for='age'>
-                    Возраст
-                </label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-danger btn-block btn-large">Восстановить</button>
+            </div>
+          </form>
+        </section>
 
-                <div class='controls'>
-                    <input name='age' type='text'>
-                </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='tel'>
-                    Номер телефона
-                </label>
-
-                <div class='controls'>
-                    <input name='phone' type='tel'>
-                </div>
-            </div>
-            <div class='form-action row'>
-                <div class='small-8 small-offset-4 column'>
-                    <div class='custom_checkbox'>
-                        <label class='checkbox'>
-                                ${error}
-                        </label>
-                    </div>
-                    <button class='button' type='submit'>
-                        Зарегистрироваться и войти
-                    </button>
-                    <div class='note'>
-                        Используя сервис, вы соглашаетесь
-                        соблюдать условия
-                        <a href="#">Лицензионного договора</a>
-                    </div>
-                </div>
-            </div>
-        </form>
+      </div>
     </div>
-</c:when>
-<c:when test="${role == 'TUTOR'}">
-    <div class='teacher_registr small-6 column small-centered'>
-        <h2 class='text-center'>Регистрация репетитора</h2>
+  </div>
 
-        <form class='simple_form' action="/registration">
-            <h3>Данные для входа</h3>
-            <input type="hidden" value="true" name="do_registration">
-            <input type="hidden" value="TUTOR" name="role">
-            <div class='control-group'>
-                <label class='control-label'>
-                    E-mail
-                </label>
+  <!-- Core Scripts -->
+  <script src="/assets/js/libs/jquery-1.8.3.min.js"></script>
+  <script src="/assets/js/libs/jquery.placeholder.min.js"></script>
 
-                <div class='controls'>
-                    <input name='login' type='email'>
-                </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='password'>
-                    Пароль
-                </label>
+  <!-- Login Script -->
+  <script src="/assets/js/login.js"></script>
 
-                <div class='controls'>
-                    <input name='password' type='password'>
-                </div>
-            </div>
-            <div class='control-group'>
-                    <%--<label class='control-label' for='password_confirmation'>--%>
-                    <%--Подтверждение пароля--%>
-                    <%--</label>--%>
+  <!-- Validation -->
+  <script src="/plugins/validate/jquery.validate.min.js"></script>
 
-                    <%--<div class='controls'>--%>
-                    <%--<input name='password_confirmation' type='password'>--%>
-                    <%--</div>--%>
-            </div>
-            <h3>Личные данные</h3>
+  <!-- Uniform Script -->
+  <script src="/plugins/uniform/jquery.uniform.min.js"></script>
 
-            <div class='control-group'>
-                <label class='control-label' for='name'>
-                    Имя
-                </label>
-
-                <div class='controls'>
-                    <input name='name' type='text'>
-                </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='tel'>
-                    Номер телефона
-                </label>
-
-                <div class='controls'>
-                    <input name='phone' type='tel'>
-                </div>
-            </div>
-            <div class='form-action row'>
-                <div class='small-8 small-offset-4 column'>
-                    <div class='custom_checkbox'>
-                        <label class='checkbox'>
-                                ${error}
-                        </label>
-                    </div>
-                    <button class='button' type='submit'>
-                        Зарегистрироваться и войти
-                    </button>
-                    <div class='note'>
-                        Используя сервис, вы соглашаетесь
-                        соблюдать условия
-                        <a href="#">Лицензионного договора</a>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</c:when>
-<c:otherwise>
-    <div class='school_registr small-6 column small-centered'>
-        <h2 class='text-center'>Регистрация языковой школы</h2>
-
-        <form class='simple_form' action="/registration">
-            <h3>Данные для входа</h3>
-            <input type="hidden" value="SCHOOL" name="role">
-            <input type="hidden" value="true" name="do_registration">
-            <div class='control-group'>
-                <label class='control-label'>
-                    E-mail
-                </label>
-
-                <div class='controls'>
-                    <input name='login' type='email'>
-                </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='password'>
-                    Пароль
-                </label>
-
-                <div class='controls'>
-                    <input id='password' name='password' type='password'>
-                </div>
-            </div>
-            <div class='control-group'>
-                    <%--<label class='control-label' for='password_confirmation'>--%>
-                    <%--Подтверждение пароля--%>
-                    <%--</label>--%>
-
-                    <%--<div class='controls'>--%>
-                    <%--<input id='password_confirmation' name='password_confirmation' type='password'>--%>
-                    <%--</div>--%>
-            </div>
-            <h3>Личные данные</h3>
-
-            <div class='control-group'>
-                <label class='control-label' for='name'>
-                    Название
-                </label>
-
-                <div class='controls'>
-                    <input id='name' name='school' type='text'>
-                </div>
-            </div>
-            <div class='control-group'>
-                <label class='control-label' for='tel'>
-                    Номер телефона
-                </label>
-
-                <div class='controls'>
-                    <input id='tel' name='tel' type='tel'>
-                </div>
-            </div>
-            <div class='form-action row'>
-                <div class='small-8 small-offset-4 column'>
-                    <div class='custom_checkbox'>
-                        <label class='checkbox'>
-                                ${error}
-                        </label>
-                    </div>
-                    <button class='button' type='submit'>
-                        Зарегистрироваться и войти
-                    </button>
-                    <div class='note'>
-                        Используя сервис, вы соглашаетесь
-                        соблюдать условия
-                        <a href="#">Лицензионного договора</a>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</c:otherwise>
-</c:choose>
-</c:otherwise>
-</c:choose>
-</div>
-</div>
-</div>
-</div>
-<%@ include file="/WEB-INF/jsp/section/footer.jsp" %>
 </body>
+
 </html>

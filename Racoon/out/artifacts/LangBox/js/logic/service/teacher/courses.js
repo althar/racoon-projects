@@ -234,7 +234,6 @@ library =
                         var uploaded = $("root>progress",xml).text();
                         var isUploading = $("root>is_uploading",xml).text();
 
-                        document.title =isUploading;
                         if(isUploading=="true")
                         {
                             uploadDelay = 0;
@@ -313,6 +312,6 @@ function fileProgressBar(show)
         $("#upload-details").html("100%");
         $("#upload-progress-bar").progressbar("value",100);
         $("#progress-bar").finish();
-        $("#progress-bar").delay(300).hide(0);
+        $("#progress-bar").delay(500).hide(0);
     }
 }
