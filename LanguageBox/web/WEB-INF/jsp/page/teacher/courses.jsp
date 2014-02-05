@@ -88,7 +88,8 @@
             <%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
-            <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>
+            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %> --%>
+            <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>
           </div>
         </div>
       </section>
@@ -122,6 +123,9 @@
   <script src="/assets/jui/jquery-ui.custom.min.js"></script>
   <script src="/assets/jui/timepicker/jquery-ui-timepicker.min.js"></script>
   <script src="/assets/jui/jquery.ui.touch-punch.min.js"></script>
+
+  <!-- Bootstrap InputMask -->
+  <script src="/custom-plugins/bootstrap-inputmask.min.js"></script>
 
   <!-- Custom sripts-->
   <script src="/js/logic/service/teacher/courses.js" type="text/javascript"></script>
