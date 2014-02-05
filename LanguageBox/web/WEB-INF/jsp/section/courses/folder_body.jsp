@@ -4,102 +4,120 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class='tabs-content library-section' id='folder'>
-    <input type="hidden" id="current-folder-id" value="${folder.getLongValue('id')}">
-    <div class='content active'>
-        <ul class='breadcrumbs'>
-            <c:forEach items="${folder.getRecords('path')}" var="node" varStatus="loop">
-                <li <c:if test="${loop.last}">class='current'</c:if>>
-                    <a class="entity-link" entity-type="folder" entity-id="${node.getLongValue('id')}" folder-id="${node.getLongValue('id')}">${node.getStringValue('name')}</a>
-                </li>
-            </c:forEach>
-        </ul>
-        <div class='library_controls'>
-            <div class='row'>
-                <div class='small-6 column'>
-                    <div class='dropdown'>
-                        <div class='dropdown_inner'>
-                            <a class='button tiny' href='#'>
-                                Добавить
-                                <i class='fa-sort-down'></i>
-                            </a>
-                            <ul class='f-dropdown add-button'>
-                                <li>
-                                    <a class="add-file-link">Файл</a>
-                                </li>
-                                <li>
-                                    <a class="add-folder-link">Папку</a>
-                                </li>
-                                <li>
-                                    <a class="add-test-link">Тест</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class='small-6 column text-right'>
-                    <button class='tiny'>Поиск</button>
-                    <button class='tiny secondary'>
-                        <i class='fa-th-large'></i>
-                    </button>
-                    <button class='tiny secondary'>
-                        <i class='fa-list-ul'></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- change class "vertical_list" to "horizontal_list" -->
-        <ul class='library_list vertical_list folder-body'>
-            <li class='library_list-item new-folder hidden'>
-                <div class='item_icon'>
-                    <i class='fa-folder-open'></i>
-                </div>
-                <div class='item_name'>
-                    <input class="new-folder-name" onClick='this.select();' tabIndex='1' type='text' value='Новая папка'>
-                </div>
-            </li>
-            <c:forEach items="${folder.getRecords('folders')}" var="folder">
-                <li class='library_list-item' entity-type="folder" entity-id="${folder.getLongValue('id')}">
-                    <div class='item_icon'>
-                        <i class='fa-folder-open'></i>
-                    </div>
-                    <div class='item_name'>
-                        <a class="entity-link" folder-id="${folder.getID()}" entity-type="folder" entity-id="${folder.getLongValue('id')}">${folder.getStringValue('name')}</a>
-                        <input type="text" class="hidden entity-input" entity-type="folder" entity-id="${folder.getLongValue('id')}" value="${folder.getStringValue('name')}">
-                        <div class='library_list-controls'>
-                            <a class="delete-link" entity-type="folder" entity-id="${folder.getLongValue('id')}">Удалить
-                                <i class='fa-arrow-right'></i>
-                            </a>
-                            <a class="rename-link" entity-type="folder" entity-id="${folder.getLongValue('id')}">Переименовать
-                                <i class='fa-arrow-right'></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </c:forEach>
-            <c:forEach items="${folder.getRecords('materials')}" var="material">
-                <li class='library_list-item' entity-type="material" entity-id="${material.getLongValue('id')}">
-                    <%--<div class='item_icon'>--%>
-                        <%--<i class='fa-folder-open'></i>--%>
-                    <%--</div>--%>
-                    <div class='item_name'>
-                        <a class="entity-link" folder-id="${folder.getID()}" entity-type="material" entity-id="${material.getLongValue('id')}">${material.getStringValue('name')}</a>
-                        <input type="text" class="hidden entity-input" entity-type="material" entity-id="${material.getLongValue('id')}" value="${material.getStringValue('name')}">
-                        <div class='library_list-controls'>
-                            <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">Удалить
-                                <i class='fa-arrow-right'></i>
-                            </a>
-                            <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">Переименовать
-                                <i class='fa-arrow-right'></i>
-                            </a>
-                            <a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">Скачать
-                                <i class='fa-arrow-right'></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </c:forEach>
 
-        </ul>
+<div class="widget" id='folder'>
+	<input type="hidden" id="current-folder-id" value="${folder.getLongValue('id')}">
+  <div class="widget-header light">
+    <span class="title">Менеджер файлов</span>
+    <div id="progress-bar" class="hide">
+		  <div id="upload-details"></div>
+		  <div id="upload-progress-bar"></div>
+		</div>
+		<img src="/img/loader.gif" class="library-loader hide">
+    <div class="toolbar">
+      <span class="btn" data-toggle="collapse" data-target="#toolbar-ex">
+        <i class="icon-search"></i>
+      </span>
     </div>
+  </div>
+  <div id="toolbar-ex" class="toolbar form-toolbar collapse">
+    <form class="search-form">
+      <input type="text" class="span6 search-query" placeholder="Search...">
+      <div class="pull-right">
+        <select class='span6'>
+          <option selected='selected' value='Все уровни'>Все уровни</option>
+          <option value='Beginner'>Beginner</option>
+          <option value='Elementary'>Elementary</option>
+          <option value='Pre-intermediate'>Pre-intermediate</option>
+          <option value='Intermediate'>Intermediate</option>
+          <option value='Upper-Intermediate'>Upper-Intermediate</option>
+          <option value='Advance'>Advance</option>
+        </select>
+        <select class='span6'>
+          <option selected='selected' value='New English File '>New English
+            File
+          </option>
+          <option value='New Headway'>New Headway</option>
+          <option value='In company'>In company</option>
+          <option value='Straightforward'>Straightforward</option>
+          <option value='Face2face'>Face2face</option>
+          <option value='Language Leader'>Language Leader</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="toolbar btn-toolbar">
+    <div class="btn-group">
+    	<span class="btn add-folder-link"><i class="icol-application-add"></i></span>
+      <span class="btn add-file-link"><i class="icol-page-white-get"></i></span>
+      <span class="btn add-test-link"><i class="icol-clipboard-text"></i></span>
+    </div>
+  </div>
+  <div class="widget-content table-container">
+
+  	<table class='table folder-body'>
+  		<colgroup>
+  			<col>
+  			<col style="width: 100px">
+  		</colgroup>
+  		<tbody>
+	      <tr class='folder-body-node new-folder hide'>
+	      	<td>
+		        <span class="icol-folder"></span>
+		        <span class='item_name'><input class="new-folder-name" onClick='this.select();' tabIndex='1' type='text' value='Новая папка'></span>
+		      </td>
+		      <td></td>
+	      </tr>
+	      <c:forEach items="${folder.getRecords('folders')}" var="folder">
+	        <tr class='folder-body-node' entity-type="folder" entity-id="${folder.getLongValue('id')}">
+	        	<td>
+		          <span class="icol-folder"></span>
+		          <span class='item_name'>
+		            <a class="entity-link" folder-id="${folder.getID()}" entity-type="folder" entity-id="${folder.getLongValue('id')}">${folder.getStringValue('name')}</a>
+		            <input type="text" class="hide entity-input" entity-type="folder" entity-id="${folder.getLongValue('id')}" value="${folder.getStringValue('name')}">
+		          </span>
+		        </td>
+	          <td class='folder-body-controls'>
+	            <a class="rename-link" entity-type="folder" entity-id="${folder.getLongValue('id')}">
+	              <span class="icol-pencil"></span>
+	            </a>
+	            <a class="delete-link" entity-type="folder" entity-id="${folder.getLongValue('id')}">
+	              <span class="icol-cross"></span>
+	            </a>
+	          </td>
+	        </tr>
+	      </c:forEach>
+	      <c:forEach items="${folder.getRecords('materials')}" var="material">
+	        <tr class='folder-body-node' entity-type="material" entity-id="${material.getLongValue('id')}">
+	        	<td>
+		        	<span class="icol-doc-pdf"></span>
+		          <span class='item_name'>
+		            <a class="entity-link" folder-id="${folder.getID()}" entity-type="material" entity-id="${material.getLongValue('id')}">${material.getStringValue('name')}</a>
+		            <input type="text" class="hide entity-input" entity-type="material" entity-id="${material.getLongValue('id')}" value="${material.getStringValue('name')}">
+		          </span>
+		        </td>
+	          <td class='folder-body-controls'>
+	          	<a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">
+	              <span class='icol-page-white-put'></span>
+	            </a>
+	            <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+	              <span class="icol-pencil"></span>
+	            </a>
+	            <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+	              <span class="icol-cross"></span>
+	            </a>
+	          </td>
+	        </tr>
+	      </c:forEach>
+	    </tbody>
+    </table>
+
+  </div>
+  <div class="toolbar btn-toolbar">
+  	<div class="btn-group">
+  		<c:forEach items="${folder.getRecords('path')}" var="node" varStatus="loop">
+  			<a class="entity-link btn" entity-type="folder" entity-id="${node.getLongValue('id')}" folder-id="${node.getLongValue('id')}">${node.getStringValue('name')}</a>
+  		</c:forEach>
+  	</div>
+  </div>
 </div>
