@@ -28,25 +28,22 @@
             <input type="text" class="span6 search-query" placeholder="Search...">
 
             <div class="pull-right">
-                <select class='span6'>
-                    <option selected='selected' value='Все уровни'>Все уровни</option>
-                    <option value='Beginner'>Beginner</option>
-                    <option value='Elementary'>Elementary</option>
-                    <option value='Pre-intermediate'>Pre-intermediate</option>
-                    <option value='Intermediate'>Intermediate</option>
-                    <option value='Upper-Intermediate'>Upper-Intermediate</option>
-                    <option value='Advance'>Advance</option>
+                <select class='span6' style="width:100%;">
+                    <option selected='selected' value='audio'>Аудио</option>
+                    <option value='video'>Видео</option>
+                    <option value='document'>Документ</option>
+                    <option value='image'>Изображение</option>
                 </select>
-                <select class='span6'>
-                    <option selected='selected' value='New English File '>New English
-                        File
-                    </option>
-                    <option value='New Headway'>New Headway</option>
-                    <option value='In company'>In company</option>
-                    <option value='Straightforward'>Straightforward</option>
-                    <option value='Face2face'>Face2face</option>
-                    <option value='Language Leader'>Language Leader</option>
-                </select>
+                <%--<select class='span6'>--%>
+                    <%--<option selected='selected' value='New English File '>New English--%>
+                        <%--File--%>
+                    <%--</option>--%>
+                    <%--<option value='New Headway'>New Headway</option>--%>
+                    <%--<option value='In company'>In company</option>--%>
+                    <%--<option value='Straightforward'>Straightforward</option>--%>
+                    <%--<option value='Face2face'>Face2face</option>--%>
+                    <%--<option value='Language Leader'>Language Leader</option>--%>
+                <%--</select>--%>
             </div>
         </form>
     </div>

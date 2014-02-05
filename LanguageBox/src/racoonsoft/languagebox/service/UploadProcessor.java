@@ -161,7 +161,7 @@ public class UploadProcessor extends SeparateThreadProcessor
         Integer totalResult = (int)(totalProgress*0.2+totalTransfer*0.8);
         rec.setValue("progress",totalResult);
         boolean totalUploading = isUploading||isTransferring;
-        System.out.println(isTransferring+" "+isUploading+" : "+totalTransfer+" | "+totalProgress+"   "+totalUploading);
+//        System.out.println(isTransferring+" "+isUploading+" : "+totalTransfer+" | "+totalProgress+"   "+totalUploading);
 
         rec.setValue("is_uploading",totalUploading);
         rec.setValue("files",items);
