@@ -37,7 +37,7 @@ public class CourseService extends LanguageBoxService
         addLesson(id,"MAIN_MATERIAL","","Основные материалы курса",true);
         return id;
     }
-    public Long updateCourse(Long id,Long userId, String name,String level, Boolean isPublic,Double price, String description,String target,String type) throws Exception
+    public Integer updateCourse(Long id, Long userId, String name, String level, Boolean isPublic, Double price, String description, String target, String type) throws Exception
     {
         HashMap<String,Object> pars = new HashMap<String, Object>();
         pars.put("user_id",userId);
