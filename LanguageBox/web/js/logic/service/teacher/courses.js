@@ -54,9 +54,9 @@ library =
         });
 
         // Add folder or material
-        $('.dropdown').dropit({
-            triggerParentEl: '.dropdown_inner'
-        });
+        // $('.dropdown').dropit({
+        //     triggerParentEl: '.dropdown_inner'
+        // });
 
         $(".add-folder-link").unbind("click");
         $(".add-folder-link").bind("click", function () {
