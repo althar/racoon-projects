@@ -54,9 +54,9 @@ library =
         });
 
         // Add folder or material
-        $('.dropdown').dropit({
-            triggerParentEl: '.dropdown_inner'
-        });
+        // $('.dropdown').dropit({
+        //     triggerParentEl: '.dropdown_inner'
+        // });
 
         $(".add-folder-link").unbind("click");
         $(".add-folder-link").bind("click", function () {
@@ -98,7 +98,7 @@ library =
                             context: document.body,
                             async: true,
                             success: function (html) {
-                                $("li[entity-type=\"" + type + "\"][entity-id=\"" + id + "\"]").hide();
+                                $("tr[entity-type=\"" + type + "\"][entity-id=\"" + id + "\"]").hide();
                                 $(".library-loader").hide();
                             },
                             failure: function () {
@@ -175,7 +175,6 @@ library =
                 url: "/service/upload_files",  //Server script to process data
                 type: 'POST',
                 success: function () {
-                    $(".library-loader").hide();
                     isCheckingUpload = true;
                 },
                 error: function () {
@@ -189,6 +188,7 @@ library =
                 contentType: false,
                 processData: false
             });
+            $("#add-file").hide();
             var currentFolderId = $("#current-folder-id").val();
             library.showFolder(currentFolderId);
         });
@@ -239,8 +239,7 @@ library =
                             uploadDelay = 0;
                             uploaded = uploaded/100.0;
                             fileProgressBar(true);
-                            $("#upload-details").html(uploaded+"%");
-                            $("#upload-progress-bar").progressbar("value",parseInt(uploaded));
+                            $(".upload-progress-description").html(" Загрузка файлов "+uploaded+"%");
                         }
                         else
                         {
@@ -305,13 +304,12 @@ function fileProgressBar(show)
 {
     if(show)
     {
-        $("#progress-bar").finish().show();
+        $(".upload-progress-link").show();
+        $(".library-loader").show();
     }
     else
     {
-        $("#upload-details").html("100%");
-        $("#upload-progress-bar").progressbar("value",100);
-        $("#progress-bar").finish();
-        $("#progress-bar").delay(500).hide(0);
+        $(".upload-progress-description").html(" Загрузка файлов 100%");
+        $(".upload-progress-link").delay(500).hide(0);
     }
 }

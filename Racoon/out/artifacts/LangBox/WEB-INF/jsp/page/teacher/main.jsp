@@ -46,8 +46,8 @@
 
 </head>
 
-<body data-show-sidebar-toggle-button="true" data-fixed-sidebar="false">
-  <div id="dialog-message" class="hidden" title="Внимание">
+<body data-show-sidebar-toggle-button="false" data-fixed-sidebar="true">
+  <div id="dialog-message" class="hide" title="Внимание">
     <p>Уверены?</p>
   </div>
 
@@ -58,9 +58,11 @@
       <div id="content">
         <div id="content-outer">
           <div id="content-inner">
-            <%@include file="/WEB-INF/jsp/section/aside_teacher.jsp" %>
+              <jsp:include page="/WEB-INF/jsp/section/aside_teacher.jsp" >
+                  <jsp:param name="page" value="main" />
+              </jsp:include>
 
-            <div id="sidebar-separator"></div>
+            <!-- <div id="sidebar-separator"></div> -->
 
             <section id="main" class="clearfix">
               <div id="main-header" class="page-header">

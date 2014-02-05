@@ -20,12 +20,12 @@
                     var $el = $(this),
                          el = this,
                          settings = $.fn.dropit.settings;
-                    
-                    // Hide initial submenus     
+
+                    // Hide initial submenus
                     $el.addClass('dropit')
                     .find('>'+ settings.triggerParentEl +':has('+ settings.submenuEl +')').addClass('dropit-trigger')
                     .find(settings.submenuEl).addClass('dropit-submenu').hide();
-                    
+
                     // Open on click
                     $el.on(settings.action, settings.triggerParentEl +':has('+ settings.submenuEl +') > '+ settings.triggerEl +'', function(){
                         if($(this).parents(settings.triggerParentEl).hasClass('dropit-open')) return false;
@@ -37,18 +37,18 @@
                         settings.afterShow.call(this);
                         return false;
                     });
-                    
+
                     // Close if outside click
                     $(document).on('click', function(){
                         settings.beforeHide.call(this);
                         $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu').hide();
                         settings.afterHide.call(this);
                     });
-                    
+
                     settings.afterLoad.call(this);
                 });
             }
-            
+
         }
 
         if (methods[method]) {
@@ -242,7 +242,7 @@ Enjoy!
 
 	/**
 	 * Set or remove the "disabled" class for disabled elements, based on
-	 * if the 
+	 * if the
 	 *
 	 * @param jQuery $tag Our Uniform span/div
 	 * @param jQuery $el Original form element
@@ -2624,10 +2624,10 @@ if ( typeof Object.create !== "function" ) {
       slideSpeed: 500,
       paginationSpeed: 1000
     });
-    $('.dropdown').dropit({
-      triggerParentEl: '.dropdown_inner'
-    });
-    return $('.custom_selectbox').uniform();
+    // $('.dropdown').dropit({
+    //   triggerParentEl: '.dropdown_inner'
+    // });
+    // return $('.custom_selectbox').uniform();
   });
 
 }).call(this);

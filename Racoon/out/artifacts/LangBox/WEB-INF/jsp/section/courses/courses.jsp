@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="widget">
+<div class="widget span6">
   <input type="hidden" id="current-course-id">
   <input type="hidden" id="current-lesson-id">
   <div class="widget-header">

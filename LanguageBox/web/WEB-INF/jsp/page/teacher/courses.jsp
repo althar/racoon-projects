@@ -41,6 +41,9 @@
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="/js/jq/ajax-addon.js"></script>
+<script src="/js/jq/ajax-download-addon.js"></script>
+<script src="/js/jq/jquery-2.0.3.js"></script>
 <![endif]-->
 
 <title>LanguageBox - Courses</title>
@@ -58,7 +61,10 @@
     <div id="content">
     <div id="content-outer">
       <div id="content-inner">
-      <%@include file="/WEB-INF/jsp/section/aside_teacher.jsp" %>
+      <jsp:include page="/WEB-INF/jsp/section/aside_teacher.jsp" >
+          <jsp:param name="page" value="courses" />
+      </jsp:include>
+
       <section id="main" class="clearfix">
         <div id="main-header" class="page-header">
           <ul class="breadcrumb">
