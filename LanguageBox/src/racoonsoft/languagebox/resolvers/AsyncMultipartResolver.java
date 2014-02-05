@@ -31,7 +31,7 @@ public class AsyncMultipartResolver extends CommonsMultipartResolver
         if(transId==null)
         {
             transferId++;
-            System.out.println(" trId: "+transferId);
+//            System.out.println(" trId: "+transferId);
 
             request.setAttribute("transfer_id", transferId);
             transId = transferId;

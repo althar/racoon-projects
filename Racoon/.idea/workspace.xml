@@ -103,7 +103,7 @@
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/Manifest.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/../rzd_scanner/gen/com/octys/rzd/BuildConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365808376260" ignored="false" />
     <file path="$PROJECT_DIR$/Store/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366030016029" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391600781629" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/.idea/workspace.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391611834636" ignored="false" />
     <file path="/Store.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366033053749" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/persist/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366039891777" ignored="false" />
     <file path="/SellerStatisticsDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366038895443" ignored="false" />
@@ -612,8 +612,8 @@
     <file path="/header_teacher.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391595368347" ignored="false" />
     <file path="/courses.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391595901815" ignored="false" />
     <file path="/normalize.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390318527208" ignored="false" />
-    <file path="/courses.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391599046408" ignored="false" />
-    <file path="/folder_body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391599976935" ignored="false" />
+    <file path="/courses.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391610120662" ignored="false" />
+    <file path="/folder_body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391611740681" ignored="false" />
     <file path="/LibraryService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391082440519" ignored="false" />
     <file path="/plain.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390386819103" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/project/src/main/resources/start.sh" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390398310285" ignored="false" />
@@ -754,53 +754,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="courses.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="courses.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/web/js/logic/service/teacher/courses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="43" selection-start="10252" selection-end="10252" vertical-scroll-proportion="0.6311881">
+            <state line="267" column="58" selection-start="10704" selection-end="10704" vertical-scroll-proportion="-11.28">
               <folding>
-                <element signature="e#85#222#0" expanded="false" />
-                <element signature="e#990#1111#0" expanded="false" />
-                <element signature="e#1808#1917#0" expanded="false" />
-                <element signature="e#1929#1954#0" expanded="false" />
-                <element signature="e#2159#2206#0" expanded="false" />
-                <element signature="e#2310#3017#0" expanded="false" />
-                <element signature="e#2459#3007#0" expanded="false" />
-                <element signature="e#2484#2991#0" expanded="false" />
-                <element signature="e#2707#2785#0" expanded="false" />
-                <element signature="e#2828#2973#0" expanded="false" />
-                <element signature="e#3145#4395#0" expanded="false" />
-                <element signature="e#3219#4383#0" expanded="false" />
-                <element signature="e#3246#4369#0" expanded="false" />
-                <element signature="e#3286#4238#0" expanded="false" />
-                <element signature="e#3545#4214#0" expanded="false" />
-                <element signature="e#3772#3968#0" expanded="false" />
-                <element signature="e#4019#4188#0" expanded="false" />
-                <element signature="e#4279#4351#0" expanded="false" />
-                <element signature="e#4532#5857#0" expanded="false" />
-                <element signature="e#4622#5847#0" expanded="false" />
-                <element signature="e#4801#5831#0" expanded="false" />
-                <element signature="e#5014#5625#0" expanded="false" />
-                <element signature="e#5058#5420#0" expanded="false" />
-                <element signature="e#5450#5550#0" expanded="false" />
-                <element signature="e#5668#5813#0" expanded="false" />
-                <element signature="e#5947#6344#0" expanded="false" />
-                <element signature="e#6466#6512#0" expanded="false" />
-                <element signature="e#6611#6736#0" expanded="false" />
-                <element signature="e#7075#7742#0" expanded="false" />
-                <element signature="e#7223#7287#0" expanded="false" />
-                <element signature="e#7324#7475#0" expanded="false" />
-                <element signature="e#7346#7406#0" expanded="false" />
-                <element signature="e#7948#8780#0" expanded="false" />
-                <element signature="e#8045#8772#0" expanded="false" />
-                <element signature="e#8103#8504#0" expanded="false" />
-                <element signature="e#8812#9020#0" expanded="false" />
-                <element signature="e#9910#10186#0" expanded="false" />
-                <element signature="e#10073#10160#0" expanded="false" />
-                <element signature="e#10318#10453#0" expanded="false" />
-                <element signature="e#10708#10780#0" expanded="false" />
-                <element signature="e#11771#11906#0" expanded="false" />
+                <element signature="e#107#244#0" expanded="false" />
+                <element signature="e#1064#1185#0" expanded="false" />
+                <element signature="e#1243#1673#0" expanded="false" />
+                <element signature="e#1711#7985#0" expanded="false" />
+                <element signature="e#1882#1991#0" expanded="false" />
+                <element signature="e#2003#2028#0" expanded="false" />
+                <element signature="e#2233#2280#0" expanded="false" />
+                <element signature="e#2384#3091#0" expanded="false" />
+                <element signature="e#2533#3081#0" expanded="false" />
+                <element signature="e#2558#3065#0" expanded="false" />
+                <element signature="e#2781#2859#0" expanded="false" />
+                <element signature="e#2902#3047#0" expanded="false" />
+                <element signature="e#3219#4469#0" expanded="false" />
+                <element signature="e#3293#4457#0" expanded="false" />
+                <element signature="e#3320#4443#0" expanded="false" />
+                <element signature="e#3360#4312#0" expanded="false" />
+                <element signature="e#3619#4288#0" expanded="false" />
+                <element signature="e#3846#4042#0" expanded="false" />
+                <element signature="e#4093#4262#0" expanded="false" />
+                <element signature="e#4353#4425#0" expanded="false" />
+                <element signature="e#4606#5931#0" expanded="false" />
+                <element signature="e#4696#5921#0" expanded="false" />
+                <element signature="e#4875#5905#0" expanded="false" />
+                <element signature="e#5088#5699#0" expanded="false" />
+                <element signature="e#5132#5494#0" expanded="false" />
+                <element signature="e#5524#5624#0" expanded="false" />
+                <element signature="e#5742#5887#0" expanded="false" />
+                <element signature="e#6021#6418#0" expanded="false" />
+                <element signature="e#6540#6586#0" expanded="false" />
+                <element signature="e#6685#6810#0" expanded="false" />
+                <element signature="e#6908#7977#0" expanded="false" />
+                <element signature="e#7149#7816#0" expanded="false" />
+                <element signature="e#7297#7361#0" expanded="false" />
+                <element signature="e#7398#7549#0" expanded="false" />
+                <element signature="e#7420#7480#0" expanded="false" />
+                <element signature="e#8022#8854#0" expanded="false" />
+                <element signature="e#8119#8846#0" expanded="false" />
+                <element signature="e#8177#8578#0" expanded="false" />
+                <element signature="e#8886#9094#0" expanded="false" />
+                <element signature="e#9190#10553#0" expanded="false" />
+                <element signature="e#9211#10541#0" expanded="false" />
+                <element signature="e#9364#10353#0" expanded="false" />
+                <element signature="e#9428#10282#0" expanded="false" />
+                <element signature="e#9650#9930#0" expanded="false" />
+                <element signature="e#9984#10260#0" expanded="false" />
+                <element signature="e#10147#10234#0" expanded="false" />
+                <element signature="e#10392#10527#0" expanded="false" />
+                <element signature="e#10787#10859#0" expanded="false" />
+                <element signature="e#10879#11999#0" expanded="false" />
+                <element signature="e#11049#11811#0" expanded="false" />
+                <element signature="e#11185#11659#0" expanded="false" />
+                <element signature="e#11501#11637#0" expanded="false" />
+                <element signature="e#11716#11793#0" expanded="false" />
+                <element signature="e#11850#11985#0" expanded="false" />
+                <element signature="n#!!block;n#fileProgressBar#0" expanded="false" />
+                <element signature="e#12074#12161#0" expanded="false" />
+                <element signature="e#12175#12310#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/properties/main.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="51" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/LibraryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="22" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="47" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -841,46 +884,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeacherController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="29" selection-start="2265" selection-end="2272" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="34" selection-start="4261" selection-end="4261" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="folder_body.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="folder_body.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/folder_body.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="59" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-5.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LibraryService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/LibraryService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="22" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="52" selection-start="2382" selection-end="2382" vertical-scroll-proportion="-14.384615">
+            <state line="30" column="37" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.37023592">
               <folding />
             </state>
           </provider>
@@ -901,9 +908,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/data/ProductionAndCapacity.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/data/CompanySensors.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/data/CompanyState.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/GameProcessor.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/Player.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
@@ -915,8 +919,11 @@
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/aside_teacher.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/main.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/add_file_body.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/folder_body.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/js/logic/service/teacher/courses.js" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/properties/main.properties" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/resolvers/AsyncMultipartResolver.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/UploadProcessor.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/folder_body.jsp" />
       </list>
     </option>
   </component>
@@ -1261,7 +1268,87 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="languagebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resolvers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="languagebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="properties" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="languagebox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deploy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2100,7 +2187,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49275362" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29988852" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
@@ -2115,7 +2202,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1755603" sideWeight="0.5072464" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15528281" sideWeight="0.7001115" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2419175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2195,31 +2282,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/GameProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="26" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.74006116">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="953" selection-end="953" vertical-scroll-proportion="0.3853211">
-          <folding>
-            <element signature="e#678#687#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="23" selection-start="837" selection-end="837" vertical-scroll-proportion="0.5978593">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/game/structure/data/CompanyProductionAndCapacity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="79" selection-start="935" selection-end="935" vertical-scroll-proportion="0.57186544">
@@ -2246,20 +2308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="34" selection-start="4261" selection-end="4261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/LibraryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="22" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/aside_teacher.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="30" selection-start="1362" selection-end="1362" vertical-scroll-proportion="-8.923077">
@@ -2270,13 +2318,108 @@
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="52" selection-start="2382" selection-end="2382" vertical-scroll-proportion="-14.384615">
+          <folding>
+            <marker date="1391596007755" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/UploadProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="44" selection-start="5184" selection-end="5184" vertical-scroll-proportion="3.6993356">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header_teacher.jsp">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/resolvers/AsyncMultipartResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="16" selection-start="4245" selection-end="4245" vertical-scroll-proportion="-8.692307">
+        <state line="83" column="32" selection-start="2970" selection-end="2970" vertical-scroll-proportion="1.9485049">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/js/logic/service/teacher/courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="267" column="58" selection-start="10704" selection-end="10704" vertical-scroll-proportion="-11.28">
+          <folding>
+            <element signature="e#107#244#0" expanded="false" />
+            <element signature="e#1064#1185#0" expanded="false" />
+            <element signature="e#1243#1673#0" expanded="false" />
+            <element signature="e#1711#7985#0" expanded="false" />
+            <element signature="e#1882#1991#0" expanded="false" />
+            <element signature="e#2003#2028#0" expanded="false" />
+            <element signature="e#2233#2280#0" expanded="false" />
+            <element signature="e#2384#3091#0" expanded="false" />
+            <element signature="e#2533#3081#0" expanded="false" />
+            <element signature="e#2558#3065#0" expanded="false" />
+            <element signature="e#2781#2859#0" expanded="false" />
+            <element signature="e#2902#3047#0" expanded="false" />
+            <element signature="e#3219#4469#0" expanded="false" />
+            <element signature="e#3293#4457#0" expanded="false" />
+            <element signature="e#3320#4443#0" expanded="false" />
+            <element signature="e#3360#4312#0" expanded="false" />
+            <element signature="e#3619#4288#0" expanded="false" />
+            <element signature="e#3846#4042#0" expanded="false" />
+            <element signature="e#4093#4262#0" expanded="false" />
+            <element signature="e#4353#4425#0" expanded="false" />
+            <element signature="e#4606#5931#0" expanded="false" />
+            <element signature="e#4696#5921#0" expanded="false" />
+            <element signature="e#4875#5905#0" expanded="false" />
+            <element signature="e#5088#5699#0" expanded="false" />
+            <element signature="e#5132#5494#0" expanded="false" />
+            <element signature="e#5524#5624#0" expanded="false" />
+            <element signature="e#5742#5887#0" expanded="false" />
+            <element signature="e#6021#6418#0" expanded="false" />
+            <element signature="e#6540#6586#0" expanded="false" />
+            <element signature="e#6685#6810#0" expanded="false" />
+            <element signature="e#6908#7977#0" expanded="false" />
+            <element signature="e#7149#7816#0" expanded="false" />
+            <element signature="e#7297#7361#0" expanded="false" />
+            <element signature="e#7398#7549#0" expanded="false" />
+            <element signature="e#7420#7480#0" expanded="false" />
+            <element signature="e#8022#8854#0" expanded="false" />
+            <element signature="e#8119#8846#0" expanded="false" />
+            <element signature="e#8177#8578#0" expanded="false" />
+            <element signature="e#8886#9094#0" expanded="false" />
+            <element signature="e#9190#10553#0" expanded="false" />
+            <element signature="e#9211#10541#0" expanded="false" />
+            <element signature="e#9364#10353#0" expanded="false" />
+            <element signature="e#9428#10282#0" expanded="false" />
+            <element signature="e#9650#9930#0" expanded="false" />
+            <element signature="e#9984#10260#0" expanded="false" />
+            <element signature="e#10147#10234#0" expanded="false" />
+            <element signature="e#10392#10527#0" expanded="false" />
+            <element signature="e#10787#10859#0" expanded="false" />
+            <element signature="e#10879#11999#0" expanded="false" />
+            <element signature="e#11049#11811#0" expanded="false" />
+            <element signature="e#11185#11659#0" expanded="false" />
+            <element signature="e#11501#11637#0" expanded="false" />
+            <element signature="e#11716#11793#0" expanded="false" />
+            <element signature="e#11850#11985#0" expanded="false" />
+            <element signature="n#!!block;n#fileProgressBar#0" expanded="false" />
+            <element signature="e#12074#12161#0" expanded="false" />
+            <element signature="e#12175#12310#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/properties/main.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="47" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="34" selection-start="2399" selection-end="2399" vertical-scroll-proportion="5.8627453">
           <folding />
         </state>
       </provider>
@@ -2295,66 +2438,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/header_teacher.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="34" selection-start="2399" selection-end="2399" vertical-scroll-proportion="5.8627453">
+        <state line="118" column="16" selection-start="4245" selection-end="4245" vertical-scroll-proportion="-8.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/LibraryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="22" selection-start="3855" selection-end="3855" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/folder_body.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="59" selection-start="3173" selection-end="3173" vertical-scroll-proportion="-5.0">
+        <state line="30" column="37" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.37023592">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/js/logic/service/teacher/courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="43" selection-start="10252" selection-end="10252" vertical-scroll-proportion="0.6311881">
-          <folding>
-            <element signature="e#85#222#0" expanded="false" />
-            <element signature="e#990#1111#0" expanded="false" />
-            <element signature="e#1808#1917#0" expanded="false" />
-            <element signature="e#1929#1954#0" expanded="false" />
-            <element signature="e#2159#2206#0" expanded="false" />
-            <element signature="e#2310#3017#0" expanded="false" />
-            <element signature="e#2459#3007#0" expanded="false" />
-            <element signature="e#2484#2991#0" expanded="false" />
-            <element signature="e#2707#2785#0" expanded="false" />
-            <element signature="e#2828#2973#0" expanded="false" />
-            <element signature="e#3145#4395#0" expanded="false" />
-            <element signature="e#3219#4383#0" expanded="false" />
-            <element signature="e#3246#4369#0" expanded="false" />
-            <element signature="e#3286#4238#0" expanded="false" />
-            <element signature="e#3545#4214#0" expanded="false" />
-            <element signature="e#3772#3968#0" expanded="false" />
-            <element signature="e#4019#4188#0" expanded="false" />
-            <element signature="e#4279#4351#0" expanded="false" />
-            <element signature="e#4532#5857#0" expanded="false" />
-            <element signature="e#4622#5847#0" expanded="false" />
-            <element signature="e#4801#5831#0" expanded="false" />
-            <element signature="e#5014#5625#0" expanded="false" />
-            <element signature="e#5058#5420#0" expanded="false" />
-            <element signature="e#5450#5550#0" expanded="false" />
-            <element signature="e#5668#5813#0" expanded="false" />
-            <element signature="e#5947#6344#0" expanded="false" />
-            <element signature="e#6466#6512#0" expanded="false" />
-            <element signature="e#6611#6736#0" expanded="false" />
-            <element signature="e#7075#7742#0" expanded="false" />
-            <element signature="e#7223#7287#0" expanded="false" />
-            <element signature="e#7324#7475#0" expanded="false" />
-            <element signature="e#7346#7406#0" expanded="false" />
-            <element signature="e#7948#8780#0" expanded="false" />
-            <element signature="e#8045#8772#0" expanded="false" />
-            <element signature="e#8103#8504#0" expanded="false" />
-            <element signature="e#8812#9020#0" expanded="false" />
-            <element signature="e#9910#10186#0" expanded="false" />
-            <element signature="e#10073#10160#0" expanded="false" />
-            <element signature="e#10318#10453#0" expanded="false" />
-            <element signature="e#10708#10780#0" expanded="false" />
-            <element signature="e#11771#11906#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

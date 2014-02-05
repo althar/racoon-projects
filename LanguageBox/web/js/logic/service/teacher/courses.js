@@ -1,5 +1,7 @@
 var isCheckingUpload = true;
 var checkInterval = 1000;
+var uploadDelay = 0;
+
 $(document).ready(function () {
     library.bindFolderControls();
     library.checkUploadFiles();
@@ -17,6 +19,7 @@ library =
         var folderParam = "";
         if (folder_id != null) {
             folderParam = "?folder_id=" + folder_id;
+            $("#current-folder-id").val(folder_id);
         }
         $.ajax({
             url: "/service/get_folder" + folderParam,
@@ -262,7 +265,7 @@ library =
         check();
         // For appearing new files
         var showNewFiles = function(){
-            var folder_id = $(this).attr("folder-id");
+            var folder_id =  $("#current-folder-id").val();
             var folderParam = "";
             if (folder_id != null)
             {
@@ -299,7 +302,8 @@ library =
 
     }
 }
-var uploadDelay = 0;
+
+
 function fileProgressBar(show)
 {
     if(show)
