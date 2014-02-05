@@ -7,31 +7,31 @@
 <aside id="sidebar">
   <nav id="navigation" class="collapse">
     <ul>
-      <li class="active">
+      <li <c:if test="${param.page=='main'}">class="active"</c:if>>
         <a href="/service/teacher" title="Главная">
           <i class="icon-home"></i>
           <span class="nav-title">Основное</span>
         </a>
       </li>
-      <li>
-        <a href="/service/teacher/courses.html" title="Курсы">
+      <li <c:if test="${param.page=='courses'}">class="active"</c:if>>
+        <a href="/service/teacher/courses" title="Курсы">
           <i class="icon-list"></i>
           <span class="nav-title">Курсы</span>
         </a>
       </li>
-      <li>
+      <li <c:if test="${param.page=='students'}">class="active"</c:if>>
         <a href="#" title="Ученики">
           <i class="icon-users"></i>
           <span class="nav-title">Ученики</span>
         </a>
       </li>
-      <li>
+      <li <c:if test="${param.page=='market'}">class="active"</c:if>>
         <a href="#" title="Магазин курсов">
           <i class="icon-bag"></i>
           <span class="nav-title">Магазин</span>
         </a>
       </li>
-      <li>
+      <li <c:if test="${param.page=='settings'}">class="active"</c:if>>
         <a href="#" title="Настройки">
           <i class="icon-cogs"></i>
           <span class="nav-title">Настройки</span>

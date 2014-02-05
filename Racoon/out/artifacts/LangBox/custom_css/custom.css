@@ -1,3 +1,19 @@
+#wrapper #sidebar {
+  width: 70px;
+}
+
+#wrapper #main {
+  margin-left: 100px;
+}
+
+#wrapper #content #sidebar-separator {
+  left: 783px;
+}
+
+.ui-dialog {
+  z-index: 100
+}
+
 #login-wrap .note {
   color: #ccc;
   font-size: 11px;
@@ -66,3 +82,17 @@
 .courseslist>ul>li .head h2{font-size:16px;margin:0;line-height:1.5}
 .courseslist>ul>li .head h2 a{color:#444;display:block}
 .courseslist>ul>li .head .note{color:#999;font-size:11px}
+
+
+#teacher-library .widget-content.table-container{min-height: 300px; border: 1px solid rgb(204, 204, 204);}
+#teacher-library .widget-content.table-container .folder-body {border: none;}
+.folder-body td {border: none;}
+.folder-body .item_name .entity-input {margin: 0; display: none;}
+.folder-body .item_name .entity-link {color: #444; text-decoration: none; cursor: pointer;}
+.folder-body .item_name {display: inline-block; vertical-align: middle; margin-left: 3px}
+.folder-body .folder-body-controls {text-align: right;}
+.folder-body .folder-body-controls a {display: inline-block; text-decoration: none; margin-left: 5px; cursor: pointer;}
+
+
+.add-file-list {margin-top: 10px}
+.add-file-list li {margin: 3px 0;}

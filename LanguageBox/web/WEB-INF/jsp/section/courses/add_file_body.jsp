@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 
-<div class="widget hide" id='add-file'>
+<div class="widget hide library-section" id='add-file'>
   <div class="widget-header">
     <span class="title">Добавить файл</span>
   </div>

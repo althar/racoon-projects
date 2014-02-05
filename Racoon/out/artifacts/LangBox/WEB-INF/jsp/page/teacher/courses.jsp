@@ -41,14 +41,19 @@
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="/js/jq/ajax-addon.js"></script>
+<script src="/js/jq/ajax-download-addon.js"></script>
+<script src="/js/jq/jquery-2.0.3.js"></script>
 <![endif]-->
 
 <title>LanguageBox - Courses</title>
 
 </head>
 
-<body data-show-sidebar-toggle-button="true" data-fixed-sidebar="false">
-
+<body data-show-sidebar-toggle-button="false" data-fixed-sidebar="true">
+  <div id="dialog-message" class="hide" title="Внимание">
+    <p>Уверены?</p>
+  </div>
   <div id="wrapper">
   <%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>
 
@@ -56,33 +61,35 @@
     <div id="content">
     <div id="content-outer">
       <div id="content-inner">
-      <%@include file="/WEB-INF/jsp/section/aside_teacher.jsp" %>
-
-      <div id="sidebar-separator"></div>
+      <jsp:include page="/WEB-INF/jsp/section/aside_teacher.jsp" >
+          <jsp:param name="page" value="courses" />
+      </jsp:include>
 
       <section id="main" class="clearfix">
         <div id="main-header" class="page-header">
-        <ul class="breadcrumb">
-          <li>
-          <i class="icon-home"></i>LanguageBox
-          <span class="divider">&raquo;</span>
-          </li>
-          <li>
-          <a href="#">Курсы</a>
-          </li>
-        </ul>
+          <ul class="breadcrumb">
+            <li>
+            <i class="icon-home"></i>LanguageBox
+            <span class="divider">&raquo;</span>
+            </li>
+            <li>
+            <a href="#">Библиотека</a>
+            </li>
+          </ul>
 
-        <h1 id="main-heading">
-          Курсы <span>Здесь Вы можете просматривать и редактировать ваши собственные курсы</span>
-        </h1>
+          <h1 id="main-heading">
+            Библиотека и курсы<span>Здесь Вы можете просматривать ваши файлы, и редактировать курсы</span>
+          </h1>
         </div>
 
         <div id="main-content">
-          <%-- COURSES --%>
-          <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>
-
-          <%-- LIBRARY --%>
-          <%--<%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>--%>
+          <div class="row-fluid">
+            <%-- LIBRARY --%>
+            <%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>
+            <div id="sidebar-separator"></div>
+            <%-- COURSES --%>
+            <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>
+          </div>
         </div>
       </section>
       </div>

@@ -7,54 +7,35 @@
 <aside id="sidebar">
   <nav id="navigation" class="collapse">
     <ul>
-      <li>
-        <span title="Основное">
+      <li <c:if test="${param.page=='main'}">class="active"</c:if>>
+        <a href="/service/teacher" title="Главная">
           <i class="icon-home"></i>
           <span class="nav-title">Основное</span>
-        </span>
-        <ul class="inner-nav">
-          <li><a href="/service/teacher"><i class="icol-dashboard"></i> Главная</a></li>
-          <li><a href="#"><i class="icol-newspaper"></i> Новости сервиса</a></li>
-        </ul>
+        </a>
       </li>
-      <li class="active">
-        <span title="Курсы">
+      <li <c:if test="${param.page=='courses'}">class="active"</c:if>>
+        <a href="/service/teacher/courses" title="Курсы">
           <i class="icon-list"></i>
           <span class="nav-title">Курсы</span>
-        </span>
-        <ul class="inner-nav">
-          <li class="active"><a href="/service/teacher/courses.html"><i class="icol-slides-stack"></i> Курсы</a></li>
-          <li><a href="#"><i class="icol-book"></i> Библиотека</a></li>
-        </ul>
+        </a>
       </li>
-      <li>
-        <span title="Ученики">
+      <li <c:if test="${param.page=='students'}">class="active"</c:if>>
+        <a href="#" title="Ученики">
           <i class="icon-users"></i>
           <span class="nav-title">Ученики</span>
-        </span>
-        <ul class="inner-nav">
-          <li><a href="#"><i class="icol-user-thief-baldie"></i> Список учеников</a></li>
-          <li><a href="#"><i class="icol-coins"></i> Оплата</a></li>
-          <li><a href="#"><i class="icol-group"></i> Группы</a></li>
-        </ul>
+        </a>
       </li>
-      <li>
-        <span title="Магазин курсов">
+      <li <c:if test="${param.page=='market'}">class="active"</c:if>>
+        <a href="#" title="Магазин курсов">
           <i class="icon-bag"></i>
           <span class="nav-title">Магазин</span>
-        </span>
-        <ul class="inner-nav">
-          <li><a href="#"><i class="icol-paper-bag"></i> Магазин</a></li>
-        </ul>
+        </a>
       </li>
-      <li>
-        <span title="Настройки">
+      <li <c:if test="${param.page=='settings'}">class="active"</c:if>>
+        <a href="#" title="Настройки">
           <i class="icon-cogs"></i>
           <span class="nav-title">Настройки</span>
-        </span>
-        <ul class="inner-nav">
-          <li><a href="#"><i class="icol-vcard"></i> Настройки профиля</a></li>
-        </ul>
+        </a>
       </li>
     </ul>
   </nav>

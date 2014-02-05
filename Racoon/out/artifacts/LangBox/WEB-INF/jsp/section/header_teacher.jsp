@@ -31,7 +31,7 @@
       <div class="item-wrap">
       <a class="item" href="#" data-toggle="dropdown">
         <span class="item-icon"><i class="icon-exclamation-sign"></i></span>
-        <span class="item-label">Notifications</span>
+        <span class="item-label">Оповещения</span>
         <span class="item-count">4</span>
       </a>
       <ul class="dropdown-menu">
@@ -123,7 +123,7 @@
         <img src="/assets/images/pp.jpg" alt="Avatar">
         </a>
         <ul class="dropdown-menu pull-right">
-        <li><a href="profile.html"><i class="icol-user"></i> My Profile</a></li>
+        <li><a href="/service/teacher/profile"><i class="icol-user"></i> Профиль</a></li>
         <li><a href="/help"><i class="icol-help"></i> Помощь</a></li>
         <li class="divider"></li>
         <li><a href="/logout"><i class="icol-key"></i> Выход</a></li>
