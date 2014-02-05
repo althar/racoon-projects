@@ -89,7 +89,8 @@
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
             <%-- <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %> --%>
-            <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>
+            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %> --%>
+            <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
           </div>
         </div>
       </section>
