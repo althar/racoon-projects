@@ -98,6 +98,7 @@
 .folder-body .item_name {display: inline-block; vertical-align: middle; margin-left: 3px}
 .folder-body .folder-body-controls {text-align: right;}
 .folder-body .folder-body-controls a {display: inline-block; text-decoration: none; margin-left: 5px; cursor: pointer;}
+.ibutton-container{text-align: left!important;}
 
 
 .add-file-list {margin-top: 10px}

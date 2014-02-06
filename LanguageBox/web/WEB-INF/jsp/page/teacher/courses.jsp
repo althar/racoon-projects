@@ -30,6 +30,9 @@
 
 <!-- Plugin Stylsheets first to ease overrides -->
 
+<!-- iButton -->
+<link rel="stylesheet" href="/plugins/ibutton/jquery.ibutton.css" media="screen">
+
 <!-- End Plugin Stylesheets -->
 
 <!-- Main Layout Stylesheet -->
@@ -119,6 +122,9 @@
 
   <!-- Uniform Script -->
   <script src="/plugins/uniform/jquery.uniform.min.js"></script>
+
+  <!-- iButton -->
+  <script src="/plugins/ibutton/jquery.ibutton.min.js"></script>
 
   <!-- jquery-ui Scripts -->
   <script src="/assets/jui/js/jquery-ui-1.9.2.min.js"></script>
