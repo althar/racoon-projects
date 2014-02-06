@@ -56,10 +56,27 @@ library =
             library.showFolder(folder_id);
         });
 
-        // Add folder or material
-        // $('.dropdown').dropit({
-        //     triggerParentEl: '.dropdown_inner'
-        // });
+        // Search
+        var search = function()
+        {
+
+            var category = $(".library-search-select option:selected").val();
+            var text = $(".library-search-input").val();
+            console.log("Search: "+category+"  :  "+text);
+            $("tr[entity-type=\"material\"]").hide();
+            $("tr[entity-type=\"material\"]").filter(function(){
+                console.log($(this).attr("entity-category-type")+"!");
+                console.log($(this).attr("entity-category-type")+"!!");
+                console.log($(this).attr("entity-category-type")+"!!!");
+                return ($(this).attr("entity-category-type")==category||category=="ALL")&&$(this).attr("entity-name").toLowerCase().indexOf(text.toLowerCase())!=-1;
+            }).show();
+        }
+        $(".library-search-input").keyup(function(){
+            search();
+        });
+        $(".library-search-select").change(function(){
+            search();
+        });
 
         $(".add-folder-link").unbind("click");
         $(".add-folder-link").bind("click", function () {
