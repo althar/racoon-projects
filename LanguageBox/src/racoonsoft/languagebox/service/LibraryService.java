@@ -34,6 +34,7 @@ public class LibraryService extends LanguageBoxService
         videoFormats.add("ogg");
         videoFormats.add("wmv");
         videoFormats.add("mkv");
+        videoFormats.add("svi");
 
         documentFormats.add("doc");
         documentFormats.add("docx");

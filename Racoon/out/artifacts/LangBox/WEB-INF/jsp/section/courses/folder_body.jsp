@@ -25,14 +25,16 @@
     </div>
     <div id="toolbar-ex" class="toolbar form-toolbar collapse">
         <form class="search-form">
-            <input type="text" class="span6 search-query" placeholder="Search...">
+            <input type="text" class="span6 search-query library-search-input" placeholder="Поиск">
 
             <div class="pull-right">
-                <select class='span6' style="width:100%;">
-                    <option selected='selected' value='audio'>Аудио</option>
-                    <option value='video'>Видео</option>
-                    <option value='document'>Документ</option>
-                    <option value='image'>Изображение</option>
+                <select class='span6 library-search-select' style="width:100%;">
+                    <option selected='selected' value='ALL'>Все</option>
+                    <option value='AUDIO_FILE'>Аудио</option>
+                    <option value='VIDEO_FILE'>Видео</option>
+                    <option value='DOCUMENT_FILE'>Документ</option>
+                    <option value='IMAGE_FILE'>Изображение</option>
+                    <option value='CUSTOM_FILE'>Прочее</option>
                 </select>
                 <%--<select class='span6'>--%>
                     <%--<option selected='selected' value='New English File '>New English--%>
@@ -93,7 +95,7 @@
                 </tr>
             </c:forEach>
             <c:forEach items="${folder.getRecords('materials')}" var="material">
-                <tr class='folder-body-node library_list-item' entity-type="material" entity-id="${material.getLongValue('id')}">
+                <tr class='folder-body-node library_list-item' entity-type="material" entity-id="${material.getLongValue('id')}" entity-category-type="${material.getStringValue('type')}" entity-name="${material.getStringValue('name')}">
                     <td>
                         <span class="icol-doc-pdf"></span>
 		          <span class='item_name'>
