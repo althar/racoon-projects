@@ -96,3 +96,5 @@
 
 .add-file-list {margin-top: 10px}
 .add-file-list li {margin: 3px 0;}
+
+.table.table-striped.course-lessons{border-bottom: 1px solid rgb(204, 204, 204);}
