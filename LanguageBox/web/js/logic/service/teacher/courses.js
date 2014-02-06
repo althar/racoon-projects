@@ -49,6 +49,9 @@ library =
         $("#add-file").show();
     },
     bindFolderControls: function () {
+        // Close window
+        $(window).on('beforeunload')
+
         // Browse folders
         $(".entity-link[entity-type=\"folder\"]").unbind("click");
         $(".entity-link[entity-type=\"folder\"]").bind("click", function () {

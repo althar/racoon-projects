@@ -24,7 +24,7 @@
       <i class="icon-search"></i>
       </span>
       <form class="navbar-search">
-      <input type="text" class="search-query" placeholder="Search">
+      <input type="text" class="search-query" placeholder="Поиск">
       </form>
     </div>
     <div id="dropdown-lists">
