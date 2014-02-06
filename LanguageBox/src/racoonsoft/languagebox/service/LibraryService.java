@@ -86,7 +86,7 @@ public class LibraryService extends LanguageBoxService
         {
             return null;
         }
-        ArrayList<DBRecord> materials = dbProc.getRecords("SELECT * FROM material WHERE library_id="+folder.getID());
+        ArrayList<DBRecord> materials = dbProc.getRecords("SELECT * FROM material WHERE library_id="+folder.getID()+" ORDER BY type");
         ArrayList<DBRecord> folders = dbProc.getRecords("SELECT * FROM library WHERE parent_id="+folder.getID());
         String condition = " id IS NULL ";
         if(folder.getID()!=null)
