@@ -90,7 +90,8 @@
             <%-- COURSES --%>
             <%-- <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %> --%>
             <%-- <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %> --%>
-            <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
+            <%--  <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %> --%>
+            <%@include file="/WEB-INF/jsp/section/courses/courses_materials_edit.jsp" %>
           </div>
         </div>
       </section>

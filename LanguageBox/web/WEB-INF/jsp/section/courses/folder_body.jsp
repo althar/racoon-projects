@@ -19,8 +19,8 @@
 
     <div class="toolbar">
       <span class="btn" data-toggle="collapse" data-target="#toolbar-ex1">
-    <i class="icon-search"></i>
-    </span>
+        <i class="icon-search"></i>
+      </span>
     </div>
   </div>
   <div id="toolbar-ex1" class="toolbar form-toolbar collapse">
