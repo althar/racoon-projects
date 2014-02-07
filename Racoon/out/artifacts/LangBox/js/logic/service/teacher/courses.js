@@ -3,52 +3,22 @@ var checkInterval = 1000;
 var uploadDelay = 0;
 
 $(document).ready(function () {
-    library.bindFolderControls();
+    library.bindLibraryControls();
+    library.bindCoursesControls();
     library.checkUploadFiles();
-    // Check uploading
-    $("#upload-progress-bar").progressbar();
+
+    courses.showCourses();
+//    // Check uploading
+//    $("#upload-progress-bar").progressbar();
 });
+
 library =
 {
-    showFolder: function (folder_id) {
-        //1. Hide all other library sections
-        $(".library-section").hide();
-        //2. Show loader
-        $(".library-loader").show();
-        //3. Request folder-body, and insert it
-        var folderParam = "";
-        if (folder_id != null) {
-            folderParam = "?folder_id=" + folder_id;
-            $("#current-folder-id").val(folder_id);
-        }
-        $.ajax({
-            url: "/service/get_folder" + folderParam,
-            context: document.body,
-            async: true,
-            success: function (html) {
-                $("#folder").replaceWith(html);
-                library.bindFolderControls();
-                $(".library-loader").hide();
-                $("#folder").show();
-            },
-            failure: function () {
-                alert("Серверная ошибка. Попробуйте позже");
-                $(".library-loader").show();
-            }
-        });
-    },
-    showAddFile: function (folder_id) {
-        //1. Hide all other library sections
-        $(".library-section").hide();
-        //2 . Remove previous
-        $(".add-file-list li").remove();
-        $("#add-file-form>input[type=\"file\"]").remove();
-        $(".add-file-input").replaceWith("<input type='file' class='add-file-input' name='files' multiple>");
-        library.bindAddFileChange();
-        //3. Show add file form
-        $("#add-file").show();
-    },
-    bindFolderControls: function () {
+    bindLibraryControls: function () {
+        // Close window
+        //
+
+
         // Browse folders
         $(".entity-link[entity-type=\"folder\"]").unbind("click");
         $(".entity-link[entity-type=\"folder\"]").bind("click", function () {
@@ -230,6 +200,44 @@ library =
             library.bindAddFileChange();
         });
     },
+    showFolder: function (folder_id) {
+        //1. Hide all other library sections
+        $(".library-section").hide();
+        //2. Show loader
+        $(".library-loader").show();
+        //3. Request folder-body, and insert it
+        var folderParam = "";
+        if (folder_id != null) {
+            folderParam = "?folder_id=" + folder_id;
+            $("#current-folder-id").val(folder_id);
+        }
+        $.ajax({
+            url: "/service/get_folder" + folderParam,
+            context: document.body,
+            async: true,
+            success: function (html) {
+                $("#folder").replaceWith(html);
+                library.bindLibraryControls();
+                $(".library-loader").hide();
+                $("#folder").show();
+            },
+            failure: function () {
+                alert("Серверная ошибка. Попробуйте позже");
+                $(".library-loader").show();
+            }
+        });
+    },
+    showAddFile: function (folder_id) {
+        //1. Hide all other library sections
+        $(".library-section").hide();
+        //2 . Remove previous
+        $(".add-file-list li").remove();
+        $("#add-file-form>input[type=\"file\"]").remove();
+        $(".add-file-input").replaceWith("<input type='file' class='add-file-input' name='files' multiple>");
+        library.bindAddFileChange();
+        //3. Show add file form
+        $("#add-file").show();
+    },
     createFolder: function () {
         //1. Clear new folder control
         $(".new-folder-name").val("Новая папка");
@@ -244,35 +252,39 @@ library =
         // For progress bar
         var check = function(){
             $.ajax({
-                url: "/service/upload_progress",
-                async: true,
-                dataType: "xml",
-                success: function (xml) {
+                    url: "/service/upload_progress",
+                    async: true,
+                    dataType: "xml",
+                    success: function (xml) {
 
-                    if(isCheckingUpload)
-                    {
-                        var uploaded = $("root>progress",xml).text();
-                        var isUploading = $("root>is_uploading",xml).text();
+                        if(isCheckingUpload)
+                        {
+                            var uploaded = $("root>progress",xml).text();
+                            var isUploading = $("root>is_uploading",xml).text();
 
-                        if(isUploading=="true")
-                        {
-                            uploadDelay = 0;
-                            uploaded = uploaded/100.0;
-                            fileProgressBar(true);
-                            $(".upload-progress-description").html(" Загрузка файлов "+uploaded+"%");
-                        }
-                        else
-                        {
-                            uploadDelay++;
-                            showNewFiles();
-                            if(uploadDelay>3)
+                            if(isUploading=="true")
                             {
-                                fileProgressBar(false);
+                                uploadDelay = 0;
+                                uploaded = uploaded/100.0;
+                                fileProgressBar(true);
+                                $(".upload-progress-description").html(" Загрузка файлов "+uploaded+"%");
+                                $(window).on('beforeunload', function(){
+                                    return 'Файлы в процессе закачки. Вы уверены, что хотите оборвать процесс?';
+                                });
+                            }
+                            else
+                            {
+                                uploadDelay++;
+                                showNewFiles();
+                                if(uploadDelay>3)
+                                {
+                                    fileProgressBar(false);
+                                    $(window).unbind('beforeunload');
+                                }
                             }
                         }
-                    }
-                    setTimeout(check,checkInterval);
-                },
+                        setTimeout(check,checkInterval);
+                    },
                 failure: function () {
 //                    alert("Серверная ошибка. Попробуйте позже");
                     $(".library-loader").show();
@@ -307,7 +319,7 @@ library =
                     });
                     if(wasUpdate)
                     {
-                        library.bindFolderControls();
+                        library.bindLibraryControls();
                     }
                 },
                 failure: function () {
@@ -319,7 +331,87 @@ library =
 
     }
 }
-
+courses =
+{
+    bindCoursesControls: function(){
+        // Add new course
+        $(".add-course-button").unbind("click");
+        $(".add-course-button").click(function(){
+            courses.showEditCourse();
+        });
+        // Select course
+        $(".edit-course-button").unbind("click");
+        $(".edit-course-button").click(function(){
+            var courseId = $(this).attr("course-id");
+            courses.showEditCourse(courseId);
+        });
+    },
+    showCourses: function(){
+        $(".courses-section").hide();
+        $.ajax({
+            url: "/service/get_courses",
+            async: true,
+            success: function (html) {
+                $(".courses-list-section").replaceWith(html);
+                courses.bindCoursesControls();
+                $(".courses-list-section").show();
+            },
+            failure: function () {
+//                    alert("Серверная ошибка. Попробуйте позже");
+                $(".library-loader").show();
+            }
+        });
+        $(".courses-list-section").show();
+    },
+    showEditCourse: function(courseId){
+        $(".courses-section").hide();
+        $.ajax({
+            url: "/service/get_course?course_id="+courseId,
+            async: true,
+            success: function (html) {
+                $(".course-edit-section").replaceWith(html);
+                $(".course-edit-section").show();
+                courses.bindCoursesControls();
+            },
+            failure: function () {
+//                    alert("Серверная ошибка. Попробуйте позже");
+                $(".library-loader").show();
+            }
+        });
+    },
+    showCourseLessons: function(courseId){
+        $(".courses-section").hide();
+        $.ajax({
+            url: "/service/get_course_lessons?course_id="+courseId,
+            async: true,
+            success: function (html) {
+                $(".course-lessons-section").replaceWith(html);
+                $(".course-lessons-section").show();
+                courses.bindCoursesControls();
+            },
+            failure: function () {
+//                    alert("Серверная ошибка. Попробуйте позже");
+                $(".library-loader").show();
+            }
+        });
+    },
+    showEditLessons: function(lessonId){
+        $(".courses-section").hide();
+        $.ajax({
+            url: "/service/get_lesson?lesson_id="+lessonId,
+            async: true,
+            success: function (html) {
+                $(".course-edit-section").replaceWith(html);
+                $(".course-edit-section").show();
+                courses.bindCoursesControls();
+            },
+            failure: function () {
+//                    alert("Серверная ошибка. Попробуйте позже");
+                $(".library-loader").show();
+            }
+        });
+    }
+}
 
 function fileProgressBar(show)
 {

@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="widget span6">
+<div class="widget span6  courses-section courses-list-section">
     <input type="hidden" id="current-course-id">
     <input type="hidden" id="current-lesson-id">
 
@@ -13,7 +13,7 @@
 
         <div class="toolbar">
             <div class="btn-group">
-                <span class="btn" rel="tooltip" data-original-title="Add Item"><i class="icon-plus"></i></span>
+                <span class="btn" rel="tooltip" data-original-title="Add Item"><i class="icon-plus add-course-button"></i></span>
         <span class="btn" data-toggle="collapse" data-target="#toolbar-ex">
           <i class="icon-search"></i>
         </span>
@@ -27,12 +27,13 @@
             <div class="pull-right">
                 <select class='span2'>
                     <option selected='selected' value='Все уровни'>Все уровни</option>
-                    <option value='Beginner'>Beginner</option>
-                    <option value='Elementary'>Elementary</option>
-                    <option value='Pre-intermediate'>Pre-intermediate</option>
-                    <option value='Intermediate'>Intermediate</option>
-                    <option value='Upper-Intermediate'>Upper-Intermediate</option>
-                    <option value='Advance'>Advance</option>
+                    <option value='BEGINNER'>Beginner</option>
+                    <option value='ELEMENTARY'>Elementary</option>
+                    <option value='PRE-INTERMEDIATE'>Pre-intermediate</option>
+                    <option value='INTERMEDIATE'>Intermediate</option>
+                    <option value='UPPER-INTERMEDIATE'>Upper-Intermediate</option>
+                    <option value='ADVANCED'>Advance</option>
+                    <option value='PROFICIENT'>Proficient</option>
                 </select>
                 <select class='span2'>
                     <option selected='selected' value='New English File '>New English
@@ -49,106 +50,26 @@
     </div>
     <div class="widget-content courseslist">
         <ul class="thumbnails">
+            <c:forEach items="${courses}" var="course">
             <li>
                 <div class="head">
-                    <h2 class="title"><a href="#">New Headway</a></h2>
-                    <span class="note">Pre-intermediate</span>
+                    <h2 class="title"><a>${course.getStringValue('name')}</a></h2>
+                    <span class="note">${course.getStringValue('level')}</span>
                 </div>
                 <div class="thumbnail">
-                    <img alt="" src="/img/course_preview.png">
+                    <img alt="" src="/course_image?path=${course.getStringValue('image_url')}">
                 </div>
                 <div class="info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>${course.getStringValue('description')}</p>
                 </div>
                 <div class="actions">
                     <ul>
-                        <li><a href="#" title="Edit" rel="tooltip"><i class="icon-pencil"></i></a></li>
-                        <li><a href="#" title="Delete" rel="tooltip"><i class="icon-remove"></i></a></li>
+                        <li><a title="Edit" rel="tooltip"><i class="icon-pencil edit-course-button" course-id="${course.getLongValue('id')}"></i></a></li>
+                        <li><a title="Delete" rel="tooltip"><i class="icon-remove  delete-course-button"  course-id="${course.getLongValue('id')}"></i></a></li>
                     </ul>
                 </div>
             </li>
-            <li>
-                <div class="head">
-                    <h2 class="title"><a href="#">New Headway</a></h2>
-                    <span class="note">Pre-intermediate</span>
-                </div>
-                <div class="thumbnail">
-                    <img alt="" src="/img/course_preview.png">
-                </div>
-                <div class="info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="actions">
-                    <ul>
-                        <li><a href="#" title="Edit" rel="tooltip"><i class="icon-pencil"></i></a></li>
-                        <li><a href="#" title="Delete" rel="tooltip"><i class="icon-remove"></i></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="head">
-                    <h2 class="title"><a href="#">New Headway</a></h2>
-                    <span class="note">Pre-intermediate</span>
-                </div>
-                <div class="thumbnail">
-                    <img alt="" src="/img/course_preview.png">
-                </div>
-                <div class="info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="actions">
-                    <ul>
-                        <li><a href="#" title="Edit" rel="tooltip"><i class="icon-pencil"></i></a></li>
-                        <li><a href="#" title="Delete" rel="tooltip"><i class="icon-remove"></i></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="head">
-                    <h2 class="title"><a href="#">New Headway</a></h2>
-                    <span class="note">Pre-intermediate</span>
-                </div>
-                <div class="thumbnail">
-                    <img alt="" src="/img/course_preview.png">
-                </div>
-                <div class="info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="actions">
-                    <ul>
-                        <li><a href="#" title="Edit" rel="tooltip"><i class="icon-pencil"></i></a></li>
-                        <li><a href="#" title="Delete" rel="tooltip"><i class="icon-remove"></i></a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="head">
-                    <h2 class="title"><a href="#">New Headway</a></h2>
-                    <span class="note">Pre-intermediate</span>
-                </div>
-                <div class="thumbnail">
-                    <img alt="" src="/img/course_preview.png">
-                </div>
-                <div class="info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="actions">
-                    <ul>
-                        <li><a href="#" title="Edit" rel="tooltip"><i class="icon-pencil"></i></a></li>
-                        <li><a href="#" title="Delete" rel="tooltip"><i class="icon-remove"></i></a></li>
-                    </ul>
-                </div>
-            </li>
+            </c:forEach>
         </ul>
     </div>
 </div>

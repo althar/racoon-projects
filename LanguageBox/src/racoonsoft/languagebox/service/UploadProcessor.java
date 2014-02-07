@@ -79,6 +79,16 @@ public class UploadProcessor extends SeparateThreadProcessor
         progress.setProgress(transferId,total,transferred);
         userTransferringFiles.put(userId,progress);
     }
+    public synchronized static void removeFileTransfer(Long userId, Long transferId)
+    {
+        FileTransferProgress progress = userTransferringFiles.get(userId);
+        if(progress == null)
+        {
+            progress = new FileTransferProgress();
+        }
+        progress.removeProgress(transferId);
+        userTransferringFiles.put(userId,progress);
+    }
     public synchronized static Integer getTransferProgress(Long userId)
     {
         FileTransferProgress prog = userTransferringFiles.get(userId);

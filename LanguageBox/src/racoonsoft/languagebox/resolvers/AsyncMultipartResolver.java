@@ -26,23 +26,30 @@ public class AsyncMultipartResolver extends CommonsMultipartResolver
     private void processProgress(long bytesRead, long bytesTotal,
                                  HttpServletRequest request) {
 
-        Long transId = (Long)request.getAttribute("transfer_id");
-        //System.out.println(" ========= ID : "+transId);
-        if(transId==null)
+        try
         {
-            transferId++;
-//            System.out.println(" trId: "+transferId);
+            Long transId = (Long)request.getAttribute("transfer_id");
+            //System.out.println(" ========= ID : "+transId);
+            if(transId==null)
+            {
+                transferId++;
+    //            System.out.println(" trId: "+transferId);
 
-            request.setAttribute("transfer_id", transferId);
-            transId = transferId;
+                request.setAttribute("transfer_id", transferId);
+                transId = transferId;
+            }
+            String userId = UserProcessor.getCookie(request,"u_id");
+
+            if(userId!=null&&!userId.equalsIgnoreCase(""))
+            {
+                Long userIdLong = Long.valueOf(userId);
+                UploadProcessor.setFileTransfer(userIdLong, transId, bytesTotal, bytesRead);
+//                System.out.println("Read: "+UploadProcessor.getTransferProgress(userIdLong)+" % ");
+            }
         }
-        String userId = UserProcessor.getCookie(request,"u_id");
-
-        if(userId!=null&&!userId.equalsIgnoreCase(""))
+        catch(Exception ex)
         {
-            Long userIdLong = Long.valueOf(userId);
-            UploadProcessor.setFileTransfer(userIdLong, transId, bytesTotal, bytesRead);
-//            System.out.println("Read: "+UploadProcessor.getTransferProgress(userIdLong)+" % ");
+            System.out.println("Злох!");
         }
     }
 
@@ -73,6 +80,13 @@ public class AsyncMultipartResolver extends CommonsMultipartResolver
                     fileUpload.getSizeMax(), ex);
 
         } catch (FileUploadException ex) {
+            Long transId = (Long)request.getAttribute("transfer_id");
+            String userId = UserProcessor.getCookie(request,"u_id");
+            if(userId!=null)
+            {
+                UploadProcessor.removeFileTransfer(Long.valueOf(userId),transId);
+            }
+
             throw new MultipartException("Could not parse " +
                     "multipart servlet request", ex);
         }

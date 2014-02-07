@@ -14,6 +14,7 @@ import racoonsoft.library.helper.StringHelper;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 
 @Controller
@@ -95,7 +96,7 @@ public class ServiceController extends LanguageBoxController
         return model;
     }
     @RequestMapping("/download_material")
-    public void rename(HttpServletRequest request,HttpServletResponse response, Long id) throws Exception
+    public void downloadMaterial(HttpServletRequest request,HttpServletResponse response, Long id) throws Exception
     {
         DBRecord material = library.getMaterial(id(request), id);
         if(material!=null)
@@ -131,6 +132,19 @@ public class ServiceController extends LanguageBoxController
         DBRecord rec = uploader.getFolderUploadInfo(id(request),folder_id);
         ModelAndView model = new ModelAndView("document/plain");
         model.addObject("value",rec.toXML());
+        return model;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Courses">
+
+    @RequestMapping("/get_courses")
+    public ModelAndView getCourses(HttpServletRequest request, HttpServletResponse response, Long folder_id) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/courses/courses");
+        ArrayList<DBRecord> courses = course.getTeacherCourses(id(request));
+        model.addObject("courses",courses);
+
         return model;
     }
     //</editor-fold>

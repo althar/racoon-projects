@@ -13,6 +13,11 @@ public class FileTransferProgress
         bytesTotal.put(transferId,total);
         bytesTransferred.put(transferId,transferred);
     }
+    public synchronized void removeProgress(Long transferId)
+    {
+        bytesTotal.remove(transferId);
+        bytesTransferred.remove(transferId);
+    }
     public synchronized  Integer getProgress()
     {
         Long total = 0l;
