@@ -30,6 +30,9 @@
 
 <!-- Plugin Stylsheets first to ease overrides -->
 
+<!-- iButton -->
+<link rel="stylesheet" href="/plugins/ibutton/jquery.ibutton.css" media="screen">
+
 <!-- End Plugin Stylesheets -->
 
 <!-- Main Layout Stylesheet -->
@@ -88,9 +91,11 @@
             <%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
-            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %> --%>
-            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %> --%>
-            <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
+             <c:import url="/service/get_courses"></c:import>
+             <%--<%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>--%>
+             <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>
+             <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
+            <%@include file="/WEB-INF/jsp/section/courses/courses_materials_edit.jsp" %>
           </div>
         </div>
       </section>
@@ -118,6 +123,9 @@
 
   <!-- Uniform Script -->
   <script src="/plugins/uniform/jquery.uniform.min.js"></script>
+
+  <!-- iButton -->
+  <script src="/plugins/ibutton/jquery.ibutton.min.js"></script>
 
   <!-- jquery-ui Scripts -->
   <script src="/assets/jui/js/jquery-ui-1.9.2.min.js"></script>

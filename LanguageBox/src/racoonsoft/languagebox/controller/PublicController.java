@@ -1,8 +1,15 @@
 package racoonsoft.languagebox.controller;
 
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 
 @Controller
 @RequestMapping("")
@@ -37,5 +44,12 @@ public class PublicController
     public ModelAndView partners()
     {
         return new ModelAndView("page/public/partners");
+    }
+
+    @RequestMapping("/course_image/{path}")
+    @ResponseBody
+    public byte[] downloadCourseImage(HttpServletRequest request,HttpServletResponse response, String path) throws Exception
+    {
+        return new FileSystemResource("C:/temp/courses/"+path).getFile().;
     }
 }

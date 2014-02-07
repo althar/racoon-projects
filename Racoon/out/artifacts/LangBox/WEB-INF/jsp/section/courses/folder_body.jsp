@@ -19,8 +19,8 @@
 
     <div class="toolbar">
       <span class="btn" data-toggle="collapse" data-target="#toolbar-ex1">
-    <i class="icon-search"></i>
-    </span>
+        <i class="icon-search"></i>
+      </span>
     </div>
   </div>
   <div id="toolbar-ex1" class="toolbar form-toolbar collapse">
@@ -113,6 +113,108 @@
           </td>
         </tr>
       </c:forEach>
+
+
+        <tr class='folder-body-node library_list-item'>
+          <td>
+            <span class="icol-box"></span>
+            <span class='item_name'>
+              <a class="entity-link">file.txt</a>
+            </span>
+          </td>
+          <td class='folder-body-controls'>
+            <div style="display: block">
+              <input type="checkbox" data-provide="ibutton" data-label-on="In" data-label-off="Out" checked>
+            </div>
+            <div style="display: none">
+              <a>
+                <span class='icol-page-white-put'></span>
+              </a>
+              <a class="rename-link">
+                <span class="icol-pencil"></span>
+              </a>
+              <a class="delete-link">
+                <span class="icol-cross"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr class='folder-body-node library_list-item'>
+          <td>
+            <span class="icol-box"></span>
+            <span class='item_name'>
+              <a class="entity-link">file.txt</a>
+            </span>
+          </td>
+          <td class='folder-body-controls'>
+            <div style="display: block">
+              <input type="checkbox" data-provide="ibutton" data-label-on="In" data-label-off="Out">
+            </div>
+            <div style="display: none">
+              <a>
+                <span class='icol-page-white-put'></span>
+              </a>
+              <a class="rename-link">
+                <span class="icol-pencil"></span>
+              </a>
+              <a class="delete-link">
+                <span class="icol-cross"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+
+
+        <tr class='folder-body-node library_list-item'>
+          <td>
+            <span class="icol-box"></span>
+            <span class='item_name'>
+              <a class="entity-link">file.txt</a>
+            </span>
+          </td>
+          <td class='folder-body-controls'>
+            <div style="display: block">
+              <a href="#"><span class='icol-arrow-right'></span></a>
+            </div>
+            <div style="display: none">
+              <a>
+                <span class='icol-page-white-put'></span>
+              </a>
+              <a class="rename-link">
+                <span class="icol-pencil"></span>
+              </a>
+              <a class="delete-link">
+                <span class="icol-cross"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr class='folder-body-node library_list-item'>
+          <td>
+            <span class="icol-box"></span>
+            <span class='item_name'>
+              <a class="entity-link">file.txt</a>
+            </span>
+          </td>
+          <td class='folder-body-controls'>
+            <div style="display: block">
+              <small class="muted">Добавлен...</small>
+            </div>
+            <div style="display: none">
+              <a>
+                <span class='icol-page-white-put'></span>
+              </a>
+              <a class="rename-link">
+                <span class="icol-pencil"></span>
+              </a>
+              <a class="delete-link">
+                <span class="icol-cross"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+
+
       </tbody>
     </table>
 

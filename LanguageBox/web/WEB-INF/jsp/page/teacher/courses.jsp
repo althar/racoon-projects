@@ -91,9 +91,10 @@
             <%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
-            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %> --%>
-            <%-- <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %> --%>
-            <%--  <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %> --%>
+             <c:import url="/service/get_courses"></c:import>
+             <%--<%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>--%>
+             <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>
+             <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
             <%@include file="/WEB-INF/jsp/section/courses/courses_materials_edit.jsp" %>
           </div>
         </div>
