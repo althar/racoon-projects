@@ -35,7 +35,7 @@ $(document).ready(function () {
         $("#profile_menu_link").click();
     }
     loadContent();
-
+    initQuickOrder();
     $("body").show();
 });
 
@@ -206,7 +206,7 @@ function setOrderStep(step, authorization_flag) {
                     $("#next").hide();
                 }
             });
-            $("#next").bind("click", function () {
+            $("#next_butt").bind("click", function () {
                 if (auth_flag) {
                     auth();
                 }
@@ -824,7 +824,7 @@ function saveOrder() {
                     current_distance = "Самовывоз";
                     if(admin=="true")
                     {
-                        alert("Заказ принят");
+//                        alert("Заказ принят");
                         window.location = "/products.html";
                     }
                     showBasket();
@@ -1210,4 +1210,32 @@ function initTimePicker() {
             r_delta = 0;
         }
     });
+}
+
+function initQuickOrder()
+{
+    $("#quick_order").click(function(){
+        var url_string = base_app_url + "/User?cmd=save_quick_order&phone="+$("#order_phone_input").val();
+        $.ajax({
+            async:true,
+            cache:false,
+            url:url_string,
+            context:document.body,
+            dataTypeString:"xml",
+            success:function (xml) {
+                var code = $(xml).find("root").find("code").text();
+                if (code == "100000")// success
+                {
+                    showMessage("Спасибо!", "Ваш заказ №" + $(xml).find("root").find("order_id").text() + " успешно оформлен.<br>" +
+                        "В ближайшее время наши операторы с вами свяжутся," +
+                        "но в любом случае ваш заказ уже передан в сборку и доставку.","/products.html");
+                }
+                else {
+                    showMessage("", "Серверная ошибка. loadProf", 2000);
+                }
+            }
+        });
+    });
+
+
 }

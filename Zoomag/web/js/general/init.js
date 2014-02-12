@@ -40,7 +40,7 @@ function logout() {
             var code = $("root > code", xml).text();
             if (code == "3")// success
             {
-                alert("Успешно вышли");
+//                alert("Успешно вышли");
             }
             else if (code == "-5") {
             }
@@ -453,12 +453,16 @@ function initSearch() {
         window.location = "products.html?keywords=" + $("#search_input").attr("value");
     });
 }
-function showMessage(title, text) {
+function showMessage(title, text, redirection) {
     $("#alert_close_link").unbind("click");
     $("#alert_close_link").click(function () {
 
         $("body").css("overflow", "auto");
         $("#alert_form").hide();
+        if(redirection!=null)
+        {
+            window.location = redirection;
+        }
     });
     $("#alert_title").html(title);
     $("#alert_text").html("<p class=\"desc\">" + text + "</p>");
@@ -523,7 +527,7 @@ function checkOrder() {
                 }
 
                 //alert(order_without_discount);
-                alert(goods_without_discount);
+                //alert(goods_without_discount);
                 $("span[sum=\"true\"]").html(formatPrice(goods_without_discount));
                 $("span[discount=\"true\"]").html(formatPrice(discount_in_rub));
                 $("span[goods_count=\"true\"]").html("(" + goods_count + " " + formatGoods(goods_count) + ")");

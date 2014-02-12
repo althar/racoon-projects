@@ -255,6 +255,58 @@ public class UserServlet extends BaseServlet {
                     return;
                 }
             }
+            else if(cmd.equalsIgnoreCase("save_quick_order"))
+            {
+                if (user != null)
+                {
+                    HashMap<String,Object> pars = new HashMap<String, Object>();
+                    Basket b = Warehouse.getBasket(user.getID());
+                    pars.put("street","");
+                    pars.put("house","");
+                    pars.put("porch","");
+                    pars.put("building","");
+                    pars.put("floor","");
+                    pars.put("domophone","");
+                    pars.put("room","");
+                    pars.put("city","Уточнить у клиента");
+                    pars.put("metro_id",0);
+                    pars.put("deliver_distance","Уточнить по телефону");
+
+                    pars.put("driver_id",0);
+                    pars.put("client_id",0);
+                    pars.put("deliver",true);
+                    pars.put("phone_1",request.getParameter("phone"));
+                    pars.put("discount_percent",0);
+
+                    pars.put("goods_price",b.getPrice());
+                    pars.put("deliver_price",0);
+                    pars.put("type_id",Integer.valueOf(getParameter("site_id")));
+
+                    int order_id = dbProc().saveOrder(b,pars);
+                    b.clear();
+                    XMLProcessor proc = new XMLProcessor();
+                    proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
+                    proc.addNode("root", "order_id", order_id);
+
+                    if(user.getValue("admin")!=null&&(Boolean)user.getValue("admin"))
+                    {
+                        proc.addNode("root", "admin", "true");
+                        Session s = AuthenticationServlet.getSession(request);
+                        if(s!=null)
+                        {
+                            BaseServlet.sessProc().removeSession(s.getKey());
+                        }
+                    }
+                    out.print(proc.toXMLString());
+                    out.close();
+                }
+                else
+                {
+                    out.print(generateResponseXML(AUTHORIZATION_FAILED, cmd, null));
+                    out.close();
+                    return;
+                }
+            }
             else if(cmd.equalsIgnoreCase("save_order"))
             {
                 if (user != null)
