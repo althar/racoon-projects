@@ -321,7 +321,7 @@ function loadBanner()
 		success: function(xml)
 		{
 			var code = $(xml).find("root").find("code").text();
-            alert($(xml).text());
+//            alert($(xml).text());
 			if(code=="100000")// success
 			{
 				var html = $("root data value",xml).text();
