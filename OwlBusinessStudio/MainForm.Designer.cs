@@ -62,6 +62,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ButtAdv = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFileGoods = new System.Windows.Forms.OpenFileDialog();
             this.TabControlMain = new System.Windows.Forms.TabControl();
             this.PageOrders = new System.Windows.Forms.TabPage();
@@ -199,7 +200,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
-            this.ButtAdv = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -326,13 +326,13 @@
             // MenuButtExportGoods
             // 
             this.MenuButtExportGoods.Name = "MenuButtExportGoods";
-            this.MenuButtExportGoods.Size = new System.Drawing.Size(147, 22);
+            this.MenuButtExportGoods.Size = new System.Drawing.Size(152, 22);
             this.MenuButtExportGoods.Text = "Ассортимент";
             // 
             // MenuButtExportOrders
             // 
             this.MenuButtExportOrders.Name = "MenuButtExportOrders";
-            this.MenuButtExportOrders.Size = new System.Drawing.Size(147, 22);
+            this.MenuButtExportOrders.Size = new System.Drawing.Size(152, 22);
             this.MenuButtExportOrders.Text = "Заказы";
             // 
             // toolStripMenuItem3
@@ -347,7 +347,7 @@
             // MenuButtImportGoods
             // 
             this.MenuButtImportGoods.Name = "MenuButtImportGoods";
-            this.MenuButtImportGoods.Size = new System.Drawing.Size(147, 22);
+            this.MenuButtImportGoods.Size = new System.Drawing.Size(152, 22);
             this.MenuButtImportGoods.Text = "Ассортимент";
             this.MenuButtImportGoods.Click += new System.EventHandler(this.MenuButtImportGoods_Click);
             // 
@@ -492,6 +492,13 @@
             this.toolStripMenuItem11.Size = new System.Drawing.Size(301, 22);
             this.toolStripMenuItem11.Text = "Отменить пересчет товаров";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
+            // 
+            // ButtAdv
+            // 
+            this.ButtAdv.Name = "ButtAdv";
+            this.ButtAdv.Size = new System.Drawing.Size(301, 22);
+            this.ButtAdv.Text = "Рекламный блок";
+            this.ButtAdv.Click += new System.EventHandler(this.ButtAdv_Click);
             // 
             // OpenFileGoods
             // 
@@ -1831,13 +1838,6 @@
             // DialogSaveYandexXML
             // 
             this.DialogSaveYandexXML.Filter = "Яндекс маркет XML|*.yml";
-            // 
-            // ButtAdv
-            // 
-            this.ButtAdv.Name = "ButtAdv";
-            this.ButtAdv.Size = new System.Drawing.Size(301, 22);
-            this.ButtAdv.Text = "Рекламный блок";
-            this.ButtAdv.Click += new System.EventHandler(this.ButtAdv_Click);
             // 
             // MainForm
             // 
