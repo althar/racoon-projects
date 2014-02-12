@@ -33,6 +33,9 @@
 <!-- iButton -->
 <link rel="stylesheet" href="/plugins/ibutton/jquery.ibutton.css" media="screen">
 
+<!-- CLEditor -->
+<link rel="stylesheet" href="/plugins/cleditor/jquery.cleditor.css" media="screen">
+
 <!-- End Plugin Stylesheets -->
 
 <!-- Main Layout Stylesheet -->
@@ -92,10 +95,12 @@
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
              <c:import url="/service/get_courses"></c:import>
+
              <%--<%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>--%>
-             <%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>
-             <%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>
-            <%@include file="/WEB-INF/jsp/section/courses/courses_materials_edit.jsp" %>
+             <%--<%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>--%>
+             <%--<%@include file="/WEB-INF/jsp/section/courses/courses_show.jsp" %>--%>
+             <%--<%@include file="/WEB-INF/jsp/section/courses/courses_materials_edit.jsp" %>--%>
+             <%@include file="/WEB-INF/jsp/section/courses/courses_lessons_show.jsp" %>
           </div>
         </div>
       </section>
@@ -135,6 +140,12 @@
 
   <!-- Bootstrap InputMask -->
   <script src="/custom-plugins/bootstrap-inputmask.min.js"></script>
+
+  <!-- CLEditor -->
+  <script src="/plugins/cleditor/jquery.cleditor.min.js"></script>
+  <script src="/plugins/cleditor/jquery.cleditor.icon.min.js"></script>
+  <script src="/plugins/cleditor/jquery.cleditor.table.min.js"></script>
+  <script src="/plugins/cleditor/jquery.cleditor.xhtml.min.js"></script>
 
   <!-- Custom sripts-->
   <script src="/js/logic/service/teacher/courses.js" type="text/javascript"></script>

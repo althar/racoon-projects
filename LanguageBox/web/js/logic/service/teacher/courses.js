@@ -3,13 +3,21 @@ var checkInterval = 1000;
 var uploadDelay = 0;
 
 $(document).ready(function () {
-    library.bindLibraryControls();
-    library.bindCoursesControls();
-    library.checkUploadFiles();
+    $( '#cleditor').cleditor({
+        width: '100%'
 
-    courses.showCourses();
+    });
+
+    // library.bindLibraryControls();
+    // courses.bindCoursesControls();
+    // library.checkUploadFiles();
+
+    // courses.showCourses();
+
+
 //    // Check uploading
 //    $("#upload-progress-bar").progressbar();
+
 });
 
 library =

@@ -29,7 +29,8 @@
 
     <div class="tabbable analytics-tab">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#" data-target="#materials" data-toggle="tab"><i class="icon-attachment"></i> Основной материал к курсу</a></li>
+        <li class="active"><a href="#" data-target="#materials" data-toggle="tab"><i class="icon-attachment"></i> Содержание урока</a></li>
+        <li><a href="#" data-target="#dictionary" data-toggle="tab"><i class="icon-book"></i> Словарь</a></li>
       </ul>
       <div class="tab-content">
         <div id="materials" class="tab-pane active verticalist">
@@ -96,6 +97,84 @@
           </ul>
 
         </div>
+
+        <div id="dictionary" class="tab-pane">
+
+          <table class="table table-condensed">
+            <colgroup>
+              <col style="width: 25px">
+              <col style="width: 25%">
+              <col style="width: 25%">
+              <col>
+              <col style="width: 50px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="2">Слово или фраза</th>
+                <th colspan="2">Перевод</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>begin</td>
+                <td>[bɪ'gɪn]</td>
+                <td>начинать</td>
+                <td class="text-right action-col">
+                  <span class="btn-group">
+                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
+                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>begin</td>
+                <td>[bɪ'gɪn]</td>
+                <td>начинать</td>
+                <td class="text-right action-col">
+                  <span class="btn-group">
+                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
+                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>begin</td>
+                <td>[bɪ'gɪn]</td>
+                <td>начинать</td>
+                <td class="text-right action-col">
+                  <span class="btn-group">
+                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
+                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>be on waiting list</td>
+                <td>[bi j̆ɒn wˈeɪːtɪŋ lˈɪst]</td>
+                <td>находиться в очереди</td>
+                <td class="text-right action-col">
+                  <span class="btn-group">
+                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
+                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="clearfix">
+            <a class="btn pull-right">
+              <span class="icol-add"></span> Добавить слово
+            </a>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
