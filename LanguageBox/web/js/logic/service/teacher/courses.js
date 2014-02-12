@@ -339,12 +339,29 @@ courses =
         $(".add-course-button").click(function(){
             courses.showEditCourse();
         });
+
         // Select course
         $(".edit-course-button").unbind("click");
         $(".edit-course-button").click(function(){
             var courseId = $(this).attr("course-id");
             courses.showEditCourse(courseId);
         });
+
+        // Save course
+        $(".add-course-preview-butt").unbind("click");
+        $(".add-course-preview-butt").click(function(){
+            // Send picture and return id of picture
+            // Show picture
+        });
+        $(".remove-course-preview-butt").unbind("click");
+        $(".remove-course-preview-butt").click(function(){
+            $(".add-course-preview-butt").removeAttr("preview-id");
+        });
+        $(".save-course-butt").unbind("click");
+        $(".save-course-butt").click(function(){
+
+        });
+
     },
     showCourses: function(){
         $(".courses-section").hide();

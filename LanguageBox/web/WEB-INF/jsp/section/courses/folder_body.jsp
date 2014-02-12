@@ -113,8 +113,6 @@
           </td>
         </tr>
       </c:forEach>
-
-
         <tr class='folder-body-node library_list-item'>
           <td>
             <span class="icol-box"></span>

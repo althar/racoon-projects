@@ -467,7 +467,33 @@ namespace OwlBusinessStudio.Orders
             }
             return true;
         }
+        private void changeCompletedOrder(bool plus)
+        {
+            DataTable ordersToAccept = MainForm.dbProc.executeGet("SELECT * FROM orders_with_details WHERE status_id=3 AND id=" + orderID.ToString());
+            List<string> UpdateQuantities = new List<string>();
+            for (int i = 0; i < ordersToAccept.Rows.Count; i++)
+            {
+                int count = (int)ordersToAccept.Rows[i]["count"];
+                int good_id = (int)ordersToAccept.Rows[i]["good_id"];
+                int order_id = (int)ordersToAccept.Rows[i]["id"];
 
+                    string command = "UPDATE goods SET quantity=quantity";
+                    if(plus)
+                    {
+                        command+="+";
+                    }
+                    else
+                    {
+                        command+="-";
+                    }
+                    command+="("
+                    + count.ToString()
+                    + ") WHERE id="
+                    + good_id.ToString()
+                    + "; ";
+                MainForm.dbProc.executeNonQuery(command);
+            }
+        }
         private void ButtSaveOrder_Click(object sender, EventArgs e)
         {
             try
@@ -609,10 +635,12 @@ namespace OwlBusinessStudio.Orders
                     {
                         orderParams.Add("driver_id", 0);
                     }
+                    
+                    // Here we change store goods...
+                    changeCompletedOrder(true);
 
                     MainForm.dbProc.update("orders", orderParams, "id=" + orderID.ToString());
                     Hashtable historyParams = new Hashtable();
-                    
                     historyParams.Add("order_id", orderID);
                     historyParams.Add("action", "Редактирование");
                     historyParams.Add("user_id", MainForm.currentUser.ID);
@@ -629,6 +657,7 @@ namespace OwlBusinessStudio.Orders
                         orderGoodParams.Add("good_name", item.ComboGoods.Text);
                         MainForm.dbProc.insert("order_goods", orderGoodParams);
                     }
+                    changeCompletedOrder(false);
                     #endregion
                 }
                 else// New order

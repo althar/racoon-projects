@@ -91,8 +91,8 @@
         <label class="control-label" for="pic">Обложка</label>
         <div class="controls">
           <input type="file" id="pic" name="pic">
-          <button type="button" class="btn btn-success">Загрузить</button>
-          <button type="button" class="btn btn-danger">Удалить</button>
+          <button type="button" class="btn btn-success add-course-preview-butt">Загрузить</button>
+          <button type="button" class="btn btn-danger remove-course-preview-butt">Удалить</button>
         </div>
       </div>
       <div class="control-group">
@@ -102,8 +102,8 @@
         </div>
       </div>
       <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Сохранить</button>
-        <button type="reset" class="btn">Отменить</button>
+        <button type="submit" class="btn btn-primary save-course-butt">Сохранить</button>
+        <button type="reset" class="btn cancel-course-butt">Отменить</button>
       </div>
     </form>
   </div>

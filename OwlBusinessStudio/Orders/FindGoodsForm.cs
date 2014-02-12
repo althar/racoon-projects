@@ -18,6 +18,7 @@ namespace OwlBusinessStudio.Orders
 
         public FindGoodsForm(OrderItem orderItem,OrderList orderList)
         {
+            MainForm.goodsFull = MainForm.dbProc.executeGet(MainForm.fullGoods);
             InitializeComponent();
             item = orderItem;
             list = orderList;

@@ -37,6 +37,13 @@ namespace OwlBusinessStudio
         private int currentOrderID = 0;
         private int currentOrderStatus = 0;
 
+        public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
+            + " FROM goods WHERE name_rus IS NOT NULL AND name_rus !='' ORDER BY name_rus";
+        public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
+    + "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
+    + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
+    + "WHERE g.articul IS NOT NULL ORDER BY g.name_for_order";
+
         public MainForm()
         {
             InitializeComponent();
@@ -45,12 +52,6 @@ namespace OwlBusinessStudio
 
         public void loadStaticGoods()
         {
-            string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
-            + " FROM goods WHERE name_rus IS NOT NULL AND name_rus !='' ORDER BY name_rus";
-            string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
-    + "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
-    + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
-    + "WHERE g.articul IS NOT NULL ORDER BY g.name_for_order";
             goodsRus = dbProc.executeGet(rusGoods);
             goodsFull = dbProc.executeGet(fullGoods);
             brands = MainForm.dbProc.executeGet("SELECT distinct company FROM goods WHERE company IS NOT NULL ORDER BY company");
@@ -239,6 +240,7 @@ namespace OwlBusinessStudio
                 int level_5_index = 0;
                 dbProc.executeNonQuery("DELETE FROM good_categories");
                 GoodCategory item = null;
+                dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE");
                 for (int i = 0; i < t.Rows.Count; i++)
                 {
                     Application.DoEvents();

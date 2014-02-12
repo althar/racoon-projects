@@ -429,7 +429,7 @@ namespace FTwoFramework.DB
                 parameters.Add("real_article", real_article);
                 parameters.Add("sort", sort);
                 parameters.Add("minimum", minimum);
-                if ((int)quantity > 0)
+                if (quantity.ToString()!="no_change")
                 {
                     parameters.Add("quantity", quantity);
                 }

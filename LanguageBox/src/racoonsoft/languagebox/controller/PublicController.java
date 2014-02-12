@@ -46,10 +46,10 @@ public class PublicController
         return new ModelAndView("page/public/partners");
     }
 
-    @RequestMapping("/course_image/{path}")
-    @ResponseBody
-    public byte[] downloadCourseImage(HttpServletRequest request,HttpServletResponse response, String path) throws Exception
-    {
-        return new FileSystemResource("C:/temp/courses/"+path).getFile().;
-    }
+//    @RequestMapping("/course_image/{path}")
+//    @ResponseBody
+//    public byte[] downloadCourseImage(HttpServletRequest request,HttpServletResponse response, String path) throws Exception
+//    {
+//        return new FileSystemResource("C:/temp/courses/"+path).getFile();
+//    }
 }
