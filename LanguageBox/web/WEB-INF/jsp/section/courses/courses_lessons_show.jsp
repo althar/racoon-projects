@@ -27,6 +27,20 @@
     </div>
     <hr/>
 
+    <form class="form-vertical">
+      <div class="control-group">
+        <label class="control-label" for="name">Название</label>
+        <div class="controls">
+          <input type="text" id="name" name="name" class="span12" value="Урок 4" style="margin-bottom: 10px">
+          <label class="checkbox" for="access">
+            <input type="checkbox" id="access" name="access" class="uniform" style="opacity: 0;">
+            Доступен в неоплаченном курсе (демо урок)
+          </label>
+        </div>
+      </div>
+    </form>
+    <hr/>
+
     <div class="tabbable analytics-tab">
       <ul class="nav nav-tabs">
         <li class="active"><a href="#" data-target="#materials" data-toggle="tab"><i class="icon-attachment"></i> Содержание урока</a></li>
@@ -100,78 +114,8 @@
 
         <div id="dictionary" class="tab-pane">
 
-          <table class="table table-condensed">
-            <colgroup>
-              <col style="width: 25px">
-              <col style="width: 25%">
-              <col style="width: 25%">
-              <col>
-              <col style="width: 50px">
-            </colgroup>
-            <thead>
-              <tr>
-                <th></th>
-                <th colspan="2">Слово или фраза</th>
-                <th colspan="2">Перевод</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>begin</td>
-                <td>[bɪ'gɪn]</td>
-                <td>начинать</td>
-                <td class="text-right action-col">
-                  <span class="btn-group">
-                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
-                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>begin</td>
-                <td>[bɪ'gɪn]</td>
-                <td>начинать</td>
-                <td class="text-right action-col">
-                  <span class="btn-group">
-                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
-                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>begin</td>
-                <td>[bɪ'gɪn]</td>
-                <td>начинать</td>
-                <td class="text-right action-col">
-                  <span class="btn-group">
-                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
-                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>be on waiting list</td>
-                <td>[bi j̆ɒn wˈeɪːtɪŋ lˈɪst]</td>
-                <td>находиться в очереди</td>
-                <td class="text-right action-col">
-                  <span class="btn-group">
-                    <a href="#" class="btn btn-small"><i class="icon-pencil"></i></a>
-                    <a href="#" class="btn btn-small"><i class="icon-trash"></i></a>
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="clearfix">
-            <a class="btn pull-right">
-              <span class="icol-add"></span> Добавить слово
-            </a>
-          </div>
+          <%@include file="/WEB-INF/jsp/section/courses/courses_lessons_dictionary.jsp" %>
+          <%-- <%@include file="/WEB-INF/jsp/section/courses/courses_lessons_dictionary_edit.jsp" %>--%>
 
         </div>
 

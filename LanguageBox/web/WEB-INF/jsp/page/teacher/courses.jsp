@@ -30,9 +30,6 @@
 
 <!-- Plugin Stylsheets first to ease overrides -->
 
-<!-- iButton -->
-<link rel="stylesheet" href="/plugins/ibutton/jquery.ibutton.css" media="screen">
-
 <!-- CLEditor -->
 <link rel="stylesheet" href="/plugins/cleditor/jquery.cleditor.css" media="screen">
 
@@ -94,7 +91,7 @@
             <%@include file="/WEB-INF/jsp/section/courses/library.jsp" %>
             <div id="sidebar-separator"></div>
             <%-- COURSES --%>
-             <c:import url="/service/get_courses"></c:import>
+             <%-- <c:import url="/service/get_courses"></c:import>--%>
 
              <%--<%@include file="/WEB-INF/jsp/section/courses/courses.jsp" %>--%>
              <%--<%@include file="/WEB-INF/jsp/section/courses/courses_new.jsp" %>--%>
@@ -129,9 +126,6 @@
   <!-- Uniform Script -->
   <script src="/plugins/uniform/jquery.uniform.min.js"></script>
 
-  <!-- iButton -->
-  <script src="/plugins/ibutton/jquery.ibutton.min.js"></script>
-
   <!-- jquery-ui Scripts -->
   <script src="/assets/jui/js/jquery-ui-1.9.2.min.js"></script>
   <script src="/assets/jui/jquery-ui.custom.min.js"></script>
@@ -140,6 +134,9 @@
 
   <!-- Bootstrap InputMask -->
   <script src="/custom-plugins/bootstrap-inputmask.min.js"></script>
+
+  <!-- AutoSize -->
+  <script src="/plugins/autosize/jquery.autosize-min.js"></script>
 
   <!-- CLEditor -->
   <script src="/plugins/cleditor/jquery.cleditor.min.js"></script>
