@@ -8,7 +8,10 @@
   <div class="widget-header">
     <span class="title">New Headway</span>
     <div class="toolbar">
-      <span class="btn" rel="tooltip" data-original-title="Back">Назад</span>
+      <span class="btn-group">
+        <span class="btn" rel="tooltip" data-original-title="Add lesson">Добавить урок</span>
+        <span class="btn" rel="tooltip" data-original-title="Back">Назад</span>
+      </span>
     </div>
   </div>
   <div class="widget-content">
