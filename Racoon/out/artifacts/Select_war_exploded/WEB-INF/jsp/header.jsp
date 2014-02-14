@@ -26,7 +26,7 @@
     <script src="/js/bootstrap-datepicker.ru.js"></script>
     <script src="/js/bootstrap-datepicker.js"></script>
     <script src="/js/bootstrap-collapse.js"></script>
-    <script src="/js/numeric.js"></script>
+    <script src="/js/jquery-numeric.js"></script>
 
     <meta name="keywords" content="${metaKeywords}сантехника, интернет магазин сантехники, сантехника со скидкой">
     <meta name="description"

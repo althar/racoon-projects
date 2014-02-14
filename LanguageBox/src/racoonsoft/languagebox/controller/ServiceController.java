@@ -147,5 +147,56 @@ public class ServiceController extends LanguageBoxController
 
         return model;
     }
+    @RequestMapping("/get_course")
+    public ModelAndView getCourse(HttpServletRequest request, HttpServletResponse response, Long course_id) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/courses/courses_new");
+        if(course_id!=null)
+        {
+            DBRecord c = course.getCourse(id(request),course_id,false);
+            model.addObject("course",c);
+        }
+
+        return model;
+    }
+
+    @RequestMapping("/save_course")
+    public ModelAndView getCourse(HttpServletRequest request, HttpServletResponse response,Long course_id, String name, String lvl,String sale,String target,String type,Double price,String description) throws Exception
+    {
+        ModelAndView model = new ModelAndView("document/plain");
+        Long id = 0l;
+        if(course_id!=null)
+        {
+            id = course.updateCourse(course_id,id(request),name,lvl,true,price,description,target,type);
+        }
+        else
+        {
+            id = course.createCourse(id(request),name,lvl,true,price,description,target,type);
+        }
+        model.addObject("value",id);
+        return model;
+    }
+    @RequestMapping("/get_course_lessons")
+    public ModelAndView getCourseLessons(HttpServletRequest request, HttpServletResponse response,Long course_id) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/courses/courses_show");
+        if(course_id!=null)
+        {
+            DBRecord c = course.getCourse(id(request),course_id,true);
+            model.addObject("course",c);
+        }
+
+        return model;
+    }
+    @RequestMapping("/get_lesson")
+    public ModelAndView getLesson(HttpServletRequest request, Long course_id, Long lesson_id,Boolean main_material) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/courses/courses_lessons_show");
+        DBRecord lesson = course.getLesson(id(request),course_id,lesson_id);
+        model.addObject("lesson",lesson);
+        model.addObject("main_material",main_material);
+
+        return model;
+    }
     //</editor-fold>
 }

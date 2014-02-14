@@ -6,8 +6,10 @@
   margin-left: 100px;
 }
 
+
 #wrapper #content #sidebar-separator {
-  left: 783px;
+  left: 50%;
+  margin-left: 30px;
 }
 
 .ui-dialog {

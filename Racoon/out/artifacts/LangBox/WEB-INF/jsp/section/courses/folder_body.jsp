@@ -101,117 +101,35 @@
           </span>
           </td>
           <td class='folder-body-controls'>
-            <a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">
-              <span class='icol-page-white-put'></span>
-            </a>
-            <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">
-              <span class="icol-pencil"></span>
-            </a>
-            <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">
-              <span class="icol-cross"></span>
-            </a>
+
+            <div id="replace" style="display: none">
+
+              <a href="#"><small class="muted">Перенести</small> <span class='icol-arrow-right'></span></a>
+
+            </div>
+
+            <div id="replaced" style="display: none">
+
+              <small class="muted">Добавлен...</small>
+
+            </div>
+
+            <div id="main_controls" style="display: block">
+
+              <a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">
+                <span class='icol-page-white-put'></span>
+              </a>
+              <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+                <span class="icol-pencil"></span>
+              </a>
+              <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+                <span class="icol-cross"></span>
+              </a>
+
+            </div>
           </td>
         </tr>
       </c:forEach>
-        <tr class='folder-body-node library_list-item'>
-          <td>
-            <span class="icol-box"></span>
-            <span class='item_name'>
-              <a class="entity-link">file.txt</a>
-            </span>
-          </td>
-          <td class='folder-body-controls'>
-            <div style="display: block">
-              <input type="checkbox" data-provide="ibutton" data-label-on="In" data-label-off="Out" checked>
-            </div>
-            <div style="display: none">
-              <a>
-                <span class='icol-page-white-put'></span>
-              </a>
-              <a class="rename-link">
-                <span class="icol-pencil"></span>
-              </a>
-              <a class="delete-link">
-                <span class="icol-cross"></span>
-              </a>
-            </div>
-          </td>
-        </tr>
-        <tr class='folder-body-node library_list-item'>
-          <td>
-            <span class="icol-box"></span>
-            <span class='item_name'>
-              <a class="entity-link">file.txt</a>
-            </span>
-          </td>
-          <td class='folder-body-controls'>
-            <div style="display: block">
-              <input type="checkbox" data-provide="ibutton" data-label-on="In" data-label-off="Out">
-            </div>
-            <div style="display: none">
-              <a>
-                <span class='icol-page-white-put'></span>
-              </a>
-              <a class="rename-link">
-                <span class="icol-pencil"></span>
-              </a>
-              <a class="delete-link">
-                <span class="icol-cross"></span>
-              </a>
-            </div>
-          </td>
-        </tr>
-
-
-        <tr class='folder-body-node library_list-item'>
-          <td>
-            <span class="icol-box"></span>
-            <span class='item_name'>
-              <a class="entity-link">file.txt</a>
-            </span>
-          </td>
-          <td class='folder-body-controls'>
-            <div style="display: block">
-              <a href="#"><span class='icol-arrow-right'></span></a>
-            </div>
-            <div style="display: none">
-              <a>
-                <span class='icol-page-white-put'></span>
-              </a>
-              <a class="rename-link">
-                <span class="icol-pencil"></span>
-              </a>
-              <a class="delete-link">
-                <span class="icol-cross"></span>
-              </a>
-            </div>
-          </td>
-        </tr>
-        <tr class='folder-body-node library_list-item'>
-          <td>
-            <span class="icol-box"></span>
-            <span class='item_name'>
-              <a class="entity-link">file.txt</a>
-            </span>
-          </td>
-          <td class='folder-body-controls'>
-            <div style="display: block">
-              <small class="muted">Добавлен...</small>
-            </div>
-            <div style="display: none">
-              <a>
-                <span class='icol-page-white-put'></span>
-              </a>
-              <a class="rename-link">
-                <span class="icol-pencil"></span>
-              </a>
-              <a class="delete-link">
-                <span class="icol-cross"></span>
-              </a>
-            </div>
-          </td>
-        </tr>
-
 
       </tbody>
     </table>

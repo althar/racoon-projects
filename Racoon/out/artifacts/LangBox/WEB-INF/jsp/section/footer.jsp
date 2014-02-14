@@ -6,8 +6,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <footer id="footer">
-  <div class="footer-left">MoonCake - Responsive Admin Template</div>
-  <div class="footer-right"><p>Copyright 2012. All Rights Reserved.</p></div>
+  <div class="footer-left">Language Box - мультимедийная система обучения через интеренет.</div>
+  <div class="footer-right"><p>Все права защищены 2014.</p></div>
 </footer>
 
 <!-- <footer class='main_footer'>

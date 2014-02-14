@@ -6,11 +6,11 @@
 
 <div class="widget span6  courses-section course-lessons-section">
   <div class="widget-header">
-    <span class="title">New Headway</span>
+    <span class="title">${course.getStringValue('name')}</span>
     <div class="toolbar">
       <span class="btn-group">
-        <span class="btn" rel="tooltip" data-original-title="Add lesson">Добавить урок</span>
-        <span class="btn" rel="tooltip" data-original-title="Back">Назад</span>
+        <span class="btn" rel="tooltip" onclick="courses.showEditLessons(${course.getLongValue('id')})" data-original-title="Add lesson">Добавить урок</span>
+        <span class="btn" rel="tooltip" onclick="courses.showCourses()" data-original-title="Back">Назад</span>
       </span>
     </div>
   </div>
@@ -20,19 +20,19 @@
         <img alt="" src="/img/course_preview.png">
       </div>
       <div class="info">
-        <span class="name">New Headway <small>Pre-intermediate</small></span>
+        <span class="name">${course.getStringValue('name')} <small>${course.getStringValue('level')}</small></span>
         <ul class="attributes">
-          <li>Профессиональный, Аудио книга</li>
-          <li><strong>2000 руб.</strong></li>
+          <li>${course.getStringValue('target')}, ${course.getStringValue('type')}</li>
+          <li><strong>${course.getDoubleValue('price')} руб.</strong></li>
         </ul>
         <div class="btn-group">
-          <a href="#" class="btn"><i class="icon-pencil"></i></a>
+          <a onclick="courses.showEditCourse(${course.getLongValue('id')})" class="btn"><i class="icon-pencil"></i></a>
         </div>
       </div>
     </div>
     <hr/>
     <h5 class="materials">
-      <a href="#"><i class="icon-pencil"></i> Основные материалы (24 файла)</a>
+      <a href="#"><i class="icon-pencil"></i> Основные материалы (${course.getRecord('main_material').getLongValue('material_count')} файла)</a>
     </h5>
     <hr/>
 
@@ -42,76 +42,18 @@
         <col span="2">
       </colgroup>
       <tbody>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №1
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №2
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №3
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №4
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №5
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №6
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="#">
-              <span class="icol-page"></span> Урок №7
-            </a>
-          </td>
-          <td>
-            7 файлов
-          </td>
-        </tr>
+      <c:forEach items="${course.getRecords('lessons')}" var="lesson">
+          <tr>
+              <td>
+                  <a onclick="courses.showEditLessons(${course.getLongValue('id')}, ${lesson.getLongValue('id')})">
+                      <span class="icol-page"></span> ${lesson.getStringValue('name')}
+                  </a>
+              </td>
+              <td>
+                  ${lesson.getLongValue('material_count')} файлов
+              </td>
+          </tr>
+      </c:forEach>
       </tbody>
     </table>
   </div>

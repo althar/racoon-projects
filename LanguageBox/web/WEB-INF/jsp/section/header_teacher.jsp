@@ -10,7 +10,7 @@
     <div class="brand-wrap pull-left">
     <div class="brand-img">
       <a class="brand" href="#">
-      <img src="/assets/images/logo.png" alt="" style="width: 117px; height: 21px;">
+      <img src="/assets/images/logo.png" alt="" style="width: 220px; height: 38px;">
       </a>
     </div>
     </div>

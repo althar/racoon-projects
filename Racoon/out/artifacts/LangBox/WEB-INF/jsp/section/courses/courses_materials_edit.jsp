@@ -33,6 +33,18 @@
       </ul>
       <div class="tab-content">
         <div id="materials" class="tab-pane active verticalist">
+          <div class="task-block">
+            <form class="form-vertical">
+              <div class="control-group">
+                <label class="control-label">Задание</label>
+                <div class="controls">
+                  <textarea id="cleditor">Прослушайте файлы и составьте пересказ</textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
           <ul class="thumbnails">
 
             <li>
