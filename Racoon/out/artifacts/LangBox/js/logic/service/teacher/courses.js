@@ -4,12 +4,10 @@ var uploadDelay = 0;
 
 $(document).ready(function () {
     library.bindLibraryControls();
-    library.bindCoursesControls();
-    library.checkUploadFiles();
+    courses.bindCoursesControls();
 
+    library.checkUploadFiles();
     courses.showCourses();
-//    // Check uploading
-//    $("#upload-progress-bar").progressbar();
 });
 
 library =
@@ -360,6 +358,29 @@ courses =
         $(".save-course-butt").unbind("click");
         $(".save-course-butt").click(function(){
 
+            var formData = new FormData($(".course-edit-form")[0]);
+            $.ajax({
+                url: "/service/save_course",  //Server script to process data
+                type: 'POST',
+                success: function (course_id) {
+                    console.log("Course save response id=: "+course_id);
+                    courses.showCourseLessons(course_id);
+                },
+                error: function () {
+                    //alert("Что-то пошло не так. Попробуйте снова через час.");
+                    //$(".library-loader").hide();
+                },
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+
+
+        // HTML Editor
+        $( "#cleditor").cleditor({
+            width: '100%'
         });
 
     },
@@ -369,9 +390,9 @@ courses =
             url: "/service/get_courses",
             async: true,
             success: function (html) {
-                $(".courses-list-section").replaceWith(html);
+                $(".courses-section").replaceWith(html);
                 courses.bindCoursesControls();
-                $(".courses-list-section").show();
+                $(".courses-section").show();
             },
             failure: function () {
 //                    alert("Серверная ошибка. Попробуйте позже");
@@ -382,12 +403,18 @@ courses =
     },
     showEditCourse: function(courseId){
         $(".courses-section").hide();
+        var params = "";
+        if(courseId!=null)
+        {
+            params+="course_id="+courseId;
+        }
         $.ajax({
-            url: "/service/get_course?course_id="+courseId,
+            url: "/service/get_course?"+params,
             async: true,
             success: function (html) {
-                $(".course-edit-section").replaceWith(html);
-                $(".course-edit-section").show();
+                $(".courses-section").replaceWith(html);
+                $(".courses-section").show();
+                $(".numeric").autoNumeric('init', {mDec: 2,aSep: '',vMax:'999999.00',vMin:'0.00'});
                 courses.bindCoursesControls();
             },
             failure: function () {
@@ -402,8 +429,8 @@ courses =
             url: "/service/get_course_lessons?course_id="+courseId,
             async: true,
             success: function (html) {
-                $(".course-lessons-section").replaceWith(html);
-                $(".course-lessons-section").show();
+                $(".courses-section").replaceWith(html);
+                $(".courses-section").show();
                 courses.bindCoursesControls();
             },
             failure: function () {
@@ -412,14 +439,23 @@ courses =
             }
         });
     },
-    showEditLessons: function(lessonId){
+    showEditLessons: function(courseId, lessonId, main_material){
         $(".courses-section").hide();
+        var params = "course_id="+courseId;
+        if(lessonId!=null)
+        {
+            params+="&lesson_id="+lessonId;
+        }
+        if(main_material!=null)
+        {
+            params+="&main_material="+main_material;
+        }
         $.ajax({
-            url: "/service/get_lesson?lesson_id="+lessonId,
+            url: "/service/get_lesson?"+params,
             async: true,
             success: function (html) {
-                $(".course-edit-section").replaceWith(html);
-                $(".course-edit-section").show();
+                $(".courses-section").replaceWith(html);
+                $(".courses-section").show();
                 courses.bindCoursesControls();
             },
             failure: function () {

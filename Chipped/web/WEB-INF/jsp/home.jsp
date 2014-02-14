@@ -12,7 +12,7 @@
     <script type="text/javascript" src="/js/jq/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="/js/jq/jquery-ui.js"></script>
     <script type="text/javascript" src="/js/jq/jquery.mask.js"></script>
-    <script type="text/javascript" src="/js/jq/jquery.numeric.js"></script>
+    <script type="text/javascript" src="/js/jq/jquery.jquery-numeric.js"></script>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
     <%--<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css" >--%>

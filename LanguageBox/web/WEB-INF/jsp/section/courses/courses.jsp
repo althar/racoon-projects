@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<div class="widget span6  courses-section courses-list-section">
+<div class="widget span6 courses-section courses-list-section">
     <input type="hidden" id="current-course-id">
     <input type="hidden" id="current-lesson-id">
 
@@ -53,10 +53,10 @@
             <c:forEach items="${courses}" var="course">
             <li>
                 <div class="head">
-                    <h2 class="title"><a>${course.getStringValue('name')}</a></h2>
+                    <h2 class="title"><a onclick="courses.showCourseLessons(${course.getLongValue('id')})">${course.getStringValue('name')}</a></h2>
                     <span class="note">${course.getStringValue('level')}</span>
                 </div>
-                <div class="thumbnail">
+                <div class="thumbnail" onclick="courses.showCourseLessons(${course.getLongValue('id')})">
                     <img alt="" src="/course_image?path=${course.getStringValue('image_url')}">
                 </div>
                 <div class="info">
