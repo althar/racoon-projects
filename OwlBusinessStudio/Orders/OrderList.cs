@@ -20,10 +20,11 @@ namespace OwlBusinessStudio.Orders
         public List<OrderItem> Items = new List<OrderItem>();
         public List<PictureBox> DeletePics = new List<PictureBox>();
         public int Discount = 0;
-        public int DeliverPrice = 0;
+        //public int DeliverPrice = 0;
         public string distance = "";
         private int orderID = 0;
         private int clientID = 0;
+        public bool isPickup = false;
 
         public OrderList(int order_id)
         {
@@ -41,18 +42,18 @@ namespace OwlBusinessStudio.Orders
         public void setDiscount(int discount)
         {
             Discount = discount;
-            firstItem_onSumChanged();
+            firstItem_onSumChanged(true, 0,false);
         }
         public void setDeliverDistance(string distance)
         {
             this.distance = distance;
-            firstItem_onSumChanged();
+            firstItem_onSumChanged(false,0,false);
         }
         public void setClientId(int id)
         {
             clientID = id;
         }
-        public void calc_total()
+        public void calc_total(bool useGivenDiscount,Int32 delPrice,bool useDelPrice)
         {
             int goodsPrice = 0;
             int totalDiscount = 0;
@@ -67,6 +68,11 @@ namespace OwlBusinessStudio.Orders
             // 2 - Calculate delivery price
             DataTable deliveryPriceTab = MainForm.dbProc.executeGet("SELECT * FROM get_delivery_price('"+distance+"',CAST("+goodsPrice+" AS DOUBLE PRECISION))");
             deliveryPrice = (int)((double)deliveryPriceTab.Rows[0]["delivery_price"]);
+            if (useDelPrice)
+            {
+                deliveryPrice = delPrice;
+            }
+            isPickup = (bool)deliveryPriceTab.Rows[0]["is_pickup"];
             int pickupDiscount = 0;
             if (!(deliveryPriceTab.Rows[0]["discount"] is DBNull))
             {
@@ -78,6 +84,10 @@ namespace OwlBusinessStudio.Orders
             if (!(discountTab.Rows[0]["total_discount"] is DBNull))
             {
                 totalDiscount = (int)((double)discountTab.Rows[0]["total_discount"]);
+            }
+            if (useGivenDiscount)
+            {
+                totalDiscount = Discount;
             }
             priceWithDiscount = goodsPrice - (int)(goodsPrice * ((totalDiscount) / 100.0));
 
@@ -91,9 +101,9 @@ namespace OwlBusinessStudio.Orders
                 onListSumChanged();
             }
         }
-        void firstItem_onSumChanged()
+        void firstItem_onSumChanged(bool useGivenDiscount,Int32 delPrice,bool useDelPrice)
         {
-            calc_total();
+            calc_total(useGivenDiscount, delPrice,useDelPrice);
             
         }
 
@@ -132,7 +142,7 @@ namespace OwlBusinessStudio.Orders
             TxtTotalPrice.Top = ButtAddGood.Top + 25;
 
             item.loadItem(good_id, quantity, goodName, goodPrice);
-            calc_total();
+            calc_total(false,0,false);
             item.Tag = delBox;
         }
         public void AddItem()
@@ -166,8 +176,12 @@ namespace OwlBusinessStudio.Orders
             TxtDeliveryPrice.Top = ButtAddGood.Top + 25;
             TxtTotalPrice.Top = ButtAddGood.Top + 25;
             item.loadItem();
-            calc_total();
+            calc_total(false,0,false);
             item.Tag = delBox;
+        }
+        public int getDeliverPrice()
+        {
+            return (Int32.Parse(TxtDeliveryPrice.Text));
         }
         public int getGoodsPrice()
         {
@@ -176,7 +190,7 @@ namespace OwlBusinessStudio.Orders
         private void ButtAddGood_Click(object sender, EventArgs e)
         {
             AddItem();
-            calc_total();
+            calc_total(false, 0, false);
             Items[Items.Count - 1].PicFind_Click(null, null);
             if (onlistItemAdded != null)
             {
@@ -200,7 +214,7 @@ namespace OwlBusinessStudio.Orders
             TxtDeliveryPrice.Top = ButtAddGood.Top + 25;
             TxtTotalPrice.Top = ButtAddGood.Top + 25;
             Height = Items.Count * 27 + 65;
-            calc_total();
+            calc_total(false, 0, false);
         }
         void delBox_Click(object sender, EventArgs e)
         {
@@ -229,5 +243,29 @@ namespace OwlBusinessStudio.Orders
         }
 
         #endregion
+        int currentDelPrice = 0;
+        private void TxtDeliveryPrice_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtDeliveryPrice.Text == "")
+                {
+                    TxtDeliveryPrice.Text = "0";
+                }
+                int disc = Int32.Parse(TxtDeliveryPrice.Text);
+                if (disc > 10000 || disc < 0)
+                {
+                    TxtDeliveryPrice.Text = currentDelPrice.ToString();
+                    return;
+                }
+                currentDelPrice = disc;
+                calc_total(true, currentDelPrice, true);
+            }
+            catch
+            {
+                TxtDeliveryPrice.Text = currentDelPrice.ToString();
+                calc_total(true, currentDelPrice, true);
+            }
+        }
     }
 }

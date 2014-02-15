@@ -23,7 +23,7 @@ namespace OwlBusinessStudio.Orders
         private string daStreet = "";
         private bool loaded = false;
 
-        public AddEditOrderForm(MainForm parent,int order_id)
+        public AddEditOrderForm(MainForm parent, int order_id)
         {
             InitializeComponent();
             owner = parent;
@@ -57,7 +57,7 @@ namespace OwlBusinessStudio.Orders
         private void loadGoods()
         {
             DataTable goods = MainForm.dbProc.get("order_goods", "order_id=" + orderID.ToString());
-            for(int i=0; i<goods.Rows.Count; i++)
+            for (int i = 0; i < goods.Rows.Count; i++)
             {
                 orderTable.AddItem((int)goods.Rows[i]["good_id"], (int)goods.Rows[i]["count"], (string)goods.Rows[i]["good_name"], (int)goods.Rows[i]["price"]);
             }
@@ -95,11 +95,11 @@ namespace OwlBusinessStudio.Orders
             orderTable.setDeliverDistance(ComboDelivery.Text);
             orderTable.setClientId((int)clientID);
         }
-        
+
         private void loadClient()
         {
             DataTable client = MainForm.dbProc.get("clients", "id=" + clientID.ToString());
-            DataTable totalSumm = MainForm.dbProc.executeGet("SELECT sum(goods_price) AS total_summ FROM orders WHERE client_id=" + clientID+" AND status=3");
+            DataTable totalSumm = MainForm.dbProc.executeGet("SELECT sum(goods_price) AS total_summ FROM orders WHERE client_id=" + clientID + " AND status=3");
             long totalSummValue = 0;
             int discountForClient = 0;
             if (totalSumm.Rows.Count > 0 && !(totalSumm.Rows[0]["total_summ"] is DBNull))
@@ -137,14 +137,19 @@ namespace OwlBusinessStudio.Orders
                     orderTable.setDiscount(discountForClient);
                     TxtDiscount.Text = discountForClient.ToString();
                 }
-                
+
                 for (int i = 0; i < ComboMetros.Items.Count; i++)
                 {
+                    if (client.Rows[0]["metro_id"] is DBNull)
+                    {
+                        break;
+                    }
                     if ((int)((DataRowView)ComboMetros.Items[i]).Row["id"] == (int)client.Rows[0]["metro_id"])
                     {
                         ComboMetros.SelectedIndex = i;
                         break;
                     }
+
                 }
                 // Distance...
                 try
@@ -177,12 +182,12 @@ namespace OwlBusinessStudio.Orders
                 TxtCIty.Text = "";
                 if (!isEditing)
                 {
-                    TxtDiscount.Text = "0"; 
+                    TxtDiscount.Text = "0";
                 }
-              
+
                 //ComboStreetType.Text = "";
                 ComboMetros.SelectedIndex = -1;
-                
+
                 TxtHouse.Text = "";
                 TxtPorch.Text = "";
                 TxtFloor.Text = "";
@@ -265,9 +270,33 @@ namespace OwlBusinessStudio.Orders
                     orderTable.setDiscount(discountForClient);
                     TxtDiscount.Text = discountForClient.ToString();
                 }
-
+                if (!(order.Rows[0]["house"] is DBNull))
+                {
+                    TxtHouse.Text = (string)order.Rows[0]["house"];
+                }
+                if (!(order.Rows[0]["porch"] is DBNull))
+                {
+                    TxtPorch.Text = (string)order.Rows[0]["porch"];
+                }
+                if (!(order.Rows[0]["floor"] is DBNull))
+                {
+                    TxtFloor.Text = (string)order.Rows[0]["floor"];
+                }
+                if (!(order.Rows[0]["domophone"] is DBNull))
+                {
+                    TxtDomophone.Text = (string)order.Rows[0]["domophone"];
+                }
+                if (!(order.Rows[0]["room"] is DBNull))
+                {
+                    TxtRoom.Text = (string)order.Rows[0]["room"];
+                }
+                
                 for (int i = 0; i < ComboMetros.Items.Count; i++)
                 {
+                    if (order.Rows[0]["metro_id"] is DBNull)
+                    {
+                        break;
+                    }
                     if ((int)((DataRowView)ComboMetros.Items[i]).Row["id"] == (int)order.Rows[0]["metro_id"])
                     {
                         ComboMetros.SelectedIndex = i;
@@ -293,11 +322,7 @@ namespace OwlBusinessStudio.Orders
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                TxtHouse.Text = (string)order.Rows[0]["house"];
-                TxtPorch.Text = (string)order.Rows[0]["porch"];
-                TxtFloor.Text = (string)order.Rows[0]["floor"];
-                TxtDomophone.Text = (string)order.Rows[0]["domophone"];
-                TxtRoom.Text = (string)order.Rows[0]["room"];
+                
             }
             else// New client
             {
@@ -344,7 +369,7 @@ namespace OwlBusinessStudio.Orders
             }
             loaded = true;
         }
-        
+
         private void orderTable_onlistItemAdded()
         {
             int he = orderTable.Height;
@@ -363,7 +388,7 @@ namespace OwlBusinessStudio.Orders
                     TxtDiscount.Text = "0";
                 }
                 int disc = Int32.Parse(TxtDiscount.Text);
-                if(disc>99||disc<0)
+                if (disc > 99 || disc < 0)
                 {
                     TxtDiscount.Text = currentDiscount.ToString();
                     return;
@@ -437,12 +462,12 @@ namespace OwlBusinessStudio.Orders
                 MessageBox.Show("Телефонный номер 1 должен содержать не менее 10 чисел.");
                 return false;
             }
-            if (TxtPhone2.Text.Replace(" ","").Length != 4 && TxtPhone2.Text.Replace(" ","").Length != 14)
+            if (TxtPhone2.Text.Replace(" ", "").Length != 4 && TxtPhone2.Text.Replace(" ", "").Length != 14)
             {
                 MessageBox.Show("Телефонный номер 2 должен содержать не менее 10 чисел или быть пустым.");
                 return false;
             }
-            if (TxtPhone3.Text.Replace(" ","").Length != 4 && TxtPhone3.Text.Replace(" ","").Length != 14)
+            if (TxtPhone3.Text.Replace(" ", "").Length != 4 && TxtPhone3.Text.Replace(" ", "").Length != 14)
             {
                 MessageBox.Show("Телефонный номер 3 должен содержать не менее 10 чисел или быть пустым.");
                 return false;
@@ -477,20 +502,20 @@ namespace OwlBusinessStudio.Orders
                 int good_id = (int)ordersToAccept.Rows[i]["good_id"];
                 int order_id = (int)ordersToAccept.Rows[i]["id"];
 
-                    string command = "UPDATE goods SET quantity=quantity";
-                    if(plus)
-                    {
-                        command+="+";
-                    }
-                    else
-                    {
-                        command+="-";
-                    }
-                    command+="("
-                    + count.ToString()
-                    + ") WHERE id="
-                    + good_id.ToString()
-                    + "; ";
+                string command = "UPDATE goods SET quantity=quantity";
+                if (plus)
+                {
+                    command += "+";
+                }
+                else
+                {
+                    command += "-";
+                }
+                command += "("
+                + count.ToString()
+                + ") WHERE id="
+                + good_id.ToString()
+                + "; ";
                 MainForm.dbProc.executeNonQuery(command);
             }
         }
@@ -576,6 +601,24 @@ namespace OwlBusinessStudio.Orders
                     if (ComboDelivery.SelectedValue != null)
                     {
                         orderParams.Add("deliver", !(bool)ComboDelivery.SelectedValue);
+                        if ((bool)ComboDelivery.SelectedValue)
+                        {
+                            orderParams.Add("street", ComboDelivery.Text);
+                            orderParams.Add("street_type", "");
+                            orderParams.Add("house", "");
+                            orderParams.Add("porch", "");
+                            orderParams.Add("floor", "");
+                            orderParams.Add("room", "");
+                        }
+                        else
+                        {
+                            orderParams.Add("street", Configurator.fromUpper(ComboStreet.Text));
+                            orderParams.Add("street_type", "");
+                            orderParams.Add("house", TxtHouse.Text);
+                            orderParams.Add("porch", TxtPorch.Text);
+                            orderParams.Add("floor", TxtFloor.Text);
+                            orderParams.Add("room", TxtRoom.Text);
+                        }
                     }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
@@ -591,7 +634,7 @@ namespace OwlBusinessStudio.Orders
                     }
                     orderParams.Add("deliver_time_to_1", TimePickerTo1.Value);
                     orderParams.Add("modifier_user_id", MainForm.currentUser.ID);
-                    orderParams.Add("deliver_price", orderTable.DeliverPrice);
+                    orderParams.Add("deliver_price", orderTable.getDeliverPrice());
                     orderParams.Add("goods_price", orderTable.getGoodsPrice());
                     orderParams.Add("phone_1", TxtPhone1.Text);
                     if (TxtPhone2.Text.Replace(" ", "").Length == 14)
@@ -610,12 +653,7 @@ namespace OwlBusinessStudio.Orders
                     {
                         orderParams.Add("phone_3", "");
                     }
-                    orderParams.Add("street", Configurator.fromUpper(ComboStreet.Text));
-                    orderParams.Add("street_type", "");
-                    orderParams.Add("house", TxtHouse.Text);
-                    orderParams.Add("porch", TxtPorch.Text);
-                    orderParams.Add("floor", TxtFloor.Text);
-                    orderParams.Add("room", TxtRoom.Text);
+                    
                     orderParams.Add("modified", MainForm.dbProc.getServerTime());
                     orderParams.Add("modifier_name", MainForm.currentUser.SecondName+" "+MainForm.currentUser.FirstName);
                     orderParams.Add("domophone", TxtDomophone.Text);
@@ -627,7 +665,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("client_name", TxtName.Text);
 
                     DataTable driver = MainForm.dbProc.executeGet("SELECT driver_id FROM driver_metros WHERE metro_id=" + current_metro_id.ToString());
-                    if (driver.Rows.Count > 0)
+                    if (driver.Rows.Count > 0 && !(bool)ComboDelivery.SelectedValue)
                     {
                         orderParams.Add("driver_id", driver.Rows[0]["driver_id"]);
                     }
@@ -669,6 +707,26 @@ namespace OwlBusinessStudio.Orders
                     if (ComboDelivery.SelectedValue != null)
                     {
                         orderParams.Add("deliver", !(bool)ComboDelivery.SelectedValue);
+                        if ((bool)ComboDelivery.SelectedValue)
+                        {
+                            orderParams.Add("street", ComboDelivery.Text);
+                            orderParams.Add("street_type", "");
+                            orderParams.Add("house", "");
+                            orderParams.Add("porch", "");
+                            orderParams.Add("floor", "");
+                            orderParams.Add("room", "");
+                            orderParams.Add("metro_id", 0);
+                        }
+                        else
+                        {
+                            orderParams.Add("street", Configurator.fromUpper(ComboStreet.Text));
+                            orderParams.Add("street_type", "");
+                            orderParams.Add("house", TxtHouse.Text);
+                            orderParams.Add("porch", TxtPorch.Text);
+                            orderParams.Add("floor", TxtFloor.Text);
+                            orderParams.Add("room", TxtRoom.Text);
+                            orderParams.Add("metro_id", current_metro_id);
+                        }
                     }
                     orderParams.Add("deliver_date", TimePickerDate.Value);
                     orderParams.Add("deliver_time_from_1", TimePickerFrom1.Value);
@@ -685,7 +743,7 @@ namespace OwlBusinessStudio.Orders
                     orderParams.Add("deliver_time_to_1", TimePickerTo1.Value);
                     orderParams.Add("modifier_name", MainForm.currentUser.SecondName + " " + MainForm.currentUser.FirstName);
                     orderParams.Add("modifier_user_id", MainForm.currentUser.ID);
-                    orderParams.Add("deliver_price", orderTable.DeliverPrice);
+                    orderParams.Add("deliver_price", orderTable.getDeliverPrice());
                     orderParams.Add("goods_price", orderTable.getGoodsPrice());
                     orderParams.Add("phone_1", TxtPhone1.Text);
                     if (TxtPhone2.Text.Replace(" ", "").Length == 14)
@@ -704,22 +762,15 @@ namespace OwlBusinessStudio.Orders
                     {
                         orderParams.Add("phone_3", "");
                     }
-                    orderParams.Add("street", Configurator.fromUpper(ComboStreet.Text.TrimStart(new char[1] { ' ' }).TrimEnd(new char[1] { ' ' })));
-                    orderParams.Add("street_type", "");
-                    orderParams.Add("house", TxtHouse.Text);
-                    orderParams.Add("porch", TxtPorch.Text);
-                    orderParams.Add("floor", TxtFloor.Text);
-                    orderParams.Add("room", TxtRoom.Text);
-                    orderParams.Add("domophone", TxtDomophone.Text);
                     orderParams.Add("discount_percent", Double.Parse(TxtDiscount.Text));
-                    orderParams.Add("metro_id", current_metro_id);
+                    
                     orderParams.Add("city", Configurator.fromUpper(TxtCIty.Text));
                     orderParams.Add("deliver_distance", ComboDelivery.Text);
                     orderParams.Add("description", TxtDescription.Text);
                     orderParams.Add("client_name", TxtName.Text);
 
                     DataTable driver = MainForm.dbProc.executeGet("SELECT driver_id FROM driver_metros WHERE metro_id=" + current_metro_id.ToString());
-                    if (driver.Rows.Count > 0)
+                    if (driver.Rows.Count > 0 && !(bool)ComboDelivery.SelectedValue)
                     {
                         orderParams.Add("driver_id", driver.Rows[0]["driver_id"]);
                     }
@@ -760,7 +811,7 @@ namespace OwlBusinessStudio.Orders
         {
             try
             {
-                orderTable.setDeliverDistance(ComboDelivery.Text);                
+                orderTable.setDeliverDistance(ComboDelivery.Text);
             }
             catch (Exception ex)
             {
@@ -785,7 +836,7 @@ namespace OwlBusinessStudio.Orders
 
         private void TxtPhone1_TextChanged(object sender, EventArgs e)
         {
-            if (TxtPhone1.Text.Length == 14&&loaded)
+            if (TxtPhone1.Text.Length == 14 && loaded)
             {
                 // Search client, load it...
                 DataTable clients_by_phone = MainForm.dbProc.executeGet("SELECT id FROM clients WHERE phone_1='" + TxtPhone1.Text + "'");

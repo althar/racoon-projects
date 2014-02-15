@@ -269,7 +269,6 @@
             this.TxtDiscount.BackColor = System.Drawing.SystemColors.Window;
             this.TxtDiscount.Location = new System.Drawing.Point(646, 137);
             this.TxtDiscount.Name = "TxtDiscount";
-            this.TxtDiscount.ReadOnly = true;
             this.TxtDiscount.Size = new System.Drawing.Size(218, 20);
             this.TxtDiscount.TabIndex = 33;
             this.TxtDiscount.Text = "0";

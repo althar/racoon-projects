@@ -1740,6 +1740,13 @@ namespace OwlBusinessStudio
         {
             if (currentOrderID > 0)
             {
+                DataTable ordr = dbProc.executeGet("SELECT status FROM orders WHERE id=" + currentOrderID.ToString());
+                if ((int)ordr.Rows[0]["status"] == 3)
+                {
+                    MessageBox.Show("Выполненным заказам нельзя менять статус. "
+                    +"Для внесения изменения в остатки нужно отредактировать выполненный заказ.");
+                    return;
+                }
                 dbProc.executeNonQuery("UPDATE orders SET status=1,modifier_user_id="+currentUser.ID+",modifier_name='"+currentUser.getFullName()+"' WHERE id=" + currentOrderID.ToString());
                 TabControlMain_SelectedIndexChanged(null, null);
             }
@@ -1748,6 +1755,13 @@ namespace OwlBusinessStudio
         {
             if (currentOrderID > 0)
             {
+                DataTable ordr = dbProc.executeGet("SELECT status FROM orders WHERE id=" + currentOrderID.ToString());
+                if ((int)ordr.Rows[0]["status"] == 3)
+                {
+                    MessageBox.Show("Выполненным заказам нельзя менять статус. "
+                    + "Для внесения изменения в остатки нужно отредактировать выполненный заказ.");
+                    return;
+                }
                 dbProc.executeNonQuery("UPDATE orders SET status=2,modifier_user_id=" + currentUser.ID + ",modifier_name='" + currentUser.getFullName() + "' WHERE id=" + currentOrderID.ToString());
                 dbProc.executeNonQuery("DELETE FROM delivery_lists WHERE order_id=" + currentOrderID.ToString());
                 TabControlMain_SelectedIndexChanged(null, null);
@@ -1757,6 +1771,16 @@ namespace OwlBusinessStudio
         {
             if (currentOrderID > 0)
             {
+                DataTable ordr = dbProc.executeGet("SELECT status FROM orders WHERE id="+currentOrderID.ToString());
+                if ((int)ordr.Rows[0]["status"] != 1)
+                {
+                    MessageBox.Show("Только новые заказы можно помечать как 'Выполненные'");
+                    return;
+                }
+                if ((int)ordr.Rows[0]["status"] == 3)
+                {
+                    return;
+                }
                 LabelProgress.Text = "Обновление остатков на складе.";
                 ButtProcess.Visible = true;
                 DataTable ordersToAccept = dbProc.executeGet("SELECT * FROM orders_with_details WHERE status_id=1 AND id="+currentOrderID.ToString());

@@ -130,8 +130,7 @@
             this.TxtDeliveryPrice.Size = new System.Drawing.Size(64, 20);
             this.TxtDeliveryPrice.TabIndex = 17;
             this.TxtDeliveryPrice.Text = "0";
-            //this.TxtDeliveryPrice.TextChanged += new System.EventHandler(this.TxtDeliveryPrice_TextChanged);
-            //this.TxtDeliveryPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDeliveryPrice_KeyPress);
+            this.TxtDeliveryPrice.TextChanged += new System.EventHandler(this.TxtDeliveryPrice_TextChanged);
             // 
             // TxtTotalPrice
             // 

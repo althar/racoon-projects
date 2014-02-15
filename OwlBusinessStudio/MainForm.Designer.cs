@@ -326,13 +326,13 @@
             // MenuButtExportGoods
             // 
             this.MenuButtExportGoods.Name = "MenuButtExportGoods";
-            this.MenuButtExportGoods.Size = new System.Drawing.Size(152, 22);
+            this.MenuButtExportGoods.Size = new System.Drawing.Size(147, 22);
             this.MenuButtExportGoods.Text = "Ассортимент";
             // 
             // MenuButtExportOrders
             // 
             this.MenuButtExportOrders.Name = "MenuButtExportOrders";
-            this.MenuButtExportOrders.Size = new System.Drawing.Size(152, 22);
+            this.MenuButtExportOrders.Size = new System.Drawing.Size(147, 22);
             this.MenuButtExportOrders.Text = "Заказы";
             // 
             // toolStripMenuItem3
@@ -347,7 +347,7 @@
             // MenuButtImportGoods
             // 
             this.MenuButtImportGoods.Name = "MenuButtImportGoods";
-            this.MenuButtImportGoods.Size = new System.Drawing.Size(152, 22);
+            this.MenuButtImportGoods.Size = new System.Drawing.Size(147, 22);
             this.MenuButtImportGoods.Text = "Ассортимент";
             this.MenuButtImportGoods.Click += new System.EventHandler(this.MenuButtImportGoods_Click);
             // 
@@ -1715,21 +1715,21 @@
             // ButtOrderStatusNew
             // 
             this.ButtOrderStatusNew.Name = "ButtOrderStatusNew";
-            this.ButtOrderStatusNew.Size = new System.Drawing.Size(131, 22);
+            this.ButtOrderStatusNew.Size = new System.Drawing.Size(152, 22);
             this.ButtOrderStatusNew.Text = "Новый";
             this.ButtOrderStatusNew.Click += new System.EventHandler(this.ButtOrderStatusNew_Click);
             // 
             // ButtOrderStatusDelay
             // 
             this.ButtOrderStatusDelay.Name = "ButtOrderStatusDelay";
-            this.ButtOrderStatusDelay.Size = new System.Drawing.Size(131, 22);
+            this.ButtOrderStatusDelay.Size = new System.Drawing.Size(152, 22);
             this.ButtOrderStatusDelay.Text = "Отложен";
             this.ButtOrderStatusDelay.Click += new System.EventHandler(this.ButtOrderStatusDelay_Click);
             // 
             // ButtOrderStatusFinished
             // 
             this.ButtOrderStatusFinished.Name = "ButtOrderStatusFinished";
-            this.ButtOrderStatusFinished.Size = new System.Drawing.Size(131, 22);
+            this.ButtOrderStatusFinished.Size = new System.Drawing.Size(152, 22);
             this.ButtOrderStatusFinished.Text = "Выполнен";
             this.ButtOrderStatusFinished.Click += new System.EventHandler(this.ButtOrderStatusFinished_Click);
             // 
@@ -1763,6 +1763,7 @@
             this.ButtDeleteGood.Name = "ButtDeleteGood";
             this.ButtDeleteGood.Size = new System.Drawing.Size(36, 36);
             this.ButtDeleteGood.Text = "Удалить товар";
+            this.ButtDeleteGood.Visible = false;
             this.ButtDeleteGood.Click += new System.EventHandler(this.ButtDeleteGood_Click);
             // 
             // toolStripSeparator3

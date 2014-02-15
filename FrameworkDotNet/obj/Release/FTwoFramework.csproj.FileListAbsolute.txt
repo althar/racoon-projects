@@ -1,16 +1,3 @@
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\OwlBusinessStudioLib.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\OwlBusinessStudioLib.pdb
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\Mono.Security.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\Npgsql.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\ZetaHtmlEditControl.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\HttpServer.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\SgmlReaderDll.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\ZetaHtmlEditControl.pdb
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\bin\Release\de\ZetaHtmlEditControl.resources.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Release\ResolveAssemblyReference.cache
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Release\FTwoFramework.csproj.ResolveComReference.cache
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Release\OwlBusinessStudioLib.dll
-C:\Users\AlThar\Documents\Visual Studio 2010\Projects\Framework\obj\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Mono.Security.dll
