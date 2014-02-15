@@ -17,6 +17,7 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlB
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Properties.Resources.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Purchase.PurchaseEditForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Purchase.PurchaseListsForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.AdvForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.BrandOrderForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.DeliveryCostForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.DiscountsForm.resources
@@ -39,4 +40,3 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Mono.Sec
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.pdb
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Settings.AdvForm.resources

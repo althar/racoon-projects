@@ -11,7 +11,7 @@ namespace OwlBusinessStudio.Orders
 {
     public partial class OrderItem : UserControl
     {
-        public delegate void sumChangedHandler();
+        public delegate void sumChangedHandler(bool useGivenDiscount,int delPrice,bool useDelPrice);
         public event sumChangedHandler onSumChanged;
         public long currentGoodQuantity = 0;
         public long currentGoodMinimum = 0;
@@ -124,7 +124,7 @@ namespace OwlBusinessStudio.Orders
                 TxtSum.Text = (NumPrice.Value * NumQuantity.Value).ToString();
                 if (onSumChanged != null)
                 {
-                    onSumChanged();
+                    onSumChanged(false,0,false);
                 }
             }
             catch (Exception ex)

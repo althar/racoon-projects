@@ -3,7 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwlBusinessStudio", "OwlBusinessStudio.csproj", "{B46E127B-2250-4BA6-8FCD-CF0D0FAED55C}"
 EndProject
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTwoFramework", "..\FrameworkDotNet\FTwoFramework.csproj", "{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}"
 EndProject
 Global
@@ -26,6 +25,12 @@ Global
 		{B46E127B-2250-4BA6-8FCD-CF0D0FAED55C}.Release|Mixed Platforms.Build.0 = Release|x86
 		{B46E127B-2250-4BA6-8FCD-CF0D0FAED55C}.Release|x86.ActiveCfg = Release|x86
 		{B46E127B-2250-4BA6-8FCD-CF0D0FAED55C}.Release|x86.Build.0 = Release|x86
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BB6A0DD6-8BC9-4C26-83CF-17CACF005799}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
