@@ -44,6 +44,7 @@
             this.MenuButtExportOrders = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuButtImportGoods = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuButtDiscounts = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuButtDeliveryPrice = new System.Windows.Forms.ToolStripMenuItem();
@@ -338,7 +339,8 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuButtImportGoods});
+            this.MenuButtImportGoods,
+            this.toolStripMenuItem12});
             this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(301, 22);
@@ -347,9 +349,18 @@
             // MenuButtImportGoods
             // 
             this.MenuButtImportGoods.Name = "MenuButtImportGoods";
-            this.MenuButtImportGoods.Size = new System.Drawing.Size(147, 22);
-            this.MenuButtImportGoods.Text = "Ассортимент";
+            this.MenuButtImportGoods.Size = new System.Drawing.Size(178, 22);
+            this.MenuButtImportGoods.Tag = "true";
+            this.MenuButtImportGoods.Text = "Полная заливка";
             this.MenuButtImportGoods.Click += new System.EventHandler(this.MenuButtImportGoods_Click);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(178, 22);
+            this.toolStripMenuItem12.Tag = "false";
+            this.toolStripMenuItem12.Text = "Частичная заливка";
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.MenuButtImportGoods_Click);
             // 
             // MenuButtDiscounts
             // 
@@ -1715,21 +1726,21 @@
             // ButtOrderStatusNew
             // 
             this.ButtOrderStatusNew.Name = "ButtOrderStatusNew";
-            this.ButtOrderStatusNew.Size = new System.Drawing.Size(152, 22);
+            this.ButtOrderStatusNew.Size = new System.Drawing.Size(131, 22);
             this.ButtOrderStatusNew.Text = "Новый";
             this.ButtOrderStatusNew.Click += new System.EventHandler(this.ButtOrderStatusNew_Click);
             // 
             // ButtOrderStatusDelay
             // 
             this.ButtOrderStatusDelay.Name = "ButtOrderStatusDelay";
-            this.ButtOrderStatusDelay.Size = new System.Drawing.Size(152, 22);
+            this.ButtOrderStatusDelay.Size = new System.Drawing.Size(131, 22);
             this.ButtOrderStatusDelay.Text = "Отложен";
             this.ButtOrderStatusDelay.Click += new System.EventHandler(this.ButtOrderStatusDelay_Click);
             // 
             // ButtOrderStatusFinished
             // 
             this.ButtOrderStatusFinished.Name = "ButtOrderStatusFinished";
-            this.ButtOrderStatusFinished.Size = new System.Drawing.Size(152, 22);
+            this.ButtOrderStatusFinished.Size = new System.Drawing.Size(131, 22);
             this.ButtOrderStatusFinished.Text = "Выполнен";
             this.ButtOrderStatusFinished.Click += new System.EventHandler(this.ButtOrderStatusFinished_Click);
             // 
@@ -2072,6 +2083,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button ButtCreatePurchase;
         private System.Windows.Forms.ToolStripMenuItem ButtAdv;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
     }
 }
 

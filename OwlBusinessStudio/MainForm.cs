@@ -220,6 +220,7 @@ namespace OwlBusinessStudio
 
         private void MenuButtImportGoods_Click(object sender, EventArgs e)
         {
+            string full = ((ToolStripMenuItem)sender).Tag.ToString();
             DialogResult res = OpenFileGoods.ShowDialog();
             if (res == System.Windows.Forms.DialogResult.OK)
             {
@@ -238,83 +239,89 @@ namespace OwlBusinessStudio
                 int level_3_index = 0;
                 int level_4_index = 0;
                 int level_5_index = 0;
-                dbProc.executeNonQuery("DELETE FROM good_categories");
-                GoodCategory item = null;
-                dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE");
-                for (int i = 0; i < t.Rows.Count; i++)
+                if (full == "true")
                 {
-                    Application.DoEvents();
-                    if (t.Rows[i][0] is DBNull&&t.Rows[i][20] is string&&((string)t.Rows[i][20]).Length>=5)
+                    dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE");
+                    dbProc.executeNonQuery("DELETE FROM good_categories");
+                }
+                GoodCategory item = null;
+                if (full == "true")
+                {
+                    for (int i = 0; i < t.Rows.Count; i++)
                     {
-                        id++;
-                        int category_level = 0;
-                        string category_name = (string)t.Rows[i][20];
-                        // What level?
-                        if (category_name.Substring(0, 1)=="!")
+                        Application.DoEvents();
+                        if (t.Rows[i][0] is DBNull && t.Rows[i][20] is string && ((string)t.Rows[i][20]).Length >= 5)
                         {
-                            category_level = 1;
+                            id++;
+                            int category_level = 0;
+                            string category_name = (string)t.Rows[i][20];
+                            // What level?
+                            if (category_name.Substring(0, 1) == "!")
+                            {
+                                category_level = 1;
+                            }
+                            if (category_name.Substring(0, 2) == "!!")
+                            {
+                                category_level = 2;
+                            }
+                            if (category_name.Substring(0, 3) == "!!!")
+                            {
+                                category_level = 3;
+                            }
+                            if (category_name.Substring(0, 4) == "!!!!")
+                            {
+                                category_level = 4;
+                            }
+                            if (category_name.Substring(0, 5) == "!!!!!")
+                            {
+                                category_level = 5;
+                            }
+                            category_name = category_name.Replace("!", "");
+                            // Current level index
+                            if (category_level == 0)
+                            {
+                                level_0_index = i;
+                                item = new GoodCategory(id, 0, 0, category_name);
+                            }
+                            if (category_level == 1)
+                            {
+                                level_1_index = i;
+                                GoodCategory parent = categories[level_0_index];
+                                item = new GoodCategory(id, parent.ID, 1, category_name);
+                            }
+                            if (category_level == 2)
+                            {
+                                level_2_index = i;
+                                GoodCategory parent = categories[level_1_index];
+                                item = new GoodCategory(id, parent.ID, 2, category_name);
+                            }
+                            if (category_level == 3)
+                            {
+                                level_3_index = i;
+                                GoodCategory parent = categories[level_2_index];
+                                item = new GoodCategory(id, parent.ID, 3, category_name);
+                            }
+                            if (category_level == 4)
+                            {
+                                level_4_index = i;
+                                GoodCategory parent = categories[level_3_index];
+                                item = new GoodCategory(id, parent.ID, 4, category_name);
+                            }
+                            if (category_level == 5)
+                            {
+                                level_5_index = i;
+                                GoodCategory parent = categories[level_4_index];
+                                item = new GoodCategory(id, parent.ID, 5, category_name);
+                            }
+                            Hashtable cat_params = new Hashtable();
+                            cat_params.Add("id", item.ID);
+                            cat_params.Add("name", item.Name);
+                            cat_params.Add("parent_id", item.Parent_id);
+                            cat_params.Add("level", item.Level);
+                            dbProc.insert("good_categories", cat_params);
                         }
-                        if (category_name.Substring(0, 2) == "!!")
-                        {
-                            category_level = 2;
-                        }
-                        if (category_name.Substring(0, 3) == "!!!")
-                        {
-                            category_level = 3;
-                        }
-                        if (category_name.Substring(0, 4) == "!!!!")
-                        {
-                            category_level = 4;
-                        }
-                        if (category_name.Substring(0, 5) == "!!!!!")
-                        {
-                            category_level = 5;
-                        }
-                        category_name = category_name.Replace("!","");
-                        // Current level index
-                        if (category_level == 0)
-                        {
-                            level_0_index = i;
-                            item = new GoodCategory(id, 0, 0, category_name);
-                        }
-                        if (category_level == 1)
-                        {
-                            level_1_index = i;
-                            GoodCategory parent = categories[level_0_index];
-                            item = new GoodCategory(id, parent.ID, 1, category_name);
-                        }
-                        if (category_level == 2)
-                        {
-                            level_2_index = i;
-                            GoodCategory parent = categories[level_1_index];
-                            item = new GoodCategory(id, parent.ID, 2, category_name);
-                        }
-                        if (category_level == 3)
-                        {
-                            level_3_index = i;
-                            GoodCategory parent = categories[level_2_index];
-                            item = new GoodCategory(id, parent.ID, 3, category_name);
-                        }
-                        if (category_level == 4)
-                        {
-                            level_4_index = i;
-                            GoodCategory parent = categories[level_3_index];
-                            item = new GoodCategory(id, parent.ID, 4, category_name);
-                        }
-                        if (category_level == 5)
-                        {
-                            level_5_index = i;
-                            GoodCategory parent = categories[level_4_index];
-                            item = new GoodCategory(id, parent.ID, 5, category_name);
-                        }
-                        Hashtable cat_params = new Hashtable();
-                        cat_params.Add("id",item.ID);
-                        cat_params.Add("name",item.Name);
-                        cat_params.Add("parent_id",item.Parent_id);
-                        cat_params.Add("level",item.Level);
-                        dbProc.insert("good_categories", cat_params);
+                        categories.Add(item);
                     }
-                    categories.Add(item);
                 }
                 LabelProcessName.Text = "Импорт позиций (0 из " + t.Rows.Count.ToString()+")";
                 List<Object[]> fail_table = new List<object[]>();
