@@ -302,11 +302,27 @@ namespace FTwoFramework.DB
             }
             return "";
         }
-        public bool importGoodsItem(DataRow item)
+        private object getValue(DataRow item, string[] field_names,string name)
         {
-            return importGoodsItem(item, 0);
+            int index = 0;
+            for (int i = 0; i < field_names.Length; i++)
+            {
+                if (field_names[i] == name)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            object o = null;
+            if (item.ItemArray.Length > index)
+            {
+                o = item[index];
+            }
+            return o;
         }
-        public bool importGoodsItem(DataRow item,int category_id)
+
+
+        public bool importGoodsItem(DataRow item, string[] fields)
         {
             try
             {
