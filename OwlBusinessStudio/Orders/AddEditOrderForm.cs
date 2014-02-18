@@ -477,7 +477,7 @@ namespace OwlBusinessStudio.Orders
                 MessageBox.Show("Заказ должен содержать хотябы одно наименование товара.");
                 return false;
             }
-            if (TxtDomophone.Enabled && ComboMetros.SelectedValue == null)
+            if (TxtDomophone.Enabled && ComboMetros.SelectedValue == null&&(ComboDelivery.SelectedValue is bool&&!(bool)ComboDelivery.SelectedValue))
             {
                 MessageBox.Show("Укажите метро.");
                 return false;
@@ -592,10 +592,10 @@ namespace OwlBusinessStudio.Orders
 
                     DataTable userTab = MainForm.dbProc.executeGet("SELECT user_id FROM orders WHERE id=" + orderID);
                     
-                    if (userTab == null || userTab.Rows.Count == 1)
-                    {
-                        orderParams.Add("user_id", MainForm.currentUser.ID);    
-                    }
+                    //if (userTab == null || userTab.Rows.Count == 1)
+                    //{
+                    //    orderParams.Add("user_id", MainForm.currentUser.ID);    
+                    //}
                     
                     orderParams.Add("client_id", clientID);
                     if (ComboDelivery.SelectedValue != null)
@@ -681,8 +681,8 @@ namespace OwlBusinessStudio.Orders
                     Hashtable historyParams = new Hashtable();
                     historyParams.Add("order_id", orderID);
                     historyParams.Add("action", "Редактирование");
-                    historyParams.Add("user_id", MainForm.currentUser.ID);
-                    MainForm.dbProc.insert("history", historyParams);
+                    //historyParams.Add("user_id", MainForm.currentUser.ID);
+                    //MainForm.dbProc.insert("history", historyParams);
                     MainForm.dbProc.delete("order_goods", "order_id=" + orderID.ToString());
                     for (int i = 0; i < orderTable.Items.Count; i++)// Goods for order
                     {
@@ -812,11 +812,27 @@ namespace OwlBusinessStudio.Orders
             try
             {
                 orderTable.setDeliverDistance(ComboDelivery.Text);
+                if(ComboDelivery.SelectedValue is bool)
+                {
+                    bool pickup = (bool)ComboDelivery.SelectedValue;
+                    disableAddressInput(pickup);
+                }
             }
             catch (Exception ex)
             {
 
             }
+        }
+        private void disableAddressInput(bool disable)
+        {
+            TxtCIty.Enabled = !disable;
+            ComboStreet.Enabled = !disable;
+            ComboMetros.Enabled = !disable;
+            TxtHouse.Enabled = !disable;
+            TxtFloor.Enabled = !disable;
+            TxtPorch.Enabled = !disable;
+            TxtRoom.Enabled = !disable;
+            TxtDomophone.Enabled = !disable;
         }
         private void CheckSecondDeliverTime_CheckedChanged(object sender, EventArgs e)
         {
