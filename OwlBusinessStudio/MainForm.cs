@@ -325,10 +325,11 @@ namespace OwlBusinessStudio
                 }
                 LabelProcessName.Text = "Импорт позиций (0 из " + t.Rows.Count.ToString()+")";
                 List<Object[]> fail_table = new List<object[]>();
-                for (int i = 0; i < t.Rows.Count; i++)
+
+                for (int i = 1; i < t.Rows.Count; i++)
                 {
                     Application.DoEvents();
-                    bool success = dbProc.importGoodsItem(t.Rows[i],categories[i].ID);
+                    bool success = dbProc.importGoodsItem(t.Rows[i]);
                     //bool success = dbProc.importGoodsItem(t.Rows[i]);
                     LabelProcessName.Text = "Импорт позиций ("+i.ToString()+" из " + t.Rows.Count.ToString() + ")  Не удалось импортировать: "+failedCount;
                     if (!success)

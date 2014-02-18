@@ -318,194 +318,89 @@ namespace FTwoFramework.DB
             {
                 o = item[index];
             }
+            if (o is DBNull)
+            {
+                return null;
+            }
             return o;
         }
-
-
+        private string[] fields = null;
+        public void 
+        private bool getBool(DataRow item, string[] field_names, string name)
+        {
+            object o = getValue(item, field_names, name);
+            bool result = false;
+            Boolean.TryParse(o.ToString(), out result);
+            return result;
+        }
+        private int getInt(DataRow item, string[] field_names, string name)
+        {
+            object o = getValue(item, field_names, name);
+            int result = 0;
+            Int32.TryParse(o.ToString(), out result);
+            return result;
+        }
+        private double getDouble(DataRow item, string[] field_names, string name)
+        {
+            object o = getValue(item, field_names, name);
+            double result = 0.0;
+            Double.TryParse(o.ToString(), out result);
+            return result;
+        }
+        private string getString(DataRow item, string[] field_names, string name)
+        {
+            object o = getValue(item, field_names, name);
+            return o.ToString();
+        }
         public bool importGoodsItem(DataRow item, string[] fields)
         {
             try
             {
-                object articul = (object)item[0];
-                object real_article = (object)item[5];
-                if (articul is DBNull)
+                Hashtable pars = new Hashtable();
+                pars.Add("actucul", getString(item, fields, "actucul"));
+                pars.Add("name_rus", getString(item, fields, "name_rus"));
+                pars.Add("name_eng", getString(item, fields, "name_eng"));
+                pars.Add("name_for_shop", getString(item, fields, "name_for_shop"));
+                pars.Add("name_for_order", getString(item, fields, "name_for_order"));
+                pars.Add("weight", getString(item, fields, "weight"));
+                pars.Add("weight_product", getDouble(item, fields, "weight_product"));
+                pars.Add("overprice_percent", getDouble(item, fields, "overprice_percent"));
+                pars.Add("price_discount", getDouble(item, fields, "price_discount"));
+                pars.Add("price_discount_percent", getDouble(item, fields, "price_discount_percent"));
+                pars.Add("price_basic", getDouble(item, fields, "price_basic"));
+                pars.Add("description", getString(item, fields, "description"));
+                pars.Add("description_short", getString(item, fields, "description_short"));
+                pars.Add("photo_url", getString(item, fields, "photo_url"));
+                pars.Add("is_hidden", getBool(item, fields, "is_hidden"));
+                pars.Add("price_kg", getDouble(item, fields, "price_kg"));
+                pars.Add("profit", getDouble(item, fields, "profit"));
+                pars.Add("supplier", getString(item, fields, "supplier"));
+                pars.Add("company", getString(item, fields, "company"));
+                pars.Add("animal", getString(item, fields, "animal"));
+                pars.Add("food_type", getString(item, fields, "food_type"));
+                pars.Add("food_type_age", getString(item, fields, "food_type_age"));
+                pars.Add("food_type_category", getString(item, fields, "food_type_category"));
+                if (getBool(item, fields, "change_quantity"))
                 {
-                    return false;
+                    pars.Add("quantity", getInt(item, fields, "quantity"));
                 }
-                if (real_article is DBNull)
-                {
-                    real_article = "";
-                }
-                else
-                {
-                    real_article = real_article.ToString();
-                }
-                if ((double)articul == 1245)
-                {
-                    string g = "";
-                    g = "DD";
-                }
-                object web_page_url = (object)item[19];
-                object name_eng = (object)item[21];
-                object name_rus = (object)item[22];
-                object name_for_shop = (object)item[20];
-                object name_for_order = (object)item[1];
-                object weight = (object)item[2];
-                object minimum = (object)item[3];
-                if (!(minimum is DBNull) && !(minimum == null))
-                {
-                    minimum = Convert.ToInt32(minimum);
-                }
-                else
-                {
-                    minimum = 0;
-                }
-                object quantity = (object)item[4];
-                if (!(quantity is DBNull) && !(quantity == null))
-                {
-                    quantity = Convert.ToInt32(quantity);
-                }
-                else
-                {
-                    quantity = 0;
-                }
-                object weight_product = (object)item[24];
-                if (!(weight_product is DBNull) && weight_product != null)
-                {
-                    weight_product = Double.Parse(weight_product.ToString());
-                }
-                object weight_for_site = (object)item[27].ToString();
-                if (weight_product is DBNull)
-                {
-                    weight_product = 0.0;
-                }
-                object name_for_order_full = "";
-                if (!(weight is DBNull) && !(weight == null))
-                {
-                    name_for_order_full = name_for_order + " " + weight.ToString().Replace(",", ".") + " kg.";
-                }
-                else
-                {
-                    name_for_order_full = name_for_order;
-                }
+                pars.Add("minimum", getInt(item, fields, "minimum"));
+                pars.Add("price", getInt(item, fields, "price"));
+                pars.Add("name_for_order_full", getString(item, fields, "name_for_order_full"));
+                pars.Add("category_id", getInt(item, fields, "category_id"));
+                pars.Add("sort", getInt(item, fields, "sort"));
+                pars.Add("weight_for_site", getString(item, fields, "weight_for_site"));
+                pars.Add("real_articul", getString(item, fields, "real_articul"));
 
-                object price_basic = (object)item[6];
-                if (!(price_basic is DBNull) && price_basic != null)
+                DataTable tab = executeGet("SELECT articul FROM goods WHERE articul="+getString(item,fields,"artuluc"));
+                if (tab != null && tab.Rows.Count > 0)
                 {
-                    price_basic = Double.Parse(price_basic.ToString());
-                }
-                object price = (object)item[10];
-                object overprice_percent = (object)item[9];
-                object price_discount = (object)item[8];
-                object price_discount_percent = (object)item[7];
-                
-                object description = (object)item[29];
-                object description_short = (object)item[30];
-                object photo_url = (object)item[31];
-                object keywords_meta = (object)item[32];
-                object description_meta = (object)item[33];
-                object page_header = (object)item[34];
-                object sort = (object)item[35];
-                if (!(sort is DBNull))
-                {
-                    sort = Int32.Parse(sort.ToString());
-                }
-                bool is_hidden = true;
-                if (item[36] is DBNull)
-                {
-                    is_hidden = false;
-                }
-                object price_kg = (object)item[37];
-                if (!(price_kg is DBNull) && price_kg != null)
-                {
-                    price_kg = Double.Parse(price_kg.ToString());
-                }
-                object profit = (object)item[38];
-                if (!(profit is DBNull) && profit != null)
-                {
-                    profit = Double.Parse(profit.ToString());
-                }
-                object supplier = (object)item[12];
-                object company = (object)item[13];
-                object animal = (object)item[14];
-                object food_type = (object)item[15];
-                object food_type_age = (object)item[17];
-                object food_type_category = (object)item[16];
-
-                if (price is DBNull)
-                {
-                    return false;
-                }
-                if (supplier is DBNull || supplier == null)
-                {
-                    supplier = "";
-                }
-                Hashtable parameters = new Hashtable();
-                parameters.Add("articul", articul);
-                parameters.Add("real_article", real_article);
-                parameters.Add("sort", sort);
-                parameters.Add("minimum", minimum);
-                if (quantity.ToString()!="no_change")
-                {
-                    parameters.Add("quantity", quantity);
-                }
-                parameters.Add("web_page_url", web_page_url);
-                parameters.Add("name_rus", name_rus);
-                parameters.Add("name_eng", name_eng);
-                parameters.Add("name_for_shop", name_for_shop);
-                parameters.Add("name_for_order", name_for_order);
-                parameters.Add("name_for_order_full", name_for_order_full);
-                parameters.Add("weight", weight);
-                //if (!(weight is double) && !(weight is DBNull))
-                //{
-                //    string g = weight.ToString();
-                //    weight = Double.Parse(g);
-                //}
-                parameters.Add("weight_product", weight_product);
-                parameters.Add("price", price);
-                parameters.Add("overprice_percent", overprice_percent);
-                parameters.Add("price_discount", price_discount);
-                parameters.Add("price_discount_percent", price_discount_percent);
-                parameters.Add("price_basic", price_basic);
-                parameters.Add("description", description);
-                parameters.Add("description_short", description_short);
-                parameters.Add("photo_url", photo_url);
-                parameters.Add("keywords_meta", keywords_meta);
-                parameters.Add("description_meta", description_meta);
-                parameters.Add("page_header", page_header);
-                parameters.Add("is_hidden", is_hidden);
-                parameters.Add("price_kg", price_kg);
-                parameters.Add("profit", profit);
-                parameters.Add("supplier", supplier);
-                parameters.Add("company", company);
-                parameters.Add("animal", animal);
-                parameters.Add("food_type", food_type);
-                parameters.Add("food_type_age", food_type_age);
-                parameters.Add("food_type_category", food_type_category);
-                parameters.Add("modified", getServerTime());
-                parameters.Add("category_id", category_id);
-                parameters.Add("weight_for_site", weight_for_site);
-                
-                DataTable tab = null;
-                tab = get("goods", "articul='" + articul + "'", "id");
-                //if (weight is DBNull)
-                //{
-                //    tab = get("goods", "name_for_order='" + name_for_order + "'", "id");
-                //}
-                //else
-                //{
-                //    tab = get("goods", "name_for_order='" + name_for_order + "' AND weight = '" + weight.ToString().Replace(",", ".")+"'", "id");
-                //}
-                if (tab.Rows.Count <= 0)
-                {
-                    //return false;
-                    insert("goods", parameters);
+                    update("goods", pars, "artucul='" + tab.Rows[0]["articul"] + "'");
                 }
                 else
                 {
-                    update("goods", parameters, "articul='" + articul + "'");
+                    insert("goods", pars);
                 }
-
                 return true;
             }
             catch (Exception ex)
