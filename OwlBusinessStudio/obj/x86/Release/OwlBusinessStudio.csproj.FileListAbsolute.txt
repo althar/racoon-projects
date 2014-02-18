@@ -1,5 +1,12 @@
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.exe.config
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.csproj.ResolveComReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.exe
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.pdb
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\HTMLWYSIWYG.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.LoginForm.resources
@@ -31,12 +38,5 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlB
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Users.UsersForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\GenerateResource.read.1.tlog
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\GenerateResource.write.1.tlog
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.exe
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.pdb
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\HTMLWYSIWYG.dll
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.dll
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Npgsql.dll
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Mono.Security.dll
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.pdb
