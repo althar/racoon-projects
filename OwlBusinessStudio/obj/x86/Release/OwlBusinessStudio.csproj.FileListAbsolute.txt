@@ -5,8 +5,12 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusin
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\HTMLWYSIWYG.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\LinqToExcel.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Mono.Security.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\Remotion.Data.Linq.dll
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\log4net.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\LinqToExcel.xml
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.LoginForm.resources
