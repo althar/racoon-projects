@@ -4,6 +4,10 @@ using System.Data.OleDb;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LinqToExcel.Domain;
+using LinqToExcel.Extensions;
+using LinqToExcel.Query;
+using LinqToExcel;
 
 namespace FTwoFramework.DB
 {
@@ -32,6 +36,14 @@ namespace FTwoFramework.DB
             adapter.Fill(t);
             con.Close();
             return t;
+        }
+        public static DataTable getTableLink(string path)
+        {
+            ExcelQueryFactory factory = new ExcelQueryFactory(path);
+
+            ExcelQueryable<Row> sheet =  factory.Worksheet(0);
+
+            return new DataTable();
         }
     }
 }

@@ -715,6 +715,7 @@ namespace OwlBusinessStudio.Orders
                             orderParams.Add("porch", "");
                             orderParams.Add("floor", "");
                             orderParams.Add("room", "");
+                            orderParams.Add("domophone", "");
                             orderParams.Add("metro_id", 0);
                         }
                         else
@@ -725,6 +726,7 @@ namespace OwlBusinessStudio.Orders
                             orderParams.Add("porch", TxtPorch.Text);
                             orderParams.Add("floor", TxtFloor.Text);
                             orderParams.Add("room", TxtRoom.Text);
+                            orderParams.Add("domophone", TxtDomophone.Text);
                             orderParams.Add("metro_id", current_metro_id);
                         }
                     }

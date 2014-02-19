@@ -325,7 +325,6 @@ namespace FTwoFramework.DB
             return o;
         }
         private string[] fields = null;
-        public void 
         private bool getBool(DataRow item, string[] field_names, string name)
         {
             object o = getValue(item, field_names, name);
@@ -352,12 +351,21 @@ namespace FTwoFramework.DB
             object o = getValue(item, field_names, name);
             return o.ToString();
         }
+        public string[] extractFields(DataRow item)
+        {
+            string[] result = new string[item.ItemArray.Length];
+            for(int i=0; i<item.ItemArray.Length; i++)
+            {
+                result[i] = item.ItemArray[i].ToString();
+            }
+            return result;
+        }
         public bool importGoodsItem(DataRow item, string[] fields)
         {
             try
             {
                 Hashtable pars = new Hashtable();
-                pars.Add("actucul", getString(item, fields, "actucul"));
+                pars.Add("articul", getString(item, fields, "articul"));
                 pars.Add("name_rus", getString(item, fields, "name_rus"));
                 pars.Add("name_eng", getString(item, fields, "name_eng"));
                 pars.Add("name_for_shop", getString(item, fields, "name_for_shop"));
@@ -390,12 +398,12 @@ namespace FTwoFramework.DB
                 pars.Add("category_id", getInt(item, fields, "category_id"));
                 pars.Add("sort", getInt(item, fields, "sort"));
                 pars.Add("weight_for_site", getString(item, fields, "weight_for_site"));
-                pars.Add("real_articul", getString(item, fields, "real_articul"));
+                pars.Add("real_article", getString(item, fields, "real_articul"));
 
-                DataTable tab = executeGet("SELECT articul FROM goods WHERE articul="+getString(item,fields,"artuluc"));
+                DataTable tab = executeGet("SELECT articul FROM goods WHERE articul='"+getString(item,fields,"articul")+"'");
                 if (tab != null && tab.Rows.Count > 0)
                 {
-                    update("goods", pars, "artucul='" + tab.Rows[0]["articul"] + "'");
+                    update("goods", pars, "articul='" + tab.Rows[0]["articul"] + "'");
                 }
                 else
                 {

@@ -1,7 +1,13 @@
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\LinqToExcel.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\log4net.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Mono.Security.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Npgsql.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.Data.Linq.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.Interfaces.dll
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\LinqToExcel.xml
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\FTwoFramework.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\OwlBusinessStudioLib.dll
