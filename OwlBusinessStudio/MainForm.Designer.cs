@@ -272,14 +272,14 @@
             // 
             this.MenuButtAbout.Image = ((System.Drawing.Image)(resources.GetObject("MenuButtAbout.Image")));
             this.MenuButtAbout.Name = "MenuButtAbout";
-            this.MenuButtAbout.Size = new System.Drawing.Size(152, 22);
+            this.MenuButtAbout.Size = new System.Drawing.Size(149, 22);
             this.MenuButtAbout.Text = "О программе";
             this.MenuButtAbout.Click += new System.EventHandler(this.MenuButtAbout_Click);
             // 
             // MenuButtExit
             // 
             this.MenuButtExit.Name = "MenuButtExit";
-            this.MenuButtExit.Size = new System.Drawing.Size(152, 22);
+            this.MenuButtExit.Size = new System.Drawing.Size(149, 22);
             this.MenuButtExit.Text = "Выход";
             this.MenuButtExit.Click += new System.EventHandler(this.MenuButtExit_Click);
             // 
