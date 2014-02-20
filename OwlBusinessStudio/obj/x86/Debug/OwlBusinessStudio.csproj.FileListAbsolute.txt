@@ -81,3 +81,8 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\Genera
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.pdb
+C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\LinqToExcel.dll
+C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\log4net.dll
+C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\LinqToExcel.xml
+C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.AdvForm.resources

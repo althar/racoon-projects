@@ -19,3 +19,9 @@ C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\ResolveAssem
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\FTwoFramework.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.pdb
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\LinqToExcel.dll
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\log4net.dll
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.dll
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.Interfaces.dll
+C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\LinqToExcel.xml

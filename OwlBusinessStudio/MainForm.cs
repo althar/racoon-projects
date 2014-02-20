@@ -227,6 +227,8 @@ namespace OwlBusinessStudio
                 DataTable t = ExcelProcessor.getTable(OpenFileGoods.FileName, "Database");
                 int failedCount = 0;
                 int successCount = 0;
+                LabelProcessName.Text = "Инициализация импорта";
+                Application.DoEvents();
                 if (full == "true")
                 {
                     dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE");
