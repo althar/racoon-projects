@@ -108,6 +108,7 @@ namespace FTwoFramework.DB
             connect();
             string command = query;
             NpgsqlCommand comm = new NpgsqlCommand(command, connection);
+            comm.CommandTimeout = 300;
             last_q = command;
             comm.ExecuteNonQuery();
         }
@@ -115,6 +116,7 @@ namespace FTwoFramework.DB
         {
             connect();
             NpgsqlCommand comm = new NpgsqlCommand(query, connection);
+            comm.CommandTimeout = 2000;
             last_q = query;
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(comm);
             DataTable t = new DataTable();
@@ -126,6 +128,7 @@ namespace FTwoFramework.DB
             connect();
             string command = "SELECT * FROM "+tableName+" ORDER BY id";
             NpgsqlCommand comm = new NpgsqlCommand(command, connection);
+            comm.CommandTimeout = 2000;
             last_q = command;
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(comm);
             DataTable t = new DataTable();
@@ -365,6 +368,10 @@ namespace FTwoFramework.DB
             try
             {
                 Hashtable pars = new Hashtable();
+                if (getString(item, fields, "articul") == "2803")
+                {
+                    string sst = "";
+                }
                 pars.Add("articul", getString(item, fields, "articul"));
                 pars.Add("name_rus", getString(item, fields, "name_rus"));
                 pars.Add("name_eng", getString(item, fields, "name_eng"));
