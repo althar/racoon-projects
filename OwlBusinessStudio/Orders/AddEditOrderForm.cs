@@ -90,7 +90,17 @@ namespace OwlBusinessStudio.Orders
             TxtDiscount.Text = order.Rows[0]["discount_percent"].ToString();
             int delPrice = (int)order.Rows[0]["deliver_price"];
             TxtDescription.Text = order.Rows[0]["description"].ToString();
-            ComboDelivery.Text = order.Rows[0]["deliver_distance"].ToString();
+            //ComboDelivery.Text = order.Rows[0]["deliver_distance"].ToString();
+            DataTable dels = (DataTable)ComboDelivery.DataSource;
+            string del_dist = order.Rows[0]["deliver_distance"].ToString();
+            for (int i = 0; i < dels.Rows.Count; i++)
+            {
+                if (del_dist == dels.Rows[i]["distance"].ToString())
+                {
+                    ComboDelivery.SelectedIndex = i;
+                    return;
+                }
+            }
             //orderTable.setDeliverPrice((int)order.Rows[0]["deliver_price"]);
             orderTable.setDeliverDistance(ComboDelivery.Text);
             orderTable.setClientId((int)clientID);
