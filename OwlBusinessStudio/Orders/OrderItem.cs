@@ -105,6 +105,7 @@ namespace OwlBusinessStudio.Orders
                 NumQuantity_ValueChanged(null, null);
             }
         }
+         
         private void NumQuantity_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -124,7 +125,7 @@ namespace OwlBusinessStudio.Orders
                 TxtSum.Text = (NumPrice.Value * NumQuantity.Value).ToString();
                 if (onSumChanged != null)
                 {
-                    onSumChanged(false,0,false);
+                    onSumChanged(!parent.canRecalculate,0,!parent.canRecalculate);
                 }
             }
             catch (Exception ex)

@@ -38,11 +38,11 @@ namespace OwlBusinessStudio
         private int currentOrderStatus = 0;
 
         public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
-            + " FROM goods WHERE name_rus IS NOT NULL AND name_rus !='' ORDER BY name_rus";
+            + " FROM goods WHERE name_rus IS NOT NULL AND enabled AND name_rus !='' ORDER BY name_rus";
         public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
     + "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
     + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
-    + "WHERE g.articul IS NOT NULL ORDER BY g.name_for_order";
+    + "WHERE g.articul IS NOT NULL AND g.enabled ORDER BY g.name_for_order";
 
         public MainForm()
         {
