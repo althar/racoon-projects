@@ -39,15 +39,15 @@ namespace OwlBusinessStudio.Orders
         {
 
         }
-        public void setDiscount(int discount)
+        public void setDiscount(int discount,bool useDelPrice)
         {
             Discount = discount;
-            firstItem_onSumChanged(true, 0,false);
+            firstItem_onSumChanged(true, 0, useDelPrice);
         }
-        public void setDeliverDistance(string distance)
+        public void setDeliverDistance(string distance,bool useDelPrice,bool useDiscount)
         {
             this.distance = distance;
-            firstItem_onSumChanged(false,0,false);
+            firstItem_onSumChanged(useDiscount,0,useDelPrice);
         }
         public void setClientId(int id)
         {
@@ -106,10 +106,10 @@ namespace OwlBusinessStudio.Orders
             calc_total(useGivenDiscount, delPrice,useDelPrice);
             
         }
-
+        public bool canRecalculate = false;
         #region UI
 
-        public void AddItem(int good_id, int quantity, string goodName, int goodPrice)
+        public void AddItem(int good_id, int quantity, string goodName, int goodPrice,bool useDelPrice,bool useGivenDiscount,int delPrice)
         {
             // Add control...
             OrderItem item = new OrderItem(this, orderID);
@@ -142,7 +142,7 @@ namespace OwlBusinessStudio.Orders
             TxtTotalPrice.Top = ButtAddGood.Top + 25;
 
             item.loadItem(good_id, quantity, goodName, goodPrice);
-            calc_total(false,0,false);
+            calc_total(useGivenDiscount, delPrice, useDelPrice);
             item.Tag = delBox;
         }
         public void AddItem()

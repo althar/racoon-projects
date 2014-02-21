@@ -368,10 +368,6 @@ namespace FTwoFramework.DB
             try
             {
                 Hashtable pars = new Hashtable();
-                if (getString(item, fields, "articul") == "2803")
-                {
-                    string sst = "";
-                }
                 pars.Add("articul", getString(item, fields, "articul"));
                 pars.Add("name_rus", getString(item, fields, "name_rus"));
                 pars.Add("name_eng", getString(item, fields, "name_eng"));
@@ -387,6 +383,7 @@ namespace FTwoFramework.DB
                 pars.Add("description_short", getString(item, fields, "description_short"));
                 pars.Add("photo_url", getString(item, fields, "photo_url"));
                 pars.Add("is_hidden", getBool(item, fields, "is_hidden"));
+                pars.Add("enabled", getBool(item, fields, "enabled"));
                 pars.Add("price_kg", getDouble(item, fields, "price_kg"));
                 pars.Add("profit", getDouble(item, fields, "profit"));
                 pars.Add("supplier", getString(item, fields, "supplier"));

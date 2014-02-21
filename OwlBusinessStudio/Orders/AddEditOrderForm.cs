@@ -54,12 +54,13 @@ namespace OwlBusinessStudio.Orders
 
             #endregion
         }
-        private void loadGoods()
+        private void loadGoods(int delPrice)
         {
+            
             DataTable goods = MainForm.dbProc.get("order_goods", "order_id=" + orderID.ToString());
             for (int i = 0; i < goods.Rows.Count; i++)
             {
-                orderTable.AddItem((int)goods.Rows[i]["good_id"], (int)goods.Rows[i]["count"], (string)goods.Rows[i]["good_name"], (int)goods.Rows[i]["price"]);
+                orderTable.AddItem((int)goods.Rows[i]["good_id"], (int)goods.Rows[i]["count"], (string)goods.Rows[i]["good_name"], (int)goods.Rows[i]["price"],true,true,delPrice);
             }
         }
         private DataTable order;
@@ -88,7 +89,8 @@ namespace OwlBusinessStudio.Orders
                 TimePickerTo2.Value = (DateTime)order.Rows[0]["deliver_time_to_2"];
             }
             TxtDiscount.Text = order.Rows[0]["discount_percent"].ToString();
-            int delPrice = (int)order.Rows[0]["deliver_price"];
+            orderTable.setDiscount((int)order.Rows[0]["discount_percent"],true);
+            delPrice = (int)order.Rows[0]["deliver_price"];
             TxtDescription.Text = order.Rows[0]["description"].ToString();
             //ComboDelivery.Text = order.Rows[0]["deliver_distance"].ToString();
             DataTable dels = (DataTable)ComboDelivery.DataSource;
@@ -98,11 +100,11 @@ namespace OwlBusinessStudio.Orders
                 if (del_dist == dels.Rows[i]["distance"].ToString())
                 {
                     ComboDelivery.SelectedIndex = i;
-                    return;
+                    break;
                 }
             }
             //orderTable.setDeliverPrice((int)order.Rows[0]["deliver_price"]);
-            orderTable.setDeliverDistance(ComboDelivery.Text);
+            orderTable.setDeliverDistance(ComboDelivery.Text,true,true);
             orderTable.setClientId((int)clientID);
         }
 
@@ -144,7 +146,7 @@ namespace OwlBusinessStudio.Orders
                 }
                 if (!isEditing)
                 {
-                    orderTable.setDiscount(discountForClient);
+                    orderTable.setDiscount(discountForClient,false);
                     TxtDiscount.Text = discountForClient.ToString();
                 }
 
@@ -219,7 +221,7 @@ namespace OwlBusinessStudio.Orders
             TxtFloor.Text = "";
             TxtDomophone.Text = "";
             TxtRoom.Text = "";
-            orderTable.setDiscount(0);
+            //orderTable.setDiscount(0);
             TxtDiscount.Text = "0";
         }
 
@@ -239,6 +241,7 @@ namespace OwlBusinessStudio.Orders
         {
             TxtDiscount.Text = orderTable.getDiscount().ToString();
         }
+        private int delPrice = 0;
         private void loadClientAddress()
         {
             DataTable client = MainForm.dbProc.get("clients", "id=" + clientID.ToString());
@@ -277,7 +280,7 @@ namespace OwlBusinessStudio.Orders
                 }
                 if (!isEditing)
                 {
-                    orderTable.setDiscount(discountForClient);
+                    orderTable.setDiscount(discountForClient,false);
                     TxtDiscount.Text = discountForClient.ToString();
                 }
                 if (!(order.Rows[0]["house"] is DBNull))
@@ -359,7 +362,7 @@ namespace OwlBusinessStudio.Orders
             {
                 loadOrder();
                 loadClientAddress();
-                loadGoods();
+                loadGoods(delPrice);
             }
             else
             {
@@ -367,6 +370,9 @@ namespace OwlBusinessStudio.Orders
                 clearClient();
             }
 
+            this.ComboDelivery.SelectedValueChanged += new System.EventHandler(this.TxtDeliver_SelectedValueChanged);
+            this.TxtDiscount.TextChanged += new System.EventHandler(this.TxtDiscount_TextChanged);
+            orderTable.canRecalculate = true;
             if (!isEditing)
             {
                 ComboMetros.Text = "";
@@ -409,7 +415,7 @@ namespace OwlBusinessStudio.Orders
             {
                 TxtDiscount.Text = currentDiscount.ToString();
             }
-            orderTable.setDiscount(currentDiscount);
+            orderTable.setDiscount(currentDiscount,true);
         }
         private void CheckDeliver_CheckedChanged(object sender, EventArgs e)
         {
@@ -823,7 +829,7 @@ namespace OwlBusinessStudio.Orders
         {
             try
             {
-                orderTable.setDeliverDistance(ComboDelivery.Text);
+                orderTable.setDeliverDistance(ComboDelivery.Text,false,false);
                 if(ComboDelivery.SelectedValue is bool)
                 {
                     bool pickup = (bool)ComboDelivery.SelectedValue;
