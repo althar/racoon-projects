@@ -45,7 +45,7 @@ namespace OwlBusinessStudio.Orders
             ComboMetros.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             ComboMetros.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            DataTable deliverWays = MainForm.dbProc.executeGet("SELECT DISTINCT distance,pickup FROM delivery_costs");
+            DataTable deliverWays = MainForm.dbProc.executeGet("SELECT DISTINCT ON (distance) distance,pickup,id FROM delivery_costs GROUP BY distance, pickup,id");
             ComboDelivery.DataSource = deliverWays;
             ComboDelivery.DisplayMember = "distance";
             ComboDelivery.ValueMember = "pickup";
