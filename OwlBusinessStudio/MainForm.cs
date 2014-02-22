@@ -231,7 +231,7 @@ namespace OwlBusinessStudio
                 Application.DoEvents();
                 if (full == "true")
                 {
-                    dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE");
+                    dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE, enabled=FALSE");
                 }
                 List<Object[]> fail_table = new List<object[]>();
                 string[] fields = dbProc.extractFields(t.Rows[0]);
@@ -2644,6 +2644,61 @@ namespace OwlBusinessStudio
             Settings.AdvForm form = new Settings.AdvForm();
             form.Activate();
             form.Visible = true;
+        }
+
+        private void ButtExportGoods_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FTwoExcelProcessor excel = new FTwoExcelProcessor();
+                excel.InitApplication(true);
+                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(excel_OnExcelClose);
+                excel.changeOrientation(Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape);
+                DataTable goods = (DataTable)DataGridViewGoods.DataSource;
+                List<string> error_arts = new List<string>();
+                for (int i = 0; i<goods.Columns.Count; i++)
+                {
+                    excel.text(1,i+1, goods.Columns[i].ColumnName);
+                }
+
+                for (int i = 0; i < goods.Rows.Count; i++)
+                {
+                    for (int j = 0; j<goods.Columns.Count; j++)
+                    {
+                        if (goods.Rows[i][0].ToString() == "246")
+                        {
+                            string ddd = "";
+                        }
+                        string value = goods.Rows[i][j].ToString();
+                        if (goods.Rows[i][j] is double)
+                        {
+                            value = value.Replace(",", ".");
+                        }
+                        try
+                        {
+                            excel.text(i + 2, j + 1, value);
+                        }
+                        catch (Exception eex)
+                        {
+                            error_arts.Add(goods.Rows[i][0].ToString());
+                        }
+                    }
+                }
+                string all_errors = "Экспорт завершен. Не удалось экспортировать тоары с артикулами: "+Environment.NewLine;
+                for(int i=0; i<error_arts.Count; i++)
+                {
+                    all_errors+=error_arts[i];
+                    if(i/10.0==(int)i/10)
+                    {
+                        all_errors+=Environment.NewLine;
+                    }
+                }
+                MessageBox.Show(all_errors);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

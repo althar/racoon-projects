@@ -201,6 +201,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.ButtExportGoods = new System.Windows.Forms.ToolStripButton();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -855,7 +857,9 @@
             this.ComboGoodFilterName,
             this.toolStripLabel5,
             this.GoodFilterValue,
-            this.RefreshGoodsButt});
+            this.RefreshGoodsButt,
+            this.toolStripSeparator18,
+            this.ButtExportGoods});
             this.toolStrip5.Location = new System.Drawing.Point(3, 3);
             this.toolStrip5.Name = "toolStrip5";
             this.toolStrip5.Size = new System.Drawing.Size(970, 25);
@@ -1848,6 +1852,21 @@
             // 
             this.DialogSaveYandexXML.Filter = "Яндекс маркет XML|*.yml";
             // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ButtExportGoods
+            // 
+            this.ButtExportGoods.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtExportGoods.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportGoods.Image")));
+            this.ButtExportGoods.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtExportGoods.Name = "ButtExportGoods";
+            this.ButtExportGoods.Size = new System.Drawing.Size(23, 22);
+            this.ButtExportGoods.Text = "Выгрузить товары в Excel";
+            this.ButtExportGoods.Click += new System.EventHandler(this.ButtExportGoods_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2081,6 +2100,8 @@
         private System.Windows.Forms.Button ButtCreatePurchase;
         private System.Windows.Forms.ToolStripMenuItem ButtAdv;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
+        private System.Windows.Forms.ToolStripButton ButtExportGoods;
     }
 }
 
