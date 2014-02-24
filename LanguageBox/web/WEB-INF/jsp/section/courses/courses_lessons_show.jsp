@@ -37,9 +37,12 @@
                 <label class="control-label" for="name">Название</label>
 
                 <div class="controls">
-                    <input type="text" id="name" name="name" class="span12" value="Урок 4" style="margin-bottom: 10px">
+                    <input type="text" id="name" name="name" class="span12" value="${lesson.getStringValue('name')}"
+                           style="margin-bottom: 10px">
                     <label class="checkbox" for="access">
-                        <input type="checkbox" id="access" name="access" class="uniform" style="opacity: 1;">
+                        <input type="checkbox" id="access"
+                               <c:if test="${lesson.getBooleanValue('trial')}">checked</c:if> name="access"
+                               class="uniform" style="opacity: 1;">
                         Доступен в неоплаченном курсе (демо урок)
                     </label>
                 </div>
@@ -61,7 +64,7 @@
                                 <label class="control-label">Задание</label>
 
                                 <div class="controls">
-                                    <textarea id="cleditor">Прослушайте файлы и составьте пересказ</textarea>
+                                    <textarea id="cleditor">${lesson.getStringValue('task')}</textarea>
                                 </div>
                             </div>
                         </form>
@@ -69,57 +72,20 @@
 
 
                     <ul class="thumbnails">
+                        <c:forEach items="${lesson.getRecords('materials')}" var="material">
+                            <li class="lesson-material">
+                              <span class="info">
+                                <span class="head">
+                                  <h2><span class="icol-doc-pdf"></span> ${material.getStringValue('name')}</h2>
+                                  <span class="order"> -- </span>
+                                </span>
+                              </span>
 
-                        <li>
-              <span class="info">
-                <span class="head">
-                  <h2><span class="icol-doc-pdf"></span> Item: 1</h2>
-                  <span class="order">19.02.2014</span>
-                </span>
-              </span>
-
-                            <div class="actions">
-                                <a href="#"><i class="icon-remove"></i></a>
-                            </div>
-                        </li>
-                        <li>
-              <span class="info">
-                <span class="head">
-                  <h2><span class="icol-doc-music"></span> Item: 2</h2>
-                  <span class="order">19.02.2014</span>
-                </span>
-              </span>
-
-                            <div class="actions">
-                                <a href="#"><i class="icon-remove"></i></a>
-                            </div>
-                        </li>
-                        <li>
-              <span class="info">
-                <span class="head">
-                  <h2><span class="icol-doc-offlice"></span> Item: 3</h2>
-                  <span class="order">19.02.2014</span>
-                </span>
-              </span>
-
-                            <div class="actions">
-                                <a href="#"><i class="icon-remove"></i></a>
-                            </div>
-                        </li>
-
-                        <li>
-              <span class="info">
-                <span class="head">
-                  <h2><span class="icol-doc-film"></span> Item: 4</h2>
-                  <span class="order">19.02.2014</span>
-                </span>
-              </span>
-
-                            <div class="actions">
-                                <a href="#"><i class="icon-remove"></i></a>
-                            </div>
-                        </li>
-
+                                <div class="actions">
+                                    <a><i class="icon-remove remove-lesson-material-link"></i></a>
+                                </div>
+                            </li>
+                        </c:forEach>
                     </ul>
 
                 </div>
