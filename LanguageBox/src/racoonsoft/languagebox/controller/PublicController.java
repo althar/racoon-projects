@@ -45,6 +45,21 @@ public class PublicController
     {
         return new ModelAndView("page/public/partners");
     }
+    @RequestMapping("/user_profile")
+    public ModelAndView userProfile()
+    {
+        return new ModelAndView("page/public/user_profile");
+    }
+    @RequestMapping("/teacher_review")
+    public ModelAndView teacherReview()
+    {
+        return new ModelAndView("page/public/teacher_review");
+    }
+    @RequestMapping("/market")
+    public ModelAndView market()
+    {
+        return new ModelAndView("page/public/market");
+    }
 
 //    @RequestMapping("/course_image/{path}")
 //    @ResponseBody

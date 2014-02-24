@@ -193,6 +193,8 @@
   <!-- Demo Scripts -->
   <script src="/assets/js/demo/dashboard.js"></script>
 
+  <script src="/js/common/all.js" type="text/javascript"></script>
+
 </body>
 
 </html>

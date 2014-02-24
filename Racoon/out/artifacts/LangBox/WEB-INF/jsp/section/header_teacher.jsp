@@ -107,7 +107,7 @@
           </li>
         </ul>
         </li>
-        <li><a href="/messages">View all messages</a></li>
+        <li><a href="/service/messages">View all messages</a></li>
       </ul>
       </div>
     </div>
@@ -124,7 +124,7 @@
         </a>
         <ul class="dropdown-menu pull-right">
         <li><a href="/service/teacher/profile"><i class="icol-user"></i> Профиль</a></li>
-        <li><a href="/help"><i class="icol-help"></i> Помощь</a></li>
+        <li><a href="/service/help"><i class="icol-help"></i> Помощь</a></li>
         <li class="divider"></li>
         <li><a href="/logout"><i class="icol-key"></i> Выход</a></li>
         </ul>

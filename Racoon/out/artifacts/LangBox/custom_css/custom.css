@@ -109,3 +109,9 @@
 .table.table-striped.course-lessons{border-bottom: 1px solid rgb(204, 204, 204);}
 
 .analytics-tab .tab-content {border: 0!important;}
+
+
+.stats-container.user-stats {
+  /*margin-top: 25px;*/
+  margin-bottom: 0;
+}
