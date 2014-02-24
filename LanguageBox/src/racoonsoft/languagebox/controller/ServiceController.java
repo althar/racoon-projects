@@ -161,7 +161,7 @@ public class ServiceController extends LanguageBoxController
     }
 
     @RequestMapping("/save_course")
-    public ModelAndView getCourse(HttpServletRequest request, HttpServletResponse response,Long course_id, String name, String lvl,String sale,String target,String type,Double price,String description) throws Exception
+    public ModelAndView saveCourse(HttpServletRequest request, HttpServletResponse response,Long course_id, String name, String lvl,String sale,String target,String type,Double price,String description) throws Exception
     {
         ModelAndView model = new ModelAndView("document/plain");
         Long id = 0l;
@@ -192,7 +192,9 @@ public class ServiceController extends LanguageBoxController
     public ModelAndView getLesson(HttpServletRequest request, Long course_id, Long lesson_id,Boolean main_material) throws Exception
     {
         ModelAndView model = new ModelAndView("section/courses/courses_lessons_show");
+        DBRecord c = course.getCourse(id(request),course_id,true);
         DBRecord lesson = course.getLesson(id(request),course_id,lesson_id);
+        model.addObject("course",c);
         model.addObject("lesson",lesson);
         model.addObject("main_material",main_material);
 

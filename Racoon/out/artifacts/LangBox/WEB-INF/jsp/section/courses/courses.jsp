@@ -51,7 +51,7 @@
     <div class="widget-content courseslist">
         <ul class="thumbnails">
             <c:forEach items="${courses}" var="course">
-            <li>
+            <li class="course-item" id="${course.getLongValue('id')}">
                 <div class="head">
                     <h2 class="title"><a onclick="courses.showCourseLessons(${course.getLongValue('id')})">${course.getStringValue('name')}</a></h2>
                     <span class="note">${course.getStringValue('level')}</span>

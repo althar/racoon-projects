@@ -41,9 +41,9 @@
 
     <link rel="stylesheet" href="/custom_css/custom.css" media="screen">
 
-    <script src="/js/jq/ajax-addon.js"></script>
-    <script src="/js/jq/ajax-download-addon.js"></script>
-    <script src="/js/jq/jquery-2.0.3.js"></script>
+    <%--<script src="/js/jq/ajax-addon.js"></script>--%>
+    <%--<script src="/js/jq/ajax-download-addon.js"></script>--%>
+    <%--<script src="/js/jq/jquery-2.0.3.js"></script>--%>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -56,6 +56,9 @@
 
 <body data-show-sidebar-toggle-button="false" data-fixed-sidebar="true">
 <div id="dialog-message" class="hide" title="Внимание">
+    <p>Уверены?</p>
+</div>
+<div id="dialog-message-delete-course" class="hide" title="Внимание">
     <p>Уверены?</p>
 </div>
 <div id="wrapper">
