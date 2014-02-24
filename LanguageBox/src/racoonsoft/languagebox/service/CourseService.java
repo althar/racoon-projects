@@ -59,7 +59,8 @@ public class CourseService extends LanguageBoxService
         pars.put("description",description);
         pars.put("target",target);
         pars.put("type",type);
-        return dbProc.executeUpdate("course", pars, "id=" + id.toString()+" AND user_id="+userId);
+        dbProc.executeUpdate("course", pars, "id=" + id.toString()+" AND user_id="+userId);
+        return id;
     }
     public Long createLesson(Long user_id, Long courseId,String name, String type,String task,String description,Boolean trial) throws Exception
     {
@@ -71,7 +72,7 @@ public class CourseService extends LanguageBoxService
             pars.put("name",name);
             pars.put("type",type);
             pars.put("task",task);
-            pars.put("index",new Expression("SELECT count(id)+1 FROM lesson WHERE course_id="+courseId));
+            pars.put("index",new Expression("(SELECT count(id)+1 FROM lesson WHERE course_id="+courseId)+")");
             pars.put("description",description);
             pars.put("trial",trial);
             return dbProc.executeInsert("lesson",pars);

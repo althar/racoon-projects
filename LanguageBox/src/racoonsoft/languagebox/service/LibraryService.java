@@ -146,6 +146,10 @@ public class LibraryService extends LanguageBoxService
         {
             dbProc.executeNonQuery("DELETE FROM material WHERE id="+id+" AND library_id IN (SELECT id FROM library WHERE user_id="+userId+")");
         }
+        else if(type.equalsIgnoreCase("course"))
+        {
+            dbProc.executeNonQuery("DELETE FROM course WHERE id="+id+" AND user_id="+userId+" AND status != 'APPROVED'");
+        }
     }
     public void rename(String type,Long id,Long userId,String name) throws Exception
     {
