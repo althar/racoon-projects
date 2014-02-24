@@ -61,6 +61,14 @@ public class TeacherController extends LanguageBoxController
 
         return model;
     }
+    @RequestMapping("/homework")
+    public ModelAndView homework(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/teacher/homework");
+        Long user_id = id(request);
+
+        return model;
+    }
 
 
     //</editor-fold>

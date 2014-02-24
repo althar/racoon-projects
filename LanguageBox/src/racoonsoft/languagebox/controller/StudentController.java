@@ -35,6 +35,30 @@ public class StudentController extends LanguageBoxController
 
         return model;
     }
+    @RequestMapping("/course_lesson")
+    public ModelAndView courseLesson(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/student/course_lesson");
+        Long user_id = id(request);
+
+        return model;
+    }
+    @RequestMapping("/course_main_material")
+    public ModelAndView courseMainMaterial(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/student/course_main_material");
+        Long user_id = id(request);
+
+        return model;
+    }
+    @RequestMapping("/course_mates")
+    public ModelAndView courseMates(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/student/course_mates");
+        Long user_id = id(request);
+
+        return model;
+    }
     @RequestMapping("/profile")
     public ModelAndView profile(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
