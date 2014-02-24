@@ -398,6 +398,9 @@ courses =
             });
         });
 
+        // Remove lesson material
+        $(".remove-lesson-material-link")
+
         // HTML Editor
         $("#cleditor").cleditor({
             width: '100%'
