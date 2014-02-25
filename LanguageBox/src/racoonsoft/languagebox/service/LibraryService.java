@@ -144,7 +144,7 @@ public class LibraryService extends LanguageBoxService
         }
         else if(type.equalsIgnoreCase("material"))
         {
-            dbProc.executeNonQuery("DELETE FROM material WHERE id="+id+" AND library_id IN (SELECT id FROM library WHERE user_id="+userId+")");
+            dbProc.executeNonQuery("UPDATE material SET deleted=TRUE WHERE id="+id+" AND (library_id IN (SELECT id FROM library WHERE user_id="+userId+") OR library_id IS NULL)");
         }
         else if(type.equalsIgnoreCase("course"))
         {

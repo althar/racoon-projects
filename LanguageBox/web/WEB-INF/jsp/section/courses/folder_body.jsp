@@ -102,30 +102,27 @@
           </td>
           <td class='folder-body-controls'>
 
-            <div id="replace" style="display: none">
-
-              <a href="#"><small class="muted">Перенести</small> <span class='icol-arrow-right'></span></a>
-
-            </div>
-
-            <div id="replaced" style="display: none">
-
-              <small class="muted">Добавлен...</small>
-
-            </div>
+            <%--<div id="replace" class="add-to-lesson-controls">--%>
+               <%--<a href="#"><small class="muted">В урок</small> <span class='icol-arrow-right'></span></a>--%>
+            <%--</div>--%>
+            <%--<div id="replaced" class="add-to-lesson-controls">--%>
+               <%--<small class="muted">Добавлен...</small>--%>
+            <%--</div>--%>
 
             <div id="main_controls" style="display: block">
 
-              <a onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">
+              <a class="material-controls" onclick="$.fileDownload('/service/download_material?id=${material.getLongValue('id')}')">
                 <span class='icol-page-white-put'></span>
               </a>
-              <a class="rename-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+              <a class="rename-link material-controls" entity-type="material" entity-id="${material.getLongValue('id')}">
                 <span class="icol-pencil"></span>
               </a>
-              <a class="delete-link" entity-type="material" entity-id="${material.getLongValue('id')}">
+              <a class="delete-link material-controls" entity-type="material" entity-id="${material.getLongValue('id')}">
                 <span class="icol-cross"></span>
               </a>
-
+              <a class="add-to-lesson-controls add-to-lesson-link" icon="<c:if test="${material.getStringValue('type')=='CUSTOM_FILE'}">icol-box</c:if><c:if test="${material.getStringValue('type')=='DOCUMENT_FILE'}">icol-bookmark-document</c:if><c:if test="${material.getStringValue('type')=='AUDIO_FILE'}">icol-music-beam</c:if><c:if test="${material.getStringValue('type')=='VIDEO_FILE'}">icol-films</c:if><c:if test="${material.getStringValue('type')=='IMAGE_FILE'}">icol-image-1</c:if>" entity-id="${material.getLongValue('id')}" entity-category-type="${material.getStringValue('type')}" entity-name="${material.getStringValue('name')}">
+                  <small class="muted">Добавить в урок</small> <span class='icol-arrow-right'></span>
+              </a>
             </div>
           </td>
         </tr>

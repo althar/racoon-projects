@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <c:set var="course" scope="session" value="${lesson.getRecord('course')}"/>
-<div class="widget span6  courses-section course-lesson-edit-section">
+<div class="widget span6  courses-section course-lesson-edit-section" lesson-id="${lesson.getLongValue(id)}" course-id="${course.getLongValue('id')}">
     <div class="widget-header">
         <span class="title">${course.getStringValue('name')}</span>
 
@@ -34,13 +34,13 @@
 
         <form class="form-vertical">
             <div class="control-group">
-                <label class="control-label" for="name">Название</label>
+                <label class="control-label" for="lesson-name">Название</label>
 
                 <div class="controls">
-                    <input type="text" id="name" name="name" class="span12" value="${lesson.getStringValue('name')}"
+                    <input type="text" id="lesson-name" name="name" class="span12" value="${lesson.getStringValue('name')}"
                            style="margin-bottom: 10px">
-                    <label class="checkbox" for="access">
-                        <input type="checkbox" id="access"
+                    <label class="checkbox" for="trial-access">
+                        <input type="checkbox" id="trial-access"
                                <c:if test="${lesson.getBooleanValue('trial')}">checked</c:if> name="access"
                                class="uniform" style="opacity: 1;">
                         Доступен в неоплаченном курсе (демо урок)
@@ -71,18 +71,35 @@
                     </div>
 
 
-                    <ul class="thumbnails">
-                        <c:forEach items="${lesson.getRecords('materials')}" var="material">
-                            <li class="lesson-material">
+                    <ul class="thumbnails lesson-material-list">
+                        <li class="lesson-material hidden" id="lesson-material-template">
                               <span class="info">
                                 <span class="head">
-                                  <h2><span class="icol-doc-pdf"></span> ${material.getStringValue('name')}</h2>
+                                  <h2><span class="icol-doc-pdf"></span><span class="lesson-item-name"></span></h2>
+                                  <span class="order"></span>
+                                </span>
+                              </span>
+
+                            <div class="actions">
+                                <a onclick="$(this).parents('li').remove()"><i
+                                        class="icon-remove remove-lesson-material-link"></i></a>
+                            </div>
+                        </li>
+
+                        <c:forEach items="${lesson.getRecords('materials')}" var="material">
+                            <li class="lesson-material lesson-material-item" entity-id="${material.getLongValue('id')}">
+                              <span class="info">
+                                <span class="head">
+                                  <h2><span
+                                          class="<c:if test="${material.getStringValue('type')=='CUSTOM_FILE'}">icol-box</c:if><c:if test="${material.getStringValue('type')=='DOCUMENT_FILE'}">icol-bookmark-document</c:if><c:if test="${material.getStringValue('type')=='AUDIO_FILE'}">icol-music-beam</c:if><c:if test="${material.getStringValue('type')=='VIDEO_FILE'}">icol-films</c:if><c:if test="${material.getStringValue('type')=='IMAGE_FILE'}">icol-image-1</c:if>"></span> ${material.getStringValue('name')}
+                                  </h2>
                                   <span class="order"> -- </span>
                                 </span>
                               </span>
 
                                 <div class="actions">
-                                    <a><i class="icon-remove remove-lesson-material-link"></i></a>
+                                    <a onclick="$(this).parents('li').remove()"><i
+                                            class="icon-remove remove-lesson-material-link"></i></a>
                                 </div>
                             </li>
                         </c:forEach>
@@ -101,7 +118,7 @@
 
         </div>
 
-        <a class="btn btn-primary" href="">Сохранить</a>
+        <a class="btn btn-primary save-lesson-butt" lesson-id="${lesson.getLongValue(id)}" course-id="${course.getLongValue('id')}">Сохранить</a>
 
     </div>
 </div>

@@ -3,10 +3,10 @@ package racoonsoft.languagebox.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.languagebox.service.*;
+import racoonsoft.languagebox.structure.Lesson;
 import racoonsoft.languagebox.structure.MultipartFilesStructure;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.helper.StringHelper;
@@ -197,6 +197,14 @@ public class ServiceController extends LanguageBoxController
         model.addObject("course",c);
         model.addObject("lesson",lesson);
         model.addObject("main_material",main_material);
+
+        return model;
+    }
+    @RequestMapping("/save_lesson")
+    @ResponseBody
+    public ModelAndView saveLesson(HttpServletRequest request,String name,Boolean trial,String task,@RequestBody Lesson less) throws Exception
+    {
+        ModelAndView model = new ModelAndView("section/courses/courses_lessons_show");
 
         return model;
     }

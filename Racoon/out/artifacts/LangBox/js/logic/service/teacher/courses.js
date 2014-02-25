@@ -1,6 +1,7 @@
 var isCheckingUpload = true;
 var checkInterval = 1000;
 var uploadDelay = 0;
+var currentCourseSection = "courses_list";
 
 $(document).ready(function () {
     library.bindLibraryControls();
@@ -13,10 +14,6 @@ $(document).ready(function () {
 library =
 {
     bindLibraryControls: function () {
-        // Close window
-        //
-
-
         // Browse folders
         $(".entity-link[entity-type=\"folder\"]").unbind("click");
         $(".entity-link[entity-type=\"folder\"]").bind("click", function () {
@@ -178,6 +175,25 @@ library =
             $("#add-file").hide();
             var currentFolderId = $("#current-folder-id").val();
             library.showFolder(currentFolderId);
+        });
+
+        // Show files controls
+        courses.showFilesControls();
+
+        // Add to lesson
+        $(".add-to-lesson-link").unbind("click");
+        $(".add-to-lesson-link").click(function(){
+            var name = $(this).attr("entity-name");
+            var id = $(this).attr("entity-id");
+            var cla = $(this).attr("icon");
+            var item = $("#lesson-material-template").clone();
+            $(item).find(".icol-doc-pdf").attr("class",cla);
+            $(item).attr("entity-id",id);
+            $(item).find(".lesson-item-name").html(name);
+            $(item).removeClass("hidden");
+            $(item).addClass("lesson-material-item");
+
+            $(".lesson-material-list").append(item);
         });
     },
     bindAddFileChange: function () {
@@ -399,13 +415,65 @@ courses =
         });
 
         // Remove lesson material
-        $(".remove-lesson-material-link")
+        $(".remove-lesson-material-link").unbind("click");
+        $(".remove-lesson-material-link").click(function(){
+
+        });
+
+        // Add controls for files
+        courses.showFilesControls();
 
         // HTML Editor
         $("#cleditor").cleditor({
             width: '100%'
         });
 
+        // Save lesson
+        $(".save-lesson-butt").unbind("click");
+        $(".save-lesson-butt").click(function(){
+            var name = $("#lesson-name").val();
+            var trial = $("#trial-access").attr("checked")!=null;
+            var task = $($("#cleditor").cleditor()[0].$area).val();
+
+            var postData = new Object();
+            postData.name=name;
+            postData.trial=trial;
+            postData.task=task;
+
+            var mats = new Array();
+            var index = 0;
+            $(".lesson-material-item").each(function(){
+                var material_id = $(this).attr("entity-id");
+//                postData["material["+index+"]"] = material_id;
+                //postData["material["+index+"]"] = material_id;
+                mats[index] = material_id;
+                index++;
+            });
+            postData.material = mats;
+             alert(JSON.stringify(postData));
+            $.ajax({
+                type: 'POST',
+                url: '/service/save_lesson',
+                data: JSON.stringify(postData),
+                contentType: "application/json",
+                success: function(msg){
+                    alert('wow' + msg);
+                }
+            });
+        });
+
+    },
+    showFilesControls: function(){
+        if(currentCourseSection=="course_lesson_edit")
+        {
+            $(".material-controls").hide();
+            $(".add-to-lesson-controls").show();
+        }
+        else
+        {
+            $(".add-to-lesson-controls").hide();
+            $(".material-controls").show();
+        }
     },
     showCourses: function () {
         $(".courses-section").hide();
@@ -414,6 +482,7 @@ courses =
             async: true,
             success: function (html) {
                 $(".courses-section").replaceWith(html);
+                currentCourseSection = "courses_list";
                 courses.bindCoursesControls();
                 $(".courses-section").show();
             },
@@ -437,6 +506,7 @@ courses =
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
                 $(".numeric").autoNumeric('init', {mDec: 2, aSep: '', vMax: '999999.00', vMin: '0.00'});
+                currentCourseSection = "courses_edit";
                 courses.bindCoursesControls();
             },
             failure: function () {
@@ -453,6 +523,7 @@ courses =
             success: function (html) {
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
+                currentCourseSection = "course_lesson_list";
                 courses.bindCoursesControls();
             },
             failure: function () {
@@ -476,6 +547,7 @@ courses =
             success: function (html) {
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
+                currentCourseSection = "course_lesson_edit";
                 courses.bindCoursesControls();
             },
             failure: function () {
