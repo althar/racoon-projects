@@ -25,6 +25,8 @@
           <element id="library" level="project" name="org.springframework:org.springframework.web:3.2.5.RELEASE" />
           <element id="library" level="project" name="commons-io:commons-io:2.1" />
           <element id="library" level="project" name="commons-fileupload:commons-fileupload:1.2.2" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-core:2.0.1" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:com.springsource.com.fasterxml.jackson.core.jackson-databind:2.0.2" />
         </element>
       </element>
     </root>

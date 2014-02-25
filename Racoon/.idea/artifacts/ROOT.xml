@@ -3,6 +3,12 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ROOT</output-path>
     <root id="archive" name="ROOT.war">
       <element id="artifact" artifact-name="LangBox" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-core:2.0.1" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:com.springsource.com.fasterxml.jackson.core.jackson-databind:2.0.2" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
