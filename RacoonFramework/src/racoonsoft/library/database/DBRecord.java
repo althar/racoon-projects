@@ -101,6 +101,17 @@ public class DBRecord extends Object
             return null;
         }
     }
+    public Boolean getBooleanValue(String name)
+    {
+        try
+        {
+            return Boolean.valueOf(getValue(name).toString());
+        }
+        catch(Exception ex)
+        {
+            return null;
+        }
+    }
     public ArrayList<DBRecord> getRecords(String name)
     {
         try

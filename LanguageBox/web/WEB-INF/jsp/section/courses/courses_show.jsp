@@ -32,7 +32,7 @@
     </div>
     <hr/>
     <h5 class="materials">
-      <a href="#"><i class="icon-pencil"></i> Основные материалы (${course.getRecord('main_material').getLongValue('material_count')} файла)</a>
+      <a onclick="courses.showEditLessons(${course.getLongValue('id')},${course.getLongValue('main_material_id')},true)"><i class="icon-pencil"></i> Основные материалы (${course.getRecord('main_material').getLongValue('material_count')} файла)</a>
     </h5>
     <hr/>
 
@@ -51,6 +51,9 @@
               </td>
               <td>
                   ${lesson.getLongValue('material_count')} файлов
+              </td>
+              <td>
+                  <a><i class="icon-remove lesson-delete-link" entity-type="lesson" entity-id="${lesson.getLongValue('id')}"></i></a>
               </td>
           </tr>
       </c:forEach>

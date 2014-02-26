@@ -15,7 +15,7 @@
     </div>
     <div class="widget-content">
         <div class="user-box">
-            <div class="thumbnail">
+            <div class="thumbnail" style="cursor: pointer;" onclick="courses.showCourseLessons(${course.getLongValue('id')})">
                 <img alt="" src="/img/course_preview.png">
             </div>
             <div class="info">
@@ -34,11 +34,25 @@
 
         <form class="form-vertical">
             <div class="control-group">
-                <label class="control-label" for="lesson-name">Название</label>
+                <input type="hidden" id="lesson-type" value="<c:choose><c:when test="${main_material}">MAIN_MATERIAL</c:when><c:otherwise>LESSON</c:otherwise></c:choose>">
+                <input type="hidden" id="lesson-id" value="${lesson.getLongValue('id')}">
+                <input type="hidden" id="course-id" value="${course.getLongValue('id')}">
+
+                <c:choose>
+                    <c:when test="${main_material}">
+                        <label class="control-label" for="lesson-name"><b>Основные материалы курса</b></label>
+                    </c:when>
+                    <c:otherwise>
+                        <label class="control-label" for="lesson-name">Название</label>
+                    </c:otherwise>
+                </c:choose>
 
                 <div class="controls">
+                    <c:if test="${!main_material}">
                     <input type="text" id="lesson-name" name="name" class="span12" value="${lesson.getStringValue('name')}"
                            style="margin-bottom: 10px">
+                    </c:if>
+
                     <label class="checkbox" for="trial-access">
                         <input type="checkbox" id="trial-access"
                                <c:if test="${lesson.getBooleanValue('trial')}">checked</c:if> name="access"
