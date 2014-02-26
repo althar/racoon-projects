@@ -61,6 +61,9 @@
 <div id="dialog-message-delete-course" class="hide" title="Внимание">
     <p>Уверены?</p>
 </div>
+<div id="dialog-message-delete-lesson" class="hide" title="Внимание">
+    <p>Уверены?</p>
+</div>
 <div id="wrapper">
     <%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>
 

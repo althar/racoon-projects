@@ -1,11 +1,9 @@
 package racoonsoft.languagebox.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import racoonsoft.languagebox.service.*;
 import racoonsoft.languagebox.structure.Lesson;
 import racoonsoft.languagebox.structure.MultipartFilesStructure;
 import racoonsoft.library.database.DBRecord;
@@ -14,7 +12,6 @@ import racoonsoft.library.helper.StringHelper;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedInputStream;
-import java.io.FileInputStream;
 import java.util.ArrayList;
 
 @Controller
@@ -204,8 +201,9 @@ public class ServiceController extends LanguageBoxController
     @ResponseBody
     public ModelAndView saveLesson(HttpServletRequest request,String name,Boolean trial,String task,@RequestBody Lesson less) throws Exception
     {
-        ModelAndView model = new ModelAndView("section/courses/courses_lessons_show");
-
+        ModelAndView model = new ModelAndView("document/plain");
+        Long id = course.saveLesson(id(request),less);
+        model.addObject("value",id);
         return model;
     }
     //</editor-fold>

@@ -1252,3 +1252,8 @@ img.bordered {
   /* line 5, C:/Sites/middleman/languagebox/source/stylesheets/_page.sass */
   .page_article p {
     margin: 5px 0; }
+
+  .pointer
+  {
+      cursor: pointer;
+  }

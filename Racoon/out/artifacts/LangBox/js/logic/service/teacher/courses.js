@@ -431,7 +431,12 @@ courses =
         // Save lesson
         $(".save-lesson-butt").unbind("click");
         $(".save-lesson-butt").click(function(){
+            $(this).attr("disabled","disabled");
+            var butt = $(this);
             var name = $("#lesson-name").val();
+            var type = $("#lesson-type").val();
+            var id = $("#lesson-id").val();
+            var course_id = $("#course-id").val();
             var trial = $("#trial-access").attr("checked")!=null;
             var task = $($("#cleditor").cleditor()[0].$area).val();
 
@@ -439,29 +444,58 @@ courses =
             postData.name=name;
             postData.trial=trial;
             postData.task=task;
-
+            postData.type=type;
+            postData.id=id;
+            postData.courseId=course_id;
             var mats = new Array();
             var index = 0;
             $(".lesson-material-item").each(function(){
                 var material_id = $(this).attr("entity-id");
-//                postData["material["+index+"]"] = material_id;
-                //postData["material["+index+"]"] = material_id;
                 mats[index] = material_id;
                 index++;
             });
             postData.material = mats;
-             alert(JSON.stringify(postData));
+
             $.ajax({
                 type: 'POST',
                 url: '/service/save_lesson',
                 data: JSON.stringify(postData),
                 contentType: "application/json",
                 success: function(msg){
-                    alert('wow' + msg);
+                    $("#lesson-id").val(msg);
+                    $(butt).removeAttr("disabled");
                 }
             });
         });
 
+        // Delete lesson
+        $(".lesson-delete-link").click(function () {
+            var link = $(this);
+            $("#dialog-message-delete-lesson").dialog({
+                buttons: {
+                    'Да': function () {
+                        var type = $(link).attr("entity-type");
+                        var id = $(link).attr("entity-id");
+                        $(this).dialog('close');
+                        $.ajax({
+                            url: "/service/delete?type=" + type + "&id=" + id,
+                            context: document.body,
+                            async: true,
+                            success: function (html) {
+                                $(link).parents("tr").remove();
+                            },
+                            failure: function () {
+                                alert("Серверная ошибка. Попробуйте позже");
+                                $(".library-loader").hide();
+                            }
+                        });
+                    },
+                    'Нет': function () {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+        });
     },
     showFilesControls: function(){
         if(currentCourseSection=="course_lesson_edit")
@@ -505,6 +539,7 @@ courses =
             success: function (html) {
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
+                alert("!");
                 $(".numeric").autoNumeric('init', {mDec: 2, aSep: '', vMax: '999999.00', vMin: '0.00'});
                 currentCourseSection = "courses_edit";
                 courses.bindCoursesControls();
