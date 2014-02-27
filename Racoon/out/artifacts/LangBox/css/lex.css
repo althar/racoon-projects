@@ -13,8 +13,9 @@
 }
 
 .selector-shop {
-    float: right;
     margin-right: 20px;
+    height: 30px;
+    width: 900px;
 }
 
 .selector-shop div {
@@ -39,21 +40,20 @@
 
 .right-column-right-block {
     display: inline-block;
-    max-width: 74%;
+    max-width: 550px;
     vertical-align: top;
     margin: 10px;
 }
 
 .right-column-border {
-    border: 1px solid #d7d7d7;
     position: relative;
+    width: 900px;
 }
 
 .right-column-left-block {
     display: inline-block;
-    margin: 10px;
     vertical-align: top;
-    width: 21%
+    width: 250px;
 }
 
 .books-shop-all {
@@ -123,9 +123,10 @@
 }
 
 .shop-try-demo {
-    border: 1px solid #a1a1a1;
     padding: 5px 10px;
     cursor: pointer;
+    background: powderblue;
+    margin-right: 10px;
 }
 
 .shop-buy {
@@ -171,8 +172,6 @@
 .books-block{
     display: inline-block;
     width: 407px;
-    height: 169px;
-    border: 1px solid #d7d7d7;
     vertical-align: top;
     margin: 5px;
 }
@@ -215,13 +214,50 @@
 }
 
 .shop-salled {
-    border: 1px solid #a1a1a1;
     padding: 3px 5px;
     cursor: pointer;
+    color: white;
+    background: green;
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.shop-salled-btn {
+    padding: 3px 5px;
+    cursor: pointer;
+    float: right;
+    margin-top: 2px;
+    margin-right: 10px;
 }
 
 .shop-no-salled {
     margin-top: 10px;
     margin-left: 10px;
     display: inline-block;
+}
+
+.lex-header-right {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.shop-price {
+    float: right;
+    font-weight: bold;
+}
+
+.lex-header-right-btn {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.shop-try-demo-btn {
+    margin-right: 10px;
+}
+
+.shop-buy-btn {
+
 }
