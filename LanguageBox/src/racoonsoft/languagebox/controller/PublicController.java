@@ -55,6 +55,11 @@ public class PublicController
     {
         return new ModelAndView("page/public/teacher_review");
     }
+    @RequestMapping("/course_review")
+    public ModelAndView courseReview()
+    {
+        return new ModelAndView("page/public/course_review");
+    }
     @RequestMapping("/market")
     public ModelAndView market()
     {
