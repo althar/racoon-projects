@@ -357,3 +357,60 @@
     margin: 0 auto;
     margin-top: 10px;
 }
+
+.item-en {
+    background: url(/img/icons/en.png) left no-repeat;
+    padding-left: 20px;
+}
+
+.item-ger {
+    background: url(/img/icons/ger.png) left no-repeat;
+    padding-left: 20px;
+}
+
+.item-fr {
+    background: url(/img/icons/fr.png) left no-repeat;
+    padding-left: 20px;
+}
+
+.item-it {
+    background: url(/img/icons/it.png) left no-repeat;
+    padding-left: 20px;
+}
+
+.item-sp {
+    background: url(/img/icons/sp.png) left no-repeat;
+    padding-left: 20px;
+}
+
+.right-menu-item {
+    float: right;
+    padding: 2px;
+}
+
+.right-menu-item-bold {
+    float: right;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.menu-empty {
+    margin-top: 40px; border-bottom: 1px solid #bae0f2;
+}
+
+.margin {
+    margin-left: 294px;
+}
+
+.float-right {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.padding-top {
+    padding-top: 10px;
+}
