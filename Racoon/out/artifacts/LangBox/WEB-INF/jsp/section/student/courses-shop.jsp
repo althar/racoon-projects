@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
     <div class="span9">
-        <span style="float: right; margin-bottom: 10px;">
+        <span class="float-right">
             <span class="selector-shop">Сортировка</span>
             <span class="selector-shop shop-arrow-down">Дата публикации</span>
             <span class="selector-shop">Цена</span>

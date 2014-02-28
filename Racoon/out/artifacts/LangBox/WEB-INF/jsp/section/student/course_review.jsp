@@ -12,7 +12,7 @@
     <div class="widget-header">
         <span class="title">Отзывы</span>
     </div>
-    <div class="widget-content" style="padding-top: 10px;">
+    <div class="widget-content">
         <div class="review">
             <div class="review-author">
                 <span class="review-author-img">
