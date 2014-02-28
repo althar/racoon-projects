@@ -95,9 +95,13 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/BillPrintController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1386672932504" ignored="false" />
     <file path="/AccessInterceptor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1386674681822" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/InvoiceDocument.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1392983515642" ignored="false" />
-    <file path="/GoodsCalculator.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393576317161" ignored="false" />
+    <file path="/GoodsCalculator.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393582185530" ignored="false" />
     <file path="/SeparateThreadProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393573500313" ignored="false" />
     <file path="/SeparateThreadSingleTaskProcessor.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393573694134" ignored="false" />
+    <file path="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393578877470" ignored="false" />
+    <file path="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393578877470" ignored="false" />
+    <file path="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393578877470" ignored="false" />
+    <file path="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses-shop.jsp" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393578877470" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,22 +151,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java" line="54" class="ftwo.zoomag.service.GoodsCalculator" package="ftwo.zoomag.service">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -190,10 +179,19 @@
       <file leaf-file-name="GoodsCalculator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="123" selection-start="4001" selection-end="4001" vertical-scroll-proportion="0.7733564">
+            <state line="43" column="72" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.24520256">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeparateThreadSingleTaskProcessor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/processors/SeparateThreadSingleTaskProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="0" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -991,20 +989,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29646522" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29646522" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31256953" sideWeight="0.21237993" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39680728" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39680728" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24431819" sideWeight="0.21904762" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21544716" sideWeight="0.7035348" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21544716" sideWeight="0.6031927" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1203,13 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/processors/SeparateThreadSingleTaskProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="5" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="35" selection-start="3253" selection-end="3270" vertical-scroll-proportion="0.33278146">
@@ -1230,9 +1221,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/processors/SeparateThreadSingleTaskProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="123" selection-start="4001" selection-end="4001" vertical-scroll-proportion="0.7733564">
+        <state line="43" column="72" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.24520256">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
