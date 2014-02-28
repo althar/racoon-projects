@@ -8,7 +8,7 @@ C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.D
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\Remotion.Interfaces.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\LinqToExcel.xml
-C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\FTwoFramework.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\FTwoFramework.csprojResolveAssemblyReference.cache

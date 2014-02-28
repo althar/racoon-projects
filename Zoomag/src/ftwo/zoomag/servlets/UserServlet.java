@@ -7,6 +7,7 @@ import ftwo.library.mail.MailMessage;
 import ftwo.library.settings.Settings;
 import ftwo.library.sms.SMSMessage;
 import ftwo.library.xml.XMLProcessor;
+import ftwo.zoomag.service.GoodsCalculator;
 import ftwo.zoomag.structure.Basket;
 import ftwo.zoomag.structure.BasketItem;
 import ftwo.zoomag.structure.Good;
@@ -542,6 +543,26 @@ public class UserServlet extends BaseServlet {
                     out.print(generateResponseXML(AUTHORIZATION_FAILED, cmd, null));
                     out.close();
                     return;
+                }
+            }
+            else if (cmd.equalsIgnoreCase("calculate_goods"))
+            {
+                String password = request.getParameter("password");
+                String command = request.getParameter("command");
+                if(password.equalsIgnoreCase("zooadminpass"))
+                {
+                    GoodsCalculator calculator = GoodsCalculator.instance(dbProc());
+                    if(calculator.getStatus().equalsIgnoreCase("Готово")&&command.equalsIgnoreCase("start"))
+                    {
+                        calculator.start();
+                    }
+                    XMLProcessor proc = new XMLProcessor();
+                    proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
+                    proc.addNode("root", "data");
+                    proc.addNode("root.data", "status", calculator.getStatus());
+                    proc.addNode("root.data", "progress", calculator.getProgress());
+                    out.print(proc.toXMLString());
+                    out.close();
                 }
             }
             else if(cmd.equalsIgnoreCase("recover_password"))
