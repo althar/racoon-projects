@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/assets/css/main-style.css" media="screen">
 
     <link rel="stylesheet" href="/custom_css/custom.css" media="screen">
-
+    <link rel="stylesheet" href="/css/lex.css" media="screen">
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,12 +63,12 @@
             <div id="content-outer">
                 <div id="content-inner">
                     <jsp:include page="/WEB-INF/jsp/section/aside_student.jsp" >
-                        <jsp:param name="page" value="courses" />
+                        <jsp:param name="page" value="market" />
                     </jsp:include>
 
                     <!-- <div id="sidebar-separator"></div> -->
 
-                    <section id="main" class="clearfix">
+                    <section id="main" class="clearfix" style="margin-left: 294px;">
                         <div id="main-header" class="page-header">
                             <ul class="breadcrumb">
                                 <li>
@@ -76,12 +76,13 @@
                                     <span class="divider">&raquo;</span>
                                 </li>
                                 <li>
-                                    <a href="#">Курсы</a>
+                                    <a href="#">Магазин</a>
                                 </li>
                             </ul>
 
                             <h1 id="main-heading">
-                                Dashboard <span>This is the place where everything started</span>
+                                <div class="title-shop">Интернет-магазин Language Box</div>
+                                <div style="float: right; margin-top: 5px; margin-right: 20px;"><input type="text" placeholder="поиск по магазину"></div>
                             </h1>
                         </div>
 
