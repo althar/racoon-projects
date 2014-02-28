@@ -9,7 +9,14 @@ public abstract class SeparateThreadProcessor implements Runnable
     private Thread t;
     private boolean IsRunning;
     private String Name;
-
+    public Thread getT()
+    {
+        return t;
+    }
+    public void setT(Thread t)
+    {
+        this.t = t;
+    }
     public SeparateThreadProcessor(String processor_name)
     {
         Name = processor_name;
@@ -37,7 +44,10 @@ public abstract class SeparateThreadProcessor implements Runnable
         }
         System.out.println("stoped");
     }
-
+    public void forcedStop()
+    {
+        t.interrupt();
+    }
     public void run()
     {
         while(IsRunning)
