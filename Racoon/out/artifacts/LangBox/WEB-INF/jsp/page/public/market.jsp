@@ -68,7 +68,7 @@
 
                     <!-- <div id="sidebar-separator"></div> -->
 
-                    <section id="main" class="clearfix" style="margin-left: 294px;">
+                    <section id="main" class="clearfix" style="margin-left: 294px;" >
                         <div id="main-header" class="page-header">
                             <ul class="breadcrumb">
                                 <li>
