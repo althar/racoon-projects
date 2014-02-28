@@ -39,9 +39,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="59fd7cfa-8504-45b1-8730-d482f0c97bca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp" afterPath="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp" />
-    </list>
+    <list default="true" readonly="true" id="59fd7cfa-8504-45b1-8730-d482f0c97bca" name="Default" comment="" />
     <ignored path="Racoon.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367950466823" ignored="false" />
@@ -550,7 +548,7 @@
     <file path="$PROJECT_DIR$/../Zoomag/web/js/general/init.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1392225576322" ignored="false" />
     <file path="/init.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386682558224" ignored="false" />
     <file path="/TeacherController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990646307" ignored="false" />
-    <file path="/market.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386764370749" ignored="false" />
+    <file path="/market.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393593232107" ignored="false" />
     <file path="/LanguageBoxController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390563764006" ignored="false" />
     <file path="/LanguageBoxInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386765407275" ignored="false" />
     <file path="/BusinessPlan.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386846543398" ignored="false" />
@@ -571,7 +569,7 @@
     <file path="/header_student.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387365185078" ignored="false" />
     <file path="/courses_bought.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387891928859" ignored="false" />
     <file path="/how_to_use.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387365104691" ignored="false" />
-    <file path="/PublicController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387812416887" ignored="false" />
+    <file path="/PublicController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393537030469" ignored="false" />
     <file path="/functions.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387367061561" ignored="false" />
     <file path="/price.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366859543" ignored="false" />
     <file path="/faq.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366892561" ignored="false" />
@@ -610,7 +608,7 @@
     <file path="/sample.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390296514136" ignored="false" />
     <file path="/a.html" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390296731312" ignored="false" />
     <file path="/header_teacher.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391595368347" ignored="false" />
-    <file path="/courses.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393437246070" ignored="false" />
+    <file path="/courses.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393512014578" ignored="false" />
     <file path="/normalize.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390318527208" ignored="false" />
     <file path="/courses.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391684393634" ignored="false" />
     <file path="/folder_body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391684119806" ignored="false" />
@@ -647,8 +645,12 @@
     <file path="/CompanySensors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391523828414" ignored="false" />
     <file path="/CompanyState.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391524936868" ignored="false" />
     <file path="/aside_teacher.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391595960345" ignored="false" />
-    <file path="/courses-shop.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393351959269" ignored="false" />
-    <file path="/lex.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393419063542" ignored="false" />
+    <file path="/courses-shop.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393592626924" ignored="false" />
+    <file path="/lex.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393535706520" ignored="false" />
+    <file path="/course_review.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393523671687" ignored="false" />
+    <file path="/profile.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393536295515" ignored="false" />
+    <file path="/user_profile.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393537194866" ignored="false" />
+    <file path="/aside_student.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393589176945" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -663,6 +665,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/BasketController.java" line="189" class="racoonsoft.select.controller.BasketController" package="racoonsoft.select.controller">
         <option name="ENABLED" value="true" />
@@ -707,6 +710,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -741,7 +745,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -751,19 +754,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ServiceController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
+      <file leaf-file-name="market.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="71" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublicController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="98" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.53724605">
+            <state line="67" column="85" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.2514881">
               <folding />
             </state>
           </provider>
@@ -772,34 +766,43 @@
       <file leaf-file-name="courses-shop.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses-shop.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="70" selection-start="348" selection-end="348" vertical-scroll-proportion="3.2692308">
+            <state line="11" column="82" selection-start="586" selection-end="586" vertical-scroll-proportion="-7.1923075">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="market.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp">
+      <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/custom_css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="6" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/student/courses.jsp">
+      <file leaf-file-name="aside_student.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/aside_student.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+            <state line="33" column="102" selection-start="2021" selection-end="2021" vertical-scroll-proportion="-16.692308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp">
+      <file leaf-file-name="lex.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/css/lex.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="88" selection-start="4375" selection-end="4375" vertical-scroll-proportion="0.0">
+            <state line="246" column="31" selection-start="3709" selection-end="3709" vertical-scroll-proportion="-167.28">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widget.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LanguageBox/web/assets/css/widget.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="464" column="81" selection-start="10868" selection-end="10868" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -820,22 +823,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/add_file_body.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/properties/main.properties" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/resolvers/AsyncMultipartResolver.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/UploadProcessor.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/LibraryService.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/js/logic/service/teacher/courses.js" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/service/CourseService.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/folder_body.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/courses/courses.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses-shop.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/student/courses.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/css/lex.css" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/course_review.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/course_review.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/3domain.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/domain3.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/profile.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/img/teacher.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/teacher/profile.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/user/user_profile.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/user_profile.jsp" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/aside_student.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses-shop.jsp" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/css/lex.css" />
+        <option value="$PROJECT_DIR$/../LanguageBox/web/custom_css/custom.css" />
         <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp" />
-        <option value="$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp" />
       </list>
     </option>
   </component>
@@ -849,8 +852,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1292" />
-    <option name="height" value="1036" />
+    <option name="width" value="1932" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -890,7 +893,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="1" />
   </component>
   <component name="ProjectStructureProblems">
     <ignored-problems>
@@ -910,7 +913,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -969,8 +971,30 @@
               <option name="myItemId" value="jsp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="widget" />
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="section" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -997,6 +1021,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="section" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="section" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1159,12 +1217,22 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LanguageBox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1181,49 +1249,14 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LanguageBox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="languagebox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LanguageBox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="languagebox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="custom_css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1279,11 +1312,11 @@
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\js\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Projects1\LanguageBox\web\img\teacher" />
+      <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Projects1\LanguageBox\web\img\courses_review" />
       <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Projects\LanguageBox\web\img\shop" />
       <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Projects\LanguageBox\web\img\shop\courses" />
       <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Projects\LanguageBox\web\img\books" />
-      <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web" />
-      <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\WEB-INF\jsp\page\public" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.LanguageBox">
@@ -2022,27 +2055,9 @@
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
     <option name="IGNORE_EXTERNALS" value="false" />
-    <configuration useDefault="true">C:\Users\AlThar\AppData\Roaming\Subversion</configuration>
+    <configuration useDefault="true">C:\Users\Filonenko\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox" />
-          <option name="myCopyRoot" value="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox" />
-          <option name="myCopyRoot" value="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -2073,7 +2088,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1292" height="1036" extended-state="1" />
+    <frame x="-8" y="-8" width="1932" height="1092" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2082,13 +2097,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4503991" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1276824" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29304448" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29291844" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17982924" sideWeight="0.24860647" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18311533" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2096,8 +2111,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31626016" sideWeight="0.5496009" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22411832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20802139" sideWeight="0.77682406" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22317597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2173,102 +2188,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/bg-input-focus.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="67" selection-start="2440" selection-end="2455" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/avatar.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/course_review.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="44" selection-start="888" selection-end="888" vertical-scroll-proportion="0.48065478">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/icons-sdc6a1517df.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="0" selection-start="5023" selection-end="5023" vertical-scroll-proportion="3.263393">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/loader.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/img/icons/star.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/achivments.jsp">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/user/user_profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="6" selection-start="11522" selection-end="11522" vertical-scroll-proportion="0.0">
+        <state line="47" column="34" selection-start="1350" selection-end="1362" vertical-scroll-proportion="0.26745912">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/course.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/teacher/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="58" selection-start="5764" selection-end="5764" vertical-scroll-proportion="-66.69231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/student/courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
+        <state line="114" column="88" selection-start="0" selection-end="5023" vertical-scroll-proportion="-4.269231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="55" selection-start="979" selection-end="979" vertical-scroll-proportion="-1.3341708">
+        <state line="130" column="59" selection-start="6256" selection-end="6256" vertical-scroll-proportion="0.25297618">
+          <folding>
+            <element signature="tag#div#0" expanded="false" />
+            <element signature="tag#div#1" expanded="false" />
+            <element signature="tag#div#2" expanded="false" />
+            <element signature="tag#div#3" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/user_profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="0" selection-start="5023" selection-end="5023" vertical-scroll-proportion="-29.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/teacher/courses.jsp">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/aside_student.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="88" selection-start="4375" selection-end="4375" vertical-scroll-proportion="0.0">
+        <state line="33" column="102" selection-start="2021" selection-end="2021" vertical-scroll-proportion="-16.692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/css/lex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="31" selection-start="3709" selection-end="3709" vertical-scroll-proportion="-167.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/assets/css/widget.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="81" selection-start="10868" selection-end="10868" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/custom_css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/section/student/courses-shop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="70" selection-start="348" selection-end="348" vertical-scroll-proportion="3.2692308">
+        <state line="11" column="82" selection-start="586" selection-end="586" vertical-scroll-proportion="-7.1923075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/StudentController.java">
+    <entry file="file://$PROJECT_DIR$/../LanguageBox/web/WEB-INF/jsp/page/public/market.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="107" selection-start="2834" selection-end="2834" vertical-scroll-proportion="1.1172414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/ServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="71" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/controller/PublicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="98" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.53724605">
+        <state line="67" column="85" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.2514881">
           <folding />
         </state>
       </provider>
