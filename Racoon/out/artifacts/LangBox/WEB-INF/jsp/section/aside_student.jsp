@@ -26,11 +26,11 @@
         </a>
           <ul class="inner-nav" style="background: rgb(253, 253, 253);">
               <li><a href="#"><span style="font-weight: bold;">Все языки</span><span style="float: right; padding: 2px; font-weight: bold;">124</span></a></li>
-              <li class="active"><a href="#"><span>Английский</span><span style="float: right; padding: 2px;">5</span></a></li>
-              <li><a href="#"><span>Немецкий</span><span style="float: right; padding: 2px;">15</span></a></li>
-              <li><a href="#"><span>Французкий</span><span style="float: right; padding: 2px;">55</span></a></li>
-              <li><a href="#"><span>Итальянский</span> <span style="float: right; padding: 2px; ">12</span></a></li>
-              <li><a href="#"><span>Испанский</span><span style="float: right; padding: 2px;">4</span></a></li>
+              <li class="active"><a href="#"><span style="background: url(/img/icons/en.png) left no-repeat; padding-left: 20px;">Английский</span><span style="float: right; padding: 2px;">5</span></a></li>
+              <li><a href="#"><span style="background: url(/img/icons/ger.png) left no-repeat; padding-left: 20px;">Немецкий</span><span style="float: right; padding: 2px;">15</span></a></li>
+              <li><a href="#"><span style="background: url(/img/icons/fr.png) left no-repeat; padding-left: 20px;">Французкий</span><span style="float: right; padding: 2px;">55</span></a></li>
+              <li><a href="#"><span style="background: url(/img/icons/it.png) left no-repeat; padding-left: 20px;">Итальянский</span> <span style="float: right; padding: 2px; ">12</span></a></li>
+              <li><a href="#"><span style="background: url(/img/icons/sp.png) left no-repeat; padding-left: 20px;">Испанский</span><span style="float: right; padding: 2px;">4</span></a></li>
               <li style="margin-top: 40px; border-bottom: 1px solid #bae0f2;"></li>
               <li><a href="#"><span style="font-weight: bold;">Все урони</span><span style="float: right; padding: 2px; font-weight: bold;">124</span></a></li>
               <li><a href="#"><span>Beginner</span><span style="float: right; padding: 2px;">5</span></a></li>
