@@ -14,6 +14,9 @@ using OwlBusinessStudio.Authorization;
 using FTwoFramework.DB;
 using OwlBusinessStudio.Goods;
 using FTwoFramework.Excel;
+using System.Web;
+using System.Net;
+using System.Xml;
 using System.Runtime.InteropServices;
 
 namespace OwlBusinessStudio
@@ -139,74 +142,77 @@ namespace OwlBusinessStudio
         {
             Enabled = enabled;
         }
-
         public void AcceptAllOrders()
         {
-            string processing = dbProc.getSetting("processing");
-            if (processing == "false")
-            {
-                dbProc.update("settings", "value='true'", "name='processing'");
-                ButtProcess.Visible = true;
-
-                // 1) New orders with delivery...
-                DataTable ordersToAccept = dbProc.executeGet("SELECT * FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=true");
-                Application.DoEvents();
-                for (int i = 0; i < ordersToAccept.Rows.Count; i++)
-                {
-                    LabelProcessName.Text = "Пересчет запасов по выполненным заказам (" + i + " из " + ordersToAccept.Rows.Count + ")";
-                    int count = (int)ordersToAccept.Rows[i]["count"];
-                    int good_id = (int)ordersToAccept.Rows[i]["good_id"];
-                    int order_id = (int)ordersToAccept.Rows[i]["id"];
-                    string c = "";
-                    if (count > 0)
-                    {
-                        c = "UPDATE goods SET quantity=quantity-" + count.ToString() + " WHERE id=" + good_id.ToString() + "; ";
-                    }
-                    if (count < 0)
-                    {
-                        c = "UPDATE goods SET quantity=quantity+" + Math.Abs(count).ToString() + " WHERE id=" + good_id.ToString() + "; ";
-                    }
-                    DataTable before = MainForm.dbProc.executeGet("SELECT quantity FROM goods WHERE id=" + good_id.ToString());
-                    dbProc.executeNonQuery(c);
-                    DataTable after = MainForm.dbProc.executeGet("SELECT quantity FROM goods WHERE id=" + good_id.ToString());
-                    Application.DoEvents();
-                    if (before.Rows.Count == 1)
-                    {
-                        int q_before = (int)before.Rows[0]["quantity"];
-                        int q_after = (int)after.Rows[0]["quantity"];
-                        MainForm.dbProc.executeNonQuery("INSERT INTO goods_history (action,good_id,quantity_before,quantity_after,description,good_action_count) VALUES('orders_accept'," + good_id + "," + q_before + "," + q_after + ",'Order:" + order_id + "'," + count + ");");
-                    }
-                    Application.DoEvents();
-                }
-
-                // 2) Move self gets to next day...
-                DataTable ordersToMoveDistinct = dbProc.executeGet("SELECT DISTINCT id FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=false");
-                Application.DoEvents();
-                for (int i = 0; i < ordersToMoveDistinct.Rows.Count; i++)// Selfget - move order one day forward...
-                {
-                    LabelProcessName.Text = "Перенос самовывозов на следующий день (" + i + " из " + ordersToMoveDistinct.Rows.Count + ")";
-                    int order_id = (int)ordersToMoveDistinct.Rows[i]["id"];
-                    string c = "UPDATE orders SET deliver_date = deliver_date+INTERVAL '1 day' WHERE id=" + order_id.ToString() + ";";
-                    dbProc.executeNonQuery(c);
-                    Application.DoEvents();
-                }
-
-                // 3) Change deliver statuses...
-                DataTable ordersToAcceptDistinct = dbProc.executeGet("SELECT DISTINCT id FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=true");
-                Application.DoEvents();
-                for (int i = 0; i < ordersToAcceptDistinct.Rows.Count; i++)// Delivers - just change statuses...
-                {
-                    LabelProcessName.Text = "Перенос заказов в \"выполненные\" (" + i + " из " + ordersToAcceptDistinct.Rows.Count + ")";
-                    int order_id = (int)ordersToAcceptDistinct.Rows[i]["id"];
-                    string c = "UPDATE orders SET status=3 WHERE id=" + order_id.ToString() + ";";
-                    dbProc.executeNonQuery(c);
-                    Application.DoEvents();
-                }
-                LabelProcessName.Text = "";
-                ButtProcess.Visible = false;
-                dbProc.update("settings", "value='false'", "name='processing'");
-            }
+            calculateGoods(true);
         }
+        //public void AcceptAllOrders()
+        //{
+        //    string processing = dbProc.getSetting("processing");
+        //    if (processing == "false")
+        //    {
+        //        dbProc.update("settings", "value='true'", "name='processing'");
+        //        ButtProcess.Visible = true;
+
+        //        // 1) New orders with delivery...
+        //        DataTable ordersToAccept = dbProc.executeGet("SELECT * FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=true");
+        //        Application.DoEvents();
+        //        for (int i = 0; i < ordersToAccept.Rows.Count; i++)
+        //        {
+        //            LabelProcessName.Text = "Пересчет запасов по выполненным заказам (" + i + " из " + ordersToAccept.Rows.Count + ")";
+        //            int count = (int)ordersToAccept.Rows[i]["count"];
+        //            int good_id = (int)ordersToAccept.Rows[i]["good_id"];
+        //            int order_id = (int)ordersToAccept.Rows[i]["id"];
+        //            string c = "";
+        //            if (count > 0)
+        //            {
+        //                c = "UPDATE goods SET quantity=quantity-" + count.ToString() + " WHERE id=" + good_id.ToString() + "; ";
+        //            }
+        //            if (count < 0)
+        //            {
+        //                c = "UPDATE goods SET quantity=quantity+" + Math.Abs(count).ToString() + " WHERE id=" + good_id.ToString() + "; ";
+        //            }
+        //            DataTable before = MainForm.dbProc.executeGet("SELECT quantity FROM goods WHERE id=" + good_id.ToString());
+        //            dbProc.executeNonQuery(c);
+        //            DataTable after = MainForm.dbProc.executeGet("SELECT quantity FROM goods WHERE id=" + good_id.ToString());
+        //            Application.DoEvents();
+        //            if (before.Rows.Count == 1)
+        //            {
+        //                int q_before = (int)before.Rows[0]["quantity"];
+        //                int q_after = (int)after.Rows[0]["quantity"];
+        //                MainForm.dbProc.executeNonQuery("INSERT INTO goods_history (action,good_id,quantity_before,quantity_after,description,good_action_count) VALUES('orders_accept'," + good_id + "," + q_before + "," + q_after + ",'Order:" + order_id + "'," + count + ");");
+        //            }
+        //            Application.DoEvents();
+        //        }
+
+        //        // 2) Move self gets to next day...
+        //        DataTable ordersToMoveDistinct = dbProc.executeGet("SELECT DISTINCT id FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=false");
+        //        Application.DoEvents();
+        //        for (int i = 0; i < ordersToMoveDistinct.Rows.Count; i++)// Selfget - move order one day forward...
+        //        {
+        //            LabelProcessName.Text = "Перенос самовывозов на следующий день (" + i + " из " + ordersToMoveDistinct.Rows.Count + ")";
+        //            int order_id = (int)ordersToMoveDistinct.Rows[i]["id"];
+        //            string c = "UPDATE orders SET deliver_date = deliver_date+INTERVAL '1 day' WHERE id=" + order_id.ToString() + ";";
+        //            dbProc.executeNonQuery(c);
+        //            Application.DoEvents();
+        //        }
+
+        //        // 3) Change deliver statuses...
+        //        DataTable ordersToAcceptDistinct = dbProc.executeGet("SELECT DISTINCT id FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=true");
+        //        Application.DoEvents();
+        //        for (int i = 0; i < ordersToAcceptDistinct.Rows.Count; i++)// Delivers - just change statuses...
+        //        {
+        //            LabelProcessName.Text = "Перенос заказов в \"выполненные\" (" + i + " из " + ordersToAcceptDistinct.Rows.Count + ")";
+        //            int order_id = (int)ordersToAcceptDistinct.Rows[i]["id"];
+        //            string c = "UPDATE orders SET status=3 WHERE id=" + order_id.ToString() + ";";
+        //            dbProc.executeNonQuery(c);
+        //            Application.DoEvents();
+        //        }
+        //        LabelProcessName.Text = "";
+        //        ButtProcess.Visible = false;
+        //        dbProc.update("settings", "value='false'", "name='processing'");
+        //    }
+        //}
 
         public void Finish()
         {
@@ -2466,7 +2472,7 @@ namespace OwlBusinessStudio
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
         {
-            dbProc.update("settings", "value='false'", "name='processing'");
+            calculateGoods(true);
         }
 
         private void ButtPrintCheck_Click(object sender, EventArgs e)
@@ -2699,6 +2705,77 @@ namespace OwlBusinessStudio
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        int calcCheckCount = 4;
+        private void calculateGoods(bool start)
+        {
+            try
+            {
+                string url = "http://" + dbProc.getSetting("zoomag_api_url") + "/User?cmd=calculate_goods&password=zooadminpass&command=";
+                if (start)
+                {
+                    url += "start";
+                }
+                else
+                {
+                    url += "check";
+                }
+                WebRequest webRequest = WebRequest.Create(url);
+                WebResponse webResp = webRequest.GetResponse();
+                byte[] buff = new byte[webResp.ContentLength];
+                Stream stream = webResp.GetResponseStream();
+                stream.Read(buff, 0, buff.Length);
+                string xml = System.Text.Encoding.UTF8.GetString(buff);
+
+                using (XmlReader reader = XmlReader.Create(new StringReader(xml)))
+                {
+                    string status = "";
+                    string progress = "";
+                    while (reader.Read())
+                    {
+                        XmlNodeType type;
+                        type = reader.NodeType;
+                        if (type == XmlNodeType.Element)
+                        {
+                            if (reader.Name == "status")
+                            {
+                                status = reader.ReadElementContentAsString();
+                            }
+                            if (reader.Name == "progress")
+                            {
+                                progress = reader.ReadElementContentAsString() + "%";
+                            }
+                        }
+                    }
+
+                    if (status == "Готово")
+                    {
+                        calcCheckCount++;
+                        if (calcCheckCount > 3)
+                        {
+                            LabelProcessName.Text = "";
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        calcCheckCount = 0;
+                    }
+                    if (status == "Готово")
+                    {
+                        progress = "100%";
+                    }
+                    LabelProcessName.Text = status + " " + progress;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void TimerChecker_Tick(object sender, EventArgs e)
+        {
+            calculateGoods(false);
         }
     }
 }

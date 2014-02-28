@@ -92,7 +92,7 @@ public class GoodsCalculator extends SeparateThreadSingleTaskProcessor
                 dbProc.executeNonQuery(c);
                 progress = 70+(int)(30*(i*1.0/ordersToAcceptDistinct.size()));
             }
-            progress = 100;
+            progress = 0;
         }
         catch (Exception ex)
         {

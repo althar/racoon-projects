@@ -1,4 +1,4 @@
-var base_app_url = "http://85.159.44.59:8080";
+﻿var base_app_url = "http://85.159.44.59:8080";
 var base_port = "8085";
 var main_brands = ["Royal Canin", "Hills", "Eukanuba", "Purina", "Pro Plan", "Happy Dog", "Iams", "Arden Grange", "Acana", "Orijen"];
 var main_brands_pics = ["brand-royalcanin.gif", "brand-hills.gif", "brand-eukanuba.gif", "brand-purina.gif", "brand-proplan.gif", "brand-happydog.gif", "brand-iams.gif", "brand-ag.gif", "brand-acana.gif", "brand-orijen.gif"];

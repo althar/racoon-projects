@@ -103,6 +103,8 @@
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.GoodFilterValue = new System.Windows.Forms.ToolStripTextBox();
             this.RefreshGoodsButt = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.ButtExportGoods = new System.Windows.Forms.ToolStripButton();
             this.PanelSetQuantity = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.ButtOKQuantity = new System.Windows.Forms.Button();
@@ -201,8 +203,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this.ButtExportGoods = new System.Windows.Forms.ToolStripButton();
+            this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -503,7 +504,7 @@
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             this.toolStripMenuItem11.Size = new System.Drawing.Size(301, 22);
-            this.toolStripMenuItem11.Text = "Отменить пересчет товаров";
+            this.toolStripMenuItem11.Text = "Начать пересчет товаров";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
             // ButtAdv
@@ -894,6 +895,21 @@
             this.RefreshGoodsButt.Size = new System.Drawing.Size(23, 22);
             this.RefreshGoodsButt.Text = "Обновить";
             this.RefreshGoodsButt.Click += new System.EventHandler(this.RefreshGoodsButt_Click);
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ButtExportGoods
+            // 
+            this.ButtExportGoods.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtExportGoods.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportGoods.Image")));
+            this.ButtExportGoods.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtExportGoods.Name = "ButtExportGoods";
+            this.ButtExportGoods.Size = new System.Drawing.Size(23, 22);
+            this.ButtExportGoods.Text = "Выгрузить товары в Excel";
+            this.ButtExportGoods.Click += new System.EventHandler(this.ButtExportGoods_Click);
             // 
             // PanelSetQuantity
             // 
@@ -1852,20 +1868,11 @@
             // 
             this.DialogSaveYandexXML.Filter = "Яндекс маркет XML|*.yml";
             // 
-            // toolStripSeparator18
+            // TimerChecker
             // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
-            // 
-            // ButtExportGoods
-            // 
-            this.ButtExportGoods.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ButtExportGoods.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportGoods.Image")));
-            this.ButtExportGoods.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ButtExportGoods.Name = "ButtExportGoods";
-            this.ButtExportGoods.Size = new System.Drawing.Size(23, 22);
-            this.ButtExportGoods.Text = "Выгрузить товары в Excel";
-            this.ButtExportGoods.Click += new System.EventHandler(this.ButtExportGoods_Click);
+            this.TimerChecker.Enabled = true;
+            this.TimerChecker.Interval = 1000;
+            this.TimerChecker.Tick += new System.EventHandler(this.TimerChecker_Tick);
             // 
             // MainForm
             // 
@@ -2102,6 +2109,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
         private System.Windows.Forms.ToolStripButton ButtExportGoods;
+        private System.Windows.Forms.Timer TimerChecker;
     }
 }
 
