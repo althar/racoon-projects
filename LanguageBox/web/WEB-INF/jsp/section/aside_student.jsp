@@ -27,7 +27,7 @@
           <ul class="inner-nav" style="background: rgb(253, 253, 253);">
               <li><a href="#"><span class="bold">Все языки</span><span class="right-menu-item-bold">124</span></a></li>
               <li class="active"><a href="#"><span class="item-en">Английский</span><span class="right-menu-item">5</span></a></li>
-              <li><a href="#"><span class="item-ger"">Немецкий</span><span class="right-menu-item">15</span></a></li>
+              <li><a href="#"><span class="item-ger">Немецкий</span><span class="right-menu-item">15</span></a></li>
               <li><a href="#"><span class="item-fr">Французкий</span><span class="right-menu-item">55</span></a></li>
               <li><a href="#"><span class="item-it">Итальянский</span> <span class="right-menu-item">12</span></a></li>
               <li><a href="#"><span class="item-sp">Испанский</span><span class="right-menu-item">4</span></a></li>
