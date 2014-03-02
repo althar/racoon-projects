@@ -42,7 +42,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>LanguageBox - Dashboard</title>
+    <title>LanguageBox - Курсы</title>
 
 </head>
 
@@ -62,7 +62,7 @@
         <div id="content">
             <div id="content-outer">
                 <div id="content-inner">
-                    <jsp:include page="/WEB-INF/jsp/section/aside_student.jsp" >
+                    <jsp:include page="/WEB-INF/jsp/section/aside_menu.jsp" >
                         <jsp:param name="page" value="courses" />
                     </jsp:include>
 
@@ -81,7 +81,7 @@
                             </ul>
 
                             <h1 id="main-heading">
-                                Dashboard <span>This is the place where everything started</span>
+                                Курсы <span>Приобретенные и пробные версии.</span>
                             </h1>
                         </div>
 

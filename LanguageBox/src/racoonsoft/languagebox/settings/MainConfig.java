@@ -105,7 +105,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
         AccessInterceptor access = new AccessInterceptor();
         HistoryInterceptor history = new HistoryInterceptor();
         registry.addInterceptor(history).addPathPatterns("/**");
-        registry.addInterceptor(access).addPathPatterns("/service/**");
+        registry.addInterceptor(access).addPathPatterns("/**");
         access.dbProc = pgsqlDataSource();
         access.dbProc = pgsqlDataSource();
     }

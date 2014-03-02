@@ -84,6 +84,11 @@ public abstract class LanguageBoxController
         model.addObject("sells",bought_courses);
         return model;
     }
+    public ModelAndView addRoles(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        model.addObject("roles",roles(request));
+        return model;
+    }
     public ModelAndView addAchievement(ModelAndView model,HttpServletRequest request) throws Exception
     {
         ArrayList<DBRecord> bought_courses = student.getStudentAchievements(id(request));

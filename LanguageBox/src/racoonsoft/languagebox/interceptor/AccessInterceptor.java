@@ -54,8 +54,11 @@ public class AccessInterceptor extends LanguageBoxInterceptor
                 ||(!res.hasRole("TUTOR")&&!res.hasRole("SCHOOL")&&path.contains("/service/teacher")) // Not tutor and not school tries to access teacher`s page
                 ||(!res.hasRole("STUDENT")&&path.contains("/service/student"))) // Not school tries to access school`s page
         {
-            response.sendRedirect("/login");
-            return false;
+            if(path.contains("/service"))
+            {
+                response.sendRedirect("/login");
+                return false;
+            }
         }
         return true;
     }
