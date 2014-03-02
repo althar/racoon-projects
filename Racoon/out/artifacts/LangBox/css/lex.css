@@ -414,3 +414,15 @@
 .padding-top {
     padding-top: 10px;
 }
+
+.margin-left-300 {
+    margin-left: 300px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.no-margin {
+    margin: 0px;
+}
