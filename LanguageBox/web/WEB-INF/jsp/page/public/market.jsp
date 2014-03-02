@@ -62,7 +62,7 @@
         <div id="content">
             <div id="content-outer">
                 <div id="content-inner">
-                    <jsp:include page="/WEB-INF/jsp/section/aside_student.jsp" >
+                    <jsp:include page="/WEB-INF/jsp/section/aside_menu.jsp" >
                         <jsp:param name="page" value="market" />
                     </jsp:include>
 

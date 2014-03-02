@@ -58,8 +58,8 @@
       <div id="content">
         <div id="content-outer">
           <div id="content-inner">
-              <jsp:include page="/WEB-INF/jsp/section/aside_teacher.jsp" >
-                  <jsp:param name="page" value="main" />
+              <jsp:include page="/WEB-INF/jsp/section/aside_menu.jsp" >
+                  <jsp:param name="page" value="main_teacher" />
               </jsp:include>
 
             <!-- <div id="sidebar-separator"></div> -->

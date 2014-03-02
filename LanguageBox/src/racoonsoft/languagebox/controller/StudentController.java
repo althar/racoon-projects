@@ -25,12 +25,14 @@ public class StudentController extends LanguageBoxController
         model = addNews(model);
         model = addSells(model,request);
         model = addBoughtCourses(model,request);
+        model = addRoles(model,request);
         return model;
     }
     @RequestMapping("/courses")
     public ModelAndView courses(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/courses");
+        model = addRoles(model,request);
         Long user_id = id(request);
 
         return model;
@@ -39,6 +41,7 @@ public class StudentController extends LanguageBoxController
     public ModelAndView courseLesson(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/course_lesson");
+        model = addRoles(model,request);
         Long user_id = id(request);
 
         return model;
@@ -47,6 +50,7 @@ public class StudentController extends LanguageBoxController
     public ModelAndView courseMainMaterial(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/course_main_material");
+        model = addRoles(model,request);
         Long user_id = id(request);
 
         return model;
@@ -55,6 +59,7 @@ public class StudentController extends LanguageBoxController
     public ModelAndView courseMates(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/course_mates");
+        model = addRoles(model,request);
         Long user_id = id(request);
 
         return model;
@@ -63,6 +68,7 @@ public class StudentController extends LanguageBoxController
     public ModelAndView profile(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/student/profile");
+        model = addRoles(model,request);
         Long user_id = id(request);
 
         return model;

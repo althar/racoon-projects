@@ -71,8 +71,8 @@
         <div id="content">
             <div id="content-outer">
                 <div id="content-inner">
-                    <jsp:include page="/WEB-INF/jsp/section/aside_teacher.jsp">
-                        <jsp:param name="page" value="courses"/>
+                    <jsp:include page="/WEB-INF/jsp/section/aside_menu.jsp">
+                        <jsp:param name="page" value="library"/>
                     </jsp:include>
 
                     <section id="main" class="clearfix">

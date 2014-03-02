@@ -13,57 +13,40 @@ import java.io.FileInputStream;
 
 @Controller
 @RequestMapping("")
-public class PublicController
+public class PublicController extends LanguageBoxController
 {
     @RequestMapping("")
     public ModelAndView main()
     {
         return new ModelAndView("page/public/main");
     }
-    @RequestMapping("/functions")
-    public ModelAndView functions()
+    @RequestMapping("/profile")
+    public ModelAndView userProfile(HttpServletRequest request) throws Exception
     {
-        return new ModelAndView("page/public/functions");
-    }
-    @RequestMapping("/price")
-    public ModelAndView price()
-    {
-        return new ModelAndView("page/public/price");
-    }
-    @RequestMapping("/about")
-    public ModelAndView about()
-    {
-        return new ModelAndView("page/public/about");
-    }
-    @RequestMapping("/faq")
-    public ModelAndView faq()
-    {
-        return new ModelAndView("page/public/faq");
-    }
-    @RequestMapping("/partners")
-    public ModelAndView partners()
-    {
-        return new ModelAndView("page/public/partners");
-    }
-    @RequestMapping("/user_profile")
-    public ModelAndView userProfile()
-    {
-        return new ModelAndView("page/public/user_profile");
+        ModelAndView model = new ModelAndView("page/public/profile");
+        model = addRoles(model,request);
+        return model;
     }
     @RequestMapping("/teacher_review")
-    public ModelAndView teacherReview()
+    public ModelAndView teacherReview(HttpServletRequest request) throws Exception
     {
-        return new ModelAndView("page/public/teacher_review");
+        ModelAndView model = new ModelAndView("page/public/teacher_review");
+        model = addRoles(model,request);
+        return model;
     }
     @RequestMapping("/course_review")
-    public ModelAndView courseReview()
+    public ModelAndView courseReview(HttpServletRequest request) throws Exception
     {
-        return new ModelAndView("page/public/course_review");
+        ModelAndView model = new ModelAndView("page/public/course_review");
+        model = addRoles(model,request);
+        return model;
     }
     @RequestMapping("/market")
-    public ModelAndView market()
+    public ModelAndView market(HttpServletRequest request) throws Exception
     {
-        return new ModelAndView("page/public/market");
+        ModelAndView model = new ModelAndView("page/public/market");
+        model = addRoles(model,request);
+        return model;
     }
 
 //    @RequestMapping("/course_image/{path}")
