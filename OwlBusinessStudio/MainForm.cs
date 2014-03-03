@@ -144,7 +144,7 @@ namespace OwlBusinessStudio
         }
         public void AcceptAllOrders()
         {
-            calculateGoods(true);
+            //calculateGoods(true);
         }
         //public void AcceptAllOrders()
         //{

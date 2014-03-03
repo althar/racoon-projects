@@ -175,6 +175,8 @@
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.ButtGenerateReceipt = new System.Windows.Forms.ToolStripButton();
             this.DataGridViewDeliveryLists = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtLog = new System.Windows.Forms.TextBox();
             this.ImageListMain = new System.Windows.Forms.ImageList(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.MenuButtAuthorization = new System.Windows.Forms.ToolStripButton();
@@ -204,8 +206,6 @@
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.TxtLog = new System.Windows.Forms.TextBox();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -228,8 +228,8 @@
             this.PanelOpenDeliverListForm.SuspendLayout();
             this.toolStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBarMain
@@ -1629,6 +1629,25 @@
             this.DataGridViewDeliveryLists.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.DataGridViewDeliveryLists_CellStateChanged);
             this.DataGridViewDeliveryLists.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.DataGridViewDeliveryLists_RowStateChanged);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.TxtLog);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(976, 522);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Отладка";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // TxtLog
+            // 
+            this.TxtLog.Location = new System.Drawing.Point(8, 3);
+            this.TxtLog.Multiline = true;
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtLog.Size = new System.Drawing.Size(960, 305);
+            this.TxtLog.TabIndex = 0;
+            // 
             // ImageListMain
             // 
             this.ImageListMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageListMain.ImageStream")));
@@ -1878,25 +1897,6 @@
             this.TimerChecker.Interval = 1000;
             this.TimerChecker.Tick += new System.EventHandler(this.TimerChecker_Tick);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.TxtLog);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(976, 522);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Отладка";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // TxtLog
-            // 
-            this.TxtLog.Location = new System.Drawing.Point(8, 3);
-            this.TxtLog.Multiline = true;
-            this.TxtLog.Name = "TxtLog";
-            this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtLog.Size = new System.Drawing.Size(960, 305);
-            this.TxtLog.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1950,10 +1950,10 @@
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
