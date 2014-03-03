@@ -51,13 +51,19 @@ public class GoodsCalculator extends SeparateThreadSingleTaskProcessor
         try
         {
             progress = 0;
+            // 0) Prepare
+            for(int i=0; i<10; i++)
+            {
+                Thread.sleep(1000);
+                progress++;
+            }
             // 1) New orders with delivery...
             ArrayList<DBRecord> ordersToAccept = dbProc.getRecords("SELECT * FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=true");
             for(int i = 0; i < ordersToAccept.size(); i++)
             {
                 Integer count = ordersToAccept.get(i).getIntValue("count");
-                Integer good_id = (int) ordersToAccept.get(i).getIntValue("good_id");
-                Integer order_id = (int) ordersToAccept.get(i).getIntValue("id");
+                Integer good_id = ordersToAccept.get(i).getIntValue("good_id");
+                //Integer order_id = ordersToAccept.get(i).getIntValue("id");
                 String c = "";
                 if(count > 0)
                 {
@@ -68,7 +74,8 @@ public class GoodsCalculator extends SeparateThreadSingleTaskProcessor
                     c = "UPDATE goods SET quantity=quantity+" + ((Integer) Math.abs(count)).toString() + " WHERE id=" + good_id.toString() + "; ";
                 }
                 dbProc.executeNonQuery(c);
-                progress = (int)(40*(i*1.0/ordersToAccept.size()));
+                progress = 10+(int)(40*(i*1.0/ordersToAccept.size()));
+                Thread.sleep(50);
             }
 
             // 2) Move self gets to next day...
@@ -76,10 +83,11 @@ public class GoodsCalculator extends SeparateThreadSingleTaskProcessor
             ArrayList<DBRecord> ordersToMoveDistinct = dbProc.getRecords("SELECT DISTINCT id FROM orders_with_details WHERE deliver_date<date(now()) AND status_id=1 AND deliver=false");
             for(int i = 0; i < ordersToMoveDistinct.size(); i++)// Selfget - move order one day forward...
             {
-                Integer order_id = (int) ordersToMoveDistinct.get(i).getIntValue("id");
+                Integer order_id = ordersToMoveDistinct.get(i).getIntValue("id");
                 String c = "UPDATE orders SET deliver_date = deliver_date+INTERVAL '1 day' WHERE id=" + order_id.toString() + ";";
                 dbProc.executeNonQuery(c);
                 progress = 40+(int)(30*(i*1.0/ordersToMoveDistinct.size()));
+                Thread.sleep(50);
             }
 
             // 3) Change deliver statuses...
@@ -91,6 +99,7 @@ public class GoodsCalculator extends SeparateThreadSingleTaskProcessor
                 String c = "UPDATE orders SET status=3 WHERE id=" + order_id.toString() + ";";
                 dbProc.executeNonQuery(c);
                 progress = 70+(int)(30*(i*1.0/ordersToAcceptDistinct.size()));
+                Thread.sleep(50);
             }
             progress = 0;
         }
