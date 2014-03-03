@@ -1,80 +1,208 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
 <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <title>Language Box</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" media="screen">
+
+    <!-- Uniform Stylesheet -->
+    <link rel="stylesheet" href="/plugins/uniform/css/uniform.default.css" media="screen">
+
+    <!-- Plugin Stylsheets first to ease overrides -->
+
+    <!-- End Plugin Stylesheets -->
+
+    <!-- Main Layout Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/fonts/icomoon/style.css" media="screen">
+    <link rel="stylesheet" href="/assets/css/login.css" media="screen">
+    <link rel="stylesheet" href="/plugins/zocial/zocial.css" media="screen">
+
+    <link rel="stylesheet" href="/custom_css/custom.css" media="screen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic" media="screen" rel="stylesheet" type="text/css" />
 
-    <link href="/css/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/css/devise.css" media="screen" rel="stylesheet" type="text/css" />
-
-    <script src="/js/jq/jquery-2.0.3.js" type="text/javascript"></script>
-    <script src="/js/common/all.js" type="text/javascript"></script>
 </head>
 <body class='devise devise_registration'>
-<%@ include file="/WEB-INF/jsp/section/header.jsp" %>
-<div class='main_content'>
-    <div class='main_content-inner row'>
-        <div class='page_body'>
-            <div class='page_body-inner'>
-                <h1 class='text-center'>Выберите в качесте кого вы будете регистрироваться</h1>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Ученик</li>
-                        <li class='bullet-item'>Выполнение домашних заданий</li>
-                        <li class='bullet-item'>Доступ к курсам через интернет</li>
-                        <li class='bullet-item'>Возможность заниматься: на работе, в дороге, дома.</li>
-                        <li class='bullet-item'>Приобретение курсов</li>
-                        <li class='bullet-item'>Возможность самостоятельного обучения</li>
-                        <li class='bullet-item'>Измерение роста знаний</li>
-                        <li class='bullet-item'>Геймификация процесса обучения</li>
-                        <li class='bullet-item'>Удобное взаимодействие с репетитором</li>
-                        <li class='cta-button'>
-                            <a class='button' href='/registration?role=STUDENT&do_registration=false'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Репетитор</li>
-                        <li class='bullet-item'>Создание курсов</li>
-                        <li class='bullet-item'>Продажа курсов</li>
-                        <li class='bullet-item'>Приобретение готовых методик</li>
-                        <li class='bullet-item'>Вся библиотека в одном месте</li>
-                        <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                        <li class='cta-button'>
-                            <a class='button' href='/registration?role=TUTOR&do_registration=false'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class='small-4 column'>
-                    <ul class='pricing-table'>
-                        <li class='title'>Школа иностранных языков</li>
-                        <li class='bullet-item'>Создание курсов</li>
-                        <li class='bullet-item'>Продажа курсов</li>
-                        <li class='bullet-item'>Приобретение готовых методик</li>
-                        <li class='bullet-item'>Геймификация процесса обучения</li>
-                        <li class='bullet-item'>Маркетинговый бонус для  ученика</li>
-                        <li class='bullet-item'>Удобное взаимодействие с учеником</li>
-                        <li class='cta-button'>
-                            <a class='button' href='/registration?role=SCHOOL&do_registration=false'>Регистрация</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<div style="width: 1000px; margin: 0 auto;">
+<div id="login-wrap" style="display: inline-block; vertical-align: top; margin: 10px;">
+    <div id="login-ribbon"><i class="icon-lock"></i></div>
+
+    <div id="login-buttons">
+
+
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-inverse disabled" data-target="#register-form"><i class="icon-edit"></i></button>
+        </div>
+
+
+
+    </div>
+
+    <div id="login-inner" class="login-inset rotating" style="height: 472px;">
+        <div id="login-circle">
+            <section class="login-inner-form active" data-angle="0" style="-webkit-transform: rotate(0deg);">
+                <h1>Ученик</h1>
+                    <div class="control-group">
+                        <label class="control-label">Выполнение домашних заданий</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Доступ к курсам через интернет</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Возможность заниматься: на работе, в дороге, дома.</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Приобретение курсов</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Возможность самостоятельного обучения</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Измерение роста знаний</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Геймификация процесса обучения</label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Удобное взаимодействие с репетитором</label>
+                    </div>
+                    <div class="form-actions">
+                        <a class='button' href='/registration?role=STUDENT&do_registration=false'>
+                            <button class="btn btn-danger btn-block btn-large">Регистрация</button>
+                        </a>
+
+                    </div>
+            </section>
+
+
+
         </div>
     </div>
 </div>
-<%@ include file="/WEB-INF/jsp/section/footer.jsp" %>
+<div id="login-wrap" style="display: inline-block; vertical-align: top; margin: 10px;">
+    <div id="login-ribbon"><i class="icon-lock"></i></div>
+
+    <div id="login-buttons">
+
+
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-inverse disabled" data-target="#register-form"><i class="icon-edit"></i></button>
+        </div>
+
+
+
+    </div>
+
+    <div class="login-inset rotating">
+        <div id="login-circle">
+            <section id="register-form" class="login-inner-form active" data-angle="0" style="-webkit-transform: rotate(0deg);">
+                <h1>Репетитор</h1>
+                <div class="control-group">
+                    <label class="control-label">Создание курсов</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Продажа курсов</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Приобретение готовых методик</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Вся библиотека в одном месте</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Удобное взаимодействие с учеником</label>
+                </div>
+                <div class="form-actions">
+                    <a class='button' href='/registration?role=TUTOR&do_registration=false'>
+                        <button class="btn btn-danger btn-block btn-large">Регистрация</button>
+                    </a>
+
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+</div>
+<div id="login-wrap" style="display: inline-block; vertical-align: top; margin: 10px;">
+    <div id="login-ribbon"><i class="icon-lock"></i></div>
+
+    <div id="login-buttons">
+
+
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-inverse disabled" data-target="#register-form"><i class="icon-edit"></i></button>
+        </div>
+
+
+
+    </div>
+
+    <div class="login-inset rotating">
+        <div id="login-circle">
+            <section id="register-form" class="login-inner-form active" data-angle="0" style="-webkit-transform: rotate(0deg);">
+                <h1>Школа иностранных языков</h1>
+                <div class="control-group">
+                    <label class="control-label">Создание курсов</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Продажа курсов</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Приобретение готовых методик</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Геймификация процесса обучения</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Маркетинговый бонус для  ученика</label>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Удобное взаимодействие с учеником</label>
+                </div>
+                <div class="form-actions">
+                    <a class='button' href='/registration?role=SCHOOL&do_registration=false'>
+                        <button class="btn btn-danger btn-block btn-large">Регистрация</button>
+                    </a>
+
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- Core Scripts -->
+<script src="/assets/js/libs/jquery-1.8.3.min.js"></script>
+<script src="/assets/js/libs/jquery.placeholder.min.js"></script>
+
+<!-- Login Script -->
+<script src="/assets/js/login.js"></script>
+
+<!-- Validation -->
+<script src="/plugins/validate/jquery.validate.min.js"></script>
+
+<!-- Uniform Script -->
+<script src="/plugins/uniform/jquery.uniform.min.js"></script>
 </body>
 </html>
