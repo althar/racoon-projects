@@ -204,6 +204,8 @@
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TxtLog = new System.Windows.Forms.TextBox();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -227,6 +229,7 @@
             this.toolStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBarMain
@@ -524,6 +527,7 @@
             this.TabControlMain.Controls.Add(this.TabGoods);
             this.TabControlMain.Controls.Add(this.TabPurchase);
             this.TabControlMain.Controls.Add(this.TabDeliveryLists);
+            this.TabControlMain.Controls.Add(this.tabPage1);
             this.TabControlMain.ImageList = this.ImageListMain;
             this.TabControlMain.Location = new System.Drawing.Point(0, 66);
             this.TabControlMain.Name = "TabControlMain";
@@ -1874,6 +1878,25 @@
             this.TimerChecker.Interval = 1000;
             this.TimerChecker.Tick += new System.EventHandler(this.TimerChecker_Tick);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.TxtLog);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(976, 522);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Отладка";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // TxtLog
+            // 
+            this.TxtLog.Location = new System.Drawing.Point(8, 3);
+            this.TxtLog.Multiline = true;
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtLog.Size = new System.Drawing.Size(960, 305);
+            this.TxtLog.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1929,6 +1952,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2110,6 +2135,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
         private System.Windows.Forms.ToolStripButton ButtExportGoods;
         private System.Windows.Forms.Timer TimerChecker;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox TxtLog;
     }
 }
 

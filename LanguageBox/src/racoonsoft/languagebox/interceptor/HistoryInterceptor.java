@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HistoryInterceptor extends LanguageBoxInterceptor
 {
     @Autowired
-    private PostgresqlDataSource dbProc;
+    public PostgresqlDataSource dbProc;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {

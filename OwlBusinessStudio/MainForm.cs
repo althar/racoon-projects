@@ -2706,7 +2706,7 @@ namespace OwlBusinessStudio
                 MessageBox.Show(ex.ToString());
             }
         }
-        int calcCheckCount = 4;
+        int calcCheckCount = 0;
         private void calculateGoods(bool start)
         {
             try
@@ -2750,6 +2750,8 @@ namespace OwlBusinessStudio
 
                     if (status == "Готово")
                     {
+                        progress = "100%";
+                        TimerChecker.Interval = 2000;
                         calcCheckCount++;
                         if (calcCheckCount > 3)
                         {
@@ -2759,18 +2761,15 @@ namespace OwlBusinessStudio
                     }
                     else
                     {
+                        TimerChecker.Interval = 500;
                         calcCheckCount = 0;
-                    }
-                    if (status == "Готово")
-                    {
-                        progress = "100%";
                     }
                     LabelProcessName.Text = status + " " + progress;
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                TxtLog.Text+=ex.ToString();
             }
         }
         private void TimerChecker_Tick(object sender, EventArgs e)
