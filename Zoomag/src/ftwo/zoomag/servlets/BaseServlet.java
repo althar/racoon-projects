@@ -5,6 +5,7 @@ import ftwo.library.logging.Logger;
 import ftwo.library.mail.MailProcessor;
 import ftwo.library.sms.SMSProcessor;
 import ftwo.zoomag.database.DatabaseProcessor;
+import ftwo.zoomag.service.GoodsCalculatorCaller;
 import ftwo.zoomag.service.OldSiteIntegrator;
 import ftwo.zoomag.structure.Warehouse;
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class BaseServlet extends ftwo.library.web.BaseServlet
     private static boolean IsStarted = false;
     private static MailProcessor MailProc;
     public static OldSiteIntegrator siteIntegrator;
+    public static GoodsCalculatorCaller calculatorCaller;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
@@ -73,10 +75,12 @@ public class BaseServlet extends ftwo.library.web.BaseServlet
             DBProc.connect();
             DBProc.loadSettings();
             siteIntegrator = new OldSiteIntegrator("site integrator");
+            calculatorCaller = new GoodsCalculatorCaller("goods_calculator_caller",dbProc());
             Warehouse.load();
             //MailProc = new MailProcessor();
 
             //siteIntegrator.start();
+            calculatorCaller.start();
             SmsProc = new SMSProcessor();
             MailProc = new MailProcessor();
             MailProc.start();

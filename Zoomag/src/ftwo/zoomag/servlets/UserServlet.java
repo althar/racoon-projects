@@ -549,21 +549,9 @@ public class UserServlet extends BaseServlet {
             {
                 String password = request.getParameter("password");
                 String command = request.getParameter("command");
-                if(password.equalsIgnoreCase("zooadminpass"))
-                {
-                    GoodsCalculator calculator = GoodsCalculator.instance(dbProc());
-                    if(calculator.getStatus().equalsIgnoreCase("Готово")&&command.equalsIgnoreCase("start"))
-                    {
-                        calculator.start();
-                    }
-                    XMLProcessor proc = new XMLProcessor();
-                    proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
-                    proc.addNode("root", "data");
-                    proc.addNode("root.data", "status", calculator.getStatus());
-                    proc.addNode("root.data", "progress", calculator.getProgress());
-                    out.print(proc.toXMLString());
-                    out.close();
-                }
+                String xml = calculateGoods(password,command);
+                out.print(xml);
+                out.close();
             }
             else if(cmd.equalsIgnoreCase("recover_password"))
             {
@@ -619,7 +607,25 @@ public class UserServlet extends BaseServlet {
 			throws ServletException, IOException {
 		processRequest(request, response);
 	}
-
+    public static String calculateGoods(String password,String command) throws Exception
+    {
+        if(password.equalsIgnoreCase("zooadminpass"))
+        {
+            GoodsCalculator calculator = GoodsCalculator.instance(dbProc());
+            if(calculator.getStatus().equalsIgnoreCase("Готово")&&command.equalsIgnoreCase("start"))
+            {
+                dbProc().executeNonQuery("INSERT INTO calculations (created) VALUES (now())");
+                calculator.start();
+            }
+            XMLProcessor proc = new XMLProcessor();
+            proc.addNode("root", "code", REQUEST_PROCESSED_SUCCESSFULLY);
+            proc.addNode("root", "data");
+            proc.addNode("root.data", "status", calculator.getStatus());
+            proc.addNode("root.data", "progress", calculator.getProgress());
+            return proc.toXMLString();
+        }
+        return "";
+    }
 	/**
 	 * Handles the HTTP <code>POST</code> method.
 	 * @param request servlet request
