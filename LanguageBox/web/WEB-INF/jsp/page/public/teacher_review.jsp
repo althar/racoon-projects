@@ -62,8 +62,8 @@
         <div id="content">
             <div id="content-outer">
                 <div id="content-inner">
-                    <jsp:include page="/WEB-INF/jsp/section/aside_student.jsp" >
-                        <jsp:param name="page" value="teacher_review" />
+                    <jsp:include page="/WEB-INF/jsp/section/aside_menu.jsp" >
+                        <jsp:param name="page" value="profile" />
                     </jsp:include>
 
                     <!-- <div id="sidebar-separator"></div> -->

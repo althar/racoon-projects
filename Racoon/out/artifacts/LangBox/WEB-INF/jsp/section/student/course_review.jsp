@@ -63,8 +63,8 @@
         <div class="mt-10">
             <button class="btn btn-info">Задать вопрос автору</button>
 
-            <img src="/img/social/social_1.png"></img>
-            <img src="/img/social/social_2.png"></img>
+            <img src="/img/social/social_1.png">
+            <img src="/img/social/social_2.png">
         </div>
     </div>
 </div>
