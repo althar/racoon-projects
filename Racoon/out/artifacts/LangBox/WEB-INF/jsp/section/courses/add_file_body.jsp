@@ -10,7 +10,7 @@
     <span class="title">Добавить файл</span>
   </div>
   <div class="widget-content">
-    <form:form method="post" modelAttribute="add-file-form" enctype="multipart/form-data" action="/service/teacher/upload_files" accept-charset="UTF-8">
+    <form:form method="post" modelAttribute="add-file-form" enctype="multipart/form-data" action="/service/upload_files" accept-charset="UTF-8">
       <input type="hidden" id="form-folder-id" value="" name="folder_id">
     </form:form>
     <input type="file" class="add-file-input" name="files" multiple>

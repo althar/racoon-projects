@@ -5,6 +5,8 @@ import org.springframework.binding.convert.service.DefaultConversionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
@@ -20,7 +22,7 @@ import racoonsoft.languagebox.resolvers.AsyncMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import java.util.*;
 
 @EnableWebMvc
 @Configuration
@@ -79,7 +81,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
         converter.setObjectMapper(new ObjectMapper());
+        org.springframework.http.converter.ByteArrayHttpMessageConverter imageConv = new ByteArrayHttpMessageConverter();
+        ArrayList<MediaType> mediaTypes = new ArrayList<MediaType>();
+        mediaTypes.add(MediaType.IMAGE_JPEG);
+        mediaTypes.add(MediaType.IMAGE_GIF);
+        mediaTypes.add(MediaType.IMAGE_PNG);
+        imageConv.setSupportedMediaTypes(mediaTypes);
         converters.add(converter);
+        converters.add(imageConv);
     }
 
 }

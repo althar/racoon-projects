@@ -32,7 +32,7 @@ public class CourseService extends LanguageBoxService
         }
         return course;
     }
-    public Long createCourse(Long userId, String name,String level, Boolean isPublic,Double price, String description,String target,String type) throws Exception
+    public Long createCourse(Long userId, String name,String level, Boolean isPublic,Double price, String description,String target,String type,Long course_preview_id,String language) throws Exception
     {
         HashMap<String,Object> pars = new HashMap<String, Object>();
         pars.put("user_id",userId);
@@ -43,11 +43,13 @@ public class CourseService extends LanguageBoxService
         pars.put("description",description);
         pars.put("target",target);
         pars.put("type",type);
+        pars.put("language",language);
+        pars.put("preview_image_id",course_preview_id);
         Long id = dbProc.executeInsert("course",pars);
         saveLesson(userId, id,null, "Основные материалы", "MAIN_MATERIAL", "", "Основные материалы курса", true,new Long[0]);
         return id;
     }
-    public Long updateCourse(Long id, Long userId, String name, String level, Boolean isPublic, Double price, String description, String target, String type) throws Exception
+    public Long updateCourse(Long id, Long userId, String name, String level, Boolean isPublic, Double price, String description, String target, String type,Long course_preview_id,String language) throws Exception
     {
         HashMap<String,Object> pars = new HashMap<String, Object>();
         pars.put("user_id",userId);
@@ -58,6 +60,8 @@ public class CourseService extends LanguageBoxService
         pars.put("description",description);
         pars.put("target",target);
         pars.put("type",type);
+        pars.put("language",language);
+        pars.put("preview_image_id",course_preview_id);
         dbProc.executeUpdate("course", pars, "id=" + id.toString()+" AND user_id="+userId);
         return id;
     }

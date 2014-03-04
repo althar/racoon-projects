@@ -15,7 +15,7 @@
     </div>
     <div class="widget-content form-container">
 
-        <form class="form-horizontal course-edit-form">
+        <form  class="form-horizontal course-edit-form" method="post" enctype="multipart/form-data" action="/service/upload_image" accept-charset="UTF-8">
 
             <div class="control-group">
                 <label class="control-label" for="name">Название курса</label>
@@ -42,17 +42,13 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="sale">Продажа</label>
+                <label class="control-label" for="sale">Язык</label>
 
                 <div class="controls">
-                    <select id="sale" name="sale" class="span12">
-                        <option selected="" value="Все уровни">Все уровни</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Elementary">Elementary</option>
-                        <option value="Pre-intermediate">Pre-intermediate</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Upper-Intermediate">Upper-Intermediate</option>
-                        <option value="Advance">Advance</option>
+                    <select id="language" name="language" class="span12">
+                        <option selected="selected" value="Английский">Английский</option>
+                        <option value="Немецкий">Немецкий</option>
+                        <option value="Французский">Французский</option>
                     </select>
                 </div>
             </div>
@@ -103,7 +99,11 @@
                 <label class="control-label" for="pic">Обложка</label>
 
                 <div class="controls">
-                    <input type="file" id="pic" name="pic">
+                    <input type="file" id="pic" name="files" accept="image/*">
+                    <input type="hidden" id="course_preview_id" name="course_preview_id">
+                    <br>
+                    <img id="course_preview_pic">
+                    <br>
                     <button type="button" class="btn btn-success add-course-preview-butt">Загрузить</button>
                     <button type="button" class="btn btn-danger remove-course-preview-butt">Удалить</button>
                 </div>
@@ -133,8 +133,10 @@
         </div>
     </div>
     <div class="widget-content form-container">
-
-        <form class="form-horizontal course-edit-form">
+        <%--<form method="post" id="add-image-form" enctype="multipart/form-data" action="/service/upload_image" accept-charset="UTF-8">--%>
+            <%--<input type="file" id="pic" name="files">--%>
+        <%--</form>--%>
+        <form class="form-horizontal course-edit-form" method="post" enctype="multipart/form-data" action="/service/upload_image" accept-charset="UTF-8">
             <input type="hidden" name="course_id" value="${course.getLongValue('id')}">
             <div class="control-group">
                 <label class="control-label" for="name">Название курса</label>
@@ -181,17 +183,13 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="sale">Продажа</label>
+                <label class="control-label" for="language">Язык</label>
 
                 <div class="controls">
-                    <select id="sale" name="sale" class="span12">
-                        <option selected="" value="Все уровни">Все уровни</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Elementary">Elementary</option>
-                        <option value="Pre-intermediate">Pre-intermediate</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Upper-Intermediate">Upper-Intermediate</option>
-                        <option value="Advance">Advance</option>
+                    <select id="language" name="language" class="span12">
+                        <option value="Английский" <c:if test="${course.getStringValue('language')=='Английский'}">selected="selected"</c:if>>Английский</option>
+                        <option value="Немецкий"<c:if test="${course.getStringValue('language')=='Немецкий'}">selected="selected"</c:if>>Немецкий</option>
+                        <option value="Французский"<c:if test="${course.getStringValue('language')=='Французский'}">selected="selected"</c:if>>Французский</option>
                     </select>
                 </div>
             </div>
@@ -283,7 +281,11 @@
                 <label class="control-label" for="pic">Обложка</label>
 
                 <div class="controls">
-                    <input type="file" id="pic" name="pic">
+                    <input type="file" id="pic" name="files" accept="image/*">
+                    <input type="hidden" id="course_preview_id" name="course_preview_id" value="${course.getLongValue('preview_image_id')}">
+                    <br>
+                    <img id="course_preview_pic" src="/get_image/${course.getLongValue('preview_image_id')}">
+                    <br>
                     <button type="button" class="btn btn-success add-course-preview-butt">Загрузить</button>
                     <button type="button" class="btn btn-danger remove-course-preview-butt">Удалить</button>
                 </div>

@@ -358,11 +358,33 @@ courses =
         $(".add-course-preview-butt").unbind("click");
         $(".add-course-preview-butt").click(function () {
             // Send picture and return id of picture
+            $("#course_preview_pic").attr("src","/img/loader.gif");
+            var formData = new FormData($(".course-edit-form")[0]);
+            $.ajax({
+                url: "/service/upload_image",  //Server script to process data
+                type: 'POST',
+                success: function (image_id) {
+                    $("#course_preview_id").val(image_id);
+                    $("#course_preview_pic").attr("src","/get_image/"+image_id);
+                },
+                error: function () {
+                    //alert("Что-то пошло не так. Попробуйте снова через час.");
+                    //$(".library-loader").hide();
+                },
+                // Form data
+                data: formData,
+                //Options to tell jQuery not to process data or worry about content-type.
+                cache: false,
+                contentType: false,
+                processData: false
+            });
             // Show picture
         });
         $(".remove-course-preview-butt").unbind("click");
         $(".remove-course-preview-butt").click(function () {
-            $(".add-course-preview-butt").removeAttr("preview-id");
+            $("#course_preview_id").val("");
+            $("#course_preview_id").removeAttr("value");
+            $("#course_preview_pic").attr("src","");
         });
         $(".save-course-butt").unbind("click");
         $(".save-course-butt").click(function () {
@@ -539,7 +561,6 @@ courses =
             success: function (html) {
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
-                alert("!");
                 $(".numeric").autoNumeric('init', {mDec: 2, aSep: '', vMax: '999999.00', vMin: '0.00'});
                 currentCourseSection = "courses_edit";
                 courses.bindCoursesControls();

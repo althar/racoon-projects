@@ -1,5 +1,6 @@
 package racoonsoft.languagebox.service;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import racoonsoft.languagebox.database.PostgresqlDataSource;
@@ -9,6 +10,9 @@ import racoonsoft.languagebox.structure.UploadingFileStatus;
 import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.processors.SeparateThreadProcessor;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,6 +26,7 @@ public class UploadProcessor extends SeparateThreadProcessor
     protected LibraryService library;
 
     public static String uploadMaterialPath;
+    public static String uploadImagePath;
 
     private static HashMap<Long,ArrayList<UploadingFile>> userUploadingFiles = new HashMap<Long, ArrayList<UploadingFile>>();
     private static HashMap<Long,FileTransferProgress> userTransferringFiles = new HashMap<Long, FileTransferProgress>();
@@ -31,10 +36,11 @@ public class UploadProcessor extends SeparateThreadProcessor
         super("File upload processor");
 
     }
-    public UploadProcessor(String materialsPath)
+    public UploadProcessor(String materialsPath,String imagePath)
     {
         super("File upload processor");
         uploadMaterialPath = materialsPath;
+        uploadImagePath = imagePath;
     }
 
     public void addFileToUpload(Long userId, Long folderId, CommonsMultipartFile multipartFile) throws Exception
@@ -67,6 +73,27 @@ public class UploadProcessor extends SeparateThreadProcessor
         {
             addFileToUpload(userId,folderId,multipartFiles[i]);
         }
+    }
+    public byte[] getImage(Long id) throws Exception
+    {
+        FileInputStream in = new FileInputStream(UploadProcessor.uploadImagePath+id);
+        byte[] res = IOUtils.toByteArray(in);
+        in.close();
+        return res;
+    }
+    public Long uploadFile(CommonsMultipartFile multipartFile) throws Exception
+    {
+        byte[] buff = multipartFile.getBytes();
+        HashMap<String,Object> pars = new HashMap<String, Object>();
+        pars.put("name",multipartFile.getName());
+        pars.put("size",buff.length);
+        Long id = dbProc.executeInsert("image",pars);
+        File f = new File(UploadProcessor.uploadImagePath+id);
+        FileOutputStream file = new FileOutputStream(f,false);
+        file.write(buff);
+        file.flush();
+        file.close();
+        return id;
     }
 
     public synchronized static void setFileTransfer(Long userId, Long transferId, Long total, Long transferred)
