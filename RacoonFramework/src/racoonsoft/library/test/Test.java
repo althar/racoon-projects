@@ -29,13 +29,11 @@ public class Test
 	    long start = new Date().getTime();
         try
         {
-            String val = "ham";
-            HashMap<String,Object> map1 = new HashMap<String, Object>();
-            map1.put("val",val);
-            val = (String)map1.get("val");
-            val = "ham1";
+            HashMap<String,String> headers = new HashMap<String, String>();
+            headers.put("Cookie","JSESSIONID=2vzpvkmiy9hn1x02elzqh7nhe");
+            String res = HTTPClient.sendHTTPSRequestWithHeaders("https://my-fin.ru/api/bitrix/itemList","GET",headers,new byte[0]);
 
-            System.out.println(map1.toString());
+            System.out.println(res);
 
         }
         catch(Exception ex)

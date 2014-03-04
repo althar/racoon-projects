@@ -11,6 +11,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.WebContentInterceptor;
 import racoonsoft.languagebox.database.PostgresqlDataSource;
 import racoonsoft.languagebox.interceptor.AccessInterceptor;
 import racoonsoft.languagebox.interceptor.HistoryInterceptor;
@@ -41,6 +42,8 @@ public class MainConfig extends WebMvcConfigurerAdapter
 
     @Value("${upload.material_path}")
     private String materialPath;
+    @Value("${upload.image_path}")
+    private String imagePath;
 
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer()
@@ -89,7 +92,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
     {
         try
         {
-            UploadProcessor proc = new UploadProcessor(materialPath);
+            UploadProcessor proc = new UploadProcessor(materialPath,imagePath);
             proc.start();
             return proc;
         }
@@ -104,8 +107,14 @@ public class MainConfig extends WebMvcConfigurerAdapter
     public void addInterceptors(InterceptorRegistry registry) {
         AccessInterceptor access = new AccessInterceptor();
         HistoryInterceptor history = new HistoryInterceptor();
+        WebContentInterceptor cacheInter = new WebContentInterceptor();
+        cacheInter.setCacheSeconds(864000);
+        cacheInter.setUseExpiresHeader(true);
+        cacheInter.setUseCacheControlHeader(true);
+        cacheInter.setUseCacheControlNoStore(true);
         registry.addInterceptor(history).addPathPatterns("/**");
         registry.addInterceptor(access).addPathPatterns("/**");
+        registry.addInterceptor(cacheInter).addPathPatterns("/get_image/**");
         history.dbProc = pgsqlDataSource();
         access.dbProc = pgsqlDataSource();
     }

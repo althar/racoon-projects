@@ -76,6 +76,15 @@ public class ServiceController extends LanguageBoxController
         uploader.addFilesToUpload(id(request),folder_id,uploadForm.getFiles());
         return new ModelAndView("document/plain");
     }
+    @RequestMapping("/upload_image")
+    public ModelAndView uploadImage(@ModelAttribute("uploadForm")MultipartFilesStructure uploadForm,
+                                    Model map,HttpServletRequest request) throws Exception
+    {
+        Long id = uploader.uploadFile(uploadForm.getFiles()[0]);
+        ModelAndView model = new ModelAndView("document/plain");
+        model.addObject("value",id);
+        return model;
+    }
     @RequestMapping("/delete")
     public ModelAndView delete(HttpServletRequest request, HttpServletResponse response, Long id,String type) throws Exception
     {
@@ -158,17 +167,17 @@ public class ServiceController extends LanguageBoxController
     }
 
     @RequestMapping("/save_course")
-    public ModelAndView saveCourse(HttpServletRequest request, HttpServletResponse response,Long course_id, String name, String lvl,String sale,String target,String type,Double price,String description) throws Exception
+    public ModelAndView saveCourse(@ModelAttribute("uploadForm")MultipartFilesStructure uploadForm,HttpServletRequest request, HttpServletResponse response,Long course_id, String name, String lvl,String sale,String target,String type,Double price,String description,Long course_preview_id,String language) throws Exception
     {
         ModelAndView model = new ModelAndView("document/plain");
         Long id = 0l;
         if(course_id!=null)
         {
-            id = course.updateCourse(course_id,id(request),name,lvl,true,price,description,target,type);
+            id = course.updateCourse(course_id,id(request),name,lvl,true,price,description,target,type,course_preview_id,language);
         }
         else
         {
-            id = course.createCourse(id(request),name,lvl,true,price,description,target,type);
+            id = course.createCourse(id(request),name,lvl,true,price,description,target,type,course_preview_id,language);
         }
         model.addObject("value",id);
         return model;

@@ -1,15 +1,19 @@
 package racoonsoft.languagebox.controller;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
+import java.awt.image.BufferedImage;
+import java.io.*;
 
 @Controller
 @RequestMapping("")
@@ -49,10 +53,13 @@ public class PublicController extends LanguageBoxController
         return model;
     }
 
-//    @RequestMapping("/course_image/{path}")
-//    @ResponseBody
-//    public byte[] downloadCourseImage(HttpServletRequest request,HttpServletResponse response, String path) throws Exception
-//    {
-//        return new FileSystemResource("C:/temp/courses/"+path).getFile();
-//    }
+    @RequestMapping(value = "/get_image/{path}",produces = "image/jpeg")
+    public @ResponseBody byte[] downloadImage(WebRequest request, @PathVariable("path")Long path,HttpServletResponse response) throws Exception
+    {
+        if (request.checkNotModified(0))
+        {
+            return null;
+        }
+        return uploader.getImage(path);
+    }
 }

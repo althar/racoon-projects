@@ -13,7 +13,7 @@
 
         <div class="toolbar">
             <div class="btn-group">
-                <span class="btn" rel="tooltip" data-original-title="Add Item"><i class="icon-plus add-course-button"></i></span>
+                <span class="btn add-course-button" rel="tooltip" data-original-title="Add Item"><i class="icon-plus"></i></span>
         <span class="btn" data-toggle="collapse" data-target="#toolbar-ex">
           <i class="icon-search"></i>
         </span>
@@ -57,7 +57,9 @@
                     <span class="note">${course.getStringValue('level')}</span>
                 </div>
                 <div class="thumbnail" onclick="courses.showCourseLessons(${course.getLongValue('id')})">
-                    <img alt="" src="/course_image?path=${course.getStringValue('image_url')}">
+                    <c:if test="${empty course.getLongValue('preview_image_id')}"><img alt=""></c:if>
+                    <c:if test="${not empty course.getLongValue('preview_image_id')}"><img alt="" src="/get_image/${course.getLongValue('preview_image_id')}"></c:if>
+
                 </div>
                 <div class="info">
                     <p>${course.getStringValue('description')}</p>

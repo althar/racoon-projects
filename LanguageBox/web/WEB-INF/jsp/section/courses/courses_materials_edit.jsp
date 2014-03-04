@@ -14,7 +14,8 @@
   <div class="widget-content">
     <div class="user-box">
       <div class="thumbnail">
-        <img alt="" src="/img/course_preview.png">
+          <c:if test="${empty course.getLongValue('preview_image_id')}"><img alt=""></c:if>
+          <c:if test="${not empty course.getLongValue('preview_image_id')}"><img alt="" src="/get_image/${course.getLongValue('preview_image_id')}"></c:if>
       </div>
       <div class="info">
         <span class="name">New Headway <small>Pre-intermediate</small></span>
