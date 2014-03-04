@@ -29,7 +29,8 @@ public class AccessInterceptor extends LanguageBoxInterceptor
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object o, ModelAndView modelAndView) throws Exception
     {
-
+        modelAndView = addRoles(modelAndView, request);
+        modelAndView = addUser(modelAndView, request);
     }
 
     @Override
