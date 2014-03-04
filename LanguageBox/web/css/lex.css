@@ -430,3 +430,21 @@
 .mt-10 {
     margin-top: 10px;
 }
+
+.right {
+    float: right;
+}
+
+.log_in {
+    padding: 25px;
+    border-left: 1px solid gray;
+}
+
+.log_in a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
