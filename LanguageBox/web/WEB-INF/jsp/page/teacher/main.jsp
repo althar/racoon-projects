@@ -52,7 +52,7 @@
   </div>
 
   <div id="wrapper">
-    <%@include file="/WEB-INF/jsp/section/header_teacher.jsp" %>
+    <%@include file="/WEB-INF/jsp/section/header.jsp" %>
 
     <div id="content-wrap">
       <div id="content">

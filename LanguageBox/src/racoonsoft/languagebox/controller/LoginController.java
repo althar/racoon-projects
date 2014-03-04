@@ -104,6 +104,8 @@ public class LoginController
     public ModelAndView logout(HttpServletRequest request,HttpServletResponse response,Boolean do_login) throws Exception
     {
         ActionResult res = UserProcessor.logout(request);
+        request.removeAttribute("user");
+        request.removeAttribute("roles");
         ModelAndView model = new ModelAndView("page/public/main");
         model.addObject("widget","login");
         model.addObject("error","Сбой при входе. Попробуйте еще раз.");

@@ -35,7 +35,6 @@ public class TeacherController extends LanguageBoxController
         Long user_id = id(request);
         ArrayList<DBRecord> courses = course.getTeacherCourses(user_id);
         model = addSells(model,request);
-        model = addRoles(model,request);
         model.addObject("courses",courses);
         return model;
     }
@@ -43,7 +42,6 @@ public class TeacherController extends LanguageBoxController
     public ModelAndView courses(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/teacher/courses");
-        model = addRoles(model,request);
         Long user_id = id(request);
         return model;
     }
@@ -51,27 +49,21 @@ public class TeacherController extends LanguageBoxController
     public ModelAndView students(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/teacher/students");
-        model = addRoles(model,request);
         Long user_id = id(request);
-
         return model;
     }
     @RequestMapping("/profile")
     public ModelAndView profile(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/teacher/profile");
-        model = addRoles(model,request);
         Long user_id = id(request);
-
         return model;
     }
     @RequestMapping("/homework")
     public ModelAndView homework(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = new ModelAndView("page/teacher/homework");
-        model = addRoles(model,request);
         Long user_id = id(request);
-
         return model;
     }
 

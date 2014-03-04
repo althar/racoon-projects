@@ -45,6 +45,10 @@ public abstract class LanguageBoxInterceptor implements HandlerInterceptor
     }
     public ArrayList<String> roles(HttpServletRequest request)
     {
+        if(request.getAttribute("roles")==null)
+        {
+            return new ArrayList<String>();
+        }
         return (ArrayList<String>)request.getAttribute("roles");
     }
     public Boolean hasRole(HttpServletRequest request,String role)
@@ -55,5 +59,16 @@ public abstract class LanguageBoxInterceptor implements HandlerInterceptor
     {
         String domain = new URL(request.getRequestURL().toString()).getHost();
         return StringHelper.getDomainByLevel(domain, 3);
+    }
+    public ModelAndView addRoles(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        model.addObject("roles",roles(request));
+        return model;
+    }
+    public ModelAndView addUser(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        User u = user(request);
+        model.addObject("user",u);
+        return model;
     }
 }
