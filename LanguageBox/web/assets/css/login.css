@@ -496,6 +496,7 @@ label
     background-image: -webkit-linear-gradient(top, #df581d, #ca5219);
     background-image: -o-linear-gradient(top, #df581d, #ca5219);
     background-image: linear-gradient(top, #df581d, #ca5219);
+    margin-bottom: 10px;
 }
 
 .btn-danger:hover,

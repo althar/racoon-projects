@@ -88,15 +88,17 @@
                     <img src="/img/courses_review/review_1.png"/>
                 </span>
                 <span class="review-author-name">Мариан Воробъева</span>
-                <span class="review-author-date">30 мая 2013</span>
-                <span class="review-author-star">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
+                <span class="right">
+                    <span class="review-author-date">30 мая 2013</span>
+                    <span class="review-author-star">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                    </span>
+                    <span class="review-author-rating">5.0</span>
                 </span>
-                <span class="review-author-rating">5.0</span>
             </div>
             <div class="review-message">
                 Слова самые распространенные,т.е. для изучения языка очень полезно,а вот для высокого уровня знания языка будет уже не достаточно.
@@ -110,15 +112,17 @@
                     <img src="/img/courses_review/review_2.png"/>
                 </span>
                 <span class="review-author-name">Калинин Николай</span>
-                <span class="review-author-date">1 июля 2013</span>
-                <span class="review-author-star">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
+                <span class="right">
+                    <span class="review-author-date">1 июля 2013</span>
+                    <span class="review-author-star">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                    </span>
+                    <span class="review-author-rating">5.0</span>
                 </span>
-                <span class="review-author-rating">5.0</span>
             </div>
             <div class="review-message">
                 Хоть в учебнике нет ни слова по-русски, в нем настолько просто и понятно изложен материал,
@@ -133,15 +137,17 @@
                     <img src="/img/courses_review/review_1.png"/>
                 </span>
                 <span class="review-author-name">Бойко Мария</span>
-                <span class="review-author-date">2 июля 2013</span>
-                <span class="review-author-star">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
-                    <img src="/img/icons/star.png">
+                <span class="right">
+                    <span class="review-author-date">2 июля 2013</span>
+                    <span class="review-author-star">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                        <img src="/img/icons/star.png">
+                    </span>
+                    <span class="review-author-rating">4.0</span>
                 </span>
-                <span class="review-author-rating">4.0</span>
             </div>
             <div class="review-message">
                 Очень удобно изучать язык, имея перед глазами слова и их перевод, а также использование этих слов в контексте.
