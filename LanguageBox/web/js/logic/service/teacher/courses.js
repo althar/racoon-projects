@@ -4,6 +4,7 @@ var uploadDelay = 0;
 var currentCourseSection = "courses_list";
 
 $(document).ready(function () {
+    $.ajaxSetup({ cache: false });
     library.bindLibraryControls();
     courses.bindCoursesControls();
 
@@ -551,14 +552,16 @@ courses =
     },
     showEditCourse: function (courseId) {
         $(".courses-section").hide();
-        var params = "";
+        var params = "?";
         if (courseId != null) {
             params += "course_id=" + courseId;
         }
         $.ajax({
-            url: "/service/get_course?" + params,
+            url: "/service/get_course" + params,
             async: true,
+            cache: false,
             success: function (html) {
+                console.log(html);
                 $(".courses-section").replaceWith(html);
                 $(".courses-section").show();
                 $(".numeric").autoNumeric('init', {mDec: 2, aSep: '', vMax: '999999.00', vMin: '0.00'});

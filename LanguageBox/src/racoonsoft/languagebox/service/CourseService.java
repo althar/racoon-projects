@@ -80,11 +80,19 @@ public class CourseService extends LanguageBoxService
             pars.put("trial",trial);
             if(lessonId==null)
             {
-                return dbProc.executeInsert("lesson",pars);
+                Long ret = dbProc.executeInsert("lesson",pars);
+                for(int i=0; i<material.length; i++)
+                {
+                    HashMap<String,Object> ps = new HashMap<String, Object>();
+                    ps.put("lesson_id",ret);
+                    ps.put("material_id",material[i]);
+                    dbProc.executeInsert("lesson_material",ps);
+                }
+                return ret;
             }
             else
             {
-                Long return_id = dbProc.executeUpdate("lesson", pars, "id=" + lessonId);
+                dbProc.executeUpdate("lesson", pars, "id=" + lessonId);
                 dbProc.executeDelete("lesson_material","lesson_id="+lessonId);
                 for(int i=0; i<material.length; i++)
                 {
@@ -93,7 +101,7 @@ public class CourseService extends LanguageBoxService
                     ps.put("material_id",material[i]);
                     dbProc.executeInsert("lesson_material",ps);
                 }
-                return return_id;
+                return lessonId;
             }
         }
         return 0l;

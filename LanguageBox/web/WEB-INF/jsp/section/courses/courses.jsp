@@ -57,9 +57,7 @@
                     <span class="note">${course.getStringValue('level')}</span>
                 </div>
                 <div class="thumbnail" onclick="courses.showCourseLessons(${course.getLongValue('id')})">
-                    <c:if test="${empty course.getLongValue('preview_image_id')}"><img alt=""></c:if>
-                    <c:if test="${not empty course.getLongValue('preview_image_id')}"><img alt="" src="/get_image/${course.getLongValue('preview_image_id')}"></c:if>
-
+                    <img alt="" src="/course_image?path=${course.getStringValue('image_url')}">
                 </div>
                 <div class="info">
                     <p>${course.getStringValue('description')}</p>
