@@ -87,7 +87,7 @@
                         </div>
 
                         <div id="main-content">
-                            <%@include file="/WEB-INF/jsp/section/student/courses-shop.jsp" %>
+                            <%@include file="/WEB-INF/jsp/section/courses_shop.jsp" %>
                         </div>
                     </section>
                 </div>
