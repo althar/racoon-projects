@@ -28,6 +28,7 @@ namespace OwlBusinessStudio.Orders
             InitializeComponent();
             owner = parent;
             isEditing = order_id != 0;
+            TxtPhone1.Enabled = !isEditing;
             orderID = order_id;
             ComboStreet.MouseWheel += new MouseEventHandler(ComboStreet_MouseWheel);
         }

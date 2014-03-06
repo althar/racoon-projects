@@ -347,5 +347,68 @@ namespace OwlBusinessStudio.Purchase
                 TxtSupplier.Text = supplier;
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if(OpenPurchaseImportDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ButtProcess.Visible = true;
+                DataTable t = ExcelProcessor.getTable(OpenPurchaseImportDialog.FileName, "Database");
+                string err = "";
+                int err_count = 0;
+                for (int i = 0; i < t.Rows.Count; i++)
+                {
+                    try
+                    {
+                        DataRow r = t.Rows[i];
+                        string articul = r[0].ToString();
+                        int count = 0;
+                        Int32.TryParse(r[1].ToString(), out count);
+
+                        DataRow good = MainForm.dbProc.executeGetRow("SELECT * FROM goods WHERE articul='"+articul+"'");
+                        Application.DoEvents();
+                        if (good != null)
+                        {
+                            string list_name = ComboLists.Text;
+                            double purchase_price = 0;
+                            int good_id = 0;
+                            if(!Double.TryParse(good["price_basic"].ToString(),out purchase_price))
+                            {
+                                throw new Exception();
+                            }
+                            if (!Int32.TryParse(good["id"].ToString(), out good_id))
+                            {
+                                throw new Exception();
+                            }
+                            Hashtable pars = new Hashtable();
+                            pars.Add("supplier", good["supplier"]);
+                            pars.Add("good_name", good["name_for_order_full"]);
+                            pars.Add("good_count", count);
+                            pars.Add("good_purchase_price", purchase_price);
+                            pars.Add("good_id", good_id);
+                            pars.Add("is_for_orders", CheckForOrders.Checked);
+                            pars.Add("list_name", list_name);
+                            pars.Add("date", date);
+                            pars.Add("date_to", date);
+                            MainForm.dbProc.insert("purchase_lists", pars);
+                            Application.DoEvents();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        err += i + Environment.NewLine;
+                        err_count++;
+                    }
+                    ProgressLabel.Text = "Обработано: " + (i+1).ToString() + " из " + t.Rows.Count+". Ошибок: "+err_count;
+                }
+                loadTable();
+                if (err_count != 0)
+                {
+                    MessageBox.Show(err, "Не удалось импортировать строки с индексами:");
+                }
+                ProgressLabel.Text +=". Импортирование завершено";
+                ButtProcess.Visible = false;
+            }
+        }
     }
 }

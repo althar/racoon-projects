@@ -52,6 +52,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LabelPurchaseProgress = new System.Windows.Forms.ToolStripStatusLabel();
             this.PanelAddGood = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.TxtSupplier = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CheckForOrders = new System.Windows.Forms.CheckBox();
@@ -65,6 +66,8 @@
             this.NumNewGoodCount = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.LabelTotal = new System.Windows.Forms.Label();
+            this.OpenPurchaseImportDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProgressLabel = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewPurchase)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.PanelEditPurchase.SuspendLayout();
@@ -100,7 +103,8 @@
             this.ButtAddGood,
             this.toolStripSeparator2,
             this.toolStripSeparator3,
-            this.ButtProcess});
+            this.ButtProcess,
+            this.ProgressLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1228, 31);
@@ -294,6 +298,7 @@
             // PanelAddGood
             // 
             this.PanelAddGood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelAddGood.Controls.Add(this.button2);
             this.PanelAddGood.Controls.Add(this.TxtSupplier);
             this.PanelAddGood.Controls.Add(this.label7);
             this.PanelAddGood.Controls.Add(this.CheckForOrders);
@@ -307,9 +312,19 @@
             this.PanelAddGood.Controls.Add(this.NumNewGoodCount);
             this.PanelAddGood.Location = new System.Drawing.Point(291, 71);
             this.PanelAddGood.Name = "PanelAddGood";
-            this.PanelAddGood.Size = new System.Drawing.Size(501, 130);
+            this.PanelAddGood.Size = new System.Drawing.Size(661, 130);
             this.PanelAddGood.TabIndex = 10;
             this.PanelAddGood.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(498, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(158, 46);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Импортировать из EXCEL";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // TxtSupplier
             // 
@@ -434,6 +449,15 @@
             this.LabelTotal.TabIndex = 12;
             this.LabelTotal.Text = "0";
             // 
+            // OpenPurchaseImportDialog
+            // 
+            this.OpenPurchaseImportDialog.Filter = "Excel|*.xls;*.xlsx";
+            // 
+            // ProgressLabel
+            // 
+            this.ProgressLabel.Name = "ProgressLabel";
+            this.ProgressLabel.Size = new System.Drawing.Size(0, 28);
+            // 
             // PurchaseEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,5 +530,8 @@
         private System.Windows.Forms.Label LabelTotal;
         private System.Windows.Forms.TextBox TxtSupplier;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.OpenFileDialog OpenPurchaseImportDialog;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripLabel ProgressLabel;
     }
 }
