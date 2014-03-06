@@ -52,7 +52,13 @@ public class PublicController extends LanguageBoxController
         model = addRoles(model,request);
         return model;
     }
-
+    @RequestMapping("/teacher_profile")
+    public ModelAndView teacherProfile(HttpServletRequest request) throws Exception
+    {
+        ModelAndView model = new ModelAndView("page/public/domain3");
+        model = addRoles(model,request);
+        return model;
+    }
     @RequestMapping(value = "/get_image/{path}",produces = "image/jpeg")
     public @ResponseBody byte[] downloadImage(WebRequest request, @PathVariable("path")Long path,HttpServletResponse response) throws Exception
     {

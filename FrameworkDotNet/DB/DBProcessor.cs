@@ -123,6 +123,15 @@ namespace FTwoFramework.DB
             adapter.Fill(t);
             return t;
         }
+        public DataRow executeGetRow(string query)
+        {
+            DataTable t = executeGet(query);
+            if (t.Rows.Count > 0)
+            {
+                return t.Rows[0];
+            }
+            return null;
+        }
         public DataTable get(string tableName)
         {
             connect();
@@ -422,7 +431,7 @@ namespace FTwoFramework.DB
             }
         }
         private static string last_q = "";
-        private string objectToString(object ob)
+        public static string objectToString(object ob)
         {
             if (ob is DBNull||ob == null)
             {

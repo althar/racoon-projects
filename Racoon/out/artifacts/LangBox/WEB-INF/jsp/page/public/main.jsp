@@ -105,7 +105,6 @@
                                     <a class='button' href='/registration?role=STUDENT&do_registration=false'>
                                         <button class="btn btn-danger btn-block btn-large">Регистрация</button>
                                     </a>
-
                                 </div>
                             </div>
                         </div>

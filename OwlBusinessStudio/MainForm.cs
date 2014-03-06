@@ -341,7 +341,7 @@ namespace OwlBusinessStudio
                 }
                 if (TabControlMain.SelectedTab == TabGoods)// Goods
                 {
-                    loadGoods();
+                    //loadGoods();
                 }
                 if (TabControlMain.SelectedTab == TabPurchase)// Purchase
                 {
@@ -2775,6 +2775,94 @@ namespace OwlBusinessStudio
         private void TimerChecker_Tick(object sender, EventArgs e)
         {
             calculateGoods(false);
+        }
+
+        private void CheckCreateOrderDate_CheckedChanged(object sender, EventArgs e)
+        {
+            TimePickerCreateOrderFrom.Visible = CheckCreateOrderDate.Checked;
+            TimePickerCreateOrderTo.Visible = CheckCreateOrderDate.Checked;
+        }
+
+        private void CheckDeliverOrderDate_CheckedChanged(object sender, EventArgs e)
+        {
+            TimePickerDeliverOrderFrom.Visible = CheckDeliverOrderDate.Checked;
+            TimePickerDeliverOrderTo.Visible = CheckDeliverOrderDate.Checked;
+        }
+
+        private void ButtExportOrders_Click(object sender, EventArgs e)
+        {
+            PanelExportOrders.Visible = !PanelExportOrders.Visible;
+        }
+
+        private void ButtExportOrdersGo_Click(object sender, EventArgs e)
+        {
+            string condition = " WHERE 1=1 ";
+            if (ComboExportOrdersStatus.Text == "Новый")
+            {
+                condition += " AND status_id=1 ";
+            }
+            else if (ComboExportOrdersStatus.Text == "Выполненный")
+            {
+                condition += " AND status_id=3 ";
+            }
+            if (CheckCreateOrderDate.Checked)
+            {
+                condition += " AND date(created)>=date(" + DBProcessor.objectToString(TimePickerCreateOrderFrom.Value) + ")";
+                condition += " AND date(created)<=date(" + DBProcessor.objectToString(TimePickerCreateOrderTo.Value) + ")";
+            }
+            if (CheckDeliverOrderDate.Checked)
+            {
+                condition += " AND date(deliver_date)>=date(" + DBProcessor.objectToString(TimePickerDeliverOrderFrom.Value) + ")";
+                condition += " AND date(deliver_date)<=date(" + DBProcessor.objectToString(TimePickerDeliverOrderTo.Value) + ")";
+            }
+            condition+=" ORDER BY id";
+            try
+            {
+                FTwoExcelProcessor excel = new FTwoExcelProcessor();
+                excel.InitApplication(true);
+                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(excel_OnExcelClose);
+                excel.changeOrientation(Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape);
+                DataTable orders = dbProc.executeGet("SELECT * FROM orders_with_details "+condition);
+                List<string> error_arts = new List<string>();
+                for (int i = 0; i < orders.Columns.Count; i++)
+                {
+                    excel.text(1, i + 1, orders.Columns[i].ColumnName);
+                }
+
+                for (int i = 0; i < orders.Rows.Count; i++)
+                {
+                    for (int j = 0; j < orders.Columns.Count; j++)
+                    {
+                        string value = orders.Rows[i][j].ToString();
+                        if (orders.Rows[i][j] is double)
+                        {
+                            value = value.Replace(",", ".");
+                        }
+                        try
+                        {
+                            excel.text(i + 2, j + 1, value);
+                        }
+                        catch (Exception eex)
+                        {
+                            error_arts.Add(orders.Rows[i]["id"].ToString());
+                        }
+                    }
+                }
+                string all_errors = "Экспорт завершен. Не удалось экспортировать заказы с ID: " + Environment.NewLine;
+                for (int i = 0; i < error_arts.Count; i++)
+                {
+                    all_errors += error_arts[i];
+                    if (i / 10.0 == (int)i / 10)
+                    {
+                        all_errors += Environment.NewLine;
+                    }
+                }
+                MessageBox.Show(all_errors);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
