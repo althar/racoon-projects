@@ -437,7 +437,6 @@
 
 .log_in {
     padding: 25px;
-    border-left: 1px solid gray;
 }
 
 .log_in a {
@@ -447,4 +446,82 @@
     text-decoration: none;
     font-size: 15px;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.user-info-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.user-info-text div {
+    padding: 2px;
+}
+
+.user-logo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.user-info {
+    border: 1px solid #d7d7d7;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.user-info-send {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.button-registration {
+    margin-top: 18px;
+}
+
+.audio {
+    background: url(/img/file-icons/audio.png) 2px no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.folder {
+    background: url(/img/file-icons/folder.png) 2px no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.video {
+    background: url(/img/file-icons/video.png) 2px no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.psd {
+    background: url(/img/file-icons/psd.png) 2px no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.text {
+    background: url(/img/file-icons/text.png) 2px no-repeat;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.file {
+
+}
+
+.file:hover {
+    background-color: #e3e1e1;
+}
+
+.active-file {
+    background-color: #e3e1e1;
+}
+
+.maters{}
+
+.maters td {
+    border: 10px solid transparent;
 }

@@ -4735,6 +4735,14 @@ button.close {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .form-actions a {
+    text-decoration: none;
+  }
+    .form-actions a:hover {
+        text-decoration: none;
+    }
+
   .media .pull-left,
   .media .pull-right {
     float: none;

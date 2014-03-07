@@ -40,6 +40,7 @@
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
     <![endif]-->
 
     <title>LanguageBox</title>
@@ -72,7 +73,7 @@
                         <div style="background: url(/img/main/main.jpg) no-repeat; background-size: 100%;  width: 100%;  height: 300px; margin-bottom: 30px;"></div>
 
                         <div id="main-content">
-                        <div class="span4 widget">
+                        <div class="span3 widget">
                             <div class="widget-header">
                                 <span class="title">Для учеников</span>
                             </div>
@@ -101,14 +102,14 @@
                                 <div class="control-group">
                                     <label class="control-label">Удобное взаимодействие с репетитором</label>
                                 </div>
-                                <div class="form-actions">
+                                <div class="button-registration">
                                     <a class='button' href='/registration?role=STUDENT&do_registration=false'>
                                         <button class="btn btn-danger btn-block btn-large">Регистрация</button>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="span4 widget">
+                        <div class="span3 widget">
                             <div class="widget-header">
                                 <span class="title">Для репетиторов</span>
                             </div>
@@ -128,7 +129,7 @@
                                 <div class="control-group">
                                     <label class="control-label">Удобное взаимодействие с учеником</label>
                                 </div>
-                                <div class="form-actions">
+                                <div class="button-registration">
                                     <a class='button' href='/registration?role=TUTOR&do_registration=false'>
                                         <button class="btn btn-danger btn-block btn-large">Регистрация</button>
                                     </a>
@@ -136,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="span4 widget">
+                        <div class="span3 widget">
                             <div class="widget-header">
                                 <span class="title">Для языковых школ</span>
                             </div>
@@ -159,7 +160,7 @@
                                 <div class="control-group">
                                     <label class="control-label">Удобное взаимодействие с учеником</label>
                                 </div>
-                                <div class="form-actions">
+                                <div class="button-registration">
                                     <a class='button' href='/registration?role=SCHOOL&do_registration=false'>
                                         <button class="btn btn-danger btn-block btn-large">Регистрация</button>
                                     </a>
@@ -167,7 +168,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="span12 widget">
+                        <div class="span11 widget">
                             <div class="widget-header">
                                 <span class="title">Как работает сервис</span>
                             </div>
@@ -182,7 +183,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="span12 widget">
+                        <div class="span11 widget">
                             <div class="widget-header">
                                 <span class="title">Кто уже использует сервис</span>
                             </div>
@@ -217,7 +218,7 @@
 
                             </div>
                         </div>
-                        <div class="span12 widget">
+                        <div class="span11 widget">
                             <div class="widget-header">
                                 <span class="title">Часто задаваемые вопросы</span>
                                 <div class="toolbar">
@@ -315,7 +316,12 @@
 <script src="/assets/jui/jquery.ui.touch-punch.min.js"></script>
 
 <!-- Plugin Scripts -->
-
+<script>
+    if(screen.width<1300){
+        $('#sidebar').css("width", "45") ;
+        $('.clearfix').css("margin", "0px 0px 0px 45px");
+    }
+</script>
 <!-- Rating  -->
 <script src="/plugins/rating/jquery.rating.min.js"></script>
 
