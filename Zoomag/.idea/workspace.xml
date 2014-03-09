@@ -105,6 +105,7 @@
     <file path="$PROJECT_DIR$/../LanguageBox/src/racoonsoft/languagebox/properties/main.properties" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393833025798" ignored="false" />
     <file path="/main.properties" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393833025798" ignored="false" />
     <file path="/GoodsCalculatorCaller.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1393836384057" ignored="false" />
+    <file path="/Test2.java" changelist="d8a21d64-d52b-45b7-a951-57c4b7bb78ac" time="1394168820325" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,41 +120,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Warehouse.java" line="22" class="ftwo.zoomag.structure.Warehouse" package="ftwo.zoomag.structure">
         <option name="ENABLED" value="true" />
@@ -212,6 +178,41 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -221,25 +222,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="616" column="45" selection-start="28664" selection-end="28664" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2395#2411#0" expanded="true" />
-                <element signature="e#11937#11953#0" expanded="true" />
-                <element signature="e#14192#14208#0" expanded="true" />
-                <element signature="e#19512#19528#0" expanded="true" />
-                <element signature="e#20266#20282#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="0" selection-start="3145" selection-end="3145" vertical-scroll-proportion="-3.6">
+            <state line="73" column="54" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -258,26 +244,15 @@
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="334" column="32" selection-start="14183" selection-end="14183" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2803#2813#0" expanded="false" />
-                <element signature="e#5692#5708#0" expanded="false" />
-                <element signature="e#6836#6844#0" expanded="false" />
-                <element signature="e#7032#7040#0" expanded="false" />
-                <element signature="e#10814#10841#0" expanded="false" />
-                <element signature="e#11584#11592#0" expanded="false" />
-                <element signature="e#13957#14001#0" expanded="false" />
-                <element signature="e#14556#14571#0" expanded="false" />
-                <element signature="e#19180#19186#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsCalculatorCaller.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GoodsCalculatorCaller.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculatorCaller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="39" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.5702875">
+            <state line="30" column="68" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -286,7 +261,27 @@
       <file leaf-file-name="GoodsCalculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+            <state line="18" column="21" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OldSiteIntegrator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/OldSiteIntegrator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="12" selection-start="728" selection-end="873" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#doSite#0;class#OldSiteIntegrator#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="34" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5743243">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -298,27 +293,6 @@
         <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="55" column="61" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#292#308#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basket.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="363" column="20" selection-start="11744" selection-end="11744" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/general/init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -327,7 +301,7 @@
       <file leaf-file-name="basket.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/basket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="392" column="58" selection-start="19721" selection-end="19740" vertical-scroll-proportion="-0.65384614">
+            <state line="392" column="58" selection-start="19721" selection-end="19740" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -343,8 +317,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/CatalogueServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
@@ -359,6 +331,8 @@
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java" />
         <option value="$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculatorCaller.java" />
+        <option value="$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test2.java" />
+        <option value="$PROJECT_DIR$/src/ftwo/zoomag/service/Test.java" />
       </list>
     </option>
   </component>
@@ -604,6 +578,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FTwoFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FTwoFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Zoomag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FTwoFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -637,13 +661,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\AlThar\Documents\IdeaProjects\Zoomag\lib" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\Users\AlThar\Documents\IdeaProjects\Zoomag\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -661,7 +685,7 @@
       <recent name="C:\Users\AlThar\Documents\IdeaProjects\Zoomag\web\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 7">
+  <component name="RunManager" selected="Application.Test">
     <configuration default="false" name="about.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/about.html" />
       <deployment>
@@ -737,11 +761,11 @@
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ftwo.library.test.*" />
+          <option name="PATTERN" value="ftwo.zoomag.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="ftwo.library.test.Test" />
+      <option name="MAIN_CLASS_NAME" value="ftwo.zoomag.service.Test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -750,7 +774,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="FTwoFramework" />
+      <module name="Zoomag" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -768,19 +792,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -811,6 +822,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -833,6 +857,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -852,13 +883,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -947,8 +971,9 @@
       <item index="2" class="java.lang.String" itemvalue="Application.Test" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1025,12 +1050,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23662306" sideWeight="0.48025614" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27348396" sideWeight="0.78388476" order="3" side_tool="false" content_ui="tabs" />
@@ -1039,20 +1063,21 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19976218" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19976218" sideWeight="0.44130203" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24431819" sideWeight="0.21904762" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21474878" sideWeight="0.80023783" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21474878" sideWeight="0.59928656" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40071344" sideWeight="0.4818376" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23662306" sideWeight="0.48025614" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1159,34 +1184,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/logic/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="86" selection-start="7267" selection-end="7267" vertical-scroll-proportion="0.22258064" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/logic/basket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="20" selection-start="11744" selection-end="11744" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="47" selection-start="443" selection-end="443" vertical-scroll-proportion="0.25757575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/general/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="40" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0">
@@ -1208,15 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/OldSiteIntegrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="616" selection-end="616" vertical-scroll-proportion="0.20446736">
-          <folding>
-            <element signature="method#doSite#0;class#OldSiteIntegrator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/processors/SeparateThreadProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="16" selection-start="523" selection-end="523" vertical-scroll-proportion="0.33211008">
@@ -1227,19 +1215,13 @@
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="616" column="45" selection-start="28664" selection-end="28664" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2395#2411#0" expanded="true" />
-            <element signature="e#11937#11953#0" expanded="true" />
-            <element signature="e#14192#14208#0" expanded="true" />
-            <element signature="e#19512#19528#0" expanded="true" />
-            <element signature="e#20266#20282#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/basket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="58" selection-start="19721" selection-end="19740" vertical-scroll-proportion="-0.65384614">
+        <state line="392" column="58" selection-start="19721" selection-end="19740" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1247,43 +1229,13 @@
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/structure/Basket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="61" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#292#308#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/database/DatabaseProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="334" column="32" selection-start="14183" selection-end="14183" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2803#2813#0" expanded="false" />
-            <element signature="e#5692#5708#0" expanded="false" />
-            <element signature="e#6836#6844#0" expanded="false" />
-            <element signature="e#7032#7040#0" expanded="false" />
-            <element signature="e#10814#10841#0" expanded="false" />
-            <element signature="e#11584#11592#0" expanded="false" />
-            <element signature="e#13957#14001#0" expanded="false" />
-            <element signature="e#14556#14571#0" expanded="false" />
-            <element signature="e#19180#19186#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="3145" selection-end="3145" vertical-scroll-proportion="-3.6">
           <folding />
         </state>
       </provider>
@@ -1297,8 +1249,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculatorCaller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="39" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.5702875">
+        <state line="30" column="68" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/servlets/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="54" selection-start="2721" selection-end="2721" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/GoodsCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="21" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FTwoFramework/src/ftwo/library/test/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="46" selection-start="552" selection-end="800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/OldSiteIntegrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="12" selection-start="728" selection-end="873" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#doSite#0;class#OldSiteIntegrator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ftwo/zoomag/service/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="34" selection-start="464" selection-end="464" vertical-scroll-proportion="0.5743243">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

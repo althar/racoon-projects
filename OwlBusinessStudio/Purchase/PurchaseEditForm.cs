@@ -372,7 +372,7 @@ namespace OwlBusinessStudio.Purchase
                             string list_name = ComboLists.Text;
                             double purchase_price = 0;
                             int good_id = 0;
-                            if(!Double.TryParse(good["price_basic"].ToString(),out purchase_price))
+                            if (!Double.TryParse(good["price_basic"].ToString(), out purchase_price))
                             {
                                 throw new Exception();
                             }
@@ -393,11 +393,16 @@ namespace OwlBusinessStudio.Purchase
                             MainForm.dbProc.insert("purchase_lists", pars);
                             Application.DoEvents();
                         }
+                        else
+                        {
+                            err += i + Environment.NewLine;
+                            err_count++;
+                        }
                     }
                     catch (Exception ex)
                     {
-                        err += i + Environment.NewLine;
-                        err_count++;
+                        //err += i + Environment.NewLine;
+                        //err_count++;
                     }
                     ProgressLabel.Text = "Обработано: " + (i+1).ToString() + " из " + t.Rows.Count+". Ошибок: "+err_count;
                 }

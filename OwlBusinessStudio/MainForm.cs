@@ -2864,5 +2864,66 @@ namespace OwlBusinessStudio
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            PanelConcatinatePhones.Visible = !PanelConcatinatePhones.Visible;
+        }
+
+        private void ButtCancatPhones_Click(object sender, EventArgs e)
+        {
+            if (TxtMainPhone.Text.Length != 14)
+            {
+                MessageBox.Show("Введите хотя бы один телефон (главный)");
+                return;
+            }
+            //1. Select or create client with main phone
+            string phone1 = TxtMainPhone.Text;
+            string phone2 = TxtPhone2.Text;
+            string phone3 = TxtPhone3.Text;
+            DataRow client = dbProc.executeGetRow("SELECT id,phone_1,phone_2,phone_3 FROM clients WHERE phone_1='"+phone1+"'");
+            long client_id = 0;
+            if (client == null)
+            {
+                Hashtable tab = new Hashtable();
+                tab.Add("phone_1", phone1);
+                tab.Add("phone_2", phone2);
+                tab.Add("phone_3", phone3);
+                tab.Add("street", "");
+                tab.Add("street_type", "");
+                tab.Add("house", "");
+                tab.Add("porch", "");
+                tab.Add("floor", "");
+                tab.Add("domophone", "");
+                tab.Add("room", "");
+                tab.Add("city", "");
+                client_id = dbProc.insert("clients", tab);
+            }
+            else
+            {
+                client_id = Int32.Parse(client["id"].ToString());
+            }
+            //2. Delete clients with phone2 and phone3
+            dbProc.delete("clients", "phone_1='"+phone2+"' OR phone_1='"+phone3+"'");
+
+            //3. Update client with client_id
+            dbProc.update("clients","phone_2='"+phone2+"', phone_3='"+phone3+"'","id="+client_id);
+
+            string condition = "phone_1='" + phone1+"'";
+            if (phone2.Length == 14)
+            {
+                condition += " OR phone_1='" + phone2+"' ";
+            }
+            if (phone3.Length == 14)
+            {
+                condition += " OR phone_1='" + phone3+"'";
+            }
+            //4. Update orders with phone numbers
+            dbProc.update("orders", "client_id=" + client_id, condition);
+
+            DataRow total = dbProc.executeGetRow("SELECT COALESCE(count(id),0) AS count, COALESCE(sum(goods_price),0) AS total FROM orders WHERE client_id=" + client_id);
+            MessageBox.Show("Слияние успешно. Всего заказов: "+total["count"]+". На общую сумму: "+total["total"]+" руб.");
+            PanelConcatinatePhones.Visible = false;
+        }
     }
 }
