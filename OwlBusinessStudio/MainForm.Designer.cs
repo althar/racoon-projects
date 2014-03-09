@@ -67,6 +67,18 @@
             this.OpenFileGoods = new System.Windows.Forms.OpenFileDialog();
             this.TabControlMain = new System.Windows.Forms.TabControl();
             this.PageOrders = new System.Windows.Forms.TabPage();
+            this.PanelExportOrders = new System.Windows.Forms.Panel();
+            this.ButtExportOrdersGo = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.TimePickerDeliverOrderTo = new System.Windows.Forms.DateTimePicker();
+            this.TimePickerDeliverOrderFrom = new System.Windows.Forms.DateTimePicker();
+            this.TimePickerCreateOrderTo = new System.Windows.Forms.DateTimePicker();
+            this.TimePickerCreateOrderFrom = new System.Windows.Forms.DateTimePicker();
+            this.CheckDeliverOrderDate = new System.Windows.Forms.CheckBox();
+            this.CheckCreateOrderDate = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.ComboExportOrdersStatus = new System.Windows.Forms.ComboBox();
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.ComboOrderFilterName = new System.Windows.Forms.ToolStripComboBox();
@@ -87,6 +99,7 @@
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.ComboPageSize = new System.Windows.Forms.ToolStripComboBox();
             this.ButtPrintCheck = new System.Windows.Forms.ToolStripButton();
+            this.ButtExportOrders = new System.Windows.Forms.ToolStripButton();
             this.ListOrderStatuses = new System.Windows.Forms.ListBox();
             this.ButtSelectOrders = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -206,23 +219,20 @@
             this.TimerDisabler = new System.Windows.Forms.Timer(this.components);
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
-            this.ButtExportOrders = new System.Windows.Forms.ToolStripButton();
-            this.PanelExportOrders = new System.Windows.Forms.Panel();
-            this.ComboExportOrdersStatus = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.CheckCreateOrderDate = new System.Windows.Forms.CheckBox();
-            this.CheckDeliverOrderDate = new System.Windows.Forms.CheckBox();
-            this.TimePickerCreateOrderFrom = new System.Windows.Forms.DateTimePicker();
-            this.TimePickerCreateOrderTo = new System.Windows.Forms.DateTimePicker();
-            this.TimePickerDeliverOrderFrom = new System.Windows.Forms.DateTimePicker();
-            this.TimePickerDeliverOrderTo = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.ButtExportOrdersGo = new System.Windows.Forms.Button();
+            this.PanelConcatinatePhones = new System.Windows.Forms.Panel();
+            this.TxtMainPhone = new System.Windows.Forms.MaskedTextBox();
+            this.TxtPhone2 = new System.Windows.Forms.MaskedTextBox();
+            this.TxtPhone3 = new System.Windows.Forms.MaskedTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ButtCancatPhones = new System.Windows.Forms.Button();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
             this.PageOrders.SuspendLayout();
+            this.PanelExportOrders.SuspendLayout();
             this.toolStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewOrders)).BeginInit();
             this.TabGoods.SuspendLayout();
@@ -243,7 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.PanelExportOrders.SuspendLayout();
+            this.PanelConcatinatePhones.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBarMain
@@ -552,6 +562,7 @@
             // 
             // PageOrders
             // 
+            this.PageOrders.Controls.Add(this.PanelConcatinatePhones);
             this.PageOrders.Controls.Add(this.PanelExportOrders);
             this.PageOrders.Controls.Add(this.toolStrip4);
             this.PageOrders.Controls.Add(this.ListOrderStatuses);
@@ -572,6 +583,130 @@
             this.PageOrders.TabIndex = 0;
             this.PageOrders.Text = "Заказы";
             this.PageOrders.UseVisualStyleBackColor = true;
+            // 
+            // PanelExportOrders
+            // 
+            this.PanelExportOrders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelExportOrders.Controls.Add(this.ButtExportOrdersGo);
+            this.PanelExportOrders.Controls.Add(this.label20);
+            this.PanelExportOrders.Controls.Add(this.label19);
+            this.PanelExportOrders.Controls.Add(this.TimePickerDeliverOrderTo);
+            this.PanelExportOrders.Controls.Add(this.TimePickerDeliverOrderFrom);
+            this.PanelExportOrders.Controls.Add(this.TimePickerCreateOrderTo);
+            this.PanelExportOrders.Controls.Add(this.TimePickerCreateOrderFrom);
+            this.PanelExportOrders.Controls.Add(this.CheckDeliverOrderDate);
+            this.PanelExportOrders.Controls.Add(this.CheckCreateOrderDate);
+            this.PanelExportOrders.Controls.Add(this.label17);
+            this.PanelExportOrders.Controls.Add(this.ComboExportOrdersStatus);
+            this.PanelExportOrders.Location = new System.Drawing.Point(433, 80);
+            this.PanelExportOrders.Name = "PanelExportOrders";
+            this.PanelExportOrders.Size = new System.Drawing.Size(419, 137);
+            this.PanelExportOrders.TabIndex = 11;
+            this.PanelExportOrders.Visible = false;
+            // 
+            // ButtExportOrdersGo
+            // 
+            this.ButtExportOrdersGo.Location = new System.Drawing.Point(3, 109);
+            this.ButtExportOrdersGo.Name = "ButtExportOrdersGo";
+            this.ButtExportOrdersGo.Size = new System.Drawing.Size(404, 23);
+            this.ButtExportOrdersGo.TabIndex = 11;
+            this.ButtExportOrdersGo.Text = "Экспортировать";
+            this.ButtExportOrdersGo.UseVisualStyleBackColor = true;
+            this.ButtExportOrdersGo.Click += new System.EventHandler(this.ButtExportOrdersGo_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(264, 76);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "--";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(264, 50);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(13, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "--";
+            // 
+            // TimePickerDeliverOrderTo
+            // 
+            this.TimePickerDeliverOrderTo.Location = new System.Drawing.Point(277, 72);
+            this.TimePickerDeliverOrderTo.Name = "TimePickerDeliverOrderTo";
+            this.TimePickerDeliverOrderTo.Size = new System.Drawing.Size(130, 20);
+            this.TimePickerDeliverOrderTo.TabIndex = 7;
+            this.TimePickerDeliverOrderTo.Visible = false;
+            // 
+            // TimePickerDeliverOrderFrom
+            // 
+            this.TimePickerDeliverOrderFrom.Location = new System.Drawing.Point(130, 72);
+            this.TimePickerDeliverOrderFrom.Name = "TimePickerDeliverOrderFrom";
+            this.TimePickerDeliverOrderFrom.Size = new System.Drawing.Size(130, 20);
+            this.TimePickerDeliverOrderFrom.TabIndex = 6;
+            this.TimePickerDeliverOrderFrom.Visible = false;
+            // 
+            // TimePickerCreateOrderTo
+            // 
+            this.TimePickerCreateOrderTo.Location = new System.Drawing.Point(277, 46);
+            this.TimePickerCreateOrderTo.Name = "TimePickerCreateOrderTo";
+            this.TimePickerCreateOrderTo.Size = new System.Drawing.Size(130, 20);
+            this.TimePickerCreateOrderTo.TabIndex = 5;
+            this.TimePickerCreateOrderTo.Visible = false;
+            // 
+            // TimePickerCreateOrderFrom
+            // 
+            this.TimePickerCreateOrderFrom.Location = new System.Drawing.Point(130, 46);
+            this.TimePickerCreateOrderFrom.Name = "TimePickerCreateOrderFrom";
+            this.TimePickerCreateOrderFrom.Size = new System.Drawing.Size(130, 20);
+            this.TimePickerCreateOrderFrom.TabIndex = 4;
+            this.TimePickerCreateOrderFrom.Visible = false;
+            // 
+            // CheckDeliverOrderDate
+            // 
+            this.CheckDeliverOrderDate.AutoSize = true;
+            this.CheckDeliverOrderDate.Location = new System.Drawing.Point(3, 72);
+            this.CheckDeliverOrderDate.Name = "CheckDeliverOrderDate";
+            this.CheckDeliverOrderDate.Size = new System.Drawing.Size(102, 17);
+            this.CheckDeliverOrderDate.TabIndex = 3;
+            this.CheckDeliverOrderDate.Text = "Дата доставки";
+            this.CheckDeliverOrderDate.UseVisualStyleBackColor = true;
+            this.CheckDeliverOrderDate.CheckedChanged += new System.EventHandler(this.CheckDeliverOrderDate_CheckedChanged);
+            // 
+            // CheckCreateOrderDate
+            // 
+            this.CheckCreateOrderDate.AutoSize = true;
+            this.CheckCreateOrderDate.Location = new System.Drawing.Point(3, 49);
+            this.CheckCreateOrderDate.Name = "CheckCreateOrderDate";
+            this.CheckCreateOrderDate.Size = new System.Drawing.Size(119, 17);
+            this.CheckCreateOrderDate.TabIndex = 2;
+            this.CheckCreateOrderDate.Text = "Дата оформления";
+            this.CheckCreateOrderDate.UseVisualStyleBackColor = true;
+            this.CheckCreateOrderDate.CheckedChanged += new System.EventHandler(this.CheckCreateOrderDate_CheckedChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(19, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Статус";
+            // 
+            // ComboExportOrdersStatus
+            // 
+            this.ComboExportOrdersStatus.FormattingEnabled = true;
+            this.ComboExportOrdersStatus.Items.AddRange(new object[] {
+            "Новый",
+            "Выполненный",
+            "Любой"});
+            this.ComboExportOrdersStatus.Location = new System.Drawing.Point(130, 13);
+            this.ComboExportOrdersStatus.Name = "ComboExportOrdersStatus";
+            this.ComboExportOrdersStatus.Size = new System.Drawing.Size(277, 21);
+            this.ComboExportOrdersStatus.TabIndex = 0;
+            this.ComboExportOrdersStatus.Text = "Любой";
             // 
             // toolStrip4
             // 
@@ -595,7 +730,8 @@
             this.toolStripLabel3,
             this.ComboPageSize,
             this.ButtPrintCheck,
-            this.ButtExportOrders});
+            this.ButtExportOrders,
+            this.toolStripButton1});
             this.toolStrip4.Location = new System.Drawing.Point(3, 3);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.Size = new System.Drawing.Size(970, 25);
@@ -754,6 +890,16 @@
             this.ButtPrintCheck.Size = new System.Drawing.Size(23, 22);
             this.ButtPrintCheck.Text = "Печатать чек";
             this.ButtPrintCheck.Click += new System.EventHandler(this.ButtPrintCheck_Click);
+            // 
+            // ButtExportOrders
+            // 
+            this.ButtExportOrders.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtExportOrders.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportOrders.Image")));
+            this.ButtExportOrders.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtExportOrders.Name = "ButtExportOrders";
+            this.ButtExportOrders.Size = new System.Drawing.Size(23, 22);
+            this.ButtExportOrders.Text = "Экспорт заказов";
+            this.ButtExportOrders.Click += new System.EventHandler(this.ButtExportOrders_Click);
             // 
             // ListOrderStatuses
             // 
@@ -1913,139 +2059,92 @@
             this.TimerChecker.Interval = 1000;
             this.TimerChecker.Tick += new System.EventHandler(this.TimerChecker_Tick);
             // 
-            // ButtExportOrders
+            // PanelConcatinatePhones
             // 
-            this.ButtExportOrders.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ButtExportOrders.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportOrders.Image")));
-            this.ButtExportOrders.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ButtExportOrders.Name = "ButtExportOrders";
-            this.ButtExportOrders.Size = new System.Drawing.Size(23, 22);
-            this.ButtExportOrders.Text = "Экспорт заказов";
-            this.ButtExportOrders.Click += new System.EventHandler(this.ButtExportOrders_Click);
+            this.PanelConcatinatePhones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelConcatinatePhones.Controls.Add(this.ButtCancatPhones);
+            this.PanelConcatinatePhones.Controls.Add(this.label22);
+            this.PanelConcatinatePhones.Controls.Add(this.label21);
+            this.PanelConcatinatePhones.Controls.Add(this.label18);
+            this.PanelConcatinatePhones.Controls.Add(this.TxtPhone3);
+            this.PanelConcatinatePhones.Controls.Add(this.TxtPhone2);
+            this.PanelConcatinatePhones.Controls.Add(this.TxtMainPhone);
+            this.PanelConcatinatePhones.Location = new System.Drawing.Point(180, 80);
+            this.PanelConcatinatePhones.Name = "PanelConcatinatePhones";
+            this.PanelConcatinatePhones.Size = new System.Drawing.Size(216, 137);
+            this.PanelConcatinatePhones.TabIndex = 12;
+            this.PanelConcatinatePhones.Visible = false;
             // 
-            // PanelExportOrders
+            // TxtMainPhone
             // 
-            this.PanelExportOrders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelExportOrders.Controls.Add(this.ButtExportOrdersGo);
-            this.PanelExportOrders.Controls.Add(this.label20);
-            this.PanelExportOrders.Controls.Add(this.label19);
-            this.PanelExportOrders.Controls.Add(this.TimePickerDeliverOrderTo);
-            this.PanelExportOrders.Controls.Add(this.TimePickerDeliverOrderFrom);
-            this.PanelExportOrders.Controls.Add(this.TimePickerCreateOrderTo);
-            this.PanelExportOrders.Controls.Add(this.TimePickerCreateOrderFrom);
-            this.PanelExportOrders.Controls.Add(this.CheckDeliverOrderDate);
-            this.PanelExportOrders.Controls.Add(this.CheckCreateOrderDate);
-            this.PanelExportOrders.Controls.Add(this.label17);
-            this.PanelExportOrders.Controls.Add(this.ComboExportOrdersStatus);
-            this.PanelExportOrders.Location = new System.Drawing.Point(377, 80);
-            this.PanelExportOrders.Name = "PanelExportOrders";
-            this.PanelExportOrders.Size = new System.Drawing.Size(419, 137);
-            this.PanelExportOrders.TabIndex = 11;
-            this.PanelExportOrders.Visible = false;
+            this.TxtMainPhone.Location = new System.Drawing.Point(106, 16);
+            this.TxtMainPhone.Mask = "(000)000-00-00";
+            this.TxtMainPhone.Name = "TxtMainPhone";
+            this.TxtMainPhone.Size = new System.Drawing.Size(104, 20);
+            this.TxtMainPhone.TabIndex = 0;
             // 
-            // ComboExportOrdersStatus
+            // TxtPhone2
             // 
-            this.ComboExportOrdersStatus.FormattingEnabled = true;
-            this.ComboExportOrdersStatus.Items.AddRange(new object[] {
-            "Новый",
-            "Выполненный",
-            "Любой"});
-            this.ComboExportOrdersStatus.Location = new System.Drawing.Point(130, 13);
-            this.ComboExportOrdersStatus.Name = "ComboExportOrdersStatus";
-            this.ComboExportOrdersStatus.Size = new System.Drawing.Size(277, 21);
-            this.ComboExportOrdersStatus.TabIndex = 0;
-            this.ComboExportOrdersStatus.Text = "Любой";
+            this.TxtPhone2.Location = new System.Drawing.Point(106, 46);
+            this.TxtPhone2.Mask = "(000)000-00-00";
+            this.TxtPhone2.Name = "TxtPhone2";
+            this.TxtPhone2.Size = new System.Drawing.Size(104, 20);
+            this.TxtPhone2.TabIndex = 1;
             // 
-            // label17
+            // TxtPhone3
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(19, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Статус";
+            this.TxtPhone3.Location = new System.Drawing.Point(106, 73);
+            this.TxtPhone3.Mask = "(000)000-00-00";
+            this.TxtPhone3.Name = "TxtPhone3";
+            this.TxtPhone3.Size = new System.Drawing.Size(104, 20);
+            this.TxtPhone3.TabIndex = 2;
             // 
-            // CheckCreateOrderDate
+            // label18
             // 
-            this.CheckCreateOrderDate.AutoSize = true;
-            this.CheckCreateOrderDate.Location = new System.Drawing.Point(3, 49);
-            this.CheckCreateOrderDate.Name = "CheckCreateOrderDate";
-            this.CheckCreateOrderDate.Size = new System.Drawing.Size(119, 17);
-            this.CheckCreateOrderDate.TabIndex = 2;
-            this.CheckCreateOrderDate.Text = "Дата оформления";
-            this.CheckCreateOrderDate.UseVisualStyleBackColor = true;
-            this.CheckCreateOrderDate.CheckedChanged += new System.EventHandler(this.CheckCreateOrderDate_CheckedChanged);
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(2, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(103, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Основной телефон";
             // 
-            // CheckDeliverOrderDate
+            // label21
             // 
-            this.CheckDeliverOrderDate.AutoSize = true;
-            this.CheckDeliverOrderDate.Location = new System.Drawing.Point(3, 72);
-            this.CheckDeliverOrderDate.Name = "CheckDeliverOrderDate";
-            this.CheckDeliverOrderDate.Size = new System.Drawing.Size(102, 17);
-            this.CheckDeliverOrderDate.TabIndex = 3;
-            this.CheckDeliverOrderDate.Text = "Дата доставки";
-            this.CheckDeliverOrderDate.UseVisualStyleBackColor = true;
-            this.CheckDeliverOrderDate.CheckedChanged += new System.EventHandler(this.CheckDeliverOrderDate_CheckedChanged);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(3, 49);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Тел 2";
             // 
-            // TimePickerCreateOrderFrom
+            // label22
             // 
-            this.TimePickerCreateOrderFrom.Location = new System.Drawing.Point(130, 46);
-            this.TimePickerCreateOrderFrom.Name = "TimePickerCreateOrderFrom";
-            this.TimePickerCreateOrderFrom.Size = new System.Drawing.Size(130, 20);
-            this.TimePickerCreateOrderFrom.TabIndex = 4;
-            this.TimePickerCreateOrderFrom.Visible = false;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(2, 76);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 13);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Тел 3";
             // 
-            // TimePickerCreateOrderTo
+            // ButtCancatPhones
             // 
-            this.TimePickerCreateOrderTo.Location = new System.Drawing.Point(277, 46);
-            this.TimePickerCreateOrderTo.Name = "TimePickerCreateOrderTo";
-            this.TimePickerCreateOrderTo.Size = new System.Drawing.Size(130, 20);
-            this.TimePickerCreateOrderTo.TabIndex = 5;
-            this.TimePickerCreateOrderTo.Visible = false;
+            this.ButtCancatPhones.Location = new System.Drawing.Point(3, 109);
+            this.ButtCancatPhones.Name = "ButtCancatPhones";
+            this.ButtCancatPhones.Size = new System.Drawing.Size(207, 23);
+            this.ButtCancatPhones.TabIndex = 6;
+            this.ButtCancatPhones.Text = "Слияние номеров";
+            this.ButtCancatPhones.UseVisualStyleBackColor = true;
+            this.ButtCancatPhones.Click += new System.EventHandler(this.ButtCancatPhones_Click);
             // 
-            // TimePickerDeliverOrderFrom
+            // toolStripButton1
             // 
-            this.TimePickerDeliverOrderFrom.Location = new System.Drawing.Point(130, 72);
-            this.TimePickerDeliverOrderFrom.Name = "TimePickerDeliverOrderFrom";
-            this.TimePickerDeliverOrderFrom.Size = new System.Drawing.Size(130, 20);
-            this.TimePickerDeliverOrderFrom.TabIndex = 6;
-            this.TimePickerDeliverOrderFrom.Visible = false;
-            // 
-            // TimePickerDeliverOrderTo
-            // 
-            this.TimePickerDeliverOrderTo.Location = new System.Drawing.Point(277, 72);
-            this.TimePickerDeliverOrderTo.Name = "TimePickerDeliverOrderTo";
-            this.TimePickerDeliverOrderTo.Size = new System.Drawing.Size(130, 20);
-            this.TimePickerDeliverOrderTo.TabIndex = 7;
-            this.TimePickerDeliverOrderTo.Visible = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(264, 50);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(13, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "--";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(264, 76);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "--";
-            // 
-            // ButtExportOrdersGo
-            // 
-            this.ButtExportOrdersGo.Location = new System.Drawing.Point(3, 109);
-            this.ButtExportOrdersGo.Name = "ButtExportOrdersGo";
-            this.ButtExportOrdersGo.Size = new System.Drawing.Size(404, 23);
-            this.ButtExportOrdersGo.TabIndex = 11;
-            this.ButtExportOrdersGo.Text = "Экспортировать";
-            this.ButtExportOrdersGo.UseVisualStyleBackColor = true;
-            this.ButtExportOrdersGo.Click += new System.EventHandler(this.ButtExportOrdersGo_Click);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Слияние номеров";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // MainForm
             // 
@@ -2071,6 +2170,8 @@
             this.TabControlMain.ResumeLayout(false);
             this.PageOrders.ResumeLayout(false);
             this.PageOrders.PerformLayout();
+            this.PanelExportOrders.ResumeLayout(false);
+            this.PanelExportOrders.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
             this.toolStrip4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewOrders)).EndInit();
@@ -2104,8 +2205,8 @@
             this.tabPage1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.PanelExportOrders.ResumeLayout(false);
-            this.PanelExportOrders.PerformLayout();
+            this.PanelConcatinatePhones.ResumeLayout(false);
+            this.PanelConcatinatePhones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2302,6 +2403,15 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox ComboExportOrdersStatus;
         private System.Windows.Forms.Button ButtExportOrdersGo;
+        private System.Windows.Forms.Panel PanelConcatinatePhones;
+        private System.Windows.Forms.Button ButtCancatPhones;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.MaskedTextBox TxtPhone3;
+        private System.Windows.Forms.MaskedTextBox TxtPhone2;
+        private System.Windows.Forms.MaskedTextBox TxtMainPhone;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

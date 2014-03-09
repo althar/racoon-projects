@@ -167,7 +167,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(38, 13);
             this.label22.TabIndex = 50;
-            this.label22.Text = "Тел. 2";
+            this.label22.Text = "Тел. 3";
             // 
             // TxtPhone3
             // 
@@ -184,7 +184,6 @@
             this.ComboDelivery.Name = "ComboDelivery";
             this.ComboDelivery.Size = new System.Drawing.Size(218, 21);
             this.ComboDelivery.TabIndex = 48;
-//            this.ComboDelivery.SelectedValueChanged += new System.EventHandler(this.TxtDeliver_SelectedValueChanged);
             // 
             // TxtCIty
             // 
@@ -272,7 +271,6 @@
             this.TxtDiscount.Size = new System.Drawing.Size(218, 20);
             this.TxtDiscount.TabIndex = 33;
             this.TxtDiscount.Text = "0";
-            //this.TxtDiscount.TextChanged += new System.EventHandler(this.TxtDiscount_TextChanged);
             // 
             // TimePickerTo2
             // 
