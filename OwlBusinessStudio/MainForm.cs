@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.IO;
+using System.Text;
 using System.Collections.Generic;
 using System.Collections;
 using System.ComponentModel;
@@ -2796,73 +2797,193 @@ namespace OwlBusinessStudio
 
         private void ButtExportOrdersGo_Click(object sender, EventArgs e)
         {
-            string condition = " WHERE 1=1 ";
-            if (ComboExportOrdersStatus.Text == "Новый")
-            {
-                condition += " AND status_id=1 ";
-            }
-            else if (ComboExportOrdersStatus.Text == "Выполненный")
-            {
-                condition += " AND status_id=3 ";
-            }
-            if (CheckCreateOrderDate.Checked)
-            {
-                condition += " AND date(created)>=date(" + DBProcessor.objectToString(TimePickerCreateOrderFrom.Value) + ")";
-                condition += " AND date(created)<=date(" + DBProcessor.objectToString(TimePickerCreateOrderTo.Value) + ")";
-            }
-            if (CheckDeliverOrderDate.Checked)
-            {
-                condition += " AND date(deliver_date)>=date(" + DBProcessor.objectToString(TimePickerDeliverOrderFrom.Value) + ")";
-                condition += " AND date(deliver_date)<=date(" + DBProcessor.objectToString(TimePickerDeliverOrderTo.Value) + ")";
-            }
-            condition+=" ORDER BY id";
+            StreamWriter writer = null;
             try
             {
-                FTwoExcelProcessor excel = new FTwoExcelProcessor();
-                excel.InitApplication(true);
-                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(excel_OnExcelClose);
-                excel.changeOrientation(Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape);
-                DataTable orders = dbProc.executeGet("SELECT * FROM orders_with_details "+condition);
-                List<string> error_arts = new List<string>();
-                for (int i = 0; i < orders.Columns.Count; i++)
+                string condition = " WHERE 1=1 ";
+                if (ComboExportOrdersStatus.Text == "Новый")
                 {
-                    excel.text(1, i + 1, orders.Columns[i].ColumnName);
+                    condition += " AND status_id=1 ";
                 }
+                else if (ComboExportOrdersStatus.Text == "Выполненный")
+                {
+                    condition += " AND status_id=3 ";
+                }
+                if (CheckCreateOrderDate.Checked)
+                {
+                    condition += " AND date(created)>=date(" + DBProcessor.objectToString(TimePickerCreateOrderFrom.Value) + ")";
+                    condition += " AND date(created)<=date(" + DBProcessor.objectToString(TimePickerCreateOrderTo.Value) + ")";
+                }
+                if (CheckDeliverOrderDate.Checked)
+                {
+                    condition += " AND date(deliver_date)>=date(" + DBProcessor.objectToString(TimePickerDeliverOrderFrom.Value) + ")";
+                    condition += " AND date(deliver_date)<=date(" + DBProcessor.objectToString(TimePickerDeliverOrderTo.Value) + ")";
+                }
+                
 
-                for (int i = 0; i < orders.Rows.Count; i++)
+                if (saveOrdersDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    for (int j = 0; j < orders.Columns.Count; j++)
+                    writer = new StreamWriter(saveOrdersDialog.FileName, false, Encoding.Default);
+
+                    int offset = 0;
+                    DataTable orders = null;
+                    ButtProcess.Visible = true;
+                    int total = Int32.Parse(dbProc.executeGetRow("SELECT count(id) AS total FROM orders_with_details " + condition)["total"].ToString());
+                    LabelOrdersExport.Text = "Выборка заказов из базы. Это может занять некоторео время. Всего позиций " + total;
+                    Application.DoEvents();
+                    while ((orders = dbProc.executeGet("SELECT * FROM orders_with_details " + condition + " OFFSET " + offset + " LIMIT 100000")).Rows.Count > 0)
                     {
-                        string value = orders.Rows[i][j].ToString();
-                        if (orders.Rows[i][j] is double)
+                        string line = "";
+                        line += "id" + ";";
+                        line += "status" + ";";
+                        line += "created" + ";";
+                        line += "user_name" + ";";
+                        line += "modified" + ";";
+                        line += "modifier_name" + ";";
+                        line += "deliver_date" + ";";
+                        line += "deliver_distance" + ";";
+                        line += "driver" + ";";
+                        line += "total_price" + ";";
+                        line += "deliver_price" + ";";
+                        line += "goods_price" + ";";
+                        line += "discount_percent" + ";";
+                        line += "articul" + ";";
+                        line += "good_name" + ";";
+                        line += "weight" + ";";
+                        line += "weight_product" + ";";
+                        line += "count" + ";";
+                        line += "good_price" + ";";
+                        line += "client_name" + ";";
+                        line += "address" + ";";
+                        line += "phone_1" + ";";
+                        line += "phone_2" + ";";
+                        line += "phone_3" + ";";
+                        line += "deliver_time" + ";";
+                        line += "client_id" + ";";
+                        line += "good_id" + ";";
+                        line += "deliver" + "";
+                        writer.WriteLine(line);
+                        for (int i = 0; i < orders.Rows.Count; i++)
                         {
-                            value = value.Replace(",", ".");
+                            DataRow r = orders.Rows[i];
+                            line = "";
+                            //id	status	created	user_name	modified	modifier_name	deliver_date	deliver_distance
+                            //driver	total_price	deliver_price	goods_price	discount_percent	articul	good_name	weight	weight_product
+                            //    count	good_price	client_name	address	phone_1	phone_2	phone_3	deliver_time	client_id	good_id
+                            //        deliver
+                            object[] arr = new object[r.ItemArray.Length];
+                            for (int j = 0; j < r.ItemArray.Length; j++)
+                            {
+                                object val = r.ItemArray[j];
+                                if (val.ToString().Contains(";") || val.ToString().Contains(Environment.NewLine)|| val.ToString().Contains("\n"))
+                                {
+                                    val = val.ToString().Replace(Environment.NewLine, " ");
+                                    val = val.ToString().Replace("\r", " ");
+                                    val = val.ToString().Replace("\n", " ");
+                                    val = val.ToString().Replace(";", ",");
+                                }
+                                arr[j] = val;
+                            }
+                            r.ItemArray = arr;
+                            line += "" + r["id"] + ";";
+                            line += "" + r["status"] + ";";
+                            line += "" + r["created"] + ";";
+                            line += "" + r["user_name"] + ";";
+                            line += "" + r["modified"] + ";";
+                            line += "" + r["modifier_name"] + ";";
+                            line += "" + r["deliver_date"] + ";";
+                            line += "" + r["deliver_distance"] + ";";
+                            line += "" + r["driver"] + ";";
+                            line += "" + r["total_price"] + ";";
+                            line += "" + r["deliver_price"] + ";";
+                            line += "" + r["goods_price"] + ";";
+                            line += "" + r["discount_percent"] + ";";
+                            line += "" + r["articul"] + ";";
+                            line += "" + r["good_name"] + ";";
+                            line += "" + r["weight"] + ";";
+                            line += "" + r["weight_product"] + ";";
+                            line += "" + r["count"] + ";";
+                            line += "" + r["good_price"] + ";";
+                            line += "" + r["client_name"] + ";";
+                            line += "" + r["address"] + ";";
+                            line += "" + r["phone_1"] + ";";
+                            line += "" + r["phone_2"] + ";";
+                            line += "" + r["phone_3"] + ";";
+                            line += "" + r["deliver_time"] + ";";
+                            line += "" + r["client_id"] + ";";
+                            line += "" + r["good_id"] + ";";
+                            line += "" + r["deliver"] + "";
+                            writer.WriteLine(line);
+                            LabelOrdersExport.Text = "Экспорт заказов: " + (offset+i).ToString() + " из " + total + " позиций";
+                            Application.DoEvents();
+                            Thread.Sleep(10);
                         }
-                        try
-                        {
-                            excel.text(i + 2, j + 1, value);
-                        }
-                        catch (Exception eex)
-                        {
-                            error_arts.Add(orders.Rows[i]["id"].ToString());
-                        }
+                        offset += 100000;
+                        
                     }
+                    LabelOrdersExport.Text = "Экспорт завершен.";
                 }
-                string all_errors = "Экспорт завершен. Не удалось экспортировать заказы с ID: " + Environment.NewLine;
-                for (int i = 0; i < error_arts.Count; i++)
-                {
-                    all_errors += error_arts[i];
-                    if (i / 10.0 == (int)i / 10)
-                    {
-                        all_errors += Environment.NewLine;
-                    }
-                }
-                MessageBox.Show(all_errors);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+            finally
+            {
+                ButtProcess.Visible = false;
+                if (writer != null)
+                {
+                    writer.Close();
+                }
+            }
+
+            //try
+            //{
+            //    FTwoExcelProcessor excel = new FTwoExcelProcessor();
+            //    excel.InitApplication(true);
+            //    excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(excel_OnExcelClose);
+            //    excel.changeOrientation(Microsoft.Office.Interop.Excel.XlPageOrientation.xlLandscape);
+            //    DataTable orders = dbProc.executeGet("SELECT * FROM orders_with_details "+condition);
+            //    List<string> error_arts = new List<string>();
+            //    for (int i = 0; i < orders.Columns.Count; i++)
+            //    {
+            //        excel.text(1, i + 1, orders.Columns[i].ColumnName);
+            //    }
+
+            //    for (int i = 0; i < orders.Rows.Count; i++)
+            //    {
+            //        for (int j = 0; j < orders.Columns.Count; j++)
+            //        {
+            //            string value = orders.Rows[i][j].ToString();
+            //            if (orders.Rows[i][j] is double)
+            //            {
+            //                value = value.Replace(",", ".");
+            //            }
+            //            try
+            //            {
+            //                excel.text(i + 2, j + 1, value);
+            //            }
+            //            catch (Exception eex)
+            //            {
+            //                error_arts.Add(orders.Rows[i]["id"].ToString());
+            //            }
+            //        }
+            //    }
+            //    string all_errors = "Экспорт завершен. Не удалось экспортировать заказы с ID: " + Environment.NewLine;
+            //    for (int i = 0; i < error_arts.Count; i++)
+            //    {
+            //        all_errors += error_arts[i];
+            //        if (i / 10.0 == (int)i / 10)
+            //        {
+            //            all_errors += Environment.NewLine;
+            //        }
+            //    }
+            //    MessageBox.Show(all_errors);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
