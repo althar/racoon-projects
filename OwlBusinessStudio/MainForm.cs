@@ -2988,6 +2988,9 @@ namespace OwlBusinessStudio
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            TxtMainPhone.Text = "(___)___-__-__";
+            TxtPhone2.Text = "(___)___-__-__";
+            TxtPhone3.Text = "(___)___-__-__";
             PanelConcatinatePhones.Visible = !PanelConcatinatePhones.Visible;
         }
 
@@ -3042,7 +3045,7 @@ namespace OwlBusinessStudio
             //4. Update orders with phone numbers
             dbProc.update("orders", "client_id=" + client_id, condition);
 
-            DataRow total = dbProc.executeGetRow("SELECT COALESCE(count(id),0) AS count, COALESCE(sum(goods_price),0) AS total FROM orders WHERE client_id=" + client_id);
+            DataRow total = dbProc.executeGetRow("SELECT COALESCE(count(id),0) AS count, COALESCE(sum(goods_price),0) AS total FROM orders WHERE status=3 AND client_id=" + client_id);
             MessageBox.Show("Слияние успешно. Всего заказов: "+total["count"]+". На общую сумму: "+total["total"]+" руб.");
             PanelConcatinatePhones.Visible = false;
         }
