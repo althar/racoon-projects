@@ -118,7 +118,7 @@ namespace OwlBusinessStudio.Orders
             if (totalSumm.Rows.Count > 0 && !(totalSumm.Rows[0]["total_summ"] is DBNull))
             {
                 totalSummValue = (long)totalSumm.Rows[0]["total_summ"];
-                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE order_price<" + totalSummValue + " ORDER BY discount_percent DESC LIMIT 1");
+                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE order_price<" + totalSummValue + " ORDER BY discount_percent ASC LIMIT 1");
                 if (discounts.Rows.Count > 0)
                 {
                     discountForClient = (int)discounts.Rows[0]["discount_percent"];
@@ -252,7 +252,7 @@ namespace OwlBusinessStudio.Orders
             if (totalSumm.Rows.Count > 0 && !(totalSumm.Rows[0]["total_summ"] is DBNull))
             {
                 totalSummValue = (long)totalSumm.Rows[0]["total_summ"];
-                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE order_price<" + totalSummValue + " ORDER BY discount_percent DESC LIMIT 1");
+                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE order_price<" + totalSummValue + " AND cumulative=TRUE ORDER BY discount_percent DESC LIMIT 1");
                 if (discounts.Rows.Count > 0)
                 {
                     discountForClient = (int)discounts.Rows[0]["discount_percent"];
