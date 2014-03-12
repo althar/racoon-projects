@@ -1,17 +1,12 @@
-package racoonsoft.businesswin.game.structure.data;
+package racoonsoft.businesswin.structure.data;
 
-import racoonsoft.businesswin.game.structure.enums.ElasticityFunctionType;
+import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
 
 @DataStructure(name="start_settings")
-public class StartSettings
+public class StartSettings extends GameBindStructure
 {
     @DataStructureField(name="company_quantity", description="Количество предприятий")
     public EconomicsValue company_quantity = new EconomicsValue(1.0, 9999999999.0, 2, 1.0);

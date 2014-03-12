@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
-import racoonsoft.businesswin.game.structure.GameWorld;
+import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.interceptor.AccessInterceptor;
 import racoonsoft.businesswin.interceptor.HistoryInterceptor;
 

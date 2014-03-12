@@ -1,14 +1,12 @@
-package racoonsoft.businesswin.game.structure;
+package racoonsoft.businesswin.structure.model;
 
-import racoonsoft.businesswin.game.structure.model.BusinessPlan;
-import racoonsoft.businesswin.game.structure.model.Company;
-import racoonsoft.businesswin.game.structure.model.EventCard;
+import racoonsoft.businesswin.structure.model.BusinessPlan;
+import racoonsoft.businesswin.structure.model.Company;
+import racoonsoft.businesswin.structure.model.EventCard;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
-import racoonsoft.library.database.DBRecord;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 @DataStructure(name="game")
 public class Player

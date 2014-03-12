@@ -1,8 +1,10 @@
 package racoonsoft.businesswin.controller.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
-import racoonsoft.businesswin.game.structure.enums.StatusCode;
+import racoonsoft.businesswin.service.GameService;
+import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.access.User;
 import racoonsoft.library.json.JSONProcessor;
 
@@ -14,6 +16,9 @@ import java.util.HashMap;
 @Controller
 public class BusinessWinController
 {
+    @Autowired
+    protected GameService gameService;
+
     public HashMap<String,Object> getParameters(HttpServletRequest request)
     {
         HashMap<String,Object> result = new HashMap<String, Object>();

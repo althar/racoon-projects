@@ -21,6 +21,15 @@ public class JSONProcessor
     private String BodyString;
     private HashMap<String,Object> BodyStructure = new HashMap<String, Object>();
 
+    public JSONProcessor(String name, Object value)
+    {
+        BodyStructure = new HashMap<String, Object>();
+        BodyStructure.put(name,value);
+    }
+    public JSONProcessor(Object obj) throws Exception
+    {
+        BodyString = jsonValue(obj);
+    }
     public JSONProcessor(String body) throws Exception
     {
 		BodyString = body.trim();
