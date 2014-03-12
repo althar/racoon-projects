@@ -5,12 +5,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
-import racoonsoft.businesswin.game.structure.Player;
-import racoonsoft.businesswin.game.structure.enums.GameMode;
-import racoonsoft.businesswin.game.structure.GameWorld;
-import racoonsoft.businesswin.game.structure.enums.StatusCode;
+import racoonsoft.businesswin.structure.data.GoodsDeclaration;
+import racoonsoft.businesswin.structure.data.StartSettings;
+import racoonsoft.businesswin.structure.data.TradeFactors;
+import racoonsoft.businesswin.structure.model.Player;
+import racoonsoft.businesswin.structure.enums.GameMode;
+import racoonsoft.businesswin.structure.model.GameWorld;
+import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.access.User;
-import racoonsoft.library.access.UserProcessor;
 import racoonsoft.library.json.JSONProcessor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,14 +26,12 @@ public class GameController extends BusinessWinController
     @Autowired
     private PostgresqlDataSource dbProc;
 
-    @Autowired
-    private GameWorld gameWorld;
-
+    //<editor-fold desc="General">
     @RequestMapping("/games")
     public ModelAndView games(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         HashMap<String,Object> jsonMap = new HashMap<String, Object>();
-        jsonMap.put("games", gameWorld.getGames());
+        jsonMap.put("games", gameService.getGames());
         JSONProcessor json = new JSONProcessor(jsonMap);
 
         ModelAndView model = new ModelAndView("json");
@@ -42,21 +42,29 @@ public class GameController extends BusinessWinController
     public ModelAndView getGames(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
     {
         HashMap<String,Object> jsonMap = new HashMap<String, Object>();
-        jsonMap.put("game", gameWorld.getGame(game_id));
+        jsonMap.put("game", gameService.getGame(game_id));
         JSONProcessor json = new JSONProcessor(jsonMap);
 
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
-    @RequestMapping("/add_game")
+    //</editor-fold>
+
+    //<editor-fold desc="Phase 0">
+    @RequestMapping("/create_game")
     public ModelAndView addGame(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
-        JSONProcessor json = gameWorld.createGame(name, GameMode.DEFAULT);
+
+        StartSettings startSettings = new StartSettings();
+        startSettings.fill(request);
+
+        StatusCode code = gameService.createGame(name, GameMode.DEFAULT, startSettings);
+        JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
@@ -68,19 +76,9 @@ public class GameController extends BusinessWinController
         Player p = new Player();
         p.login = u.getStringValue("login");
         p.id = u.getLongValue("id");
-        JSONProcessor json = gameWorld.joinGame(id,p);
-        ModelAndView model = new ModelAndView("json");
-        model.addObject("json",json.jsonString());
-        return model;
-    }
-    @RequestMapping("/setup_game")
-    public ModelAndView setupGame(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
-    {
-        if(!hasRole(request,"ADMIN"))
-        {
-            return generateError(StatusCode.NO_PERMISSIONS);
-        }
-        JSONProcessor json = gameWorld.setupGame(id, getParameters(request));
+
+        StatusCode code = gameService.joinGame(id,p);
+        JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
@@ -92,33 +90,82 @@ public class GameController extends BusinessWinController
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
-        JSONProcessor json = gameWorld.startGame(id);
+        StatusCode code = gameService.startGame(id);
+        JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
-    @RequestMapping("/finish_game")
-    public ModelAndView finish(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
+    //</editor-fold>
+
+    //<editor-fold desc="Phase 1">
+    @RequestMapping("/declare_goods")
+    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
+    {
+        GoodsDeclaration goodsDeclaration = new GoodsDeclaration();
+        goodsDeclaration.fill(request);
+
+        StatusCode code = StatusCode.SUCCESS; // TODO: declare goods...
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/set_trade_factors")
+    public ModelAndView setTradeFactors(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
-        JSONProcessor json = gameWorld.finishGame(id);
+
+        TradeFactors tradeFactors = new TradeFactors();
+        tradeFactors.fill(request);
+
+        StatusCode code = StatusCode.SUCCESS; // TODO. Set trade factors...
+        JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
-    @RequestMapping("/turn_game")
-    public ModelAndView turn(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
+    @RequestMapping("/end_phase_1")
+    public ModelAndView endPhase1(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
-        JSONProcessor json = gameWorld.turnGame(id);
+
+        StatusCode code = StatusCode.SUCCESS; // TODO. Calculate end phase 1.
+        JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
+    //</editor-fold>
+
+//    @RequestMapping("/finish_game")
+//    public ModelAndView finish(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
+//    {
+//        if(!hasRole(request,"ADMIN"))
+//        {
+//            return generateError(StatusCode.NO_PERMISSIONS);
+//        }
+//        JSONProcessor json = gameWorld.finishGame(id);
+//        ModelAndView model = new ModelAndView("json");
+//        model.addObject("json",json.jsonString());
+//        return model;
+//    }
+//    @RequestMapping("/turn_game")
+//    public ModelAndView turn(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
+//    {
+//        if(!hasRole(request,"ADMIN"))
+//        {
+//            return generateError(StatusCode.NO_PERMISSIONS);
+//        }
+//        JSONProcessor json = gameWorld.turnGame(id);
+//        ModelAndView model = new ModelAndView("json");
+//        model.addObject("json",json.jsonString());
+//        return model;
+//    }
 }

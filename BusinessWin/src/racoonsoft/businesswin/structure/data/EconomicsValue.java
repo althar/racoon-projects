@@ -1,4 +1,4 @@
-package racoonsoft.businesswin.game.structure.data;
+package racoonsoft.businesswin.structure.data;
 
 import racoonsoft.library.annotations.DataStructureValue;
 import racoonsoft.library.helper.MathHelper;

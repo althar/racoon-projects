@@ -1,11 +1,10 @@
-package racoonsoft.businesswin.game.structure.model;
+package racoonsoft.businesswin.structure.model;
 
-import racoonsoft.businesswin.game.structure.data.CompanyProductionAndCapacity;
-import racoonsoft.businesswin.game.structure.data.CompanySensors;
-import racoonsoft.businesswin.game.structure.data.CompanyState;
+import racoonsoft.businesswin.structure.data.CompanyProductionAndCapacity;
+import racoonsoft.businesswin.structure.data.CompanySensors;
+import racoonsoft.businesswin.structure.data.CompanyState;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
-import racoonsoft.library.annotations.DataStructureValue;
 
 @DataStructure(name="company")
 public class Company

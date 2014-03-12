@@ -1,6 +1,6 @@
 package racoonsoft.businesswin.database;
 
-import racoonsoft.businesswin.game.structure.enums.GameMode;
+import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.library.database.DBProcessor;
 
 import java.sql.SQLException;

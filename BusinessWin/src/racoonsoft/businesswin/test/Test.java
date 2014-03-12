@@ -1,10 +1,9 @@
 package racoonsoft.businesswin.test;
 
-import racoonsoft.businesswin.game.structure.Game;
-import racoonsoft.businesswin.game.structure.Player;
-import racoonsoft.businesswin.game.structure.data.EconomicsValue;
-import racoonsoft.businesswin.game.structure.data.StartSettings;
-import racoonsoft.businesswin.game.structure.enums.GameMode;
+import racoonsoft.businesswin.structure.model.Game;
+import racoonsoft.businesswin.structure.model.Player;
+import racoonsoft.businesswin.structure.data.StartSettings;
+import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.library.json.JSONProcessor;
 
 import java.util.HashMap;

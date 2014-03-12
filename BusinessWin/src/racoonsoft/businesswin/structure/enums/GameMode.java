@@ -1,4 +1,4 @@
-package racoonsoft.businesswin.game.structure.enums;
+package racoonsoft.businesswin.structure.enums;
 
 public enum GameMode
 {

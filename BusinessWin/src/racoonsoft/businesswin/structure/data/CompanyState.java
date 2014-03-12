@@ -1,8 +1,7 @@
-package racoonsoft.businesswin.game.structure.data;
+package racoonsoft.businesswin.structure.data;
 
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
-import racoonsoft.library.annotations.DataStructureValue;
 
 @DataStructure(name="company_state")
 public class CompanyState

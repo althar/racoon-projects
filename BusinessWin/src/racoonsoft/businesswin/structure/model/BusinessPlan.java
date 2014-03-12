@@ -1,4 +1,4 @@
-package racoonsoft.businesswin.game.structure.model;
+package racoonsoft.businesswin.structure.model;
 
 import racoonsoft.library.database.DBRecord;
 
