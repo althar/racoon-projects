@@ -230,6 +230,8 @@
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.saveOrdersDialog = new System.Windows.Forms.SaveFileDialog();
+            this.CheckOrderType = new System.Windows.Forms.CheckBox();
+            this.ButtGetUnconfirmedOrders = new System.Windows.Forms.ToolStripButton();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -564,6 +566,7 @@
             // 
             // PageOrders
             // 
+            this.PageOrders.Controls.Add(this.CheckOrderType);
             this.PageOrders.Controls.Add(this.PanelConcatinatePhones);
             this.PageOrders.Controls.Add(this.PanelExportOrders);
             this.PageOrders.Controls.Add(this.toolStrip4);
@@ -808,6 +811,7 @@
             this.ComboOrderFilterSelfget,
             this.toolStripSeparator11,
             this.ButtRefresh,
+            this.ButtGetUnconfirmedOrders,
             this.toolStripSeparator16,
             this.toolStripSeparator17,
             this.ButtPrevPage,
@@ -2161,6 +2165,26 @@
             // 
             this.saveOrdersDialog.Filter = "CSV|*.csv";
             // 
+            // CheckOrderType
+            // 
+            this.CheckOrderType.AutoSize = true;
+            this.CheckOrderType.Location = new System.Drawing.Point(11, 256);
+            this.CheckOrderType.Name = "CheckOrderType";
+            this.CheckOrderType.Size = new System.Drawing.Size(110, 17);
+            this.CheckOrderType.TabIndex = 13;
+            this.CheckOrderType.Text = "Только с сайтов";
+            this.CheckOrderType.UseVisualStyleBackColor = true;
+            // 
+            // ButtGetUnconfirmedOrders
+            // 
+            this.ButtGetUnconfirmedOrders.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtGetUnconfirmedOrders.Image = ((System.Drawing.Image)(resources.GetObject("ButtGetUnconfirmedOrders.Image")));
+            this.ButtGetUnconfirmedOrders.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtGetUnconfirmedOrders.Name = "ButtGetUnconfirmedOrders";
+            this.ButtGetUnconfirmedOrders.Size = new System.Drawing.Size(23, 22);
+            this.ButtGetUnconfirmedOrders.Text = "Заказы на подтверждение";
+            this.ButtGetUnconfirmedOrders.Click += new System.EventHandler(this.ButtGetUnconfirmedOrders_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2429,6 +2453,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.SaveFileDialog saveOrdersDialog;
         private System.Windows.Forms.Label LabelOrdersExport;
+        private System.Windows.Forms.CheckBox CheckOrderType;
+        private System.Windows.Forms.ToolStripButton ButtGetUnconfirmedOrders;
     }
 }
 

@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
-    <mapping directory="$PROJECT_DIR$/../InvestmentWheel" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../BusinessWin" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../Chaos" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../Chipped" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../FapRacoon" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../RacoonFramework" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../Select" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../SelectNew" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../rzd_scanner" vcs="svn" />
   </component>
 </project>
 

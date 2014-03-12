@@ -23,6 +23,7 @@ namespace FTwoFramework.DB
             encryptor = man.CreateEncryptor(key, vector);
 
             dict.Add("order_price", "Стоимость заказа");
+            dict.Add("source", "Источник");
             dict.Add("cumulative", "Накопительная");
             dict.Add("discount", "Скидка");
             dict.Add("distance", "Расстояние");
