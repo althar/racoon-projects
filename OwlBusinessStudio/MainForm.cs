@@ -432,6 +432,11 @@ namespace OwlBusinessStudio
         }
         private void loadOrders(bool change_page)
         {
+            string type_condition = "";
+            if (CheckOrderType.Checked)
+            {
+                type_condition += " AND owd.type_id!=1 ";
+            }
             int limit = Int32.Parse(ComboPageSize.Text);
             int total_rows = 0;
             int total_pages = 0;
@@ -451,35 +456,7 @@ namespace OwlBusinessStudio
                 DatePickerOrdersFrom.Enabled = false;
                 DatePickerOrdersTo.Enabled = false;
                 ButtSelectOrders.Enabled = false;
-                
-                string query_count = "SELECT owd.id FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created";
-                DataTable for_count = dbProc.executeGet(query_count);
-                total_rows = for_count.Rows.Count;
-                if (total_rows < limit)
-                {
-                    limit = total_rows;
-                }
-                if (limit == 0)
-                {
-                    limit = 1;
-                }
-                total_pages = (int)Math.Ceiling((double)total_rows / limit);
-                if (total_pages == 0)
-                {
-                    total_pages = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                if (current_page > total_pages)
-                {
-                    current_page = total_pages;
-                }
-                if (current_page == 0)
-                {
-                    current_page = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                LabelCurrentPage.Text = current_page.ToString();
-                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.modifier_name,owd.modified,owd.status_id,owd.user_name,owd.created FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
+                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.modifier_name,owd.modified,owd.status_id,owd.user_name, CASE owd.type_id WHEN 1 THEN 'Сова' WHEN 2 THEN 'myzoomag.ru' WHEN 3 THEN 'zverovod.ru' WHEN 4 THEN 'zoomag.bz' END AS source FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date=date(now()) " + type_condition + " AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
                 goods = dbProc.executeGet(query);
 
                 DataGridViewOrders.DataSource = goods;
@@ -492,35 +469,7 @@ namespace OwlBusinessStudio
                 DatePickerOrdersTo.Enabled = false;
                 ButtSelectOrders.Enabled = false;
 
-                string query_count = "SELECT owd.id FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date>=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created";
-                DataTable for_count = dbProc.executeGet(query_count);
-                total_rows = for_count.Rows.Count;
-                if (total_rows < limit)
-                {
-                    limit = total_rows;
-                }
-                if (limit == 0)
-                {
-                    limit = 1;
-                }
-                total_pages = (int)Math.Ceiling((double)total_rows / limit);
-                if (total_pages == 0)
-                {
-                    total_pages = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                if (current_page > total_pages)
-                {
-                    current_page = total_pages;
-                }
-                if (current_page == 0)
-                {
-                    current_page = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                LabelCurrentPage.Text = current_page.ToString();
-
-                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date>=date(now()) AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
+                string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name,CASE owd.type_id WHEN 1 THEN 'Сова' WHEN 2 THEN 'myzoomag.ru' WHEN 3 THEN 'zverovod.ru' WHEN 4 THEN 'zoomag.bz' END AS source FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date>=date(now()) " + type_condition + " AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created LIMIT " + limit.ToString() + " OFFSET " + (current_page - 1) * limit;
                 goods = dbProc.executeGet(query);
 
                 DataGridViewOrders.DataSource = goods;
@@ -533,40 +482,9 @@ namespace OwlBusinessStudio
                 DatePickerOrdersTo.Enabled = true;
                 ButtSelectOrders.Enabled = true;
 
-                string query_count = "SELECT owd.id FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE "
-                            + " deliver_date>=date(" + dbProc.getDateTimeString(DatePickerOrdersFrom.Value) + ")"
-                            + " AND "
-                            + " deliver_date<=date(" + dbProc.getDateTimeString(DatePickerOrdersTo.Value) + ")"
-                            + " AND status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY deliver_date DESC,created";
-                DataTable for_count = dbProc.executeGet(query_count);
-                total_rows = for_count.Rows.Count;
-                if (total_rows < limit)
-                {
-                    limit = total_rows;
-                }
-                if (limit == 0)
-                {
-                    limit = 1;
-                }
-                total_pages = (int)Math.Ceiling((double)total_rows / limit);
-                if (total_pages == 0)
-                {
-                    total_pages = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                if (current_page > total_pages)
-                {
-                    current_page = total_pages;
-                }
-                if (current_page == 0)
-                {
-                    current_page = 1;
-                }
-                LabelTotalPages.Text = total_pages.ToString();
-                LabelCurrentPage.Text = current_page.ToString();
-                string command = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE ";
+                string command = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name,CASE owd.type_id WHEN 1 THEN 'Сова' WHEN 2 THEN 'myzoomag.ru' WHEN 3 THEN 'zverovod.ru' WHEN 4 THEN 'zoomag.bz' END AS source FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE ";
                 command += " deliver_date>=date(" + dbProc.getDateTimeString(DatePickerOrdersFrom.Value) + ")"
-                            + " AND "
+                            + " " + type_condition + " AND "
                             + " deliver_date<=date(" + dbProc.getDateTimeString(DatePickerOrdersTo.Value) + ")";
                 command += " AND status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY deliver_date DESC,created  LIMIT " + limit.ToString()
                         + " OFFSET " + (current_page-1)*limit;
@@ -3048,6 +2966,19 @@ namespace OwlBusinessStudio
             DataRow total = dbProc.executeGetRow("SELECT COALESCE(count(id),0) AS count, COALESCE(sum(goods_price),0) AS total FROM orders WHERE status=3 AND client_id=" + client_id);
             MessageBox.Show("Слияние успешно. Всего заказов: "+total["count"]+". На общую сумму: "+total["total"]+" руб.");
             PanelConcatinatePhones.Visible = false;
+        }
+
+        private void ButtGetUnconfirmedOrders_Click(object sender, EventArgs e)
+        {
+            DataTable goods = null;
+            string query = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id,owd.user_name,CASE owd.type_id WHEN 1 THEN 'Сова' WHEN 2 THEN 'myzoomag.ru' WHEN 3 THEN 'zverovod.ru' WHEN 4 THEN 'zoomag.bz' END AS source FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE owd.deliver_date>=date(now())  AND owd.type_id!=1 AND owd.user_name IS NULL AND owd.status_id=" + (currentOrderStatusIndex + 1).ToString() + " " + OrderFilter + " ORDER BY owd.deliver_date DESC,owd.created";
+            goods = dbProc.executeGet(query);
+            DataGridViewOrders.DataSource = goods;
+            if (goods != null)
+            {
+                Configurator.translateToRussian(DataGridViewOrders);
+                formatOrders(DataGridViewOrders);
+            }
         }
     }
 }
