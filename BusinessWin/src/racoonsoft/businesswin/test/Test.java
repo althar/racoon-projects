@@ -14,15 +14,15 @@ public class Test
     {
         try
         {
-            StartSettings settings = new StartSettings();
-            Game g = new Game(0l,GameMode.DEFAULT,"name");
-            Player p = new Player();
-            p.id = 92l;
-            g.addPlayer(p);
-            HashMap<String, Object> vals = new HashMap<String, Object>();
-            vals.put("game",g);
-            JSONProcessor proc = new JSONProcessor(vals);
-            System.out.println(proc.toJsonString());
+//            StartSettings settings = new StartSettings();
+//            Game g = new Game(0l,GameMode.DEFAULT,"name");
+//            Player p = new Player();
+//            p.id = 92l;
+//            g.addPlayer(p);
+//            HashMap<String, Object> vals = new HashMap<String, Object>();
+//            vals.put("game",g);
+//            JSONProcessor proc = new JSONProcessor(vals);
+//            System.out.println(proc.toJsonString());
         }
         catch (Exception ex)
         {

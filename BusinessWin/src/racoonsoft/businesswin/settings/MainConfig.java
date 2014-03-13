@@ -61,7 +61,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
         {
             System.out.println("Get data source - start: "+dbHost);
             PostgresqlDataSource result = new PostgresqlDataSource(dbHost,dbName,5432,dbLogin,dbPassword,"org.postgresql.Driver","jdbc:postgresql:");
-            GameWorld.instance().setDbProc(result);
+            GameWorld.setDbProc(result);
             System.out.println("Get data source - success");
             return result;
         }
@@ -70,12 +70,6 @@ public class MainConfig extends WebMvcConfigurerAdapter
             System.out.println(ex.toString());
             return null;
         }
-    }
-
-    @Bean
-    public GameWorld gameWorld()
-    {
-        return GameWorld.instance();
     }
 
     @Override

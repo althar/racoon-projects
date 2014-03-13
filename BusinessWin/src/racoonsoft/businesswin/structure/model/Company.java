@@ -13,7 +13,7 @@ public class Company
     public Long id;
 
     @DataStructureField(name="name")
-    public Long name;
+    public String name;
 
     @DataStructureField(name="products_and_capacity")
     public CompanyProductionAndCapacity products_and_capacity;

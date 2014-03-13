@@ -5,12 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
-import racoonsoft.businesswin.structure.data.GoodsDeclaration;
+import racoonsoft.businesswin.structure.model.GoodsDeclaration;
 import racoonsoft.businesswin.structure.data.StartSettings;
 import racoonsoft.businesswin.structure.data.TradeFactors;
 import racoonsoft.businesswin.structure.model.Player;
 import racoonsoft.businesswin.structure.enums.GameMode;
-import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.access.User;
 import racoonsoft.library.json.JSONProcessor;
@@ -53,17 +52,25 @@ public class GameController extends BusinessWinController
 
     //<editor-fold desc="Phase 0">
     @RequestMapping("/create_game")
-    public ModelAndView addGame(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
+    public ModelAndView addGame(HttpServletRequest request, HttpServletResponse response,String name,Integer company_count) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
-
         StartSettings startSettings = new StartSettings();
-        startSettings.fill(request);
-
-        StatusCode code = gameService.createGame(name, GameMode.DEFAULT, startSettings);
+        try
+        {
+            startSettings.fill(request);
+        }
+        catch(NumberFormatException nfex)
+        {
+            JSONProcessor json = new JSONProcessor("code",StatusCode.WRONG_DATA_FORMAT);
+            ModelAndView model = new ModelAndView("json");
+            model.addObject("json",json.jsonString());
+            return model;
+        }
+        StatusCode code = gameService.createGame(name, GameMode.DEFAULT, startSettings,company_count);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
@@ -143,29 +150,4 @@ public class GameController extends BusinessWinController
         return model;
     }
     //</editor-fold>
-
-//    @RequestMapping("/finish_game")
-//    public ModelAndView finish(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
-//    {
-//        if(!hasRole(request,"ADMIN"))
-//        {
-//            return generateError(StatusCode.NO_PERMISSIONS);
-//        }
-//        JSONProcessor json = gameWorld.finishGame(id);
-//        ModelAndView model = new ModelAndView("json");
-//        model.addObject("json",json.jsonString());
-//        return model;
-//    }
-//    @RequestMapping("/turn_game")
-//    public ModelAndView turn(HttpServletRequest request, HttpServletResponse response,Long id) throws Exception
-//    {
-//        if(!hasRole(request,"ADMIN"))
-//        {
-//            return generateError(StatusCode.NO_PERMISSIONS);
-//        }
-//        JSONProcessor json = gameWorld.turnGame(id);
-//        ModelAndView model = new ModelAndView("json");
-//        model.addObject("json",json.jsonString());
-//        return model;
-//    }
 }
