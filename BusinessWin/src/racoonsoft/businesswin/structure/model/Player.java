@@ -11,20 +11,24 @@ import java.util.ArrayList;
 @DataStructure(name="game")
 public class Player
 {
-    @DataStructureField(name="business_plan")
-    public BusinessPlan businessPlan;
-    @DataStructureField(name="companies")
-    public ArrayList<Company> companies = new ArrayList<Company>();
-    @DataStructureField(name="event_card")
-    public EventCard eventCard = null;
     @DataStructureField(name="id")
     public Long id = null;
     @DataStructureField(name="login")
     public String login;
 
+    @DataStructureField(name="business_plan")
+    public BusinessPlan businessPlan;
+    @DataStructureField(name="companies")
+    public ArrayList<Company> companies = new ArrayList<Company>();
+    @DataStructureField(name="goods_declaration")
+    public GoodsDeclaration goodsDeclaration;
+    @DataStructureField(name="event_cards")
+    public EventCard eventCard = null;
+
+
     public Player()
     {
-        companies.add(new Company());
+
     }
     public ArrayList<Company> getCompanies()
     {

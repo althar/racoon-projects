@@ -3,12 +3,14 @@ package racoonsoft.businesswin.structure.model;
 import racoonsoft.businesswin.service.GameService;
 import racoonsoft.businesswin.structure.data.EconomicsValue;
 import racoonsoft.businesswin.structure.data.StartSettings;
+import racoonsoft.businesswin.structure.data.TradeFactors;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @DataStructure(name="game")
@@ -16,8 +18,12 @@ public class Game
 {
     @DataStructureField(name="players")
     public HashMap<Long,Player> players = new HashMap<Long, Player>();
+    @DataStructureField(name="companies")
+    public ArrayList<Company> companies = new ArrayList<Company>();
     @DataStructureField(name="start_settings")
     public StartSettings startSettings = new StartSettings();
+    @DataStructureField(name="trade_factors")
+    public TradeFactors tradeFactors= new TradeFactors();
 
     @DataStructureField(name="id")
     public Long id;
@@ -28,16 +34,22 @@ public class Game
     @DataStructureField(name="status")
     public GameStatus status;
     @DataStructureField(name="turn")
-    public Integer turn;
+    public Turn turn = new Turn();
 
-    public Game(Long id, GameMode mode,String name, StartSettings startSettings)
+    public Game(Long id, GameMode mode,String name, StartSettings startSettings, Integer companyCount)
     {
         this.id = id;
         this.name = name;
         this.mode = mode;
         this.status = GameStatus.NEW;
-        this.turn = 0;
         this.startSettings = startSettings;
+        for(long i=0; i<companyCount; i++)
+        {
+            Company c = new Company();
+            c.name = "Company_"+i;
+            c.id = i;
+            companies.add(c);
+        }
     }
     public BusinessPlan getPlan(Long player_id)
     {

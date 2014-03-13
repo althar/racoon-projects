@@ -29,10 +29,11 @@ public class GameWorld
         return games;
     }
 
-    public static Game createGame(String name, GameMode mode,StartSettings parameters) throws Exception
+    public static Game createGame(String name, GameMode mode,StartSettings parameters,Integer companyCount) throws Exception
     {
         Long id = dbProc.createGame(name,mode);
-        Game game = new Game(id,mode,name,parameters);
+        Game game = new Game(id,mode,name,parameters,companyCount);
+        games.put(id,game);
         return game;
     }
     public static void finishGame(Long game_id) throws Exception
