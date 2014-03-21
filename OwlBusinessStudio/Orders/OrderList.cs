@@ -25,10 +25,27 @@ namespace OwlBusinessStudio.Orders
         private int orderID = 0;
         private int clientID = 0;
         public bool isPickup = false;
+        public DataTable goods;
 
+        public void loadGoods()
+        {
+            try
+            {
+                //goods = MainForm.dbProc.executeGet("(SELECT id,name_for_order AS name_for_order,quantity,minimum,price FROM goods WHERE weight is null UNION ALL "
+                //    + "SELECT id,name_for_order||' '||weight||' кг.' AS name_for_order,quantity,minimum,price FROM goods WHERE weight is not null) ORDER BY id");
+                //ComboGoods.DataSource = goods;
+                //ComboGoods.DisplayMember = "name_for_order";
+                //ComboGoods.ValueMember = "id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         public OrderList(int order_id)
         {
             InitializeComponent();
+            loadGoods();
             orderID = order_id;
         }
         public int getDiscount()
@@ -55,50 +72,53 @@ namespace OwlBusinessStudio.Orders
         }
         public void calc_total(bool useGivenDiscount,Int32 delPrice,bool useDelPrice)
         {
-            int goodsPrice = 0;
-            int totalDiscount = 0;
-            int deliveryPrice = 0;
-            int priceWithDiscount = 0;
+            if (needCalc)
+            {
+                int goodsPrice = 0;
+                int totalDiscount = 0;
+                int deliveryPrice = 0;
+                int priceWithDiscount = 0;
 
-            // 1 - Calculate goods price
-            for (int i = 0; i < Items.Count; i++)
-            {
-                goodsPrice += (int)(Items[i].getSum());
-            }
-            // 2 - Calculate delivery price
-            DataTable deliveryPriceTab = MainForm.dbProc.executeGet("SELECT * FROM get_delivery_price('"+distance+"',CAST("+goodsPrice+" AS DOUBLE PRECISION))");
-            deliveryPrice = (int)((double)deliveryPriceTab.Rows[0]["delivery_price"]);
-            if (useDelPrice)
-            {
-                deliveryPrice = delPrice;
-            }
-            isPickup = (bool)deliveryPriceTab.Rows[0]["is_pickup"];
-            int pickupDiscount = 0;
-            if (!(deliveryPriceTab.Rows[0]["discount"] is DBNull))
-            {
-                pickupDiscount += (int)deliveryPriceTab.Rows[0]["discount"];
-            }
-            
-            // 3 - Calculate total discount and price with discount
-            DataTable discountTab = MainForm.dbProc.executeGet("SELECT * FROM get_discount(CAST(" + goodsPrice + " AS DOUBLE PRECISION),"+clientID+","+pickupDiscount+")");
-            if (!(discountTab.Rows[0]["total_discount"] is DBNull))
-            {
-                totalDiscount = (int)((double)discountTab.Rows[0]["total_discount"]);
-            }
-            if (useGivenDiscount)
-            {
-                totalDiscount = Discount;
-            }
-            priceWithDiscount = goodsPrice - (int)(goodsPrice * ((totalDiscount) / 100.0));
+                // 1 - Calculate goods price
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    goodsPrice += (int)(Items[i].getSum());
+                }
+                // 2 - Calculate delivery price
+                DataTable deliveryPriceTab = MainForm.dbProc.executeGet("SELECT * FROM get_delivery_price('" + distance + "',CAST(" + goodsPrice + " AS DOUBLE PRECISION))");
+                deliveryPrice = (int)((double)deliveryPriceTab.Rows[0]["delivery_price"]);
+                if (useDelPrice)
+                {
+                    deliveryPrice = delPrice;
+                }
+                isPickup = (bool)deliveryPriceTab.Rows[0]["is_pickup"];
+                int pickupDiscount = 0;
+                if (!(deliveryPriceTab.Rows[0]["discount"] is DBNull))
+                {
+                    pickupDiscount += (int)deliveryPriceTab.Rows[0]["discount"];
+                }
 
-            // 4 - Fill controll with data
-            TxtPrice.Text = goodsPrice.ToString();
-            TxtDeliveryPrice.Text = deliveryPrice.ToString();
-            TxtTotalPrice.Text = (deliveryPrice + priceWithDiscount).ToString();
-            Discount = totalDiscount;
-            if (onListSumChanged != null)
-            {
-                onListSumChanged();
+                // 3 - Calculate total discount and price with discount
+                DataTable discountTab = MainForm.dbProc.executeGet("SELECT * FROM get_discount(CAST(" + goodsPrice + " AS DOUBLE PRECISION)," + clientID + "," + pickupDiscount + ")");
+                if (!(discountTab.Rows[0]["total_discount"] is DBNull))
+                {
+                    totalDiscount = (int)((double)discountTab.Rows[0]["total_discount"]);
+                }
+                if (useGivenDiscount)
+                {
+                    totalDiscount = Discount;
+                }
+                priceWithDiscount = goodsPrice - (int)(goodsPrice * ((totalDiscount) / 100.0));
+
+                // 4 - Fill controll with data
+                TxtPrice.Text = goodsPrice.ToString();
+                TxtDeliveryPrice.Text = deliveryPrice.ToString();
+                TxtTotalPrice.Text = (deliveryPrice + priceWithDiscount).ToString();
+                Discount = totalDiscount;
+                if (onListSumChanged != null)
+                {
+                    onListSumChanged();
+                }
             }
         }
         void firstItem_onSumChanged(bool useGivenDiscount,Int32 delPrice,bool useDelPrice)
@@ -108,7 +128,7 @@ namespace OwlBusinessStudio.Orders
         }
         public bool canRecalculate = false;
         #region UI
-
+        public bool needCalc = true;
         public void AddItem(int good_id, int quantity, string goodName, int goodPrice,bool useDelPrice,bool useGivenDiscount,int delPrice)
         {
             // Add control...
@@ -145,7 +165,7 @@ namespace OwlBusinessStudio.Orders
             calc_total(useGivenDiscount, delPrice, useDelPrice);
             item.Tag = delBox;
         }
-        public void AddItem()
+        public OrderItem AddItem()
         {
             // Add control...
             OrderItem item = new OrderItem(this, orderID);
@@ -178,6 +198,7 @@ namespace OwlBusinessStudio.Orders
             item.loadItem();
             calc_total(false,0,false);
             item.Tag = delBox;
+            return item;
         }
         public int getDeliverPrice()
         {
@@ -189,8 +210,8 @@ namespace OwlBusinessStudio.Orders
         }
         private void ButtAddGood_Click(object sender, EventArgs e)
         {
-            AddItem();
-            calc_total(false, 0, false);
+            OrderItem item = AddItem();
+            //calc_total(false, 0, false);
             Items[Items.Count - 1].PicFind_Click(null, null);
             if (onlistItemAdded != null)
             {

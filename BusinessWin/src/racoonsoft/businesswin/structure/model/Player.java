@@ -1,8 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
-import racoonsoft.businesswin.structure.model.BusinessPlan;
-import racoonsoft.businesswin.structure.model.Company;
-import racoonsoft.businesswin.structure.model.EventCard;
+import racoonsoft.businesswin.structure.data.BusinessPlan;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 

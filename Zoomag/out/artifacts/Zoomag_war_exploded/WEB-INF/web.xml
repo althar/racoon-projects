@@ -6,11 +6,11 @@
     </context-param>
     <context-param>
         <param-name>db_host</param-name>
-        <param-value>racoonsoft.ru</param-value>
+        <param-value>localhost</param-value>
     </context-param>
     <context-param>
         <param-name>db_name</param-name>
-        <param-value>zoomag</param-value>
+        <param-value>zoomag_test</param-value>
     </context-param>
     <context-param>
         <param-name>db_port</param-name>

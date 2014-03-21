@@ -18,8 +18,8 @@ public class CompanyState
     @DataStructureField(name="constant_costs",description="Постоянные затраты")
     public EconomicsValue constant_costs = new EconomicsValue(0.0,9999999999999.0,2,0.0);
 
-    @DataStructureField(name="amortization",description="Амортизация")
-    public EconomicsValue amortization = new EconomicsValue(0.0,9999999999999.0,2,0.0);
+    @DataStructureField(name="depreciation",description="Амортизация")
+    public EconomicsValue depreciation = new EconomicsValue(0.0,9999999999999.0,2,0.0);
 
     @DataStructureField(name="percent_payment",description="Уплата процентов")
     public EconomicsValue percent_payment = new EconomicsValue(0.0,9999999999999.0,2,0.0);
@@ -75,4 +75,7 @@ public class CompanyState
 
     @DataStructureField(name="constant_costs_coefficient",description="Коэффициент Переменных затрат")
     public EconomicsValue constant_costs_coefficient = new EconomicsValue(0.0,9999999999999.0,2,0.0);
+
+    @DataStructureField(name="market_share",description="Доля на рынке")
+    public EconomicsValue market_share = new EconomicsValue(0.0,10000000.0,2,0.0);
 }

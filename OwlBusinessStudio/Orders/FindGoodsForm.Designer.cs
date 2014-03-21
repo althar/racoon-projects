@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CheckListBrand = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ButtApplyFilters = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtArticul = new System.Windows.Forms.TextBox();
             this.ButtViewGoodPicture = new System.Windows.Forms.Button();
@@ -71,6 +72,8 @@
             this.ComboNameForOrder.Size = new System.Drawing.Size(723, 21);
             this.ComboNameForOrder.TabIndex = 1;
             this.ComboNameForOrder.SelectedIndexChanged += new System.EventHandler(this.ComboNameForOrder_SelectedIndexChanged);
+            this.ComboNameForOrder.TextChanged += new System.EventHandler(this.ComboNameForOrder_TextChanged);
+            this.ComboNameForOrder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ComboNameForOrder_KeyDown);
             // 
             // ComboNameRus
             // 
@@ -80,6 +83,7 @@
             this.ComboNameRus.Size = new System.Drawing.Size(723, 21);
             this.ComboNameRus.TabIndex = 2;
             this.ComboNameRus.SelectedIndexChanged += new System.EventHandler(this.ComboNameRus_SelectedIndexChanged);
+            this.ComboNameRus.TextChanged += new System.EventHandler(this.ComboNameRus_TextChanged);
             // 
             // label1
             // 
@@ -111,6 +115,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ButtApplyFilters);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TxtArticul);
             this.groupBox1.Controls.Add(this.ButtViewGoodPicture);
@@ -136,6 +141,16 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск";
+            // 
+            // ButtApplyFilters
+            // 
+            this.ButtApplyFilters.Location = new System.Drawing.Point(283, 210);
+            this.ButtApplyFilters.Name = "ButtApplyFilters";
+            this.ButtApplyFilters.Size = new System.Drawing.Size(560, 23);
+            this.ButtApplyFilters.TabIndex = 22;
+            this.ButtApplyFilters.Text = "Применить фильтры";
+            this.ButtApplyFilters.UseVisualStyleBackColor = true;
+            this.ButtApplyFilters.Click += new System.EventHandler(this.ButtApplyFilters_Click);
             // 
             // label3
             // 
@@ -311,5 +326,6 @@
         private System.Windows.Forms.Button ButtViewGoodPicture;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtArticul;
+        private System.Windows.Forms.Button ButtApplyFilters;
     }
 }

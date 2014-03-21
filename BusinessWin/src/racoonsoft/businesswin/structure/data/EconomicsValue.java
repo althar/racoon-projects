@@ -31,6 +31,14 @@ public class EconomicsValue
         }
         value = MathHelper.round(value,accuracy);
     }
+    public void add(Double val)
+    {
+        set(get()+val);
+    }
+    public void add(EconomicsValue val)
+    {
+        add(val.get());
+    }
     public Double get()
     {
         return value;

@@ -1,9 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
-import racoonsoft.businesswin.service.GameService;
-import racoonsoft.businesswin.structure.data.EconomicsValue;
-import racoonsoft.businesswin.structure.data.StartSettings;
-import racoonsoft.businesswin.structure.data.TradeFactors;
+import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
@@ -24,6 +21,10 @@ public class Game
     public StartSettings startSettings = new StartSettings();
     @DataStructureField(name="trade_factors")
     public TradeFactors tradeFactors= new TradeFactors();
+    @DataStructureField(name="product_price_and_production")
+    public ProductPriceAndProduction product_price_and_production;
+    @DataStructureField(name="industry_performance")
+    public IndustryPerformance industry_performance;
 
     @DataStructureField(name="id")
     public Long id;

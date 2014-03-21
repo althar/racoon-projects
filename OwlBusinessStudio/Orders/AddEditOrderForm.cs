@@ -59,10 +59,13 @@ namespace OwlBusinessStudio.Orders
         {
             
             DataTable goods = MainForm.dbProc.get("order_goods", "order_id=" + orderID.ToString());
+            orderTable.needCalc = false;
             for (int i = 0; i < goods.Rows.Count; i++)
             {
                 orderTable.AddItem((int)goods.Rows[i]["good_id"], (int)goods.Rows[i]["count"], (string)goods.Rows[i]["good_name"], (int)goods.Rows[i]["price"],true,true,delPrice);
             }
+            orderTable.needCalc = true;
+            orderTable.calc_total(true, delPrice, true);
         }
         private DataTable order;
         private void loadOrder()
@@ -118,7 +121,7 @@ namespace OwlBusinessStudio.Orders
             if (totalSumm.Rows.Count > 0 && !(totalSumm.Rows[0]["total_summ"] is DBNull))
             {
                 totalSummValue = (long)totalSumm.Rows[0]["total_summ"];
-                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE order_price<" + totalSummValue + " ORDER BY discount_percent ASC LIMIT 1");
+                DataTable discounts = MainForm.dbProc.executeGet("SELECT * FROM discounts WHERE cumulative=TRUE AND order_price<" + totalSummValue + " ORDER BY discount_percent ASC LIMIT 1");
                 if (discounts.Rows.Count > 0)
                 {
                     discountForClient = (int)discounts.Rows[0]["discount_percent"];
@@ -868,7 +871,6 @@ namespace OwlBusinessStudio.Orders
             ButtSaveOrder.Top = GroupBoxGoods.Height + 308;
             Height = GroupBoxGoods.Height + 381;
         }
-
         private void TxtPhone1_TextChanged(object sender, EventArgs e)
         {
             if (TxtPhone1.Text.Length == 14 && loaded)
@@ -888,7 +890,6 @@ namespace OwlBusinessStudio.Orders
             }
         }
         private bool needSearchForStreet = true;
-
         private void ComboStreet_TextChanged(object sender, EventArgs e)
         {
             if (ComboStreet.Text.Length == 3 && needSearchForStreet)
@@ -907,7 +908,6 @@ namespace OwlBusinessStudio.Orders
                 needSearchForStreet = true;
             }
         }
-
         private void NumDeliveryPrice_ValueChanged(object sender, EventArgs e)
         {
             //orderTable.setDeliverPrice((int)NumDeliveryPrice.Value);

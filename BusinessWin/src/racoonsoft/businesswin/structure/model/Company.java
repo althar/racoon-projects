@@ -1,8 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
-import racoonsoft.businesswin.structure.data.CompanyProductionAndCapacity;
-import racoonsoft.businesswin.structure.data.CompanySensors;
-import racoonsoft.businesswin.structure.data.CompanyState;
+import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
@@ -23,6 +21,12 @@ public class Company
 
     @DataStructureField(name="company_state")
     public CompanyState company_state;
+
+    @DataStructureField(name="fixed_assets_and_depreciation")
+    public FixedAssetsAndDepreciation fixed_assets_and_depreciation;
+
+    @DataStructureField(name="business_plan")
+    public BusinessPlan business_plan;
 
     public Company()
     {
