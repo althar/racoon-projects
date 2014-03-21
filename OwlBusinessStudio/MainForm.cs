@@ -30,6 +30,7 @@ namespace OwlBusinessStudio
         public static DataTable goodsFull;
         public static DataTable brands;
         public static DataTable animals;
+        public static DataTable weights;
         public static DataTable food_types;
         public static DataTable food_type_ages;
         public static DataTable food_type_categorys;
@@ -41,12 +42,12 @@ namespace OwlBusinessStudio
         private int currentOrderID = 0;
         private int currentOrderStatus = 0;
 
-        public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
-            + " FROM goods WHERE name_rus IS NOT NULL AND enabled AND name_rus !='' ORDER BY name_rus";
-        public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
-    + "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
-    + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
-    + "WHERE g.articul IS NOT NULL AND g.enabled ORDER BY g.name_for_order";
+    //    public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
+    //        + " FROM goods WHERE name_rus IS NOT NULL AND enabled AND name_rus !='' ORDER BY name_rus";
+    //    public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
+    //+ "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
+    //+ "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
+    //+ "WHERE g.articul IS NOT NULL AND g.enabled ORDER BY g.name_for_order";
 
         public MainForm()
         {
@@ -56,14 +57,14 @@ namespace OwlBusinessStudio
 
         public void loadStaticGoods()
         {
-            goodsRus = dbProc.executeGet(rusGoods);
-            goodsFull = dbProc.executeGet(fullGoods);
+            //goodsRus = dbProc.executeGet(rusGoods);
+            //goodsFull = dbProc.executeGet(fullGoods);
             brands = MainForm.dbProc.executeGet("SELECT distinct company FROM goods WHERE company IS NOT NULL ORDER BY company");
             animals = MainForm.dbProc.executeGet("SELECT distinct animal FROM goods WHERE animal IS NOT NULL ORDER BY animal");
             food_types = MainForm.dbProc.executeGet("SELECT distinct food_type FROM goods WHERE food_type IS NOT NULL ORDER BY food_type");
             food_type_ages = MainForm.dbProc.executeGet("SELECT distinct food_type_age FROM goods WHERE food_type_age IS NOT NULL ORDER BY food_type_age");
             food_type_categorys = MainForm.dbProc.executeGet("SELECT distinct food_type_category FROM goods WHERE food_type_category IS NOT NULL ORDER BY food_type_category");
-
+            weights = MainForm.dbProc.executeGet("SELECT distinct weight FROM goods WHERE weight IS NOT NULL ORDER BY weight");
         }
         public void MainForm_Load(object sender, EventArgs e)
         {

@@ -107,19 +107,18 @@ public class GameController extends BusinessWinController
 
     //<editor-fold desc="Phase 1">
     @RequestMapping("/declare_goods")
-    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
+    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,Long game_id,Long player_id) throws Exception
     {
         GoodsDeclaration goodsDeclaration = new GoodsDeclaration();
         goodsDeclaration.fill(request);
-
-        StatusCode code = StatusCode.SUCCESS; // TODO: declare goods...
+        StatusCode code = gameService.declareGoods(game_id,player_id,goodsDeclaration);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/set_trade_factors")
-    public ModelAndView setTradeFactors(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
+    public ModelAndView setTradeFactors(HttpServletRequest request, HttpServletResponse response,Long game_id,Long player_id) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
@@ -128,22 +127,52 @@ public class GameController extends BusinessWinController
 
         TradeFactors tradeFactors = new TradeFactors();
         tradeFactors.fill(request);
-
-        StatusCode code = StatusCode.SUCCESS; // TODO. Set trade factors...
+        StatusCode code = gameService.setTradeFactors(game_id,player_id,tradeFactors);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/end_phase_1")
-    public ModelAndView endPhase1(HttpServletRequest request, HttpServletResponse response,String name) throws Exception
+    public ModelAndView endPhase1(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
             return generateError(StatusCode.NO_PERMISSIONS);
         }
+        StatusCode code = gameService.endPhase1(game_id);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    //</editor-fold>
 
-        StatusCode code = StatusCode.SUCCESS; // TODO. Calculate end phase 1.
+    //<editor-fold desc="Phase 2">
+    @RequestMapping("/end_phase_2")
+    public ModelAndView endPhase2(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    {
+        if(!hasRole(request,"ADMIN"))
+        {
+            return generateError(StatusCode.NO_PERMISSIONS);
+        }
+        StatusCode code = gameService.endPhase2(game_id);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Phase 3">
+    @RequestMapping("/end_phase_3")
+    public ModelAndView endPhase3(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    {
+        if(!hasRole(request,"ADMIN"))
+        {
+            return generateError(StatusCode.NO_PERMISSIONS);
+        }
+        StatusCode code = gameService.endPhase3(game_id);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());

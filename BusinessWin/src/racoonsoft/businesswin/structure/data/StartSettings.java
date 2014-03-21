@@ -23,8 +23,8 @@ public class StartSettings extends GameBindStructure
     @DataStructureField(name="total_capacity", description="Мощность общая")
     public EconomicsValue total_capacity = new EconomicsValue(1.0, 9999999999.0, 0, 1.0);
 
-    @DataStructureField(name="total_amortization", description="Амортизация, лет")
-    public EconomicsValue total_amortization = new EconomicsValue(1.0, 999.0, 0, 1.0);
+    @DataStructureField(name="total_depreciation", description="Амортизация, лет")
+    public EconomicsValue total_depreciation = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
     @DataStructureField(name="profit_tax", description="Ставка налога на прибыль")
     public EconomicsValue profit_tax = new EconomicsValue(0.0,9999.0,3,0.1);

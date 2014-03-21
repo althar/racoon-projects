@@ -121,15 +121,16 @@
   <data name="ButtViewGoodPicture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAICSURBVDhPY2BAAkyMjFxmZmY+3t7eKaampq5MTEysyPJ42a6urunzlyx5v3nXrh/b9+z5uXH7
-        9l9z5s9/aWdnF0TQEFcXl+wNe/e9vf/h461Pv36/+P7n79tPv/+8uPPm7Z11O3Z+MDcz88dnCN+mHTuf
-        nXvxauetd+8PPfz46fTjT5/P3X3/4djl1293Hn74eMvCpctuAw1gxmqIgYFB6L6Ll06ce/F67vnnrxec
-        ffFqwdEnz6Yfefxs2sFHTyfve/S0f8+ZcxclxMXNsRrg7OSUt/3chTUnn79sPvHsRcvuB48r9jx4XA7H
-        D5+U7TxzbpuaqmoAVgPU1dT89545u+X4s5eZhx89SwNqTNj78Akc7374JH73yVOHeHl4DHGFA++ateuu
-        7751J/zAo2e+ex4+8QYaAMZAttf685eiJk2edBKomQVnQCorK0ccOXX67O6bt7133X9kBvSG2a77j822
-        Xrrqf/DYsTs2NjYtQM3seKNTQkIicOrUqZeOn79w8OyNmysPnzx1tK219aS1lXVPeXnFfwsLy8tAAwQI
-        pQlOYOozBvrXB6hQB4hBKVFAWVnlVkdH538rK+srxBiCzRJZJSXlW41Nzf/NzS3IN0RZRfVWWXnlf0ND
-        IwoMAXonMyv7v66uHvmGyCso3o6Ojv3PwsJiRChQcclLMTIygpM2ANRzAMDSvbq/AAAAAElFTkSuQmCC
+        YQUAAAILSURBVDhPY0AGTIyMXGZmZj7e3t4ppqamrkxMTKxQKcLA1dU1ff6SJe8379r1Y/uePT83bt/+
+        a878+S/t7OyCoEpwA1cXl+wNe/e9vf/h461Pv36/+P7n79tPv/+8uPPm7Z11O3Z+MDcz84cqxQr4Nu3Y
+        +ezci1c7b717f+jhx0+nH3/6fO7u+w/HLr9+u/Pww8dbFi5ddhuojhmiHA0YGBiE7rt46cS5F6/nnn/+
+        esHZF68WHH3ybPqRx8+mHXz0dPK+R0/795w5d1FCXNwcqgUVODs55W0/d2HNyecvm088e9Gy+8Hjij0P
+        HpfD8cMnZTvPnNumpqoaANWCCtTV1Pz3njm75fizl5mHHz1LA2pK2PvwCRzvfvgkfvfJU4d4eXgMoVow
+        AO+ateuu7751J/zAo2e+QBu9gRrBGMj2Wn/+UtSkyZNOAtWxQJRjAcrKyhFHTp0+u/vmbe9d9x+ZAb1h
+        tuv+Y7Otl676Hzx27I6NjU0LUBk7RDUOICEhETh16tRLx89fOHj2xs2Vh0+eOtrW2nrS2sq6p7y84r+F
+        heVloDIBiGrcgBOY+oyB/vUBsnWAGJQSBZSVVW51dHT+t7KyvgLiAzHJQFZJSflWY1Pzf3NzC/INUVZR
+        vVVWXvnf0NCIAkOA3snMyv6vq6tHviHyCoq3o6Nj/7OwsBhBxUgGUoyMjMCkzcAAANRzAMAo4rhYAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

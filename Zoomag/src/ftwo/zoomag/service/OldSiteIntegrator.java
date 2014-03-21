@@ -21,10 +21,10 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
         super(processor_name);
         try
         {
-            mySqlProc1 = new DatabaseProcessor("mysql.myzoom01.mass.hc.ru","wwwmyzoomagru",3306,"myzoom01","ngw0Laej","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc1 = new DatabaseProcessor("188.226.160.201","zverovod_db?useUnicode=true&characterEncoding=UTF-8",3306,"zoomag","zoomag2000","com.mysql.jdbc.Driver","jdbc:mysql:");
             mySqlProc1.connect();
             System.out.println("Site 1 integrator connected");
-            mySqlProc2 = new DatabaseProcessor("zverovod.mysql","zverovod_db",3306,"zverovod_mysql","s17vpvth","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc2 = new DatabaseProcessor("141.0.170.146","myzoomag?useUnicode=true&characterEncoding=latin1",3306,"zoomag","zoomag2000","com.mysql.jdbc.Driver","jdbc:mysql:");
             mySqlProc2.connect();
             System.out.println("Site 2 integrator connected");
         }
@@ -37,10 +37,11 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     @Override
     public void process()
     {
-        //doSite(mySqlProc1,"site_1_order_id");
+        doSite(mySqlProc1,"site_1_order_id",3);
+        doSite(mySqlProc2,"site_2_order_id",2);
     }
 
-    private void doSite(DBProcessor proc,String seqName)
+    private void doSite(DBProcessor proc,String seqName,Integer source)
     {
         try
         {
@@ -86,6 +87,11 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     orderPars.put("phone_3","(000)000-00-00");
                     orderPars.put("deliver",deliver);
                     orderPars.put("street",address);
+                    orderPars.put("city","");
+                    orderPars.put("house","");
+                    orderPars.put("room","");
+                    orderPars.put("porch","");
+                    orderPars.put("floor","");
                     orderPars.put("description",comment);
                     orderPars.put("goods_price",order_amount);
                     orderPars.put("deliver_date",new SQLExpression("now()"));
@@ -97,6 +103,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     orderPars.put("deliver_price",0);
                     orderPars.put("metro_id",0);
                     orderPars.put("deliver_distance","");
+                    orderPars.put("type_id",source);
                     Integer order_id = dbProc.executeInsert("orders",orderPars);
                     System.out.println("Order inserted: "+order_id);
 

@@ -24,8 +24,8 @@ namespace OwlBusinessStudio.Orders
         {
             InitializeComponent();
             orderID = order_id;
-            loadGoods();
             parent = owner;
+            loadGoods();
         }
         public void loadItem(int good_id,int quantity,string goodName,int goodPrice)
         {
@@ -71,9 +71,9 @@ namespace OwlBusinessStudio.Orders
         {
             try
             {
-                DataTable goods = MainForm.dbProc.executeGet("(SELECT id,name_for_order AS name_for_order,quantity,minimum,price FROM goods WHERE weight is null UNION ALL "
-                    + "SELECT id,name_for_order||' '||weight||' кг.' AS name_for_order,quantity,minimum,price FROM goods WHERE weight is not null) ORDER BY id");
-                ComboGoods.DataSource = goods;
+                //DataTable goods = MainForm.dbProc.executeGet("(SELECT id,name_for_order AS name_for_order,quantity,minimum,price FROM goods WHERE weight is null UNION ALL "
+                //    + "SELECT id,name_for_order||' '||weight||' кг.' AS name_for_order,quantity,minimum,price FROM goods WHERE weight is not null) ORDER BY id");
+                ComboGoods.DataSource = parent.goods;
                 ComboGoods.DisplayMember = "name_for_order";
                 ComboGoods.ValueMember = "id";
             }
@@ -148,7 +148,14 @@ namespace OwlBusinessStudio.Orders
         }
         public int getSum()
         {
-            return Int32.Parse(TxtSum.Text);
+            try
+            {
+                return Int32.Parse(TxtSum.Text);
+            }
+            catch(Exception ex)
+            {
+                return 0;
+            }
         }
         public int getGoodID()
         {

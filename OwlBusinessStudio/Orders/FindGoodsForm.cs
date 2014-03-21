@@ -15,10 +15,16 @@ namespace OwlBusinessStudio.Orders
         private OrderList list;
         private bool firstTime = true;
         private string pictureBaseUrl;
+        public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
+            + " FROM goods WHERE name_rus IS NOT NULL AND enabled AND name_rus !='' AND !!! ORDER BY name_rus";
+        public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
+    + "||' на складе)' AS name_for_order,g.photo_url,ords.ordered FROM "
+    + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
+    + "WHERE g.articul IS NOT NULL AND g.enabled AND !!! ORDER BY g.name_for_order";
 
-        public FindGoodsForm(OrderItem orderItem,OrderList orderList)
+        public FindGoodsForm(OrderItem orderItem, OrderList orderList)
         {
-            MainForm.goodsFull = MainForm.dbProc.executeGet(MainForm.fullGoods);
+            //MainForm.goodsFull = MainForm.dbProc.executeGet(MainForm.fullGoods);
             InitializeComponent();
             item = orderItem;
             list = orderList;
@@ -39,63 +45,55 @@ namespace OwlBusinessStudio.Orders
 
         private void loadFilters()
         {
-            DataTable brands = MainForm.dbProc.executeGet("SELECT distinct company FROM goods WHERE company IS NOT NULL ORDER BY company");
-            DataTable weights = MainForm.dbProc.executeGet("SELECT distinct weight FROM goods WHERE weight IS NOT NULL ORDER BY weight");
-            DataTable animals = MainForm.dbProc.executeGet("SELECT distinct animal FROM goods WHERE animal IS NOT NULL ORDER BY animal");
-            DataTable food_types = MainForm.dbProc.executeGet("SELECT distinct food_type FROM goods WHERE food_type IS NOT NULL ORDER BY food_type");
-            DataTable food_type_ages = MainForm.dbProc.executeGet("SELECT distinct food_type_age FROM goods WHERE food_type_age IS NOT NULL ORDER BY food_type_age");
-            DataTable food_type_categorys = MainForm.dbProc.executeGet("SELECT distinct food_type_category FROM goods WHERE food_type_category IS NOT NULL ORDER BY food_type_category");
-
-
-            CheckListBrand.DataSource = brands;
+            CheckListBrand.DataSource = MainForm.brands;
             CheckListBrand.DisplayMember = "company";
             CheckListBrand.ValueMember = "company";
 
-            CheckListAge.DataSource = food_type_ages;
+            CheckListAge.DataSource = MainForm.food_type_ages;
             CheckListAge.DisplayMember = "food_type_age";
             CheckListAge.ValueMember = "food_type_age";
 
-            CheckListAnimal.DataSource = animals;
+            CheckListAnimal.DataSource = MainForm.animals;
             CheckListAnimal.DisplayMember = "animal";
             CheckListAnimal.ValueMember = "animal";
 
-            CheckListFoodType.DataSource = food_types;
+            CheckListFoodType.DataSource = MainForm.food_types;
             CheckListFoodType.DisplayMember = "food_type";
             CheckListFoodType.ValueMember = "food_type";
 
-            CheckListUseType.DataSource = food_type_categorys;
+            CheckListUseType.DataSource = MainForm.food_type_categorys;
             CheckListUseType.DisplayMember = "food_type_category";
             CheckListUseType.ValueMember = "food_type_category";
 
-            CheckListWeight.DataSource = weights;
+            CheckListWeight.DataSource = MainForm.weights;
             CheckListWeight.DisplayMember = "weight";
             CheckListWeight.ValueMember = "weight";
         }
-        
+        string totalFilter = " 1=1 ";
         private void applyStaticFilters()
         {
-            ComboNameForOrder.DataSource = MainForm.goodsFull;
-            ComboNameForOrder.DisplayMember = "name_for_order";
-            ComboNameForOrder.ValueMember = "id";
-            ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
-            ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //ComboNameForOrder.DataSource = MainForm.goodsFull;
+            //ComboNameForOrder.DisplayMember = "name_for_order";
+            //ComboNameForOrder.ValueMember = "id";
+            //ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
 
-            ComboNameRus.DataSource = MainForm.goodsRus;
-            ComboNameRus.DisplayMember = "name_rus";
-            ComboNameRus.ValueMember = "id";
-            ComboNameRus.AutoCompleteSource = AutoCompleteSource.ListItems;
-            ComboNameRus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //ComboNameRus.DataSource = MainForm.goodsRus;
+            //ComboNameRus.DisplayMember = "name_rus";
+            //ComboNameRus.ValueMember = "id";
+            //ComboNameRus.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //ComboNameRus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
 
             ComboNameForOrder.Text = "";
             ComboNameRus.Text = "";
             ComboNameForOrder.SelectedIndex = -1;
             ComboNameRus.SelectedItem = -1;
-            StringBuilder filter = new StringBuilder();
+            StringBuilder filter = new StringBuilder(" 1=1 ");
             for (int i = 0; i < CheckListBrand.CheckedIndices.Count; i++)
             {
                 if (i == 0)
                 {
-                    filter.Append(" company IN (");
+                    filter.Append(" AND company IN (");
                 }
                 filter.Append("'");
                 filter.Append(((DataRowView)CheckListBrand.CheckedItems[i]).Row["company"]);
@@ -219,13 +217,14 @@ namespace OwlBusinessStudio.Orders
                     filter.Append(")");
                 }
             }
-            string totalFilter = filter.ToString();
-            if (TxtArticul.Text.Replace(" ","") != "")
+            totalFilter = filter.ToString();
+            if (TxtArticul.Text.Replace(" ", "") != "")
             {
-                totalFilter = "articul = '"+TxtArticul.Text+"'";
+                totalFilter = "articul = '" + TxtArticul.Text + "'";
             }
-            ((DataTable)ComboNameForOrder.DataSource).DefaultView.RowFilter = totalFilter;
-            ((DataTable)ComboNameRus.DataSource).DefaultView.RowFilter = totalFilter;
+            Text = totalFilter;
+            //((DataTable)ComboNameForOrder.DataSource).DefaultView.RowFilter = totalFilter;
+            //((DataTable)ComboNameRus.DataSource).DefaultView.RowFilter = totalFilter;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -353,6 +352,62 @@ namespace OwlBusinessStudio.Orders
                 ComboNameForOrder.SelectedItem = ComboNameForOrder.Items[0];
                 currentGoodID = (int)ComboNameForOrder.SelectedValue;
                 Text = currentGoodID.ToString();
+            }
+        }
+
+        private void ButtApplyFilters_Click(object sender, EventArgs e)
+        {
+            string query = fullGoods.Replace("!!!", totalFilter);
+
+            ComboNameForOrder.DataSource = MainForm.dbProc.executeGet(query);
+            ComboNameForOrder.DisplayMember = "name_for_order";
+            ComboNameForOrder.ValueMember = "id";
+            ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
+            ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+
+        }
+
+        private void ComboNameForOrder_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ComboNameRus_TextChanged(object sender, EventArgs e)
+        {
+            if (ComboNameRus.Text.Length == 0)
+            {
+                ComboNameRus.DataSource = null;
+            }
+            if (ComboNameRus.Text.Length == 2)
+            {
+                string firstFilter = totalFilter + " AND lower(name_for_order) LIKE lower('" + ComboNameRus.Text.Replace("'", "`") + "%')";
+                string secondFilter = totalFilter + " AND lower(name_for_order) LIKE lower('%" + ComboNameRus.Text.Replace("'", "`") + "%')";
+                string query1 = rusGoods.Replace("!!!", firstFilter);
+                string query2 = rusGoods.Replace("!!!", secondFilter);
+                ComboNameRus.DataSource = MainForm.dbProc.executeGet("(" + query1 + ") UNION (" + query2 + ")");
+                ComboNameRus.DisplayMember = "name_rus";
+                ComboNameRus.ValueMember = "id";
+                ComboNameRus.AutoCompleteSource = AutoCompleteSource.ListItems;
+                ComboNameRus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                ComboNameRus.Select(2, ComboNameForOrder.Text.Length - 2);
+            }
+        }
+
+        private void ComboNameForOrder_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int start = ComboNameForOrder.Text.Length;
+                string firstFilter = totalFilter + " AND lower(name_for_order) LIKE lower('" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
+                string secondFilter = totalFilter + " AND lower(name_for_order) LIKE lower('%" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
+                string query1 = fullGoods.Replace("!!!", firstFilter);
+                string query2 = fullGoods.Replace("!!!", secondFilter);
+                ComboNameForOrder.DataSource = MainForm.dbProc.executeGet("(" + query1 + ") UNION (" + query2 + ")");
+                ComboNameForOrder.DisplayMember = "name_for_order";
+                ComboNameForOrder.ValueMember = "id";
+                ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
+                ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                ComboNameForOrder.Select(start, ComboNameForOrder.Text.Length - start);
             }
         }
     }
