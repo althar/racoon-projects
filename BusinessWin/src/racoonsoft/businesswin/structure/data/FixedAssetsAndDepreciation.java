@@ -16,5 +16,5 @@ public class FixedAssetsAndDepreciation
     public EconomicsValue depreciation = new EconomicsValue(0.0,99999.0,2,0.0);
 
     @DataStructureField(name="acquisition_method")
-    public String acquisition_method = "";
+    public Integer acquisition_method = 0;
 }

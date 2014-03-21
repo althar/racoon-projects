@@ -17,7 +17,7 @@ namespace OwlBusinessStudio.Orders
         private string pictureBaseUrl;
         public static string rusGoods = "SELECT id,articul,name_rus AS name_rus,company,food_type_age,animal,food_type,food_type_category,weight"
             + " FROM goods WHERE name_rus IS NOT NULL AND enabled AND name_rus !='' AND !!! ORDER BY name_rus";
-        public static string fullGoods = "SELECT g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
+        public static string fullGoods = "SELECT g.name_rus,g.id,g.articul,g.name_for_order||' '||CASE COALESCE(g.weight,'') WHEN '' THEN '' ELSE g.weight END || '      \t('|| quantity - COALESCE(ords.ordered,0)"
     + "||' на складе)' AS name_for_order,g.photo_url,ords.ordered FROM "
     + "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
     + "WHERE g.articul IS NOT NULL AND g.enabled AND !!! ORDER BY g.name_for_order";
@@ -279,6 +279,8 @@ namespace OwlBusinessStudio.Orders
                     ComboNameRus.SelectedIndex = -1;
                     ComboNameRus.Text = "";
                 }
+                string description = ((DataRowView)ComboNameForOrder.SelectedItem).Row["name_rus"].ToString();
+                TxtDescription.Text = description;
                 Text = currentGoodID.ToString();
             }
             catch (Exception ex)
@@ -364,7 +366,11 @@ namespace OwlBusinessStudio.Orders
             ComboNameForOrder.ValueMember = "id";
             ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
             ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-
+            if (ComboNameForOrder.Items.Count > 0)
+            {
+                ComboNameForOrder.SelectedIndex = -1;
+                ComboNameForOrder.SelectedIndex = 0;
+            }
         }
 
         private void ComboNameForOrder_TextChanged(object sender, EventArgs e)
@@ -398,8 +404,8 @@ namespace OwlBusinessStudio.Orders
             if (e.KeyCode == Keys.Enter)
             {
                 int start = ComboNameForOrder.Text.Length;
-                string firstFilter = totalFilter + " AND lower(name_for_order) LIKE lower('" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
-                string secondFilter = totalFilter + " AND lower(name_for_order) LIKE lower('%" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
+                string firstFilter = " 1=1 AND lower(name_for_order) LIKE lower('" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
+                string secondFilter = " 1=1 AND lower(name_for_order) LIKE lower('%" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
                 string query1 = fullGoods.Replace("!!!", firstFilter);
                 string query2 = fullGoods.Replace("!!!", secondFilter);
                 ComboNameForOrder.DataSource = MainForm.dbProc.executeGet("(" + query1 + ") UNION (" + query2 + ")");
@@ -408,6 +414,22 @@ namespace OwlBusinessStudio.Orders
                 ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
                 ComboNameForOrder.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 ComboNameForOrder.Select(start, ComboNameForOrder.Text.Length - start);
+                TxtArticul.Text = "";
+                if (ComboNameForOrder.Items.Count > 0)
+                {
+                    ComboNameForOrder.SelectedIndex = -1;
+                    ComboNameForOrder.SelectedIndex = 0;
+                    
+                }
+                
+            }
+        }
+
+        private void TxtArticul_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                ButtApplyFilters_Click(null, null);
             }
         }
     }

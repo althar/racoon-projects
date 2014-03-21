@@ -39,31 +39,31 @@ public class StartSettings extends GameBindStructure
     public EconomicsValue elasticity_decrease = new EconomicsValue(0.0,9999.0,3,0.1);
 
     @DataStructureField(name="power_coefficient_max", description="Коэффициент мощности, max")
-    public EconomicsValue power_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.1);
+    public EconomicsValue power_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.2);
 
     @DataStructureField(name="power_coefficient_min", description="Коэффициент мощности, min")
     public EconomicsValue power_coefficient_min = new EconomicsValue(0.0,9999.0,3,0.1);
 
     @DataStructureField(name="power_loading_coefficient_max", description="Коэффициент загрузки мощности, max")
-    public EconomicsValue power_loading_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.1);
+    public EconomicsValue power_loading_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.2);
 
     @DataStructureField(name="power_loading_coefficient_min", description="Коэффициент загрузки мощности, min")
     public EconomicsValue power_loading_coefficient_min = new EconomicsValue(0.0,9999.0,3,0.1);
 
     @DataStructureField(name="value_assets_for_all_companies_coefficient_max", description="Коэффициент остаточной стоимости активов всех компаний, max")
-    public EconomicsValue value_assets_for_all_companies_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.1);
+    public EconomicsValue value_assets_for_all_companies_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.2);
 
     @DataStructureField(name="value_assets_for_all_companies_coefficient_min", description="Коэффициент остаточной стоимости активов всех компаний, min")
     public EconomicsValue value_assets_for_all_companies_coefficient_min = new EconomicsValue(0.0,9999.0,3,0.1);
 
     @DataStructureField(name="variable_costs_as_a_percentage_of_revenue_coefficient_max", description="Коэффициент переменных затрат как процент от выручки, max")
-    public EconomicsValue variable_costs_as_a_percentage_of_revenue_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.1);
+    public EconomicsValue variable_costs_as_a_percentage_of_revenue_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.2);
 
     @DataStructureField(name="variable_costs_as_a_percentage_of_revenue_coefficient_min", description="Коэффициент переменных затрат как процент от выручки, min")
     public EconomicsValue variable_costs_as_a_percentage_of_revenue_coefficient_min = new EconomicsValue(0.0,9999.0,3,0.1);
 
     @DataStructureField(name="constant_costs_as_a_percentage_of_revenue_coefficient_max", description="Коэффициент постоянных затрат как процент от выручки, max")
-    public EconomicsValue constant_costs_as_a_percentage_of_revenue_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.1);
+    public EconomicsValue constant_costs_as_a_percentage_of_revenue_coefficient_max = new EconomicsValue(0.0,9999.0,3,0.2);
 
     @DataStructureField(name="constant_costs_as_a_percentage_of_revenue_coefficient_min", description="Коэффициент постоянных затрат как процент от выручки, min")
     public EconomicsValue constant_costs_as_a_percentage_of_revenue_coefficient_min = new EconomicsValue(0.0,9999.0,3,0.1);

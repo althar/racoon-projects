@@ -1,9 +1,8 @@
 package racoonsoft.businesswin.service;
 
 import org.springframework.stereotype.Service;
-import racoonsoft.businesswin.structure.data.EconomicsValue;
-import racoonsoft.businesswin.structure.data.StartSettings;
-import racoonsoft.businesswin.structure.data.TradeFactors;
+import racoonsoft.businesswin.structure.data.*;
+import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.model.*;
 import racoonsoft.businesswin.structure.enums.GameStatus;
@@ -224,10 +223,6 @@ public class GameService
         g.product_price_and_production.p = g.startSettings.start_economics_sector_size.get()/g.product_price_and_production.q;
         //</editor-fold>
 
-        //<editor-fold desc="Расчет показателей цены и объема спроса для построения графика кривой спроса в 0 цикл">
-
-        //</editor-fold>
-
         //<editor-fold desc="Начальное состояние предприятий (Таблицы 4 companyState, 5 fixedAssetsAndDepreciation)">
         // Поправочные коэффициенты
         Double mainAssetsSensorSum = 0.0;
@@ -254,7 +249,7 @@ public class GameService
             company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
             company.fixed_assets_and_depreciation.depreciation.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                     /company.fixed_assets_and_depreciation.depreciation_period.get());
-            company.fixed_assets_and_depreciation.acquisition_method = "Покупка";
+            company.fixed_assets_and_depreciation.acquisition_method = 0;
 
             // Table 4
             company.company_state.revenue.set(company.products_and_capacity.production.get()*g.product_price_and_production.p);
@@ -302,13 +297,150 @@ public class GameService
             g.industry_performance.taxes.add(company.company_state.profit_tax.get());
             g.industry_performance.total_power.add(company.products_and_capacity.power.get());
             g.industry_performance.total_production.add(company.products_and_capacity.production.get());
-            g.industry_performance.power_reserve.add(company.products_and_capacity.power_reserve.get()*100);
+            g.industry_performance.power_reserve.add(company.products_and_capacity.power_reserve.get() * 100);
             g.industry_performance.total_net_book_value_of_fixed_assets.add(company.company_state.net_fixed_assets.get());
             g.industry_performance.accounts_balance.add(company.company_state.cash.get());
 
         }
-        g.industry_performance.capacity_unit_price.set(g.industry_performance.total_net_book_value_of_fixed_assets.get()
-                /g.industry_performance.total_power.get());
+        g.industry_performance.capacity_unit_price.set(g.industry_performance.total_net_book_value_of_fixed_assets.get() / g.industry_performance.total_power.get());
+        //</editor-fold>
+
+        //<editor-fold desc="Расчет кривой спроса">
+        calculateDemandCurve(g);
+        //</editor-fold>
+
+        //<editor-fold desc="Бизнес план">
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            BusinessPlanItem item = new BusinessPlanItem();
+            for(int turn = 1; turn<30; turn++)
+            {
+
+                item.turn = turn;
+                item.revenue = g.product_price_and_production.p*company.products_and_capacity.production.get();
+                item.variable_costs = item.revenue*company.company_sensors.variable_costs_sensor.get();
+                item.operation_profit = item.revenue-item.variable_costs;
+                item.constant_costs = company.company_state.constant_costs.get();
+                // Depreciation
+                if(company.fixed_assets_and_depreciation.acquisition_method==1&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                {
+                    item.depreciation = company.fixed_assets_and_depreciation.depreciation.get();
+                }
+                else if(company.fixed_assets_and_depreciation.acquisition_method==1&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                {
+                    item.depreciation = company.fixed_assets_and_depreciation.fixed_assets_cost.get()
+                            - (company.fixed_assets_and_depreciation.depreciation.get()
+                            * company.fixed_assets_and_depreciation.depreciation_period.get());
+                }
+                else
+                {
+                    item.depreciation = 0.0;
+                }
+                item.interest_payment = 0.0;
+                item.profit_before_taxes = item.revenue - item.variable_costs - item.constant_costs - item.depreciation;
+                item.profit_taxes = item.profit_before_taxes<0 ? 0.0 : item.profit_before_taxes*g.startSettings.profit_tax.get();
+                item.net_profit = item.profit_before_taxes - item.profit_taxes;
+                item.cash = turn==1 ? company.company_state.cash.get() + item.net_profit + item.depreciation : item.cash + item.net_profit + item.depreciation;
+                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method==0 && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
+                        ? company.fixed_assets_and_depreciation.fixed_assets_cost.get()-company.fixed_assets_and_depreciation.depreciation.get()*(turn+1) :0.0;
+                item.current_liabilities = 0.0;
+                item.debt = 0.0;
+                item.credit_size = 0.0;
+                item.retained_earnings = (turn == 1) ? company.company_state.retained_earnings.get() + item.net_profit : item.retained_earnings+item.net_profit;
+                item.share_capital = item.cash + item.net_fixed_assets + item.retained_earnings;
+                item.ebitda = item.revenue - item.variable_costs - item.constant_costs;
+                item.noplat = item.net_profit + item.depreciation;
+                item.investments = 0.0;
+                item.variable_costs_factor = company.company_sensors.variable_costs_sensor.get();
+                item.constant_costs_factor = company.company_sensors.constant_costs_sensor.get();
+                item.market_share = item.revenue/g.industry_performance.total_revenue.get()*100.0;
+                company.business_plan.items.add(item);
+            }
+        }
+        //</editor-fold>
+    }
+    private void calculateDemandCurve(Game g)
+    {
+        //<editor-fold desc="Шаг цены">
+        Double P = g.product_price_and_production.p;
+        Double Q = g.product_price_and_production.q;
+        Double delta = P/5.0;
+        if(P>=1000)
+        {
+            int quant = (int)(delta/10.0);
+            delta = 1.0*quant*10;
+        }
+        if(P>=25&&P<1000)
+        {
+            int quant = (int)(delta/5.0);
+            delta = 1.0*quant*5;
+        }
+        if(P>=10&&P<25)
+        {
+            int quant = (int)(delta/2.0);
+            delta = 1.0*quant*2;
+        }
+        if(P<10)
+        {
+            delta = (double)delta.intValue();
+        }
+        //</editor-fold>
+
+        //<editor-fold desc="Максимальное значение цены">
+        Double maxPrice = 0.0;
+        if(g.elasticity_function == ElasticityFunctionType.LINEAR)
+        {
+            maxPrice = P+(P*Q)/(g.startSettings.elasticity_decrease.get()*Q);
+            Integer quantifier = (int)(maxPrice/delta);
+            maxPrice = 1.0*quantifier*delta;
+        }
+        if(g.elasticity_function == ElasticityFunctionType.CONSTANT)
+        {
+            Double val_3 = 0.0;
+            if(P>=1000)
+            {
+                int quant = (int)(P/10.0);
+                val_3 = 1.0*quant*10;
+            }
+            if(P>=25&&P<1000)
+            {
+                int quant = (int)(P/5.0);
+                val_3 = 1.0*quant*5;
+            }
+            if(P>=10&&P<25)
+            {
+                int quant = (int)(P/2.0);
+                val_3 = 1.0*quant*2;
+            }
+            if(P<10)
+            {
+                val_3 = (double)val_3.intValue();
+            }
+            Double val_4 = val_3/delta;
+            maxPrice = val_3+delta*(val_4+3);
+        }
+        //</editor-fold>
+
+        //<editor-fold desc="Вычисляем функцию для массива">
+        DemandCurve demandCurve = new DemandCurve();
+        Double currPrice = delta;
+        while(currPrice<maxPrice)
+        {
+            Double demand = 0.0;
+            if(g.elasticity_function == ElasticityFunctionType.LINEAR)
+            {
+                demand = Q+g.startSettings.elasticity_decrease.get()*Q*(P-currPrice)/P;
+            }
+            if(g.elasticity_function == ElasticityFunctionType.CONSTANT)
+            {
+                demand = Q+ java.lang.Math.pow((currPrice / P),g.startSettings.elasticity_decrease.get());
+            }
+            DemandCurveItem item = new DemandCurveItem(currPrice,demand);
+            demandCurve.items.add(item);
+            currPrice+=delta;
+        }
+        g.demand_curve = demandCurve;
         //</editor-fold>
     }
     private void calculatePhase1(Game g)

@@ -51,12 +51,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.TxtDescription = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(5, 313);
+            this.button1.Location = new System.Drawing.Point(5, 359);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(849, 23);
             this.button1.TabIndex = 0;
@@ -82,6 +83,7 @@
             this.ComboNameRus.Name = "ComboNameRus";
             this.ComboNameRus.Size = new System.Drawing.Size(723, 21);
             this.ComboNameRus.TabIndex = 2;
+            this.ComboNameRus.Visible = false;
             this.ComboNameRus.SelectedIndexChanged += new System.EventHandler(this.ComboNameRus_SelectedIndexChanged);
             this.ComboNameRus.TextChanged += new System.EventHandler(this.ComboNameRus_TextChanged);
             // 
@@ -115,6 +117,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtDescription);
             this.groupBox1.Controls.Add(this.ButtApplyFilters);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TxtArticul);
@@ -137,7 +140,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(5, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(849, 295);
+            this.groupBox1.Size = new System.Drawing.Size(849, 341);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поиск";
@@ -168,6 +171,7 @@
             this.TxtArticul.Size = new System.Drawing.Size(100, 20);
             this.TxtArticul.TabIndex = 20;
             this.TxtArticul.TextChanged += new System.EventHandler(this.TxtArticul_TextChanged);
+            this.TxtArticul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtArticul_KeyDown);
             // 
             // ButtViewGoodPicture
             // 
@@ -284,11 +288,19 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Бренд";
             // 
+            // TxtDescription
+            // 
+            this.TxtDescription.Location = new System.Drawing.Point(95, 266);
+            this.TxtDescription.Multiline = true;
+            this.TxtDescription.Name = "TxtDescription";
+            this.TxtDescription.Size = new System.Drawing.Size(723, 68);
+            this.TxtDescription.TabIndex = 23;
+            // 
             // FindGoodsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 343);
+            this.ClientSize = new System.Drawing.Size(860, 383);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -327,5 +339,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtArticul;
         private System.Windows.Forms.Button ButtApplyFilters;
+        private System.Windows.Forms.TextBox TxtDescription;
     }
 }
