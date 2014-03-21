@@ -1,6 +1,7 @@
 package racoonsoft.businesswin.structure.model;
 
 import racoonsoft.businesswin.structure.data.*;
+import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
@@ -22,9 +23,11 @@ public class Game
     @DataStructureField(name="trade_factors")
     public TradeFactors tradeFactors= new TradeFactors();
     @DataStructureField(name="product_price_and_production")
-    public ProductPriceAndProduction product_price_and_production;
+    public ProductPriceAndProduction product_price_and_production = new ProductPriceAndProduction();
     @DataStructureField(name="industry_performance")
-    public IndustryPerformance industry_performance;
+    public IndustryPerformance industry_performance = new IndustryPerformance();
+    @DataStructureField(name="demand_curve")
+    public DemandCurve demand_curve = new DemandCurve();
 
     @DataStructureField(name="id")
     public Long id;
@@ -36,6 +39,8 @@ public class Game
     public GameStatus status;
     @DataStructureField(name="turn")
     public Turn turn = new Turn();
+    @DataStructureField(name="elasticity_function")
+    public ElasticityFunctionType elasticity_function = ElasticityFunctionType.CONSTANT;
 
     public Game(Long id, GameMode mode,String name, StartSettings startSettings, Integer companyCount)
     {

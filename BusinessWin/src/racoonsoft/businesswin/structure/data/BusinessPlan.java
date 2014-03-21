@@ -1,13 +1,15 @@
 package racoonsoft.businesswin.structure.data;
 
+import racoonsoft.library.annotations.DataStructure;
+import racoonsoft.library.annotations.DataStructureField;
 import racoonsoft.library.database.DBRecord;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class BusinessPlan extends DBRecord
+@DataStructure(name="business_plan")
+public class BusinessPlan
 {
-    private HashMap<String,Object> ProfitAndLossStatement = new HashMap<String, Object>();
-    private HashMap<String,Object> BalanceSheet = new HashMap<String, Object>();
-    private HashMap<String,Object> CashFlowStatement = new HashMap<String, Object>();
-
+    @DataStructureField(name="business_plan_items")
+    public ArrayList<BusinessPlanItem> items = new ArrayList<BusinessPlanItem>();
 }
