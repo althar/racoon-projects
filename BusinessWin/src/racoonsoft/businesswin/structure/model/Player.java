@@ -18,8 +18,6 @@ public class Player
     public BusinessPlan businessPlan;
     @DataStructureField(name="companies")
     public ArrayList<Company> companies = new ArrayList<Company>();
-    @DataStructureField(name="goods_declaration")
-    public GoodsDeclaration goodsDeclaration;
     @DataStructureField(name="event_cards")
     public EventCard eventCard = null;
 
@@ -27,6 +25,17 @@ public class Player
     public Player()
     {
 
+    }
+    public Company getCompany(Long id)
+    {
+        for(Company c:companies)
+        {
+            if(c.id.longValue()==id.longValue())
+            {
+                return c;
+            }
+        }
+        return null;
     }
     public ArrayList<Company> getCompanies()
     {

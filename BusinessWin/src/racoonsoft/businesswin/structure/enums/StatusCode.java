@@ -11,6 +11,7 @@ public enum StatusCode
     NO_PERMISSIONS("Нет доступа"),
     FAILURE_PARAMETERS_WRONG("Провал. Не верные данные."),
     NO_SUCH_PLAYER("Нет такого игрока"),
+    NO_SUCH_COMPANY("Нет такого компании"),
     WRONG_PHASE("Не та фаза игры"),
     TOO_MANY_PLAYERS("Слишком много игроков"),
 
