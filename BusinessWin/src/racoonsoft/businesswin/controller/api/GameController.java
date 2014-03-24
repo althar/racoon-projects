@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
+import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.structure.model.GoodsDeclaration;
 import racoonsoft.businesswin.structure.data.StartSettings;
 import racoonsoft.businesswin.structure.data.TradeFactors;
@@ -44,6 +45,19 @@ public class GameController extends BusinessWinController
         jsonMap.put("game", gameService.getGame(game_id));
         JSONProcessor json = new JSONProcessor(jsonMap);
 
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/reboot")
+    public ModelAndView reboot(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    {
+        if(!hasRole(request,"ADMIN"))
+        {
+            return generateError(StatusCode.NO_PERMISSIONS);
+        }
+        GameWorld.reboot();
+        JSONProcessor json = new JSONProcessor("code",StatusCode.SUCCESS);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
@@ -107,18 +121,18 @@ public class GameController extends BusinessWinController
 
     //<editor-fold desc="Phase 1">
     @RequestMapping("/declare_goods")
-    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id) throws Exception
+    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
     {
         GoodsDeclaration goodsDeclaration = new GoodsDeclaration();
         goodsDeclaration.fill(request);
-        StatusCode code = gameService.declareGoods(game_id,id(request),company_id,goodsDeclaration);
+        StatusCode code = gameService.declareGoods(game_id,id(request),goodsDeclaration);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/set_trade_factors")
-    public ModelAndView setTradeFactors(HttpServletRequest request, HttpServletResponse response,Long game_id,Long player_id) throws Exception
+    public ModelAndView setTradeFactors(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
     {
         if(!hasRole(request,"ADMIN"))
         {
@@ -127,7 +141,7 @@ public class GameController extends BusinessWinController
 
         TradeFactors tradeFactors = new TradeFactors();
         tradeFactors.fill(request);
-        StatusCode code = gameService.setTradeFactors(game_id,player_id,tradeFactors);
+        StatusCode code = gameService.setTradeFactors(game_id,tradeFactors);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
@@ -179,4 +193,10 @@ public class GameController extends BusinessWinController
         return model;
     }
     //</editor-fold>
+
+    @RequestMapping("/test")
+    public ModelAndView test(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        return new ModelAndView("start_game");
+    }
 }

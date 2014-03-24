@@ -39,8 +39,6 @@ public class Game
     public GameStatus status;
     @DataStructureField(name="turn")
     public Turn turn = new Turn();
-    @DataStructureField(name="elasticity_function")
-    public ElasticityFunctionType elasticity_function = ElasticityFunctionType.CONSTANT;
 
     public Game(Long id, GameMode mode,String name, StartSettings startSettings, Integer companyCount)
     {

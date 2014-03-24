@@ -7,6 +7,7 @@ import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.model.*;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
+import racoonsoft.library.helper.Helper;
 import racoonsoft.library.json.JSONProcessor;
 
 import java.util.HashMap;
@@ -137,7 +138,7 @@ public class GameService
         c.goodsDeclaration = declaration;
         return StatusCode.SUCCESS;
     }
-    public StatusCode setTradeFactors(Long game_id, Long player_id, TradeFactors tradeFactors) throws Exception
+    public StatusCode setTradeFactors(Long game_id, TradeFactors tradeFactors) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
         if(g == null)
@@ -202,7 +203,7 @@ public class GameService
 
 
     //<editor-fold desc="Calculations">
-    private void calculateStep0(Game g)
+    private void calculateStep0(Game g) throws Exception
     {
         //<editor-fold desc="Мощности и производство">
         Double totalPowerSensor = 0.0;
@@ -279,8 +280,13 @@ public class GameService
             company.company_state.net_profit.set(company.company_state.profit_before_taxes.get()-company.company_state.profit_tax.get());
             company.company_state.profit_change.set(0.0);
             company.company_state.costs_change.set(0.0);
-            company.company_state.cash.set(g.startSettings.balance_for_all_companies.get()*company.company_sensors.cash_sensor.get()/cashSensorSum);
-            company.company_state.net_fixed_assets.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()-company.company_state.depreciation.get());
+            company.company_state.cash.set((g.startSettings.balance_for_all_companies.get()
+                    *company.company_sensors.cash_sensor.get()
+                    /cashSensorSum)
+                    +company.company_state.net_profit.get()
+                    +company.company_state.depreciation.get());
+            company.company_state.net_fixed_assets.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
+                    -company.company_state.depreciation.get());
             company.company_state.current_passives.set(0.0);
             company.company_state.debt.set(0.0);
             company.company_state.credit_value.set(0.0);
@@ -291,7 +297,7 @@ public class GameService
             company.company_state.investments.set(0.0);
             company.company_state.variable_costs_coefficient.set(company.company_sensors.variable_costs_sensor.get());
             company.company_state.constant_costs_coefficient.set(company.company_sensors.constant_costs_sensor.get());
-            company.company_state.market_share.set(company.products_and_capacity.production_sensor.get()/totalProductionSensor/100.0);
+            company.company_state.market_share.set(company.products_and_capacity.production_sensor.get()/totalProductionSensor*100.0);
         }
         // Стоимость основных средств и амортизация
         //</editor-fold>
@@ -329,22 +335,22 @@ public class GameService
             BusinessPlanItem item = new BusinessPlanItem();
             for(int turn = 1; turn<30; turn++)
             {
-
+                item = (BusinessPlanItem)Helper.clone(item);
                 item.turn = turn;
                 item.revenue = g.product_price_and_production.p*company.products_and_capacity.production.get();
                 item.variable_costs = item.revenue*company.company_sensors.variable_costs_sensor.get();
                 item.operation_profit = item.revenue-item.variable_costs;
                 item.constant_costs = company.company_state.constant_costs.get();
                 // Depreciation
-                if(company.fixed_assets_and_depreciation.acquisition_method==1&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                if(company.fixed_assets_and_depreciation.acquisition_method==0&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.depreciation.get();
                 }
-                else if(company.fixed_assets_and_depreciation.acquisition_method==1&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                else if(company.fixed_assets_and_depreciation.acquisition_method==0&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                             - (company.fixed_assets_and_depreciation.depreciation.get()
-                            * company.fixed_assets_and_depreciation.depreciation_period.get());
+                            * (company.fixed_assets_and_depreciation.depreciation_period.get()-1));
                 }
                 else
                 {
@@ -361,7 +367,7 @@ public class GameService
                 item.debt = 0.0;
                 item.credit_size = 0.0;
                 item.retained_earnings = (turn == 1) ? company.company_state.retained_earnings.get() + item.net_profit : item.retained_earnings+item.net_profit;
-                item.share_capital = item.cash + item.net_fixed_assets + item.retained_earnings;
+                item.share_capital = item.cash + item.net_fixed_assets - item.retained_earnings;
                 item.ebitda = item.revenue - item.variable_costs - item.constant_costs;
                 item.noplat = item.net_profit + item.depreciation;
                 item.investments = 0.0;
@@ -402,13 +408,13 @@ public class GameService
 
         //<editor-fold desc="Максимальное значение цены">
         Double maxPrice = 0.0;
-        if(g.elasticity_function == ElasticityFunctionType.LINEAR)
+        if(g.startSettings.elasticity_function_type == ElasticityFunctionType.LINEAR)
         {
             maxPrice = P+(P*Q)/(g.startSettings.elasticity_decrease.get()*Q);
             Integer quantifier = (int)(maxPrice/delta);
             maxPrice = 1.0*quantifier*delta;
         }
-        if(g.elasticity_function == ElasticityFunctionType.CONSTANT)
+        if(g.startSettings.elasticity_function_type == ElasticityFunctionType.CONSTANT)
         {
             Double val_3 = 0.0;
             if(P>=1000)
@@ -438,14 +444,14 @@ public class GameService
         //<editor-fold desc="Вычисляем функцию для массива">
         DemandCurve demandCurve = new DemandCurve();
         Double currPrice = delta;
-        while(currPrice<maxPrice)
+        while(currPrice<=maxPrice)
         {
             Double demand = 0.0;
-            if(g.elasticity_function == ElasticityFunctionType.LINEAR)
+            if(g.startSettings.elasticity_function_type == ElasticityFunctionType.LINEAR)
             {
                 demand = Q+g.startSettings.elasticity_decrease.get()*Q*(P-currPrice)/P;
             }
-            if(g.elasticity_function == ElasticityFunctionType.CONSTANT)
+            if(g.startSettings.elasticity_function_type == ElasticityFunctionType.CONSTANT)
             {
                 demand = Q+ java.lang.Math.pow((currPrice / P),g.startSettings.elasticity_decrease.get());
             }

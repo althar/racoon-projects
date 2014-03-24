@@ -13,8 +13,8 @@ public class EconomicsValue
 
     public EconomicsValue(Double min,Double max, int accuracy, Double value)
     {
-        this.min = min;
-        this.max = max;
+        this.min = Double.MIN_VALUE;
+        this.max = Double.MAX_VALUE;
         this.accuracy = accuracy;
         set(value);
     }

@@ -20,6 +20,10 @@ public class GameWorld
 
     private static HashMap<Long,Game> games = new HashMap<Long, Game>();
 
+    public static void reboot()
+    {
+        games = new HashMap<Long, Game>();
+    }
     public static void setDbProc(PostgresqlDataSource dbProc)
     {
         GameWorld.dbProc = dbProc;

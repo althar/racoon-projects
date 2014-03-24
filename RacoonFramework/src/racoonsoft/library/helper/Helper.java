@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.net.URI;
 import java.net.URL;
@@ -22,6 +23,23 @@ import java.util.Random;
 
 public class Helper
 {
+    public static <T extends Object> T clone(Cloneable<T> baseObject) throws Exception
+    {
+        T resultObject = baseObject.createInstance();
+        Field[] fields = baseObject.getClass().getFields();
+        for(int i=0; i<fields.length; i++)
+        {
+            fields[i].setAccessible(true);
+            Field f = resultObject.getClass().getField(fields[i].getName());
+            f.setAccessible(true);
+
+            if(fields[i].get(baseObject)!=null)
+            {
+                f.set(resultObject,fields[i].get(baseObject));
+            }
+        }
+        return resultObject;
+    }
     public String newLine = System.getProperty("line.separator");
     public static byte[] intToBytes(int value)
     {

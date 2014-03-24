@@ -3,12 +3,18 @@ package racoonsoft.businesswin.structure.data;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 import racoonsoft.library.database.DBRecord;
+import racoonsoft.library.helper.*;
+import racoonsoft.library.helper.Cloneable;
 
 import java.util.HashMap;
 
 @DataStructure(name="business_plan_item")
-public class BusinessPlanItem
+public class BusinessPlanItem implements Cloneable<BusinessPlanItem>
 {
+    public BusinessPlanItem createInstance()
+    {
+        return new BusinessPlanItem();
+    }
     @DataStructureField(name="turn")
     public Integer turn;
 
