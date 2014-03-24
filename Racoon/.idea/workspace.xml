@@ -333,7 +333,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/report/ReportGenerator.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384504182125" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/taxes/fss/PfrDataForEmployee.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378382158934" ignored="false" />
     <file path="/PfrDataForEmployee.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1378301588008" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/config/FinanceWebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373368857137" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/config/FinanceWebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395672201653" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/robots.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373369401400" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/logic/wizards/fss_step1.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170781759" ignored="false" />
     <file path="/fss_step1.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373893575854" ignored="false" />
@@ -771,7 +771,7 @@
       <file leaf-file-name="GameController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="19" selection-start="6118" selection-end="6118" vertical-scroll-proportion="1.281746">
+            <state line="93" column="76" selection-start="3765" selection-end="3765" vertical-scroll-proportion="0.7083333">
               <folding>
                 <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
                 <element signature="method#games#0;class#GameController#0" expanded="false" />
@@ -2056,7 +2056,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2079,7 +2079,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20704375" sideWeight="0.5908584" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20704375" sideWeight="0.5908584" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2301,7 +2301,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="19" selection-start="6118" selection-end="6118" vertical-scroll-proportion="1.281746">
+        <state line="93" column="76" selection-start="3765" selection-end="3765" vertical-scroll-proportion="0.7083333">
           <folding>
             <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
             <element signature="method#games#0;class#GameController#0" expanded="false" />
