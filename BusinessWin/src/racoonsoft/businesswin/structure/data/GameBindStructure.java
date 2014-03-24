@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.structure.data;
 
+import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
 import racoonsoft.library.annotations.DataStructureField;
 
 import javax.servlet.http.HttpServletRequest;
@@ -60,6 +61,12 @@ public class GameBindStructure
                             EconomicsValue valueField = (EconomicsValue)f.get(this);
                             valueField.set(Double.valueOf(value));
                             f.set(this, valueField);
+                        }
+                        if(type.isAssignableFrom(ElasticityFunctionType.class))
+                        {
+                            f.setAccessible(true);
+                            ElasticityFunctionType enumVal = ElasticityFunctionType.valueOf((String)value);
+                            f.set(this,enumVal);
                         }
                     }
                 }

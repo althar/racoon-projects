@@ -71,18 +71,18 @@ public class StartSettings extends GameBindStructure
     @DataStructureField(name="variable_costs_decrease_coefficient_project", description="Проект Повышение Эффективности 1 (Малый). Коэффициент сокращения переменных затрат")
     public EconomicsValue variable_costs_decrease_coefficient_small_project = new EconomicsValue(0.0,9999.0,3,0.1);
 
-    @DataStructureField(name="constant_costs_decrease_coefficient_project", description="Проект Повышение Эффективности 2 (Средний). Коэффициент сокращения постоянных затрат")
+    @DataStructureField(name="constant_costs_decrease_coefficient_medium_project", description="Проект Повышение Эффективности 2 (Средний). Коэффициент сокращения постоянных затрат")
     public EconomicsValue constant_costs_decrease_coefficient_medium_project = new EconomicsValue(0.0,9999.0,3,0.1);
 
-    @DataStructureField(name="investment_constant_costs_coefficient_project", description="Проект Повышение Эффективности 2 (Средний). Инвестиции, коэффициент от постоянных затрат")
+    @DataStructureField(name="investment_constant_costs_coefficient_medium_project", description="Проект Повышение Эффективности 2 (Средний). Инвестиции, коэффициент от постоянных затрат")
     public EconomicsValue investment_constant_costs_coefficient_medium_project = new EconomicsValue(0.0,9999.0,3,0.1);
 
-    @DataStructureField(name="current_power_percent_project", description="Проект Повышение Эффективности 3 (Большой). % от существующей мощности")
+    @DataStructureField(name="current_power_percent_big_project", description="Проект Повышение Эффективности 3 (Большой). % от существующей мощности")
     public EconomicsValue current_power_percent_big_project = new EconomicsValue(0.0,9999.0,3,0.1);
 
-    @DataStructureField(name="exceeds_the_net_book_value_of_fixed_assets_coefficient_project", description="Проект Повышение Эффективности 3 (Большой). Коэффициент превышения над остаточной стоимостью основных средств")
+    @DataStructureField(name="exceeds_the_net_book_value_of_fixed_assets_coefficient_big_project", description="Проект Повышение Эффективности 3 (Большой). Коэффициент превышения над остаточной стоимостью основных средств")
     public EconomicsValue exceeds_the_net_book_value_of_fixed_assets_coefficient_big_project = new EconomicsValue(0.0,9999.0,3,0.1);
 
-    @DataStructureField(name="variable_costs_decrease_coefficient_project", description="Проект Повышение Эффективности 3 (Большой). Коэффициент сокращения переменных затрат")
+    @DataStructureField(name="variable_costs_decrease_coefficient_big_project", description="Проект Повышение Эффективности 3 (Большой). Коэффициент сокращения переменных затрат")
     public EconomicsValue variable_costs_decrease_coefficient_big_project = new EconomicsValue(0.0,9999.0,3,0.1);
 }
