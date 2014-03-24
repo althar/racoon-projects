@@ -390,7 +390,7 @@ namespace OwlBusinessStudio.Orders
                 string secondFilter = totalFilter + " AND lower(name_for_order) LIKE lower('%" + ComboNameRus.Text.Replace("'", "`") + "%')";
                 string query1 = rusGoods.Replace("!!!", firstFilter);
                 string query2 = rusGoods.Replace("!!!", secondFilter);
-                ComboNameRus.DataSource = MainForm.dbProc.executeGet("(" + query1 + ") UNION (" + query2 + ")");
+                ComboNameRus.DataSource = MainForm.dbProc.executeGet(query1);
                 ComboNameRus.DisplayMember = "name_rus";
                 ComboNameRus.ValueMember = "id";
                 ComboNameRus.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -408,7 +408,7 @@ namespace OwlBusinessStudio.Orders
                 string secondFilter = " 1=1 AND lower(name_for_order) LIKE lower('%" + ComboNameForOrder.Text.Replace("'", "`") + "%')";
                 string query1 = fullGoods.Replace("!!!", firstFilter);
                 string query2 = fullGoods.Replace("!!!", secondFilter);
-                ComboNameForOrder.DataSource = MainForm.dbProc.executeGet("(" + query1 + ") UNION (" + query2 + ")");
+                ComboNameForOrder.DataSource = MainForm.dbProc.executeGet(query1);
                 ComboNameForOrder.DisplayMember = "name_for_order";
                 ComboNameForOrder.ValueMember = "id";
                 ComboNameForOrder.AutoCompleteSource = AutoCompleteSource.ListItems;
