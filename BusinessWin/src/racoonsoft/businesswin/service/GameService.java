@@ -109,7 +109,7 @@ public class GameService
     //</editor-fold>
 
     //<editor-fold desc="Phase 1">
-    public StatusCode declareGoods(Long game_id, Long player_id,GoodsDeclaration declaration) throws Exception
+    public StatusCode declareGoods(Long game_id, Long player_id,Long company_id,GoodsDeclaration declaration) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
         if(g == null)
@@ -121,7 +121,20 @@ public class GameService
         {
             return StatusCode.NO_SUCH_PLAYER;
         }
-        p.goodsDeclaration = declaration;
+        if(company_id==null)
+        {
+            for(Company c:p.getCompanies())
+            {
+                c.goodsDeclaration = declaration;
+            }
+        }
+        Company c = p.getCompany(company_id);
+        if(c == null)
+        {
+            return StatusCode.NO_SUCH_COMPANY;
+        }
+
+        c.goodsDeclaration = declaration;
         return StatusCode.SUCCESS;
     }
     public StatusCode setTradeFactors(Long game_id, Long player_id, TradeFactors tradeFactors) throws Exception

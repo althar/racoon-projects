@@ -28,6 +28,9 @@ public class Company
     @DataStructureField(name="business_plan")
     public BusinessPlan business_plan = new BusinessPlan();
 
+    @DataStructureField(name="goods_declaration")
+    public GoodsDeclaration goodsDeclaration;
+
     public Company()
     {
         products_and_capacity = new CompanyProductionAndCapacity();
