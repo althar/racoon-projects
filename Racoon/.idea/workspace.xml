@@ -771,19 +771,16 @@
       <file leaf-file-name="GameController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="76" selection-start="3765" selection-end="3765" vertical-scroll-proportion="0.7083333">
+            <state line="194" column="43" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.5734127">
               <folding>
                 <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
                 <element signature="method#games#0;class#GameController#0" expanded="false" />
                 <element signature="method#getGames#0;class#GameController#0" expanded="false" />
                 <element signature="method#addGame#0;class#GameController#0" expanded="false" />
                 <element signature="method#join#0;class#GameController#0" expanded="false" />
-                <element signature="method#start#0;class#GameController#0" expanded="false" />
                 <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
                 <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
-                <element signature="method#endPhase1#0;class#GameController#0" expanded="false" />
                 <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
-                <element signature="method#endPhase3#0;class#GameController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -801,7 +798,7 @@
       <file leaf-file-name="GameBindStructure.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+            <state line="21" column="8" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -819,7 +816,7 @@
       <file leaf-file-name="GameService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="461" column="61" selection-start="20605" selection-end="20605" vertical-scroll-proportion="0.0">
+            <state line="467" column="61" selection-start="20975" selection-end="20975" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
                 <element signature="method#getGames#0;class#GameService#0" expanded="false" />
@@ -836,23 +833,23 @@
                 <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
                 <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
                 <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
-                <element signature="e#5922#5968#0" expanded="false" />
-                <element signature="e#7328#7344#0" expanded="false" />
-                <element signature="e#7354#7459#0" expanded="false" />
-                <element signature="e#7810#7826#0" expanded="false" />
-                <element signature="e#7836#7945#0" expanded="false" />
-                <element signature="e#12777#12820#0" expanded="false" />
-                <element signature="e#12855#12908#0" expanded="false" />
-                <element signature="e#14329#14345#0" expanded="false" />
-                <element signature="e#14355#14398#0" expanded="false" />
-                <element signature="e#14440#14456#0" expanded="false" />
-                <element signature="e#14466#14500#0" expanded="false" />
+                <element signature="e#5964#6010#0" expanded="false" />
+                <element signature="e#7370#7386#0" expanded="false" />
+                <element signature="e#7396#7501#0" expanded="false" />
+                <element signature="e#7852#7868#0" expanded="false" />
+                <element signature="e#7878#7987#0" expanded="false" />
+                <element signature="e#13006#13049#0" expanded="false" />
+                <element signature="e#13084#13137#0" expanded="false" />
+                <element signature="e#14558#14574#0" expanded="false" />
+                <element signature="e#14584#14627#0" expanded="false" />
+                <element signature="e#14669#14685#0" expanded="false" />
+                <element signature="e#14695#14729#0" expanded="false" />
                 <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
-                <element signature="e#17950#17981#0" expanded="false" />
-                <element signature="e#18566#18582#0" expanded="false" />
-                <element signature="e#18592#18641#0" expanded="false" />
-                <element signature="e#19658#19674#0" expanded="false" />
-                <element signature="e#19684#19736#0" expanded="false" />
+                <element signature="e#18243#18274#0" expanded="false" />
+                <element signature="e#18859#18875#0" expanded="false" />
+                <element signature="e#18885#18934#0" expanded="false" />
+                <element signature="e#19989#20005#0" expanded="false" />
+                <element signature="e#20015#20067#0" expanded="false" />
                 <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
                 <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
                 <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
@@ -891,7 +888,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0">
+            <state line="40" column="34" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -926,8 +923,8 @@
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Player.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/StatusCode.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
       </list>
     </option>
   </component>
@@ -2216,14 +2213,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+        <state line="21" column="8" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0">
+        <state line="40" column="34" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2258,7 +2255,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="461" column="61" selection-start="20605" selection-end="20605" vertical-scroll-proportion="0.0">
+        <state line="467" column="61" selection-start="20975" selection-end="20975" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
             <element signature="method#getGames#0;class#GameService#0" expanded="false" />
@@ -2275,23 +2272,23 @@
             <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
             <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
             <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
-            <element signature="e#5922#5968#0" expanded="false" />
-            <element signature="e#7328#7344#0" expanded="false" />
-            <element signature="e#7354#7459#0" expanded="false" />
-            <element signature="e#7810#7826#0" expanded="false" />
-            <element signature="e#7836#7945#0" expanded="false" />
-            <element signature="e#12777#12820#0" expanded="false" />
-            <element signature="e#12855#12908#0" expanded="false" />
-            <element signature="e#14329#14345#0" expanded="false" />
-            <element signature="e#14355#14398#0" expanded="false" />
-            <element signature="e#14440#14456#0" expanded="false" />
-            <element signature="e#14466#14500#0" expanded="false" />
+            <element signature="e#5964#6010#0" expanded="false" />
+            <element signature="e#7370#7386#0" expanded="false" />
+            <element signature="e#7396#7501#0" expanded="false" />
+            <element signature="e#7852#7868#0" expanded="false" />
+            <element signature="e#7878#7987#0" expanded="false" />
+            <element signature="e#13006#13049#0" expanded="false" />
+            <element signature="e#13084#13137#0" expanded="false" />
+            <element signature="e#14558#14574#0" expanded="false" />
+            <element signature="e#14584#14627#0" expanded="false" />
+            <element signature="e#14669#14685#0" expanded="false" />
+            <element signature="e#14695#14729#0" expanded="false" />
             <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
-            <element signature="e#17950#17981#0" expanded="false" />
-            <element signature="e#18566#18582#0" expanded="false" />
-            <element signature="e#18592#18641#0" expanded="false" />
-            <element signature="e#19658#19674#0" expanded="false" />
-            <element signature="e#19684#19736#0" expanded="false" />
+            <element signature="e#18243#18274#0" expanded="false" />
+            <element signature="e#18859#18875#0" expanded="false" />
+            <element signature="e#18885#18934#0" expanded="false" />
+            <element signature="e#19989#20005#0" expanded="false" />
+            <element signature="e#20015#20067#0" expanded="false" />
             <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
             <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
             <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
@@ -2301,19 +2298,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="76" selection-start="3765" selection-end="3765" vertical-scroll-proportion="0.7083333">
+        <state line="194" column="43" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.5734127">
           <folding>
             <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
             <element signature="method#games#0;class#GameController#0" expanded="false" />
             <element signature="method#getGames#0;class#GameController#0" expanded="false" />
             <element signature="method#addGame#0;class#GameController#0" expanded="false" />
             <element signature="method#join#0;class#GameController#0" expanded="false" />
-            <element signature="method#start#0;class#GameController#0" expanded="false" />
             <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
             <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
-            <element signature="method#endPhase1#0;class#GameController#0" expanded="false" />
             <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
-            <element signature="method#endPhase3#0;class#GameController#0" expanded="false" />
           </folding>
         </state>
       </provider>

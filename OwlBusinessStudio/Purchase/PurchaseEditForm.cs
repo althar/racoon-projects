@@ -314,7 +314,7 @@ namespace OwlBusinessStudio.Purchase
                 pars.Add("supplier",good["supplier"]);
                 pars.Add("good_name",good["name_for_order_full"]);
                 pars.Add("good_count",count);
-                pars.Add("good_purchase_price",good["price_basic"]);
+                pars.Add("good_purchase_price",good["price_discount"]);
                 pars.Add("good_id",good_id);
                 pars.Add("is_for_orders", CheckForOrders.Checked);
                 pars.Add("list_name",list_name);
