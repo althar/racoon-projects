@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="spring-batch-2.2.3" type="spring-batch">
+    <properties version="2.2.3" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring-batch-core-2.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-batch-infrastructure-2.2.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

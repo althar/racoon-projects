@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/avalon-framework-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-beans-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/logkit-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/camel-core-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-aop-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/camel-spring-integration-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-context-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/commons-logging-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-core-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/org.springframework.integration-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/dbfEngine_bin-1.04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/servlet-api-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-tx-2.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/liquibase-core-2.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/spring-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/ant-1.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/postgresql-9.2-1002.jdbc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/lib/camel-spring-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

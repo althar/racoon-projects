@@ -46,13 +46,13 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385388633295" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394714330676" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835617935" ignored="false" />
     <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391511815511" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
     <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366099807" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391595538209" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395830333320" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170940237" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990221611" ignored="false" />
@@ -110,7 +110,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/Seller.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366040033394" ignored="false" />
     <file path="/FileUpload.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366201355819" ignored="false" />
     <file path="/UploadedImage.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366108094662" ignored="false" />
-    <file path="/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391001002952" ignored="false" />
+    <file path="/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836313186" ignored="false" />
     <file path="/Cfg.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366110539877" ignored="false" />
     <file path="/total_fail.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366115498428" ignored="false" />
     <file path="/GoogleImageService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366385140138" ignored="false" />
@@ -199,14 +199,14 @@
     <file path="/salary.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369210046392" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/jq/jquery.numeric.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369210008666" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/APIController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369324033540" ignored="false" />
-    <file path="/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390908173194" ignored="false" />
-    <file path="/AccessInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391086112470" ignored="false" />
+    <file path="/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835809811" ignored="false" />
+    <file path="/AccessInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836358815" ignored="false" />
     <file path="$PROJECT_DIR$/SelectST/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369227904232" ignored="false" />
     <file path="$PROJECT_DIR$/../SelectST/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369228000567" ignored="false" />
     <file path="/AccessController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385043167747" ignored="false" />
     <file path="/Interceptors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369229854074" ignored="false" />
     <file path="/HandlerInterceptorAnnotationAwareHandlerMapping.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369231578667" ignored="false" />
-    <file path="/HistoryInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386765429779" ignored="false" />
+    <file path="/HistoryInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835579451" ignored="false" />
     <file path="/WebHelper.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369304165912" ignored="false" />
     <file path="/Basket.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383734756341" ignored="false" />
     <file path="/StoreService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383739746042" ignored="false" />
@@ -301,8 +301,8 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/bill_elem.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371716116289" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/salary/salary_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371816535692" ignored="false" />
     <file path="/salary_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371816525866" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391511689146" ignored="false" />
-    <file path="/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387454131785" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395830329713" ignored="false" />
+    <file path="/finsaas-security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395830322903" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/MoneyOrderOperationType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372238723660" ignored="false" />
     <file path="/MoneyOrderOperationType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371810902586" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/wizards/salary/advance_payment.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371819852181" ignored="false" />
@@ -538,7 +538,7 @@
     <file path="/GameWorld.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394713300252" ignored="false" />
     <file path="/Game.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394713831240" ignored="false" />
     <file path="/GameMode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169569820" ignored="false" />
-    <file path="/GameController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395662398187" ignored="false" />
+    <file path="/GameController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395834680995" ignored="false" />
     <file path="/json.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170690268" ignored="false" />
     <file path="$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/BasketController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386242142093" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/BillController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386590814371" ignored="false" />
@@ -565,7 +565,6 @@
     <file path="/application.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387271789545" ignored="false" />
     <file path="/devise.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387271794329" ignored="false" />
     <file path="/choose_registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393850809225" ignored="false" />
-    <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394616057463" ignored="false" />
     <file path="/header_student.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387365185078" ignored="false" />
     <file path="/courses_bought.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387891928859" ignored="false" />
     <file path="/how_to_use.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387365104691" ignored="false" />
@@ -661,6 +660,18 @@
     <file path="/GoodsDeclaration.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394708869515" ignored="false" />
     <file path="/Constants.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394702137633" ignored="false" />
     <file path="/Turn.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394707334206" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395834854969" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/BusinessWinInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835549291" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/HistoryInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835604317" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/AccessInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836359357" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/SuperOwlInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836369932" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835594979" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/controller/SuperOwlController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835634380" ignored="false" />
+    <file path="/SuperOwlController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835630028" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835812715" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395838698411" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836275488" ignored="false" />
+    <file path="/SuperOwlInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836369318" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -768,17 +779,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="43" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.5734127">
+            <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
                 <element signature="method#games#0;class#GameController#0" expanded="false" />
                 <element signature="method#getGames#0;class#GameController#0" expanded="false" />
                 <element signature="method#addGame#0;class#GameController#0" expanded="false" />
                 <element signature="method#join#0;class#GameController#0" expanded="false" />
-                <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
                 <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
                 <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
               </folding>
@@ -786,10 +796,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/web.xml">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="140" selection-start="680" selection-end="680" vertical-scroll-proportion="0.4071856">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="63" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
+            <state line="38" column="52" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -816,44 +844,8 @@
       <file leaf-file-name="GameService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="467" column="61" selection-start="20975" selection-end="20975" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
-                <element signature="method#getGames#0;class#GameService#0" expanded="false" />
-                <element signature="method#getGame#0;class#GameService#0" expanded="false" />
-                <element signature="method#createGame#0;class#GameService#0" expanded="false" />
-                <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
-                <element signature="method#startGame#0;class#GameService#0" expanded="false" />
-                <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
-                <element signature="n#!!doc;n#declareGoods#0;n#GameService#0" expanded="false" />
-                <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
-                <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
-                <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
-                <element signature="n#!!doc;n#endPhase2#0;n#GameService#0" expanded="false" />
-                <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
-                <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
-                <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
-                <element signature="e#5964#6010#0" expanded="false" />
-                <element signature="e#7370#7386#0" expanded="false" />
-                <element signature="e#7396#7501#0" expanded="false" />
-                <element signature="e#7852#7868#0" expanded="false" />
-                <element signature="e#7878#7987#0" expanded="false" />
-                <element signature="e#13006#13049#0" expanded="false" />
-                <element signature="e#13084#13137#0" expanded="false" />
-                <element signature="e#14558#14574#0" expanded="false" />
-                <element signature="e#14584#14627#0" expanded="false" />
-                <element signature="e#14669#14685#0" expanded="false" />
-                <element signature="e#14695#14729#0" expanded="false" />
-                <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
-                <element signature="e#18243#18274#0" expanded="false" />
-                <element signature="e#18859#18875#0" expanded="false" />
-                <element signature="e#18885#18934#0" expanded="false" />
-                <element signature="e#19989#20005#0" expanded="false" />
-                <element signature="e#20015#20067#0" expanded="false" />
-                <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
-                <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
-                <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
-              </folding>
+            <state line="112" column="22" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -999,6 +991,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1110,14 +1103,6 @@
               <option name="myItemId" value="businesswin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1137,55 +1122,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="enums" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessWin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="businesswin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessWin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="businesswin" />
+              <option name="myItemId" value="settings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1251,6 +1188,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="interceptor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BusinessWin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="businesswin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BusinessWin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="businesswin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1287,21 +1268,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.20410156" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.20410156" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -1318,15 +1298,15 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="project.structure.side.proportion" value="0.33100232" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="project.structure.side.proportion" value="0.33100232" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1384,6 +1364,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1412,34 +1405,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -1458,11 +1423,33 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1486,11 +1473,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1507,13 +1494,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2061,13 +2041,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40914157" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40914157" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29208472" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17982924" sideWeight="0.24860647" order="2" side_tool="true" content_ui="tabs" />
@@ -2076,7 +2055,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20704375" sideWeight="0.5908584" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20704375" sideWeight="0.80156076" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2085,6 +2064,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29208472" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2157,18 +2137,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GameWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="27" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Turn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2206,7 +2179,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="63" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
+        <state line="38" column="52" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2255,60 +2228,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="467" column="61" selection-start="20975" selection-end="20975" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
-            <element signature="method#getGames#0;class#GameService#0" expanded="false" />
-            <element signature="method#getGame#0;class#GameService#0" expanded="false" />
-            <element signature="method#createGame#0;class#GameService#0" expanded="false" />
-            <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
-            <element signature="method#startGame#0;class#GameService#0" expanded="false" />
-            <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
-            <element signature="n#!!doc;n#declareGoods#0;n#GameService#0" expanded="false" />
-            <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
-            <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
-            <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
-            <element signature="n#!!doc;n#endPhase2#0;n#GameService#0" expanded="false" />
-            <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
-            <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
-            <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
-            <element signature="e#5964#6010#0" expanded="false" />
-            <element signature="e#7370#7386#0" expanded="false" />
-            <element signature="e#7396#7501#0" expanded="false" />
-            <element signature="e#7852#7868#0" expanded="false" />
-            <element signature="e#7878#7987#0" expanded="false" />
-            <element signature="e#13006#13049#0" expanded="false" />
-            <element signature="e#13084#13137#0" expanded="false" />
-            <element signature="e#14558#14574#0" expanded="false" />
-            <element signature="e#14584#14627#0" expanded="false" />
-            <element signature="e#14669#14685#0" expanded="false" />
-            <element signature="e#14695#14729#0" expanded="false" />
-            <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
-            <element signature="e#18243#18274#0" expanded="false" />
-            <element signature="e#18859#18875#0" expanded="false" />
-            <element signature="e#18885#18934#0" expanded="false" />
-            <element signature="e#19989#20005#0" expanded="false" />
-            <element signature="e#20015#20067#0" expanded="false" />
-            <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
-            <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
-            <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
-          </folding>
+        <state line="112" column="22" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="43" selection-start="7765" selection-end="7765" vertical-scroll-proportion="0.5734127">
+        <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
             <element signature="method#games#0;class#GameController#0" expanded="false" />
             <element signature="method#getGames#0;class#GameController#0" expanded="false" />
             <element signature="method#addGame#0;class#GameController#0" expanded="false" />
             <element signature="method#join#0;class#GameController#0" expanded="false" />
-            <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
             <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
             <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="140" selection-start="680" selection-end="680" vertical-scroll-proportion="0.4071856">
+          <folding />
         </state>
       </provider>
     </entry>
