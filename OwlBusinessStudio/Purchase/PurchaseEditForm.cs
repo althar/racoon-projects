@@ -372,7 +372,7 @@ namespace OwlBusinessStudio.Purchase
                             string list_name = ComboLists.Text;
                             double purchase_price = 0;
                             int good_id = 0;
-                            if (!Double.TryParse(good["price_basic"].ToString(), out purchase_price))
+                            if (!Double.TryParse(good["price_discount"].ToString(), out purchase_price))
                             {
                                 throw new Exception();
                             }

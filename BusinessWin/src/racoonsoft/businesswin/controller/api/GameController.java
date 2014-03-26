@@ -121,11 +121,11 @@ public class GameController extends BusinessWinController
 
     //<editor-fold desc="Phase 1">
     @RequestMapping("/declare_goods")
-    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    public ModelAndView declareGoods(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id) throws Exception
     {
         GoodsDeclaration goodsDeclaration = new GoodsDeclaration();
         goodsDeclaration.fill(request);
-        StatusCode code = gameService.declareGoods(game_id,id(request),goodsDeclaration);
+        StatusCode code = gameService.declareGoods(game_id,id(request),company_id,goodsDeclaration);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());

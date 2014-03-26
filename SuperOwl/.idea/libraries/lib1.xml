@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/out/artifacts/RacoonFramework_war_exploded/WEB-INF/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RacoonFramework/out/artifacts/RacoonFramework_war_exploded/WEB-INF/lib/postgresql-9.2-1002.jdbc4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
