@@ -18,14 +18,14 @@ import java.util.List;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "racoonsoft.businesswin")
+@ComponentScan(basePackages = "racoonsoft.superowl")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     public ViewResolver getViewResolver() {
 
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/jsp/");
+        resolver.setPrefix("/jsp/");
         resolver.setSuffix(".jsp");
         return resolver;
     }

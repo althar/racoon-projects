@@ -8,7 +8,6 @@ import racoonsoft.businesswin.structure.model.*;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.helper.Helper;
-import racoonsoft.library.json.JSONProcessor;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -203,6 +202,8 @@ public class GameService
 
 
     //<editor-fold desc="Calculations">
+
+    //<editor-fold desc="Phase 0">
     private void calculateStep0(Game g) throws Exception
     {
         //<editor-fold desc="Мощности и производство">
@@ -442,7 +443,7 @@ public class GameService
         //</editor-fold>
 
         //<editor-fold desc="Вычисляем функцию для массива">
-        DemandCurve demandCurve = new DemandCurve();
+        DemandSupplyCurve demandSupplyCurve = new DemandSupplyCurve();
         Double currPrice = delta;
         while(currPrice<=maxPrice)
         {
@@ -455,17 +456,22 @@ public class GameService
             {
                 demand = Q+ java.lang.Math.pow((currPrice / P),g.startSettings.elasticity_decrease.get());
             }
-            DemandCurveItem item = new DemandCurveItem(currPrice,demand);
-            demandCurve.items.add(item);
+            DemandSupplyCurveItem item = new DemandSupplyCurveItem(currPrice,demand,0.0);
+            demandSupplyCurve.items.add(item);
             currPrice+=delta;
         }
-        g.demand_curve = demandCurve;
+        g.demand_supply_curve = demandSupplyCurve;
         //</editor-fold>
     }
+    //</editor-fold>
+
+    //<editor-fold desc="Phase 1">
     private void calculatePhase1(Game g)
     {
-        // Calculate step 0 data
+        // Рассчет кривой спроса и предложения
+
     }
+    //</editor-fold>
     private void calculatePhase2(Game g)
     {
         // Calculate step 0 data

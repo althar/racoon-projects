@@ -41,7 +41,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
         PropertySourcesPlaceholderConfigurer pspc =
                 new PropertySourcesPlaceholderConfigurer();
         Resource[] resources = new ClassPathResource[ ]
-                { new ClassPathResource("/racoonsoft/businesswin/properties/main.properties") };
+                { new ClassPathResource("/racoonsoft/superowl/properties/main.properties") };
         pspc.setLocations(resources);
         pspc.setIgnoreUnresolvablePlaceholders( true );
         return pspc;

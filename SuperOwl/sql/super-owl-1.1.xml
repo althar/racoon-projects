@@ -3,6 +3,70 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 	<changeSet id="0" author="Racoon">
-        <sql></sql>
+        <sql>
+            CREATE TABLE public."user" (
+            id BIGSERIAL NOT NULL,
+            company_id BIGINT NOT NULL,
+            created TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            modified TIMESTAMP WITHOUT TIME ZONE DEFAULT now() NOT NULL,
+            login VARCHAR NOT NULL UNIQUE,
+            password VARCHAR DEFAULT '' NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            ALTER TABLE public."user"
+            ADD CONSTRAINT user_fk FOREIGN KEY (company_id)
+            REFERENCES public.company(id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+            NOT DEFERRABLE;
+        </sql>
+        <sql>
+            CREATE TABLE public.role (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL UNIQUE,
+            description VARCHAR,
+            PRIMARY KEY(id)
+            ) ;
+        </sql>
+        <sql>
+            CREATE TABLE public.user_role (
+            id BIGSERIAL NOT NULL,
+            user_id BIGINT NOT NULL,
+            role_id BIGINT NOT NULL,
+            PRIMARY KEY(id)
+            ) ;
+            ALTER TABLE public.user_role
+            ADD CONSTRAINT user_role_fk FOREIGN KEY (user_id)
+            REFERENCES public."user"(id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+            NOT DEFERRABLE;
+            ALTER TABLE public.user_role
+            ADD CONSTRAINT user_role_fk1 FOREIGN KEY (role_id)
+            REFERENCES public.role(id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
+            NOT DEFERRABLE;
+        </sql>
+        <sql>
+            CREATE TABLE public.company (
+            id BIGSERIAL NOT NULL,
+            name VARCHAR NOT NULL,
+            description VARCHAR,
+            PRIMARY KEY(id)
+            ) ;
+        </sql>
+        <sql>
+
+        </sql>
+        <sql>
+
+        </sql>
+        <sql>
+
+        </sql>
+        <sql>
+
+        </sql>
 	</changeSet>
 </databaseChangeLog>
