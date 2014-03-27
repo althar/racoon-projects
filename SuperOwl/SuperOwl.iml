@@ -32,6 +32,11 @@
     <orderEntry type="library" name="spring-batch-2.2.3" level="project" />
     <orderEntry type="library" name="spring-mvc-4.0.2.RELEASE" level="project" />
     <orderEntry type="module" module-name="RacoonFramework" />
+    <orderEntry type="library" name="org.json:json:20140107" level="project" />
+    <orderEntry type="library" name="commons-io:commons-io:2.1" level="project" />
+    <orderEntry type="library" name="commons-fileupload:commons-fileupload:1.2.2" level="project" />
+    <orderEntry type="library" name="postgresql:postgresql:9.2-1002.jdbc4" level="project" />
+    <orderEntry type="library" name="org.liquibase:liquibase-core:2.0.5" level="project" />
   </component>
 </module>
 

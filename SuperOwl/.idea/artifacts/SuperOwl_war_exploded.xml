@@ -18,6 +18,9 @@
           <element id="library" level="project" name="spring-batch-2.2.3" />
           <element id="library" level="project" name="spring-mvc-4.0.2.RELEASE" />
           <element id="library" level="project" name="lib1" />
+          <element id="library" level="project" name="org.json:json:20140107" />
+          <element id="library" level="project" name="commons-io:commons-io:2.1" />
+          <element id="library" level="project" name="postgresql:postgresql:9.2-1002.jdbc4" />
         </element>
       </element>
     </root>
