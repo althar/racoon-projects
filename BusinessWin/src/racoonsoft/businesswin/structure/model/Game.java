@@ -1,7 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
 import racoonsoft.businesswin.structure.data.*;
-import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.GameStatus;
 import racoonsoft.businesswin.structure.enums.StatusCode;
@@ -26,8 +25,8 @@ public class Game
     public ProductPriceAndProduction product_price_and_production = new ProductPriceAndProduction();
     @DataStructureField(name="industry_performance")
     public IndustryPerformance industry_performance = new IndustryPerformance();
-    @DataStructureField(name="demand_curve")
-    public DemandCurve demand_curve = new DemandCurve();
+    @DataStructureField(name="demand_supply_curve")
+    public DemandSupplyCurve demand_supply_curve = new DemandSupplyCurve();
 
     @DataStructureField(name="id")
     public Long id;

@@ -46,14 +46,14 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395904116992" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395906385721" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926700652" ignored="false" />
     <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391511815511" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
     <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366099807" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395830333320" ignored="false" />
-    <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170940237" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395917706863" ignored="false" />
+    <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395927527531" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990221611" ignored="false" />
     <file path="/dispatcher-servlet.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365430637325" ignored="false" />
@@ -526,7 +526,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/BankAccountType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784221135" ignored="false" />
     <file path="/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169662362" ignored="false" />
     <file path="/StudentController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390300854214" ignored="false" />
-    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387445654383" ignored="false" />
+    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395927210392" ignored="false" />
     <file path="/registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385913705603" ignored="false" />
     <file path="/access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387446564117" ignored="false" />
     <file path="/no_access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385914719749" ignored="false" />
@@ -536,7 +536,7 @@
     <file path="$PROJECT_DIR$/../InvestmentWheel/src/investmentwheel/controller/AdminController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386165211319" ignored="false" />
     <file path="/Role.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386166733298" ignored="false" />
     <file path="/GameWorld.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394713300252" ignored="false" />
-    <file path="/Game.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394713831240" ignored="false" />
+    <file path="/Game.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395907942907" ignored="false" />
     <file path="/GameMode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169569820" ignored="false" />
     <file path="/GameController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395834680995" ignored="false" />
     <file path="/json.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170690268" ignored="false" />
@@ -654,13 +654,13 @@
     <file path="/bootstrap.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937443531" ignored="false" />
     <file path="/login.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937825225" ignored="false" />
     <file path="/BusinessWinController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394617581634" ignored="false" />
-    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395662488959" ignored="false" />
+    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395907968926" ignored="false" />
     <file path="/GameBindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394718109817" ignored="false" />
     <file path="/TradeFactors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394636593728" ignored="false" />
     <file path="/GoodsDeclaration.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394708869515" ignored="false" />
     <file path="/Constants.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394702137633" ignored="false" />
     <file path="/Turn.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394707334206" ignored="false" />
-    <file path="$PROJECT_DIR$/../SuperOwl/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395834854969" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395927529256" ignored="false" />
     <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/BusinessWinInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835549291" ignored="false" />
     <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/HistoryInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835604317" ignored="false" />
     <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/interceptor/AccessInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836359357" ignored="false" />
@@ -669,14 +669,35 @@
     <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/controller/SuperOwlController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835634380" ignored="false" />
     <file path="/SuperOwlController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835630028" ignored="false" />
     <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395835812715" ignored="false" />
-    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395838698411" ignored="false" />
-    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836275488" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926912593" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926938987" ignored="false" />
     <file path="/SuperOwlInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395836369318" ignored="false" />
     <file path="$PROJECT_DIR$/../SuperOwl/sql/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395904120584" ignored="false" />
-    <file path="$PROJECT_DIR$/../SuperOwl/sql/super-owl-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395906566677" ignored="false" />
-    <file path="/super-owl-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395906456807" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/sql/super-owl-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395923379731" ignored="false" />
+    <file path="/super-owl-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395923089682" ignored="false" />
     <file path="/UploadServlet.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395905235876" ignored="false" />
     <file path="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/web/UploadServlet.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395905159633" ignored="false" />
+    <file path="/DemandCurveItem.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395907465619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/CompanyDataFilter.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395917923429" ignored="false" />
+    <file path="/CompanyDataFilter.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395917916789" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/base.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929589709" ignored="false" />
+    <file path="/base.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929588601" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/head-info.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926576521" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/aside-menu.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395928938829" ignored="false" />
+    <file path="/aside-menu.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395925815024" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/ajax-dropdown.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929011288" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/project-dropdown.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395928310402" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/icon-and-search.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395928818697" ignored="false" />
+    <file path="/common-head.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926398049" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/common-head.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395926402057" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/src/racoonsoft/superowl/controller/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395927224317" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/user-info.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395928984201" ignored="false" />
+    <file path="/ajax-dropdown.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929011288" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/bread-crumb.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929191800" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/page-content.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929228238" ignored="false" />
+    <file path="/page-content.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929223928" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/metro-shortcut.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929253430" ignored="false" />
+    <file path="$PROJECT_DIR$/../SuperOwl/web/jsp/structure/common-scripts.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395929778586" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -784,10 +805,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0">
+            <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.6392496">
               <folding>
                 <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
                 <element signature="method#games#0;class#GameController#0" expanded="false" />
@@ -801,33 +822,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="118" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0254491">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="52" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameBindStructure.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -837,20 +831,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartSettings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/StartSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="57" selection-start="534" selection-end="561" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="22" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="383" column="43" selection-start="18224" selection-end="18224" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
+                <element signature="method#getGames#0;class#GameService#0" expanded="false" />
+                <element signature="method#getGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#createGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#startGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
+                <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
+                <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#endPhase2#0;n#GameService#0" expanded="false" />
+                <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
+                <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
+                <element signature="e#5954#6000#0" expanded="false" />
+                <element signature="e#7386#7491#0" expanded="false" />
+                <element signature="e#7868#7977#0" expanded="false" />
+                <element signature="e#13074#13127#0" expanded="false" />
+                <element signature="e#14685#14719#0" expanded="false" />
+                <element signature="e#18233#18264#0" expanded="false" />
+                <element signature="e#18875#18924#0" expanded="false" />
+                <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
+                <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -885,8 +894,10 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="28" column="36" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#577#591#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -906,22 +917,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/json/JSONProcessor.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/TradeFactors.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GoodsDeclaration.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/Constants.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GoodsDeclaration.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/settings/MainConfig.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/test/Test.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GameWorld.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Turn.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Player.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/StatusCode.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandCurveItem.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurve.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
       </list>
     </option>
   </component>
@@ -1014,16 +1025,6 @@
               <option name="myItemId" value="Racoon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SelectNew" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1031,21 +1032,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessWin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BusinessWin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
+              <option name="myItemId" value="RacoonFramework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1054,7 @@
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SuperOwl" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="racoon" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -1816,18 +1803,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40914157" sideWeight="0.49358287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19843924" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19843924" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1846,7 +1834,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29208472" sideWeight="0.49572194" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1920,46 +1907,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Turn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/settings/MainConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="4" selection-start="2793" selection-end="2793" vertical-scroll-proportion="1.0494071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/TradeFactors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Tomcat 7/lib/servlet-api.jar!/javax/servlet/ServletRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="693" selection-end="693" vertical-scroll-proportion="0.3457792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/StartSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="534" selection-end="561" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="502" column="25" selection-start="20201" selection-end="20201" vertical-scroll-proportion="0.33230293" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="52" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
@@ -1970,13 +1917,6 @@
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="8" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -2009,25 +1949,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="22" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.0">
+        <state line="11" column="39" selection-start="335" selection-end="335" vertical-scroll-proportion="0.1962482">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurveItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.0">
+        <state line="18" column="29" selection-start="669" selection-end="669" vertical-scroll-proportion="0.4170274">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="36" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
-            <element signature="method#games#0;class#GameController#0" expanded="false" />
-            <element signature="method#getGames#0;class#GameController#0" expanded="false" />
-            <element signature="method#addGame#0;class#GameController#0" expanded="false" />
-            <element signature="method#join#0;class#GameController#0" expanded="false" />
-            <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
-            <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
+            <element signature="e#577#591#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/json.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="383" column="43" selection-start="18224" selection-end="18224" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
+            <element signature="method#getGames#0;class#GameService#0" expanded="false" />
+            <element signature="method#getGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#createGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#startGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
+            <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
+            <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#endPhase2#0;n#GameService#0" expanded="false" />
+            <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
+            <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
+            <element signature="e#5954#6000#0" expanded="false" />
+            <element signature="e#7386#7491#0" expanded="false" />
+            <element signature="e#7868#7977#0" expanded="false" />
+            <element signature="e#13074#13127#0" expanded="false" />
+            <element signature="e#14685#14719#0" expanded="false" />
+            <element signature="e#18233#18264#0" expanded="false" />
+            <element signature="e#18875#18924#0" expanded="false" />
+            <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
+            <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/goods.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/catalog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="324" selection-end="377" vertical-scroll-proportion="0.20389806">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Select/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="71" selection-start="844" selection-end="844" vertical-scroll-proportion="0.53443116">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2042,8 +2051,23 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="118" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0254491">
+        <state line="4" column="40" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1017964">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="35" selection-start="6085" selection-end="6085" vertical-scroll-proportion="0.6392496">
+          <folding>
+            <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
+            <element signature="method#games#0;class#GameController#0" expanded="false" />
+            <element signature="method#getGames#0;class#GameController#0" expanded="false" />
+            <element signature="method#addGame#0;class#GameController#0" expanded="false" />
+            <element signature="method#join#0;class#GameController#0" expanded="false" />
+            <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
+            <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
