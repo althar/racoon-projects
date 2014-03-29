@@ -2,11 +2,8 @@ package racoonsoft.businesswin.service;
 
 import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.structure.data.*;
-import racoonsoft.businesswin.structure.enums.ElasticityFunctionType;
-import racoonsoft.businesswin.structure.enums.GameMode;
+import racoonsoft.businesswin.structure.enums.*;
 import racoonsoft.businesswin.structure.model.*;
-import racoonsoft.businesswin.structure.enums.GameStatus;
-import racoonsoft.businesswin.structure.enums.StatusCode;
 import racoonsoft.library.helper.Helper;
 
 import java.util.HashMap;
@@ -219,7 +216,7 @@ public class GameService
         {
             Company company = g.companies.get(i);
             company.products_and_capacity.power.set(company.products_and_capacity.power_sensor.get()
-                    /totalPowerSensor //?????
+                    /totalPowerSensor
                     *g.startSettings.total_capacity.get());
             company.products_and_capacity.production_sensor.set(Math.random(g.startSettings.power_loading_coefficient_min.get(),g.startSettings.power_loading_coefficient_max.get(),3));
             totalProductionSensor+=company.products_and_capacity.production_sensor.get();
@@ -236,6 +233,7 @@ public class GameService
         }
 
         g.product_price_and_production.p = g.startSettings.start_economics_sector_size.get()/g.product_price_and_production.q;
+        g.product_price_and_production.p0 = g.product_price_and_production.p;
         //</editor-fold>
 
         //<editor-fold desc="Начальное состояние предприятий (Таблицы 4 companyState, 5 fixedAssetsAndDepreciation)">
@@ -405,6 +403,7 @@ public class GameService
         {
             delta = (double)delta.intValue();
         }
+        g.product_price_and_production.delta_price = delta;
         //</editor-fold>
 
         //<editor-fold desc="Максимальное значение цены">
@@ -440,6 +439,7 @@ public class GameService
             Double val_4 = val_3/delta;
             maxPrice = val_3+delta*(val_4+3);
         }
+        g.product_price_and_production.max_price = maxPrice;
         //</editor-fold>
 
         //<editor-fold desc="Вычисляем функцию для массива">
@@ -468,17 +468,171 @@ public class GameService
     //<editor-fold desc="Phase 1">
     private void calculatePhase1(Game g)
     {
-        // Рассчет кривой спроса и предложения
+        //<editor-fold desc="Demand supply curve">
+        //        Q1 = Q0+ («Табл. 1_ Коэффициент влияния на эластичность» * «Табл. 8_Прибыль отрасли после налогов» / «Табл. 8_Цена продаж (P0) »)
+//        *(1+«Табл. 9_Коэффициент увеличения спроса 1»)
+        Double qCurrent = g.product_price_and_production.q
+                +(g.startSettings.elasticity_influence_coefficient.get()
+                *g.industry_performance.industry_profit_after_taxes.get()
+                /g.product_price_and_production.p0)
+                *(1+g.tradeFactors.magnification_demand.get());
 
+        Double currMinPrice = 0.0;
+        g.demand_supply_curve.items.clear();
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Double currPrice = Double.MAX_VALUE;
+            Double volume = 0.0;
+            boolean gotNew = false;
+            for(int j=0; j<g.companies.size(); j++)
+            {
+                Double companyPrice = g.companies.get(i).goodsDeclaration.price.get();
+                Double companyVolume = g.companies.get(i).goodsDeclaration.value.get();
+                if(companyPrice>=currMinPrice)
+                {
+                    if(companyPrice<currPrice)
+                    {
+                        currPrice=companyPrice;
+                        volume=companyVolume;
+                        gotNew = true;
+                    }
+                    else if(companyPrice==currPrice)
+                    {
+                        volume+=companyVolume;
+                        gotNew = true;
+                    }
+                }
+            }
+            currMinPrice = currPrice;
+            // Here we get next price and volume
+            if(gotNew)
+            {
+                Double stepPrice = currPrice.doubleValue();
+                Double stepVolume = volume.doubleValue();
+                Double qForPrice = 0.0;
+                if(g.startSettings.elasticity_function_type == ElasticityFunctionType.CONSTANT)
+                {
+                    qForPrice = qCurrent+g.startSettings.elasticity_decrease.get()*qCurrent*(g.product_price_and_production.p0-stepPrice)/g.product_price_and_production.p0;
+                }
+                else
+                {
+                    //QТЦ*(Цена/ P0)^ «Табл. 1_ Уменьшение эластичности»
+                    qForPrice = java.lang.Math.pow(qCurrent*(stepPrice/g.product_price_and_production.p0),g.startSettings.elasticity_decrease.get());
+                }
+                if(stepVolume>=qCurrent)// We have a winner
+                {
+                    g.demand_supply_curve.satisfying_price_supply = new DemandSupplyCurveItem(stepPrice,qForPrice,stepVolume);
+                    g.demand_supply_curve.current_sell_price = stepPrice;
+                }
+                g.demand_supply_curve.items.add(new DemandSupplyCurveItem(stepPrice,qForPrice,stepVolume));
+            }
+        }
+        //</editor-fold>
+
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+
+            company.company_state.revenue.set(0.0);
+            if(company.goodsDeclaration.price.get()<=g.demand_supply_curve.current_sell_price)
+            {
+                company.company_state.revenue.set(company.goodsDeclaration.value.get()*g.demand_supply_curve.current_sell_price);
+            }
+            Double lastVariableCosts = company.company_state.variable_costs.get().doubleValue();
+            company.company_state.variable_costs.set(company.company_state.revenue.get()*company.company_sensors.variable_costs_sensor.get());
+            Double lastOperationalProfit = company.company_state.operation_profit.get().doubleValue();
+            company.company_state.operation_profit.set(company.company_state.revenue.get() - company.company_state.variable_costs.get());
+            // add cards
+            Double lastConstantCosts = company.company_state.constant_costs.get().doubleValue();
+            company.company_state.constant_costs.set(company.company_state.revenue.get()*company.company_sensors.constant_costs_sensor.get());
+//            company.company_state.depreciation.set(company.fixed_assets_and_depreciation.depreciation.get());
+//            company.company_state.percent_payment.set(0.0);
+            company.company_state.profit_before_taxes.set(company.company_state.revenue.get()
+                    -company.company_state.variable_costs.get()
+                    -company.company_state.constant_costs.get()
+                    -company.company_state.depreciation.get());
+            company.company_state.profit_tax.set(company.company_state.profit_before_taxes.get()*g.startSettings.profit_tax.get());
+            company.company_state.net_profit.set(company.company_state.profit_before_taxes.get()-company.company_state.profit_tax.get());
+            company.company_state.profit_change.set(company.company_state.operation_profit.get()-lastOperationalProfit);
+            company.company_state.costs_change.set(company.company_state.variable_costs.get()+company.company_state.constant_costs.get()
+                    -lastConstantCosts-lastVariableCosts);
+            Double lastDebt = company.company_state.debt.get();
+            //company.company_state.debt.set(0.0);
+            company.company_state.cash.set(company.company_state.cash.get()+company.company_state.net_profit.get()
+                    +company.company_state.depreciation.get()
+                    -lastDebt
+                    -company.company_state.debt.get());
+//            company.company_state.net_fixed_assets.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
+//                    -company.company_state.depreciation.get());
+//            company.company_state.current_passives.set(0.0);
+
+//            company.company_state.credit_value.set(0.0);
+//            company.company_state.share_capital.set(company.company_state.cash.get()+company.company_state.net_fixed_assets.get());
+//            company.company_state.retained_earnings.set(company.company_state.net_profit.get());
+            company.company_state.ebitda.set(company.company_state.revenue.get()-company.company_state.constant_costs.get()-company.company_state.variable_costs.get());
+            company.company_state.noplat.set(company.company_state.net_profit.get()-company.company_state.depreciation.get());
+            company.company_state.investments.set(0.0);
+//            company.company_state.variable_costs_coefficient.set(company.company_sensors.variable_costs_sensor.get());
+//            company.company_state.constant_costs_coefficient.set(company.company_sensors.constant_costs_sensor.get());
+            //company.company_state.market_share.set(company.products_and_capacity.production_sensor.get()/totalProductionSensor*100.0);
+            Double percentPaid = company.company_state.percent_payment.get();
+            if(percentPaid == 0.0)
+            {
+                company.company_state.setCredit_rating_by_edibta(CreditRating.AAA);
+            }
+            else if(company.company_state.ebitda.get()/percentPaid>=10)
+            {
+                company.company_state.setCredit_rating_by_edibta(CreditRating.AAA);
+            }
+            else if(company.company_state.ebitda.get()/percentPaid>=6)
+            {
+                company.company_state.setCredit_rating_by_edibta(CreditRating.BBB);
+            }
+            else if(company.company_state.ebitda.get()/percentPaid>=3)
+            {
+                company.company_state.setCredit_rating_by_edibta(CreditRating.CCC);
+            }
+            else
+            {
+                company.company_state.setCredit_rating_by_edibta(CreditRating.DDD);
+            }
+            Double cash = company.company_state.cash.get();
+
+            if(cash==0.0)
+            {
+                company.company_state.setCredit_rating_by_cash(CreditRating.DDD);
+            }
+            else if((cash-company.company_state.current_passives.get())/cash>0.7)
+            {
+                company.company_state.setCredit_rating_by_cash(CreditRating.AAA);
+            }
+            else if((cash-company.company_state.current_passives.get())/cash>0.4)
+            {
+                company.company_state.setCredit_rating_by_cash(CreditRating.BBB);
+            }
+            else if((cash-company.company_state.current_passives.get())/cash>0.1)
+            {
+                company.company_state.setCredit_rating_by_cash(CreditRating.CCC);
+            }
+            company.company_state.power.set(company.company_state.power.get()+company.company_state.new_power.get());
+            company.company_state.production_loading.set(company.company_state.sales_volume.get()/company.company_state.power.get()*100);
+        }
     }
     //</editor-fold>
+
+    //<editor-fold desc="Phase 2">
     private void calculatePhase2(Game g)
     {
         // Calculate step 0 data
     }
+    //</editor-fold>
+
+    //<editor-fold desc="Phase 3">
     private void calculatePhase3(Game g)
     {
         // Calculate step 0 data
     }
+    //</editor-fold>
+
     //</editor-fold>
 }

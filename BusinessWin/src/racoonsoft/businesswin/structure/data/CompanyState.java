@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.structure.data;
 
+import racoonsoft.businesswin.structure.enums.CreditRating;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
@@ -78,4 +79,116 @@ public class CompanyState
 
     @DataStructureField(name="market_share",description="Доля на рынке")
     public EconomicsValue market_share = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    // More
+    @DataStructureField(name="credit_rating_by_edibta",description="Кредитный рейтинг 1")
+    private CreditRating credit_rating_by_edibta = CreditRating.UNKNOWN;
+
+    @DataStructureField(name="credit_rating_by_cash",description="Кредитный рейтинг 2")
+    private CreditRating credit_rating_by_cash = CreditRating.UNKNOWN;
+
+    @DataStructureField(name="credit_rating_current",description="Текйщий кредитный рейтинг")
+    public CreditRating credit_rating_current = CreditRating.UNKNOWN;
+
+    @DataStructureField(name="credit_rate_of_interest_3_years",description="Ставка процентов по кредиту")
+    public EconomicsValue credit_rate_of_interest_3_years = new EconomicsValue(0.0,10000000.0,2,0.0);
+    @DataStructureField(name="credit_rate_of_interest_5_years",description="Ставка процентов по кредиту")
+    public EconomicsValue credit_rate_of_interest_5_years = new EconomicsValue(0.0,10000000.0,2,0.0);
+    @DataStructureField(name="credit_rate_of_interest_7_years",description="Ставка процентов по кредиту")
+    public EconomicsValue credit_rate_of_interest_7_years = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="power",description="Мощность")
+    public EconomicsValue power = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="sales_volume",description="Объем продаж")
+    public EconomicsValue sales_volume = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="production_loading",description="Загрузка производства")
+    public EconomicsValue production_loading = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="new_power",description="Новые мощности")
+    public EconomicsValue new_power = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="company_minimum_price",description="Минимальная цена продажи предприятия")
+    public EconomicsValue company_minimum_price = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="bankrupt",description="Банкрот")
+    public Boolean bankrupt = false;
+
+    @DataStructureField(name="company_minimum_price_with_card",description="Минимальная цена продажи предприятия (фишка)")
+    public EconomicsValue company_minimum_price_with_card = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="company_minimum_price_with_bankrupt",description="Минимальная цена продажи предприятия (банкротство)")
+    public EconomicsValue company_minimum_price_with_bankrupt = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    public void setCredit_rating_by_cash(CreditRating credit_rating_by_cash)
+    {
+        this.credit_rating_by_cash = credit_rating_by_cash;
+        credit_rating_current = credit_rating_by_cash;
+        if(credit_rating_by_cash.compareTo(credit_rating_by_edibta)<0)
+        {
+            credit_rating_current = credit_rating_by_edibta;
+        }
+        // credit_rate_of_interest
+        if(credit_rating_current==CreditRating.AAA)
+        {
+            credit_rate_of_interest_3_years.set(10.0);
+            credit_rate_of_interest_5_years.set(10.05);
+            credit_rate_of_interest_7_years.set(10.05);
+        }
+        if(credit_rating_current==CreditRating.BBB)
+        {
+            credit_rate_of_interest_3_years.set(15.0);
+            credit_rate_of_interest_5_years.set(15.05);
+            credit_rate_of_interest_7_years.set(15.1);
+        }
+        if(credit_rating_current==CreditRating.CCC)
+        {
+            credit_rate_of_interest_3_years.set(20.0);
+            credit_rate_of_interest_5_years.set(20.05);
+            credit_rate_of_interest_7_years.set(20.1);
+        }
+        if(credit_rating_current==CreditRating.DDD)
+        {
+            credit_rate_of_interest_3_years.set(0.0);
+            credit_rate_of_interest_5_years.set(0.0);
+            credit_rate_of_interest_7_years.set(0.0);
+        }
+    }
+    public void setCredit_rating_by_edibta(CreditRating credit_rating_by_edibta)
+    {
+        this.credit_rating_by_edibta = credit_rating_by_edibta;
+        credit_rating_current = credit_rating_by_cash;
+        if(credit_rating_by_cash.compareTo(credit_rating_by_edibta)<0)
+        {
+            credit_rating_current = credit_rating_by_edibta;
+        }
+        // credit_rate_of_interest
+        if(credit_rating_current==CreditRating.AAA)
+        {
+            credit_rate_of_interest_3_years.set(10.0);
+            credit_rate_of_interest_5_years.set(10.05);
+            credit_rate_of_interest_7_years.set(10.05);
+        }
+        if(credit_rating_current==CreditRating.BBB)
+        {
+            credit_rate_of_interest_3_years.set(15.0);
+            credit_rate_of_interest_5_years.set(15.05);
+            credit_rate_of_interest_7_years.set(15.1);
+        }
+        if(credit_rating_current==CreditRating.CCC)
+        {
+            credit_rate_of_interest_3_years.set(20.0);
+            credit_rate_of_interest_5_years.set(20.05);
+            credit_rate_of_interest_7_years.set(20.1);
+        }
+        if(credit_rating_current==CreditRating.DDD)
+        {
+            credit_rate_of_interest_3_years.set(0.0);
+            credit_rate_of_interest_5_years.set(0.0);
+            credit_rate_of_interest_7_years.set(0.0);
+        }
+    }
+
+
 }

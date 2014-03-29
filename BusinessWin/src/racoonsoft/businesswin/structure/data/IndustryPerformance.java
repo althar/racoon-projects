@@ -39,7 +39,7 @@ public class IndustryPerformance
     @DataStructureField(name="accounts_balance", description="Прибыль отрасли после налогов")
     public EconomicsValue accounts_balance = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
-    @DataStructureField(name="capacity_unit_price", description="Стоимость единицы новой можности")
+    @DataStructureField(name="capacity_unit_price", description="Стоимость единицы новой мощности")
     public EconomicsValue capacity_unit_price = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
     @DataStructureField(name="industry_revenue_after_taxes", description="Прибыль отрасли после налогов")

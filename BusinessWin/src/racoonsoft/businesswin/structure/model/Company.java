@@ -31,6 +31,8 @@ public class Company
     @DataStructureField(name="goods_declaration")
     public GoodsDeclaration goodsDeclaration;
 
+
+
     public Company()
     {
         products_and_capacity = new CompanyProductionAndCapacity();
