@@ -31,7 +31,24 @@ public class Company
     @DataStructureField(name="goods_declaration")
     public GoodsDeclaration goodsDeclaration;
 
+    // Event cards
+    @DataStructureField(name="event_card_sell_company")
+    public EventCard event_card_sell_company = new EventCard();
 
+    @DataStructureField(name="event_card_contract_entire_volume")
+    public EventCard event_card_contract_entire_volume = new EventCard();
+
+    @DataStructureField(name="event_card_efficiency_project_small")
+    public EventCard event_card_efficiency_project_small = new EventCard();
+
+    @DataStructureField(name="event_card_efficiency_project_medium")
+    public EventCard event_card_efficiency_project_medium = new EventCard();
+
+    @DataStructureField(name="event_card_efficiency_project_large")
+    public EventCard event_card_efficiency_project_large = new EventCard();
+
+    @DataStructureField(name="event_card_pocking")
+    public EventCard event_card_pocking = new EventCard();
 
     public Company()
     {

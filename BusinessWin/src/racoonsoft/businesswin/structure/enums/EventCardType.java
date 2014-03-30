@@ -3,10 +3,10 @@ package racoonsoft.businesswin.structure.enums;
 public enum EventCardType
 {
     CONTRACT_ENTIRE_VOLUME("Законтрактовать весь объем")
-    , INVESTMENT_PROJECT("Инвестиционный проект")
-    , COST_CUTTING_PROJECT("Проект по сокращению затрат")
-    , BUY_COMPANY("Купить другого игрока")
-    , PRIZE("Приз");
+    , SELL_COMPANY("Продажа предприятия")
+    , EFFICIENCY_PROJECT_SMALL("Проект повышения эффективности 1")
+    , EFFICIENCY_PROJECT_MEDIUM("Проект повышения эффективности 2")
+    , EFFICIENCY_PROJECT_LARGE("Проект повышения эффективности 3");
 
     private String caption;
 

@@ -22,6 +22,13 @@
           <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
           <element id="library" level="project" name="org.json:json:20090211" />
           <element id="file-copy" path="$PROJECT_DIR$/../RacoonFramework/lib/dbfEngine_bin-1.04.jar" />
+          <element id="library" level="project" name="commons-io:commons-io:2.1" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:com.springsource.com.fasterxml.jackson.core.jackson-databind:2.0.2" />
+          <element id="library" level="project" name="com.fasterxml.jackson.core:jackson-core:2.0.1" />
+          <element id="library" level="project" name="com.google.protobuf:protobuf-java:2.5.0" />
+          <element id="library" level="project" name="com.google.zxing:core:2.1" />
+          <element id="library" level="project" name="org.springframework:org.springframework.web:3.2.5.RELEASE" />
+          <element id="library" level="project" name="spring-data-jpa-1.0.0" />
         </element>
       </element>
     </root>

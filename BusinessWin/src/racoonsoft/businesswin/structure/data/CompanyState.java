@@ -7,6 +7,12 @@ import racoonsoft.library.annotations.DataStructureField;
 @DataStructure(name="company_state")
 public class CompanyState
 {
+    @DataStructureField(name="sell_price",description="Цена продажи")
+    public Double sell_price = 0.0;
+
+    @DataStructureField(name="sell_turn",description="Ход продажи")
+    public Integer sell_turn = 0;
+
     @DataStructureField(name="revenue",description="Выручка")
     public EconomicsValue revenue = new EconomicsValue(0.0,9999999999999.0,2,0.0);
 
@@ -106,6 +112,9 @@ public class CompanyState
     @DataStructureField(name="production_loading",description="Загрузка производства")
     public EconomicsValue production_loading = new EconomicsValue(0.0,10000000.0,2,0.0);
 
+    @DataStructureField(name="free_power",description="Незагруженная мощность")
+    public EconomicsValue free_power = new EconomicsValue(0.0,10000000.0,2,0.0);
+
     @DataStructureField(name="new_power",description="Новые мощности")
     public EconomicsValue new_power = new EconomicsValue(0.0,10000000.0,2,0.0);
 
@@ -114,6 +123,9 @@ public class CompanyState
 
     @DataStructureField(name="bankrupt",description="Банкрот")
     public Boolean bankrupt = false;
+
+    @DataStructureField(name="bankrupt_turn",description="Банкрот")
+    public Integer bankrupt_turn = 0;
 
     @DataStructureField(name="company_minimum_price_with_card",description="Минимальная цена продажи предприятия (фишка)")
     public EconomicsValue company_minimum_price_with_card = new EconomicsValue(0.0,10000000.0,2,0.0);
@@ -189,6 +201,5 @@ public class CompanyState
             credit_rate_of_interest_7_years.set(0.0);
         }
     }
-
 
 }
