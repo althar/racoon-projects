@@ -6,10 +6,6 @@ import racoonsoft.library.http.HTTPClient;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.ozon.APIProcessor;
 import racoonsoft.library.ozon.APIRequest;
-import ru.smartflex.tools.dbf.DbfEngine;
-import ru.smartflex.tools.dbf.DbfIterator;
-import ru.smartflex.tools.dbf.DbfRecord;
-import ru.smartflex.tools.dbf.test.Fp26Reader;
 
 import javax.swing.*;
 import java.awt.*;

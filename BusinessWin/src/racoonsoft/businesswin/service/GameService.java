@@ -469,8 +469,7 @@ public class GameService
     private void calculatePhase1(Game g)
     {
         //<editor-fold desc="Demand supply curve">
-        //        Q1 = Q0+ («Табл. 1_ Коэффициент влияния на эластичность» * «Табл. 8_Прибыль отрасли после налогов» / «Табл. 8_Цена продаж (P0) »)
-//        *(1+«Табл. 9_Коэффициент увеличения спроса 1»)
+
         Double qCurrent = g.product_price_and_production.q
                 +(g.startSettings.elasticity_influence_coefficient.get()
                 *g.industry_performance.industry_profit_after_taxes.get()
@@ -479,10 +478,12 @@ public class GameService
 
         Double currMinPrice = 0.0;
         g.demand_supply_curve.items.clear();
+        g.demand_supply_curve.satisfying_price_supply = null;
+        g.demand_supply_curve.current_sell_price = 0.0;
+        Double volume = 0.0;
         for(int i=0; i<g.companies.size(); i++)
         {
             Double currPrice = Double.MAX_VALUE;
-            Double volume = 0.0;
             boolean gotNew = false;
             for(int j=0; j<g.companies.size(); j++)
             {
@@ -493,7 +494,7 @@ public class GameService
                     if(companyPrice<currPrice)
                     {
                         currPrice=companyPrice;
-                        volume=companyVolume;
+                        volume+=companyVolume;
                         gotNew = true;
                     }
                     else if(companyPrice==currPrice)
@@ -510,7 +511,7 @@ public class GameService
                 Double stepPrice = currPrice.doubleValue();
                 Double stepVolume = volume.doubleValue();
                 Double qForPrice = 0.0;
-                if(g.startSettings.elasticity_function_type == ElasticityFunctionType.CONSTANT)
+                if(g.startSettings.elasticity_function_type == ElasticityFunctionType.LINEAR)
                 {
                     qForPrice = qCurrent+g.startSettings.elasticity_decrease.get()*qCurrent*(g.product_price_and_production.p0-stepPrice)/g.product_price_and_production.p0;
                 }
@@ -519,16 +520,20 @@ public class GameService
                     //QТЦ*(Цена/ P0)^ «Табл. 1_ Уменьшение эластичности»
                     qForPrice = java.lang.Math.pow(qCurrent*(stepPrice/g.product_price_and_production.p0),g.startSettings.elasticity_decrease.get());
                 }
-                if(stepVolume>=qCurrent)// We have a winner
+                if(stepVolume>=qForPrice)// We have a winner
                 {
-                    g.demand_supply_curve.satisfying_price_supply = new DemandSupplyCurveItem(stepPrice,qForPrice,stepVolume);
-                    g.demand_supply_curve.current_sell_price = stepPrice;
+                    if(g.demand_supply_curve.satisfying_price_supply==null)
+                    {
+                        g.demand_supply_curve.satisfying_price_supply = new DemandSupplyCurveItem(stepPrice,qForPrice,stepVolume);
+                        g.demand_supply_curve.current_sell_price = stepPrice;
+                    }
                 }
                 g.demand_supply_curve.items.add(new DemandSupplyCurveItem(stepPrice,qForPrice,stepVolume));
             }
         }
         //</editor-fold>
 
+        //<editor-fold desc="Company state">
         for(int i=0; i<g.companies.size(); i++)
         {
             Company company = g.companies.get(i);
@@ -538,15 +543,19 @@ public class GameService
             {
                 company.company_state.revenue.set(company.goodsDeclaration.value.get()*g.demand_supply_curve.current_sell_price);
             }
+            g.industry_performance.total_revenue.set(g.industry_performance.total_revenue.get()+company.company_state.revenue.get());
             Double lastVariableCosts = company.company_state.variable_costs.get().doubleValue();
             company.company_state.variable_costs.set(company.company_state.revenue.get()*company.company_sensors.variable_costs_sensor.get());
             Double lastOperationalProfit = company.company_state.operation_profit.get().doubleValue();
             company.company_state.operation_profit.set(company.company_state.revenue.get() - company.company_state.variable_costs.get());
             // add cards
             Double lastConstantCosts = company.company_state.constant_costs.get().doubleValue();
+            Double currentConstantCosts = company.company_state.revenue.get()*company.company_sensors.constant_costs_sensor.get();
+            if(company.company_state.sell_turn==g.turn.turn-1)
+            {
+                currentConstantCosts = company.company_state.sell_price*company.company_sensors.constant_costs_sensor.get();
+            }
             company.company_state.constant_costs.set(company.company_state.revenue.get()*company.company_sensors.constant_costs_sensor.get());
-//            company.company_state.depreciation.set(company.fixed_assets_and_depreciation.depreciation.get());
-//            company.company_state.percent_payment.set(0.0);
             company.company_state.profit_before_taxes.set(company.company_state.revenue.get()
                     -company.company_state.variable_costs.get()
                     -company.company_state.constant_costs.get()
@@ -557,24 +566,13 @@ public class GameService
             company.company_state.costs_change.set(company.company_state.variable_costs.get()+company.company_state.constant_costs.get()
                     -lastConstantCosts-lastVariableCosts);
             Double lastDebt = company.company_state.debt.get();
-            //company.company_state.debt.set(0.0);
             company.company_state.cash.set(company.company_state.cash.get()+company.company_state.net_profit.get()
                     +company.company_state.depreciation.get()
                     -lastDebt
                     -company.company_state.debt.get());
-//            company.company_state.net_fixed_assets.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
-//                    -company.company_state.depreciation.get());
-//            company.company_state.current_passives.set(0.0);
-
-//            company.company_state.credit_value.set(0.0);
-//            company.company_state.share_capital.set(company.company_state.cash.get()+company.company_state.net_fixed_assets.get());
-//            company.company_state.retained_earnings.set(company.company_state.net_profit.get());
             company.company_state.ebitda.set(company.company_state.revenue.get()-company.company_state.constant_costs.get()-company.company_state.variable_costs.get());
             company.company_state.noplat.set(company.company_state.net_profit.get()-company.company_state.depreciation.get());
             company.company_state.investments.set(0.0);
-//            company.company_state.variable_costs_coefficient.set(company.company_sensors.variable_costs_sensor.get());
-//            company.company_state.constant_costs_coefficient.set(company.company_sensors.constant_costs_sensor.get());
-            //company.company_state.market_share.set(company.products_and_capacity.production_sensor.get()/totalProductionSensor*100.0);
             Double percentPaid = company.company_state.percent_payment.get();
             if(percentPaid == 0.0)
             {
@@ -616,7 +614,66 @@ public class GameService
             }
             company.company_state.power.set(company.company_state.power.get()+company.company_state.new_power.get());
             company.company_state.production_loading.set(company.company_state.sales_volume.get()/company.company_state.power.get()*100);
+            company.company_state.company_minimum_price_with_bankrupt.set(
+                    (0.6-(g.turn.turn-company.company_state.bankrupt_turn)/10.0)
+                            *company.company_state.net_fixed_assets.get()
+                            -company.company_state.cash.get());
+            company.company_state.bankrupt = company.company_state.cash.get()<=0;
+            company.company_state.company_minimum_price_with_card.set(company.company_state.ebitda.get()*3
+                    +company.company_state.cash.get()
+                    -company.company_state.debt.get());
+            company.company_state.company_minimum_price.set(company.company_state.cash.get()
+                    -company.company_state.debt.get());
+            company.company_state.market_share.set(company.company_state.revenue.get()/g.industry_performance.total_revenue.get()*100.0);
+            company.company_state.free_power.set(100.0-company.company_state.production_loading.get());
+            if(g.demand_supply_curve.current_sell_price<=company.goodsDeclaration.price.get()||company.event_card_contract_entire_volume !=null)
+            {
+                company.company_state.sales_volume.set(company.goodsDeclaration.value.get());
+            }
+            else
+            {
+                company.company_state.sales_volume.set(0.0);
+            }
+            // Variable and constant sensors
+            if(g.turn.turn<3)
+            {
+                company.company_state.variable_costs_coefficient.set(company.company_sensors.variable_costs_sensor.get());
+                company.company_state.constant_costs_coefficient.set(company.company_sensors.constant_costs_sensor.get());
+            }
+            else if(company.event_card_efficiency_project_small.pre_previous_turn)
+            {
+                Double val = company.company_state.variable_costs_coefficient.get()*(1-g.startSettings.variable_costs_decrease_coefficient_small_project.get());
+                company.company_state.variable_costs_coefficient.set(val);
+            }
+            else if(company.event_card_efficiency_project_large.pre_previous_turn)
+            {
+                Double val = company.company_state.variable_costs_coefficient.get()*(1-g.startSettings.variable_costs_decrease_coefficient_big_project.get());
+                company.company_state.variable_costs_coefficient.set(val);
+            }
+            else
+            {
+                company.company_state.variable_costs_coefficient.set(company.company_state.variable_costs_coefficient.get());
+            }
+
+            if(g.turn.turn<3)
+            {
+                company.company_state.constant_costs_coefficient.set(company.company_sensors.constant_costs_sensor.get());
+            }
+            else if(company.event_card_efficiency_project_medium.pre_previous_turn)
+            {
+                Double val = company.company_state.constant_costs_coefficient.get()*(1-g.startSettings.constant_costs_decrease_coefficient_medium_project.get());
+                company.company_state.constant_costs_coefficient.set(val);
+            }
+            else
+            {
+                company.company_state.constant_costs_coefficient.set(company.company_state.constant_costs_coefficient.get());
+            }
+            company.company_state.retained_earnings.set(company.company_state.retained_earnings.get()+company.company_state.net_profit.get());
+
         }
+        //</editor-fold>
+
+
     }
     //</editor-fold>
 
@@ -631,6 +688,29 @@ public class GameService
     private void calculatePhase3(Game g)
     {
         // Calculate step 0 data
+
+        // Cards
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            company.event_card_efficiency_project_small.pre_previous_turn = false;
+            company.event_card_efficiency_project_small.pre_previous_turn = company.event_card_efficiency_project_small.previous_turn;
+            company.event_card_efficiency_project_small.previous_turn = false;
+            company.event_card_efficiency_project_small.previous_turn = company.event_card_efficiency_project_small.current_turn;
+            company.event_card_efficiency_project_small.current_turn = false;
+
+            company.event_card_efficiency_project_medium.pre_previous_turn = false;
+            company.event_card_efficiency_project_medium.pre_previous_turn = company.event_card_efficiency_project_medium.previous_turn;
+            company.event_card_efficiency_project_medium.previous_turn = false;
+            company.event_card_efficiency_project_medium.previous_turn = company.event_card_efficiency_project_medium.current_turn;
+            company.event_card_efficiency_project_medium.current_turn = false;
+
+            company.event_card_efficiency_project_large.pre_previous_turn = false;
+            company.event_card_efficiency_project_large.pre_previous_turn = company.event_card_efficiency_project_large.previous_turn;
+            company.event_card_efficiency_project_large.previous_turn = false;
+            company.event_card_efficiency_project_large.previous_turn = company.event_card_efficiency_project_large.current_turn;
+            company.event_card_efficiency_project_large.current_turn = false;
+        }
     }
     //</editor-fold>
 

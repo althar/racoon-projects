@@ -16,11 +16,11 @@ public class EconomicsValue
         this.min = Double.MIN_VALUE;
         this.max = Double.MAX_VALUE;
         this.accuracy = accuracy;
-        set(value);
+        set(value.doubleValue());
     }
     public void set(Double val)
     {
-        value = val;
+        value = val.doubleValue();
         if(value>max)
         {
             value = max;
@@ -29,11 +29,11 @@ public class EconomicsValue
         {
             value = min;
         }
-        value = MathHelper.round(value,accuracy);
+        value = MathHelper.round(value.doubleValue(),accuracy);
     }
     public void add(Double val)
     {
-        set(get()+val);
+        set(get()+val.doubleValue());
     }
     public void add(EconomicsValue val)
     {
@@ -41,7 +41,7 @@ public class EconomicsValue
     }
     public Double get()
     {
-        return value;
+        return value.doubleValue();
     }
     @Override
     public String toString()
