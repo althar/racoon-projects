@@ -40,7 +40,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -371,9 +371,11 @@
   <ItemGroup>
     <Content Include="bin\Debug\Resources\signature.jpg" />
     <Content Include="bin\Release\Resources\signature.jpg" />
+    <Content Include="bin\Release\Resources\good_template.xml" />
     <Content Include="comments.txt" />
     <Content Include="lib\HTMLWYSIWYG.dll" />
     <Content Include="owl1.ico" />
+    <Content Include="bin\Release\Resources\purchase_template.xml" />
     <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <ItemGroup>
