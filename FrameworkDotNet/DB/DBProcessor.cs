@@ -217,6 +217,7 @@ namespace FTwoFramework.DB
             for(int i=0; i<values.Count; i++)
             {
                 command+=objectToString(values[i]);
+                command = command.Replace(@"\", @"\\");
                 if(i<keys.Count-1)
                 {
                     command+=",";

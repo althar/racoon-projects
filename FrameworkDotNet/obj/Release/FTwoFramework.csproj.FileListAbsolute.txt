@@ -11,3 +11,4 @@ C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Release\LinqToExce
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\FTwoFramework.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\OwlBusinessStudioLib.pdb
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Release\FTwoFramework.csprojResolveAssemblyReference.cache

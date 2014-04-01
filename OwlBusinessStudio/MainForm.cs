@@ -1023,24 +1023,28 @@ namespace OwlBusinessStudio
                 }
             }
         }
-
+        DataGridViewRow currentPurchase = null;
         private void DataGridViewPurchase_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
         {
             try
             {
                 if (DataGridViewPurchase.SelectedCells != null & DataGridViewPurchase.SelectedCells.Count == 1)
                 {
-                    ButtChoosePurchaseList.Tag = DataGridViewPurchase.SelectedCells[0].OwningRow;
+                    currentPurchase = DataGridViewPurchase.SelectedCells[0].OwningRow;
+                    ButtChoosePurchaseList.Tag = currentPurchase;
                     ButtChoosePurchaseList.Enabled = true;
+                    ButtExportPurchase.Enabled = true;
                 }
                 else
                 {
                     ButtChoosePurchaseList.Enabled = false;
+                    ButtExportPurchase.Enabled = false;
                 }
             }
             catch
             {
                 ButtChoosePurchaseList.Enabled = false;
+                ButtExportPurchase.Enabled = false;
             }
         }
         //private string currPurchasePrice = "0";
@@ -2980,6 +2984,106 @@ namespace OwlBusinessStudio
                 Configurator.translateToRussian(DataGridViewOrders);
                 formatOrders(DataGridViewOrders);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (DialogPurchaseExportFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                TxtPurchaseExportFolder.Text = DialogPurchaseExportFolder.SelectedPath;
+                dbProc.setSetting("purchase_upload_folder", TxtPurchaseExportFolder.Text);
+            }
+        }
+
+        private void PanelUploadPurchse_VisibleChanged(object sender, EventArgs e)
+        {
+            if (PanelUploadPurchse.Visible)
+            {
+                string folder = dbProc.getSetting("purchase_upload_folder");
+                TxtPurchaseExportFolder.Text = folder;
+                string supplierName = currentPurchase.Cells["supplier"].Value.ToString();
+                string listName = currentPurchase.Cells["list_name"].Value.ToString();
+                string supplierCode = dbProc.getSetting("supplier_code_for_" + supplierName);
+                TxtSupplierCode.Text = supplierCode;
+                LabelExportPurcahseName.Text = listName;
+            }
+        }
+        private void createPurchaseExportFile(string purchase_name,string path,string supplierCode,string supplierName)
+        {
+            DataTable purchaseTab = dbProc.executeGet("SELECT pl.*,g.good_code AS good_code FROM purchase_lists pl LEFT JOIN goods g ON g.id=pl.good_id WHERE list_name='"+purchase_name.Replace("'","`")+"'");
+            StreamWriter writer = new StreamWriter(path + "\\" + purchase_name.Replace(":", ".").Replace("#", "номер") + ".xml", false, Encoding.GetEncoding("windows-1251"));
+            string purchaseTemplatePath = Environment.CurrentDirectory + "/Resources/purchase_template.xml";
+            string goodTemplatePath = Environment.CurrentDirectory + "/Resources/good_template.xml";
+            StreamReader purchaseReader = new StreamReader(purchaseTemplatePath, Encoding.GetEncoding("windows-1251"));
+            StreamReader goodReader = new StreamReader(goodTemplatePath, Encoding.GetEncoding("windows-1251"));
+            string purchaseTemplate = purchaseReader.ReadToEnd();
+            string goodTemplate = goodReader.ReadToEnd();
+            purchaseReader.Close();
+            goodReader.Close();
+
+            purchaseTemplate = purchaseTemplate.Replace("#order_number", purchase_name);
+            purchaseTemplate = purchaseTemplate.Replace("#create_date", DateTime.Now.ToString("yyyy-MM-dd"));
+            purchaseTemplate = purchaseTemplate.Replace("#create_time", DateTime.Now.ToString("hh:mm:ss"));
+            purchaseTemplate = purchaseTemplate.Replace("#supplier_code", supplierCode);
+            purchaseTemplate = purchaseTemplate.Replace("#supplier_name", currentPurchase.Cells["supplier"].Value.ToString());
+            StringBuilder builder = new System.Text.StringBuilder();
+            for (int i = 0; i < purchaseTab.Rows.Count; i++)
+            {
+                DataRow r = purchaseTab.Rows[i];
+                string good = goodTemplate.Replace("#index", i.ToString());
+                good = good.Replace("#good_code", r["good_code"].ToString());
+                good = good.Replace("#article", r["article"].ToString());
+                good = good.Replace("#supplier_code", supplierCode);
+                good = good.Replace("#barcode", "");
+                good = good.Replace("#good_name", r["good_name"].ToString());
+                good = good.Replace("#good_count", r["good_count"].ToString());
+                good = good.Replace("#good_price", r["good_purchase_price"].ToString());
+                double total_price = (int)r["good_count"];
+                total_price = total_price * (double)r["good_purchase_price"];
+                good = good.Replace("#good_total_price", total_price.ToString());
+                builder.Append(good+Environment.NewLine);
+            }
+            purchaseTemplate = purchaseTemplate.Replace("#goods", builder.ToString());
+            writer.Write(purchaseTemplate);
+            writer.Close();
+            
+            MessageBox.Show("Формируем закупочный XML и кладем его куда надо.");
+        }
+        private void ButtUploadExportPurchase_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check directory
+                DirectoryInfo dir = new DirectoryInfo(TxtPurchaseExportFolder.Text+"\\"+TxtSupplierCode.Text);
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
+                DirectoryInfo dirIn = new DirectoryInfo(dir.FullName + "\\IN");
+                if (!dirIn.Exists)
+                {
+                    dirIn.Create();
+                }
+                DirectoryInfo dirOut = new DirectoryInfo(dir.FullName + "\\OUT");
+                if (!dirOut.Exists)
+                {
+                    dirOut.Create();
+                }
+                string purchaseName = currentPurchase.Cells["list_name"].Value.ToString();
+                string supplierName = currentPurchase.Cells["supplier"].Value.ToString();
+                dbProc.setSetting("supplier_code_for_" + supplierName, TxtSupplierCode.Text);
+                createPurchaseExportFile(purchaseName, dirOut.FullName, TxtSupplierCode.Text, supplierName);
+                PanelUploadPurchse.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void ButtExportPurchase_Click(object sender, EventArgs e)
+        {
+            PanelUploadPurchse.Visible = !PanelUploadPurchse.Visible;
         }
     }
 }

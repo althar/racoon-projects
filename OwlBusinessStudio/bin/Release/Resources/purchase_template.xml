@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<КоммерческаяИнформация>
+	<Документ>
+		<Номер>#order_number</Номер>
+		<Дата>#create_date</Дата>
+		<Время>#create_time</Время>
+		<OrderInfo>
+			<ПоставщикКод>#supplier_code</ПоставщикКод>
+			<ПоставщикНаименование>#supplier_name</ПоставщикНаименование>			
+			<НомерЗаказа>#order_number</НомерЗаказа>
+			<ДатаЗаказа>#create_date #created_time</ДатаЗаказа>			
+		</OrderInfo>
+		<BillInfo>
+    </BillInfo>
+		<Bill>
+		</Bill>
+		<Order>
+      #goods
+		</Order>
+	</Документ>
+</КоммерческаяИнформация>
