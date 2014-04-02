@@ -28,7 +28,7 @@ namespace OwlBusinessStudio.Orders
             InitializeComponent();
             owner = parent;
             isEditing = order_id != 0;
-            TxtPhone1.Enabled = !isEditing;
+            //TxtPhone1.Enabled = !isEditing;
             orderID = order_id;
             ComboStreet.MouseWheel += new MouseEventHandler(ComboStreet_MouseWheel);
         }
@@ -911,6 +911,11 @@ namespace OwlBusinessStudio.Orders
         private void NumDeliveryPrice_ValueChanged(object sender, EventArgs e)
         {
             //orderTable.setDeliverPrice((int)NumDeliveryPrice.Value);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TxtDeliver_SelectedValueChanged(null, null);
         }
     }
 }

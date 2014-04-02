@@ -76,11 +76,13 @@
             this.ButtSaveOrder = new System.Windows.Forms.Button();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CheckSecondDeliverTime);
@@ -548,6 +550,16 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Примечание";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(646, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 23);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Пересчитать";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddEditOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,6 +634,7 @@
         private System.Windows.Forms.CheckBox CheckSecondDeliverTime;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
 
     }
 }
