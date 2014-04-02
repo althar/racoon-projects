@@ -22,9 +22,9 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
         try
         {
             mySqlProc1 = new DatabaseProcessor("188.226.160.201","zverovod_db?useUnicode=true&characterEncoding=UTF-8",3306,"zoomag","zoomag2000","com.mysql.jdbc.Driver","jdbc:mysql:");
-            mySqlProc1.connect();
+            //mySqlProc1.connect();
             System.out.println("Site 1 integrator connected");
-            mySqlProc2 = new DatabaseProcessor("141.0.170.146","myzoomag?useUnicode=true&characterEncoding=latin1",3306,"zoomag","zoomag2000","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc2 = new DatabaseProcessor("myzoomag.ru","wwwmyzoomagru?useUnicode=true&characterEncoding=UTF-8",3306,"racoon","racoonracoon2000","com.mysql.jdbc.Driver","jdbc:mysql:");
             mySqlProc2.connect();
             System.out.println("Site 2 integrator connected");
         }
@@ -37,7 +37,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     @Override
     public void process()
     {
-        doSite(mySqlProc1,"site_1_order_id",3);
+        //doSite(mySqlProc1,"site_1_order_id",3);
         doSite(mySqlProc2,"site_2_order_id",2);
     }
 
@@ -49,7 +49,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
             DBProcessor dbProc = BaseServlet.DBProc;
             long seq1 = dbProc.sequenceGetCurrentValue(seqName);
             // 1 - Get all orders
-            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID, 0 AS client_id, shipping_type!='Самовывоз' AS deliver,customers_comment,order_amount," +
+            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID,customerID, 0 AS client_id, shipping_type!='Самовывоз' AS deliver,customers_comment,order_amount," +
                     "CONCAT(customer_firstname, ' ', customer_lastname) AS client_name, customer_email,shipping_address FROM SC_orders WHERE orderID > "+seq1+" AND DATE(order_time)=DATE(NOW()) ORDER BY orderID");
             System.out.println("Orders: "+orders.size());
             // 2 - Insert data
@@ -65,26 +65,44 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     String email = order.getStringValue("customer_email");
                     String address = order.getStringValue("shipping_address");
                     String client_name = order.getStringValue("client_name");
+                    Integer customer_id = order.getIntValue("customerID");
 
+                    Integer clientId = null;
                     DBRecord client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
                     if(client==null)
                     {
                         HashMap<String,Object> clPars = new HashMap<String, Object>();
-                        clPars.put("name",client_name);
-                        clPars.put("email",email);
-                        clPars.put("phone_1","(000)00-00-00");
-                        clPars.put("phone_2","");
-                        clPars.put("phone_3","");
-                        dbProc.executeInsert("clients",clPars);
-                        client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
+                        ArrayList<DBRecord> clientFields = proc.getRecords("SELECT * FROM SC_customer_reg_fields_values WHERE reg_field_ID=1 AND customerID="+customer_id);
+                        if(clientFields==null||clientFields.size()==0)
+                        {
+                            clPars.put("phone_1","(000)00-00-00");
+                            clPars.put("phone_2","");
+                            clPars.put("phone_3","");
+                        }
+                        else if(clientFields.size()>0)
+                        {
+                            clPars.put("phone_1",clientFields.get(0).getStringValue("reg_field_value"));
+                            client = dbProc.getRecord("SELECT * FROM clients WHERE phone_1='"+clientFields.get(0).getStringValue("reg_field_value")+"'");
+                        }
+                        if(client==null)
+                        {
+                            clPars.put("name",client_name);
+                            clPars.put("email",email);
+                            clientId = dbProc.executeInsert("clients",clPars);
+                        }
+                        if(client!=null)
+                        {
+                            clPars.put("name",client_name);
+                            clPars.put("email",email);
+                            clientId = client.getID();
+                        }
+
+                        client = dbProc.getRecord("SELECT * FROM clients WHERE id="+clientId+"");
                     }
-                    Long clientId = client.getLongValue("id");
 
                     HashMap<String,Object> orderPars = new HashMap<String, Object>();
-                    orderPars.put("client_id",clientId);
-                    orderPars.put("phone_1","(000)000-00-00");
-                    orderPars.put("phone_2","(000)000-00-00");
-                    orderPars.put("phone_3","(000)000-00-00");
+                    orderPars.put("client_id",client.getIntValue("id"));
+                    orderPars.put("phone_1",client.getStringValue("phone_1"));
                     orderPars.put("deliver",deliver);
                     orderPars.put("street",address);
                     orderPars.put("city","");
@@ -94,11 +112,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     orderPars.put("floor","");
                     orderPars.put("description",comment);
                     orderPars.put("goods_price",order_amount);
-                    orderPars.put("deliver_date",new SQLExpression("now()"));
-                    orderPars.put("deliver_time_from_1",new SQLExpression("now()"));
-                    orderPars.put("deliver_time_from_2",new SQLExpression("now()"));
-                    orderPars.put("deliver_time_to_1",new SQLExpression("now()"));
-                    orderPars.put("deliver_time_to_2",new SQLExpression("now()"));
+                    orderPars.put("deliver_date",new SQLExpression("now()+INTERVAL '1 DAYS'"));
                     orderPars.put("discount_percent",0);
                     orderPars.put("deliver_price",0);
                     orderPars.put("metro_id",0);

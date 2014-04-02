@@ -146,6 +146,15 @@
             this.ButtSetQuantity = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtRefreshGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.TabPurchase = new System.Windows.Forms.TabPage();
+            this.PanelUploadPurchse = new System.Windows.Forms.Panel();
+            this.ButtUploadExportPurchase = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.LabelExportPurcahseName = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.TxtSupplierCode = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.TxtPurchaseExportFolder = new System.Windows.Forms.TextBox();
             this.PanelAddPurchase = new System.Windows.Forms.Panel();
             this.ButtCancelPurchase = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -169,6 +178,7 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.ComboIsForOrders = new System.Windows.Forms.ToolStripComboBox();
             this.ButtAddPurchase = new System.Windows.Forms.ToolStripButton();
+            this.ButtExportPurchase = new System.Windows.Forms.ToolStripButton();
             this.ButtChoosePurchaseList = new System.Windows.Forms.ToolStripButton();
             this.DataGridViewPurchase = new System.Windows.Forms.DataGridView();
             this.TabDeliveryLists = new System.Windows.Forms.TabPage();
@@ -232,17 +242,7 @@
             this.DialogSaveYandexXML = new System.Windows.Forms.SaveFileDialog();
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.saveOrdersDialog = new System.Windows.Forms.SaveFileDialog();
-            this.ButtExportPurchase = new System.Windows.Forms.ToolStripButton();
-            this.PanelUploadPurchse = new System.Windows.Forms.Panel();
-            this.TxtPurchaseExportFolder = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
             this.DialogPurchaseExportFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.TxtSupplierCode = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.LabelExportPurcahseName = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.ButtUploadExportPurchase = new System.Windows.Forms.Button();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -260,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewGoods)).BeginInit();
             this.contextMenuGoods.SuspendLayout();
             this.TabPurchase.SuspendLayout();
+            this.PanelUploadPurchse.SuspendLayout();
             this.PanelAddPurchase.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewPurchase)).BeginInit();
@@ -269,7 +270,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.PanelUploadPurchse.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBarMain
@@ -1397,6 +1397,94 @@
             this.TabPurchase.Text = "Закупки";
             this.TabPurchase.UseVisualStyleBackColor = true;
             // 
+            // PanelUploadPurchse
+            // 
+            this.PanelUploadPurchse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelUploadPurchse.Controls.Add(this.ButtUploadExportPurchase);
+            this.PanelUploadPurchse.Controls.Add(this.label26);
+            this.PanelUploadPurchse.Controls.Add(this.LabelExportPurcahseName);
+            this.PanelUploadPurchse.Controls.Add(this.label24);
+            this.PanelUploadPurchse.Controls.Add(this.TxtSupplierCode);
+            this.PanelUploadPurchse.Controls.Add(this.label23);
+            this.PanelUploadPurchse.Controls.Add(this.button3);
+            this.PanelUploadPurchse.Controls.Add(this.TxtPurchaseExportFolder);
+            this.PanelUploadPurchse.Location = new System.Drawing.Point(190, 45);
+            this.PanelUploadPurchse.Name = "PanelUploadPurchse";
+            this.PanelUploadPurchse.Size = new System.Drawing.Size(564, 137);
+            this.PanelUploadPurchse.TabIndex = 20;
+            this.PanelUploadPurchse.Visible = false;
+            this.PanelUploadPurchse.VisibleChanged += new System.EventHandler(this.PanelUploadPurchse_VisibleChanged);
+            // 
+            // ButtUploadExportPurchase
+            // 
+            this.ButtUploadExportPurchase.Location = new System.Drawing.Point(6, 109);
+            this.ButtUploadExportPurchase.Name = "ButtUploadExportPurchase";
+            this.ButtUploadExportPurchase.Size = new System.Drawing.Size(543, 23);
+            this.ButtUploadExportPurchase.TabIndex = 7;
+            this.ButtUploadExportPurchase.Text = "Экспортировать";
+            this.ButtUploadExportPurchase.UseVisualStyleBackColor = true;
+            this.ButtUploadExportPurchase.Click += new System.EventHandler(this.ButtUploadExportPurchase_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 74);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(49, 13);
+            this.label26.TabIndex = 6;
+            this.label26.Text = "Закупка";
+            // 
+            // LabelExportPurcahseName
+            // 
+            this.LabelExportPurcahseName.AutoSize = true;
+            this.LabelExportPurcahseName.Location = new System.Drawing.Point(99, 75);
+            this.LabelExportPurcahseName.Name = "LabelExportPurcahseName";
+            this.LabelExportPurcahseName.Size = new System.Drawing.Size(0, 13);
+            this.LabelExportPurcahseName.TabIndex = 5;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(3, 44);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(91, 13);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Код поставщика";
+            // 
+            // TxtSupplierCode
+            // 
+            this.TxtSupplierCode.Location = new System.Drawing.Point(98, 42);
+            this.TxtSupplierCode.Name = "TxtSupplierCode";
+            this.TxtSupplierCode.Size = new System.Drawing.Size(416, 20);
+            this.TxtSupplierCode.TabIndex = 3;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 16);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(89, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Папка экспорта";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(520, 14);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // TxtPurchaseExportFolder
+            // 
+            this.TxtPurchaseExportFolder.Location = new System.Drawing.Point(98, 16);
+            this.TxtPurchaseExportFolder.Name = "TxtPurchaseExportFolder";
+            this.TxtPurchaseExportFolder.ReadOnly = true;
+            this.TxtPurchaseExportFolder.Size = new System.Drawing.Size(416, 20);
+            this.TxtPurchaseExportFolder.TabIndex = 0;
+            // 
             // PanelAddPurchase
             // 
             this.PanelAddPurchase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1618,6 +1706,17 @@
             this.ButtAddPurchase.Size = new System.Drawing.Size(23, 22);
             this.ButtAddPurchase.Text = "Создать закупку";
             this.ButtAddPurchase.Click += new System.EventHandler(this.ButtAddPurchase_Click);
+            // 
+            // ButtExportPurchase
+            // 
+            this.ButtExportPurchase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtExportPurchase.Enabled = false;
+            this.ButtExportPurchase.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportPurchase.Image")));
+            this.ButtExportPurchase.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtExportPurchase.Name = "ButtExportPurchase";
+            this.ButtExportPurchase.Size = new System.Drawing.Size(23, 22);
+            this.ButtExportPurchase.Text = "Экспорт закупки";
+            this.ButtExportPurchase.Click += new System.EventHandler(this.ButtExportPurchase_Click);
             // 
             // ButtChoosePurchaseList
             // 
@@ -2200,105 +2299,6 @@
             // 
             this.saveOrdersDialog.Filter = "CSV|*.csv";
             // 
-            // ButtExportPurchase
-            // 
-            this.ButtExportPurchase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ButtExportPurchase.Enabled = false;
-            this.ButtExportPurchase.Image = ((System.Drawing.Image)(resources.GetObject("ButtExportPurchase.Image")));
-            this.ButtExportPurchase.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ButtExportPurchase.Name = "ButtExportPurchase";
-            this.ButtExportPurchase.Size = new System.Drawing.Size(23, 22);
-            this.ButtExportPurchase.Text = "Экспорт закупки";
-            this.ButtExportPurchase.Click += new System.EventHandler(this.ButtExportPurchase_Click);
-            // 
-            // PanelUploadPurchse
-            // 
-            this.PanelUploadPurchse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelUploadPurchse.Controls.Add(this.ButtUploadExportPurchase);
-            this.PanelUploadPurchse.Controls.Add(this.label26);
-            this.PanelUploadPurchse.Controls.Add(this.LabelExportPurcahseName);
-            this.PanelUploadPurchse.Controls.Add(this.label24);
-            this.PanelUploadPurchse.Controls.Add(this.TxtSupplierCode);
-            this.PanelUploadPurchse.Controls.Add(this.label23);
-            this.PanelUploadPurchse.Controls.Add(this.button3);
-            this.PanelUploadPurchse.Controls.Add(this.TxtPurchaseExportFolder);
-            this.PanelUploadPurchse.Location = new System.Drawing.Point(190, 45);
-            this.PanelUploadPurchse.Name = "PanelUploadPurchse";
-            this.PanelUploadPurchse.Size = new System.Drawing.Size(564, 137);
-            this.PanelUploadPurchse.TabIndex = 20;
-            this.PanelUploadPurchse.Visible = false;
-            this.PanelUploadPurchse.VisibleChanged += new System.EventHandler(this.PanelUploadPurchse_VisibleChanged);
-            // 
-            // TxtPurchaseExportFolder
-            // 
-            this.TxtPurchaseExportFolder.Location = new System.Drawing.Point(98, 16);
-            this.TxtPurchaseExportFolder.Name = "TxtPurchaseExportFolder";
-            this.TxtPurchaseExportFolder.ReadOnly = true;
-            this.TxtPurchaseExportFolder.Size = new System.Drawing.Size(416, 20);
-            this.TxtPurchaseExportFolder.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(520, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(89, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Папка экспорта";
-            // 
-            // TxtSupplierCode
-            // 
-            this.TxtSupplierCode.Location = new System.Drawing.Point(98, 42);
-            this.TxtSupplierCode.Name = "TxtSupplierCode";
-            this.TxtSupplierCode.Size = new System.Drawing.Size(416, 20);
-            this.TxtSupplierCode.TabIndex = 3;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(3, 44);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(91, 13);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "Код поставщика";
-            // 
-            // LabelExportPurcahseName
-            // 
-            this.LabelExportPurcahseName.AutoSize = true;
-            this.LabelExportPurcahseName.Location = new System.Drawing.Point(99, 75);
-            this.LabelExportPurcahseName.Name = "LabelExportPurcahseName";
-            this.LabelExportPurcahseName.Size = new System.Drawing.Size(0, 13);
-            this.LabelExportPurcahseName.TabIndex = 5;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(3, 74);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 13);
-            this.label26.TabIndex = 6;
-            this.label26.Text = "Закупка";
-            // 
-            // ButtUploadExportPurchase
-            // 
-            this.ButtUploadExportPurchase.Location = new System.Drawing.Point(6, 109);
-            this.ButtUploadExportPurchase.Name = "ButtUploadExportPurchase";
-            this.ButtUploadExportPurchase.Size = new System.Drawing.Size(543, 23);
-            this.ButtUploadExportPurchase.TabIndex = 7;
-            this.ButtUploadExportPurchase.Text = "Экспортировать";
-            this.ButtUploadExportPurchase.UseVisualStyleBackColor = true;
-            this.ButtUploadExportPurchase.Click += new System.EventHandler(this.ButtUploadExportPurchase_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2344,6 +2344,8 @@
             this.contextMenuGoods.ResumeLayout(false);
             this.TabPurchase.ResumeLayout(false);
             this.TabPurchase.PerformLayout();
+            this.PanelUploadPurchse.ResumeLayout(false);
+            this.PanelUploadPurchse.PerformLayout();
             this.PanelAddPurchase.ResumeLayout(false);
             this.PanelAddPurchase.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
@@ -2360,8 +2362,6 @@
             this.tabPage1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.PanelUploadPurchse.ResumeLayout(false);
-            this.PanelUploadPurchse.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
