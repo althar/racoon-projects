@@ -242,7 +242,7 @@ namespace OwlBusinessStudio
                     dbProc.executeNonQuery("UPDATE goods SET is_hidden=TRUE, enabled=FALSE");
                 }
                 List<Object[]> fail_table = new List<object[]>();
-                string[] fields = dbProc.extractFields(t.Rows[0]);
+                string[] fields = dbProc.extractFields(t);
                 for (int i = 1; i < t.Rows.Count; i++)
                 {
                     Application.DoEvents();
