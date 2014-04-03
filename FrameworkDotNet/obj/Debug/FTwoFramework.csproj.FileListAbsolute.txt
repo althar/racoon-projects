@@ -15,7 +15,6 @@ C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\OwlBusinessS
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Mono.Security.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Npgsql.dll
-C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\FTwoFramework.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.dll
 C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\OwlBusinessStudioLib.pdb

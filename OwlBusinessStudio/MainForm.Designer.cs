@@ -511,7 +511,6 @@
             this.ButtDBSettings.Name = "ButtDBSettings";
             this.ButtDBSettings.Size = new System.Drawing.Size(301, 22);
             this.ButtDBSettings.Text = "База данных";
-            this.ButtDBSettings.Visible = false;
             this.ButtDBSettings.Click += new System.EventHandler(this.ButtDBSettings_Click);
             // 
             // ButtGoodsHistory

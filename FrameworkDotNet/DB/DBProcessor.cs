@@ -333,7 +333,7 @@ namespace FTwoFramework.DB
             }
             if (o is DBNull)
             {
-                return null;
+                return "";
             }
             return o;
         }
@@ -364,12 +364,12 @@ namespace FTwoFramework.DB
             object o = getValue(item, field_names, name);
             return o.ToString();
         }
-        public string[] extractFields(DataRow item)
+        public string[] extractFields(DataTable item)
         {
-            string[] result = new string[item.ItemArray.Length];
-            for(int i=0; i<item.ItemArray.Length; i++)
+            string[] result = new string[item.Columns.Count];
+            for (int i = 0; i < item.Columns.Count; i++)
             {
-                result[i] = item.ItemArray[i].ToString();
+                result[i] = item.Columns[i].ColumnName.ToString();
             }
             return result;
         }
@@ -379,13 +379,17 @@ namespace FTwoFramework.DB
             {
                 Hashtable pars = new Hashtable();
                 pars.Add("articul", getString(item, fields, "articul"));
+                if (getString(item, fields, "articul") == "")
+                {
+                    return false;
+                }
                 pars.Add("name_rus", getString(item, fields, "name_rus"));
                 pars.Add("name_eng", getString(item, fields, "name_eng"));
                 pars.Add("name_for_shop", getString(item, fields, "name_for_shop"));
                 pars.Add("name_for_order", getString(item, fields, "name_for_order"));
                 pars.Add("weight", getString(item, fields, "weight"));
                 pars.Add("weight_product", getDouble(item, fields, "weight_product"));
-                pars.Add("overprice_percent", getDouble(item, fields, "overprice_percent"));
+                //pars.Add("overprice_percent", getDouble(item, fields, "overprice_percent"));
                 pars.Add("price_discount", getDouble(item, fields, "price_discount"));
                 pars.Add("price_discount_percent", getDouble(item, fields, "price_discount_percent"));
                 pars.Add("price_basic", getDouble(item, fields, "price_basic"));

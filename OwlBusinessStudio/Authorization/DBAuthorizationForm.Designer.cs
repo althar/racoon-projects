@@ -68,6 +68,7 @@
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(202, 20);
             this.TxtPassword.TabIndex = 3;
+            this.TxtPassword.Text = "bredokbredok2000";
             this.TxtPassword.Visible = false;
             // 
             // label1
