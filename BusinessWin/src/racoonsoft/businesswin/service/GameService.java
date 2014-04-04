@@ -162,6 +162,55 @@ public class GameService
     //</editor-fold>
 
     //<editor-fold desc="Phase 2">
+    public StatusCode setEventCards(Long game_id, DeclaredEventCards eventCards) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g == null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        g.declared_event_cards = eventCards;
+        return StatusCode.SUCCESS;
+    }
+    public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g == null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        Player p = g.players.get(player_id);
+        if(p == null)
+        {
+            return StatusCode.NO_SUCH_PLAYER;
+        }
+        Company c = p.getCompany(company_id);
+        if(c == null)
+        {
+            return StatusCode.NO_SUCH_COMPANY;
+        }
+        return acceptCard(c,card);
+    }
+    public StatusCode sellCompany(Long game_id, Long player_id,Long company_id) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g == null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        Player p = g.players.get(player_id);
+        if(p == null)
+        {
+            return StatusCode.NO_SUCH_PLAYER;
+        }
+        Company c = p.getCompany(company_id);
+        if(c == null)
+        {
+            return StatusCode.NO_SUCH_COMPANY;
+        }
+        sell(c);
+        return StatusCode.SUCCESS;
+    }
     public StatusCode endPhase2(Long game_id) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
@@ -681,6 +730,24 @@ public class GameService
     private void calculatePhase2(Game g)
     {
         // Calculate step 0 data
+    }
+    private StatusCode acceptCard(Company company,String card)
+    {
+        EventCard c = null;
+
+        c.accepted = true;
+        return StatusCode.SUCCESS;
+    }
+    private void sell(Company c)
+    {
+        //Check can sale
+        boolean canSale = false;
+        c.sell_parameters.on_sale = true;
+
+        Double sellPrice = 0.0;
+        // Calculate sell price
+        c.sell_parameters.sell_price = sellPrice;
+
     }
     //</editor-fold>
 

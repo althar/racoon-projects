@@ -9,6 +9,9 @@ public class EventCard extends DBRecord
     @DataStructureField(name="event_card_type")
     public EventCardType event_card_type = EventCardType.SELL_COMPANY;
 
+    @DataStructureField(name="accepted")
+    public Boolean accepted = false;
+
     @DataStructureField(name="event_card_value")
     public Integer event_card_value = 0;
 
