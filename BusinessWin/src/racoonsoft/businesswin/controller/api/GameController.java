@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
+import racoonsoft.businesswin.structure.data.DeclaredEventCards;
 import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.structure.model.GoodsDeclaration;
 import racoonsoft.businesswin.structure.data.StartSettings;
@@ -163,6 +164,53 @@ public class GameController extends BusinessWinController
     //</editor-fold>
 
     //<editor-fold desc="Phase 2">
+    @RequestMapping("/set_event_cards")
+    public ModelAndView setEventCards(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id) throws Exception
+    {
+        DeclaredEventCards eventCards = new DeclaredEventCards();
+        eventCards.fill(request);
+        StatusCode code = gameService.setEventCards(game_id,eventCards);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/accept_card")
+    public ModelAndView acceptCard(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    {
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/sell_company")
+    public ModelAndView sellCompany(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id) throws Exception
+    {
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/bet_company")
+    public ModelAndView betCompany(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    {
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/consolidation")
+    public ModelAndView consolidation(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    {
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
     @RequestMapping("/end_phase_2")
     public ModelAndView endPhase2(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
     {

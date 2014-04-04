@@ -46,8 +46,8 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395904116992" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396446869243" ignored="false" />
-    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1391511815511" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396613851294" ignored="false" />
+    <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396607316911" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
@@ -536,9 +536,9 @@
     <file path="$PROJECT_DIR$/../InvestmentWheel/src/investmentwheel/controller/AdminController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386165211319" ignored="false" />
     <file path="/Role.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386166733298" ignored="false" />
     <file path="/GameWorld.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394713300252" ignored="false" />
-    <file path="/Game.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395907942907" ignored="false" />
+    <file path="/Game.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396616202407" ignored="false" />
     <file path="/GameMode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169569820" ignored="false" />
-    <file path="/GameController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395834680995" ignored="false" />
+    <file path="/GameController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396613278700" ignored="false" />
     <file path="/json.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386170690268" ignored="false" />
     <file path="$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/BasketController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386242142093" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/BillController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386590814371" ignored="false" />
@@ -598,8 +598,8 @@
     <file path="/ServiceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390991054809" ignored="false" />
     <file path="/news.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387883896262" ignored="false" />
     <file path="/LanguageBoxActionResultCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387981037782" ignored="false" />
-    <file path="/Company.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394702249233" ignored="false" />
-    <file path="/EventCard.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390230522030" ignored="false" />
+    <file path="/Company.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396613634579" ignored="false" />
+    <file path="/EventCard.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396612906389" ignored="false" />
     <file path="/EventCardType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390226575694" ignored="false" />
     <file path="/a.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390296584762" ignored="false" />
     <file path="/a.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390296507525" ignored="false" />
@@ -654,7 +654,7 @@
     <file path="/bootstrap.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937443531" ignored="false" />
     <file path="/login.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937825225" ignored="false" />
     <file path="/BusinessWinController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394617581634" ignored="false" />
-    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395907968926" ignored="false" />
+    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396616428272" ignored="false" />
     <file path="/GameBindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394718109817" ignored="false" />
     <file path="/TradeFactors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394636593728" ignored="false" />
     <file path="/GoodsDeclaration.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394708869515" ignored="false" />
@@ -704,6 +704,9 @@
     <file path="$PROJECT_DIR$/../Zoomag/src/ftwo/zoomag/service/OldSiteIntegrator.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396451883567" ignored="false" />
     <file path="$PROJECT_DIR$/../Zoomag/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396445039745" ignored="false" />
     <file path="/OldSiteIntegrator.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396447745484" ignored="false" />
+    <file path="/DeclaredEventCards.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396611917538" ignored="false" />
+    <file path="/SellParameters.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396616258499" ignored="false" />
+    <file path="/CompanySellReason.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396613919059" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -814,7 +817,36 @@
       <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="62" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.0">
+            <state line="189" column="32" selection-start="7976" selection-end="7976" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1017#1028#0" expanded="false" />
+                <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
+                <element signature="method#games#0;class#GameController#0" expanded="false" />
+                <element signature="e#1398#1414#0" expanded="true" />
+                <element signature="method#getGames#0;class#GameController#0" expanded="false" />
+                <element signature="e#1876#1892#0" expanded="true" />
+                <element signature="method#reboot#0;class#GameController#0" expanded="false" />
+                <element signature="n#!!doc;n#addGame#0;n#GameController#0" expanded="false" />
+                <element signature="method#addGame#0;class#GameController#0" expanded="false" />
+                <element signature="method#join#0;class#GameController#0" expanded="false" />
+                <element signature="method#start#0;class#GameController#0" expanded="false" />
+                <element signature="n#!!doc;n#declareGoods#0;n#GameController#0" expanded="false" />
+                <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
+                <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
+                <element signature="method#endPhase1#0;class#GameController#0" expanded="false" />
+                <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
+                <element signature="n#!!doc;n#endPhase3#0;n#GameController#0" expanded="false" />
+                <element signature="method#endPhase3#0;class#GameController#0" expanded="false" />
+                <element signature="method#test#0;class#GameController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoodsDeclaration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GoodsDeclaration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="59" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -832,10 +864,72 @@
       <file leaf-file-name="GameService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="28" selection-start="4226" selection-end="4226" vertical-scroll-proportion="0.275">
+            <state line="211" column="34" selection-start="6182" selection-end="6182" vertical-scroll-proportion="0.33333334">
               <folding>
+                <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
+                <element signature="method#getGames#0;class#GameService#0" expanded="false" />
+                <element signature="method#getGame#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#createGame#0;n#GameService#0" expanded="false" />
+                <element signature="method#createGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
                 <element signature="method#startGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#declareGoods#0;n#GameService#0" expanded="false" />
+                <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
+                <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
+                <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
+                <element signature="method#setEventCards#0;class#GameService#0" expanded="false" />
+                <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
+                <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#calculateStep0#0;n#GameService#0" expanded="false" />
+                <element signature="method#calculateStep0#0;class#GameService#0" expanded="false" />
+                <element signature="e#7196#7242#0" expanded="false" />
+                <element signature="e#8594#8610#0" expanded="false" />
+                <element signature="e#8620#8725#0" expanded="false" />
+                <element signature="e#9154#9170#0" expanded="false" />
+                <element signature="e#9180#9289#0" expanded="false" />
+                <element signature="e#14308#14351#0" expanded="false" />
+                <element signature="e#14386#14439#0" expanded="false" />
+                <element signature="e#15860#15876#0" expanded="false" />
+                <element signature="e#15886#15929#0" expanded="false" />
+                <element signature="e#15971#15987#0" expanded="false" />
+                <element signature="e#15997#16031#0" expanded="false" />
+                <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
+                <element signature="e#19545#19576#0" expanded="false" />
+                <element signature="e#20221#20237#0" expanded="false" />
+                <element signature="e#20247#20296#0" expanded="false" />
+                <element signature="e#21412#21428#0" expanded="false" />
+                <element signature="e#21438#21490#0" expanded="false" />
+                <element signature="n#!!doc;n#calculatePhase1#0;n#GameService#0" expanded="false" />
+                <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
+                <element signature="e#22478#22520#0" expanded="false" />
+                <element signature="e#25392#25408#0" expanded="false" />
+                <element signature="e#25418#25454#0" expanded="false" />
+                <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
+                <element signature="method#acceptCard#1;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#calculatePhase3#0;n#GameService#0" expanded="false" />
+                <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
+                <element signature="e#34721#34745#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="65" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventCard.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/EventCard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="36" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -849,20 +943,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="45" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="36" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="31" column="0" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#577#591#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -882,21 +969,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GoodsDeclaration.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/Constants.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GoodsDeclaration.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/settings/MainConfig.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/test/Test.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GameWorld.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Turn.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Player.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/StatusCode.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandCurveItem.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurve.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DeclaredEventCards.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/EventCard.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/CompanySellReason.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/SellParameters.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
       </list>
     </option>
@@ -1192,24 +1279,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.20410156" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.20410156" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IDEA Projects/erdicto" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="racoon" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -1223,23 +1310,23 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="project.structure.side.proportion" value="0.33100232" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="project.structure.side.proportion" value="0.33100232" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="racoonsoft.businesswin.structure.enums" />
+      <recent name="racoonsoft.businesswin.structure.data" />
       <recent name="racoonsoft.businesswin.game.structure.data" />
       <recent name="racoonsoft.languagebox.service" />
       <recent name="racoonsoft.library.access" />
-      <recent name="racoonsoft.investmentwheel.interceptor" />
-      <recent name="racoonsoft.investmentwheel.game.structure.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\LanguageBox\web\css" />
@@ -1289,6 +1376,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1317,34 +1417,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -1363,11 +1435,33 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1391,11 +1485,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1412,13 +1506,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1957,7 +2044,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2062,67 +2149,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="52" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/GameBindStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="45" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="20" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/admin/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="512" selection-end="512" vertical-scroll-proportion="0.20238096">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="335" selection-end="335" vertical-scroll-proportion="0.1962482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DemandSupplyCurveItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="29" selection-start="669" selection-end="669" vertical-scroll-proportion="0.4170274">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="36" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/json.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/goods.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="207" vertical-scroll-proportion="0.0" />
@@ -2134,38 +2160,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Select/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="71" selection-start="844" selection-end="844" vertical-scroll-proportion="0.53443116" />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1017964">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="62" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.0">
+        <state line="4" column="40" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1017964">
           <folding />
         </state>
       </provider>
@@ -2177,11 +2196,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/TradeFactors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.12265512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/DeclaredEventCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="20" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/EventCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="36" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GoodsDeclaration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="59" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/CompanySellReason.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="33" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0981241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/SellParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="71" selection-start="566" selection-end="566" vertical-scroll-proportion="0.34343433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#577#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="65" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="32" selection-start="7976" selection-end="7976" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1017#1028#0" expanded="false" />
+            <element signature="n#!!doc;n#games#0;n#GameController#0" expanded="false" />
+            <element signature="method#games#0;class#GameController#0" expanded="false" />
+            <element signature="e#1398#1414#0" expanded="true" />
+            <element signature="method#getGames#0;class#GameController#0" expanded="false" />
+            <element signature="e#1876#1892#0" expanded="true" />
+            <element signature="method#reboot#0;class#GameController#0" expanded="false" />
+            <element signature="n#!!doc;n#addGame#0;n#GameController#0" expanded="false" />
+            <element signature="method#addGame#0;class#GameController#0" expanded="false" />
+            <element signature="method#join#0;class#GameController#0" expanded="false" />
+            <element signature="method#start#0;class#GameController#0" expanded="false" />
+            <element signature="n#!!doc;n#declareGoods#0;n#GameController#0" expanded="false" />
+            <element signature="method#declareGoods#0;class#GameController#0" expanded="false" />
+            <element signature="method#setTradeFactors#0;class#GameController#0" expanded="false" />
+            <element signature="method#endPhase1#0;class#GameController#0" expanded="false" />
+            <element signature="method#endPhase2#0;class#GameController#0" expanded="false" />
+            <element signature="n#!!doc;n#endPhase3#0;n#GameController#0" expanded="false" />
+            <element signature="method#endPhase3#0;class#GameController#0" expanded="false" />
+            <element signature="method#test#0;class#GameController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="28" selection-start="4226" selection-end="4226" vertical-scroll-proportion="0.275">
+        <state line="211" column="34" selection-start="6182" selection-end="6182" vertical-scroll-proportion="0.33333334">
           <folding>
+            <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
+            <element signature="method#getGames#0;class#GameService#0" expanded="false" />
+            <element signature="method#getGame#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#createGame#0;n#GameService#0" expanded="false" />
+            <element signature="method#createGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
             <element signature="method#startGame#0;class#GameService#0" expanded="false" />
+            <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#declareGoods#0;n#GameService#0" expanded="false" />
+            <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
+            <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
+            <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
+            <element signature="method#setEventCards#0;class#GameService#0" expanded="false" />
+            <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
+            <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#calculateStep0#0;n#GameService#0" expanded="false" />
+            <element signature="method#calculateStep0#0;class#GameService#0" expanded="false" />
+            <element signature="e#7196#7242#0" expanded="false" />
+            <element signature="e#8594#8610#0" expanded="false" />
+            <element signature="e#8620#8725#0" expanded="false" />
+            <element signature="e#9154#9170#0" expanded="false" />
+            <element signature="e#9180#9289#0" expanded="false" />
+            <element signature="e#14308#14351#0" expanded="false" />
+            <element signature="e#14386#14439#0" expanded="false" />
+            <element signature="e#15860#15876#0" expanded="false" />
+            <element signature="e#15886#15929#0" expanded="false" />
+            <element signature="e#15971#15987#0" expanded="false" />
+            <element signature="e#15997#16031#0" expanded="false" />
+            <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
+            <element signature="e#19545#19576#0" expanded="false" />
+            <element signature="e#20221#20237#0" expanded="false" />
+            <element signature="e#20247#20296#0" expanded="false" />
+            <element signature="e#21412#21428#0" expanded="false" />
+            <element signature="e#21438#21490#0" expanded="false" />
+            <element signature="n#!!doc;n#calculatePhase1#0;n#GameService#0" expanded="false" />
+            <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
+            <element signature="e#22478#22520#0" expanded="false" />
+            <element signature="e#25392#25408#0" expanded="false" />
+            <element signature="e#25418#25454#0" expanded="false" />
+            <element signature="method#calculatePhase2#0;class#GameService#0" expanded="false" />
+            <element signature="method#acceptCard#1;class#GameService#0" expanded="false" />
+            <element signature="n#!!doc;n#calculatePhase3#0;n#GameService#0" expanded="false" />
+            <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
+            <element signature="e#34721#34745#0" expanded="false" />
           </folding>
         </state>
       </provider>

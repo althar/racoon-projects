@@ -27,6 +27,9 @@ public class Game
     public IndustryPerformance industry_performance = new IndustryPerformance();
     @DataStructureField(name="demand_supply_curve")
     public DemandSupplyCurve demand_supply_curve = new DemandSupplyCurve();
+    @DataStructureField(name="declared_event_cards")
+    public DeclaredEventCards declared_event_cards = new DeclaredEventCards();
+
 
     @DataStructureField(name="id")
     public Long id;
