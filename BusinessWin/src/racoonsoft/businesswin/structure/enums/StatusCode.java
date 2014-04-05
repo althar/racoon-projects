@@ -14,6 +14,9 @@ public enum StatusCode
     NO_SUCH_COMPANY("Нет такого компании"),
     WRONG_PHASE("Не та фаза игры"),
     TOO_MANY_PLAYERS("Слишком много игроков"),
+    CONSOLIDATION_DECLINED_BANKRUPT_OR_ON_SALE("Отказ в консолидации. Продается или банкрот"),
+    CONSOLIDATION_DECLINED_NO_MONEY("Отказ в консолидации. Недостаточно средств"),
+    CANT_GET_CREDIT("Отказ по кредиту"),
 
     WRONG_DATA_FORMAT("Неверный формат даннных");
 

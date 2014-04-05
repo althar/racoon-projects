@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.structure.data;
 
+import racoonsoft.businesswin.structure.enums.AquisitionMethod;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
@@ -16,5 +17,5 @@ public class FixedAssetsAndDepreciation
     public EconomicsValue depreciation = new EconomicsValue(0.0,99999.0,2,0.0);
 
     @DataStructureField(name="acquisition_method")
-    public Integer acquisition_method = 0;
+    public AquisitionMethod acquisition_method = AquisitionMethod.NONE;
 }

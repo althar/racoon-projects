@@ -6,6 +6,10 @@ import racoonsoft.library.database.DBRecord;
 
 public class EventCard extends DBRecord
 {
+    public EventCard(EventCardType type)
+    {
+        this.event_card_type = type;
+    }
     @DataStructureField(name="event_card_type")
     public EventCardType event_card_type = EventCardType.SELL_COMPANY;
 

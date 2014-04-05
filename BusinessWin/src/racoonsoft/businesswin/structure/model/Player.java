@@ -18,8 +18,8 @@ public class Player
     public BusinessPlan businessPlan;
     @DataStructureField(name="companies")
     public ArrayList<Company> companies = new ArrayList<Company>();
-    @DataStructureField(name="event_cards")
-    public EventCard eventCard = null;
+    @DataStructureField(name="cash")
+    public Double cash = 0.0;
 
 
     public Player()
@@ -37,13 +37,13 @@ public class Player
         }
         return null;
     }
+    public void removeCompany(Long id)
+    {
+        companies.remove(getCompany(id));
+    }
     public ArrayList<Company> getCompanies()
     {
         return companies;
-    }
-    public EventCard getEventCard()
-    {
-        return eventCard;
     }
     public BusinessPlan getBusinessPlan()
     {
