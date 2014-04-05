@@ -1,8 +1,12 @@
 package racoonsoft.businesswin.structure.model;
 
 import racoonsoft.businesswin.structure.data.*;
+import racoonsoft.businesswin.structure.enums.EventCardType;
 import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 @DataStructure(name="company")
 public class Company
@@ -34,24 +38,34 @@ public class Company
     @DataStructureField(name="sell_parameters")
     public SellParameters sell_parameters = new SellParameters();
 
+    @DataStructureField(name="company_bets")
+    public HashMap<Long, CompanyBet> company_bets = new HashMap<Long, CompanyBet>();
+
+    @DataStructureField(name="company_credits")
+    public ArrayList<Credit> company_credits = new ArrayList<Credit>();
+
     // EventCards
     @DataStructureField(name="event_card_sell_company")
-    public EventCard event_card_sell_company = new EventCard();
+    public EventCard event_card_sell_company = new EventCard(EventCardType.SELL_COMPANY);
     @DataStructureField(name="event_card_contract_entire_volume")
-    public EventCard event_card_contract_entire_volume = new EventCard();
+    public EventCard event_card_contract_entire_volume = new EventCard(EventCardType.CONTRACT_ENTIRE_VOLUME);
     @DataStructureField(name="event_card_efficiency_project_small")
-    public EventCard event_card_efficiency_project_small = new EventCard();
+    public EventCard event_card_efficiency_project_small = new EventCard(EventCardType.EFFICIENCY_PROJECT_SMALL);
     @DataStructureField(name="event_card_efficiency_project_medium")
-    public EventCard event_card_efficiency_project_medium = new EventCard();
+    public EventCard event_card_efficiency_project_medium = new EventCard(EventCardType.EFFICIENCY_PROJECT_MEDIUM);
     @DataStructureField(name="event_card_efficiency_project_large")
-    public EventCard event_card_efficiency_project_large = new EventCard();
+    public EventCard event_card_efficiency_project_large = new EventCard(EventCardType.EFFICIENCY_PROJECT_LARGE);
     @DataStructureField(name="event_card_pocking")
-    public EventCard event_card_pocking = new EventCard();
+    public EventCard event_card_pocking = new EventCard(EventCardType.POCKING);
 
     public Company()
     {
         products_and_capacity = new CompanyProductionAndCapacity();
         company_sensors = new CompanySensors();
         company_state = new CompanyState();
+    }
+    public boolean isBankupt()
+    {
+        return company_state.cash.get()<0.0;
     }
 }

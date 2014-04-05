@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.service;
 
+import org.springframework.jca.work.glassfish.GlassFishWorkManagerTaskExecutor;
 import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.*;
@@ -172,7 +173,7 @@ public class GameService
         g.declared_event_cards = eventCards;
         return StatusCode.SUCCESS;
     }
-    public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card) throws Exception
+    public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card,String size) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
         if(g == null)
@@ -189,9 +190,9 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
-        return acceptCard(c,card);
+        return acceptCard(c,card,size,g);
     }
-    public StatusCode sellCompany(Long game_id, Long player_id,Long company_id) throws Exception
+    public StatusCode sellCompany(Long game_id, Long player_id,Long company_id,CompanySellReason reason) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
         if(g == null)
@@ -208,8 +209,47 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
-        sell(c);
+        sell(c,g,reason);
         return StatusCode.SUCCESS;
+    }
+    public StatusCode betCompany(Long game_id, Long player_id,Long company_id,CompanyBet bet) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g == null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        Player p = g.players.get(player_id);
+        if(p == null)
+        {
+            return StatusCode.NO_SUCH_PLAYER;
+        }
+        Company c = p.getCompany(company_id);
+        if(c == null)
+        {
+            return StatusCode.NO_SUCH_COMPANY;
+        }
+
+        return bet(c,p,bet,g);
+    }
+    public StatusCode consolidation(Long game_id, Long player_id,Long company_id,Double value) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g == null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        Player p = g.players.get(player_id);
+        if(p == null)
+        {
+            return StatusCode.NO_SUCH_PLAYER;
+        }
+        Company c = p.getCompany(company_id);
+        if(c == null)
+        {
+            return StatusCode.NO_SUCH_COMPANY;
+        }
+        return consolidation(c,value,p,g);
     }
     public StatusCode endPhase2(Long game_id) throws Exception
     {
@@ -250,6 +290,28 @@ public class GameService
     //<editor-fold desc="Calculations">
 
     //<editor-fold desc="Phase 0">
+    private void calculateIndustry(Game g)
+    {
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+
+            g.industry_performance.industry_profit_after_taxes.add(company.company_state.net_profit.get());
+            g.industry_performance.total_revenue.add(company.company_state.revenue.get());
+            g.industry_performance.sell_price.set(g.product_price_and_production.p);
+            g.industry_performance.industry_profit_change.add(company.company_state.profit_change.get());
+            g.industry_performance.industry_costs_change.add(company.company_state.costs_change.get());
+            g.industry_performance.taxes.add(company.company_state.profit_tax.get());
+            g.industry_performance.total_power.add(company.products_and_capacity.power.get());
+            g.industry_performance.total_production.add(company.products_and_capacity.production.get());
+            g.industry_performance.power_reserve.add(company.products_and_capacity.power_reserve.get() * 100);
+            g.industry_performance.total_net_book_value_of_fixed_assets.add(company.company_state.net_fixed_assets.get());
+            g.industry_performance.accounts_balance.add(company.company_state.cash.get());
+
+        }
+        g.industry_performance.capacity_unit_price.set(g.industry_performance.total_net_book_value_of_fixed_assets.get() / g.industry_performance.total_power.get());
+
+    }
     private void calculateStep0(Game g) throws Exception
     {
         //<editor-fold desc="Мощности и производство">
@@ -311,7 +373,7 @@ public class GameService
             company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
             company.fixed_assets_and_depreciation.depreciation.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                     /company.fixed_assets_and_depreciation.depreciation_period.get());
-            company.fixed_assets_and_depreciation.acquisition_method = 0;
+            company.fixed_assets_and_depreciation.acquisition_method = AquisitionMethod.NONE;
 
             // Table 4
             company.company_state.revenue.set(company.products_and_capacity.production.get()*g.product_price_and_production.p);
@@ -351,25 +413,7 @@ public class GameService
         //</editor-fold>
 
         //<editor-fold desc="Показатели отрасли (Таблица 8)">
-        
-        for(int i=0; i<g.companies.size(); i++)
-        {
-            Company company = g.companies.get(i);
-            
-            g.industry_performance.industry_profit_after_taxes.add(company.company_state.net_profit.get());
-            g.industry_performance.total_revenue.add(company.company_state.revenue.get());
-            g.industry_performance.sell_price.set(g.product_price_and_production.p);
-            g.industry_performance.industry_profit_change.add(company.company_state.profit_change.get());
-            g.industry_performance.industry_costs_change.add(company.company_state.costs_change.get());
-            g.industry_performance.taxes.add(company.company_state.profit_tax.get());
-            g.industry_performance.total_power.add(company.products_and_capacity.power.get());
-            g.industry_performance.total_production.add(company.products_and_capacity.production.get());
-            g.industry_performance.power_reserve.add(company.products_and_capacity.power_reserve.get() * 100);
-            g.industry_performance.total_net_book_value_of_fixed_assets.add(company.company_state.net_fixed_assets.get());
-            g.industry_performance.accounts_balance.add(company.company_state.cash.get());
-
-        }
-        g.industry_performance.capacity_unit_price.set(g.industry_performance.total_net_book_value_of_fixed_assets.get() / g.industry_performance.total_power.get());
+        calculateIndustry(g);
         //</editor-fold>
 
         //<editor-fold desc="Расчет кривой спроса">
@@ -390,11 +434,11 @@ public class GameService
                 item.operation_profit = item.revenue-item.variable_costs;
                 item.constant_costs = company.company_state.constant_costs.get();
                 // Depreciation
-                if(company.fixed_assets_and_depreciation.acquisition_method==0&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.depreciation.get();
                 }
-                else if(company.fixed_assets_and_depreciation.acquisition_method==0&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                else if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                             - (company.fixed_assets_and_depreciation.depreciation.get()
@@ -409,7 +453,7 @@ public class GameService
                 item.profit_taxes = item.profit_before_taxes<0 ? 0.0 : item.profit_before_taxes*g.startSettings.profit_tax.get();
                 item.net_profit = item.profit_before_taxes - item.profit_taxes;
                 item.cash = turn==1 ? company.company_state.cash.get() + item.net_profit + item.depreciation : item.cash + item.net_profit + item.depreciation;
-                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method==0 && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
+                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
                         ? company.fixed_assets_and_depreciation.fixed_assets_cost.get()-company.fixed_assets_and_depreciation.depreciation.get()*(turn+1) :0.0;
                 item.current_liabilities = 0.0;
                 item.debt = 0.0;
@@ -515,6 +559,19 @@ public class GameService
     //</editor-fold>
 
     //<editor-fold desc="Phase 1">
+    private void calculateCompanyPrice(Company company,Game g)
+    {
+        company.company_state.company_minimum_price_with_bankrupt.set(
+                (0.6-(g.turn.turn-company.company_state.bankrupt_turn)/10.0)
+                        *company.company_state.net_fixed_assets.get()
+                        -company.company_state.cash.get());
+        company.company_state.bankrupt = company.company_state.cash.get()<=0;
+        company.company_state.company_minimum_price_with_card.set(company.company_state.ebitda.get()*3
+                +company.company_state.cash.get()
+                -company.company_state.debt.get());
+        company.company_state.company_minimum_price.set(company.company_state.cash.get()
+                -company.company_state.debt.get());
+    }
     private void calculatePhase1(Game g)
     {
         //<editor-fold desc="Demand supply curve">
@@ -663,16 +720,7 @@ public class GameService
             }
             company.company_state.power.set(company.company_state.power.get()+company.company_state.new_power.get());
             company.company_state.production_loading.set(company.company_state.sales_volume.get()/company.company_state.power.get()*100);
-            company.company_state.company_minimum_price_with_bankrupt.set(
-                    (0.6-(g.turn.turn-company.company_state.bankrupt_turn)/10.0)
-                            *company.company_state.net_fixed_assets.get()
-                            -company.company_state.cash.get());
-            company.company_state.bankrupt = company.company_state.cash.get()<=0;
-            company.company_state.company_minimum_price_with_card.set(company.company_state.ebitda.get()*3
-                    +company.company_state.cash.get()
-                    -company.company_state.debt.get());
-            company.company_state.company_minimum_price.set(company.company_state.cash.get()
-                    -company.company_state.debt.get());
+            calculateCompanyPrice(company,g);
             company.company_state.market_share.set(company.company_state.revenue.get()/g.industry_performance.total_revenue.get()*100.0);
             company.company_state.free_power.set(100.0-company.company_state.production_loading.get());
             if(g.demand_supply_curve.current_sell_price<=company.goodsDeclaration.price.get()||company.event_card_contract_entire_volume !=null)
@@ -718,7 +766,11 @@ public class GameService
                 company.company_state.constant_costs_coefficient.set(company.company_state.constant_costs_coefficient.get());
             }
             company.company_state.retained_earnings.set(company.company_state.retained_earnings.get()+company.company_state.net_profit.get());
-
+            company.company_state.bankrupt = company.isBankupt();
+            if(company.company_state.bankrupt)
+            {
+                sell(company,g,CompanySellReason.BANKRUPT);
+            }
         }
         //</editor-fold>
 
@@ -729,25 +781,214 @@ public class GameService
     //<editor-fold desc="Phase 2">
     private void calculatePhase2(Game g)
     {
-        // Calculate step 0 data
-    }
-    private StatusCode acceptCard(Company company,String card)
-    {
-        EventCard c = null;
+        // Calculate step 2 data
 
-        c.accepted = true;
+        //<editor-fold desc="Перераспределение предприятий">
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            if(company.sell_parameters.on_sale)
+            {
+                CompanyBet winnerBet = null;
+                Iterator<Long> playerIter = company.company_bets.keySet().iterator();
+                while(playerIter.hasNext())
+                {
+                    Long id = playerIter.next();
+                    CompanyBet bet = company.company_bets.get(id);
+                    if(winnerBet==null||winnerBet.value<bet.value)
+                    {
+                        winnerBet = bet;
+                    }
+                    else if(winnerBet.value==bet.value&&winnerBet.time>bet.time)
+                    {
+                        winnerBet = bet;
+                    }
+                }
+                if(winnerBet!=null)
+                {
+                    companySold(g,company,g.getCompany(winnerBet.company_id),winnerBet);
+                }
+            }
+        }
+        //</editor-fold>
+        calculateIndustry(g);
+    }
+    private void companySold(Game g, Company seller_company,Company buyer_company,CompanyBet bet)
+    {
+        //<editor-fold desc="Передать другому игроку">
+        Iterator<Player> plIter = g.players.values().iterator();
+        Company sold = null;
+        Player buyer = null;
+        Player seller = null;
+        while(plIter.hasNext())
+        {
+            Player pl = plIter.next();
+            if(pl.getCompany(buyer_company.id)!=null)
+            {
+                buyer = pl;
+            }
+            if(pl.getCompany(seller_company.id)!=null)
+            {
+                seller = pl;
+            }
+            if(pl.getCompany(seller_company.id)!=null)// Sold found
+            {
+                sold = pl.getCompany(seller_company.id);
+                pl.removeCompany(sold.id);
+            }
+        }
+        buyer.companies.add(sold);
+        //</editor-fold>
+
+        //<editor-fold desc="Рассчитать новые показатели предприятия покупателя">
+        if(bet.credit!=null)
+        {
+            buyer_company.company_credits.add(bet.credit);
+            buyer_company.company_state.cash.add(bet.credit.credit_value);
+        }
+        buyer_company.company_state.cash.add(-bet.value);
+        buyer_company.company_state.share_capital.add(-bet.value);
+        buyer_company.company_state.investments.add(bet.value);
+        //</editor-fold>
+
+        //<editor-fold desc="Рассчитать новые показатели проданного предприятия">
+        seller.cash += seller_company.company_state.cash.get()+bet.value;
+        if(seller_company.isBankupt())
+        {
+            seller_company.company_state.net_fixed_assets.set(bet.value);
+            seller_company.company_state.current_passives.set(0.0);
+            seller_company.company_state.debt.set(0.0);
+            seller_company.company_credits.clear();
+            seller_company.company_state.share_capital.set(seller_company.company_state.net_fixed_assets.get());
+            seller_company.company_state.retained_earnings.set(0.0);
+            seller_company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
+            seller_company.fixed_assets_and_depreciation.depreciation.set(seller_company.company_state.net_fixed_assets.get()
+                    /seller_company.fixed_assets_and_depreciation.depreciation_period.get());
+            seller_company.fixed_assets_and_depreciation.acquisition_method = AquisitionMethod.BUY_BANKRUPT;
+            seller_company.company_state.bankrupt = false;
+        }
+
+        //</editor-fold>
+    }
+    private StatusCode acceptCard(Company company,String card,String size,Game g)
+    {
+//        CONTRACT_ENTIRE_VOLUME("Законтрактовать весь объем")
+//                , SELL_COMPANY("Продажа предприятия")
+//                , EFFICIENCY_PROJECT_SMALL("Проект повышения эффективности 1")
+//                , EFFICIENCY_PROJECT_MEDIUM("Проект повышения эффективности 2")
+//                , EFFICIENCY_PROJECT_LARGE("Проект повышения эффективности 3")
+//                , POCKING("Поккинг");
+        if(card.equalsIgnoreCase("CONTRACT_ENTIRE_VOLUME"))
+        {
+            if(company.event_card_contract_entire_volume.current_turn)
+            {
+                company.event_card_contract_entire_volume.accepted = true;
+            }
+        }
+        if(card.equalsIgnoreCase("SELL_COMPANY"))
+        {
+            if(company.event_card_sell_company.current_turn)
+            {
+                company.event_card_sell_company.accepted = true;
+                sell(company, g, CompanySellReason.EVENT_CARD);
+            }
+        }
+        if(card.equalsIgnoreCase("POCKING"))
+        {
+            if(company.event_card_pocking.current_turn)
+            {
+                company.event_card_pocking.accepted = true;
+            }
+        }
+        // TODO: ППЭ
+
         return StatusCode.SUCCESS;
     }
-    private void sell(Company c)
+    private void sell(Company c,Game g,CompanySellReason reason)
     {
         //Check can sale
-        boolean canSale = false;
         c.sell_parameters.on_sale = true;
 
-        Double sellPrice = 0.0;
         // Calculate sell price
-        c.sell_parameters.sell_price = sellPrice;
+        calculateCompanyPrice(c,g);
+        if(reason == CompanySellReason.FREE_WILL)
+        {
+            c.sell_parameters.sell_reason = CompanySellReason.FREE_WILL;
+            c.sell_parameters.on_sale = true;
+            c.sell_parameters.sell_price = c.company_state.company_minimum_price.get();
+        }
+        else if(reason == CompanySellReason.BANKRUPT)
+        {
+            c.sell_parameters.sell_reason = CompanySellReason.BANKRUPT;
+            c.sell_parameters.on_sale = true;
+            c.sell_parameters.sell_price = c.company_state.company_minimum_price_with_bankrupt.get();
+        }
+        else if(reason == CompanySellReason.EVENT_CARD)
+        {
+            c.sell_parameters.sell_reason = CompanySellReason.EVENT_CARD;
+            c.sell_parameters.on_sale = true;
+            c.sell_parameters.sell_price = c.company_state.company_minimum_price_with_card.get();
+        }
+    }
+    private StatusCode bet(Company c,Player p,CompanyBet bet, Game g)
+    {
+        Long companyId = bet.company_id;
+        Company company = g.getCompany(companyId);
+        if(company.company_state.credit_rating_current!=CreditRating.DDD)
+        {
+            if(bet.credit.credit_term.intValue()==3)
+            {
+                bet.credit.rate_on_the_loan = company.company_state.credit_rate_of_interest_3_years.get();
+            }
+            else if(bet.credit.credit_term.intValue()==5)
+            {
+                bet.credit.rate_on_the_loan = company.company_state.credit_rate_of_interest_5_years.get();
+            }
+            else if(bet.credit.credit_term.intValue()==7)
+            {
+                bet.credit.rate_on_the_loan = company.company_state.credit_rate_of_interest_7_years.get();
+            }
+            else
+            {
+                return StatusCode.CANT_GET_CREDIT;
+            }
+            company.company_bets.put(p.id,bet);
+        }
+        company.company_bets.put(p.id,bet);
+        return StatusCode.SUCCESS;
+    }
+    private StatusCode consolidation(Company c,Double value,Player p,Game g)
+    {
+        // Is on sale
+        if(c.sell_parameters.on_sale||c.company_state.bankrupt)
+        {
+            return StatusCode.CONSOLIDATION_DECLINED_BANKRUPT_OR_ON_SALE;
+        }
+        // Money?
+        else if(value>0&&c.company_state.cash.get()<value)
+        {
+            return StatusCode.CONSOLIDATION_DECLINED_NO_MONEY;
+        }
+        else if(value<0&&p.cash<java.lang.Math.abs(value))
+        {
+            return StatusCode.CONSOLIDATION_DECLINED_NO_MONEY;
+        }
 
+        // Calculations
+        c.company_state.cash.add(-value);
+        p.cash+=value;
+        c.company_state.share_capital.add(-value);
+
+        Double cash_minus_debt = c.company_state.cash.get()-c.company_state.debt.get();
+        Double minimumPriceFreeWill = cash_minus_debt<0?cash_minus_debt:c.company_state.debt.get();
+        c.company_state.company_minimum_price.set(minimumPriceFreeWill);
+
+        Double sellCardCondition = 3*c.company_state.ebitda.get()+c.company_state.cash.get()-c.company_state.debt.get();
+        Double minimumPriceCard = sellCardCondition<0?sellCardCondition:c.company_state.debt.get();
+        c.company_state.company_minimum_price_with_card.set(minimumPriceCard);
+        calculateIndustry(g);
+
+        return StatusCode.SUCCESS;
     }
     //</editor-fold>
 

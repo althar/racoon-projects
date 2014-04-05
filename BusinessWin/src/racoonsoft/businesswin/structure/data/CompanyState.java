@@ -121,17 +121,19 @@ public class CompanyState
     @DataStructureField(name="company_minimum_price",description="Минимальная цена продажи предприятия")
     public EconomicsValue company_minimum_price = new EconomicsValue(0.0,10000000.0,2,0.0);
 
+    @DataStructureField(name="company_minimum_price_with_card",description="Минимальная цена продажи предприятия (фишка)")
+    public EconomicsValue company_minimum_price_with_card = new EconomicsValue(0.0,10000000.0,2,0.0);
+
+    @DataStructureField(name="company_minimum_price_with_bankrupt",description="Минимальная цена продажи предприятия (банкротство)")
+    public EconomicsValue company_minimum_price_with_bankrupt = new EconomicsValue(0.0,10000000.0,2,0.0);
+
     @DataStructureField(name="bankrupt",description="Банкрот")
     public Boolean bankrupt = false;
 
     @DataStructureField(name="bankrupt_turn",description="Банкрот")
     public Integer bankrupt_turn = 0;
 
-    @DataStructureField(name="company_minimum_price_with_card",description="Минимальная цена продажи предприятия (фишка)")
-    public EconomicsValue company_minimum_price_with_card = new EconomicsValue(0.0,10000000.0,2,0.0);
 
-    @DataStructureField(name="company_minimum_price_with_bankrupt",description="Минимальная цена продажи предприятия (банкротство)")
-    public EconomicsValue company_minimum_price_with_bankrupt = new EconomicsValue(0.0,10000000.0,2,0.0);
 
     public void setCredit_rating_by_cash(CreditRating credit_rating_by_cash)
     {

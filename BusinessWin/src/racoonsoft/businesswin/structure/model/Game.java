@@ -79,4 +79,15 @@ public class Game
         players.put(p.id,p);
         return StatusCode.SUCCESS;
     }
+    public Company getCompany(Long id)
+    {
+        for(int i=0; i<companies.size(); i++)
+        {
+            if(companies.get(i).id.longValue()==id.longValue())
+            {
+                return companies.get(i);
+            }
+        }
+        return null;
+    }
 }

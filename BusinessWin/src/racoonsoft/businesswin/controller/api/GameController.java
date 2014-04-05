@@ -5,11 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
-import racoonsoft.businesswin.structure.data.DeclaredEventCards;
+import racoonsoft.businesswin.structure.data.*;
+import racoonsoft.businesswin.structure.enums.CompanySellReason;
 import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.structure.model.GoodsDeclaration;
-import racoonsoft.businesswin.structure.data.StartSettings;
-import racoonsoft.businesswin.structure.data.TradeFactors;
 import racoonsoft.businesswin.structure.model.Player;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.StatusCode;
@@ -176,36 +175,51 @@ public class GameController extends BusinessWinController
         return model;
     }
     @RequestMapping("/accept_card")
-    public ModelAndView acceptCard(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    public ModelAndView acceptCard(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type,String size) throws Exception
     {
-        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type,size);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/sell_company")
-    public ModelAndView sellCompany(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id) throws Exception
+    public ModelAndView sellCompany(HttpServletRequest request, HttpServletResponse response
+            ,Long game_id
+            ,Long company_id) throws Exception
     {
-        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        StatusCode code = gameService.sellCompany(game_id, id(request), company_id, CompanySellReason.FREE_WILL);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/bet_company")
-    public ModelAndView betCompany(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    public ModelAndView betCompany(HttpServletRequest request, HttpServletResponse response
+            ,Long game_id
+            ,Long buyer_company_id) throws Exception
     {
-        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        CompanyBet companyBet = new CompanyBet();
+        Credit credit = new Credit();
+        companyBet.fill(request);
+        credit.fill(request);
+        if(companyBet.need_credit)
+        {
+            companyBet.credit = credit;
+        }
+        StatusCode code = gameService.betCompany(game_id, id(request), buyer_company_id, companyBet);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
     }
     @RequestMapping("/consolidation")
-    public ModelAndView consolidation(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type) throws Exception
+    public ModelAndView consolidation(HttpServletRequest request, HttpServletResponse response
+            ,Long game_id
+            ,Long company_id
+            ,Double value) throws Exception
     {
-        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type);
+        StatusCode code = gameService.consolidation(game_id, id(request), company_id, value);
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());

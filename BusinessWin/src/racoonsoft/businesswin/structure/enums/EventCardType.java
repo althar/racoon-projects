@@ -6,7 +6,8 @@ public enum EventCardType
     , SELL_COMPANY("Продажа предприятия")
     , EFFICIENCY_PROJECT_SMALL("Проект повышения эффективности 1")
     , EFFICIENCY_PROJECT_MEDIUM("Проект повышения эффективности 2")
-    , EFFICIENCY_PROJECT_LARGE("Проект повышения эффективности 3");
+    , EFFICIENCY_PROJECT_LARGE("Проект повышения эффективности 3")
+    , POCKING("Поккинг");
 
     private String caption;
 
