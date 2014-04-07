@@ -24,3 +24,4 @@ C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.Dat
 C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.dll
 C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\Remotion.Interfaces.dll
 C:\Users\althar\Documents\Racoon Projects\FrameworkDotNet\bin\Debug\LinqToExcel.xml
+C:\Users\AlThar\Documents\Racoon Projects\FrameworkDotNet\obj\Debug\FTwoFramework.csprojResolveAssemblyReference.cache

@@ -48,7 +48,6 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusines
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Npgsql.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Mono.Security.dll
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\OwlBusinessStudioLib.pdb
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Authorization.LoginForm.resources
@@ -77,8 +76,6 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBus
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.AddEditUserForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.LoginHistoryForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Users.UsersForm.resources
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.pdb
 C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\LinqToExcel.dll
@@ -86,3 +83,5 @@ C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\Remotion.D
 C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\log4net.dll
 C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\bin\Debug\LinqToExcel.xml
 C:\Users\althar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.Settings.AdvForm.resources
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.csprojResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Debug\OwlBusinessStudio.csproj.GenerateResource.Cache

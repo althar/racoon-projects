@@ -36,12 +36,16 @@ public class IndustryPerformance
     @DataStructureField(name="total_net_book_value_of_fixed_assets", description="Общая остаточная стоиомсть основных средств")
     public EconomicsValue total_net_book_value_of_fixed_assets = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
-    @DataStructureField(name="accounts_balance", description="Прибыль отрасли после налогов")
+    @DataStructureField(name="accounts_balance", description="Остаток денежных средств на счетах")
     public EconomicsValue accounts_balance = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
     @DataStructureField(name="capacity_unit_price", description="Стоимость единицы новой мощности")
     public EconomicsValue capacity_unit_price = new EconomicsValue(1.0, 999.0, 0, 1.0);
 
-    @DataStructureField(name="industry_revenue_after_taxes", description="Прибыль отрасли после налогов")
-    public EconomicsValue industry_revenue_after_taxes = new EconomicsValue(1.0, 999.0, 0, 1.0);
+    //TODO: calculate
+    @DataStructureField(name="total_production_loading", description="Общая загрузка производства")
+    public EconomicsValue total_production_loading = new EconomicsValue(1.0, 999.0, 0, 1.0);
+
+//    @DataStructureField(name="industry_revenue_after_taxes", description="Прибыль отрасли после налогов")
+//    public EconomicsValue industry_revenue_after_taxes = new EconomicsValue(1.0, 999.0, 0, 1.0);
 }
