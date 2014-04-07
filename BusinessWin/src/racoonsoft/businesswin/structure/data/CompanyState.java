@@ -88,10 +88,10 @@ public class CompanyState
 
     // More
     @DataStructureField(name="credit_rating_by_edibta",description="Кредитный рейтинг 1")
-    private CreditRating credit_rating_by_edibta = CreditRating.UNKNOWN;
+    public CreditRating credit_rating_by_edibta = CreditRating.UNKNOWN;
 
     @DataStructureField(name="credit_rating_by_cash",description="Кредитный рейтинг 2")
-    private CreditRating credit_rating_by_cash = CreditRating.UNKNOWN;
+    public CreditRating credit_rating_by_cash = CreditRating.UNKNOWN;
 
     @DataStructureField(name="credit_rating_current",description="Текйщий кредитный рейтинг")
     public CreditRating credit_rating_current = CreditRating.UNKNOWN;

@@ -379,9 +379,9 @@ namespace FTwoFramework.DB
             {
                 Hashtable pars = new Hashtable();
                 pars.Add("articul", getString(item, fields, "articul"));
-                if (getString(item, fields, "articul") == "")
+                if (getString(item, fields, "real_article") == "49011")
                 {
-                    return false;
+                    string soso="soso";
                 }
                 pars.Add("name_rus", getString(item, fields, "name_rus"));
                 pars.Add("name_eng", getString(item, fields, "name_eng"));
@@ -421,11 +421,11 @@ namespace FTwoFramework.DB
                 DataTable tab = executeGet("SELECT articul FROM goods WHERE articul='"+getString(item,fields,"articul")+"'");
                 if (tab != null && tab.Rows.Count > 0)
                 {
-                    update("goods", pars, "articul='" + tab.Rows[0]["articul"] + "'");
+                    //update("goods", pars, "articul='" + tab.Rows[0]["articul"] + "'");
                 }
                 else
                 {
-                    insert("goods", pars);
+                    //insert("goods", pars);
                 }
                 return true;
             }
