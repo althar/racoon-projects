@@ -781,7 +781,6 @@ public class GameService
     //<editor-fold desc="Phase 2">
     private void calculatePhase2(Game g)
     {
-        // Calculate step 2 data
 
         //<editor-fold desc="Перераспределение предприятий">
         for(int i=0; i<g.companies.size(); i++)

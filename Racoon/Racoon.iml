@@ -36,8 +36,6 @@
     <orderEntry type="library" name="spring-data-jpa-1.0.0" level="project" />
     <orderEntry type="library" name="spring-batch-2.1.9" level="project" />
     <orderEntry type="library" name="spring-mvc-3.2.2.RELEASE" level="project" />
-    <orderEntry type="library" name="javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" level="project" />
-    <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="com.google.zxing:core:2.1" level="project" />
     <orderEntry type="library" name="core" level="project" />
     <orderEntry type="library" name="javax.mail:javax.mail-api:1.4.7" level="project" />

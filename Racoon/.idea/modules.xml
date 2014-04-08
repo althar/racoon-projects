@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../BusinessWin/BusinessWin.iml" filepath="$PROJECT_DIR$/../BusinessWin/BusinessWin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Chipped/Chipped.iml" filepath="$PROJECT_DIR$/../Chipped/Chipped.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Circos/Circos.iml" filepath="$PROJECT_DIR$/../Circos/Circos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Racoon.iml" filepath="$PROJECT_DIR$/Racoon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../RacoonFramework/RacoonFramework.iml" filepath="$PROJECT_DIR$/../RacoonFramework/RacoonFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SelectNew/SelectNew.iml" filepath="$PROJECT_DIR$/../SelectNew/SelectNew.iml" />
       <module fileurl="file://$PROJECT_DIR$/../rzd_scanner/rzd_scanner.iml" filepath="$PROJECT_DIR$/../rzd_scanner/rzd_scanner.iml" />
     </modules>
   </component>
