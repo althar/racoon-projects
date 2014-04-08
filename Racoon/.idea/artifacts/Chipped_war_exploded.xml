@@ -18,7 +18,6 @@
           <element id="library" level="project" name="spring-3.2.2" />
           <element id="library" level="project" name="spring-webflow-2.3.2" />
           <element id="library" level="project" name="spring-ws-2.0.2" />
-          <element id="library" level="project" name="jstl-1.2" />
           <element id="library" level="project" name="spring-batch-2.1.9" />
           <element id="library" level="project" name="org.json:json:20090211" />
           <element id="file-copy" path="$PROJECT_DIR$/../RacoonFramework/lib/dbfEngine_bin-1.04.jar" />
@@ -28,6 +27,7 @@
           <element id="library" level="project" name="com.google.protobuf:protobuf-java:2.5.0" />
           <element id="library" level="project" name="com.google.zxing:core:2.1" />
           <element id="library" level="project" name="org.springframework:org.springframework.web:3.2.5.RELEASE" />
+          <element id="library" level="project" name="jstl:jstl:1.2" />
         </element>
       </element>
       <element id="library" level="project" name="javax.mail:mail:1.4.7" />

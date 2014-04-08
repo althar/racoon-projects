@@ -42,8 +42,6 @@
     <orderEntry type="library" name="hibernate-4.1.1" level="project" />
     <orderEntry type="library" name="javax.mail:javax.mail-api:1.4.7" level="project" />
     <orderEntry type="library" name="javax.mail:mail:1.4.7" level="project" />
-    <orderEntry type="library" name="javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" level="project" />
-    <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="org.liquibase:liquibase-core:2.0.5" level="project" />
     <orderEntry type="library" name="org.springframework:org.springframework.web:3.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="postgresql:postgresql:9.2-1002.jdbc4" level="project" />
