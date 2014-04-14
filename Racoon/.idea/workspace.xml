@@ -45,8 +45,8 @@
     <file path="$PROJECT_DIR$/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367950466823" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
-    <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1395904116992" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396960304606" ignored="false" />
+    <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397477549027" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397483743045" ignored="false" />
     <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396607316911" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
@@ -57,8 +57,8 @@
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990221611" ignored="false" />
     <file path="/dispatcher-servlet.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365430637325" ignored="false" />
-    <file path="/User.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368711245965" ignored="false" />
-    <file path="/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393950055032" ignored="false" />
+    <file path="/User.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397480135009" ignored="false" />
+    <file path="/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030522546" ignored="false" />
     <file path="/article.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372066292120" ignored="false" />
     <file path="/ContentGod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365435038098" ignored="false" />
     <file path="/Article.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365598763530" ignored="false" />
@@ -122,7 +122,7 @@
     <file path="/2.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367314241711" ignored="false" />
     <file path="/SessionProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367329064151" ignored="false" />
     <file path="/Facebook.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367329696456" ignored="false" />
-    <file path="/DBRecord.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383658162333" ignored="false" />
+    <file path="/DBRecord.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397484600130" ignored="false" />
     <file path="/1.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367325101316" ignored="false" />
     <file path="/main_choose.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369036999362" ignored="false" />
     <file path="/UserController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385538187996" ignored="false" />
@@ -172,7 +172,7 @@
     <file path="/no_item_error.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368701055189" ignored="false" />
     <file path="/AdminController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386165467695" ignored="false" />
     <file path="/StoreController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383739770763" ignored="false" />
-    <file path="/UserProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390919848713" ignored="false" />
+    <file path="/UserProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031155217" ignored="false" />
     <file path="/ActionResult.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387363630275" ignored="false" />
     <file path="/UserSession.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371553057820" ignored="false" />
     <file path="/store-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377163169697" ignored="false" />
@@ -411,7 +411,7 @@
     <file path="/YandexDirectProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377876013689" ignored="false" />
     <file path="/YandexDirectPackage.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377875940801" ignored="false" />
     <file path="/GetCampaignsList.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377875818429" ignored="false" />
-    <file path="/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394635840578" ignored="false" />
+    <file path="/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397484278428" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/tax_declaration_template/pfr/PFR-700-Y-2013-ORG-087-105-038446-DCK-00001-DPT-000000-DCK-00000.XML" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390398154039" ignored="false" />
     <file path="/PFR-700-Y-2013-ORG-087-105-038446-DCK-00001-DPT-000000-DCK-00000.XML" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390398152063" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/structure/TaxDeclarationData.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380803680128" ignored="false" />
@@ -526,7 +526,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/BankAccountType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384784221135" ignored="false" />
     <file path="/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169662362" ignored="false" />
     <file path="/StudentController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390300854214" ignored="false" />
-    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949714554" ignored="false" />
+    <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397479986153" ignored="false" />
     <file path="/registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385913705603" ignored="false" />
     <file path="/access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387446564117" ignored="false" />
     <file path="/no_access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385914719749" ignored="false" />
@@ -627,7 +627,7 @@
     <file path="/SeparateThreadProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390566588571" ignored="false" />
     <file path="/ajax-addon.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390569170760" ignored="false" />
     <file path="/pass.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396009651775" ignored="false" />
-    <file path="/deploy.bat" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396962049180" ignored="false" />
+    <file path="/deploy.bat" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397044840396" ignored="false" />
     <file path="/AsyncMultipartResolver.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390924096833" ignored="false" />
     <file path="/UploadProgress.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390925428032" ignored="false" />
     <file path="/FileTransferProgress.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390985952333" ignored="false" />
@@ -727,7 +727,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/interceptor/BusinessWinInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948706906" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945062059" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945508114" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045453729" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/BusinessPlan.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/CompanyState.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/TradeFactors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
@@ -754,20 +754,49 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/enums/ElasticityFunctionType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/interceptor/MyBuhInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948756062" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/BusinessWinController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944978705" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948785299" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945038058" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029562120" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045176920" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/BindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948593539" ignored="false" />
     <file path="/BindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945700256" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945835917" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/json/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948730099" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397479997842" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/json/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397484297467" ignored="false" />
     <file path="/MyBuhInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948751817" ignored="false" />
     <file path="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949561400" ignored="false" />
     <file path="/CircosInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949697850" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396958781910" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397033706858" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/sections/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949855834" ignored="false" />
     <file path="/welcome.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396963843055" ignored="false" />
-    <file path="/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396959083409" ignored="false" />
+    <file path="/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031707193" ignored="false" />
     <file path="/CircosController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396959037736" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/deploy/deploy.bat" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045006305" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045137275" ignored="false" />
+    <file path="/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029539594" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029641132" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397039107282" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029709772" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397477237383" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029712696" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029713373" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029713951" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030254691" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030522546" ignored="false" />
+    <file path="/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397032204188" ignored="false" />
+    <file path="/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029968542" ignored="false" />
+    <file path="/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030253435" ignored="false" />
+    <file path="/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031370706" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/mail/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031382980" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/MyBuh.iml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397039003039" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/pp.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031829387" ignored="false" />
+    <file path="/pp.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031829387" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/sql/my-buh-1.0.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397478326829" ignored="false" />
+    <file path="/my-buh-1.0.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397478326829" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/sql/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397477549027" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/access/User.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397480135794" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/database/DBRecord.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397481153757" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/database/DBProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397481153757" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/xml/XMLProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397481153757" ignored="false" />
+    <file path="$PROJECT_DIR$/../SelectNew/src/racoonsoft/select/database/PGSQLDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397484601490" ignored="false" />
+    <file path="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/xml/XMLProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397484600715" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -782,6 +811,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -865,7 +895,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -874,7 +903,26 @@
     <favorites_list name="Racoon" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="deploy.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Circos/deploy/deploy.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="5" selection-start="0" selection-end="858" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/welcome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="42" selection-start="398" selection-end="398" vertical-scroll-proportion="0.16536964">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -889,8 +937,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
-        <option value="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/test/Test.java" />
         <option value="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/interceptor/AccessInterceptor.java" />
         <option value="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/interceptor/CircosInterceptor.java" />
         <option value="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/interceptor/HistoryInterceptor.java" />
@@ -905,6 +951,8 @@
         <option value="$PROJECT_DIR$/../Circos/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/welcome.jsp" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/json/JSONProcessor.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBRecord.java" />
       </list>
     </option>
   </component>
@@ -979,8 +1027,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -989,21 +1037,171 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Circos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Circos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Circos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Circos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Circos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deploy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.20410156" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.20410156" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -1020,15 +1218,15 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="project.structure.side.proportion" value="0.33100232" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="project.structure.side.proportion" value="0.33100232" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1086,6 +1284,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1114,34 +1325,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -1160,11 +1343,33 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1188,11 +1393,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1209,13 +1414,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1681,8 +1879,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1690,10 +1888,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3690078" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36818686" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21850613" sideWeight="0.38847384" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3690078" sideWeight="0.38847384" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1704,7 +1902,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.178762" sideWeight="0.78149384" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14834578" sideWeight="0.6309922" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1713,7 +1911,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20624304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28985506" sideWeight="0.49519745" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37346712" sideWeight="0.49519745" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1786,36 +1984,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="46" selection-start="7455" selection-end="7455" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="53" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="45" selection-start="93" selection-end="93" vertical-scroll-proportion="0.056198347" />
@@ -1824,11 +1992,6 @@
     <entry file="jar://$PROJECT_DIR$/lib/spring-2.0.6.jar!/org/springframework/core/io/ClassPathResource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.8392484" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/deploy/deploy.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="178" selection-start="858" selection-end="858" vertical-scroll-proportion="0.11486486" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Chipped/web/WEB-INF/jsp/catalogue.jsp">
@@ -1900,28 +2063,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/catalog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="540" selection-end="540" vertical-scroll-proportion="0.31432974">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
@@ -1933,6 +2082,51 @@
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="179" column="46" selection-start="7455" selection-end="7455" vertical-scroll-proportion="0.025185185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Circos/deploy/deploy.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="5" selection-start="0" selection-end="858" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SelectNew/web/WEB-INF/jsp/body/catalog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="397" selection-end="397" vertical-scroll-proportion="0.29766536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="502" selection-end="502" vertical-scroll-proportion="0.22037037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/database/DBProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="373" selection-end="373" vertical-scroll-proportion="0.12592593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/json/JSONProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="26" selection-start="4973" selection-end="4973" vertical-scroll-proportion="1.9902912">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#602#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="42" selection-start="398" selection-end="398" vertical-scroll-proportion="0.16536964">
           <folding />
         </state>
       </provider>
@@ -2016,7 +2210,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jstl:jstl:1.2</last-edited>
+          <last-edited>postgresql:postgresql:9.2-1002.jdbc4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

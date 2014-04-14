@@ -226,7 +226,7 @@ public class XMLProcessor
         }
         else if(value instanceof DBRecord)
         {
-            HashMap<String,Object> arr = ((DBRecord)value).Fields;
+            HashMap<String,Object> arr = ((DBRecord)value).fields;
             node.appendChild(newNode);
             addNodes(newNode, arr);
         }
@@ -303,7 +303,7 @@ public class XMLProcessor
         }
         else if(value instanceof DBRecord)
         {
-            HashMap<String,Object> arr = ((DBRecord)value).Fields;
+            HashMap<String,Object> arr = ((DBRecord)value).fields;
             getNode(path).appendChild(newNode);
             String inner_path = "";
             if(!path.equalsIgnoreCase(".")&&!path.equalsIgnoreCase(""))
