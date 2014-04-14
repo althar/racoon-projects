@@ -324,7 +324,7 @@ public class DBProcessor implements DataSource{
     }
     public Long executeInsert(String table_name, DBRecord rec) throws SQLException
     {
-        return executeInsert(table_name,rec.Fields);
+        return executeInsert(table_name,rec.fields);
     }
 
     // Update...

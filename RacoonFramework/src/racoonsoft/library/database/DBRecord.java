@@ -14,33 +14,33 @@ import org.xml.sax.SAXException;
 public class DBRecord extends Object
 {
     //private int ID;
-    public HashMap<String,Object> Fields;
+    public HashMap<String,Object> fields;
 
     public DBRecord()
     {
-        Fields = new HashMap<String, Object>();
+        fields = new HashMap<String, Object>();
     }
     public DBRecord(DBRecord rec)
     {
-	    this(rec.Fields);
+	    this(rec.fields);
     }
     public DBRecord(HashMap<String,Object> fields)
     {
         Object id = fields.get("id");
-        Fields = fields;
+        this.fields = fields;
     }
     public DBRecord(Integer id,HashMap<String,Object> fields)
     {
-        Fields = fields;
+        this.fields = fields;
 	    setValue("id", id);
     }
     public HashMap<String,Object> getFields()
     {
-        return Fields;
+        return fields;
     }
     public Object getValue(String name)
     {
-        return Fields.get(name);
+        return fields.get(name);
     }
     public Integer getIntValue(String name)
     {
@@ -136,19 +136,19 @@ public class DBRecord extends Object
     }
     public String[] getNames()
     {
-        return Fields.keySet().toArray(new String[Fields.size()]);
+        return fields.keySet().toArray(new String[fields.size()]);
     }
     public Object[] getValues()
     {
-        return Fields.values().toArray(new String[Fields.size()]);
+        return fields.values().toArray(new String[fields.size()]);
     }
     public void setValue(String name,Object value)
     {
-        Fields.put(name, value);
+        fields.put(name, value);
     }
     public boolean hasName(String name)
     {
-        return Fields.containsKey(name);
+        return fields.containsKey(name);
     }
     public Long getID()
     {
@@ -156,26 +156,26 @@ public class DBRecord extends Object
     }
     public String getString()
     {
-        return Fields.toString();
+        return fields.toString();
     }
     public String toXML() throws IOException,ParserConfigurationException,SAXException
     {
         XMLProcessor proc = new XMLProcessor();
-        proc.addNodes("root",Fields);
+        proc.addNodes("root", fields);
         String result = proc.toXMLString();
         return result;
     }
     @Override
     public String toString()
     {
-	return Fields.toString();
+	return fields.toString();
     }
     public void loadFromDB(DBProcessor proc) throws SQLException,UserInitializationException
     {
         DBRecord u = new DBRecord(proc.getRecord("users", "id="+String.valueOf(this.getID()), null));
         if(u!=null)
         {
-            this.Fields = u.Fields;
+            this.fields = u.fields;
         }
     }
     public void loadFromDB(DBProcessor proc, String condition) throws SQLException,UserInitializationException
@@ -183,15 +183,15 @@ public class DBRecord extends Object
         DBRecord u = new DBRecord(proc.getRecord("users", condition, null));
         if(u!=null)
         {
-            this.Fields = u.Fields;
+            this.fields = u.fields;
         }
     }
     public Long createInDB(DBProcessor proc) throws SQLException
     {
-        return proc.executeInsert("users", Fields);
+        return proc.executeInsert("users", fields);
     }
     public void saveToDB(DBProcessor proc) throws SQLException
     {
-        proc.executeUpdate("users", Fields, "id="+this.getID());
+        proc.executeUpdate("users", fields, "id="+this.getID());
     }
 }

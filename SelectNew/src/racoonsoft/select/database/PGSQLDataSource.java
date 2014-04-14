@@ -2,13 +2,11 @@ package racoonsoft.select.database;
 
 import racoonsoft.library.database.DBProcessor;
 import racoonsoft.library.database.DBRecord;
-import racoonsoft.select.structure.CatalogueCategory;
 import racoonsoft.select.structure.CatalogueGood;
 import racoonsoft.select.structure.Order;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class PGSQLDataSource extends DBProcessor
@@ -94,7 +92,7 @@ public class PGSQLDataSource extends DBProcessor
                         goods.add(currentGood);
                     }
                     currentGood = new CatalogueGood();
-                    currentGood.Fields = rec.Fields;
+                    currentGood.fields = rec.fields;
                 }
                 currentGood.addCharacteristic(rec.getStringValue("characteristic_name"),rec.getStringValue("characteristic_value"));
                 String url = rec.getStringValue("url").replace("\\","/");
@@ -129,7 +127,7 @@ public class PGSQLDataSource extends DBProcessor
                         goods.add(currentGood);
                     }
                     currentGood = new CatalogueGood();
-                    currentGood.Fields = rec.Fields;
+                    currentGood.fields = rec.fields;
                 }
                 currentGood.addCharacteristic(rec.getStringValue("characteristic_name"),rec.getStringValue("characteristic_value"));
                 currentGood.setMainImageUrl(rec.getStringValue("url"));
@@ -180,7 +178,7 @@ public class PGSQLDataSource extends DBProcessor
                         goods.add(currentGood);
                     }
                     currentGood = new CatalogueGood();
-                    currentGood.Fields = rec.Fields;
+                    currentGood.fields = rec.fields;
                 }
                 currentGood.addCharacteristic(rec.getStringValue("characteristic_name"),rec.getStringValue("characteristic_value"));
                 currentGood.setMainImageUrl(rec.getStringValue("url"));
@@ -213,7 +211,7 @@ public class PGSQLDataSource extends DBProcessor
                     goods.add(currentGood);
                 }
                 currentGood = new CatalogueGood();
-                currentGood.Fields = rec.Fields;
+                currentGood.fields = rec.fields;
             }
             currentGood.addCharacteristic(rec.getStringValue("characteristic_name"),rec.getStringValue("characteristic_value"));
             currentGood.setMainImageUrl(rec.getStringValue("url"));
