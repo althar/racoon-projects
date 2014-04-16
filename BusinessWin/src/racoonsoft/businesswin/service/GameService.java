@@ -1,6 +1,5 @@
 package racoonsoft.businesswin.service;
 
-import org.springframework.jca.work.glassfish.GlassFishWorkManagerTaskExecutor;
 import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.*;
@@ -173,7 +172,7 @@ public class GameService
         g.declared_event_cards = eventCards;
         return StatusCode.SUCCESS;
     }
-    public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card,String size) throws Exception
+    public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card,String size,Credit credit) throws Exception
     {
         Game g = GameWorld.getGame(game_id);
         if(g == null)
@@ -190,7 +189,7 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
-        return acceptCard(c,card,size,g);
+        return acceptCard(c,card,size,g,credit);
     }
     public StatusCode sellCompany(Long game_id, Long player_id,Long company_id,CompanySellReason reason) throws Exception
     {
@@ -373,7 +372,7 @@ public class GameService
             company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
             company.fixed_assets_and_depreciation.depreciation.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                     /company.fixed_assets_and_depreciation.depreciation_period.get());
-            company.fixed_assets_and_depreciation.acquisition_method = AquisitionMethod.NONE;
+            company.fixed_assets_and_depreciation.acquisition_method = AquisitionMethod.START;
 
             // Table 4
             company.company_state.revenue.set(company.products_and_capacity.production.get()*g.product_price_and_production.p);
@@ -434,11 +433,11 @@ public class GameService
                 item.operation_profit = item.revenue-item.variable_costs;
                 item.constant_costs = company.company_state.constant_costs.get();
                 // Depreciation
-                if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE&&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.START &&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.depreciation.get();
                 }
-                else if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE&&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
+                else if(company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.START &&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.fixed_assets_cost.get()
                             - (company.fixed_assets_and_depreciation.depreciation.get()
@@ -453,7 +452,7 @@ public class GameService
                 item.profit_taxes = item.profit_before_taxes<0 ? 0.0 : item.profit_before_taxes*g.startSettings.profit_tax.get();
                 item.net_profit = item.profit_before_taxes - item.profit_taxes;
                 item.cash = turn==1 ? company.company_state.cash.get() + item.net_profit + item.depreciation : item.cash + item.net_profit + item.depreciation;
-                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.NONE && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
+                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method==AquisitionMethod.START && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
                         ? company.fixed_assets_and_depreciation.fixed_assets_cost.get()-company.fixed_assets_and_depreciation.depreciation.get()*(turn+1) :0.0;
                 item.current_liabilities = 0.0;
                 item.debt = 0.0;
@@ -781,7 +780,6 @@ public class GameService
     //<editor-fold desc="Phase 2">
     private void calculatePhase2(Game g)
     {
-
         //<editor-fold desc="Перераспределение предприятий">
         for(int i=0; i<g.companies.size(); i++)
         {
@@ -811,6 +809,51 @@ public class GameService
         }
         //</editor-fold>
         calculateIndustry(g);
+        //<editor-fold desc="Calculate PPE prices">
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            company.event_card_efficiency_project_small.event_card_price = 0.0;
+            company.event_card_efficiency_project_medium.event_card_price = g.startSettings.investment_constant_costs_coefficient_medium_project.get()
+                    *company.company_state.constant_costs.get();
+            company.event_card_efficiency_project_large.event_card_price = g.startSettings.current_power_percent_big_project.get()
+                    *(company.company_state.power.get()+company.company_state.new_power.get())
+                    *(1+g.startSettings.exceeds_the_net_book_value_of_fixed_assets_coefficient_big_project.get())
+                    *g.industry_performance.capacity_unit_price.get();
+            company.company_state.new_power.set(g.startSettings.current_power_percent_big_project.get()
+                    *(company.company_state.power.get()+company.company_state.new_power.get()));
+
+            Double canSpend = 0.0;
+            if(company.company_state.credit_rating_current!=CreditRating.DDD)
+            {
+                canSpend = Double.MAX_VALUE;
+            }
+            else
+            {
+                canSpend = company.company_state.cash.get();
+            }
+
+            company.event_card_efficiency_project_small.can_accept = false;
+            company.event_card_efficiency_project_medium.can_accept = false;
+            company.event_card_efficiency_project_large.can_accept = false;
+
+            if(canSpend>company.event_card_efficiency_project_small.event_card_price)
+            {
+                company.event_card_efficiency_project_small.can_accept = true;
+            }
+            if(canSpend>company.event_card_efficiency_project_medium.event_card_price)
+            {
+                company.event_card_efficiency_project_medium.can_accept = true;
+            }
+            if(canSpend>company.event_card_efficiency_project_large.event_card_price)
+            {
+                company.event_card_efficiency_project_large.can_accept = true;
+            }
+
+            // Contract entire volume
+            company.event_card_contract_entire_volume.event_card_value = g.product_price_and_production.p*0.95;
+        }
+        //</editor-fold>
     }
     private void companySold(Game g, Company seller_company,Company buyer_company,CompanyBet bet)
     {
@@ -869,7 +912,7 @@ public class GameService
 
         //</editor-fold>
     }
-    private StatusCode acceptCard(Company company,String card,String size,Game g)
+    private StatusCode acceptCard(Company company,String card,String size,Game g,Credit credit)
     {
 //        CONTRACT_ENTIRE_VOLUME("Законтрактовать весь объем")
 //                , SELL_COMPANY("Продажа предприятия")
@@ -892,16 +935,67 @@ public class GameService
                 sell(company, g, CompanySellReason.EVENT_CARD);
             }
         }
+        if(card.equalsIgnoreCase("EFFICIENCY_PROJECT_SMALL"))
+        {
+            if((company.event_card_efficiency_project_small.current_turn
+                    ||company.event_card_efficiency_project_medium.current_turn
+                    ||company.event_card_efficiency_project_large.current_turn)
+                &&company.event_card_efficiency_project_small.can_accept)
+            {
+                company.event_card_efficiency_project_small.accepted = true;
+                return ppe(company,g,EventCardType.EFFICIENCY_PROJECT_SMALL,credit);
+            }
+            else
+            {
+                return StatusCode.CANT_ACCEPT_CARD;
+            }
+        }
+        if(card.equalsIgnoreCase("EFFICIENCY_PROJECT_MEDIUM"))
+        {
+            if((company.event_card_efficiency_project_medium.current_turn
+                    ||company.event_card_efficiency_project_large.current_turn)
+                    &&company.event_card_efficiency_project_medium.can_accept)
+            {
+                company.event_card_efficiency_project_medium.accepted = true;
+                return ppe(company,g,EventCardType.EFFICIENCY_PROJECT_MEDIUM,credit);
+            }
+            else
+            {
+                return StatusCode.CANT_ACCEPT_CARD;
+            }
+        }
+        if(card.equalsIgnoreCase("EFFICIENCY_PROJECT_SMALL"))
+        {
+            if((company.event_card_efficiency_project_large.current_turn)
+                    &&company.event_card_efficiency_project_large.can_accept)
+            {
+                company.event_card_efficiency_project_large.accepted = true;
+                return ppe(company,g,EventCardType.EFFICIENCY_PROJECT_LARGE,credit);
+            }
+            else
+            {
+                return StatusCode.CANT_ACCEPT_CARD;
+            }
+        }
         if(card.equalsIgnoreCase("POCKING"))
         {
             if(company.event_card_pocking.current_turn)
             {
                 company.event_card_pocking.accepted = true;
+                pocking(company,g,size);
             }
         }
-        // TODO: ППЭ
 
         return StatusCode.SUCCESS;
+    }
+    private StatusCode ppe(Company c,Game g,EventCardType type,Credit credit)
+    {
+        calculateIndustry(g);
+        return StatusCode.SUCCESS;
+    }
+    private void pocking(Company c,Game g,String size)
+    {
+        calculateIndustry(g);
     }
     private void sell(Company c,Game g,CompanySellReason reason)
     {

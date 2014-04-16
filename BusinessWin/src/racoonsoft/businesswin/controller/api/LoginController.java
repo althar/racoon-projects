@@ -39,6 +39,7 @@ public class LoginController
         jsonMap.put("success", !result.anonymous());
         jsonMap.put("result", result.getResult());
         jsonMap.put("session_id", result.getData("session_id"));
+        jsonMap.put("user_id", result.getUser().getLongValue("id"));
         JSONProcessor json = new JSONProcessor(jsonMap);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
