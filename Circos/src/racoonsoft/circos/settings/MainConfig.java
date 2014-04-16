@@ -13,8 +13,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import racoonsoft.circos.database.PostgresqlDataSource;
-import racoonsoft.circos.interceptor.AccessInterceptor;
-import racoonsoft.circos.interceptor.HistoryInterceptor;
+import racoonsoft.library.web.interceptor.AccessInterceptor;
+import racoonsoft.library.web.interceptor.HistoryInterceptor;
 
 @Configuration
 @Import({WebConfig.class })

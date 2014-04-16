@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$/../BusinessWin" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/../Chipped" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/../Circos" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../Knauf" vcs="svn" />
     <mapping directory="$PROJECT_DIR$" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/../RacoonFramework" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/../SelectNew" vcs="svn" />

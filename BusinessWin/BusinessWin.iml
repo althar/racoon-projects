@@ -37,7 +37,6 @@
     <orderEntry type="library" name="spring-mvc-3.2.2.RELEASE" level="project" />
     <orderEntry type="module" module-name="RacoonFramework" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
-    <orderEntry type="library" name="javax.servlet.jsp.jstl:jstl-api:1.2" level="project" />
     <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
   </component>
 </module>
