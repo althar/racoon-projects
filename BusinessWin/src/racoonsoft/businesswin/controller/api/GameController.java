@@ -177,7 +177,10 @@ public class GameController extends BusinessWinController
     @RequestMapping("/accept_card")
     public ModelAndView acceptCard(HttpServletRequest request, HttpServletResponse response,Long game_id,Long company_id,String event_card_type,String size) throws Exception
     {
-        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type,size);
+        Credit credit = new Credit();
+        credit.fill(request);
+        StatusCode code = gameService.acceptCard(game_id,id(request),company_id,event_card_type,size,credit);
+
         JSONProcessor json = new JSONProcessor("code",code);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());

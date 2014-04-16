@@ -16,8 +16,14 @@ public class EventCard extends DBRecord
     @DataStructureField(name="accepted")
     public Boolean accepted = false;
 
+    @DataStructureField(name="can_accept")
+    public Boolean can_accept = false;
+
     @DataStructureField(name="event_card_value")
-    public Integer event_card_value = 0;
+    public Double event_card_value = 0.0;
+
+    @DataStructureField(name="event_card_price")
+    public Double event_card_price = 0.0;
 
     @DataStructureField(name="current_turn")
     public Boolean current_turn = false;

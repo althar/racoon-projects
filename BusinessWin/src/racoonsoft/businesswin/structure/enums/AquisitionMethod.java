@@ -2,8 +2,9 @@ package racoonsoft.businesswin.structure.enums;
 
 public enum AquisitionMethod
 {
-    NONE("Никакого")
-    , BUY_BANKRUPT("Покупка банкрота");
+    START("Было изначально")
+    , BUY_BANKRUPT("Покупка банкрота")
+    , EFFICIENCY_PROJECT("ППЭ");
 
     private String caption;
 

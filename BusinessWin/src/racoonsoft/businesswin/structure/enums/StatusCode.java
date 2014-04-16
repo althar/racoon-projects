@@ -17,6 +17,7 @@ public enum StatusCode
     CONSOLIDATION_DECLINED_BANKRUPT_OR_ON_SALE("Отказ в консолидации. Продается или банкрот"),
     CONSOLIDATION_DECLINED_NO_MONEY("Отказ в консолидации. Недостаточно средств"),
     CANT_GET_CREDIT("Отказ по кредиту"),
+    CANT_ACCEPT_CARD("Нельзя принять карточку"),
 
     WRONG_DATA_FORMAT("Неверный формат даннных");
 
