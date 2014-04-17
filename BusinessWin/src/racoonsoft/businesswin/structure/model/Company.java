@@ -27,7 +27,7 @@ public class Company
     public CompanyState company_state = new CompanyState();
 
     @DataStructureField(name="fixed_assets_and_depreciation")
-    public FixedAssetsAndDepreciation fixed_assets_and_depreciation = new FixedAssetsAndDepreciation();
+    public ArrayList<FixedAssetsAndDepreciation> fixed_assets_and_depreciation = new ArrayList<FixedAssetsAndDepreciation>();
 
     @DataStructureField(name="business_plan")
     public BusinessPlan business_plan = new BusinessPlan();
@@ -43,6 +43,7 @@ public class Company
 
     @DataStructureField(name="company_credits")
     public ArrayList<Credit> company_credits = new ArrayList<Credit>();
+
 
     // EventCards
     @DataStructureField(name="event_card_sell_company")
@@ -63,6 +64,7 @@ public class Company
         products_and_capacity = new CompanyProductionAndCapacity();
         company_sensors = new CompanySensors();
         company_state = new CompanyState();
+        fixed_assets_and_depreciation.add(new FixedAssetsAndDepreciation());
     }
     public boolean isBankupt()
     {

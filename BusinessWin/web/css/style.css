@@ -1,0 +1,71 @@
+﻿/*Убираем отступы*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+	font-family: gill;
+	src: local("gill"),
+	   url(../fonts/gill.eot);
+}
+
+@font-face {
+	font-family: gill;
+	src: local("gill"),
+	   url(../fonts/gill.ttf);
+}
+
+body {
+    background: #009496;
+    height: 100%;
+    font-family: gill;
+}
+
+.content {
+    width: 837px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 6%;
+    min-height: 700px;
+}
+
+.logo {
+    padding: 80px;
+    padding-bottom: 0px;
+}
+
+.presentation {
+    margin: 0 auto;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #000;
+}
+
+.info {
+    font-size: 15px;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #009496;
+    padding-bottom: 80px;
+}
+
+    .info a {
+        color: #009496;
+    }
+
+.title {
+    padding: 10px;
+    color: #009496;
+}
+
+.content-text {
+    width: 220px;
+    margin: 0 auto;
+    color: #193984;
+    text-align: justify;
+}
