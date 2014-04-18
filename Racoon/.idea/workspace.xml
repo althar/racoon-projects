@@ -598,7 +598,7 @@
     <file path="/ServiceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397649921099" ignored="false" />
     <file path="/news.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387883896262" ignored="false" />
     <file path="/LanguageBoxActionResultCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387981037782" ignored="false" />
-    <file path="/Company.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738581146" ignored="false" />
+    <file path="/Company.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397822235075" ignored="false" />
     <file path="/EventCard.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396612906389" ignored="false" />
     <file path="/EventCardType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390226575694" ignored="false" />
     <file path="/a.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390296584762" ignored="false" />
@@ -654,7 +654,7 @@
     <file path="/bootstrap.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937443531" ignored="false" />
     <file path="/login.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1393937825225" ignored="false" />
     <file path="/BusinessWinController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394617581634" ignored="false" />
-    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397744967823" ignored="false" />
+    <file path="/GameService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397822615613" ignored="false" />
     <file path="/GameBindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394718109817" ignored="false" />
     <file path="/TradeFactors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394636593728" ignored="false" />
     <file path="/GoodsDeclaration.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1394708869515" ignored="false" />
@@ -817,6 +817,7 @@
     <file path="/FixedAssets.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738343612" ignored="false" />
     <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/AcuisitionMethod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738197413" ignored="false" />
     <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/AcquisitionMethod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738344483" ignored="false" />
+    <file path="/FixedAssetsAndDepreciation.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397822018748" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -924,11 +925,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="173" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.7060703">
+            <state line="25" column="50" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-16.346153">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixedAssetsAndDepreciation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="6" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="49" selection-start="3065" selection-end="3065" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1030#1058#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="906" column="58" selection-start="41473" selection-end="41473" vertical-scroll-proportion="0.2684049">
+              <folding>
+                <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
+                <element signature="method#getGames#0;class#GameService#0" expanded="false" />
+                <element signature="method#getGame#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#createGame#0;n#GameService#0" expanded="false" />
+                <element signature="method#createGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#finishGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#startGame#0;class#GameService#0" expanded="false" />
+                <element signature="method#joinGame#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#declareGoods#0;n#GameService#0" expanded="false" />
+                <element signature="method#declareGoods#0;class#GameService#0" expanded="false" />
+                <element signature="method#setTradeFactors#0;class#GameService#0" expanded="false" />
+                <element signature="method#endPhase1#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#setEventCards#0;n#GameService#0" expanded="false" />
+                <element signature="method#setEventCards#0;class#GameService#0" expanded="false" />
+                <element signature="method#acceptCard#0;class#GameService#0" expanded="false" />
+                <element signature="method#sellCompany#0;class#GameService#0" expanded="false" />
+                <element signature="method#betCompany#0;class#GameService#0" expanded="false" />
+                <element signature="method#consolidation#0;class#GameService#0" expanded="false" />
+                <element signature="method#endPhase2#0;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
+                <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
+                <element signature="method#calculateIndustry#0;class#GameService#0" expanded="false" />
+                <element signature="method#calculateStep0#0;class#GameService#0" expanded="false" />
+                <element signature="e#9836#9882#0" expanded="false" />
+                <element signature="e#11260#11365#0" expanded="false" />
+                <element signature="e#11820#11929#0" expanded="false" />
+                <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
+                <element signature="e#20549#20580#0" expanded="false" />
+                <element signature="e#21251#21300#0" expanded="false" />
+                <element signature="e#22442#22494#0" expanded="false" />
+                <element signature="n#!!doc;n#calculateCompanyPrice#0;n#GameService#0" expanded="false" />
+                <element signature="method#calculateCompanyPrice#0;class#GameService#0" expanded="false" />
+                <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
+                <element signature="e#24259#24301#0" expanded="false" />
+                <element signature="e#27199#27235#0" expanded="false" />
+                <element signature="e#35436#35488#0" expanded="false" />
+                <element signature="e#39021#39067#0" expanded="false" />
+                <element signature="e#39799#39872#0" expanded="false" />
+                <element signature="method#acceptCard#1;class#GameService#0" expanded="false" />
+                <element signature="e#41618#41680#0" expanded="false" />
+                <element signature="method#ppe#0;class#GameService#0" expanded="false" />
+                <element signature="method#pocking#0;class#GameService#0" expanded="false" />
+                <element signature="method#sell#0;class#GameService#0" expanded="false" />
+                <element signature="method#bet#0;class#GameService#0" expanded="false" />
+                <element signature="method#consolidation#1;class#GameService#0" expanded="false" />
+                <element signature="n#!!doc;n#calculatePhase3#0;n#GameService#0" expanded="false" />
+                <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
+                <element signature="e#48505#48529#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -959,11 +1038,11 @@
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/settings/MainConfig.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssets.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/FaceController.java" />
+        <option value="$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
         <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/FaceController.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp" />
       </list>
     </option>
   </component>
@@ -2169,22 +2248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="76" selection-start="2919" selection-end="2919" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1030#1058#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/CompanyState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="26" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.33333334">
@@ -2248,9 +2311,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="50" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-16.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="6" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="49" selection-start="3065" selection-end="3065" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1030#1058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="910" column="47" selection-start="41682" selection-end="41682" vertical-scroll-proportion="0.513302">
+        <state line="906" column="58" selection-start="41473" selection-end="41473" vertical-scroll-proportion="0.2684049">
           <folding>
             <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
             <element signature="method#getGames#0;class#GameService#0" expanded="false" />
@@ -2274,24 +2360,24 @@
             <element signature="n#!!doc;n#endPhase3#0;n#GameService#0" expanded="false" />
             <element signature="method#endPhase3#0;class#GameService#0" expanded="false" />
             <element signature="method#calculateIndustry#0;class#GameService#0" expanded="false" />
+            <element signature="method#calculateStep0#0;class#GameService#0" expanded="false" />
             <element signature="e#9836#9882#0" expanded="false" />
             <element signature="e#11260#11365#0" expanded="false" />
-            <element signature="e#17092#17145#0" expanded="false" />
-            <element signature="e#17210#17253#0" expanded="false" />
+            <element signature="e#11820#11929#0" expanded="false" />
             <element signature="method#calculateDemandCurve#0;class#GameService#0" expanded="false" />
-            <element signature="e#20999#21030#0" expanded="false" />
-            <element signature="e#21701#21750#0" expanded="false" />
-            <element signature="e#22892#22944#0" expanded="false" />
+            <element signature="e#20549#20580#0" expanded="false" />
+            <element signature="e#21251#21300#0" expanded="false" />
+            <element signature="e#22442#22494#0" expanded="false" />
             <element signature="n#!!doc;n#calculateCompanyPrice#0;n#GameService#0" expanded="false" />
             <element signature="method#calculateCompanyPrice#0;class#GameService#0" expanded="false" />
             <element signature="method#calculatePhase1#0;class#GameService#0" expanded="false" />
-            <element signature="e#24709#24751#0" expanded="false" />
-            <element signature="e#27649#27685#0" expanded="false" />
-            <element signature="e#35886#35938#0" expanded="false" />
-            <element signature="e#39471#39517#0" expanded="false" />
-            <element signature="e#40249#40322#0" expanded="false" />
+            <element signature="e#24259#24301#0" expanded="false" />
+            <element signature="e#27199#27235#0" expanded="false" />
+            <element signature="e#35436#35488#0" expanded="false" />
+            <element signature="e#39021#39067#0" expanded="false" />
+            <element signature="e#39799#39872#0" expanded="false" />
             <element signature="method#acceptCard#1;class#GameService#0" expanded="false" />
-            <element signature="e#42046#42108#0" expanded="false" />
+            <element signature="e#41618#41680#0" expanded="false" />
             <element signature="method#ppe#0;class#GameService#0" expanded="false" />
             <element signature="method#pocking#0;class#GameService#0" expanded="false" />
             <element signature="method#sell#0;class#GameService#0" expanded="false" />
@@ -2299,15 +2385,8 @@
             <element signature="method#consolidation#1;class#GameService#0" expanded="false" />
             <element signature="n#!!doc;n#calculatePhase3#0;n#GameService#0" expanded="false" />
             <element signature="method#calculatePhase3#0;class#GameService#0" expanded="false" />
-            <element signature="e#48933#48957#0" expanded="false" />
+            <element signature="e#48505#48529#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="173" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.7060703">
-          <folding />
         </state>
       </provider>
     </entry>
