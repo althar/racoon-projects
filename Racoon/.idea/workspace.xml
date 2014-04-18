@@ -51,7 +51,7 @@
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
-    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366099807" ignored="false" />
+    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397828639861" ignored="false" />
     <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738456372" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397648449054" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
@@ -110,7 +110,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/admin/src/main/java/erdicto/fin/admin/controller/Seller.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366040033394" ignored="false" />
     <file path="/FileUpload.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366201355819" ignored="false" />
     <file path="/UploadedImage.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366108094662" ignored="false" />
-    <file path="/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397652582674" ignored="false" />
+    <file path="/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826815322" ignored="false" />
     <file path="/Cfg.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366110539877" ignored="false" />
     <file path="/total_fail.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366115498428" ignored="false" />
     <file path="/GoogleImageService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1366385140138" ignored="false" />
@@ -199,7 +199,7 @@
     <file path="/salary.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369210046392" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/jq/jquery.numeric.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369210008666" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/APIController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369324033540" ignored="false" />
-    <file path="/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396959150919" ignored="false" />
+    <file path="/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826982960" ignored="false" />
     <file path="/AccessInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397651821402" ignored="false" />
     <file path="$PROJECT_DIR$/SelectST/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369227904232" ignored="false" />
     <file path="$PROJECT_DIR$/../SelectST/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369228000567" ignored="false" />
@@ -727,7 +727,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/interceptor/BusinessWinInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948706906" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945062059" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397564838260" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/settings/MainConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826817211" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/BusinessPlan.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/CompanyState.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/data/TradeFactors.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
@@ -754,8 +754,8 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/enums/ElasticityFunctionType.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944913107" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/interceptor/MyBuhInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948756062" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/BusinessWinController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396944978705" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397649613253" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045176920" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826796288" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/properties/main.properties" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826983297" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/structure/BindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948593539" ignored="false" />
     <file path="/BindStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396945700256" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397479997842" ignored="false" />
@@ -763,15 +763,15 @@
     <file path="/MyBuhInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396948751817" ignored="false" />
     <file path="$PROJECT_DIR$/../Circos/src/racoonsoft.circos/database/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949561400" ignored="false" />
     <file path="/CircosInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949697850" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397033706858" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397828903861" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/sections/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396949855834" ignored="false" />
     <file path="/welcome.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396963843055" ignored="false" />
-    <file path="/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397745051987" ignored="false" />
+    <file path="/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397828769728" ignored="false" />
     <file path="/CircosController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396959037736" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/deploy/deploy.bat" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397045006305" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397649618363" ignored="false" />
-    <file path="/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397649611587" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029641132" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/src/mybuh/controller/face/FaceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397828775340" ignored="false" />
+    <file path="/MyBuhController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397826794570" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397828641366" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397039107282" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029709772" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397477237383" ignored="false" />
@@ -779,11 +779,11 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029713373" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029713951" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030254691" ignored="false" />
-    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397488700757" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397829272573" ignored="false" />
     <file path="/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397032204188" ignored="false" />
     <file path="/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029968542" ignored="false" />
     <file path="/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030253435" ignored="false" />
-    <file path="/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031370706" ignored="false" />
+    <file path="/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397827606286" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/mail/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031382980" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/MyBuh.iml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397039003039" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/pp.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031829387" ignored="false" />
@@ -818,6 +818,11 @@
     <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/AcuisitionMethod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738197413" ignored="false" />
     <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/AcquisitionMethod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738344483" ignored="false" />
     <file path="/FixedAssetsAndDepreciation.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397822018748" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/js/logic/header.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397829200442" ignored="false" />
+    <file path="/header.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397825872045" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/css/addings.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397825933242" ignored="false" />
+    <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/css/style.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397825996568" ignored="false" />
+    <file path="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/mail/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397827608583" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -957,7 +962,7 @@
       <file leaf-file-name="GameService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="906" column="58" selection-start="41473" selection-end="41473" vertical-scroll-proportion="0.2684049">
+            <state line="991" column="73" selection-start="44811" selection-end="44811" vertical-scroll-proportion="0.47699386">
               <folding>
                 <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
                 <element signature="method#getGames#0;class#GameService#0" expanded="false" />
@@ -2336,7 +2341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="906" column="58" selection-start="41473" selection-end="41473" vertical-scroll-proportion="0.2684049">
+        <state line="991" column="73" selection-start="44811" selection-end="44811" vertical-scroll-proportion="0.47699386">
           <folding>
             <element signature="n#!!doc;n#getGames#0;n#GameService#0" expanded="false" />
             <element signature="method#getGames#0;class#GameService#0" expanded="false" />

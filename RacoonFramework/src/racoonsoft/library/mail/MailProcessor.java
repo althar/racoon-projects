@@ -24,9 +24,21 @@ public class MailProcessor implements Runnable
     private Session mailSession;
     private Transport transport;
 
+    String smtpHost = Settings.getStringSetting("smtp_server");
+    String smtpLogin = Settings.getStringSetting("smtp_user");
+    String smtpPassword = Settings.getStringSetting("smtp_password");
+    Boolean enableTls = Settings.getBooleanSetting("mail_enable_tls");
+
     public MailProcessor()
     {
 
+    }
+    public MailProcessor(String smtpHost,String smtpLogin,String smtpPassword, boolean enableTls)
+    {
+        this.smtpHost = smtpHost;
+        this.smtpLogin = smtpLogin;
+        this.smtpPassword = smtpPassword;
+        this.enableTls = enableTls;
     }
     public void run()
     {
@@ -82,10 +94,10 @@ public class MailProcessor implements Runnable
     {
         try
         {
-            String smtpHost = Settings.getStringSetting("smtp_server");
-            String smtpLogin = Settings.getStringSetting("smtp_user");
-            String smtpPassword = Settings.getStringSetting("smtp_password");
-	        Boolean enableTls = Settings.getBooleanSetting("mail_enable_tls");
+//            String smtpHost = Settings.getStringSetting("smtp_server");
+//            String smtpLogin = Settings.getStringSetting("smtp_user");
+//            String smtpPassword = Settings.getStringSetting("smtp_password");
+//	        Boolean enableTls = Settings.getBooleanSetting("mail_enable_tls");
             if(message.isAuthorized())
             {
                 smtpHost = message.smtpHost();
@@ -136,6 +148,7 @@ public class MailProcessor implements Runnable
                 mess.addRecipient(Message.RecipientType.TO,
                 new InternetAddress(message.to()[i]));
             }
+            mess.setFrom(new InternetAddress(message.from(),message.from()));
             transport.connect(smtpLogin, smtpPassword);
             transport.sendMessage(mess,
             mess.getRecipients(Message.RecipientType.TO));
