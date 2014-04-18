@@ -367,20 +367,15 @@ public class GameService
             // Table 5
 
             // TODO: 1
-//            company.fixed_assets_and_depreciation.fixed_assets_cost.set(g.startSettings.value_assets_for_all_companies.get()
-//                    *company.company_sensors.main_assets_sensor.get()
-//                    /mainAssetsSensorSum);
-//            company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
-//            company.fixed_assets_and_depreciation.depreciation.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
-//                    /company.fixed_assets_and_depreciation.depreciation_period.get());
-//            company.fixed_assets_and_depreciation.acquisition_method = AcquisitionMethod.START;
+            FixedAssetsAndDepreciation assets = new FixedAssetsAndDepreciation(g.startSettings.value_assets_for_all_companies.get()*company.company_sensors.main_assets_sensor.get()/mainAssetsSensorSum
+                    ,g.startSettings.total_depreciation.get().intValue(),0,AcquisitionMethod.START);
 
             // Table 4
             company.company_state.revenue.set(company.products_and_capacity.production.get()*g.product_price_and_production.p);
             company.company_state.variable_costs.set(company.company_state.revenue.get()*company.company_sensors.variable_costs_sensor.get());
             company.company_state.operation_profit.set(company.company_state.revenue.get() - company.company_state.variable_costs.get());
             company.company_state.constant_costs.set(company.company_state.revenue.get()*company.company_sensors.constant_costs_sensor.get());
-            //company.company_state.depreciation.set(company.fixed_assets_and_depreciation.depreciation.get());
+            company.company_state.depreciation.set(company.getDepreciation(0));
             company.company_state.percent_payment.set(0.0);
             company.company_state.profit_before_taxes.set(company.company_state.revenue.get()
                     -company.company_state.variable_costs.get()
@@ -395,8 +390,7 @@ public class GameService
                     /cashSensorSum)
                     +company.company_state.net_profit.get()
                     +company.company_state.depreciation.get());
-            //company.company_state.net_fixed_assets.set(company.fixed_assets_and_depreciation.fixed_assets_cost.get()
-                    //-company.company_state.depreciation.get());
+            company.company_state.net_fixed_assets.set(company.getFixedAssetsForTurn(0)-company.getDepreciation(0));
             company.company_state.current_passives.set(0.0);
             company.company_state.debt.set(0.0);
             company.company_state.credit_value.set(0.0);
@@ -435,27 +429,27 @@ public class GameService
                 item.constant_costs = company.company_state.constant_costs.get();
                 // Depreciation
                 // TODO: 2
-//                if(company.fixed_assets_and_depreciation.acquisition_method== AcquisitionMethod.START &&turn<company.fixed_assets_and_depreciation.depreciation_period.get()-1)
-//                {
-//                    item.depreciation = company.fixed_assets_and_depreciation.depreciation.get();
-//                }
-//                else if(company.fixed_assets_and_depreciation.acquisition_method== AcquisitionMethod.START &&turn==company.fixed_assets_and_depreciation.depreciation_period.get()-1)
-//                {
-//                    item.depreciation = company.fixed_assets_and_depreciation.fixed_assets_cost.get()
-//                            - (company.fixed_assets_and_depreciation.depreciation.get()
-//                            * (company.fixed_assets_and_depreciation.depreciation_period.get()-1));
-//                }
-//                else
-//                {
-//                    item.depreciation = 0.0;
-//                }
+                if(company.fixed_assets_and_depreciation.get(0).acquisition_method== AcquisitionMethod.START &&turn<company.fixed_assets_and_depreciation.get(0).depreciation_period-1)
+                {
+                    item.depreciation = company.fixed_assets_and_depreciation.get(0).depreciation.get();
+                }
+                else if(company.fixed_assets_and_depreciation.get(0).acquisition_method == AcquisitionMethod.START &&turn==company.fixed_assets_and_depreciation.get(0).depreciation_period-1)
+                {
+                    item.depreciation = company.fixed_assets_and_depreciation.get(0).fixed_assets_cost.get()
+                            - (company.fixed_assets_and_depreciation.get(0).depreciation.get()
+                            * (company.fixed_assets_and_depreciation.get(0).depreciation_period-1));
+                }
+                else
+                {
+                    item.depreciation = 0.0;
+                }
                 item.interest_payment = 0.0;
                 item.profit_before_taxes = item.revenue - item.variable_costs - item.constant_costs - item.depreciation;
                 item.profit_taxes = item.profit_before_taxes<0 ? 0.0 : item.profit_before_taxes*g.startSettings.profit_tax.get();
                 item.net_profit = item.profit_before_taxes - item.profit_taxes;
                 item.cash = turn==1 ? company.company_state.cash.get() + item.net_profit + item.depreciation : item.cash + item.net_profit + item.depreciation;
-//                item.net_fixed_assets = (company.fixed_assets_and_depreciation.acquisition_method== AcquisitionMethod.START && turn<(company.fixed_assets_and_depreciation.depreciation_period.get()-1))
-//                        ? company.fixed_assets_and_depreciation.fixed_assets_cost.get()-company.fixed_assets_and_depreciation.depreciation.get()*(turn+1) :0.0;
+                item.net_fixed_assets = (company.fixed_assets_and_depreciation.get(0).acquisition_method== AcquisitionMethod.START && turn<(company.fixed_assets_and_depreciation.get(0).depreciation_period-1))
+                        ? company.fixed_assets_and_depreciation.get(0).fixed_assets_cost.get()-company.fixed_assets_and_depreciation.get(0).depreciation.get()*(turn+1) :0.0;
                 item.current_liabilities = 0.0;
                 item.debt = 0.0;
                 item.credit_size = 0.0;
@@ -906,10 +900,10 @@ public class GameService
             seller_company.company_state.share_capital.set(seller_company.company_state.net_fixed_assets.get());
             seller_company.company_state.retained_earnings.set(0.0);
             // TODO: 3
-//            seller_company.fixed_assets_and_depreciation.depreciation_period.set(g.startSettings.total_depreciation.get());
-//            seller_company.fixed_assets_and_depreciation.depreciation.set(seller_company.company_state.net_fixed_assets.get()
-//                    /seller_company.fixed_assets_and_depreciation.depreciation_period.get());
-//            seller_company.fixed_assets_and_depreciation.acquisition_method = AcquisitionMethod.BUY_BANKRUPT;
+            seller_company.fixed_assets_and_depreciation.get(0).depreciation_period = g.startSettings.total_depreciation.get().intValue();
+            seller_company.fixed_assets_and_depreciation.get(0).depreciation.set(seller_company.company_state.net_fixed_assets.get()
+                    /seller_company.fixed_assets_and_depreciation.get(0).depreciation_period);
+            seller_company.fixed_assets_and_depreciation.get(0).acquisition_method = AcquisitionMethod.BUY_BANKRUPT;
             seller_company.company_state.bankrupt = false;
         }
 

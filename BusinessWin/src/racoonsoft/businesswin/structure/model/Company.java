@@ -64,10 +64,28 @@ public class Company
         products_and_capacity = new CompanyProductionAndCapacity();
         company_sensors = new CompanySensors();
         company_state = new CompanyState();
-        fixed_assets_and_depreciation.add(new FixedAssetsAndDepreciation());
+        //fixed_assets_and_depreciation.add(new FixedAssetsAndDepreciation());
     }
     public boolean isBankupt()
     {
         return company_state.cash.get()<0.0;
+    }
+    public Double getFixedAssetsForTurn(int turn)
+    {
+        Double result = 0.0;
+        for(FixedAssetsAndDepreciation assets: fixed_assets_and_depreciation)
+        {
+            result+=assets.getFixedAssetsForTurn(turn);
+        }
+        return result;
+    }
+    public Double getDepreciation(int turn)
+    {
+        Double result = 0.0;
+        for(FixedAssetsAndDepreciation assets: fixed_assets_and_depreciation)
+        {
+            result+=assets.getDepreciation(turn);
+        }
+        return result;
     }
 }
