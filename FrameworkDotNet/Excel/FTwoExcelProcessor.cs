@@ -15,10 +15,10 @@ namespace FTwoFramework.Excel
         ,"m","n","o","p","q","r","s","t"
         ,"u","v","w","x","y","z"};
 
-        private Microsoft.Office.Interop.Excel.Application ExcelApp;
-        private Microsoft.Office.Interop.Excel.Workbook ExcelBook;
-        private Microsoft.Office.Interop.Excel.Worksheet ExcelCurrentSheet;
-        private Microsoft.Office.Interop.Excel.Sheets Sheets;
+        public Microsoft.Office.Interop.Excel.Application ExcelApp;
+        public Microsoft.Office.Interop.Excel.Workbook ExcelBook;
+        public Microsoft.Office.Interop.Excel.Worksheet ExcelCurrentSheet;
+        public Microsoft.Office.Interop.Excel.Sheets Sheets;
         public delegate void ExcelCloseHandler(Workbook Wb, Window Wn,Application app,Workbook book,Sheets sheets,FTwoExcelProcessor proc);
         public event ExcelCloseHandler OnExcelClose;
         private List<object> comObjects = new List<object>();
