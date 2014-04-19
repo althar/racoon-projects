@@ -6,6 +6,7 @@ import racoonsoft.businesswin.structure.enums.*;
 import racoonsoft.businesswin.structure.model.*;
 import racoonsoft.library.helper.Helper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Random;
@@ -567,8 +568,32 @@ public class GameService
         company.company_state.company_minimum_price.set(company.company_state.cash.get()
                 -company.company_state.debt.get());
     }
+    private void withdrawByCredit(Game g)
+    {
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            ArrayList<Credit> credits = company.company_credits;
+            for(Credit c:credits)
+            {
+                company.company_state.debt.set(c.getDebt(g.turn.turn));
+                company.company_state.cash.add(-c.getPaymentWithPercent(g.turn.turn));
+            }
+        }
+    }
+    private void withdrawByDepreciation(Game g)
+    {
+        for(int i=0; i<g.companies.size(); i++)
+        {
+            Company company = g.companies.get(i);
+            company.company_state.cash.add(-company.getDepreciation(g.turn.turn));
+        }
+    }
     private void calculatePhase1(Game g)
     {
+        withdrawByCredit(g);
+        withdrawByDepreciation(g);
+
         //<editor-fold desc="Demand supply curve">
 
         Double qCurrent = g.product_price_and_production.q
@@ -638,6 +663,14 @@ public class GameService
         for(int i=0; i<g.companies.size(); i++)
         {
             Company company = g.companies.get(i);
+            company.company_state.credit_value.set(company.currentTurnCreditValue(g.turn.turn));
+
+            Double shareCapital = company.company_state.cash.get()
+                    +company.company_state.net_fixed_assets.get()
+                    -company.company_state.retained_earnings.get()
+                    -company.company_state.debt.get();
+            company.company_state.net_fixed_assets.set(company.getFixedAssetsForTurn(g.turn.turn));
+            company.company_state.share_capital.set(shareCapital);
 
             company.company_state.revenue.set(0.0);
             if(company.goodsDeclaration.price.get()<=g.demand_supply_curve.current_sell_price)
@@ -766,10 +799,11 @@ public class GameService
             {
                 sell(company,g,CompanySellReason.BANKRUPT);
             }
+
+            // Difficult ones
+            company.company_state.depreciation.set(company.getDepreciation(g.turn.turn));
         }
         //</editor-fold>
-
-
     }
     //</editor-fold>
 
@@ -816,10 +850,11 @@ public class GameService
                     *(company.company_state.power.get()+company.company_state.new_power.get())
                     *(1+g.startSettings.exceeds_the_net_book_value_of_fixed_assets_coefficient_big_project.get())
                     *g.industry_performance.capacity_unit_price.get();
-            company.company_state.new_power.set(g.startSettings.current_power_percent_big_project.get()
-                    *(company.company_state.power.get()+company.company_state.new_power.get()));
 
-            Double canSpend = 0.0;
+            // Contract entire volume
+            company.event_card_contract_entire_volume.event_card_value = g.product_price_and_production.p*0.95;
+
+            Double canSpend;
             if(company.company_state.credit_rating_current!=CreditRating.DDD)
             {
                 canSpend = Double.MAX_VALUE;
@@ -828,11 +863,9 @@ public class GameService
             {
                 canSpend = company.company_state.cash.get();
             }
-
             company.event_card_efficiency_project_small.can_accept = false;
             company.event_card_efficiency_project_medium.can_accept = false;
             company.event_card_efficiency_project_large.can_accept = false;
-
             if(canSpend>company.event_card_efficiency_project_small.event_card_price)
             {
                 company.event_card_efficiency_project_small.can_accept = true;
@@ -845,10 +878,8 @@ public class GameService
             {
                 company.event_card_efficiency_project_large.can_accept = true;
             }
-
-            // Contract entire volume
-            company.event_card_contract_entire_volume.event_card_value = g.product_price_and_production.p*0.95;
         }
+
         //</editor-fold>
     }
     private void companySold(Game g, Company seller_company,Company buyer_company,CompanyBet bet)
@@ -899,11 +930,10 @@ public class GameService
             seller_company.company_credits.clear();
             seller_company.company_state.share_capital.set(seller_company.company_state.net_fixed_assets.get());
             seller_company.company_state.retained_earnings.set(0.0);
-            // TODO: 3
-            seller_company.fixed_assets_and_depreciation.get(0).depreciation_period = g.startSettings.total_depreciation.get().intValue();
-            seller_company.fixed_assets_and_depreciation.get(0).depreciation.set(seller_company.company_state.net_fixed_assets.get()
-                    /seller_company.fixed_assets_and_depreciation.get(0).depreciation_period);
-            seller_company.fixed_assets_and_depreciation.get(0).acquisition_method = AcquisitionMethod.BUY_BANKRUPT;
+
+            seller_company.fixed_assets_and_depreciation.clear();
+            FixedAssetsAndDepreciation assets = new FixedAssetsAndDepreciation(bet.value,g.startSettings.total_depreciation.get().intValue(),g.turn.turn,AcquisitionMethod.BUY_BANKRUPT);
+            seller_company.fixed_assets_and_depreciation.add(assets);
             seller_company.company_state.bankrupt = false;
         }
 
@@ -911,12 +941,7 @@ public class GameService
     }
     private StatusCode acceptCard(Company company,String card,String size,Game g,Credit credit)
     {
-//        CONTRACT_ENTIRE_VOLUME("Законтрактовать весь объем")
-//                , SELL_COMPANY("Продажа предприятия")
-//                , EFFICIENCY_PROJECT_SMALL("Проект повышения эффективности 1")
-//                , EFFICIENCY_PROJECT_MEDIUM("Проект повышения эффективности 2")
-//                , EFFICIENCY_PROJECT_LARGE("Проект повышения эффективности 3")
-//                , POCKING("Поккинг");
+
         if(card.equalsIgnoreCase("CONTRACT_ENTIRE_VOLUME"))
         {
             if(company.event_card_contract_entire_volume.current_turn)
@@ -987,6 +1012,66 @@ public class GameService
     }
     private StatusCode ppe(Company c,Game g,EventCardType type,Credit credit)
     {
+        EventCard card = c.event_card_efficiency_project_small;
+        if(type==EventCardType.EFFICIENCY_PROJECT_MEDIUM)
+        {
+            card = c.event_card_efficiency_project_medium;
+        }
+        if(type==EventCardType.EFFICIENCY_PROJECT_LARGE)
+        {
+            card = c.event_card_efficiency_project_large;
+        }
+        //<editor-fold desc="Can accept">
+        Double cash = c.company_state.cash.get();
+        if(credit!=null)
+        {
+            cash += credit.credit_value;
+        }
+
+        if(type==EventCardType.EFFICIENCY_PROJECT_SMALL
+                &&(!c.event_card_efficiency_project_small.can_accept||cash<c.event_card_efficiency_project_small.event_card_price))
+        {
+            return StatusCode.CANT_ACCEPT_CARD;
+        }
+        if(type==EventCardType.EFFICIENCY_PROJECT_MEDIUM&&!c.event_card_efficiency_project_medium.can_accept
+                &&(!c.event_card_efficiency_project_medium.can_accept||cash<c.event_card_efficiency_project_medium.event_card_price))
+        {
+            return StatusCode.CANT_ACCEPT_CARD;
+        }
+        if(type==EventCardType.EFFICIENCY_PROJECT_LARGE&&!c.event_card_efficiency_project_large.can_accept
+                &&(!c.event_card_efficiency_project_large.can_accept||cash<c.event_card_efficiency_project_large.event_card_price))
+        {
+            return StatusCode.CANT_ACCEPT_CARD;
+        }
+        //</editor-fold>
+
+        //<editor-fold desc="Cash decrease & add fixed assets. New power. Credit.">
+        c.company_state.cash.set(cash);
+        // TODO: ???? В ТЗ таба 28
+        credit.turn = g.turn.turn;
+        c.company_credits.add(credit);
+        if(card.event_card_type == EventCardType.EFFICIENCY_PROJECT_LARGE)
+        {
+            // New power
+            c.company_state.new_power.set(g.startSettings.current_power_percent_big_project.get()
+                    *(c.company_state.power.get()+c.company_state.new_power.get()));
+
+            Double cost = g.startSettings.current_power_percent_big_project.get()
+                    *(c.company_state.power.get()+c.company_state.new_power.get())
+                    *(1+g.startSettings.exceeds_the_net_book_value_of_fixed_assets_coefficient_big_project.get())
+                    *g.industry_performance.capacity_unit_price.get();
+            FixedAssetsAndDepreciation assets = new FixedAssetsAndDepreciation(cost,g.startSettings.total_depreciation.get().intValue(),g.turn.turn,AcquisitionMethod.EFFICIENCY_PROJECT);
+            c.fixed_assets_and_depreciation.add(assets);
+        }
+        if(card.event_card_type == EventCardType.EFFICIENCY_PROJECT_MEDIUM)
+        {
+            Double cost = g.startSettings.investment_constant_costs_coefficient_medium_project.get()*c.company_state.constant_costs.get();
+            FixedAssetsAndDepreciation assets = new FixedAssetsAndDepreciation(cost,g.startSettings.total_depreciation.get().intValue(),g.turn.turn,AcquisitionMethod.EFFICIENCY_PROJECT);
+            c.fixed_assets_and_depreciation.add(assets);
+        }
+
+        //</editor-fold>
+
         calculateIndustry(g);
         return StatusCode.SUCCESS;
     }
@@ -1085,8 +1170,6 @@ public class GameService
     //<editor-fold desc="Phase 3">
     private void calculatePhase3(Game g)
     {
-        // Calculate step 0 data
-
         // Cards
         for(int i=0; i<g.companies.size(); i++)
         {
@@ -1109,6 +1192,8 @@ public class GameService
             company.event_card_efficiency_project_large.previous_turn = company.event_card_efficiency_project_large.current_turn;
             company.event_card_efficiency_project_large.current_turn = false;
         }
+
+        // Pay amortization
     }
     //</editor-fold>
 
