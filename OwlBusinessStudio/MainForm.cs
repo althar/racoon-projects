@@ -19,6 +19,9 @@ using System.Web;
 using System.Net;
 using System.Xml;
 using System.Runtime.InteropServices;
+using Microsoft.Office.Core;
+using Microsoft.Office.Interop;
+using FTwoFramework.Helpers;
 
 namespace OwlBusinessStudio
 {
@@ -3084,6 +3087,65 @@ namespace OwlBusinessStudio
         private void ButtExportPurchase_Click(object sender, EventArgs e)
         {
             PanelUploadPurchse.Visible = !PanelUploadPurchse.Visible;
+        }
+
+        private void ButtMakeBill_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int order_id = currentDeliveryListOrder;
+                DataTable drivers = dbProc.executeGet("SELECT *, substring(first_name from 1 for 1)||'. '||second_name AS fio FROM users WHERE role_id=3 ORDER BY fio");
+                DataTable orders = null;
+                string sqlCommand = "SELECT owd.created,owd.id,owd.phone_1,owd.phone_2,owd.phone_3,owd.phones,owd.good_name,owd.deliver_date,owd.count,owd.address,owd.deliver_time,owd.total_price,owd.goods_price,owd.good_price,owd.deliver_price,owd.client_name,owd.discount_percent FROM orders_with_details owd, delivery_lists dl WHERE owd.id=dl.order_id AND dl.order_id=" + order_id + " ORDER BY dl.priority";
+                orders = dbProc.executeGet(sqlCommand);
+                if (orders.Rows.Count == 0)
+                {
+                    return;
+                }
+                DataRow order = orders.Rows[0];
+
+                FTwoExcelProcessor excel = new FTwoExcelProcessor();
+                excel.InitApplication(true, Environment.CurrentDirectory + "/Resources/bill.xlsx");
+                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(proc_OnExcelClose);
+                DateTime date = (DateTime)order["created"];
+                
+                string dateStr = date.ToString("dd.MM.yyyy");
+                excel.text(13, 2, "Счет № " + order["id"] + " от " + dateStr);
+                excel.text(15, 2, "Плательщик: "
+                    + order["client_name"]
+                    + ", "
+                    + order["address"]
+                    + " Тел. "
+                    + order["phone_1"]
+                    + "");
+                int totalPrice = 0;
+                for (int i = 0; i < orders.Rows.Count; i++)
+                {
+                    DataRow item = orders.Rows[i];
+                    Microsoft.Office.Interop.Excel.Range RngToCopy = excel.getRange(2, 20, 8, 20);
+                    Microsoft.Office.Interop.Excel.Range RngToInsert = excel.getRange(2, 20 + i, 8, 20 + i);
+                    RngToInsert.Insert(Microsoft.Office.Interop.Excel.XlInsertShiftDirection.xlShiftDown, RngToCopy.Copy(Type.Missing));
+                    excel.text(20 + i, 2, (i+1).ToString());
+                    excel.text(20 + i, 3, item["good_name"].ToString());
+                    excel.text(20 + i, 6, item["count"].ToString());
+                    excel.text(20 + i, 7, item["good_price"].ToString());
+                    excel.text(20 + i, 8, ((int)item["good_price"] * (int)item["count"]).ToString());
+                    totalPrice += ((int)item["good_price"] * (int)item["count"]);
+                }
+                excel.text(21 + orders.Rows.Count, 8, totalPrice.ToString());
+                excel.text(23 + orders.Rows.Count, 8, totalPrice.ToString());
+                string total_price_string = RusCurrency.Str(totalPrice);
+                excel.text(25 + orders.Rows.Count, 2, "Всего наименований " + orders.Rows.Count+" на сумму "+totalPrice+" руб.");
+                excel.text(26 + orders.Rows.Count, 2, total_price_string);
+
+                DateTime expires = date;
+                expires = expires.AddDays(7);
+                excel.text(42 + orders.Rows.Count, 2, "*Счет действителен до "+expires.ToString("dd.MM.yyyy"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

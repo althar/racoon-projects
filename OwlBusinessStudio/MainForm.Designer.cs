@@ -243,6 +243,7 @@
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.saveOrdersDialog = new System.Windows.Forms.SaveFileDialog();
             this.DialogPurchaseExportFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.ButtMakeBill = new System.Windows.Forms.ToolStripButton();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -1950,7 +1951,8 @@
             this.ButtGenerateDeliverListsFile,
             this.ButtGenerateReceipts,
             this.toolStripSeparator12,
-            this.ButtGenerateReceipt});
+            this.ButtGenerateReceipt,
+            this.ButtMakeBill});
             this.toolStrip3.Location = new System.Drawing.Point(0, 0);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.Size = new System.Drawing.Size(976, 31);
@@ -2298,6 +2300,16 @@
             // 
             this.saveOrdersDialog.Filter = "CSV|*.csv";
             // 
+            // ButtMakeBill
+            // 
+            this.ButtMakeBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtMakeBill.Image = ((System.Drawing.Image)(resources.GetObject("ButtMakeBill.Image")));
+            this.ButtMakeBill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtMakeBill.Name = "ButtMakeBill";
+            this.ButtMakeBill.Size = new System.Drawing.Size(28, 28);
+            this.ButtMakeBill.Text = "Сгенерировать счет";
+            this.ButtMakeBill.Click += new System.EventHandler(this.ButtMakeBill_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2581,6 +2593,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label LabelExportPurcahseName;
         private System.Windows.Forms.Button ButtUploadExportPurchase;
+        private System.Windows.Forms.ToolStripButton ButtMakeBill;
     }
 }
 
