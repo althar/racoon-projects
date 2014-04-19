@@ -49,6 +49,10 @@ public class FixedAssetsAndDepreciation
         {
             depTurns = depreciation_period;
         }
+        if(depTurns == depreciation_period)
+        {
+            return 0.0;
+        }
         Double result = fixed_assets_cost.get()-(depreciation.get()*depTurns);
         return result;
     }
@@ -56,6 +60,10 @@ public class FixedAssetsAndDepreciation
     {
         if(turn-acquisition_turn<depreciation_period)
         {
+            if(depreciation_period==turn-acquisition_turn)
+            {
+                return fixed_assets_cost.get()-(depreciation.get()*(depreciation_period-1));
+            }
             return depreciation.get();
         }
         return 0.0;

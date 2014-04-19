@@ -31,4 +31,7 @@ public class EventCard extends DBRecord
     public Boolean previous_turn = false;
     @DataStructureField(name="pre_previous_turn")
     public Boolean pre_previous_turn = false;
+
+    @DataStructureField(name="event_card_new_power")
+    public Double event_card_new_power = 0.0;
 }

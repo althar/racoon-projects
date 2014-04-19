@@ -77,6 +77,7 @@ public class Company
         {
             result+=assets.getFixedAssetsForTurn(turn);
         }
+
         return result;
     }
     public Double getDepreciation(int turn)
@@ -87,5 +88,17 @@ public class Company
             result+=assets.getDepreciation(turn);
         }
         return result;
+    }
+    public Double currentTurnCreditValue(int turn)
+    {
+        Double value = 0.0;
+        for(Credit c: company_credits)
+        {
+            if(c.turn+1==turn)
+            {
+                value+=c.credit_value;
+            }
+        }
+        return value;
     }
 }
