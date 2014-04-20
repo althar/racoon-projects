@@ -4,14 +4,45 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<div class="footer">
-    <div class="center">
-        <ul>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Условия использования</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Поддержка: 8-800-555-28-31, 8-495-215-18-37</a></li>
-        </ul>
+<footer class="layout">
+    <div class="container">
+        <div class="wrapper">
+            <div class="copyright">
+                <a href="http://www.knaufinsulation.ru/"><img src="/img/bg/copyright.png" alt="Knauf Insulation" width="122" height="30"></a>
+                <p>© 2013, Knauf Insulation</p>
+            </div>
+            <div class="arrow"></div>
+            <ul class="foot-menu">
+
+                <li class="point">
+                    <span class="title">Использование магазина</span>
+                    <ul class="items">
+                        <li class="item">
+                            <a class="link" href="help_order/">Оформление заказа</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="help_payment/">Оплата</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="help_delivery/">Доставка</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="point">
+                    <span class="title">О компании</span>
+                    <ul class="items">
+                        <li class="item">
+                            <a class="link" href="http://knaufinsulation.ru/">Knauf Insulation</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="http://knauf.ru/">Группа Knauf</a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="feedback_form/">Обратная связь</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+</footer>
