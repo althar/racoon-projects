@@ -1,0 +1,10 @@
+.hidden
+{
+    display: none;
+}
+.auth-error:after
+{
+    border-color: #9f1006;
+    color: #ff0000;
+    width: 300px;
+}

@@ -8,3 +8,21 @@
 <c:if test="${page=='main'}">
     <%@ include file="/WEB-INF/jsp/content/main.jsp" %>
 </c:if>
+<c:if test="${page=='help_delivery'}">
+    <%@ include file="/WEB-INF/jsp/content/help_delivery.jsp" %>
+</c:if>
+<c:if test="${page=='help_order'}">
+    <%@ include file="/WEB-INF/jsp/content/help_order.jsp" %>
+</c:if>
+<c:if test="${page=='help_payment'}">
+    <%@ include file="/WEB-INF/jsp/content/help_payment.jsp" %>
+</c:if>
+<c:if test="${page=='registration'}">
+    <%@ include file="/WEB-INF/jsp/content/registration.jsp" %>
+</c:if>
+<c:if test="${page=='certificate'}">
+    <%@ include file="/WEB-INF/jsp/content/certificate.jsp" %>
+</c:if>
+<c:if test="${page=='certificate_result'}">
+    <%@ include file="/WEB-INF/jsp/content/certificate_result.jsp" %>
+</c:if>

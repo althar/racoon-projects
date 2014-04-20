@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import racoonsoft.library.database.DBProcessor;
+import racoonsoft.library.ozon.OzonProcessor;
 import racoonsoft.library.web.interceptor.AccessInterceptor;
 import racoonsoft.library.web.interceptor.HistoryInterceptor;
 
@@ -34,6 +35,13 @@ public class MainConfig extends WebMvcConfigurerAdapter
     private String smsLogin;
     @Value("${sms.password}")
     private String smsPassword;
+
+    @Value("${ozon.login}")
+    private String ozonLogin;
+    @Value("${ozon.password}")
+    private String ozonPassword;
+    @Value("${ozon.url}")
+    private String ozonUrl;
 
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer()
@@ -63,6 +71,21 @@ public class MainConfig extends WebMvcConfigurerAdapter
             result.connect();
             System.out.println("Get data source - success");
             return result;
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex.toString());
+            return null;
+        }
+    }
+
+    @Bean
+    public OzonProcessor ozonProcessor()
+    {
+        try
+        {
+            OzonProcessor proc = new OzonProcessor(ozonLogin,ozonPassword,ozonUrl);
+            return proc;
         }
         catch (Exception ex)
         {

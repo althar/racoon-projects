@@ -71,7 +71,10 @@ public class AccessInterceptor extends MainInterceptor
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object o, ModelAndView modelAndView) throws Exception
     {
-
+        modelAndView.addObject("user",request.getAttribute("user"));
+        modelAndView.addObject("anonymous",request.getAttribute("anonymous"));
+        modelAndView.addObject("user_id",request.getAttribute("user_id"));
+        modelAndView.addObject("roles",request.getAttribute("roles"));
     }
 
     @Override
