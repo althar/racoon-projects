@@ -9,7 +9,7 @@ import racoonsoft.library.ozon.OzonProcessor;
 public class OzonService
 {
     @Autowired
-    private OzonProcessor ozonProc;
+    public OzonProcessor ozonProc;
 
     public JSONProcessor catalogueStructure() throws Exception
     {

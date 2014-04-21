@@ -2,7 +2,7 @@
   <artifact type="war" build-on-make="true" name="Knauf">
     <output-path>$PROJECT_DIR$/out/artifacts/Knauf</output-path>
     <root id="archive" name="Knauf.war">
-      <element id="artifact" artifact-name="Knauf" />
+      <element id="artifact" artifact-name="Knauf:war exploded" />
     </root>
   </artifact>
 </component>
