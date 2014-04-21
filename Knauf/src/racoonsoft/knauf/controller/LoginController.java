@@ -48,10 +48,15 @@ public class LoginController extends KnaufController
         params.put("ozon_login","ozon."+request.getParameter("login"));
 
         ActionResult result = UserProcessor.registration(dbProc,request,response,params,new String[]{"CLIENT"});
+        jsonMap.put("success", result.success());
         if(!result.anonymous())
         {
             JSONProcessor proc = ozon.ozonProc.registerUser("ozon."+request.getParameter("login"),request.getParameter("password"),result.getUser().getID().toString(),"Mozilla","127.0.0.1");
-            System.out.println(proc.toJsonString());
+            Integer status = proc.getIntValue("Status");
+            if(status!=2)
+            {
+                jsonMap.put("success", false);
+            }
         }
 
         jsonMap.put("success", result.success());
