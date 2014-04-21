@@ -17,68 +17,68 @@
                 <form novalidate="" action="/auth/registration" class="form-horizontal" method="post">
                     <div class="alert">Все поля обязательны для заполнения.</div>
                     <div class="step-no-1">
-                        <legend>Шаг 1</legend>
+                        <legend>Шаг 1 <c:if test="${not empty registration_error}"><span style="color: red;"> - ${registration_error}</span></c:if></legend>
                         <div class="control-group">
                             <label class="control-label" for="first_name_field">Имя</label>
                             <div class="controls">
-                                <input required="" name="first_name" id="first_name_field" type="text" value="">
+                                <input required="" name="first_name" id="first_name_field" type="text" value="${first_name}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="last_name_field">Фамилия</label>
                             <div class="controls">
-                                <input required="" name="last_name" id="last_name_field" type="text" value="">
+                                <input required="" name="last_name" id="last_name_field" type="text" value="${last_name}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label">Пол</label>
                             <div class="controls">
-                                <label class="radio inline"><input required="" type="radio" name="gender" value="М"> мужской</label>
-                                <label class="radio inline"><input required="" type="radio" name="gender" value="Ж"> женский</label>
+                                <label class="radio inline"><input required="" type="radio" name="gender" <c:if test="${gender=='М'}">checked</c:if> value="М"> мужской</label>
+                                <label class="radio inline"><input required="" type="radio" name="gender" <c:if test="${gender=='Ж'}">checked</c:if> value="Ж"> женский</label>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="dob_field">Дата рождения</label>
-                            <div class="controls">
-                                <input required="" name="birthday" id="dob_field" type="text" value="">
-                                <span class="help-inline">ДД.ММ.ГГГГ</span>
-                            </div>
-                        </div>
+                        <%--<div class="control-group">--%>
+                            <%--<label class="control-label" for="dob_field">Дата рождения</label>--%>
+                            <%--<div class="controls">--%>
+                                <%--<input required="" name="birthday" id="dob_field" type="text" value="">--%>
+                                <%--<span class="help-inline">ДД.ММ.ГГГГ</span>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="control-group">
                             <label class="control-label" for="email">E-mail</label>
                             <div class="controls">
-                                <input required="" name="login" id="email" type="email" value="">
+                                <input required="" name="login" id="email" type="email" value="${login}">
                                 <span class="help-inline">для рассылки сертификатов</span>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="phone_field">Контактный телефон</label>
                             <div class="controls">
-                                <input required="" name="phone" id="phone_field" type="text" value="">
+                                <input required="" name="phone" id="phone_field" type="text" value="${phone}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_field">Название компании работодателя</label>
                             <div class="controls">
-                                <input required="" name="company" id="employer_field" type="text" value="">
+                                <input required="" name="company" id="employer_field" type="text" value="${company}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_address_field">Адрес компании работодателя</label>
                             <div class="controls">
-                                <input required="" name="address" id="employer_address_field" type="text" value="">
+                                <input required="" name="address" id="employer_address_field" type="text" value="${address}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_phone_field">Телефон работодателя</label>
                             <div class="controls">
-                                <input required="" name="phone" id="employer_phone_field" type="text" value="">
+                                <input required="" name="phone" id="employer_phone_field" type="text" value="${phone}">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="position_field">Ваша должность</label>
                             <div class="controls">
-                                <input required="" name="post" id="position_field" type="text" value="">
+                                <input required="" name="post" id="position_field" type="text" value="${post}">
                             </div>
                         </div>
                     </div>
@@ -164,13 +164,13 @@
                         <div class="control-group">
                             <label class="control-label" for="password_field">Укажите свой пароль</label>
                             <div class="controls">
-                                <input required="" name="password" id="password_field" type="password">
+                                <input required="" autocomplete="off" name="password" id="password_field" type="password">
                             </div>
                         </div>
                         <div class="control-group hidden">
                             <label class="control-label" for="password_confirmation_field">Повторите пароль</label>
                             <div class="controls">
-                                <input required="" name="password_confirmation" id="password_confirmation_field" type="password">
+                                <input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="">
                             </div>
                         </div>
                         <div class="control-group">

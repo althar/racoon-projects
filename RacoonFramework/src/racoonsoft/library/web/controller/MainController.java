@@ -1,7 +1,9 @@
 package racoonsoft.library.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.web.savedrequest.Enumerator;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.library.access.User;
 import racoonsoft.library.database.DBProcessor;
 
@@ -43,5 +45,16 @@ public class MainController
     public Boolean hasRole(HttpServletRequest request,String role)
     {
         return ((ArrayList<String>)request.getAttribute("roles")).contains(role);
+    }
+    public ModelAndView flushAllParameters(HttpServletRequest request,ModelAndView model)
+    {
+        Enumeration<String> parNames = request.getParameterNames();
+        while(parNames.hasMoreElements())
+        {
+            String name = parNames.nextElement();
+            String value = request.getParameter(name);
+            model.addObject(name,value);
+        }
+        return model;
     }
 }

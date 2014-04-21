@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.library.access.ActionResult;
+import racoonsoft.library.access.ActionResultCode;
 import racoonsoft.library.access.UserProcessor;
 import racoonsoft.library.database.DBProcessor;
 import racoonsoft.library.json.JSONProcessor;
@@ -31,7 +32,6 @@ public class LoginController extends KnaufController
     }
     @RequestMapping("/registration")
     public ModelAndView registration(HttpServletRequest request, HttpServletResponse response
-//            ,@RequestParam(value = "status", required = false, defaultValue = "01.01.2000")Date birthday
                                     ) throws Exception
     {
         HashMap<String,Object> jsonMap = new HashMap<String, Object>();
@@ -48,23 +48,31 @@ public class LoginController extends KnaufController
         params.put("ozon_login","ozon."+request.getParameter("login"));
 
         ActionResult result = UserProcessor.registration(dbProc,request,response,params,new String[]{"CLIENT"});
-        jsonMap.put("success", result.success());
+        ModelAndView model = new ModelAndView("redirect:/registration");
+        model = flushAllParameters(request,model);
+        if(result.anonymous())
+        {
+            if(result.getResult()== ActionResultCode.REGISTRATION_FAILED_ALREADY_EXISTS)
+            {
+                model.addObject("registration_error","Такая почта уже существует");
+            }
+            else
+            {
+                model.addObject("registration_error","Введите все данные");
+            }
+            return model;
+        }
         if(!result.anonymous())
         {
             JSONProcessor proc = ozon.ozonProc.registerUser("ozon."+request.getParameter("login"),request.getParameter("password"),result.getUser().getID().toString(),"Mozilla","127.0.0.1");
             Integer status = proc.getIntValue("Status");
             if(status!=2)
             {
-                jsonMap.put("success", false);
+                model.addObject("registration_error","Такая почта уже существует");
+                return model;
             }
         }
-
-        jsonMap.put("success", result.success());
-        jsonMap.put("result", result.getResult());
-        JSONProcessor json = new JSONProcessor(jsonMap);
-        ModelAndView model = new ModelAndView("json");
-        model.addObject("json",json.jsonString());
-        return model;
+        return new ModelAndView("redirect:/");
     }
     @RequestMapping("/login")
     public ModelAndView login(HttpServletRequest request,HttpServletResponse response) throws Exception
@@ -75,9 +83,12 @@ public class LoginController extends KnaufController
         if(result.anonymous())
         {
             model.addObject("login_error","Отказано в доступе");
+            return model;
         }
-
-        return model;
+        else
+        {
+            return new ModelAndView("redirect:/");
+        }
     }
     @RequestMapping("/logout")
     public ModelAndView logout(HttpServletRequest request,HttpServletResponse response) throws Exception
