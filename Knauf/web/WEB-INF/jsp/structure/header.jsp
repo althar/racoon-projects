@@ -57,7 +57,7 @@
                     <div class="block">
                         <div class="border">
                             <span class="name"><a href="/my/">${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
-                            <div class="price">на счету: <span class="color">${user.getDoubleValue('amount')}</span> теплуноса</div>
+                            <div class="price">на счету: <span class="color">${amount}</span> теплуноса</div>
                         </div>
                     </div>
                     <div class="container">
