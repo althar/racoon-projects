@@ -22,7 +22,7 @@ public class ServiceController extends KnaufController
     @RequestMapping("/{page}")
     public ModelAndView page(HttpServletRequest request, HttpServletResponse response,@PathVariable("page") String page) throws Exception
     {
-        ozon.doSmth();
+        ozon.catalogueStructure();
         return model(page);
     }
 

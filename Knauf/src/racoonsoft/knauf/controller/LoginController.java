@@ -21,10 +21,8 @@ import java.util.HashMap;
 
 @Controller
 @RequestMapping("/auth")
-public class LoginController
+public class LoginController extends KnaufController
 {
-    @Autowired
-    private DBProcessor dbProc;
     @InitBinder
     protected void initBinder(WebDataBinder binder) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -47,8 +45,14 @@ public class LoginController
         params.put("company",request.getParameter("company"));
         params.put("address",request.getParameter("address"));
         params.put("post",request.getParameter("post"));
+        params.put("ozon_login","ozon."+request.getParameter("login"));
 
         ActionResult result = UserProcessor.registration(dbProc,request,response,params,new String[]{"CLIENT"});
+        if(!result.anonymous())
+        {
+            JSONProcessor proc = ozon.ozonProc.registerUser("ozon."+request.getParameter("login"),request.getParameter("password"),result.getUser().getID().toString(),"Mozilla","127.0.0.1");
+            System.out.println(proc.toJsonString());
+        }
 
         jsonMap.put("success", result.success());
         jsonMap.put("result", result.getResult());
