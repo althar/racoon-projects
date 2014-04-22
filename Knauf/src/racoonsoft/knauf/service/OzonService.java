@@ -11,9 +11,25 @@ public class OzonService
     @Autowired
     public OzonProcessor ozonProc;
 
-    public JSONProcessor catalogueStructure() throws Exception
+    public JSONProcessor catalogue() throws Exception
     {
-        JSONProcessor json = ozonProc.getCatalogueStructure();
+        JSONProcessor json = ozonProc.contextInfoGet();
         return json;
     }
+    public JSONProcessor subCatalogue(String catalogue) throws Exception
+    {
+        JSONProcessor json = ozonProc.getSubCatalogue(catalogue);
+        return json;
+    }
+    public JSONProcessor getItems(String catalogue_id,String catalogue_name) throws Exception
+    {
+        if(catalogue_id==null)
+        {
+            JSONProcessor json = ozonProc.getCatalogueItemsByName(catalogue_name,"","200","1");
+            return json;
+        }
+        JSONProcessor json = ozonProc.getCatalogueItems(catalogue_id,"","200","1");
+        return json;
+    }
+
 }
