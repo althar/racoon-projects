@@ -7,11 +7,23 @@ import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.web.controller.MainController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 
 public class KnaufController extends MainController
 {
     @Autowired
     protected OzonService ozon;
+    private static ArrayList<String> catalogueCategories = new ArrayList<String>()
+    {{
+            add("div_tech");
+            add("div_appliance");
+            add("div_bs");
+            add("div_beauty");
+            add("div_fashion");
+            add("div_gifts");
+            add("div_kid");
+            add("div_home");
+    }};
 
     public ModelAndView model(String page)
     {
@@ -31,6 +43,21 @@ public class KnaufController extends MainController
         JSONProcessor json = ozon.ozonProc.getUserInfo(id);
         Double amount = json.getDoubleValue("ClientAccountEntryInformationForWeb.Accessible");
         model.addObject("amount",amount);
+        return model;
+    }
+    public ModelAndView addCatalogue(ModelAndView model,HttpServletRequest request) throws Exception
+    {
+        String cat = request.getParameter("catalogue");
+        JSONProcessor catalogue = ozon.catalogue();
+        model.addObject("catalogue",catalogue.getStructure());
+        model.addObject("catalogue_categories",catalogueCategories);
+        JSONProcessor subcatalogue = null;
+        if(cat!=null)
+        {
+            subcatalogue = ozon.subCatalogue(cat);
+            model.addObject("subcatalogue",subcatalogue.getStructure());
+            model.addObject("subcatalogue_name",cat);
+        }
         return model;
     }
 }

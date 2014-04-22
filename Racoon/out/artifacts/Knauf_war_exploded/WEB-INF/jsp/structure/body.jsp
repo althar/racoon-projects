@@ -26,3 +26,6 @@
 <c:if test="${page=='certificate_result'}">
     <%@ include file="/WEB-INF/jsp/content/certificate_result.jsp" %>
 </c:if>
+<c:if test="${page=='catalogue'}">
+    <%@ include file="/WEB-INF/jsp/content/catalogue.jsp" %>
+</c:if>

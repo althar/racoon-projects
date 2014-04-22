@@ -10,22 +10,20 @@
         <div class="catalog section dark-title">
             <h2 class="title">Каталог</h2>
             <ul>
-                <li class="item "><a class="link" href="catalog/1/">Электроника</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/2/">Бытовая техника</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/3/">Спорт и отдых</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/4/">Красота и здоровье</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/5/">Детям и мамам</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/6/">Одежда, обувь, аксессуары</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/7/">Дом, сад, зоотовары</a>
-                </li>
-                <li class="item "><a class="link" href="catalog/8/">Подарки и сувениры</a>
-                </li>
+                <c:forEach items="${catalogue.get('WebSection').get('Childs')}" var="cat">
+                    <c:if test="${catalogue_categories.contains(cat.get('Name'))}">
+                        <li class="item "><a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&title=${cat.get('DisplayName')}">${cat.get('DisplayName')}</a>
+                            <c:if test="${subcatalogue_name==cat.get('Name')}">
+                                <ul class="subsection">
+                                    <c:forEach items="${subcatalogue.get('CatalogItems')}" var="subcat">
+                                        <li class="item "><a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&catalogue_id=${subcat.get('Id')}&title=${subcat.get('Name')}">${subcat.get('Name')}</a>
+                                        </li>
+                                    </c:forEach>
+                                </ul>
+                            </c:if>
+                        </li>
+                    </c:if>
+                </c:forEach>
             </ul>
         </div>
 
@@ -33,7 +31,8 @@
     <div class="social">
         <ul>
             <li class="item fb">
-                <a class="link" href="http://www.facebook.com/pages/Knauf-Insulation/118013834987163" title="Facebook"></a>
+                <a class="link" href="http://www.facebook.com/pages/Knauf-Insulation/118013834987163"
+                   title="Facebook"></a>
             </li>
             <li class="item yt">
                 <a class="link" href="http://www.youtube.com/user/knaufinsulationru" title="Youtube"></a>
@@ -41,6 +40,7 @@
         </ul>
     </div>
     <div class="learn-more">
-        <a href="http://www.knaufinsulation.ru/mineralovatnyj-uteplitel">Узнать больше о продуктах<br>KNAUF Insulation</a>
+        <a href="http://www.knaufinsulation.ru/mineralovatnyj-uteplitel">Узнать больше о продуктах<br>KNAUF
+            Insulation</a>
     </div>
 </aside>

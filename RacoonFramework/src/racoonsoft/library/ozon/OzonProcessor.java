@@ -49,8 +49,15 @@ public class OzonProcessor extends APIProcessor
 	// Catalogue...
     public JSONProcessor getCatalogueStructure() throws Exception
     {
-		JSONProcessor proc = executeAPIMethod("PageFlowService", "ContextInfoGet", new HashMap<String, String>(),false);
+		JSONProcessor proc = executeAPIMethod("PageFlowService", "contextInfoGet", new HashMap<String, String>(),false);
 		return proc;
+    }
+    public JSONProcessor getSubCatalogue(String catalogue) throws Exception
+    {
+        HashMap<String,String> params = new HashMap<String, String>();
+        params.put("startGroupName", catalogue);
+        JSONProcessor proc = executeAPIMethod("ItemGroupService", "CatalogsGet", params,false);
+        return proc;
     }
 	//&partnerClientId=4&startItemGroupId=1149085&sortTags=istName&responseTags=ShortDetail&itemsOnPage=10&pageNumber=1
     public JSONProcessor getCatalogueItems(String catalogue_id,String sort_tags,String items_on_page,String page_number) throws Exception
@@ -65,6 +72,18 @@ public class OzonProcessor extends APIProcessor
 		JSONProcessor proc = executeAPIMethod("ItemGroupService", "ItemsRecursiveGet", params,false);
 		return proc;
     }
+    public JSONProcessor getCatalogueItemsByName(String catalogue_name,String sort_tags,String items_on_page,String page_number) throws Exception
+    {
+        HashMap<String,String> params = new HashMap<String, String>();
+        //params.put("partnerClientId", "4");
+        params.put("startGroupName", catalogue_name);
+        params.put("sortTags", sort_tags);
+        params.put("responseTags", "ShortDetail");
+        params.put("itemsOnPage", items_on_page);
+        params.put("pageNumber", page_number);
+        JSONProcessor proc = executeAPIMethod("ItemGroupService", "ItemsRecursiveGet", params,false);
+        return proc;
+    }
     public JSONProcessor getItem(String good_id) throws Exception
     {
 		HashMap<String,String> params = new HashMap<String, String>();
@@ -72,6 +91,11 @@ public class OzonProcessor extends APIProcessor
 		params.put("itemId", good_id);
 		JSONProcessor proc = executeAPIMethod("ItemService", "ItemGet", params,false);
 		return proc;
+    }
+    public JSONProcessor contextInfoGet() throws Exception
+    {
+        JSONProcessor proc = executeAPIMethod("PageFlowService", "contextInfoGet", new HashMap<String, String>(),false);
+        return proc;
     }
     public JSONProcessor getItemDetails(String good_id) throws Exception
     {

@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.library.json.JSONProcessor;
-import racoonsoft.library.web.controller.MainController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Random;
 
 @Controller
 public class ServiceController extends KnaufController
@@ -20,15 +18,26 @@ public class ServiceController extends KnaufController
     {
         ModelAndView model = model("main");
         model = addAmount(model,request);
+        model = addCatalogue(model,request);
         return model;
     }
-
     @RequestMapping("/{page}")
     public ModelAndView page(HttpServletRequest request, HttpServletResponse response,@PathVariable("page") String page) throws Exception
     {
         ModelAndView model = model(page);
         model = flushAllParameters(request,model);
         model = addAmount(model,request);
+        return model;
+    }
+    @RequestMapping(value = "/catalogue/items/**",method={RequestMethod.GET})
+    public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id) throws Exception
+    {
+        ModelAndView model = model("catalogue");
+        model = addAmount(model,request);
+        model = addCatalogue(model,request);
+        JSONProcessor items = ozon.getItems(catalogue_id,catalogue);
+        model.addObject("goods",items.getStructure());
+        model.addObject("title",request.getParameter("title"));
         return model;
     }
 

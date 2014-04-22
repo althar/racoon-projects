@@ -620,7 +620,7 @@ header.layout .container.navigation nav .item .link:hover {
 }
 .container.layout .sidebar .catalog .item .subsection,
 .container.layout .sidebar .price .item .subsection {
-  display: none;
+  /*display: none;*/
 }
 .container.layout .sidebar .catalog .item .subsection .item,
 .container.layout .sidebar .price .item .subsection .item {
