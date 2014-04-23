@@ -27,6 +27,7 @@ public class ServiceController extends KnaufController
         ModelAndView model = model(page);
         model = flushAllParameters(request,model);
         model = addAmount(model,request);
+        model = addCatalogue(model,request);
         return model;
     }
     @RequestMapping(value = "/catalogue/items/**",method={RequestMethod.GET})
@@ -35,9 +36,26 @@ public class ServiceController extends KnaufController
         ModelAndView model = model("catalogue");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
-        JSONProcessor items = ozon.getItems(catalogue_id,catalogue);
+        JSONProcessor items = ozon.getItems(catalogue_id,catalogue,1);
+        if(catalogue!=null)
+        {
+            model.addObject("catalogue_name",catalogue);
+        }
+        if(catalogue_id!=null)
+        {
+            model.addObject("catalogue_id",catalogue_id);
+        }
         model.addObject("goods",items.getStructure());
         model.addObject("title",request.getParameter("title"));
+        return model;
+    }
+    @RequestMapping(value = "service/more_goods",method={RequestMethod.GET})
+    public ModelAndView catalogueInner(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,Integer page) throws Exception
+    {
+        ModelAndView model = new ModelAndView("widget/catalogue");
+        JSONProcessor items = ozon.getItems(catalogue_id,catalogue,page);
+        model.addObject("goods",items.getStructure());
+        model.addObject("page_number",page);
         return model;
     }
 
@@ -59,4 +77,42 @@ public class ServiceController extends KnaufController
 
         return model;
     }
+
+    @RequestMapping("/service/get_basket")
+    public ModelAndView getBasket(HttpServletRequest request, HttpServletResponse response,String good_id) throws Exception
+    {
+        ModelAndView model = new ModelAndView("widget/basket");
+        model = addAmount(model,request);
+        return model;
+    }
+    @RequestMapping("/service/remove_good")
+    public ModelAndView removeGood(HttpServletRequest request, HttpServletResponse response,String good_id) throws Exception
+    {
+        ozon.ozonProc.cartRemove(id(request).toString(),good_id);
+        ModelAndView model = new ModelAndView("widget/basket-inner");
+        model = addAmount(model,request);
+        return model;
+    }
+    @RequestMapping("/service/change_good")
+    public ModelAndView changeGood(HttpServletRequest request, HttpServletResponse response,String good_id,Integer count) throws Exception
+    {
+        ozon.addGood(good_id, user(request).getID().toString(), count);
+        ModelAndView model = new ModelAndView("widget/basket-inner");
+        model = addAmount(model,request);
+        return model;
+    }
+    @RequestMapping("/service/add_good")
+    public ModelAndView addGood(HttpServletRequest request, HttpServletResponse response,String good_id,Integer count) throws Exception
+    {
+        ModelAndView model = new ModelAndView("plain");
+        if(id(request)==-1)
+        {
+            model.addObject("value","need_registration");
+            return model;
+        }
+        ozon.addGood(good_id,user(request).getID().toString(),count);
+        model.addObject("value","ok");
+        return model;
+    }
+
 }

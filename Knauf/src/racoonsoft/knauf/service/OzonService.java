@@ -2,8 +2,13 @@ package racoonsoft.knauf.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import racoonsoft.library.cache.Cache;
+import racoonsoft.library.cache.CacheProcessor;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.ozon.OzonProcessor;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 @Service
 public class OzonService
@@ -11,25 +16,53 @@ public class OzonService
     @Autowired
     public OzonProcessor ozonProc;
 
+    private CacheProcessor<String,JSONProcessor> cache = new CacheProcessor<String, JSONProcessor>();
+
     public JSONProcessor catalogue() throws Exception
     {
-        JSONProcessor json = ozonProc.contextInfoGet();
+        JSONProcessor json = cache.get("catalogue");
+        if(json==null)
+        {
+            json = ozonProc.contextInfoGet();
+            cache.put("catalogue",json,3600000*24);
+        }
         return json;
     }
     public JSONProcessor subCatalogue(String catalogue) throws Exception
     {
-        JSONProcessor json = ozonProc.getSubCatalogue(catalogue);
-        return json;
-    }
-    public JSONProcessor getItems(String catalogue_id,String catalogue_name) throws Exception
-    {
-        if(catalogue_id==null)
+        JSONProcessor json = cache.get("subCatalogue."+catalogue);
+        if(json==null)
         {
-            JSONProcessor json = ozonProc.getCatalogueItemsByName(catalogue_name,"","200","1");
-            return json;
+            json = ozonProc.getSubCatalogue(catalogue);
+            cache.put("subCatalogue."+catalogue,json,3600000*24);
         }
-        JSONProcessor json = ozonProc.getCatalogueItems(catalogue_id,"","200","1");
         return json;
     }
+    public JSONProcessor getItems(String catalogue_id,String catalogue_name,Integer page) throws Exception
+    {
 
+        JSONProcessor json = cache.get("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString());
+        if(json==null)
+        {
+            if(catalogue_id==null||catalogue_id.equalsIgnoreCase(""))
+            {
+                json = ozonProc.getCatalogueItemsByName(catalogue_name, "istPrice", "40", page.toString());
+            }
+            else
+            {
+                json = ozonProc.getCatalogueItems(catalogue_id, "istPrice", "40", page.toString());
+            }
+            cache.put("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString(),json,3600000*24);
+        }
+        return json;
+    }
+    public void removeGood(String good_id,String user_id) throws Exception
+    {
+        ozonProc.cartRemove(user_id,good_id);
+    }
+    public JSONProcessor addGood(String good_id,String user_id,Integer count) throws Exception
+    {
+        JSONProcessor json = ozonProc.cartAdd(user_id,good_id+":"+count.toString());
+        return json;
+    }
 }

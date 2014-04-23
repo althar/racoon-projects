@@ -8,27 +8,8 @@
     <header class="layout">
         <div class="block">
             <div class="container">
-                <div class="point basket">
-                    <span class="title"><a href="/basket">Ваша Корзина</a></span>
-                    <table>
-                        <tbody><tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="product">
-                            <td>товаров:</td>
-                            <td class="sum"><span id="cart_items">0</span></td>
-                        </tr>
-                        <tr class="price">
-                            <td>на сумму:</td>
-                            <td class="sum"><span id="cart_price">0,00</span> <span id="cart_unit">теплуносов</span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        </tbody></table>
-                </div>
+                <%@ include file="/WEB-INF/jsp/widget/basket.jsp" %>
+
                 <form class="point authorization <c:if test="${!anonymous}">hidden</c:if>" action="/auth/login" method="post" id="header_auth_form">
                     <div class="container">
                         <div class="item">
@@ -67,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <a class="logo" href="index.html"><img src="/img/bg/logo.png" alt="Теплоклуб" width="373" height="125"></a>
+            <a class="logo" href="/"><img src="/img/bg/logo.png" alt="Теплоклуб" width="373" height="125"></a>
         </div>
 
         <div class="container navigation">

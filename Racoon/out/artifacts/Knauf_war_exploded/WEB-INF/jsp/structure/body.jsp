@@ -29,3 +29,9 @@
 <c:if test="${page=='catalogue'}">
     <%@ include file="/WEB-INF/jsp/content/catalogue.jsp" %>
 </c:if>
+<c:if test="${page=='basket'}">
+    <%@ include file="/WEB-INF/jsp/content/basket.jsp" %>
+</c:if>
+<c:if test="${page=='order'}">
+    <%@ include file="/WEB-INF/jsp/content/order.jsp" %>
+</c:if>

@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
+<c:if test="${not empty catalogue}">
 <aside class="sidebar">
     <div class="container">
         <div class="catalog section dark-title">
@@ -44,3 +44,4 @@
             Insulation</a>
     </div>
 </aside>
+</c:if>

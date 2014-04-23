@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<script type="text/javascript" src="/js/logic/catalogue.js"></script>
 <div class="content layout">
 
 <ul class="breadcrumbs"><li class="item"><a href="/" class="link">Главная</a><span class="arrow"></span></li><li class="item"><a href="/catalog/1/" class="link">Электроника</a><span class="arrow"></span></li><li class="item">Электронные Книги</li></ul>
@@ -13,23 +14,11 @@
     ${title}
 </h2>
 <ul class="products" id="catalog_items">
-<ol>
-<c:forEach items="${goods.get('GoodsItems')}" var="good" varStatus="status">
-    <li class="item <c:if test="${status.index%3==2}">reset</c:if>">
-        <div class="block">
-            <div class="picture-container">
-                <a class="b-picture" href="/catalog/item?id=${good.get('Id')}">
-                    <img src='http://knauf.ozone.ru/multimedia/${fn:replace(fn:replace(good.get("Path"),"gif", "jpg"),"small","c200")}' alt="" width="169" height="169">
-                </a>
-            </div>
-            <h3><a href="/catalog/item?id=${good.get('Id')}">${good.get('Name')}</a></h3>
-            <em class="price"><span class="color">121,8</span> теплуноса</em>
-            <a href="/cart/" class="buy btn btn-blue cart-add" data-id="12832197" rel="cart-add">в корзину</a>
-        </div>
-    </li>
-    <c:if test="${status.index%3==2}"></ol><ol></c:if>
-</c:forEach>
-</ol>
+    <%@ include file="/WEB-INF/jsp/widget/catalogue.jsp" %>
 </ul>
+    <button class="btn btn-block btn-blue" id="more_products" catalogue="${catalogue_name}" catalogue-id="${catalogue_id}"
+            <c:if test="${not empty page_number}">page="${page_number}"</c:if>
+            <c:if test="${empty page_number}">page="1"</c:if>
+            >Ещё</button>
 </div>
 </div>

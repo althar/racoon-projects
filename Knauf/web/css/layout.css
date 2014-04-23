@@ -1155,7 +1155,7 @@ header.layout .container.navigation nav .item .link:hover {
 }
 .container.layout .content.layout .basket .products tr.cell-product .sum input {
   width: 47px;
-  height: 28px;
+  height: 35px;
   line-height: 28px;
   border: 1px solid #aaabac;
   color: #404041;

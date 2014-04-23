@@ -7,7 +7,6 @@ import racoonsoft.library.helper.StringHelper;
 import racoonsoft.library.http.HTTPClient;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.mailru.torg.ContentAPIProcessor;
-import racoonsoft.library.processors.FileTransferProcessor;
 
 import java.io.File;
 import java.io.FileInputStream;

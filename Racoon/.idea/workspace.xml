@@ -46,13 +46,13 @@
     <file path="$PROJECT_DIR$/../CatLogistics/src/racoonsoft/catlogistics/settings/security.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408018144" ignored="false" />
     <file path="$PROJECT_DIR$/../CatLogistics/web/WEB-INF/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365408062733" ignored="false" />
     <file path="/changelog.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397477549027" ignored="false" />
-    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398176403193" ignored="false" />
+    <file path="/fragment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398271940423" ignored="false" />
     <file path="/Dummy.txt" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1396607316911" ignored="false" />
     <file path="/chaos-1.1.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367590617127" ignored="false" />
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
-    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398078904825" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398172827554" ignored="false" />
+    <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398260562895" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398271657796" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397648449054" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990221611" ignored="false" />
@@ -89,7 +89,7 @@
     <file path="/TextWizard.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365771618580" ignored="false" />
     <file path="/Relation.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365601987983" ignored="false" />
     <file path="/books.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365751095931" ignored="false" />
-    <file path="/style.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398089414567" ignored="false" />
+    <file path="/style.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398262843734" ignored="false" />
     <file path="/strings.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365775097513" ignored="false" />
     <file path="/SearchDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365778335866" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365778897552" ignored="false" />
@@ -127,8 +127,8 @@
     <file path="/main_choose.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369036999362" ignored="false" />
     <file path="/UserController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385538187996" ignored="false" />
     <file path="/CatalogueStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1368692650305" ignored="false" />
-    <file path="/catalogue.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398178770672" ignored="false" />
-    <file path="/catalogue.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1376039499340" ignored="false" />
+    <file path="/catalogue.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398271173980" ignored="false" />
+    <file path="/catalogue.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398272048950" ignored="false" />
     <file path="/catalogue_body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1370000541412" ignored="false" />
     <file path="/GoodListStructure.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367498175946" ignored="false" />
     <file path="/Catalogue.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369322786395" ignored="false" />
@@ -228,7 +228,7 @@
     <file path="/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398086016053" ignored="false" />
     <file path="/about.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366878414" ignored="false" />
     <file path="/contact.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383650715042" ignored="false" />
-    <file path="/basket.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1375687589141" ignored="false" />
+    <file path="/basket.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398265430212" ignored="false" />
     <file path="/discount.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369837170974" ignored="false" />
     <file path="/delivery.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369837189536" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/entity/taxes/FssPayment.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1369903741651" ignored="false" />
@@ -287,7 +287,7 @@
     <file path="/shipping.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371567977592" ignored="false" />
     <file path="/certificates.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371551562199" ignored="false" />
     <file path="/shipping.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371566352650" ignored="false" />
-    <file path="/basket.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372057375890" ignored="false" />
+    <file path="/basket.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398265962032" ignored="false" />
     <file path="/numeric.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371628685931" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/Home.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371713039905" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/About.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1371713039905" ignored="false" />
@@ -595,7 +595,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/billing_payment_preview.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387807289292" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/service/BillingService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387807289292" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/price.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387807289292" ignored="false" />
-    <file path="/ServiceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398179065597" ignored="false" />
+    <file path="/ServiceController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398270956566" ignored="false" />
     <file path="/news.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387883896262" ignored="false" />
     <file path="/LanguageBoxActionResultCode.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387981037782" ignored="false" />
     <file path="/Company.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397822235075" ignored="false" />
@@ -781,7 +781,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030254691" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398092872519" ignored="false" />
     <file path="/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398088266216" ignored="false" />
-    <file path="/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398175427392" ignored="false" />
+    <file path="/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398262102261" ignored="false" />
     <file path="/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030253435" ignored="false" />
     <file path="/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397827606286" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/RacoonFramework/src/racoonsoft/library/mail/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397031382980" ignored="false" />
@@ -812,7 +812,7 @@
     <file path="/RequiresRole.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397565836257" ignored="false" />
     <file path="/MainInterceptor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397640684823" ignored="false" />
     <file path="/MainController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397648913160" ignored="false" />
-    <file path="/KnaufController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398172097481" ignored="false" />
+    <file path="/KnaufController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398259899275" ignored="false" />
     <file path="/admin-main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397649878279" ignored="false" />
     <file path="/FixedAssets.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738343612" ignored="false" />
     <file path="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/enums/AcuisitionMethod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397738197413" ignored="false" />
@@ -828,8 +828,13 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/js/logic/main.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398087821427" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/js/jq/bootstrap.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398088148734" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/css/bootstrap.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398088250636" ignored="false" />
-    <file path="/OzonService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398179118134" ignored="false" />
-    <file path="/aside.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398176330736" ignored="false" />
+    <file path="/OzonService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398271965143" ignored="false" />
+    <file path="/aside.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398263360193" ignored="false" />
+    <file path="/CacheService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398245789586" ignored="false" />
+    <file path="/Cache.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250782636" ignored="false" />
+    <file path="/CacheJson.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250509139" ignored="false" />
+    <file path="/CacheProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398251794303" ignored="false" />
+    <file path="/basket-inner.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398267379415" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -937,62 +942,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OzonProcessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java">
+      <file leaf-file-name="catalogue.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="54" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#543#559#0" expanded="true" />
-                <element signature="e#1216#1232#0" expanded="true" />
-                <element signature="e#1553#1569#0" expanded="true" />
-                <element signature="e#2107#2123#0" expanded="true" />
-                <element signature="e#2605#2621#0" expanded="true" />
-                <element signature="e#3200#3216#0" expanded="true" />
-                <element signature="e#3757#3773#0" expanded="true" />
-                <element signature="e#4295#4311#0" expanded="true" />
-                <element signature="e#4655#4671#0" expanded="true" />
-                <element signature="e#6590#6606#0" expanded="true" />
-                <element signature="e#7001#7017#0" expanded="true" />
-                <element signature="e#7502#7518#0" expanded="true" />
-                <element signature="e#7977#7993#0" expanded="true" />
-                <element signature="e#8351#8367#0" expanded="true" />
-                <element signature="e#9033#9049#0" expanded="true" />
-                <element signature="e#10386#10402#0" expanded="true" />
-                <element signature="e#11952#11968#0" expanded="true" />
-                <element signature="e#13020#13036#0" expanded="true" />
-                <element signature="e#14251#14267#0" expanded="true" />
-                <element signature="e#15352#15368#0" expanded="true" />
-                <element signature="e#15696#15712#0" expanded="true" />
-                <element signature="e#16102#16118#0" expanded="true" />
-                <element signature="e#16567#16583#0" expanded="true" />
-                <element signature="e#16903#16919#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OzonService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="83" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+            <state line="18" column="60" selection-start="1041" selection-end="1054" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="catalogue.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="131" selection-start="1292" selection-end="1292" vertical-scroll-proportion="-13.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aside.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="86" selection-start="1526" selection-end="1526" vertical-scroll-proportion="-5.9615383">
+            <state line="23" column="27" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-15.038462">
               <folding />
             </state>
           </provider>
@@ -1001,17 +963,28 @@
       <file leaf-file-name="ServiceController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="75" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+            <state line="54" column="44" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.bat" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Knauf/deploy/deploy.bat">
+      <file leaf-file-name="page.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+            <state line="28" column="4" selection-start="1631" selection-end="1722" vertical-scroll-proportion="-18.307692">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalogue.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/catalogue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="45" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#getBasket#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1019,9 +992,18 @@
       <file leaf-file-name="KnaufController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/KnaufController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="50" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
+            <state line="46" column="52" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OzonService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="85" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.6652174">
               <folding>
-                <element signature="e#551#559#0" expanded="true" />
+                <element signature="e#542#565#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1042,22 +1024,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssets.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/FaceController.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/web/WEB-INF/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/data/FixedAssetsAndDepreciation.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Company.java" />
-        <option value="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
-        <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/KnaufController.java" />
-        <option value="$PROJECT_DIR$/../Knauf/web/css/layout.css" />
-        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/css/style.css" />
+        <option value="$PROJECT_DIR$/../Knauf/web/css/layout.css" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/basket.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/js/logic/basket.js" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order-summary.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java" />
+        <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/js/logic/catalogue.js" />
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java" />
-        <option value="$PROJECT_DIR$/../Knauf/deploy/deploy.bat" />
       </list>
     </option>
   </component>
@@ -1148,6 +1130,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RacoonFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Knauf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1189,6 +1221,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knauf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1257,6 +1315,46 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knauf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Racoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knauf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1273,10 +1371,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="knauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="settings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1319,54 +1413,8 @@
               <option name="myItemId" value="knauf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Knauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Knauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sketch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Racoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Knauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deploy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1420,11 +1468,11 @@
       <recent name="racoonsoft.library.web.interceptor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AlThar\Documents\Racoon Projects\Knauf\web\WEB-INF\jsp\widget" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\Knauf\web\WEB-INF\jsp\content" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web\img" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web" />
       <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web\css" />
-      <recent name="C:\Users\AlThar\Documents\Racoon Projects\BusinessWin\web\WEB-INF\jsp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Filonenko\Cloud@Mail.Ru\Project4\LanguageBox\web\img\main" />
@@ -2144,22 +2192,21 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3690078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42028984" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.458194" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28762543" sideWeight="0.38847384" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.81493866" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24414715" sideWeight="0.49519745" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24414715" sideWeight="0.49519745" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17982924" sideWeight="0.24860647" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18311533" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18283166" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15208112" sideWeight="0.31661093" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.7580825" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18463181" sideWeight="0.7558528" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18463181" sideWeight="0.54180604" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21802002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -2167,6 +2214,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2239,150 +2287,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/settings/MainConfig.java">
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="44" selection-start="2709" selection-end="2709" vertical-scroll-proportion="0.5155039">
+        <state line="40" column="85" selection-start="2304" selection-end="2310" vertical-scroll-proportion="0.4342762">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/css/layout.css">
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="623" column="2" selection-start="18439" selection-end="18439" vertical-scroll-proportion="-8.24">
+        <state line="77" column="59" selection-start="3236" selection-end="3236" vertical-scroll-proportion="-13.961538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/sketch/catalog.html">
+    <entry file="file://$PROJECT_DIR$/../Knauf/sketch/order-confim.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="8" selection-start="7464" selection-end="18841" vertical-scroll-proportion="-8.076923">
+        <state line="87" column="8" selection-start="3309" selection-end="4140" vertical-scroll-proportion="0.51870745">
           <folding>
-            <element signature="tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#header#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#aside#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="39" selection-start="3740" selection-end="3740" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1517#1533#0" expanded="true" />
-            <element signature="e#1588#1604#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/spring-web.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="-13.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/net/URLEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="0" selection-start="7168" selection-end="7168" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/APIProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="3054" selection-end="3054" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="1285" selection-end="1285" vertical-scroll-proportion="-11.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="47" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.7241888">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="86" selection-start="1526" selection-end="1526" vertical-scroll-proportion="-5.9615383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="131" selection-start="1292" selection-end="1292" vertical-scroll-proportion="-13.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/KnaufController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="50" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#551#559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="54" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#543#559#0" expanded="true" />
-            <element signature="e#1216#1232#0" expanded="true" />
-            <element signature="e#1553#1569#0" expanded="true" />
-            <element signature="e#2107#2123#0" expanded="true" />
-            <element signature="e#2605#2621#0" expanded="true" />
-            <element signature="e#3200#3216#0" expanded="true" />
-            <element signature="e#3757#3773#0" expanded="true" />
-            <element signature="e#4295#4311#0" expanded="true" />
-            <element signature="e#4655#4671#0" expanded="true" />
-            <element signature="e#6590#6606#0" expanded="true" />
-            <element signature="e#7001#7017#0" expanded="true" />
-            <element signature="e#7502#7518#0" expanded="true" />
-            <element signature="e#7977#7993#0" expanded="true" />
-            <element signature="e#8351#8367#0" expanded="true" />
-            <element signature="e#9033#9049#0" expanded="true" />
-            <element signature="e#10386#10402#0" expanded="true" />
-            <element signature="e#11952#11968#0" expanded="true" />
-            <element signature="e#13020#13036#0" expanded="true" />
-            <element signature="e#14251#14267#0" expanded="true" />
-            <element signature="e#15352#15368#0" expanded="true" />
-            <element signature="e#15696#15712#0" expanded="true" />
-            <element signature="e#16102#16118#0" expanded="true" />
-            <element signature="e#16567#16583#0" expanded="true" />
-            <element signature="e#16903#16919#0" expanded="true" />
-          </folding>
+        <state line="83" column="84" selection-start="3578" selection-end="3595" vertical-scroll-proportion="0.57735246">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java">
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order-summary.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="83" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+        <state line="13" column="54" selection-start="634" selection-end="634" vertical-scroll-proportion="0.19800332">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/basket.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="61" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.547421">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="63" selection-start="782" selection-end="841" vertical-scroll-proportion="0.29284525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-web.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.78268254">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="27" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="1631" selection-end="1722" vertical-scroll-proportion="-18.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/KnaufController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="52" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="60" selection-start="1041" selection-end="1054" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/catalogue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="45" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#getBasket#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="75" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+        <state line="54" column="44" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/deploy/deploy.bat">
+    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="54" column="85" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.6652174">
+          <folding>
+            <element signature="e#542#565#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
