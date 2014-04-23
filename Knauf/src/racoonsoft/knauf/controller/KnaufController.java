@@ -41,8 +41,10 @@ public class KnaufController extends MainController
     {
         String id = id(request).toString();
         JSONProcessor json = ozon.ozonProc.getUserInfo(id);
+        JSONProcessor jsonCart = ozon.ozonProc.cartGet(id);
         Double amount = json.getDoubleValue("ClientAccountEntryInformationForWeb.Accessible");
         model.addObject("amount",amount);
+        model.addObject("cart",jsonCart.getStructure());
         return model;
     }
     public ModelAndView addCatalogue(ModelAndView model,HttpServletRequest request) throws Exception
@@ -60,4 +62,5 @@ public class KnaufController extends MainController
         }
         return model;
     }
+
 }

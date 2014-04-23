@@ -26,8 +26,8 @@
     <script src="//yandex.st/jquery/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.js"></script>
 
     <script src="//yandex.st/bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="js/placeholder.js"></script>
-    <script src="js/ready.js?1"></script>
+    <%--<script src="js/placeholder.js"></script>--%>
+    <%--<script src="js/ready.js?1"></script>--%>
 
 </head>
 <body>
