@@ -16,9 +16,12 @@
 <ul class="products" id="catalog_items">
     <%@ include file="/WEB-INF/jsp/widget/catalogue.jsp" %>
 </ul>
-    <button class="btn btn-block btn-blue" id="more_products" catalogue="${catalogue_name}" catalogue-id="${catalogue_id}"
+    <button class="btn btn-block btn-blue" id="more_products"
             <c:if test="${not empty page_number}">page="${page_number}"</c:if>
             <c:if test="${empty page_number}">page="1"</c:if>
+            <c:if test="${not empty catalogue_name}">catalogue="${catalogue_name}"</c:if>
+            <c:if test="${not empty catalogue_id}">catalogue-id="${catalogue_id}"</c:if>
+            <c:if test="${not empty search}">search="${search}"</c:if>
             >Ещё</button>
 </div>
 </div>

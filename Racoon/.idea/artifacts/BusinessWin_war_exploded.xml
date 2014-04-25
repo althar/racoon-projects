@@ -25,6 +25,7 @@
           <element id="library" level="project" name="spring-security-3.1.3" />
           <element id="library" level="project" name="spring-webflow-2.3.2" />
           <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="application" name="javax.mail" />
         </element>
       </element>
     </root>

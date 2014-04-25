@@ -38,7 +38,7 @@
                             <a class="link" href="http://knauf.ru/">Группа Knauf</a>
                         </li>
                         <li class="item">
-                            <a class="link" href="feedback_form/">Обратная связь</a>
+                            <a class="link" href="/feedback">Обратная связь</a>
                         </li>
                     </ul>
                 </li>

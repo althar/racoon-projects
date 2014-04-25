@@ -6,66 +6,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.library.json.JSONProcessor;
+import racoonsoft.library.mail.MailMessage;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 
 @Controller
+@RequestMapping("/service")
 public class ServiceController extends KnaufController
 {
-    @RequestMapping(value = "",method={RequestMethod.GET})
-    public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws Exception
+    @RequestMapping("/feedback")
+    public ModelAndView feedback(HttpServletRequest request, HttpServletResponse response,String feedback_fio,String feedback_email,String feedback_title,String feedback_text) throws Exception
     {
+        MailMessage mess = new MailMessage("dfedorovich85@gmail.com"
+                ,"dfedorovich85@gmail.com"
+                ,feedback_title
+                ,"Обратная связь.<br> От:"+feedback_fio+"  ("+feedback_email+")<br>"+feedback_text+"<br>",new HashMap<String, Object>());
+        mail.sendMail(mess);
         ModelAndView model = model("main");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
         return model;
     }
-    @RequestMapping("/{page}")
-    public ModelAndView page(HttpServletRequest request, HttpServletResponse response,@PathVariable("page") String page) throws Exception
-    {
-        ModelAndView model = model(page);
-        model = flushAllParameters(request,model);
-        model = addAmount(model,request);
-        model = addCatalogue(model,request);
-        return model;
-    }
-    @RequestMapping(value = "/catalogue/items/**",method={RequestMethod.GET})
-    public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id) throws Exception
-    {
-        ModelAndView model = model("catalogue");
-        model = addAmount(model,request);
-        model = addCatalogue(model,request);
-        JSONProcessor items = ozon.getItems(catalogue_id,catalogue,1);
-        if(catalogue!=null)
-        {
-            model.addObject("catalogue_name",catalogue);
-        }
-        if(catalogue_id!=null)
-        {
-            model.addObject("catalogue_id",catalogue_id);
-        }
-        model.addObject("goods",items.getStructure());
-        model.addObject("title",request.getParameter("title"));
-        return model;
-    }
-    @RequestMapping(value = "service/more_goods",method={RequestMethod.GET})
-    public ModelAndView catalogueInner(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,Integer page) throws Exception
+    @RequestMapping(value = "/more_goods",method={RequestMethod.GET})
+    public ModelAndView catalogueInner(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,Integer page,String search) throws Exception
     {
         ModelAndView model = new ModelAndView("widget/catalogue");
-        JSONProcessor items = ozon.getItems(catalogue_id,catalogue,page);
+        JSONProcessor items = ozon.getItems(catalogue_id,catalogue,page,search);
         model.addObject("goods",items.getStructure());
         model.addObject("page_number",page);
+        model.addObject("search",search);
         return model;
     }
-
-    @RequestMapping("/service/activate_certificate")
+    @RequestMapping("/activate_certificate")
     public ModelAndView activateCert(HttpServletRequest request, HttpServletResponse response,String code) throws Exception
     {
         JSONProcessor json = ozon.ozonProc.activateCard(id(request).toString(),code);
         System.out.println(json.jsonString());
         ModelAndView model = model("certificate_result");
-        if(json.getIntValue("Status")!=2||json.getValue("DCode.Message").toString().contains("Неправильно"))
+        model = addAmount(model,request);
+        if(json.getIntValue("Status")!=2||json.getDoubleValue("DCode.DiscountValue")==0.0)
         {
             model.addObject("success",false);
         }
@@ -73,19 +54,18 @@ public class ServiceController extends KnaufController
         {
             model.addObject("success",true);
         }
-        model.addObject("amount",json.getValue("DCode.ResultValue"));
+        model.addObject("cert_amount",json.getValue("DCode.DiscountValue"));
 
         return model;
     }
-
-    @RequestMapping("/service/get_basket")
+    @RequestMapping("/get_basket")
     public ModelAndView getBasket(HttpServletRequest request, HttpServletResponse response,String good_id) throws Exception
     {
         ModelAndView model = new ModelAndView("widget/basket");
         model = addAmount(model,request);
         return model;
     }
-    @RequestMapping("/service/remove_good")
+    @RequestMapping("/remove_good")
     public ModelAndView removeGood(HttpServletRequest request, HttpServletResponse response,String good_id) throws Exception
     {
         ozon.ozonProc.cartRemove(id(request).toString(),good_id);
@@ -93,15 +73,15 @@ public class ServiceController extends KnaufController
         model = addAmount(model,request);
         return model;
     }
-    @RequestMapping("/service/change_good")
+    @RequestMapping("/change_good")
     public ModelAndView changeGood(HttpServletRequest request, HttpServletResponse response,String good_id,Integer count) throws Exception
     {
-        ozon.addGood(good_id, user(request).getID().toString(), count);
+        JSONProcessor json = ozon.addGood(good_id, user(request).getID().toString(), count);
         ModelAndView model = new ModelAndView("widget/basket-inner");
         model = addAmount(model,request);
         return model;
     }
-    @RequestMapping("/service/add_good")
+    @RequestMapping("/add_good")
     public ModelAndView addGood(HttpServletRequest request, HttpServletResponse response,String good_id,Integer count) throws Exception
     {
         ModelAndView model = new ModelAndView("plain");

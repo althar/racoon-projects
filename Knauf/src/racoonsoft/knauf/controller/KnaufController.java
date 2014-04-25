@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.knauf.service.OzonService;
 import racoonsoft.library.json.JSONProcessor;
+import racoonsoft.library.mail.MailProcessor;
 import racoonsoft.library.web.controller.MainController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,10 @@ public class KnaufController extends MainController
 {
     @Autowired
     protected OzonService ozon;
+
+    @Autowired
+    protected MailProcessor mail;
+
     private static ArrayList<String> catalogueCategories = new ArrayList<String>()
     {{
             add("div_tech");

@@ -60,6 +60,17 @@ public class OzonProcessor extends APIProcessor
         return proc;
     }
 	//&partnerClientId=4&startItemGroupId=1149085&sortTags=istName&responseTags=ShortDetail&itemsOnPage=10&pageNumber=1
+    public JSONProcessor searchItemsGet(String search_text,String sort_tags,String items_on_page,String page_number) throws Exception
+    {
+        HashMap<String,String> params = new HashMap<String, String>();
+        params.put("searchText", search_text);
+        params.put("sortTags", sort_tags);
+        params.put("responseTags", "ShortDetail");
+        params.put("itemsOnPage", items_on_page);
+        params.put("pageNumber", page_number);
+        JSONProcessor proc = executeAPIMethod("SearchService", "SearchItemsGet", params,false);
+        return proc;
+    }
     public JSONProcessor getCatalogueItems(String catalogue_id,String sort_tags,String items_on_page,String page_number) throws Exception
     {
 		HashMap<String,String> params = new HashMap<String, String>();

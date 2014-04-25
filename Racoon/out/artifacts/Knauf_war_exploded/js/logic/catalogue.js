@@ -2,11 +2,29 @@ $(document).ready(function(){
     initAddGood();
     $("#more_products").click(function(){
         $("#more_products").html("Идет загрузка...");
+        var url = "/service/more_goods?";
         var catalogue = $(this).attr("catalogue");
         var catalogue_id = $(this).attr("catalogue-id");
+        var search = $(this).attr("search");
         var page = $(this).attr("page")*1 + 1;
+        if(catalogue!=null)
+        {
+            url+="&catalogue="+catalogue;
+        }
+        if(catalogue_id!=null)
+        {
+            url+="&catalogue_id="+catalogue_id;
+        }
+        if(search!=null)
+        {
+            url+="&search="+search;
+        }
+        if(page!=null)
+        {
+            url+="&page="+page;
+        }
         $.ajax({
-            url: "/service/more_goods?catalogue="+catalogue+"&catalogue_id="+catalogue_id+"&page="+page,
+            url: url,
             context: document.body,
             async: true,
             success: function (html)

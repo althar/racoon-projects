@@ -35,3 +35,9 @@
 <c:if test="${page=='order'}">
     <%@ include file="/WEB-INF/jsp/content/order.jsp" %>
 </c:if>
+<c:if test="${page=='feedback'}">
+    <%@ include file="/WEB-INF/jsp/content/feedback.jsp" %>
+</c:if>
+<c:if test="${page=='good'}">
+    <%@ include file="/WEB-INF/jsp/content/good.jsp" %>
+</c:if>

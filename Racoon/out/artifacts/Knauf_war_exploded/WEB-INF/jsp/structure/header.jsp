@@ -37,7 +37,7 @@
                 <div class="point user-panel <c:if test="${anonymous}">hidden</c:if>">
                     <div class="block">
                         <div class="border">
-                            <span class="name"><a href="/my/">${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
+                            <span class="name"><a>${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
                             <div class="price">на счету: <span class="color">${amount}</span> теплуноса</div>
                         </div>
                     </div>
@@ -52,9 +52,10 @@
         </div>
 
         <div class="container navigation">
-            <form class="search" action="search/" method="get">
-                <input type="text" name="query" value="" placeholder="Поиск по каталогу">
-                <input type="submit" name="search" value="Найти" class="button-blue">
+            <form class="search" action="/catalogue/items" method="get">
+                <input type="text" value="" name="search" placeholder="Поиск по каталогу">
+                <input type="hidden" value="Результат" name="title">
+                <input type="submit" value="Найти" class="button-blue">
             </form>
             <nav>
                 <ul class="items">
