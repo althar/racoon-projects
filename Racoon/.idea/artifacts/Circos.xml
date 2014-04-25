@@ -23,6 +23,7 @@
           <element id="library" level="project" name="com.google.zxing:core:2.1" />
           <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
           <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="application" name="javax.mail" />
         </element>
       </element>
     </root>

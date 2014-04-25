@@ -38,13 +38,17 @@ public class OzonService
         }
         return json;
     }
-    public JSONProcessor getItems(String catalogue_id,String catalogue_name,Integer page) throws Exception
+    public JSONProcessor getItems(String catalogue_id,String catalogue_name,Integer page,String search) throws Exception
     {
 
-        JSONProcessor json = cache.get("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString());
+        JSONProcessor json = cache.get("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString()+"."+search);
         if(json==null)
         {
-            if(catalogue_id==null||catalogue_id.equalsIgnoreCase(""))
+            if(search!=null&&!search.equalsIgnoreCase(""))
+            {
+                json = ozonProc.searchItemsGet(search, "istPrice", "40", page.toString());
+            }
+            else if(catalogue_id==null||catalogue_id.equalsIgnoreCase(""))
             {
                 json = ozonProc.getCatalogueItemsByName(catalogue_name, "istPrice", "40", page.toString());
             }
@@ -52,7 +56,7 @@ public class OzonService
             {
                 json = ozonProc.getCatalogueItems(catalogue_id, "istPrice", "40", page.toString());
             }
-            cache.put("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString(),json,3600000*24);
+            cache.put("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString()+"."+search,json,3600000*24);
         }
         return json;
     }

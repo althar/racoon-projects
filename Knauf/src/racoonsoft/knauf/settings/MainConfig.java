@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import racoonsoft.library.database.DBProcessor;
+import racoonsoft.library.mail.MailProcessor;
 import racoonsoft.library.ozon.OzonProcessor;
 import racoonsoft.library.web.interceptor.AccessInterceptor;
 import racoonsoft.library.web.interceptor.HistoryInterceptor;
@@ -43,6 +44,15 @@ public class MainConfig extends WebMvcConfigurerAdapter
     @Value("${ozon.url}")
     private String ozonUrl;
 
+    @Value("${smtp.login}")
+    private String smtpLogin;
+    @Value("${smtp.password}")
+    private String smtpPassword;
+    @Value("${smtp.host}")
+    private String smtpHost;
+    @Value("${smtp.enable_tls}")
+    private Boolean smtpEnableTls;
+
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer()
     {
@@ -60,7 +70,13 @@ public class MainConfig extends WebMvcConfigurerAdapter
     {
 		return new ScheduledAnnotationBeanPostProcessor();
 	}
-    
+    @Bean
+    public MailProcessor mailProcessor() throws Exception
+    {
+        MailProcessor proc = new MailProcessor(smtpHost,smtpLogin,smtpPassword,smtpEnableTls);
+        proc.start();
+        return proc;
+    }
     @Bean
     public DBProcessor pgsqlDataSource()
     {
