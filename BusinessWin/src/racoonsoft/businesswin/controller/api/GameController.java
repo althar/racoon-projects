@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.controller.api;
 
+import com.rits.cloning.Cloner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.CompanySellReason;
+import racoonsoft.businesswin.structure.model.Game;
 import racoonsoft.businesswin.structure.model.GameWorld;
 import racoonsoft.businesswin.structure.model.GoodsDeclaration;
 import racoonsoft.businesswin.structure.model.Player;
@@ -17,6 +19,7 @@ import racoonsoft.library.json.JSONProcessor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Collection;
 import java.util.HashMap;
 
 @Controller
@@ -38,13 +41,97 @@ public class GameController extends BusinessWinController
         model.addObject("json",json.jsonString());
         return model;
     }
-    @RequestMapping("/get_game")
-    public ModelAndView getGames(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    @RequestMapping("/game_list")
+    public ModelAndView gameList(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         HashMap<String,Object> jsonMap = new HashMap<String, Object>();
-        jsonMap.put("game", gameService.getGame(game_id));
+        HashMap<Long,Game> games = new Cloner().deepClone(gameService.getGames());
+        Collection<Game> gameColl = games.values();
+        for(Game g: gameColl)
+        {
+            g.companies.clear();
+            g.declared_event_cards= null;
+            g.demand_supply_curve = null;
+            g.industry_performance = null;
+            g.product_price_and_production = null;
+            g.startSettings = null;
+            g.tradeFactors = null;
+            Collection<Player> playerColl = g.players.values();
+            for(Player p: playerColl)
+            {
+                p.companies.clear();
+            }
+        }
+        jsonMap.put("games", games);
         JSONProcessor json = new JSONProcessor(jsonMap);
 
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/get_game")
+    public ModelAndView getGames(HttpServletRequest request, HttpServletResponse response,Long game_id,Boolean exclude_business_plan) throws Exception
+    {
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        Game g = gameService.getGame(game_id);
+        Cloner cloner = new Cloner();
+        Game clonedGame = null;
+        if(g!=null)
+        {
+            clonedGame = cloner.deepClone(g);
+            clonedGame.companies.clear();
+            if(exclude_business_plan!=null&&exclude_business_plan)
+            {
+                clonedGame.removeBusinessPlan();
+            }
+        }
+        jsonMap.put("game", clonedGame);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/get_player")
+    public ModelAndView getPlayer(HttpServletRequest request, HttpServletResponse response,Long game_id,Long player_id,Boolean exclude_business_plan) throws Exception
+    {
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        Game g = gameService.getGame(game_id);
+        if(g!=null)
+        {
+            g = new Cloner().deepClone(g);
+        }
+        if(exclude_business_plan!=null&&exclude_business_plan)
+        {
+            g.removeBusinessPlan();
+        }
+        Player p = null;
+        if(g!=null)
+        {
+            p = g.getPlayer(player_id);
+        }
+        jsonMap.put("player", p);
+        JSONProcessor json = new JSONProcessor(jsonMap);
+        //json.BodyStructure.remove()
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
+    @RequestMapping("/check_activity")
+    public ModelAndView checkActivity(HttpServletRequest request, HttpServletResponse response,Long game_id) throws Exception
+    {
+        HashMap<String,Object> jsonMap = new HashMap<String, Object>();
+        Game g = gameService.getGame(game_id);
+        if(g!=null)
+        {
+            jsonMap.put("current_action", g.currentAction);
+            jsonMap.put("code", StatusCode.SUCCESS);
+        }
+        else
+        {
+            jsonMap.put("current_action", null);
+            jsonMap.put("code", StatusCode.NO_SUCH_GAME);
+        }
+        JSONProcessor json = new JSONProcessor(jsonMap);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;

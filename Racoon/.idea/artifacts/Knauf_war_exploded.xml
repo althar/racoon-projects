@@ -22,6 +22,8 @@
           <element id="library" level="project" name="javax.mail:javax.mail-api:1.4.7" />
           <element id="library" level="project" name="commons-io:commons-io:2.1" />
           <element id="library" level="application" name="javax.mail" />
+          <element id="library" level="application" name="com.sun.mail:javax.mail:1.5.0" />
+          <element id="library" level="application" name="cloning-1.9.0" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Knauf/web/Web" />

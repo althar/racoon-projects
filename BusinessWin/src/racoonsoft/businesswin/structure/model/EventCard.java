@@ -1,9 +1,11 @@
 package racoonsoft.businesswin.structure.model;
 
 import racoonsoft.businesswin.structure.enums.EventCardType;
+import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 import racoonsoft.library.database.DBRecord;
 
+@DataStructure(name="event_card")
 public class EventCard extends DBRecord
 {
     public EventCard(EventCardType type)

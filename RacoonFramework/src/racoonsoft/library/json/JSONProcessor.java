@@ -18,15 +18,17 @@ import java.util.List;
 public class JSONProcessor
 {
     private String BodyString;
-    private HashMap<String,Object> BodyStructure = new HashMap<String, Object>();
+    public HashMap<String,Object> BodyStructure = new HashMap<String, Object>();
 
     public JSONProcessor(String name, Object value) throws Exception
     {
         BodyString = "{\""+name+"\":"+jsonValue(value)+"}";
+        extractBody();
     }
     public JSONProcessor(Object obj) throws Exception
     {
         BodyString = jsonValue(obj);
+        extractBody();
     }
     public JSONProcessor(String body) throws Exception
     {
@@ -124,16 +126,21 @@ public class JSONProcessor
                 Object value = f.get(val);
                 builder.append("\""+name+"\"");
                 builder.append(":");
-
-                Field[] fss = value.getClass().getDeclaredFields();
                 String valStr = null;
-                for(Field f1:fss)
+                if(value!=null)
                 {
-                    f1.setAccessible(true);
-                    if(f1.isAnnotationPresent(DataStructureValue.class))
+
+
+                    Field[] fss = value.getClass().getDeclaredFields();
+
+                    for(Field f1:fss)
                     {
-                        Object value1 = f1.get(val);
-                        valStr = jsonValue(value);
+                        f1.setAccessible(true);
+                        if(f1.isAnnotationPresent(DataStructureValue.class))
+                        {
+                            Object value1 = f1.get(value);
+                            valStr = jsonValue(value1);
+                        }
                     }
                 }
                 if(valStr!=null)
@@ -154,6 +161,12 @@ public class JSONProcessor
     }
     private String jsonValue(Object val) throws Exception
     {
+//        System.out.println(val);
+//        if(val.toString().contains("racoonsoft.businesswin.structure.data.BusinessPlan"))
+//        {
+//            System.out.println(val);
+//        }
+
         StringBuilder builder = new StringBuilder();
         if(val==null)
         {

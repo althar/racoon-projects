@@ -8,11 +8,15 @@ import racoonsoft.library.annotations.DataStructure;
 import racoonsoft.library.annotations.DataStructureField;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 @DataStructure(name="game")
 public class Game
 {
+    @DataStructureField(name="current_action")
+    public Integer currentAction = 0;
+
     @DataStructureField(name="players")
     public HashMap<Long,Player> players = new HashMap<Long, Player>();
     @DataStructureField(name="companies")
@@ -89,5 +93,20 @@ public class Game
             }
         }
         return null;
+    }
+    public Player getPlayer(Long player_id)
+    {
+        return players.get(player_id);
+    }
+    public void removeBusinessPlan()
+    {
+        Collection<Player> playerCol = players.values();
+        for(Player p:playerCol)
+        {
+            for(Company c:p.companies)
+            {
+                c.business_plan = null;
+            }
+        }
     }
 }
