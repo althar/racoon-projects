@@ -18,13 +18,13 @@
                     <span class="title">Использование магазина</span>
                     <ul class="items">
                         <li class="item">
-                            <a class="link" href="help_order/">Оформление заказа</a>
+                            <a class="link" href="/help_order">Оформление заказа</a>
                         </li>
                         <li class="item">
-                            <a class="link" href="help_payment/">Оплата</a>
+                            <a class="link" href="/help_payment">Оплата</a>
                         </li>
                         <li class="item">
-                            <a class="link" href="help_delivery/">Доставка</a>
+                            <a class="link" href="/help_delivery">Доставка</a>
                         </li>
                     </ul>
                 </li>

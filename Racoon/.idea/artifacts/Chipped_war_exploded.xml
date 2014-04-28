@@ -26,6 +26,7 @@
           <element id="library" level="application" name="javax.mail" />
           <element id="library" level="application" name="com.sun.mail:javax.mail:1.5.0" />
           <element id="library" level="application" name="cloning-1.9.0" />
+          <element id="library" level="project" name="uk.com.robust-it:cloning:1.9.0" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Chipped/web/Web" />
