@@ -14,8 +14,8 @@ public class Player
     @DataStructureField(name="login")
     public String login;
 
-    @DataStructureField(name="business_plan")
-    public BusinessPlan businessPlan;
+//    @DataStructureField(name="business_plan")
+//    public BusinessPlan businessPlan;
     @DataStructureField(name="companies")
     public ArrayList<Company> companies = new ArrayList<Company>();
     @DataStructureField(name="cash")
@@ -44,10 +44,6 @@ public class Player
     public ArrayList<Company> getCompanies()
     {
         return companies;
-    }
-    public BusinessPlan getBusinessPlan()
-    {
-        return businessPlan;
     }
 
     public BusinessPlan getPlan()

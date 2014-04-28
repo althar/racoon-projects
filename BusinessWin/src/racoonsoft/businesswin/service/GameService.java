@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.*;
 import racoonsoft.businesswin.structure.model.*;
+import racoonsoft.library.access.ActionResult;
 import racoonsoft.library.helper.Helper;
 
 import java.util.ArrayList;
@@ -24,12 +25,20 @@ public class GameService
     {
         return GameWorld.getGame(id);
     }
+    public Player getPlayer(Long game_id,Long player_id) throws Exception
+    {
+        Game g = GameWorld.getGame(game_id);
+        if(g==null)
+        {
+            return null;
+        }
+        return g.getPlayer(player_id);
+    }
     //</editor-fold>
 
     //<editor-fold desc="Phase 0">
     public StatusCode createGame(String name, GameMode mode,StartSettings start_settings,Integer companyCount) throws Exception
     {
-        //TODO: check parameters...
         GameWorld.createGame(name, mode, start_settings,companyCount);
 
         return StatusCode.SUCCESS;
@@ -83,6 +92,7 @@ public class GameService
         calculateStep0(g);
         g.turn.nextPhase();
         g.setStatus(GameStatus.IN_PROGRESS);
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     public StatusCode joinGame(Long game_id,Player player) throws Exception
@@ -133,6 +143,7 @@ public class GameService
         }
 
         c.goodsDeclaration = declaration;
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     public StatusCode setTradeFactors(Long game_id, TradeFactors tradeFactors) throws Exception
@@ -143,6 +154,7 @@ public class GameService
             return StatusCode.NO_SUCH_GAME;
         }
         g.tradeFactors = tradeFactors;
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     public StatusCode endPhase1(Long game_id) throws Exception
@@ -158,6 +170,7 @@ public class GameService
         }
         calculatePhase1(g);
         g.turn.nextPhase();
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     //</editor-fold>
@@ -170,7 +183,9 @@ public class GameService
         {
             return StatusCode.NO_SUCH_GAME;
         }
+        distributeCards(g,eventCards);
         g.declared_event_cards = eventCards;
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     public StatusCode acceptCard(Long game_id, Long player_id,Long company_id,String card,String size,Credit credit) throws Exception
@@ -190,6 +205,7 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
+        g.currentAction++;
         return acceptCard(c,card,size,g,credit);
     }
     public StatusCode sellCompany(Long game_id, Long player_id,Long company_id,CompanySellReason reason) throws Exception
@@ -210,6 +226,7 @@ public class GameService
             return StatusCode.NO_SUCH_COMPANY;
         }
         sell(c,g,reason);
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     public StatusCode betCompany(Long game_id, Long player_id,Long company_id,CompanyBet bet) throws Exception
@@ -229,8 +246,9 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
-
-        return bet(c,p,bet,g);
+        StatusCode result = bet(c,p,bet,g);
+        g.currentAction++;
+        return result;
     }
     public StatusCode consolidation(Long game_id, Long player_id,Long company_id,Double value) throws Exception
     {
@@ -249,7 +267,9 @@ public class GameService
         {
             return StatusCode.NO_SUCH_COMPANY;
         }
-        return consolidation(c,value,p,g);
+        StatusCode result = consolidation(c,value,p,g);
+        g.currentAction++;
+        return result;
     }
     public StatusCode endPhase2(Long game_id) throws Exception
     {
@@ -264,6 +284,7 @@ public class GameService
         }
         calculatePhase2(g);
         g.turn.nextPhase();
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     //</editor-fold>
@@ -282,6 +303,7 @@ public class GameService
         }
         calculatePhase3(g);
         g.turn.nextPhase();
+        g.currentAction++;
         return StatusCode.SUCCESS;
     }
     //</editor-fold>
@@ -367,9 +389,9 @@ public class GameService
 
             // Table 5
 
-            // TODO: 1
             FixedAssetsAndDepreciation assets = new FixedAssetsAndDepreciation(g.startSettings.value_assets_for_all_companies.get()*company.company_sensors.main_assets_sensor.get()/mainAssetsSensorSum
                     ,g.startSettings.total_depreciation.get().intValue(),0,AcquisitionMethod.START);
+            company.fixed_assets_and_depreciation.add(assets);
 
             // Table 4
             company.company_state.revenue.set(company.products_and_capacity.production.get()*g.product_price_and_production.p);
@@ -429,7 +451,6 @@ public class GameService
                 item.operation_profit = item.revenue-item.variable_costs;
                 item.constant_costs = company.company_state.constant_costs.get();
                 // Depreciation
-                // TODO: 2
                 if(company.fixed_assets_and_depreciation.get(0).acquisition_method== AcquisitionMethod.START &&turn<company.fixed_assets_and_depreciation.get(0).depreciation_period-1)
                 {
                     item.depreciation = company.fixed_assets_and_depreciation.get(0).depreciation.get();
@@ -671,7 +692,7 @@ public class GameService
                     -company.company_state.debt.get();
             company.company_state.net_fixed_assets.set(company.getFixedAssetsForTurn(g.turn.turn));
             company.company_state.share_capital.set(shareCapital);
-
+            Double revenue = company.company_state.revenue.get();
             company.company_state.revenue.set(0.0);
             if(company.goodsDeclaration.price.get()<=g.demand_supply_curve.current_sell_price)
             {
@@ -689,7 +710,7 @@ public class GameService
             {
                 currentConstantCosts = company.company_state.sell_price*company.company_sensors.constant_costs_sensor.get();
             }
-            company.company_state.constant_costs.set(company.company_state.revenue.get()*company.company_sensors.constant_costs_sensor.get());
+            company.company_state.constant_costs.set(revenue*company.company_sensors.constant_costs_sensor.get());
             company.company_state.profit_before_taxes.set(company.company_state.revenue.get()
                     -company.company_state.variable_costs.get()
                     -company.company_state.constant_costs.get()
@@ -1164,6 +1185,95 @@ public class GameService
         calculateIndustry(g);
 
         return StatusCode.SUCCESS;
+    }
+    private void distributeCards(Game g,DeclaredEventCards eventCards)
+    {
+        // Card distribution
+        int count = 0;
+        while(count<eventCards.contract_entire_volume&&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())&&!c.event_card_contract_entire_volume.current_turn)
+                {
+                    c.event_card_contract_entire_volume.current_turn = true;
+                    count++;
+                }
+            }
+        }
+        count = 0;
+        while(count<eventCards.sell_company&&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())&&!c.event_card_sell_company.current_turn)
+                {
+                    c.event_card_sell_company.current_turn = true;
+                    count++;
+                }
+            }
+        }
+        count = 0;
+        while(count<eventCards.pocking&&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())&&!c.event_card_pocking.current_turn)
+                {
+                    c.event_card_pocking.current_turn = true;
+                    count++;
+                }
+            }
+        }
+        count = 0;
+        // Small...
+        while(count<eventCards.efficiency_project_small
+                &&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())
+                        &&!c.event_card_efficiency_project_small.current_turn
+                        &&!c.event_card_efficiency_project_medium.current_turn
+                        &&!c.event_card_efficiency_project_large.current_turn)
+                {
+                    c.event_card_efficiency_project_small.current_turn = true;
+                    count++;
+                }
+            }
+        }
+        // Medium...
+        while(count<eventCards.efficiency_project_medium
+                &&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())
+                        &&!c.event_card_efficiency_project_small.current_turn
+                        &&!c.event_card_efficiency_project_medium.current_turn
+                        &&!c.event_card_efficiency_project_large.current_turn)
+                {
+                    c.event_card_efficiency_project_medium.current_turn = true;
+                    count++;
+                }
+            }
+        }
+        // Large
+        while(count<eventCards.efficiency_project_large
+                &&count<g.companies.size())
+        {
+            for(Company c:g.companies)
+            {
+                if(Math.randomBool(g.companies.size())
+                        &&!c.event_card_efficiency_project_small.current_turn
+                        &&!c.event_card_efficiency_project_medium.current_turn
+                        &&!c.event_card_efficiency_project_large.current_turn)
+                {
+                    c.event_card_efficiency_project_large.current_turn = true;
+                    count++;
+                }
+            }
+        }
     }
     //</editor-fold>
 

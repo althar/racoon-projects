@@ -22,4 +22,8 @@ public class Math
     {
         return random(min,max,3);
     }
+    public static Boolean randomBool(int chance_divider)
+    {
+        return new Random().nextInt(chance_divider)>=chance_divider;
+    }
 }

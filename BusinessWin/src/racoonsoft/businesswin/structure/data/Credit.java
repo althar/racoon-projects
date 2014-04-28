@@ -27,9 +27,13 @@ public class Credit extends GameBindStructure
     @DataStructureField(name="current_debt")
     public Double current_debt = 0.0;
 
+    @DataStructureField(name="yearly_payment")
+    public Double yearly_payment = 0.0;
+
     public Double getYearlyPayment()
     {
-        return credit_value/credit_term;
+        yearly_payment = credit_value/credit_term;
+        return yearly_payment;
     }
     public Double getPercentPayment(int turn)
     {

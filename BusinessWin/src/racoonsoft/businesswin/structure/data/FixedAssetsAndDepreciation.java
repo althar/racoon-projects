@@ -44,7 +44,7 @@ public class FixedAssetsAndDepreciation
 
     public Double getFixedAssetsForTurn(int turn)
     {
-        int depTurns = turn-acquisition_turn;
+        int depTurns = (turn+1)-acquisition_turn;
         if(depTurns>depreciation_period)
         {
             depTurns = depreciation_period;
@@ -60,7 +60,7 @@ public class FixedAssetsAndDepreciation
     {
         if(turn-acquisition_turn<depreciation_period)
         {
-            if(depreciation_period==turn-acquisition_turn)
+            if(depreciation_period==(turn+1)-acquisition_turn)
             {
                 return fixed_assets_cost.get()-(depreciation.get()*(depreciation_period-1));
             }
