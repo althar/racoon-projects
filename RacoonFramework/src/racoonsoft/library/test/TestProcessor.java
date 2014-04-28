@@ -24,7 +24,7 @@ public class TestProcessor
 	    long start = new Date().getTime();
         try
         {
-            System.out.println(StringHelper.getDomainByLevel("gold.www.mydom.ru",1));
+            System.out.println(StringHelper.getCharEncodedString("Тип SIM-карты: Micro-SIM\\u000d\\u000a"));
         }
         catch(Exception ex)
         {

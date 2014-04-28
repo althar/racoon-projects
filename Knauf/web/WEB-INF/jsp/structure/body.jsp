@@ -32,8 +32,14 @@
 <c:if test="${page=='basket'}">
     <%@ include file="/WEB-INF/jsp/content/basket.jsp" %>
 </c:if>
-<c:if test="${page=='order'}">
-    <%@ include file="/WEB-INF/jsp/content/order.jsp" %>
+<c:if test="${page=='order_1'}">
+    <%@ include file="/WEB-INF/jsp/content/order_1.jsp" %>
+</c:if>
+<c:if test="${page=='order_2'}">
+    <%@ include file="/WEB-INF/jsp/content/order_2.jsp" %>
+</c:if>
+<c:if test="${page=='order_3'}">
+    <%@ include file="/WEB-INF/jsp/content/order_3.jsp" %>
 </c:if>
 <c:if test="${page=='feedback'}">
     <%@ include file="/WEB-INF/jsp/content/feedback.jsp" %>

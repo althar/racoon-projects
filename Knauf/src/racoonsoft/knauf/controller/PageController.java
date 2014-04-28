@@ -35,6 +35,7 @@ public class PageController extends KnaufController
     @RequestMapping(value = "/catalogue/items/**",method={RequestMethod.GET})
     public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,String search) throws Exception
     {
+//        JSONProcessor best = ozon.ozonProc.getCatalogueItemsBestOfPrice("1000","6000");
         ModelAndView model = model("catalogue");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
@@ -68,4 +69,25 @@ public class PageController extends KnaufController
         return model;
     }
 
+    //<editor-fold desc="Order">
+    @RequestMapping(value = "/order/address",method={RequestMethod.GET})
+    public ModelAndView orderInit(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = model("order_1");
+        model = addAmount(model,request);
+//        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        String status = json.getValue("Status").toString();
+        if(!status.equalsIgnoreCase("2"))
+        {
+            return new ModelAndView("redirect:/ozon_error");
+        }
+        String guid = json.getValue("OrderGuid").toString();
+        model.addObject("guid",guid);
+        model.addObject("basket",jsonBasket.getStructure());
+
+        return model;
+    }
+    //</editor-fold>
 }

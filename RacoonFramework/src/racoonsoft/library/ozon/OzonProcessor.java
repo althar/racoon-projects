@@ -95,6 +95,15 @@ public class OzonProcessor extends APIProcessor
         JSONProcessor proc = executeAPIMethod("ItemGroupService", "ItemsRecursiveGet", params,false);
         return proc;
     }
+    public JSONProcessor getCatalogueItemsBestOfPrice(String price_from,String price_to) throws Exception
+    {
+        HashMap<String,String> params = new HashMap<String, String>();
+        //params.put("partnerClientId", "4");
+        params.put("price", price_from+"-"+price_to);
+        params.put("sort", "bests");
+        JSONProcessor proc = executeAPIMethod("FacetService", "GetSectionSearchResult", params,true);
+        return proc;
+    }
     public JSONProcessor getItem(String good_id) throws Exception
     {
 		HashMap<String,String> params = new HashMap<String, String>();

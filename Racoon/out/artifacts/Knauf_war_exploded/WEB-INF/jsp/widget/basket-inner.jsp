@@ -114,7 +114,7 @@
                     </b>
                 </c:when>
                 <c:otherwise>
-                    <a class="btn btn-blue" href="/order/">Купить</a>
+                    <a class="btn btn-blue" href="/order/address">Купить</a>
                 </c:otherwise>
             </c:choose>
         </div>

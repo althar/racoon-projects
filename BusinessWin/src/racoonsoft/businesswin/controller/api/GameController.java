@@ -36,7 +36,6 @@ public class GameController extends BusinessWinController
         HashMap<String,Object> jsonMap = new HashMap<String, Object>();
         jsonMap.put("games", gameService.getGames());
         JSONProcessor json = new JSONProcessor(jsonMap);
-
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;
