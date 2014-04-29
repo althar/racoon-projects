@@ -14,7 +14,10 @@
             <h2>Оформление заказа · Получатель и адрес доставки</h2>
             <div class="boxed-group-inner">
                 <p>Товары: 30,4 теплуноса · Доставка: 19,8 теплуноса</p>
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" action="/order/confirm">
+                    <input type="hidden" name="guid" value="${guid}">
+                    <input type="hidden" name="area_id" value="${area_id}">
+                    <input type="hidden" name="delivery_variant_id" value="${delivery_variant_id}">
                     <h4>Получатель</h4>
                     <div class="control-group">
                         <label class="control-label required" for="lastName_field">Фамилия</label>

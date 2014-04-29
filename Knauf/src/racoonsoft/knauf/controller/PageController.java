@@ -15,7 +15,7 @@ import java.util.HashMap;
 @Controller
 public class PageController extends KnaufController
 {
-    @RequestMapping(value = "",method={RequestMethod.GET})
+    @RequestMapping(value = "")
     public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = model("main");
@@ -32,7 +32,7 @@ public class PageController extends KnaufController
         model = addCatalogue(model,request);
         return model;
     }
-    @RequestMapping(value = "/catalogue/items/**",method={RequestMethod.GET})
+    @RequestMapping(value = "/catalogue/items/**")
     public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,String search) throws Exception
     {
 //        JSONProcessor best = ozon.ozonProc.getCatalogueItemsBestOfPrice("1000","6000");
@@ -56,7 +56,7 @@ public class PageController extends KnaufController
         model.addObject("title",request.getParameter("title"));
         return model;
     }
-    @RequestMapping(value = "/good",method={RequestMethod.GET})
+    @RequestMapping(value = "/good")
     public ModelAndView main(HttpServletRequest request, HttpServletResponse response,String id) throws Exception
     {
         ModelAndView model = model("good");
@@ -70,10 +70,86 @@ public class PageController extends KnaufController
     }
 
     //<editor-fold desc="Order">
-    @RequestMapping(value = "/order/address",method={RequestMethod.GET})
-    public ModelAndView orderInit(HttpServletRequest request, HttpServletResponse response) throws Exception
+    @RequestMapping(value = "/order/address")
+    public ModelAndView orderAddress(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
         ModelAndView model = model("order_1");
+        model = addAmount(model,request);
+//        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        String status = json.getValue("Status").toString();
+        if(!status.equalsIgnoreCase("2"))
+        {
+            return new ModelAndView("redirect:/ozon_error");
+        }
+        String guid = json.getValue("OrderGuid").toString();
+        model.addObject("guid",guid);
+        model.addObject("basket",jsonBasket.getStructure());
+
+        return model;
+    }
+    @RequestMapping(value = "/order/delivery")
+    public ModelAndView orderDelivery(HttpServletRequest request, HttpServletResponse response,String guid) throws Exception
+    {
+        ModelAndView model = model("order_2");
+        model = addAmount(model,request);
+//        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        String status = json.getValue("Status").toString();
+        if(!status.equalsIgnoreCase("2"))
+        {
+            return new ModelAndView("redirect:/ozon_error");
+        }
+        model.addObject("guid",guid);
+        model.addObject("basket",jsonBasket.getStructure());
+
+        return model;
+    }
+    @RequestMapping(value = "/order/information")
+    public ModelAndView orderInformation(HttpServletRequest request, HttpServletResponse response,String guid,String area_id) throws Exception
+    {
+        ModelAndView model = model("order_3");
+        model = addAmount(model,request);
+//        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        String status = json.getValue("Status").toString();
+        if(!status.equalsIgnoreCase("2"))
+        {
+            return new ModelAndView("redirect:/ozon_error");
+        }
+        model.addObject("guid",guid);
+        model.addObject("area_id",area_id);
+        model.addObject("basket",jsonBasket.getStructure());
+
+        return model;
+    }
+    @RequestMapping(value = "/order/confirm")
+    public ModelAndView orderConfirm(HttpServletRequest request, HttpServletResponse response,String guid,String area_id,String delivery_variant_id) throws Exception
+    {
+        ModelAndView model = model("order_confirm");
+        model = addAmount(model,request);
+//        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        String status = json.getValue("Status").toString();
+        if(!status.equalsIgnoreCase("2"))
+        {
+            return new ModelAndView("redirect:/ozon_error");
+        }
+        model.addObject("guid",guid);
+        model.addObject("area_id",area_id);
+        model.addObject("delivery_variant_id",delivery_variant_id);
+        model.addObject("basket",jsonBasket.getStructure());
+
+        return model;
+    }
+    @RequestMapping(value = "/order/done")
+    public ModelAndView orderDone(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = model("order_done");
         model = addAmount(model,request);
 //        model = addCatalogue(model,request);
         JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
