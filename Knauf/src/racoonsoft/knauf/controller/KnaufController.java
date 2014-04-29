@@ -2,6 +2,7 @@ package racoonsoft.knauf.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
+import racoonsoft.knauf.service.DatabaseService;
 import racoonsoft.knauf.service.OzonService;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.mail.MailProcessor;
@@ -17,6 +18,9 @@ public class KnaufController extends MainController
 
     @Autowired
     protected MailProcessor mail;
+
+    @Autowired
+    protected DatabaseService database;
 
     private static ArrayList<String> catalogueCategories = new ArrayList<String>()
     {{

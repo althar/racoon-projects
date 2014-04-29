@@ -47,3 +47,10 @@
 <c:if test="${page=='good'}">
     <%@ include file="/WEB-INF/jsp/content/good.jsp" %>
 </c:if>
+<c:if test="${page=='order_confirm'}">
+    <%@ include file="/WEB-INF/jsp/content/order_confirm.jsp" %>
+</c:if>
+
+<c:if test="${page=='order_done'}">
+    <%@ include file="/WEB-INF/jsp/content/order_done.jsp" %>
+</c:if>

@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
+<script type="text/javascript" src="/js/logic/order.js"></script>
 <div class="content layout">
 
 <div class="container section dark-title">
@@ -19,6 +19,8 @@
 <h3>Город доставки</h3>
 
 <form class="order-delivery" method="post" id="order_payment" action="/order/information">
+<input type="hidden" name="guid" value="${guid}">
+<input type="hidden" name="area_id" value="${area_id}">
 <table>
 <tbody>
 <tr>
@@ -27,10 +29,10 @@
 
     <td>
         <label class="radio radio-space">
-            <input type="radio" name="delivery" class="way" id="rds_343" data-price="19,8" value="343" checked=""> Пункты выдачи заказов OZON.ru
+            <input type="radio" name="delivery_id" class="way" id="rds_343" data-price="19,8" value="343" checked> Пункты выдачи заказов OZON.ru
         </label>
 
-        <select name="delivery_select" class="delivery-select" id="ds_343">
+        <select name="delivery-variant-id" delivery_id="343" class="delivery-select" id="ds_343">
             <option value="343,566701" data-price="19,8">Белорусская, «пункт выдачи заказов OZON.ru», (19,8 теплуноса)</option>
             <option value="343,565390" data-price="19,8">Китай-Город, «пункт выдачи заказов OZON.ru», (19,8 теплуноса)</option>
             <option value="343,570305" data-price="19,8">Комсомольская, «пункт выдачи заказов OZON.ru», (19,8 теплуноса)</option>
@@ -52,10 +54,10 @@
 
     <td>
         <label class="radio radio-space">
-            <input type="radio" name="delivery" class="way" id="rds_543" data-price="19,8" value="543"> Пункты выдачи заказов партнеров OZON.ru
+            <input type="radio" name="delivery_id" class="way" id="rds_543" data-price="19,8" value="543"> Пункты выдачи заказов партнеров OZON.ru
         </label>
 
-        <select name="delivery_select" class="delivery-select" id="ds_543" disabled="">
+        <select name="delivery-variant-id" delivery_id="543" class="delivery-select" id="ds_543" disabled="">
             <option value="543,570340" data-price="19,8">Авиамоторная, «Авиамоторная ул., влад. 4, продуктовый магазин, Мультифото», (19,8 теплуноса)</option>
             <option value="543,570343" data-price="19,8">Алма-Атинская, «Проектируемый пр-д 5396, влад. 15, ТЦ "Молл Гэллери" , Мультифото», (19,8 теплуноса)</option>
             <option value="543,569327" data-price="19,8">Алтуфьево, «Мультифото, Алтуфьевское шоссе, д. 86, к. 1, ТЦ «Ареал»», (19,8 теплуноса)</option>
@@ -118,10 +120,10 @@
 
     <td>
         <label class="radio radio-space">
-            <input type="radio" name="delivery" class="way" id="rds_1205" data-price="19,8" value="1205"> Почтоматы в Москве
+            <input type="radio" name="delivery_id" class="way" id="rds_1205" data-price="19,8" value="1205"> Почтоматы в Москве
         </label>
 
-        <select name="delivery_select" class="delivery-select" id="ds_1205" disabled="">
+        <select name="delivery-variant-id" delivery_id="1205" class="delivery-select" id="ds_1205" disabled="">
             <option value="1205,569891" data-price="19,8">Автозаводская, «5-ая Кожуховская ул., д.12, "Домашний Очаг" магазин, PickPoint 7701-048», (19,8 теплуноса)</option>
             <option value="1205,570108" data-price="19,8">Автозаводская, «Мастеркова ул., д. 6, "Обувной центр", EPR Qiwi Post MSC-110», (19,8 теплуноса)</option>
             <option value="1205,569255" data-price="19,8">Алтуфьево, «Алтуфьевское ш., 70, корп.1, "Маркос-Молл" ТЦ, EPR Qiwi Post MSC-056», (19,8 теплуноса)</option>
@@ -269,7 +271,7 @@
 
     <td>
         <label class="radio radio-space">
-            <input type="radio" name="delivery" class="delivery" data-price="49,8" value="211,0"> Курьерская
+            <input type="radio" name="delivery_id" class="delivery" data-price="49,8" value="211,0"> Курьерская
         </label>
     </td>
     <td>&nbsp; &nbsp;</td>
@@ -285,7 +287,7 @@
 
     <td>
         <label class="radio radio-space">
-            <input type="radio" name="delivery" class="delivery" data-price="58,6" value="55,0"> Почта России, наземным транспортом
+            <input type="radio" name="delivery_id" class="delivery" data-price="58,6" value="55,0"> Почта России, наземным транспортом
         </label>
     </td>
     <td>&nbsp; &nbsp;</td>
