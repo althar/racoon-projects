@@ -19,17 +19,18 @@
 <h3>Город доставки</h3>
 
 <form method="post" action="/order/delivery">
+<input type="hidden" name="guid" value="${guid}">
 <table>
 <tbody>
 <tr>
     <td>
         <label class="radio">
-            <input type="radio" name="area-id" value="1" area-id="1" checked> Москва
+            <input type="radio" name="area_id" value="1" area_id="1" checked> Москва
         </label>
     </td>
     <td>&nbsp; &nbsp;</td>
     <td>
-        <select name="locale[1]" area-id="1" class="address-select">
+        <select name="locale[1]" area_id="1" class="address-select">
             <option value="2" selected>Москва в пределах МКАД</option>
             <option value="35634">Зеленоград</option>
         </select>
@@ -38,12 +39,12 @@
 <tr>
     <td>
         <label class="radio">
-            <input type="radio" name="area-id" value="2" area-id="2"> Санкт-Петербург
+            <input type="radio" name="area_id" value="2" area_id="2"> Санкт-Петербург
         </label>
     </td>
     <td>&nbsp; &nbsp;</td>
     <td>
-        <select name="locale[2]" area-id="2" class="address-select">
+        <select name="locale[2]" area_id="2" class="address-select">
             <option value="5911">Санкт-Петербург в пределах КАД</option>
             <option value="5920">Александровская</option>
             <option value="5799">Всеволожск</option>
@@ -68,12 +69,12 @@
 <tr>
 <td>
     <label class="radio">
-        <input type="radio" name="area-id" value="3" area-id="3"> Россия
+        <input type="radio" name="area_id" value="3" area_id="3"> Россия
     </label>
 </td>
 <td>&nbsp; &nbsp;</td>
 <td>
-<select name="locale[3]" area-id="3" class="address-select">
+<select name="locale[3]" area_id="3" class="address-select">
 <option value="30435">Абакан</option>
 <option value="10135">Аксай</option>
 <option value="27111">Алапаевск</option>
@@ -367,12 +368,12 @@
 <tr>
 <td>
     <label class="radio">
-        <input type="radio" name="area-id" value="4" area-id="4"> За пределы России
+        <input type="radio" name="area_id" value="4" area_id="4"> За пределы России
     </label>
 </td>
 <td>&nbsp; &nbsp;</td>
 <td>
-<select name="locale[4]" area-id="4" class="address-select">
+<select name="locale[4]" area_id="4" class="address-select">
 <option value="35277">Австралия</option>
 <option value="35280">Австрия</option>
 <option value="35291">Азербайджан</option>
