@@ -54,7 +54,7 @@ public class ServiceController extends KnaufController
         {
             model.addObject("success",true);
             Double val = json.getDoubleValue("DCode.DiscountValue");
-            dbProc
+            database.transaction("CERTIFICATE_ACTIVATION","ACCEPTED",id(request),val);
         }
         model.addObject("cert_amount",json.getValue("DCode.DiscountValue"));
 
