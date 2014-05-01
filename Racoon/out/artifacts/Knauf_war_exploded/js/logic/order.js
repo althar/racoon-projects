@@ -5,15 +5,9 @@ $(document).ready(function(){
         $("input[area_id=\""+areaId+"\"]").attr("checked","checked");
     });
     //Init delivery
-    $("input[name=delivery_id]").click(function(){
-        var deliveryId = $(this).val();
-        $(".delivery-select").attr("disabled","disabled");
-        $(".delivery-select[delivery_id=\""+deliveryId+"\"]").removeAttr("disabled");
+    $("input[name=\"delivery_group_id\"]").click(function(){
+        $("#delivery_price").html($(this).attr("delivery-price"));
+        $("input[name=\"delivery_price\"]").val($(this).attr("delivery-price"));
     });
-//    $(".delivery-select").click(function(){
-//        $(this).removeAttr("")
-//        var deliveryId = $(this).attr("delivery_id");
-//        $("input[delivery_id=\""+deliveryId+"\"]").attr("checked","checked");
-//    });
-
+    $("input[name=\"delivery_group_id\"]").eq(0).click();
 });

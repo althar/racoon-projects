@@ -54,3 +54,6 @@
 <c:if test="${page=='order_done'}">
     <%@ include file="/WEB-INF/jsp/content/order_done.jsp" %>
 </c:if>
+<c:if test="${page=='api_failed'}">
+    <%@ include file="/WEB-INF/jsp/content/api_failed.jsp" %>
+</c:if>
