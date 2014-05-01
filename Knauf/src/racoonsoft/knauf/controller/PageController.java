@@ -90,79 +90,139 @@ public class PageController extends KnaufController
         return model;
     }
     @RequestMapping(value = "/order/delivery")
-    public ModelAndView orderDelivery(HttpServletRequest request, HttpServletResponse response,String guid) throws Exception
+    public ModelAndView orderDelivery(HttpServletRequest request, HttpServletResponse response,String guid,String area_id) throws Exception
     {
+        String areaId = request.getParameter("locale["+area_id+"]");
         ModelAndView model = model("order_2");
         model = addAmount(model,request);
-//        model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+
         JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
-        String status = json.getValue("Status").toString();
-        if(!status.equalsIgnoreCase("2"))
-        {
-            return new ModelAndView("redirect:/ozon_error");
-        }
+        JSONProcessor jsonDelivery = ozon.ozonProc.getDeliveryVariants(id(request).toString(),guid,"0",areaId);
         model.addObject("guid",guid);
+        model.addObject("area_id",areaId);
         model.addObject("basket",jsonBasket.getStructure());
+        model.addObject("delivery",jsonDelivery.getStructure());
 
         return model;
     }
     @RequestMapping(value = "/order/information")
-    public ModelAndView orderInformation(HttpServletRequest request, HttpServletResponse response,String guid,String area_id) throws Exception
+    public ModelAndView orderInformation(HttpServletRequest request, HttpServletResponse response
+            ,String guid
+            ,String area_id
+            ,String delivery_group_id
+            ,Double delivery_price) throws Exception
     {
+        String deliveryPointAddressId = request.getParameter("delivery-variant-id["+delivery_group_id+"]");
         ModelAndView model = model("order_3");
         model = addAmount(model,request);
-//        model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
+
         JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
-        String status = json.getValue("Status").toString();
-        if(!status.equalsIgnoreCase("2"))
-        {
-            return new ModelAndView("redirect:/ozon_error");
-        }
         model.addObject("guid",guid);
         model.addObject("area_id",area_id);
+        model.addObject("delivery_variant_id",delivery_group_id);
+        model.addObject("delivery_point_address_id",deliveryPointAddressId);
+        model.addObject("delivery_price",delivery_price);
         model.addObject("basket",jsonBasket.getStructure());
 
         return model;
     }
     @RequestMapping(value = "/order/confirm")
-    public ModelAndView orderConfirm(HttpServletRequest request, HttpServletResponse response,String guid,String area_id,String delivery_variant_id) throws Exception
+    public ModelAndView orderConfirm(HttpServletRequest request, HttpServletResponse response
+            ,String guid
+            ,String area_id
+            ,String delivery_variant_id
+            ,String delivery_point_address_id
+            ,String first_name
+            ,String middle_name
+            ,String last_name
+            ,String zip
+            ,String country
+            ,String region
+            ,String district
+            ,String city
+            ,String address
+            ,String addressee
+            ,String phone
+            ,String comment) throws Exception
     {
+        JSONProcessor jsonForCollection = ozon.ozonProc.getOrderParametersForCollection(id(request).toString(),guid,"0",area_id,delivery_variant_id,"8",zip);
+        if(delivery_point_address_id==null||delivery_point_address_id.equalsIgnoreCase(""))
+        {
+            delivery_point_address_id = "0";
+        }
+        JSONProcessor saveJson = ozon.ozonProc.saveOrder(id(request).toString()
+                ,guid
+                ,delivery_point_address_id
+                ,area_id
+                ,delivery_variant_id
+                ,"8"
+                ,zip
+                ,country
+                ,region
+                ,district
+                ,city
+                ,addressee
+                ,address
+                ,comment
+                ,phone
+                ,"36152"
+                ,first_name
+                ,middle_name
+                ,last_name);
+        String newAddressId = saveJson.getValue("NewAddressId").toString();
+        Integer status = saveJson.getIntValue("Status");
+        if(status!=2)
+        {
+            ModelAndView errModel = model("api_failed");
+            return errModel;
+        }
+        JSONProcessor summaryJson = ozon.ozonProc.summaryOrder(id(request).toString(), guid,newAddressId,delivery_variant_id,"8","1","0","false");
+        String deliveryName = summaryJson.getValue("TotalOrder.DeliveryVariantName").toString();
+        String deliverySumm = summaryJson.getValue("TotalOrder.DeliverySumm").toString();
+        String fullOrderSumm = summaryJson.getValue("TotalOrder.FullOrderSumm").toString();
+        System.out.println(" !!!!!! ");
+        System.out.println("AddressId: "+newAddressId+";   deliverySumm: "+deliverySumm);
+        System.out.println(" !!!!!! ");
         ModelAndView model = model("order_confirm");
         model = addAmount(model,request);
-//        model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
         JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
-        String status = json.getValue("Status").toString();
-        if(!status.equalsIgnoreCase("2"))
-        {
-            return new ModelAndView("redirect:/ozon_error");
-        }
         model.addObject("guid",guid);
         model.addObject("area_id",area_id);
         model.addObject("delivery_variant_id",delivery_variant_id);
+        model.addObject("address_id",newAddressId);
         model.addObject("basket",jsonBasket.getStructure());
-
+        model.addObject("address",city+","+address);
+        model.addObject("phone",phone);
+        model.addObject("first_name",first_name);
+        model.addObject("last_name",last_name);
+        model.addObject("comment",comment);
+        model.addObject("delivery_name",deliveryName);
+        model.addObject("delivery_summ",deliverySumm);
+        model.addObject("addressee",addressee);
         return model;
     }
     @RequestMapping(value = "/order/done")
-    public ModelAndView orderDone(HttpServletRequest request, HttpServletResponse response) throws Exception
+    public ModelAndView orderDone(HttpServletRequest request, HttpServletResponse response
+            ,String guid
+            ,String address_id
+            ,String delivery_variant_id
+            ,String first_name
+            ,String last_name
+            ,String addressee
+            ,String phone
+            ,String comment) throws Exception
     {
         ModelAndView model = model("order_done");
         model = addAmount(model,request);
-//        model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
-        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
-        String status = json.getValue("Status").toString();
-        if(!status.equalsIgnoreCase("2"))
+        JSONProcessor jsonCreate = ozon.ozonProc.createOrder(id(request).toString(),guid, address_id,delivery_variant_id,"8","1","0",phone,comment, "email@email.com",addressee,"false","36152",first_name,last_name);
+        Integer status = jsonCreate.getIntValue("Status");
+        if(status!=2)
         {
-            return new ModelAndView("redirect:/ozon_error");
+            ModelAndView errModel = model("api_failed");
+            return errModel;
         }
-        String guid = json.getValue("OrderGuid").toString();
-        model.addObject("guid",guid);
-        model.addObject("basket",jsonBasket.getStructure());
-
+        String order_number = jsonCreate.getValue("OrderNumber").toString();
+        model.addObject("order_number",order_number);
         return model;
     }
     //</editor-fold>

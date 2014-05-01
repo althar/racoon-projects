@@ -12,26 +12,39 @@
 
         <div class="boxed-group">
             <h2>Оформление заказа · Подтверждение</h2>
+
             <div class="boxed-group-inner">
-                <form class="order-confirm" method="post">
-                    <dl class="dl-horizontal">
-                        <dt>Способ доставки</dt>
-                        <dd>Пункты выдачи заказов OZON.ru <strong>19,8</strong> теплуноса</dd>
-                        <dt>Получатель</dt>
-                        <dd>htgfhgf hgfhgfhf hgfhgfhgf</dd>
-                        <dt>Адрес доставки</dt>
-                        <dd>
-                            Россия,  , МОСКВА<br>
-                            ул. Скаковая, д.36 				</dd>
-                        <dt>Телефон</dt>
-                        <dd>89090000000</dd>
-                        <dt>Комментарий к заказу</dt>
-                        <dd>gfjhgjhgjghjg</dd>
-                        <dt></dt>
-                        <dd>&nbsp;</dd>
-                        <dt></dt>
-                        <dd><input class="btn btn-blue" type="submit" value="Разместить заказ" name="submit"></dd>
-                    </dl>
+                <form class="order-confirm" method="post" action="/order/done">
+                    <c:if test="${delivery_summ>=0}">
+                        <input type="hidden" name="guid" value="${guid}">
+                        <input type="hidden" name="address_id" value="${address_id}">
+                        <input type="hidden" name="delivery_variant_id" value="${delivery_variant_id}">
+                        <input type="hidden" name="first_name" value="${first_name}">
+                        <input type="hidden" name="last_name" value="${last_name}">
+                        <input type="hidden" name="addressee" value="${addressee}">
+                        <input type="hidden" name="phone" value="${phone}">
+                        <input type="hidden" name="comment" value="${comment}">
+
+                        <dl class="dl-horizontal">
+                            <dt>Способ доставки</dt>
+                            <dd>${delivery_name}<strong> (${delivery_summ}</strong> теплуноса)</dd>
+                            <dt>Получатель</dt>
+                            <dd>${addressee}</dd>
+                            <dt>Адрес доставки</dt>
+                            <dd> ${address} </dd>
+                            <dt>Телефон</dt>
+                            <dd>${phone}</dd>
+                            <dt>Комментарий к заказу</dt>
+                            <dd>${comment}</dd>
+                            <dt></dt>
+                            <dd>&nbsp;</dd>
+                            <dt></dt>
+                            <dd><input class="btn btn-blue" type="submit" value="Разместить заказ" name="submit"></dd>
+                        </dl>
+                    </c:if>
+                    <c:if test="${delivery_summ<0}">
+                        Не достаточно средств (на товары с доставкой). Вернитесь <a href="/basket">в корзину.</a>
+                    </c:if>
                 </form>
             </div>
         </div>

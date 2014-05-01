@@ -50,7 +50,7 @@ function initAddGood()
         $(this).find(".add-good-loader").show();
         var buttAdd = $(this);
         $.ajax({
-            url: "/service/add_good?good_id="+$(this).attr("good-id")+"&count=2",
+            url: "/service/add_good?good_id="+$(this).attr("good-id")+"&count=1",
             context: document.body,
             async: true,
             success: function (html)
