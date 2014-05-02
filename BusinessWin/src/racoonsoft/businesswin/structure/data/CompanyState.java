@@ -78,13 +78,13 @@ public class CompanyState
     public EconomicsValue investments = new EconomicsValue(0.0,9999999999999.0,2,0.0);
 
     @DataStructureField(name="variable_costs_coefficient",description="Коэффициент Переменных затрат")
-    public EconomicsValue variable_costs_coefficient = new EconomicsValue(0.0,9999999999999.0,2,0.0);
+    public EconomicsValue variable_costs_coefficient = new EconomicsValue(0.0,9999999999999.0,3,0.0);
 
     @DataStructureField(name="constant_costs_coefficient",description="Коэффициент Переменных затрат")
-    public EconomicsValue constant_costs_coefficient = new EconomicsValue(0.0,9999999999999.0,2,0.0);
+    public EconomicsValue constant_costs_coefficient = new EconomicsValue(0.0,9999999999999.0,3,0.0);
 
     @DataStructureField(name="market_share",description="Доля на рынке")
-    public EconomicsValue market_share = new EconomicsValue(0.0,10000000.0,2,0.0);
+    public EconomicsValue market_share = new EconomicsValue(0.0,10000000.0,3,0.0);
 
     // More
     @DataStructureField(name="credit_rating_by_edibta",description="Кредитный рейтинг 1")

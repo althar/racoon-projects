@@ -41,7 +41,7 @@ public class EconomicsValue
     }
     public Double get()
     {
-        return value.doubleValue();
+        return MathHelper.round(value.doubleValue(),accuracy);
     }
     @Override
     public String toString()

@@ -10,7 +10,7 @@ public class CompanyProductionAndCapacity
     public EconomicsValue power_sensor = new EconomicsValue(0.0,99999.0,3,0.0);
 
     @DataStructureField(name="power")
-    public EconomicsValue power = new EconomicsValue(0.0,99999.0,3,0.0);
+    public EconomicsValue power = new EconomicsValue(0.0,99999.0,0,0.0);
 
     @DataStructureField(name="production_sensor")
     public EconomicsValue production_sensor = new EconomicsValue(0.0,99999.0,3,0.0);
