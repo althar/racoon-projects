@@ -345,6 +345,19 @@ public class GameController extends BusinessWinController
     }
     //</editor-fold>
 
+    @RequestMapping("/move_game")
+    public ModelAndView moveGame(HttpServletRequest request, HttpServletResponse response,Long game_id,Long turn,Long phase) throws Exception
+    {
+        if(!hasRole(request,"ADMIN"))
+        {
+            return generateError(StatusCode.NO_PERMISSIONS);
+        }
+        StatusCode code = gameService.moveGame(game_id,turn,phase);
+        JSONProcessor json = new JSONProcessor("code",code);
+        ModelAndView model = new ModelAndView("json");
+        model.addObject("json",json.jsonString());
+        return model;
+    }
     @RequestMapping("/test")
     public ModelAndView test(HttpServletRequest request, HttpServletResponse response) throws Exception
     {

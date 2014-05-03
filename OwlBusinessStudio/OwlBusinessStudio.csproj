@@ -372,6 +372,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Resources\good_template.xml" />
+    <Content Include="bin\Debug\Resources\purchase_template.xml" />
     <Content Include="bin\Debug\Resources\signature.jpg" />
     <Content Include="bin\Release\Resources\signature.jpg" />
     <Content Include="bin\Release\Resources\good_template.xml" />

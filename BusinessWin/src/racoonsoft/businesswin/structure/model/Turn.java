@@ -7,9 +7,9 @@ import racoonsoft.library.annotations.DataStructureField;
 public class Turn
 {
     @DataStructureField(name="turn")
-    public int turn = 1;
+    public Integer turn = 1;
     @DataStructureField(name="phase")
-    public int phase = 0;
+    public Integer phase = 0;
 
     public void nextPhase()
     {
