@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
+import com.rits.cloning.Cloner;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.GameMode;
 import racoonsoft.businesswin.structure.enums.GameStatus;
@@ -14,6 +15,8 @@ import java.util.HashMap;
 @DataStructure(name="game")
 public class Game
 {
+
+
     @DataStructureField(name="current_action")
     public Integer currentAction = 0;
 

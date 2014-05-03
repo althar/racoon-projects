@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.structure.data.*;
 import racoonsoft.businesswin.structure.enums.*;
 import racoonsoft.businesswin.structure.model.*;
-import racoonsoft.library.access.ActionResult;
 import racoonsoft.library.helper.Helper;
 
 import java.util.ArrayList;
@@ -33,6 +32,15 @@ public class GameService
             return null;
         }
         return g.getPlayer(player_id);
+    }
+    public StatusCode moveGame(Long game_id,Long turn,Long phase) throws Exception
+    {
+        Game g = GameWorld.moveHistory(game_id, turn, phase);
+        if(g==null)
+        {
+            return StatusCode.NO_SUCH_GAME;
+        }
+        return StatusCode.SUCCESS;
     }
     //</editor-fold>
 
@@ -90,6 +98,7 @@ public class GameService
             }
         }
         calculateStep0(g);
+        GameWorld.history(g);
         g.turn.nextPhase();
         g.setStatus(GameStatus.IN_PROGRESS);
         g.currentAction++;
@@ -169,6 +178,7 @@ public class GameService
             return StatusCode.WRONG_PHASE;
         }
         calculatePhase1(g);
+        GameWorld.history(g);
         g.turn.nextPhase();
         g.currentAction++;
         return StatusCode.SUCCESS;
@@ -283,6 +293,7 @@ public class GameService
             return StatusCode.WRONG_PHASE;
         }
         calculatePhase2(g);
+        GameWorld.history(g);
         g.turn.nextPhase();
         g.currentAction++;
         return StatusCode.SUCCESS;
@@ -302,6 +313,7 @@ public class GameService
             return StatusCode.WRONG_PHASE;
         }
         calculatePhase3(g);
+        GameWorld.history(g);
         g.turn.nextPhase();
         g.currentAction++;
         return StatusCode.SUCCESS;

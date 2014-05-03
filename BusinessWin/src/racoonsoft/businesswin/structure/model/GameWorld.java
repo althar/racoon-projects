@@ -1,5 +1,6 @@
 package racoonsoft.businesswin.structure.model;
 
+import com.rits.cloning.Cloner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import racoonsoft.businesswin.database.PostgresqlDataSource;
@@ -18,7 +19,25 @@ public class GameWorld
     @Autowired
     private static PostgresqlDataSource dbProc;
 
+    private static HashMap<String,Game> history = new HashMap<String, Game>();
     private static HashMap<Long,Game> games = new HashMap<Long, Game>();
+
+    public static void history(Game g)
+    {
+        // 'id-turn-phase'
+        history.put(g.id+"-"+g.turn.turn.toString()+"-"+g.turn.phase,new Cloner().deepClone(g));
+    }
+    public static Game moveHistory(Long game_id, Long turn, Long phase)
+    {
+        Game g = history.get(game_id+"-"+turn.toString()+"-"+phase);
+        games.put(game_id,g);
+        return g;
+    }
+    public static Game fromHistory(Long game_id, Long turn, Long phase)
+    {
+        Game g = history.get(game_id+"-"+turn.toString()+"-"+phase);
+        return g;
+    }
 
     public static void reboot()
     {

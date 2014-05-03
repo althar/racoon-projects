@@ -206,9 +206,10 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.ButtEditDeliveryLists = new System.Windows.Forms.ToolStripButton();
             this.ButtGenerateDeliverListsFile = new System.Windows.Forms.ToolStripButton();
-            this.ButtGenerateReceipts = new System.Windows.Forms.ToolStripButton();
+            this.ButtGenerateReceipts = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.ButtGenerateReceipt = new System.Windows.Forms.ToolStripButton();
+            this.ButtMakeBill = new System.Windows.Forms.ToolStripButton();
             this.DataGridViewDeliveryLists = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.TxtLog = new System.Windows.Forms.TextBox();
@@ -243,7 +244,13 @@
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.saveOrdersDialog = new System.Windows.Forms.SaveFileDialog();
             this.DialogPurchaseExportFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.ButtMakeBill = new System.Windows.Forms.ToolStripButton();
+            this.PanelSetGoodCode = new System.Windows.Forms.Panel();
+            this.LabelGoodToSetCode = new System.Windows.Forms.Label();
+            this.TxtGoodCode = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.ButtSetGoodCode = new System.Windows.Forms.Button();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -271,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewDeliveryLists)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.PanelSetGoodCode.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusBarMain
@@ -1376,6 +1384,7 @@
             // 
             // TabPurchase
             // 
+            this.TabPurchase.Controls.Add(this.PanelSetGoodCode);
             this.TabPurchase.Controls.Add(this.PanelUploadPurchse);
             this.TabPurchase.Controls.Add(this.PanelAddPurchase);
             this.TabPurchase.Controls.Add(this.ButtPurchaseSelectByDateTo);
@@ -1995,9 +2004,10 @@
             this.ButtGenerateReceipts.Image = ((System.Drawing.Image)(resources.GetObject("ButtGenerateReceipts.Image")));
             this.ButtGenerateReceipts.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ButtGenerateReceipts.Name = "ButtGenerateReceipts";
-            this.ButtGenerateReceipts.Size = new System.Drawing.Size(28, 28);
+            this.ButtGenerateReceipts.Size = new System.Drawing.Size(40, 28);
             this.ButtGenerateReceipts.Text = "Сгенерировать товарные чеки";
-            this.ButtGenerateReceipts.Click += new System.EventHandler(this.ButtGenerateReceipt_Click);
+            this.ButtGenerateReceipts.ButtonClick += new System.EventHandler(this.ButtGenerateReceipt_Click);
+            this.ButtGenerateReceipts.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.ButtGenerateReceipts_DropDownItemClicked);
             // 
             // toolStripSeparator12
             // 
@@ -2014,6 +2024,16 @@
             this.ButtGenerateReceipt.Size = new System.Drawing.Size(28, 28);
             this.ButtGenerateReceipt.Text = "Сформировать чек";
             this.ButtGenerateReceipt.Click += new System.EventHandler(this.ButtGenerateReceipt_Click_1);
+            // 
+            // ButtMakeBill
+            // 
+            this.ButtMakeBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtMakeBill.Image = ((System.Drawing.Image)(resources.GetObject("ButtMakeBill.Image")));
+            this.ButtMakeBill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtMakeBill.Name = "ButtMakeBill";
+            this.ButtMakeBill.Size = new System.Drawing.Size(28, 28);
+            this.ButtMakeBill.Text = "Сгенерировать счет";
+            this.ButtMakeBill.Click += new System.EventHandler(this.ButtMakeBill_Click);
             // 
             // DataGridViewDeliveryLists
             // 
@@ -2300,15 +2320,73 @@
             // 
             this.saveOrdersDialog.Filter = "CSV|*.csv";
             // 
-            // ButtMakeBill
+            // PanelSetGoodCode
             // 
-            this.ButtMakeBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ButtMakeBill.Image = ((System.Drawing.Image)(resources.GetObject("ButtMakeBill.Image")));
-            this.ButtMakeBill.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ButtMakeBill.Name = "ButtMakeBill";
-            this.ButtMakeBill.Size = new System.Drawing.Size(28, 28);
-            this.ButtMakeBill.Text = "Сгенерировать счет";
-            this.ButtMakeBill.Click += new System.EventHandler(this.ButtMakeBill_Click);
+            this.PanelSetGoodCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelSetGoodCode.Controls.Add(this.ButtSetGoodCode);
+            this.PanelSetGoodCode.Controls.Add(this.label28);
+            this.PanelSetGoodCode.Controls.Add(this.label27);
+            this.PanelSetGoodCode.Controls.Add(this.label25);
+            this.PanelSetGoodCode.Controls.Add(this.TxtGoodCode);
+            this.PanelSetGoodCode.Controls.Add(this.LabelGoodToSetCode);
+            this.PanelSetGoodCode.Location = new System.Drawing.Point(384, 193);
+            this.PanelSetGoodCode.Name = "PanelSetGoodCode";
+            this.PanelSetGoodCode.Size = new System.Drawing.Size(508, 86);
+            this.PanelSetGoodCode.TabIndex = 8;
+            this.PanelSetGoodCode.Visible = false;
+            // 
+            // LabelGoodToSetCode
+            // 
+            this.LabelGoodToSetCode.AutoSize = true;
+            this.LabelGoodToSetCode.Location = new System.Drawing.Point(58, 37);
+            this.LabelGoodToSetCode.Name = "LabelGoodToSetCode";
+            this.LabelGoodToSetCode.Size = new System.Drawing.Size(41, 13);
+            this.LabelGoodToSetCode.TabIndex = 0;
+            this.LabelGoodToSetCode.Text = "label25";
+            // 
+            // TxtGoodCode
+            // 
+            this.TxtGoodCode.Location = new System.Drawing.Point(61, 56);
+            this.TxtGoodCode.Name = "TxtGoodCode";
+            this.TxtGoodCode.Size = new System.Drawing.Size(290, 20);
+            this.TxtGoodCode.TabIndex = 1;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(188, 9);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(107, 13);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Задайте код товару";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(14, 59);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(26, 13);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Код";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(14, 37);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(38, 13);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "Товар";
+            // 
+            // ButtSetGoodCode
+            // 
+            this.ButtSetGoodCode.Location = new System.Drawing.Point(354, 54);
+            this.ButtSetGoodCode.Name = "ButtSetGoodCode";
+            this.ButtSetGoodCode.Size = new System.Drawing.Size(149, 23);
+            this.ButtSetGoodCode.TabIndex = 5;
+            this.ButtSetGoodCode.Text = "ОК";
+            this.ButtSetGoodCode.UseVisualStyleBackColor = true;
+            this.ButtSetGoodCode.Click += new System.EventHandler(this.ButtSetGoodCode_Click);
             // 
             // MainForm
             // 
@@ -2373,6 +2451,8 @@
             this.tabPage1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.PanelSetGoodCode.ResumeLayout(false);
+            this.PanelSetGoodCode.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2458,7 +2538,6 @@
         private System.Windows.Forms.ToolStripButton ButtEditDeliveryLists;
         private System.Windows.Forms.DataGridView DataGridViewDeliveryLists;
         private System.Windows.Forms.ToolStripButton ButtGenerateDeliverListsFile;
-        private System.Windows.Forms.ToolStripButton ButtGenerateReceipts;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.DateTimePicker TimePickerDeliverListDate;
@@ -2594,6 +2673,14 @@
         private System.Windows.Forms.Label LabelExportPurcahseName;
         private System.Windows.Forms.Button ButtUploadExportPurchase;
         private System.Windows.Forms.ToolStripButton ButtMakeBill;
+        private System.Windows.Forms.ToolStripSplitButton ButtGenerateReceipts;
+        private System.Windows.Forms.Panel PanelSetGoodCode;
+        private System.Windows.Forms.Button ButtSetGoodCode;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox TxtGoodCode;
+        private System.Windows.Forms.Label LabelGoodToSetCode;
     }
 }
 

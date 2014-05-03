@@ -568,8 +568,15 @@ namespace OwlBusinessStudio
                 //"SELECT id,deliver_date,good_name,count,good_price,deliver_price,total_price,client_name,phones,address,deliver_time,driver,created FROM orders_with_details WHERE deliver_date=date(now()) ORDER BY id,deliver_date,created"
                                   //"SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,COALESCE(dll.driver,owd.driver) AS driver,owd.created,owd.modifier_name,owd.modified,owd.status_id FROM orders_with_details owd LEFT OUTER JOIN (SELECT substring(u.first_name, 1, 1) || '. ' || u.second_name AS driver,dll.order_id AS order_id FROM delivery_lists dll,users u WHERE dll.driver_id=u.id) as dll ON dll.order_id=owd.id WHERE ";
                 string command = "SELECT owd.id,owd.deliver_date,owd.articul,owd.good_name,owd.count,owd.good_price,owd.deliver_price,owd.total_price,owd.client_name,owd.phones,owd.address,owd.deliver_time,owd.driver,owd.created,owd.modifier_name,owd.modified,owd.status_id, dl.sum, dl.description,dl.comment, dl.id AS delivery_list_id FROM delivery_lists dl,orders_with_details owd,users dr WHERE owd.driver_id=dr.id AND owd.deliver_date=date(" + dbProc.getDateTimeString(TimePickerDeliverListDate.Value) + ") AND owd.id=dl.order_id AND dl.driver_id=" + driver_id.ToString() + " ORDER BY dl.priority,owd.id";
-                
+                string commandDelivers = "SELECT owd.address FROM delivery_lists dl,orders_with_details owd,users dr WHERE owd.driver_id=dr.id AND owd.deliver_date=date(" + dbProc.getDateTimeString(TimePickerDeliverListDate.Value) + ") AND owd.id=dl.order_id AND owd.deliver = FALSE GROUP BY address";
                 DataTable drTable = MainForm.dbProc.executeGet(command);
+                DataTable tableDelivers = MainForm.dbProc.executeGet(commandDelivers);
+                ButtGenerateReceipts.DropDownItems.Clear();
+                for(int i=0; i<tableDelivers.Rows.Count; i++)
+                {
+                    ButtGenerateReceipts.DropDownItems.Add(tableDelivers.Rows[i][0].ToString());
+                }
+                ButtGenerateReceipts.DropDownItems.Add("Доставка");
                 DataGridViewDeliveryLists.DataSource = drTable;
                 int total = 0;
 
@@ -1932,13 +1939,15 @@ namespace OwlBusinessStudio
                         excel.makeFont(2, currentOrderItemIndex + 8, 6, currentOrderItemIndex + 8, true, false, false, 12);
                         excel.text(currentOrderItemIndex + 10, 2, "Отпуск товара разрешил: ");
                         //Заказ получил, претензий по комплекту, упаковке и внешнему виду товаров не имею, правее слова "Подпись Клиента" и "Фамилия И.О.". Если влезет, то ниже две черты, над которыми клиент предположительно ставит подпись и ее расшифровку.
-                        excel.text(currentOrderItemIndex + 11, 2, "Заказ получил, претензий по комплекту, упаковке и внешнему виду товаров не имею.");
+                        excel.text(currentOrderItemIndex + 11, 2, "Заказ получил, претензий по комплекту, упаковке и внешнему виду товаров не имею."
+                            +Environment.NewLine
+                            +"Оплачивая заказ, Клиент подтверждает, что он тщательно проверил комплектацию и внешний вид.");
                         excel.text(currentOrderItemIndex + 12, 2, "Подпись клиента ____ ФИО _______________");
                         excel.text(currentOrderItemIndex + 10, 6, seller_fio);
                         excel.text(currentOrderItemIndex + 10, 3, "Отпуск товара разрешил: ");
                         excel.mergeCells(2, currentOrderItemIndex + 10, 4, currentOrderItemIndex + 10);
                         excel.mergeCells(2, currentOrderItemIndex + 11, 6, currentOrderItemIndex + 11);
-                        excel.setHeight(currentOrderItemIndex + 11, 2,30);
+                        excel.setHeight(currentOrderItemIndex + 11, 2,60);
                         excel.setTextAlignment(currentOrderItemIndex + 11, 2, currentOrderItemIndex + 11, 2, ExcelTextHorizontalAlignment.AlignLeft, ExcelTextVerticalAlignment.AlignJustify);
                         excel.mergeCells(2, currentOrderItemIndex + 12, 6, currentOrderItemIndex + 12);
 
@@ -3014,6 +3023,21 @@ namespace OwlBusinessStudio
         private void createPurchaseExportFile(string purchase_name,string path,string supplierCode,string supplierName)
         {
             DataTable purchaseTab = dbProc.executeGet("SELECT pl.*,g.good_code AS good_code FROM purchase_lists pl LEFT JOIN goods g ON g.id=pl.good_id WHERE list_name='"+purchase_name.Replace("'","`")+"'");
+            for (int i = 0; i < purchaseTab.Rows.Count; i++)
+            {
+                if (purchaseTab.Rows[i]["good_code"] is DBNull || purchaseTab.Rows[i]["good_code"].ToString()=="")
+                {
+                    PanelSetGoodCode.Tag = purchaseTab.Rows[i]["good_id"];
+                    LabelGoodToSetCode.Text = purchaseTab.Rows[i]["good_name"].ToString();
+                    TxtGoodCode.Text = "";
+                    PanelSetGoodCode.Visible = true;
+                    while (PanelSetGoodCode.Visible)
+                    {
+                        Application.DoEvents();
+                    }
+                    purchaseTab.Rows[i]["good_code"] = TxtGoodCode.Text;
+                }
+            }
             StreamWriter writer = new StreamWriter(path + "\\" + purchase_name.Replace(":", ".").Replace("#", "номер") + ".xml", false, Encoding.GetEncoding("windows-1251"));
             string purchaseTemplatePath = Environment.CurrentDirectory + "/Resources/purchase_template.xml";
             string goodTemplatePath = Environment.CurrentDirectory + "/Resources/good_template.xml";
@@ -3075,8 +3099,8 @@ namespace OwlBusinessStudio
                 string purchaseName = currentPurchase.Cells["list_name"].Value.ToString();
                 string supplierName = currentPurchase.Cells["supplier"].Value.ToString();
                 dbProc.setSetting("supplier_code_for_" + supplierName, TxtSupplierCode.Text);
-                createPurchaseExportFile(purchaseName, dirOut.FullName, TxtSupplierCode.Text, supplierName);
                 PanelUploadPurchse.Visible = false;
+                createPurchaseExportFile(purchaseName, dirOut.FullName, TxtSupplierCode.Text, supplierName);
             }
             catch (Exception ex)
             {
@@ -3146,6 +3170,176 @@ namespace OwlBusinessStudio
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void ButtGenerateReceipts_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string delivery = e.ClickedItem.ToString();
+
+            try
+            {
+                DataTable drivers = dbProc.executeGet("SELECT *, substring(first_name from 1 for 1)||'. '||second_name AS fio FROM users WHERE role_id=3 ORDER BY fio");
+                DataTable orders = null;
+                for (int i = 0; i < drivers.Rows.Count; i++)// For each driver
+                {
+                    int driver_id = (int)drivers.Rows[i]["id"];
+                    string deliverCondition = " AND address='" + delivery + "' ";
+                    if (delivery == "Доставка")
+                    {
+                        deliverCondition = " AND deliver = TRUE ";
+                    }
+                    string sqlCommand = "SELECT owd.articul,owd.id,owd.phone_1,owd.phones,owd.good_name,owd.deliver_date,owd.count,owd.address,owd.deliver_time,owd.total_price,owd.goods_price,owd.good_price,owd.deliver_price,owd.client_name,owd.discount_percent FROM orders_with_details owd, delivery_lists dl WHERE owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(TimePickerDeliverListDate.Value) + ") AND owd.id=dl.order_id AND dl.driver_id=" + driver_id + deliverCondition + " ORDER BY dl.priority,owd.id";
+                    DataTable forDriver = dbProc.executeGet(sqlCommand);
+
+                    if (orders != null)
+                    {
+                        for (int ll = 0; ll < forDriver.Rows.Count; ll++)
+                        {
+                            orders.Rows.Add(forDriver.Rows[ll].ItemArray);
+                        }
+                    }
+                    else
+                    {
+                        orders = forDriver;
+                    }
+                }
+
+                string seller_requisites = (string)dbProc.executeGet("SELECT value FROM settings WHERE name='seller_requisites'").Rows[0][0];
+                string seller_phone = (string)dbProc.executeGet("SELECT value FROM settings WHERE name='seller_phone'").Rows[0][0];
+                string seller_fio = (string)dbProc.executeGet("SELECT value FROM settings WHERE name='seller_fio'").Rows[0][0];
+                FTwoExcelProcessor excel = new FTwoExcelProcessor();
+                excel.InitApplication(true);
+                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(proc_OnExcelClose);
+                ButtGenerateReceipts.Enabled = false;
+                long receiptNumber = (long)dbProc.executeGet("SELECT nextval('receipt_seq')").Rows[0][0];
+                int orderID = 0;
+                int currentOrderItemIndex = 0;
+                int orderIndex = 1;
+                for (int i = 0; i < orders.Rows.Count; i++)
+                {
+                    string deliver_date = ((DateTime)orders.Rows[i]["deliver_date"]).ToShortDateString();
+                    string receipt_number = (receiptNumber + orderIndex).ToString() + " от " + deliver_date;
+                    string good_name = (string)orders.Rows[i]["good_name"];
+                    string count = orders.Rows[i]["count"].ToString();
+                    string discount_percent = orders.Rows[i]["discount_percent"].ToString();
+                    string good_price = orders.Rows[i]["good_price"].ToString();
+                    string goods_price = orders.Rows[i]["goods_price"].ToString();
+                    string good_item_price = ((int)orders.Rows[i]["good_price"] * (int)orders.Rows[i]["count"]).ToString();
+                    string total_price = orders.Rows[i]["total_price"].ToString();
+                    string articul = orders.Rows[i]["articul"].ToString();
+                    string deliver_price = orders.Rows[i]["deliver_price"].ToString();
+                    string buyer = orders.Rows[i]["client_name"].ToString() + ", тел."
+                        + orders.Rows[i]["phone_1"].ToString()
+                        + ", " + orders.Rows[i]["address"].ToString();
+
+                    if (orderID == 0)
+                    {
+                        orderID = (int)orders.Rows[i]["id"];
+                    }
+                    currentOrderItemIndex++;
+
+                    excel.text(5, 1, "№");
+                    excel.text(5, 2, "Арт");
+                    excel.text(5, 3, "Наименование");
+                    excel.text(5, 4, "Кол-во");
+                    excel.text(5, 5, "Цена");
+                    excel.text(5, 6, "Сумма");
+
+                    excel.text(5 + currentOrderItemIndex, 1, currentOrderItemIndex.ToString());
+                    excel.text(5 + currentOrderItemIndex, 2, articul);
+                    excel.text(5 + currentOrderItemIndex, 3, good_name);
+                    excel.text(5 + currentOrderItemIndex, 4, count);
+                    excel.text(5 + currentOrderItemIndex, 5, good_price);
+                    excel.text(5 + currentOrderItemIndex, 6, good_item_price);
+                    if (orders.Rows.Count - 1 == i || (int)orders.Rows[i + 1]["id"] != orderID)// End or next order
+                    {
+                        // Need to create header and footer
+                        // Then turn current sheet
+                        excel.mergeCells(2, 1, 3, 1);
+                        excel.mergeCells(2, 2, 6, 2);
+                        excel.mergeCells(2, 3, 3, 3);
+                        excel.mergeCells(2, 4, 6, 4);
+                        excel.mergeCells(3, currentOrderItemIndex + 6, 5, currentOrderItemIndex + 6);
+                        excel.mergeCells(3, currentOrderItemIndex + 7, 5, currentOrderItemIndex + 7);
+
+                        excel.makeFont(1, 2, 1, 4, true, false, false, 12);
+                        excel.makeFont(2, 1, 2, 1, true, false, false, 12);
+                        excel.makeFont(2, 5, 6, 5, true, false, false, 12);
+
+                        excel.text(6 + currentOrderItemIndex, 3, "Скидка");
+                        excel.text(6 + currentOrderItemIndex, 6, discount_percent + "%");
+                        excel.text(7 + currentOrderItemIndex, 3, "Услуги по доставке заказа");
+                        excel.text(7 + currentOrderItemIndex, 6, deliver_price);
+
+
+                        excel.text(1, 2, "Товарный чек № " + receipt_number);
+
+
+                        excel.text(2, 1, "Продавец: ");
+                        excel.text(2, 2, seller_requisites);
+                        excel.text(3, 2, "тел. " + seller_phone);
+                        excel.text(4, 1, "Покупатель: ");
+                        excel.text(4, 2, "№" + orderID.ToString() + ", " + buyer);
+
+                        excel.text(currentOrderItemIndex + 8, 2, "Всего отпущено товаров и оказано услуг на сумму: ");
+                        excel.text(currentOrderItemIndex + 8, 6, total_price + " руб.");
+
+
+                        excel.makeFont(1, currentOrderItemIndex + 8, 6, currentOrderItemIndex + 8, true, false, false, 12);
+
+                        excel.text(currentOrderItemIndex + 10, 2, "Отпуск товара разрешил: ");
+                        excel.text(currentOrderItemIndex + 10, 5, "");
+                        excel.text(currentOrderItemIndex + 10, 6, seller_fio);
+                        excel.mergeCells(2, currentOrderItemIndex + 10, 3, currentOrderItemIndex + 10);
+
+
+                        excel.makeBorder(1, 5, 6, currentOrderItemIndex + 7, Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin, true);
+                        excel.setImage(130 + currentOrderItemIndex * 15, 145, 100, 90, Environment.CurrentDirectory + "/Resources/signature.jpg");
+                        excel.setHeight(4, 2, 30);
+                        excel.setTextAlignment(4, 2, 4, 2, ExcelTextHorizontalAlignment.AlignLeft, ExcelTextVerticalAlignment.AlignJustify);
+                        excel.setTextAlignment(5, 1, 20, 2, ExcelTextHorizontalAlignment.CenterAcrossSelection, ExcelTextVerticalAlignment.AlignCenter);
+                        excel.setWidth(1, 1, 13);
+                        excel.setWidth(1, 2, 4);
+                        excel.setWidth(1, 3, 32);
+                        excel.setWidth(1, 4, 8);
+                        excel.setWidth(1, 5, 10.7);
+                        excel.setWidth(1, 6, 11.7);
+                        currentOrderItemIndex = 0;
+                        if (orders.Rows.Count > i + 1)
+                        {
+                            orderID = (int)orders.Rows[i + 1]["id"];
+                        }
+
+                        orderIndex++;
+                        excel.renameSheet("№" + receipt_number);
+                        if (orders.Rows.Count - 1 != i)
+                        {
+                            excel.moveToNextSheet();
+                        }
+                    }
+                }
+                DirectoryInfo dir = new DirectoryInfo(roadListsDirectory + "/" + MainForm.dbProc.getServerTime().Year.ToString().Replace(".", "_") + "/");
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
+                string month = MainForm.dbProc.getServerTime().ToString("MMMM");
+                string fileName = dir.FullName + "Чеки_" + month + "_" + MainForm.dbProc.getServerTime().Day.ToString().Replace(".", "_");
+                excel.Save(fileName);
+                //writer.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void ButtSetGoodCode_Click(object sender, EventArgs e)
+        {
+            int good_id = (int)PanelSetGoodCode.Tag;
+            dbProc.update("goods", "good_code='"+TxtGoodCode.Text+"'", "id=" + good_id);
+            PanelSetGoodCode.Visible = false;
         }
     }
 }

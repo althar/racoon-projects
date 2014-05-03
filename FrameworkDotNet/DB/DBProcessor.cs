@@ -421,11 +421,11 @@ namespace FTwoFramework.DB
                 DataTable tab = executeGet("SELECT articul FROM goods WHERE articul='"+getString(item,fields,"articul")+"'");
                 if (tab != null && tab.Rows.Count > 0)
                 {
-                    //update("goods", pars, "articul='" + tab.Rows[0]["articul"] + "'");
+                    update("goods", pars, "articul='" + tab.Rows[0]["articul"] + "'");
                 }
                 else
                 {
-                    //insert("goods", pars);
+                    insert("goods", pars);
                 }
                 return true;
             }
