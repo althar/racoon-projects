@@ -282,12 +282,8 @@ public class UserProcessor
             if(cookies[i].getName().equalsIgnoreCase(name))
             {
                 sid = cookies[i].getValue();
-                break;
+                return sid;
             }
-        }
-        if(sid==null)
-        {
-            return null;
         }
         return sid;
     }

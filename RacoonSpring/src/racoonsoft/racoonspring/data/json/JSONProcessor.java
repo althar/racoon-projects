@@ -2,11 +2,10 @@ package racoonsoft.racoonspring.data.json;
 
 import org.json.JSONObject;
 import org.json.XML;
-import racoonsoft.library.annotations.DataStructure;
-import racoonsoft.library.annotations.DataStructureField;
-import racoonsoft.library.annotations.DataStructureValue;
-import racoonsoft.library.database.DBRecord;
-import racoonsoft.library.xml.XMLProcessor;
+import racoonsoft.racoonspring.data.annotation.DataStructureField;
+import racoonsoft.racoonspring.data.annotation.DataStructureValue;
+import racoonsoft.racoonspring.data.structure.DatabaseStructure;
+import racoonsoft.racoonspring.data.xml.XMLProcessor;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -53,7 +52,7 @@ public class JSONProcessor
     {
         return BodyStructure;
     }
-    public Object getValue(String path)
+    public Object getValue(String path) throws Exception
     {
         Object current_leaf = BodyStructure;
         String[] leafs = path.split("\\.");
@@ -63,9 +62,9 @@ public class JSONProcessor
             {
                 current_leaf = ((HashMap)current_leaf).get(leafs[i]);
             }
-            else if(current_leaf instanceof DBRecord)// Object
+            else if(current_leaf instanceof DatabaseStructure)// Object
             {
-                current_leaf = ((DBRecord)current_leaf).fields.get(leafs[i]);
+                current_leaf = ((DatabaseStructure)current_leaf).getValue(leafs[i]);
             }
             else if(current_leaf instanceof ArrayList)
             {
@@ -171,7 +170,8 @@ public class JSONProcessor
         {
             return "\"null\"";
         }
-        else if(val.getClass().isAnnotationPresent(DataStructure.class))
+//        else if(val.getClass().isAnnotationPresent(DatabaseStructure.class))
+        else if(val instanceof DatabaseStructure)
         {
             builder.append("{");
             builder.append(extractFields(val.getClass().getDeclaredFields(),val));
@@ -183,10 +183,10 @@ public class JSONProcessor
             }
             builder.append("}");
         }
-        else if(val instanceof DBRecord)
-        {
-            val = ((DBRecord)val).fields;
-        }
+//        else if(val instanceof DatabaseStructure)
+//        {
+//            val = ((DatabaseStructure)val).fields;
+//        }
         else if(val instanceof HashMap)
         {
             builder.append("{");

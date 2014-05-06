@@ -3,10 +3,10 @@ package racoonsoft.racoonspring.mvc.interceptor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
-import racoonsoft.library.access.ActionResult;
-import racoonsoft.library.access.User;
-import racoonsoft.library.access.UserProcessor;
-import racoonsoft.library.annotations.RequiresRole;
+import racoonsoft.racoonspring.access.UserProcessor;
+import racoonsoft.racoonspring.data.structure.ActionResult;
+import racoonsoft.racoonspring.data.structure.User;
+import racoonsoft.racoonspring.mvc.annotation.RequiresRole;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -90,7 +90,7 @@ public class AccessInterceptor extends MainInterceptor
         ArrayList<String> roles = res.getRoles();
         boolean anonymous = res.anonymous();
         request.setAttribute("anonymous",anonymous);
-        request.setAttribute("user_id",user.getID());
+        request.setAttribute("user_id",user.getLongValue("id"));
         request.setAttribute("user",user);
         request.setAttribute("roles",roles);
     }

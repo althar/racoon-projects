@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MfaOverlord/MfaOverlord.iml" filepath="$PROJECT_DIR$/../MfaOverlord/MfaOverlord.iml" />
       <module fileurl="file://$PROJECT_DIR$/RacoonSpring.iml" filepath="$PROJECT_DIR$/RacoonSpring.iml" />
     </modules>
   </component>

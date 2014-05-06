@@ -4,8 +4,7 @@ import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
-import racoonsoft.library.database.DBRecord;
-import racoonsoft.library.database.DBTable;
+import racoonsoft.racoonspring.data.structure.DatabaseStructure;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -165,13 +164,13 @@ public class XMLProcessor
         return map.getNamedItem(attrName).getNodeValue();
     }
 
-    public Node addNode(String path,String nodeName)
+    public Node addNode(String path,String nodeName) throws Exception
     {
         return addNode(path,nodeName,"");
     }
 
     // We use NODES. So inner_pathes aren`t needed!!!!!!
-    public Node addNode(Node node,String nodeName,Object value)
+    public Node addNode(Node node,String nodeName,Object value) throws Exception
     {
         Element newNode = document.createElement(nodeName);
         if(value == null)
@@ -199,29 +198,17 @@ public class XMLProcessor
                 addNode(newNode, "item", arr.get(i));
             }
         }
-        else if(value instanceof DBTable)
-        {
-            DBTable dbt = (DBTable)value;
-            ArrayList<Object> arr = (ArrayList)dbt.get();
-            node.appendChild(newNode);
-            for(int i=0; i<arr.size(); i++)
-            {
-                String inner_path = "";
-
-                //addNode(node, "item_"+(i+1), arr.get(i));
-                addNode(newNode, "item", arr.get(i));
-            }
-        }
         else if(value instanceof HashMap)
         {
             HashMap<String,Object> arr = (HashMap<String,Object>)value;
             node.appendChild(newNode);
             addNodes(newNode, arr);
         }
-        else if(value instanceof DBRecord)
+        else if(value instanceof DatabaseStructure)
         {
-            HashMap<String,Object> arr = ((DBRecord)value).fields;
+            HashMap<String,Object> arr = ((DatabaseStructure)value).toHashmap(false);
             node.appendChild(newNode);
+
             addNodes(newNode, arr);
         }
         else
@@ -231,7 +218,7 @@ public class XMLProcessor
         }
         return newNode;
     }
-    public Node addNode(String path,String nodeName,Object value)
+    public Node addNode(String path,String nodeName,Object value) throws Exception
     {
         Element newNode = document.createElement(nodeName);
         if(value == null)
@@ -267,22 +254,6 @@ public class XMLProcessor
                 addNode(inner_path+""+nodeName, "item", arr.get(i));
             }
         }
-        else if(value instanceof DBTable)
-        {
-            DBTable dbt = (DBTable)value;
-            ArrayList<Object> arr = (ArrayList)dbt.get();
-            getNode(path).appendChild(newNode);
-            for(int i=0; i<arr.size(); i++)
-            {
-                String inner_path = "";
-                if(!path.equalsIgnoreCase(".")&&!path.equalsIgnoreCase(""))
-                {
-                    inner_path = path+".";
-                }
-                addNode(inner_path+""+nodeName, "item_"+(i+1), arr.get(i));
-//                addNode(inner_path+""+nodeName, "item", arr.get(i));
-            }
-        }
         else if(value instanceof HashMap)
         {
             HashMap<String,Object> arr = (HashMap<String,Object>)value;
@@ -295,9 +266,9 @@ public class XMLProcessor
             inner_path += nodeName;
             addNodes(newNode, arr);
         }
-        else if(value instanceof DBRecord)
+        else if(value instanceof DatabaseStructure)
         {
-            HashMap<String,Object> arr = ((DBRecord)value).fields;
+            HashMap<String,Object> arr = ((DatabaseStructure)value).toHashmap(false);
             getNode(path).appendChild(newNode);
             String inner_path = "";
             if(!path.equalsIgnoreCase(".")&&!path.equalsIgnoreCase(""))
@@ -315,7 +286,7 @@ public class XMLProcessor
         }
         return newNode;
     }
-    public void addNodes(String path,HashMap<String,Object> map)
+    public void addNodes(String path,HashMap<String,Object> map) throws Exception
     {
         if(map==null)
         {
@@ -329,7 +300,7 @@ public class XMLProcessor
             addNode(path, key, value);
         }
     }
-    public void addNodes(Node node,HashMap<String,Object> map)
+    public void addNodes(Node node,HashMap<String,Object> map) throws Exception
     {
         if(map==null)
         {
@@ -343,7 +314,7 @@ public class XMLProcessor
             addNode(node, key, value);
         }
     }
-    public void addNodesUnnamed(String path,HashMap<Integer,Object> map)
+    public void addNodesUnnamed(String path,HashMap<Integer,Object> map) throws Exception
     {
         if(map==null)
         {

@@ -1,6 +1,7 @@
 package racoonsoft.racoonspring.data.structure;
 
 import org.xml.sax.SAXException;
+import racoonsoft.racoonspring.data.annotation.DataStructureFieldExclude;
 import racoonsoft.racoonspring.data.xml.XMLProcessor;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,8 +16,13 @@ import java.util.HashMap;
 
 public class DatabaseStructure
 {
-    private HashMap<String,Object> fields = new HashMap<String, Object>();
+    @DataStructureFieldExclude
+    protected HashMap<String,Object> fields = new HashMap<String, Object>();
 
+    public HashMap<String,Object> fields()
+    {
+        return fields;
+    }
     public void clear() throws Exception
     {
         Field[] fs = this.getClass().getDeclaredFields();
@@ -33,22 +39,39 @@ public class DatabaseStructure
         }
         fields.clear();
     }
-    public void set(String name, Object value) throws Exception
+    public DatabaseStructure set(String name, Object value) throws Exception
     {
-        Field f = this.getClass().getDeclaredField(name);
-        if(f!=null)
+        try
         {
-            f.set(this,value);
-            return;
+            Field f = this.getClass().getDeclaredField(name);
+            if(f!=null)
+            {
+                f.setAccessible(true);
+                f.set(this,value);
+                return this;
+            }
+        }
+        catch (Exception ex)
+        {
+
         }
         fields.put(name,value);
+        return this;
     }
     public Object getValue(String name) throws Exception
     {
-        Field f = this.getClass().getDeclaredField(name);
-        if(f!=null)
+        try
         {
-            return f.get(this);
+            Field f = this.getClass().getDeclaredField(name);
+            if(f!=null)
+            {
+                f.setAccessible(true);
+                return f.get(this);
+            }
+        }
+        catch (Exception ex)
+        {
+
         }
         return fields.get(name);
     }
@@ -82,7 +105,7 @@ public class DatabaseStructure
     {
         try
         {
-            return (String)getValue(name);
+            return (String)getValue(name).toString();
         }
         catch(Exception ex)
         {
@@ -135,11 +158,27 @@ public class DatabaseStructure
     {
         return getLongValue("id");
     }
-    public String toXML() throws IOException,ParserConfigurationException,SAXException
+    public String toXML() throws Exception
     {
         XMLProcessor proc = new XMLProcessor();
         proc.addNodes("root", fields);
         String result = proc.toXMLString();
+        return result;
+    }
+    public HashMap<String,Object> toHashmap(boolean excludeAnnotated) throws Exception
+    {
+        HashMap<String,Object> result = new HashMap<String, Object>();
+        Field[] fs = this.getClass().getDeclaredFields();
+        for(Field f:fs)
+        {
+            if(!excludeAnnotated||!f.isAnnotationPresent(DataStructureFieldExclude.class))
+            {
+                f.setAccessible(true);
+                String name = f.getName();
+                Object value = f.get(this);
+                result.put(name,value);
+            }
+        }
         return result;
     }
 }
