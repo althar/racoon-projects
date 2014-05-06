@@ -1,5 +1,7 @@
 package racoonsoft.racoonspring.data.database;
 
+import racoonsoft.racoonspring.data.structure.DatabaseStructure;
+
 import javax.sql.DataSource;
 import java.io.PrintWriter;
 import java.sql.*;
@@ -75,8 +77,35 @@ public class DatabaseProcessor implements DataSource
         SelectQuery q = new SelectQuery(db_connection,expression);
         return q;
     }
+    public SelectQuery selectQuery(Class<? extends DatabaseStructure> dataClass,String condition) throws Exception
+    {
+        SelectQuery q = new SelectQuery(db_connection,dataClass,condition);
+        return q;
+    }
+    public SelectQuery selectQuery(Class<? extends DatabaseStructure> dataClass,String table,String condition) throws Exception
+    {
+        SelectQuery q = new SelectQuery(db_connection,dataClass,table, condition);
+        return q;
+    }
     //</editor-fold>
 
+    //<editor-fold desc="Insert">
+    public InsertQuery insertQuery(String expression) throws Exception
+    {
+        InsertQuery q = new InsertQuery(db_connection,expression);
+        return q;
+    }
+    public InsertQuery insertQuery(DatabaseStructure data) throws Exception
+    {
+        InsertQuery q = new InsertQuery(db_connection,data);
+        return q;
+    }
+    public InsertQuery insertQuery(DatabaseStructure data,String tableName) throws Exception
+    {
+        InsertQuery q = new InsertQuery(db_connection,data,tableName);
+        return q;
+    }
+    //</editor-fold>
 
     public ArrayList<HashMap<String,Object>> extractFields(ResultSet set) throws SQLException
     {

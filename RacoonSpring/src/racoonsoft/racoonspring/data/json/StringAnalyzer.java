@@ -1,6 +1,6 @@
 package racoonsoft.racoonspring.data.json;
 
-import racoonsoft.library.helper.TypeHelper;
+import racoonsoft.racoonspring.helper.TypeHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;

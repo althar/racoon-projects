@@ -379,7 +379,7 @@ namespace FTwoFramework.DB
             {
                 Hashtable pars = new Hashtable();
                 pars.Add("articul", getString(item, fields, "articul"));
-                if (getString(item, fields, "real_article") == "49011")
+                if (getString(item, fields, "real_article") == "19560")
                 {
                     string soso="soso";
                 }

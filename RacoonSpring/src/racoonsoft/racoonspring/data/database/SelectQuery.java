@@ -19,28 +19,44 @@ public class SelectQuery extends Query
         conn = c;
         statement = conn.prepareStatement(query);
     }
-    public SelectQuery(Connection c,Class<?> dataClass,String condition) throws Exception
+    public SelectQuery(Connection c,Class<? extends DatabaseStructure> dataClass,String table,String condition) throws Exception
     {
         Field[] fs = dataClass.getDeclaredFields();
-        String tableName = dataClass.getAnnotation(DataStructureTable.class).name();
+        if(table == null)
+        {
+            if(dataClass.getAnnotation(DataStructureTable.class)==null)
+            {
+                throw new Exception("No table name specified");
+            }
+            table = dataClass.getAnnotation(DataStructureTable.class).name();
+        }
+
         StringBuilder builder = new StringBuilder("SELECT ");
         for(int i=0; i<fs.length; i++)
         {
             if(!fs[i].isAnnotationPresent(DataStructureFieldExclude.class))
             {
+                fs[i].setAccessible(true);
                 builder.append(fs[i].getName());
-                if(i-1<fs.length)
+                if(i+1<fs.length)
                 {
                     builder.append(",");
                 }
             }
         }
         builder.append(" FROM ");
-        builder.append(tableName);
-        builder.append(" WHERE ");
-        builder.append(condition);
+        builder.append(table);
+        if(condition!=null)
+        {
+            builder.append(" WHERE ");
+            builder.append(condition);
+        }
         conn = c;
         statement = conn.prepareStatement(builder.toString());
+    }
+    public SelectQuery(Connection c,Class<? extends DatabaseStructure> dataClass,String condition) throws Exception
+    {
+        this(c,dataClass,null,condition);
     }
 
     public DatabaseStructure selectOne() throws Exception
@@ -63,7 +79,7 @@ public class SelectQuery extends Query
     }
     public ArrayList<DatabaseStructure> select() throws Exception
     {
-        ResultSet set = statement.getResultSet();
+        ResultSet set = statement.executeQuery();
         int column_count = set.getMetaData().getColumnCount();
         ArrayList<DatabaseStructure> result = new ArrayList<DatabaseStructure>();
         String[] column_names = new String[column_count];
@@ -103,5 +119,11 @@ public class SelectQuery extends Query
             result.add(cc);
         }
         return result;
+    }
+    @Override
+    public SelectQuery setParameter(int index,Object value) throws Exception
+    {
+        statement.setObject(index,value);
+        return this;
     }
 }
