@@ -706,14 +706,18 @@ namespace OwlBusinessStudio.Orders
                     MainForm.dbProc.delete("order_goods", "order_id=" + orderID.ToString());
                     for (int i = 0; i < orderTable.Items.Count; i++)// Goods for order
                     {
+                        
                         Hashtable orderGoodParams = new Hashtable();
                         OrderItem item = orderTable.Items[i];
-                        orderGoodParams.Add("order_id", orderID);
-                        orderGoodParams.Add("good_id", item.getGoodID());
-                        orderGoodParams.Add("price", item.getPrice());
-                        orderGoodParams.Add("count", item.getQuantity());
-                        orderGoodParams.Add("good_name", item.ComboGoods.Text);
-                        MainForm.dbProc.insert("order_goods", orderGoodParams);
+                        if (item.getGoodID() != 0)
+                        {
+                            orderGoodParams.Add("order_id", orderID);
+                            orderGoodParams.Add("good_id", item.getGoodID());
+                            orderGoodParams.Add("price", item.getPrice());
+                            orderGoodParams.Add("count", item.getQuantity());
+                            orderGoodParams.Add("good_name", item.ComboGoods.Text);
+                            MainForm.dbProc.insert("order_goods", orderGoodParams);
+                        }
                     }
                     changeCompletedOrder(false);
                     #endregion
@@ -811,12 +815,15 @@ namespace OwlBusinessStudio.Orders
                     {
                         Hashtable orderGoodParams = new Hashtable();
                         OrderItem item = orderTable.Items[i];
-                        orderGoodParams.Add("order_id", order_id);
-                        orderGoodParams.Add("good_id", item.getGoodID());
-                        orderGoodParams.Add("price", item.getPrice());
-                        orderGoodParams.Add("count", item.getQuantity());
-                        orderGoodParams.Add("good_name", item.ComboGoods.Text);
-                        MainForm.dbProc.insert("order_goods", orderGoodParams);
+                        if (item.getGoodID() != 0)
+                        {
+                            orderGoodParams.Add("order_id", order_id);
+                            orderGoodParams.Add("good_id", item.getGoodID());
+                            orderGoodParams.Add("price", item.getPrice());
+                            orderGoodParams.Add("count", item.getQuantity());
+                            orderGoodParams.Add("good_name", item.ComboGoods.Text);
+                            MainForm.dbProc.insert("order_goods", orderGoodParams);
+                        }
                     }
                     #endregion
                 }

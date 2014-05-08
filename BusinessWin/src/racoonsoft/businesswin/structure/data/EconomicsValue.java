@@ -31,6 +31,11 @@ public class EconomicsValue
         }
         value = MathHelper.round(value.doubleValue(),accuracy);
     }
+    public void setRounded(Double val)
+    {
+        set(val);
+        value = ((Integer)value.intValue()).doubleValue();
+    }
     public void add(Double val)
     {
         set(get()+val.doubleValue());

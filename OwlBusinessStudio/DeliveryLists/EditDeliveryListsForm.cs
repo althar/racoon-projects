@@ -104,7 +104,7 @@ namespace OwlBusinessStudio.DeliveryLists
             DriverLists = new Hashtable();
             for(int i=0; i<Drivers.Rows.Count; i++)
             {
-                DataTable drTable = MainForm.dbProc.executeGet("SELECT DISTINCT owd.id,owd.address,owd.deliver_price,owd.total_price,owd.deliver_time,false AS is_new,priority FROM delivery_lists dl,orders_with_details owd WHERE owd.id=dl.order_id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND dl.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address,owd.deliver_price,owd.total_price,deliver_time,dl.priority ORDER BY dl.priority");
+                DataTable drTable = MainForm.dbProc.executeGet("SELECT DISTINCT owd.id,owd.address_short AS address,owd.deliver_price,owd.total_price,owd.deliver_time,false AS is_new,priority FROM delivery_lists dl,orders_with_details owd WHERE owd.id=dl.order_id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND dl.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address_short,owd.deliver_price,owd.total_price,deliver_time,dl.priority ORDER BY dl.priority");
                 DriverLists.Add(Drivers.Rows[i]["id"], drTable);
             }
         }
@@ -116,14 +116,14 @@ namespace OwlBusinessStudio.DeliveryLists
                 DataTable drTable = null;
                 if (((int)Drivers.Rows[i]["id"] == 0))
                 {
-                    string command = "SELECT DISTINCT owd.id,owd.address,owd.deliver_price,owd.total_price,owd.deliver_time,true AS is_new,0 AS priority"
-                    + " FROM orders_with_details owd,orders ord WHERE ord.id = owd.id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND owd.id NOT IN (SELECT order_id FROM delivery_lists) AND owd.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address,owd.deliver_price,owd.total_price,deliver_time,priority ORDER BY priority";
+                    string command = "SELECT DISTINCT owd.id,owd.address_short AS address,owd.deliver_price,owd.total_price,owd.deliver_time,true AS is_new,0 AS priority"
+                    + " FROM orders_with_details owd,orders ord WHERE ord.id = owd.id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND owd.id NOT IN (SELECT order_id FROM delivery_lists) AND owd.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address_short,owd.deliver_price,owd.total_price,deliver_time,priority ORDER BY priority";
                     drTable = MainForm.dbProc.executeGet(command);
                 }
                 else
                 {
-                    string command = "SELECT DISTINCT owd.id,owd.address,owd.deliver_price,owd.total_price,owd.deliver_time,true AS is_new,dm.priority AS priority"
-                    + " FROM orders_with_details owd,orders ord,driver_metros dm WHERE ord.metro_id=dm.metro_id AND ord.id = owd.id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND owd.id NOT IN (SELECT order_id FROM delivery_lists) AND owd.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address,owd.deliver_price,owd.total_price,deliver_time,priority ORDER BY priority";
+                    string command = "SELECT DISTINCT owd.id,owd.address_short AS address,owd.deliver_price,owd.total_price,owd.deliver_time,true AS is_new,dm.priority AS priority"
+                    + " FROM orders_with_details owd,orders ord,driver_metros dm WHERE ord.metro_id=dm.metro_id AND ord.id = owd.id AND owd.status_id=1 AND owd.deliver_date=date(" + MainForm.dbProc.getDateTimeString(CurrentListsDate) + ") AND owd.id NOT IN (SELECT order_id FROM delivery_lists) AND owd.driver_id=" + Drivers.Rows[i]["id"] + " GROUP BY owd.id,owd.address_short,owd.deliver_price,owd.total_price,deliver_time,priority ORDER BY priority";
                     drTable = MainForm.dbProc.executeGet(command);
                 }
                 
