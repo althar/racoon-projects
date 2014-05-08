@@ -359,12 +359,12 @@ public class GameService
         for(int i=0; i<g.companies.size(); i++)
         {
             Company company = g.companies.get(i);
-            company.products_and_capacity.power.set(company.products_and_capacity.power_sensor.get()
+            company.products_and_capacity.power.setRounded(company.products_and_capacity.power_sensor.get()
                     /totalPowerSensor
                     *g.startSettings.total_capacity.get());
             company.products_and_capacity.production_sensor.set(Math.random(g.startSettings.power_loading_coefficient_min.get(),g.startSettings.power_loading_coefficient_max.get(),3));
             totalProductionSensor+=company.products_and_capacity.production_sensor.get();
-            company.products_and_capacity.production.set(company.products_and_capacity.power.get()*company.products_and_capacity.production_sensor.get());
+            company.products_and_capacity.production.setRounded(company.products_and_capacity.power.get()*company.products_and_capacity.production_sensor.get());
             company.products_and_capacity.power_reserve.set(company.products_and_capacity.power.get()-company.products_and_capacity.production.get());
         }
         //</editor-fold>
@@ -425,7 +425,7 @@ public class GameService
                     /cashSensorSum)
                     +company.company_state.net_profit.get()
                     +company.company_state.depreciation.get());
-            company.company_state.net_fixed_assets.set(company.getFixedAssetsForTurn(0)-company.getDepreciation(0));
+            company.company_state.net_fixed_assets.set(company.getFixedAssetsForTurn(0));
             company.company_state.current_passives.set(0.0);
             company.company_state.debt.set(0.0);
             company.company_state.credit_value.set(0.0);
@@ -1086,7 +1086,7 @@ public class GameService
         if(card.event_card_type == EventCardType.EFFICIENCY_PROJECT_LARGE)
         {
             // New power
-            c.company_state.new_power.set(g.startSettings.current_power_percent_big_project.get()
+            c.company_state.new_power.setRounded(g.startSettings.current_power_percent_big_project.get()
                     *(c.company_state.power.get()+c.company_state.new_power.get()));
 
             Double cost = g.startSettings.current_power_percent_big_project.get()
