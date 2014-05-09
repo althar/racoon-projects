@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import racoonsoft.library.annotations.RequiresRole;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.mail.MailMessage;
 
@@ -25,6 +26,22 @@ public class ServiceController extends KnaufController
                 ,"Обратная связь.<br> От:"+feedback_fio+"  ("+feedback_email+")<br>"+feedback_text+"<br>",new HashMap<String, Object>());
         mail.sendMail(mess);
         ModelAndView model = model("main");
+        model = addAmount(model,request);
+        model = addCatalogue(model,request);
+        return model;
+    }
+    @RequestMapping("/change_info")
+    @RequiresRole(role={"CLIENT"},redirectUrl = "/")
+    public ModelAndView page(HttpServletRequest request, HttpServletResponse response,String first_name,String last_name,String email,String password) throws Exception
+    {
+        HashMap<String,Object> pars = new HashMap<String, Object>();
+        pars.put("first_name",first_name);
+        pars.put("last_name",last_name);
+        pars.put("login",email);
+        pars.put("password",password);
+        dbProc.executeUpdate("\"user\"",pars,"id="+id(request));
+        ModelAndView model = new ModelAndView("redirect:/info").addObject("done",true);
+        model = flushAllParameters(request,model);
         model = addAmount(model,request);
         model = addCatalogue(model,request);
         return model;

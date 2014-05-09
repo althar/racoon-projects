@@ -57,7 +57,7 @@ public class PageController extends KnaufController
         return model;
     }
     @RequestMapping(value = "/good")
-    public ModelAndView main(HttpServletRequest request, HttpServletResponse response,String id) throws Exception
+    public ModelAndView good(HttpServletRequest request, HttpServletResponse response,String id) throws Exception
     {
         ModelAndView model = model("good");
         model = addAmount(model,request);
@@ -66,6 +66,16 @@ public class PageController extends KnaufController
         JSONProcessor jsonItem = ozon.ozonProc.getItem(id);
         model.addObject("good",json.getStructure());
         model.addObject("good_short",jsonItem.getStructure());
+        return model;
+    }
+    @RequestMapping(value = "/history")
+    public ModelAndView history(HttpServletRequest request, HttpServletResponse response) throws Exception
+    {
+        ModelAndView model = model("history");
+        model = addAmount(model,request);
+        model = addCatalogue(model,request);
+        JSONProcessor json = ozon.ozonProc.getOrders(id(request).toString());
+        model.addObject("orders",json.getStructure());
         return model;
     }
 
