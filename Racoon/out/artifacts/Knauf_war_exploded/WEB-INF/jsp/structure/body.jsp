@@ -57,3 +57,12 @@
 <c:if test="${page=='api_failed'}">
     <%@ include file="/WEB-INF/jsp/content/api_failed.jsp" %>
 </c:if>
+<c:if test="${page=='profile'}">
+    <%@ include file="/WEB-INF/jsp/content/profile.jsp" %>
+</c:if>
+<c:if test="${page=='info'}">
+    <%@ include file="/WEB-INF/jsp/content/info.jsp" %>
+</c:if>
+<c:if test="${page=='history'}">
+    <%@ include file="/WEB-INF/jsp/content/history.jsp" %>
+</c:if>

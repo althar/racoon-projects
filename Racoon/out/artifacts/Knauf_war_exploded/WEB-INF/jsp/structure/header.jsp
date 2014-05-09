@@ -37,7 +37,7 @@
                 <div class="point user-panel <c:if test="${anonymous}">hidden</c:if>">
                     <div class="block">
                         <div class="border">
-                            <span class="name"><a>${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
+                            <span class="name"><a href="/profile">${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
                             <div class="price">на счету: <span class="color">${amount}</span> теплуноса</div>
                         </div>
                     </div>
