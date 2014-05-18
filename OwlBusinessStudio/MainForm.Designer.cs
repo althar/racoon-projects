@@ -112,6 +112,7 @@
             this.ButtPrintCheck = new System.Windows.Forms.ToolStripButton();
             this.ButtExportOrders = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.ButtMakeOrderBill = new System.Windows.Forms.ToolStripButton();
             this.ListOrderStatuses = new System.Windows.Forms.ListBox();
             this.ButtSelectOrders = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -854,7 +855,8 @@
             this.ComboPageSize,
             this.ButtPrintCheck,
             this.ButtExportOrders,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.ButtMakeOrderBill});
             this.toolStrip4.Location = new System.Drawing.Point(3, 3);
             this.toolStrip4.Name = "toolStrip4";
             this.toolStrip4.Size = new System.Drawing.Size(970, 25);
@@ -1043,6 +1045,16 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "Слияние номеров";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // ButtMakeOrderBill
+            // 
+            this.ButtMakeOrderBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtMakeOrderBill.Image = ((System.Drawing.Image)(resources.GetObject("ButtMakeOrderBill.Image")));
+            this.ButtMakeOrderBill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtMakeOrderBill.Name = "ButtMakeOrderBill";
+            this.ButtMakeOrderBill.Size = new System.Drawing.Size(23, 22);
+            this.ButtMakeOrderBill.Text = "Сформировать счет";
+            this.ButtMakeOrderBill.Click += new System.EventHandler(this.ButtMakeOrderBill_Click);
             // 
             // ListOrderStatuses
             // 
@@ -2681,6 +2693,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox TxtGoodCode;
         private System.Windows.Forms.Label LabelGoodToSetCode;
+        private System.Windows.Forms.ToolStripButton ButtMakeOrderBill;
     }
 }
 

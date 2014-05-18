@@ -1545,9 +1545,17 @@ namespace OwlBusinessStudio
                 historyParams.Add("action", "Удаление");
                 MainForm.dbProc.insert("history", historyParams);
                 dbProc.executeNonQuery("DELETE FROM delivery_lists WHERE order_id=" + currentOrderID.ToString());
-                
-                loadOrders(false);
-                loadDrivers(false);
+
+
+                for (int i = 0; i < DataGridViewOrders.RowCount; i++)
+                {
+                    if (DataGridViewOrders.Rows[i].Cells["id"].Value.ToString() == currentOrderID.ToString())
+                    {
+                        DataGridViewOrders.Rows.Remove(DataGridViewOrders.Rows[i]);
+                    }
+                }
+                //loadOrders(false);
+                //loadDrivers(false);
             }
         }
 
@@ -3340,6 +3348,68 @@ namespace OwlBusinessStudio
             int good_id = (int)PanelSetGoodCode.Tag;
             dbProc.update("goods", "good_code='"+TxtGoodCode.Text+"'", "id=" + good_id);
             PanelSetGoodCode.Visible = false;
+        }
+
+        private void ButtMakeOrderBill_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int order_id = currentOrderID;
+//                DataTable drivers = dbProc.executeGet("SELECT *, substring(first_name from 1 for 1)||'. '||second_name AS fio FROM users WHERE role_id=3 ORDER BY fio");
+                DataTable orders = null;
+                string sqlCommand = "SELECT owd.created,owd.id,owd.phone_1,owd.phone_2,owd.phone_3,owd.phones,owd.good_name,owd.deliver_date,owd.count,owd.address,owd.deliver_time,owd.total_price,owd.goods_price,owd.good_price,owd.deliver_price,owd.client_name,owd.discount_percent "
+                +" FROM orders_with_details owd WHERE id="+order_id;
+                orders = dbProc.executeGet(sqlCommand);
+                if (orders.Rows.Count == 0)
+                {
+                    return;
+                }
+                DataRow order = orders.Rows[0];
+
+                FTwoExcelProcessor excel = new FTwoExcelProcessor();
+                excel.InitApplication(true, Environment.CurrentDirectory + "/Resources/bill.xlsx");
+                excel.OnExcelClose += new FTwoExcelProcessor.ExcelCloseHandler(proc_OnExcelClose);
+                DateTime date = (DateTime)order["created"];
+
+                string dateStr = date.ToString("dd.MM.yyyy");
+
+                excel.text(11, 2, "Назначение платежа: Оплата товара по счету "+order["id"]+". Без НДС.");
+                excel.text(13, 2, "Счет № " + order["id"] + " от " + dateStr);
+                excel.text(15, 2, "Плательщик: "
+                    + order["client_name"]
+                    + ", "
+                    + order["address"]
+                    + " Тел. "
+                    + order["phone_1"]
+                    + "");
+                int totalPrice = 0;
+                for (int i = 0; i < orders.Rows.Count; i++)
+                {
+                    DataRow item = orders.Rows[i];
+                    Microsoft.Office.Interop.Excel.Range RngToCopy = excel.getRange(2, 20, 8, 20);
+                    Microsoft.Office.Interop.Excel.Range RngToInsert = excel.getRange(2, 20 + i, 8, 20 + i);
+                    RngToInsert.Insert(Microsoft.Office.Interop.Excel.XlInsertShiftDirection.xlShiftDown, RngToCopy.Copy(Type.Missing));
+                    excel.text(20 + i, 2, (i + 1).ToString());
+                    excel.text(20 + i, 3, item["good_name"].ToString());
+                    excel.text(20 + i, 6, item["count"].ToString());
+                    excel.text(20 + i, 7, item["good_price"].ToString());
+                    excel.text(20 + i, 8, ((int)item["good_price"] * (int)item["count"]).ToString());
+                    totalPrice += ((int)item["good_price"] * (int)item["count"]);
+                }
+                excel.text(21 + orders.Rows.Count, 8, totalPrice.ToString());
+                excel.text(23 + orders.Rows.Count, 8, totalPrice.ToString());
+                string total_price_string = RusCurrency.Str(totalPrice);
+                excel.text(25 + orders.Rows.Count, 2, "Всего наименований " + orders.Rows.Count + " на сумму " + totalPrice + " руб.");
+                excel.text(26 + orders.Rows.Count, 2, total_price_string);
+
+                DateTime expires = date;
+                expires = expires.AddDays(20);
+                excel.text(42 + orders.Rows.Count, 2, "*Счет действителен до " + expires.ToString("dd.MM.yyyy"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

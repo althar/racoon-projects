@@ -15,6 +15,8 @@ public class OzonProcessor extends APIProcessor
     {
 	    super();
     }
+
+    //<editor-fold desc="User">
     public JSONProcessor registerUser(String email,String password,String user_id,String user_agent,String user_ip) throws Exception
     {
         HashMap<String,String> params = new HashMap<String, String>();
@@ -45,8 +47,9 @@ public class OzonProcessor extends APIProcessor
 		JSONProcessor proc = executeAPIMethod("ClientService", "GetClientAccountEntryInformation", params,false);
 		return proc;
     }
-    
-	// Catalogue...
+    //</editor-fold>
+
+    //<editor-fold desc="Catalogue">
     public JSONProcessor getCatalogueStructure() throws Exception
     {
 		JSONProcessor proc = executeAPIMethod("PageFlowService", "contextInfoGet", new HashMap<String, String>(),false);
@@ -168,9 +171,9 @@ public class OzonProcessor extends APIProcessor
         }
         return result;
     }
+    //</editor-fold>
 
-
-	// Order...
+    //<editor-fold desc="Order">
     public JSONProcessor startOrder(String user_id) throws Exception
     {
             HashMap<String,String> params = new HashMap<String, String>();
@@ -370,8 +373,9 @@ public class OzonProcessor extends APIProcessor
             JSONProcessor proc = executeAPIMethod("OrderService", "OrderGet", params,false);
             return proc;
     }
+    //</editor-fold>
 
-    // Cart...
+    //<editor-fold desc="Cart">
     public JSONProcessor cartAdd(String user_id,String item_id) throws Exception
     {
             HashMap<String,String> params = new HashMap<String, String>();
@@ -397,4 +401,37 @@ public class OzonProcessor extends APIProcessor
         JSONProcessor proc = executeAPIMethod("CartService", "CartRemove", params,true);
         return proc;
     }
+    //</editor-fold>
+
+    //<editor-fold desc="Facet">
+
+    // Allows to get category content by search parameters.
+    public JSONProcessor getSectionSearchResult(String section_name,String page_size,String price_range,String catalogue_id) throws Exception
+    {
+        StringBuilder builder = new StringBuilder("{");
+        builder.append("\"Data\": {\"SectionName\": ");
+        if(section_name!=null&&!section_name.equalsIgnoreCase(""))
+        {
+            builder.append("\""+section_name+"\"");
+        }
+        else
+        {
+            builder.append("null");
+        }
+        builder.append(",\"SearchText\": null,\"FacetParams\": [{\"Name\": \"price\", \"Value\": \""+price_range+"\"},{\"Name\": \"sort\", \"Value\": \"bests\"},{\"Name\": \"catalog\", \"Value\": \""+catalogue_id+"\"}],\"Attributes\": null" +
+                ", \"PageNumber\":3, \"Page\":3, \"ItemsOnPage\": ");
+        builder.append(page_size);
+        builder.append("},\"Login\": \"");
+        builder.append(OzonLogin);
+        builder.append("\", \"Password\": \"");
+        builder.append(OzonPassword);
+        builder.append("\", \"PageNumber\": ");
+        builder.append("3");
+        builder.append(",\"PartnerClientId\": null}");
+
+
+        JSONProcessor proc = executeFacetAPIMethod("FacetService", "GetSectionSearchResult",builder.toString(), new HashMap<String, String>(),true);
+        return proc;
+    }
+    //</editor-fold>
 }

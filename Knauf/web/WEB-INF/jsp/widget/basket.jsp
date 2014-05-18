@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://racoonsoft.ru/funcs" prefix="fns" %>
 <div class="point basket">
     <span class="title"><a href="/basket">Ваша Корзина</a></span>
     <table>
@@ -21,7 +22,9 @@
         <tr class="price">
             <td>на сумму:</td>
             <td class="sum"><span id="cart_price">
-                                <c:if test="${not empty cart.get('CartSummary').get('FullSum')}">${cart.get('CartSummary').get('FullSum')}</c:if>
+                                <c:if test="${not empty cart.get('CartSummary').get('FullSum')}">
+                                    ${fns:price(cart.get('CartSummary').get('FullSum'))}
+                                </c:if>
                                 <c:if test="${empty cart.get('CartSummary').get('FullSum')}">0.0</c:if>
                                 </span> <span id="cart_unit">теплуносов</span>
             </td>

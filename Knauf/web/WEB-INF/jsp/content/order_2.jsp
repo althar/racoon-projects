@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://racoonsoft.ru/funcs" prefix="fns" %>
 <script type="text/javascript" src="/js/logic/order.js"></script>
 <div class="content layout">
 
@@ -41,7 +42,8 @@
             <c:if test="${not empty delivery_item.get('DeliveryPoints')}">
                 <select name="delivery-variant-id[${delivery_item.get('DeliveryVariantId')}]" delivery-group-id="${delivery_item.get('DeliveryGroupId')}" class="delivery-select">
                     <c:forEach items="${delivery_item.get('DeliveryPoints')}" var="delivery_point">
-                        <option value="${delivery_point.get('DeliveryPointAddressId')}" delivery-price="${delivery_point.get('DeliverySumm')}" total-price="${delivery_point.get('FullOrderSumm')}"> ${delivery_point.get('Address')} </option>
+                        <option value="${delivery_point.get('DeliveryPointAddressId')}" delivery-price="${fns:price(delivery_point.get('DeliverySumm'))}" total-price="${delivery_point.get('FullOrderSumm')}"> ${delivery_point.get('Address')} </option>
+                        <%--<option value="${delivery_point.get('DeliveryPointAddressId')}" delivery-price="${delivery_point.get('DeliverySumm')}" total-price="${delivery_point.get('FullOrderSumm')}"> ${delivery_point.get('Address')} </option>--%>
                     </c:forEach>
                 </select>
             </c:if>

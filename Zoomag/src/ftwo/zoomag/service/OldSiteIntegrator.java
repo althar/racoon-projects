@@ -21,8 +21,8 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
         super(processor_name);
         try
         {
-            mySqlProc1 = new DatabaseProcessor("188.226.160.201","zverovod_db?useUnicode=true&characterEncoding=UTF-8",3306,"zoomag","zoomag2000","com.mysql.jdbc.Driver","jdbc:mysql:");
-            //mySqlProc1.connect();
+            mySqlProc1 = new DatabaseProcessor("zverovod.ru","zverovod?useUnicode=true&characterEncoding=UTF-8",3306,"racoon","racoonracoon2000","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc1.connect();
             System.out.println("Site 1 integrator connected");
             mySqlProc2 = new DatabaseProcessor("myzoomag.ru","wwwmyzoomagru?useUnicode=true&characterEncoding=UTF-8",3306,"racoon","racoonracoon2000","com.mysql.jdbc.Driver","jdbc:mysql:");
             mySqlProc2.connect();
@@ -37,10 +37,39 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     @Override
     public void process()
     {
-        //doSite(mySqlProc1,"site_1_order_id",3);
+        doSite(mySqlProc1,"site_1_order_id",3);
         doSite(mySqlProc2,"site_2_order_id",2);
     }
+    public static String normalizePhone(String phone)
+    {
+        String finRes = "";
+        try
+        {
+            String result = phone;
+            result = result.replace("(","");
+            result = result.replace(")","");
+            result = result.replace(" ","");
+            result = result.replace("-","");
+            result = result.replace("_","");
+            result = result.replace("+","");
+            if(result.length()==11
+                    &&
+                    (result.substring(0,1).equalsIgnoreCase("7")||result.substring(0,1).equalsIgnoreCase("8")))
+            {
+                result = result.substring(1);
+            }
+            finRes = "("+result.substring(0,3)+")";
+            finRes += result.substring(3,6)+"-";
+            finRes += result.substring(6,8)+"-";
+            finRes += result.substring(8);
 
+        }
+        catch(Exception ex)
+        {
+
+        }
+        return finRes;
+    }
     private void doSite(DBProcessor proc,String seqName,Integer source)
     {
         try
@@ -81,8 +110,10 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                         }
                         else if(clientFields.size()>0)
                         {
+                            String phoneFromSite = clientFields.get(0).getStringValue("reg_field_value");
+                            phoneFromSite = normalizePhone(phoneFromSite);
                             clPars.put("phone_1",clientFields.get(0).getStringValue("reg_field_value"));
-                            client = dbProc.getRecord("SELECT * FROM clients WHERE phone_1='"+clientFields.get(0).getStringValue("reg_field_value")+"'");
+                            client = dbProc.getRecord("SELECT * FROM clients WHERE phone_1='"+phoneFromSite+"' OR phone_2='"+phoneFromSite+"' OR phone_3='"+phoneFromSite+"'");
                         }
                         if(client==null)
                         {

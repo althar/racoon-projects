@@ -31,7 +31,7 @@ namespace FTwoFramework.DB
             dict.Add("to", "По");
             dict.Add("on_warehouse", "На складе");
             dict.Add("date_to", "Приход закупки на склад");
-            dict.Add("user_name", "Оператора");
+            dict.Add("user_name", "Менеджер");
             dict.Add("pickup", "Самовывоз");
             dict.Add("article", "Артикул производителя");
             dict.Add("total_sum", "Сумма");

@@ -18,11 +18,8 @@ public class Test
         long start = new Date().getTime();
         try
         {
+            System.out.println(OldSiteIntegrator.normalizePhone("+7(926) 571-3850"));
 
-            DBProcessor mySqlProc1 = new DatabaseProcessor("mysql.myzoom01.mass.hc.ru","wwwmyzoomagru",3306,"myzoom01","ngw0Laej","com.mysql.jdbc.Driver","jdbc:mysql:");
-            DBProcessor mySqlProc2 = new DatabaseProcessor("zverovod.mysql","zverovod_db",3306,"zverovod_mysql","s17vpvth","com.mysql.jdbc.Driver","jdbc:mysql:");
-            mySqlProc1.connect();
-            System.out.println("Done");
         }
         catch(Exception ex)
         {

@@ -75,6 +75,10 @@ public class DatabaseStructure
         }
         return fields.get(name);
     }
+    public Object get(String name) throws Exception
+    {
+        return getValue(name);
+    }
     public Integer getIntValue(String name)
     {
         try

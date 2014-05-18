@@ -21,6 +21,17 @@ public class PageController extends KnaufController
         ModelAndView model = model("main");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
+        JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0-2500","");
+        JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","2500-5000","");
+        JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","5000-10000","");
+        JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult("div_tech","4","10000-500000","");
+        model.addObject("base_section",true);
+        model.addObject("catalogue_name","div_tech");
+        model.addObject("title","Luxe");
+        model.addObject("goods500",goods500.BodyStructure);
+        model.addObject("goods1000",goods1000.BodyStructure);
+        model.addObject("goods2000",goods2000.BodyStructure);
+        model.addObject("goodsExpensive",goodsExpensive.BodyStructure);
         return model;
     }
     @RequestMapping("/{page}")
@@ -30,6 +41,22 @@ public class PageController extends KnaufController
         model = flushAllParameters(request,model);
         model = addAmount(model,request);
         model = addCatalogue(model,request);
+        return model;
+    }
+    @RequestMapping(value = "/catalogue/by_price")
+    public ModelAndView catalogueByPrice(HttpServletRequest request, HttpServletResponse response, String catalogue,String price) throws Exception
+    {
+        ModelAndView model = model("catalogue");
+        model = addAmount(model,request);
+        model = addCatalogue(model,request);
+        if(catalogue!=null)
+        {
+            model.addObject("catalogue_name",catalogue);
+            JSONProcessor goods = ozon.ozonProc.getSectionSearchResult(catalogue,"200",price,"");
+            model.addObject("goods",goods.BodyStructure);
+            model.addObject("by_price",true);
+        }
+        model.addObject("title",request.getParameter("title"));
         return model;
     }
     @RequestMapping(value = "/catalogue/items/**")
@@ -43,6 +70,20 @@ public class PageController extends KnaufController
         if(catalogue!=null)
         {
             model.addObject("catalogue_name",catalogue);
+
+            if(catalogue_id==null)
+            {
+                JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0-2500","");
+                JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","2500-5000","");
+                JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","5000-10000","");
+                JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult(catalogue,"4","10000-5000000","");
+                model.addObject("base_section",true);
+                model.addObject("catalogue_name",catalogue);
+                model.addObject("goods500",goods500.BodyStructure);
+                model.addObject("goods1000",goods1000.BodyStructure);
+                model.addObject("goods2000",goods2000.BodyStructure);
+                model.addObject("goodsExpensive",goodsExpensive.BodyStructure);
+            }
         }
         if(catalogue_id!=null)
         {

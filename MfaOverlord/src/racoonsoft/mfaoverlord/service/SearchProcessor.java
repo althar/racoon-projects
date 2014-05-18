@@ -26,8 +26,11 @@ public class SearchProcessor extends SeparateThreadService
         try
         {
             // 1. Select semantics
-            ArrayList<DatabaseStructure> semantics = dbProc.selectQuery("SELECT * FROM semantics").select();
-
+            ArrayList<DatabaseStructure> semantics = dbProc.selectQuery("SELECT * FROM semantics WHERE done = FALSE LIMIT 1").select();
+            if(semantics==null||semantics.size()==0)
+            {
+                dbProc.executeNonQuery("UPDATE semantics SET done = FALSE");
+            }
             // 2. Create search for each semantics
             for(DatabaseStructure ds:semantics)
             {
@@ -42,8 +45,10 @@ public class SearchProcessor extends SeparateThreadService
                 {
                     System.out.println(Helper.getStackTraceString(exx));
                 }
+                dbProc.executeNonQuery("UPDATE semantics SET done=TRUE WHERE id="+id);
             }
-            Thread.sleep(86400000);
+            // 20 times a day...
+            Thread.sleep(4320000);
         }
         catch (Exception ex)
         {
@@ -53,9 +58,7 @@ public class SearchProcessor extends SeparateThreadService
         finally
         {
             // 1 day of waiting
-
         }
-
     }
 
     private void searchForWord(String word, Long semantics_id) throws Exception
@@ -84,17 +87,31 @@ public class SearchProcessor extends SeparateThreadService
             for(String hr:hrefs)
             {
                 pos++;
-                DatabaseStructure href = dbProc.selectQuery("SELECT id FROM search_item WHERE url='"+hr+"'").selectOne();
-                if(href==null)
+                try
                 {
-                    String domain = TextService.getDomain(hr);
-                    dbProc.insertQuery("INSERT INTO search_item (search_id,url,position,extracted,semantics_id,domain) VALUES (?,?,?,?,?,?) RETURNING id")
-                        .setParameter(1,search_id)
-                        .setParameter(2,hr)
-                        .setParameter(3,pos+i*10)
-                        .setParameter(4,false)
-                        .setParameter(5,semantics_id)
-                        .setParameter(6,domain).insert();
+                    DatabaseStructure href = dbProc.selectQuery("SELECT id FROM search_item WHERE url='"+hr+"'").selectOne();
+                    if(href==null)
+                    {
+                        String domain = TextService.getDomain(hr);
+                        String hrText = hr.split("\\|")[0];
+                        String titleText = word;
+                        if(hr.split("\\|").length>1)
+                        {
+                            titleText = hr.split("\\|")[1];
+                        }
+                        dbProc.insertQuery("INSERT INTO search_item (search_id,url,position,extracted,semantics_id,domain,title) VALUES (?,?,?,?,?,?,?) RETURNING id")
+                            .setParameter(1,search_id)
+                            .setParameter(2,hrText)
+                            .setParameter(3,pos+i*10)
+                            .setParameter(4,false)
+                            .setParameter(5,semantics_id)
+                            .setParameter(6,domain)
+                            .setParameter(7,titleText).insert();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.out.println(Helper.getStackTraceString(ex));
                 }
             }
             Thread.sleep(1000+new Random().nextInt(1000));

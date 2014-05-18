@@ -35,6 +35,7 @@ public class ContentProcessor extends SeparateThreadService
                 Long search_item_id = ds.getLongValue("id");
                 Long search_id = ds.getLongValue("search_id");
                 Long semantics_id = ds.getLongValue("semantics_id");
+                String title = ds.getStringValue("title");
                 String text = null;
                 try
                 {
@@ -54,7 +55,7 @@ public class ContentProcessor extends SeparateThreadService
 //                System.out.println(" ========================================================= ");
 //                System.out.println(text);
 //                System.out.println(" ========================================================= ");
-                searchForArticles(url, search_item_id, domain,semantics_id,text);
+                searchForArticles(url, search_item_id, domain,semantics_id,text,title);
             }
             Thread.sleep(20000);
         }
@@ -65,7 +66,7 @@ public class ContentProcessor extends SeparateThreadService
         }
     }
 
-    private void searchForArticles(String url, Long search_item_id,String domain,Long semantics_id,String text) throws Exception
+    private void searchForArticles(String url, Long search_item_id,String domain,Long semantics_id,String text,String title) throws Exception
     {
         try
         {
@@ -73,7 +74,7 @@ public class ContentProcessor extends SeparateThreadService
             HashMap<String,Object> pars = new HashMap<String, Object>();
             pars.put("extracted",true);
             dbProc.executeUpdate("search_item",pars,"id="+search_item_id);
-            ArrayList<StolenArticle> articles = TextService.getArticles(text,domain,word);
+            ArrayList<StolenArticle> articles = TextService.getArticles(text,domain,word,title);
             for(StolenArticle article:articles)
             {
                 article.search_item_id = search_item_id;

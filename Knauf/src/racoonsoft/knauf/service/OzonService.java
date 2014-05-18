@@ -7,6 +7,7 @@ import racoonsoft.library.cache.CacheProcessor;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.ozon.OzonProcessor;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -54,7 +55,8 @@ public class OzonService
             }
             else
             {
-                json = ozonProc.getCatalogueItems(catalogue_id, "istPrice", "40", page.toString());
+                json = ozonProc.getSectionSearchResult(catalogue_name,"40","0-100000",catalogue_id);
+//                json = ozonProc.getCatalogueItems(catalogue_id, "istPrice", "40", page.toString());
             }
             cache.put("getItems."+catalogue_id+"."+catalogue_name+"."+page.toString()+"."+search,json,3600000*24);
         }
@@ -68,5 +70,19 @@ public class OzonService
     {
         JSONProcessor json = ozonProc.cartAdd(user_id,good_id+":"+count.toString());
         return json;
+    }
+
+    public static String formatPrice(String rub)
+    {
+        try
+        {
+        Double result = Double.valueOf(rub)/5.0;
+        String str = new DecimalFormat("#.#").format(result);
+        return str;
+        }
+        catch(Exception ex)
+        {
+            return "0.0";
+        }
     }
 }

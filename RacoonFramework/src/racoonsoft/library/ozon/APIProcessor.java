@@ -10,9 +10,9 @@ import java.util.Iterator;
 
 public class APIProcessor
 {
-    private String OzonLogin;
-    private String OzonPassword;
-    private String OzoneAPIUrl;
+    protected String OzonLogin;
+    protected String OzonPassword;
+    protected String OzoneAPIUrl;
     
     public APIProcessor(String login, String password, String url)
     {
@@ -71,6 +71,41 @@ public class APIProcessor
     public static HashMap<String,Object> extractAPIMethod(String login,String password,String url,String method_group_name,String method_name,HashMap<String,String> parameters,boolean post) throws Exception
     {
 		return executeAPIMethod(login, password, url, method_group_name,method_name, parameters,post).getStructure();
+    }
+    public JSONProcessor executeFacetAPIMethod(String method_group_name,String method_name,String body,HashMap<String,String> parameters,boolean post) throws Exception
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.append(OzoneAPIUrl.replace("https","http"));
+        builder.append("/");
+        builder.append(method_group_name);
+        builder.append("/");
+        builder.append(method_name);
+        builder.append("?login=");
+        builder.append(OzonLogin);
+        builder.append("&password=");
+        builder.append(OzonPassword);
+        Iterator<String> paramIter = parameters.keySet().iterator();
+        while(paramIter.hasNext())
+        {
+            String key = paramIter.next();
+            String value = URLEncoder.encode(parameters.get(key),"UTF-8");
+            if(key!=null&&value!=null)
+            {
+                builder.append("&");
+                builder.append(key);
+                builder.append("=");
+                builder.append(value);
+            }
+        }
+        System.out.println("Request -> "+builder.toString());
+        HTTPClient cl = new HTTPClient();
+        String result = null;
+        HashMap<String,String> headers = new HashMap<String, String>();
+        headers.put("Content-Type","application/json");
+        result = cl.sendHTTPRequestWithHeaders(body,builder.toString(),headers,post);
+        System.out.println("Response <- "+result.toString());
+        JSONProcessor proc = new JSONProcessor(result);
+        return proc;
     }
     public JSONProcessor executeAPIMethod(String method_group_name,String method_name,HashMap<String,String> parameters,boolean post) throws Exception
     {

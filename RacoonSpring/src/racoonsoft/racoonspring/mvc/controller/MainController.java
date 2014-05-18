@@ -7,6 +7,7 @@ import racoonsoft.racoonspring.data.database.DatabaseProcessor;
 import racoonsoft.racoonspring.data.structure.User;
 
 import javax.servlet.http.HttpServletRequest;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -28,6 +29,11 @@ public class MainController
             result.put(key,value);
         }
         return result;
+    }
+    public String domain(HttpServletRequest request) throws Exception
+    {
+        String domain = new URL(request.getRequestURL().toString()).getHost();
+        return domain;
     }
     public Long id(HttpServletRequest request)
     {

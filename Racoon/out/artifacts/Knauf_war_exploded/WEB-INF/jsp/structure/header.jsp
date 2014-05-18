@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://racoonsoft.ru/funcs" prefix="fns" %>
 
     <header class="layout">
         <div class="block">
@@ -20,17 +21,18 @@
                             <input type="submit" value="Войти" name="submit" class="btn btn-blue login-button">
                         </div>
                         <ul class="tools">
-                            <li class="item hidden">
-                                <a href="/recover">Забыли пароль?</a>
+                            <li class="item">
+                                <a href="/registration">Регистрация</a>
+                            </li>
+                            <li class="item">
+                                <a href="/recover_password">Забыли пароль?</a>
                             </li>
                             <c:if test="${not empty login_error}">
                                 <li class="item" style="color: red;">
                                     Нет доступа.
                                 </li>
                             </c:if>
-                            <li class="item">
-                                <a href="/registration">Регистрация</a>
-                            </li>
+
                         </ul>
                     </div>
                 </form>
@@ -38,7 +40,10 @@
                     <div class="block">
                         <div class="border">
                             <span class="name"><a href="/profile">${user.getStringValue('first_name')} ${user.getStringValue('last_name')}</a></span>
-                            <div class="price">на счету: <span class="color">${amount}</span> теплуноса</div>
+
+                            <%--<div class="price">на счету: <span class="color">${amount}</span> теплуноса</div>--%>
+                            <div class="price">на счету: <span class="color">${fns:price(amount)}</span> теплуноса</div>
+
                         </div>
                     </div>
                     <div class="container">

@@ -56,6 +56,7 @@ public class GameWorld
     {
         Long id = dbProc.createGame(name,mode);
         Game game = new Game(id,mode,name,parameters,companyCount);
+        game.company_count = companyCount;
         games.put(id,game);
         return game;
     }

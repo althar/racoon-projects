@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class SearchService
 {
     private SearchProcessor proc = new SearchProcessor("search");
+
     @Autowired
     private DatabaseProcessor dbProc;
 

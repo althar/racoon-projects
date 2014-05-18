@@ -14,10 +14,12 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="//yandex.st/bootstrap/2.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/expansion.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/style.css">
     <script type="text/javascript" async="" src="http://mc.yandex.ru/metrika/watch.js"></script>
-    <script src="//yandex.st/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/js/jq/jquery.js"></script>
+    <script src="/js/jq/jquery-ui.js"></script>
     <style type="text/css"></style>
     <link rel="stylesheet" href="//yandex.st/jquery/fancybox/2.1.4/jquery.fancybox.min.css">
     <link rel="stylesheet" href="//yandex.st/jquery/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.css">

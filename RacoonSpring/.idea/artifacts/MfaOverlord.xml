@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="MfaOverlord">
+    <output-path>$PROJECT_DIR$/out/artifacts/MfaOverlord</output-path>
+    <root id="archive" name="MfaOverlord.war">
+      <element id="artifact" artifact-name="MfaOverlord:war exploded" />
+    </root>
+  </artifact>
+</component>

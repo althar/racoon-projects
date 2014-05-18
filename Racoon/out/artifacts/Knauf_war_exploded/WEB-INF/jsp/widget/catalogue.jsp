@@ -5,11 +5,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://racoonsoft.ru/funcs" prefix="fns" %>
 
 <ol>
 <c:set var="index" value="3"></c:set>
-<c:forEach items="${goods.get('GoodsItems')}" var="good" varStatus="status">
-    <c:if test="${good.get('Availability')=='На складе'}">
+<c:set var="gs" value="${goods.get('GoodsItems')}"></c:set>
+<c:if test="${empty goods.get('GoodsItems')}">
+    <c:set var="gs" value="${goods.get('Items')}"></c:set>
+</c:if>
+<c:forEach items="${gs}" var="good" varStatus="status">
+    <%--<c:if test="${good.get('Availability')=='На складе'||good.get('AvailabilityId')==1}">--%>
     <li class="item <c:if test="${index%3==1}">reset</c:if>">
         <div class="block">
             <div class="picture-container">
@@ -18,7 +23,9 @@
                 </a>
             </div>
             <h3><a href="/catalog/item?id=${good.get('Id')}">${good.get('Name')}</a></h3>
-            <em class="price"><span class="color">${good.get('Price')}</span> теплуноса </em>
+            <c:set var="price" value="${good.get('Price')}"></c:set>
+
+            <em class="price"><span class="color">${fns:price(good.get('Price'))}</span> теплуноса </em>
             <a class="buy btn btn-blue cart-add" data-id="12832197" rel="cart-add" good-id="${good.get('Id')}">
                 <div class="add-good-title"><i class="icon-ok icon-white hidden inline" ></i> в корзину</div>
                 <div class="add-good-loader hidden"><img src="/img/ajax-loader.gif"></div>
@@ -27,7 +34,7 @@
     </li>
     <c:set var="index" value="${index+1}"></c:set>
     <c:if test="${status.index%3==2}"></ol><ol></c:if>
-    </c:if>
+    <%--</c:if>--%>
 </c:forEach>
 
 <c:forEach items="${goods.get('SearchedItems')}" var="good" varStatus="status">
@@ -39,7 +46,9 @@
                 </a>
             </div>
             <h3><a href="/catalog/item?id=${good.get('Id')}">${good.get('Name')}</a></h3>
-            <em class="price"><span class="color">${good.get('Price')}</span> теплуноса</em>
+            <em class="price"><span class="color">
+                ${fns:price(good.get('Price'))}
+            </span> теплуноса</em>
             <a class="buy btn btn-blue cart-add" data-id="12832197" rel="cart-add" good-id="${good.get('Id')}">
                 <div class="add-good-title"><i class="icon-ok icon-white hidden inline" ></i> в корзину</div>
                 <div class="add-good-loader hidden"><img src="/img/ajax-loader.gif"></div>

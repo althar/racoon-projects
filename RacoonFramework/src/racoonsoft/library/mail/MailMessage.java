@@ -21,6 +21,10 @@ public class MailMessage
     private ArrayList<String> AttachmentFileNames = new ArrayList<String>();
     //private HashMap<String,String> AttachmentFileNames = new HashMap<String,String>();
 
+    public MailMessage(String from,String to,String subject,String body)
+    {
+        this(from,to,subject,body,new HashMap<String, Object>());
+    }
     public MailMessage(String from,String[] to,String subject,String templateBody,HashMap<String,Object> params,String smtpHost,String login,String password,boolean enableTLS)
     {
         EnableTls = enableTLS;

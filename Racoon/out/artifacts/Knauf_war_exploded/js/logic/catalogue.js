@@ -41,6 +41,7 @@ $(document).ready(function(){
             }
         });
     });
+
 });
 
 function initAddGood()
@@ -62,6 +63,9 @@ function initAddGood()
                 if(html=="ok")
                 {
                     $(buttAdd).find(".add-good-loader").hide();
+                    var buttHtml = $(buttAdd).find(".add-good-title").html();
+                    buttHtml = buttHtml.replace('в корзину','в корзине');
+                    $(buttAdd).find(".add-good-title").html(buttHtml);
                     $(buttAdd).find(".add-good-title").show();
                     $(buttAdd).find(".icon-ok").css("display","inline-block");
                     $(buttAdd).find(".icon-ok").show();
