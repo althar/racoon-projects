@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
+<script type="text/javascript" src="/js/logic/registration.js"></script>
 <div class="content layout">
 
     <ul class="breadcrumbs"><li class="item"><a href="/" class="link">Главная</a><span class="arrow"></span></li><li class="item"><a href="/my/" class="link">Личный кабинет</a><span class="arrow"></span></li><li class="item">Регистрация</li></ul>
@@ -14,7 +14,7 @@
         <div class="boxed-group">
             <h2>Регистрация в ТеплоКлубе</h2>
             <div class="boxed-group-inner">
-                <form novalidate="" action="/auth/registration" class="form-horizontal" method="post">
+                <form id="registration_form" novalidate="" action="/auth/registration" class="form-horizontal" method="post">
                     <div class="alert">Все поля обязательны для заполнения.</div>
                     <div class="step-no-1">
                         <legend>Шаг 1 <c:if test="${not empty registration_error}"><span style="color: red;"> - ${registration_error}</span></c:if></legend>
@@ -37,13 +37,13 @@
                                 <label class="radio inline"><input required="" type="radio" name="gender" <c:if test="${gender=='Ж'}">checked</c:if> value="Ж"> женский</label>
                             </div>
                         </div>
-                        <%--<div class="control-group">--%>
-                            <%--<label class="control-label" for="dob_field">Дата рождения</label>--%>
-                            <%--<div class="controls">--%>
-                                <%--<input required="" name="birthday" id="dob_field" type="text" value="">--%>
-                                <%--<span class="help-inline">ДД.ММ.ГГГГ</span>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
+                        <div class="control-group">
+                            <label class="control-label" for="birthday">Дата рождения</label>
+                            <div class="controls">
+                                <input required="" name="birthday" id="birthday" type="text" value="">
+                                <span class="help-inline">ДД.ММ.ГГГГ</span>
+                            </div>
+                        </div>
                         <div class="control-group">
                             <label class="control-label" for="email">E-mail</label>
                             <div class="controls">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step-no-2 hidden">
+                    <div class="step-no-2">
                         <legend>Шаг 2</legend>
                         <div class="control-group">
                             <label class="control-label">Как давно Вы занимаетесь продажей теплоизоляционных материалов</label>
@@ -160,14 +160,14 @@
                         </div>
                     </div>
                     <div class="step-no-3">
-                        <legend>Шаг 2</legend>
+                        <legend>Шаг 3</legend>
                         <div class="control-group">
                             <label class="control-label" for="password_field">Укажите свой пароль</label>
                             <div class="controls">
                                 <input required="" autocomplete="off" name="password" id="password_field" type="password">
                             </div>
                         </div>
-                        <div class="control-group hidden">
+                        <div class="control-group">
                             <label class="control-label" for="password_confirmation_field">Повторите пароль</label>
                             <div class="controls">
                                 <input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="">

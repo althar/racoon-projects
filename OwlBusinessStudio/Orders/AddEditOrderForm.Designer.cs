@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditOrderForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ButtLoadClient = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CheckSecondDeliverTime = new System.Windows.Forms.CheckBox();
@@ -76,12 +78,12 @@
             this.ButtSaveOrder = new System.Windows.Forms.Button();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ButtLoadClient);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label3);
@@ -131,6 +133,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Клиент";
+            // 
+            // ButtLoadClient
+            // 
+            this.ButtLoadClient.Location = new System.Drawing.Point(24, 55);
+            this.ButtLoadClient.Name = "ButtLoadClient";
+            this.ButtLoadClient.Size = new System.Drawing.Size(175, 23);
+            this.ButtLoadClient.TabIndex = 55;
+            this.ButtLoadClient.Text = "Подтянуть данные лкиента";
+            this.ButtLoadClient.UseVisualStyleBackColor = true;
+            this.ButtLoadClient.Click += new System.EventHandler(this.TxtPhone1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(646, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 23);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Пересчитать";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label17
             // 
@@ -550,16 +572,6 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Примечание";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(646, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 23);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Пересчитать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // AddEditOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,6 +647,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ButtLoadClient;
 
     }
 }

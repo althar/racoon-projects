@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import racoonsoft.library.annotations.RequiresRole;
+import racoonsoft.library.database.DBRecord;
 import racoonsoft.library.json.JSONProcessor;
 import racoonsoft.library.mail.MailMessage;
 
@@ -113,5 +114,23 @@ public class ServiceController extends KnaufController
         model.addObject("value","ok");
         return model;
     }
-
+    @RequestMapping("/recover_password")
+    public ModelAndView recoverPassword(HttpServletRequest request, HttpServletResponse response,String email) throws Exception
+    {
+        ModelAndView model = model("recover_password");
+        model = addAmount(model,request);
+        model = addCatalogue(model,request);
+        DBRecord rec = dbProc.getRecord("SELECT password FROM \"user\" WHERE login='" + email.replace("'", "") + "'");
+        if(rec==null)
+        {
+            model.addObject("result","no_email");
+        }
+        else
+        {
+            MailMessage mess = new MailMessage("dfedorovich85@gmail.com", email,"Восстановление пароля","Ваш пароль ");
+            mail.sendMail(mess);
+            model.addObject("result","success");
+        }
+        return model;
+    }
 }

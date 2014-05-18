@@ -45,11 +45,11 @@ public class GameService
     //</editor-fold>
 
     //<editor-fold desc="Phase 0">
-    public StatusCode createGame(String name, GameMode mode,StartSettings start_settings,Integer companyCount) throws Exception
+    public Long createGame(String name, GameMode mode,StartSettings start_settings,Integer companyCount) throws Exception
     {
-        GameWorld.createGame(name, mode, start_settings,companyCount);
+        Game g = GameWorld.createGame(name, mode, start_settings,companyCount);
 
-        return StatusCode.SUCCESS;
+        return g.id;
     }
     public StatusCode finishGame(Long game_id) throws Exception
     {

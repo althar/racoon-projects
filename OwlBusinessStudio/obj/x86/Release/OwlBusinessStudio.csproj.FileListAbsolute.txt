@@ -1,5 +1,4 @@
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.exe.config
-C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.exe
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudio.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\HTMLWYSIWYG.dll
@@ -12,6 +11,7 @@ C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\log4net.
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\OwlBusinessStudioLib.pdb
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\bin\Release\LinqToExcel.xml
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.csprojResolveAssemblyReference.cache
+C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.csproj.ResolveComReference.cache
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.DBAuthorizationForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Authorization.LoginForm.resources
 C:\Users\AlThar\Documents\Racoon Projects\OwlBusinessStudio\obj\x86\Release\OwlBusinessStudio.Content.ContentForm.resources

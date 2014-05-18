@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://racoonsoft.ru/funcs" prefix="fns" %>
 <div class="basket">
     <h1>Ваша Корзина</h1>
     <table class="products">
@@ -35,7 +36,7 @@
                 </td>
                 <td class="price">
                     <em class="style-prices">
-                        <span class="color">${good.get('Price')}</span>
+                        <span class="color">${fns:price(good.get('Price'))}</span>
                         теплуноса
                     </em>
                 </td>
@@ -44,7 +45,8 @@
                 </td>
                 <td class="total">
                     <em class="style-prices">
-                        <span class="color">${good.get('Price')*good.get('Quantity')}</span>
+                        <%--<c:set var="total_price" value="${good.get('Price')*good.get('Quantity')}"></c:set>--%>
+                        <span class="color">${fns:price(good.get('Price')*good.get('Quantity'))}</span>
                         теплуноса
                     </em>
                 </td>
@@ -72,7 +74,7 @@
                 </td>
                 <td class="price">
                     <em class="style-prices">
-                        <span class="color">${good.get('Price')}</span>
+                        <span class="color">${fns:price(good.get('Price'))}</span>
                         теплуноса
                     </em>
                 </td>
@@ -81,7 +83,8 @@
                 </td>
                 <td class="total">
                     <em class="style-prices">
-                        <span class="color">${good.get('Price')*good.get('Quantity')}</span>
+                        <%--<c:set var="total_price" value="${good.get('Price')*good.get('Quantity')}"></c:set>--%>
+                        <span class="color">${fns:price(good.get('Price')*good.get('Quantity'))}</span>
                         теплуноса
                     </em>
                 </td>

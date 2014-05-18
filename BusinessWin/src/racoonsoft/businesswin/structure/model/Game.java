@@ -19,7 +19,8 @@ public class Game
 
     @DataStructureField(name="current_action")
     public Integer currentAction = 0;
-
+    @DataStructureField(name="company_count")
+    public Integer company_count = 0;
     @DataStructureField(name="players")
     public HashMap<Long,Player> players = new HashMap<Long, Player>();
     @DataStructureField(name="companies")

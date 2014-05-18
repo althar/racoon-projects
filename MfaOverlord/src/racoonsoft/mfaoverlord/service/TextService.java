@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class TextService
 {
     private static String googleSearchResultLinksRegexp = "<h3 class=\"r\"><a[\\s\\S]+?</a>";
+    private static String googleSearchResultTitleRegexp = "<em>[\\s\\S]+?</a>";
     private static String hrefRegexp = "href=\"[\\s\\S]+?\"";
     private static String articleDLRegexp = "<dl[\\s\\S]+?<\\/dl>";
     private static String articleDTRegexp = "<dt[\\s\\S]+?<\\/dt>";
@@ -30,15 +31,22 @@ public class TextService
         for(String st: h3s)
         {
             ArrayList<String> href = StringHelper.findSubstring(st, hrefRegexp, true);
+            ArrayList<String> title = StringHelper.findSubstring(st, googleSearchResultTitleRegexp, true);
             if(href!=null&&href.size()>0)
             {
-                hrefs.add(href.get(0).replace("href=\"","").replace("\"",""));
+                String hrefText = href.get(0).replace("href=\"","").replace("\"","");
+                String titleText = "";
+                if(title.size()>0)
+                {
+                    titleText = title.get(0).replace("<em>","").replace("</em>","").replace("</a>","");
+                }
+                hrefs.add(hrefText+"|"+titleText);
             }
         }
         return hrefs;
     }
 
-    public static ArrayList<StolenArticle> getArticles(String text,String domain,String keyword)
+    public static ArrayList<StolenArticle> getArticles(String text,String domain,String keyword,String title)
     {
         ArrayList<StolenArticle> result = new ArrayList<StolenArticle>();
 
@@ -55,6 +63,10 @@ public class TextService
                 {
                     StolenArticle article = new StolenArticle();
                     article.title = dt.get(0).replace("<dt>","").replace("</dt>","");
+                    if(article.title.equalsIgnoreCase(""))
+                    {
+                        article.title = title;
+                    }
                     article.text = "<dl>"+dtdd+"</dl>";
                     article.domain = domain;
                     ArrayList<String> letters = StringHelper.findSubstring(article.text, "[а-яА-Я]", false);
@@ -88,7 +100,7 @@ public class TextService
         for(i=i; i<ps.size(); i++)
         {
             StolenArticle article = new StolenArticle();
-            article.title = keyword;
+            article.title = title;
             article.text = normalizeLinks(ps.get(i),domain);
             article.domain = domain;
             ArrayList<String> letters = StringHelper.findSubstring(article.text, "[а-яА-Я]", false);

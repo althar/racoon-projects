@@ -1,0 +1,10 @@
+http://j3chwd.axshare.com/ - Прототип
+http://seom.info/2011/09/30/mfa-5000-usd/ - Статья
+https://docs.google.com/spreadsheets/d/1NaCjQ1SLeo3xOjLmVOQI2FSdEJB8ganwknioACmsFVw/edit?usp=sharing - Семантическое ядро
+https://wrapbootstrap.com/theme/summarize-responsive-blog-magazine-WB058C542 - Шаблон
+
+
+Запросы могут быть
+1). По семантике id (только ключевое слово). Тогда в качестве статьи - первая статья по семантике.
+2). По сайту (search_item).
+3). По статье.

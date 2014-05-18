@@ -39,6 +39,8 @@ public class StringHelper
     public static ArrayList<String> findSubstring(String text,String regexp,boolean distinct)
     {
         ArrayList<String> result = new ArrayList<String>();
+        try
+        {
         Pattern pattern = Pattern.compile(regexp);
         Matcher matcher = pattern.matcher(text);
         while(matcher.find())
@@ -48,6 +50,11 @@ public class StringHelper
             {
                 result.add(matcher.group(0));
             }
+        }
+        }
+        catch (Exception ex)
+        {
+
         }
         return result;
     }

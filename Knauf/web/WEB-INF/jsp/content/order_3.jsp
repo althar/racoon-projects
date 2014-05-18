@@ -79,7 +79,7 @@
                     <div class="control-group">
                         <label class="control-label" for="addressTail_field">Улица, квартира</label>
                         <div class="controls">
-                            <input type="text" name="address" id="addressTail_field" value="ул. Скаковая, д.36" readonly="">
+                            <input type="text" name="address" id="addressTail_field" value="">
                         </div>
                     </div>
                     <div class="control-group">

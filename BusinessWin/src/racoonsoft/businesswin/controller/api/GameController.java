@@ -170,8 +170,11 @@ public class GameController extends BusinessWinController
             model.addObject("json",json.jsonString());
             return model;
         }
-        StatusCode code = gameService.createGame(name, GameMode.DEFAULT, startSettings,company_count);
-        JSONProcessor json = new JSONProcessor("code",code);
+        Long id = gameService.createGame(name, GameMode.DEFAULT, startSettings,company_count);
+        HashMap<String,Object> data = new HashMap<String, Object>();
+        data.put("code",StatusCode.SUCCESS);
+        data.put("id",id);
+        JSONProcessor json = new JSONProcessor(data);
         ModelAndView model = new ModelAndView("json");
         model.addObject("json",json.jsonString());
         return model;

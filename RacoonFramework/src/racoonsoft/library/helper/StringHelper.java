@@ -25,6 +25,17 @@ public class StringHelper
 //        return decodedInput.toString();
         return result;
     }
+    public static String normalizeOzonString(Object str)
+    {
+        if(str == null)
+        {
+            return "";
+        }
+        String result = getCharEncodedString(str.toString());
+        result = result.replaceAll("\\\\","");
+        result = result.replaceAll("<iframe[\\s\\S]+?iframe>","");
+        return result;
+    }
     public static String getCharEncodedString2(String str)
     {
         str = str.replace("\\","");

@@ -66,10 +66,18 @@ public class HTTPClient
 		in.close();
 		return builder.toString();
     }
-    public static String sendHTTPRequestWithHeaders(String pack, String url,HashMap<String,String> headers) throws IOException
+    public static String sendHTTPRequestWithHeaders(String pack, String url,HashMap<String,String> headers,boolean post) throws IOException
     {
         URL current_url = new URL(url);
-        URLConnection yc = current_url.openConnection();
+        HttpURLConnection yc = (HttpURLConnection)current_url.openConnection();
+        if(post)
+        {
+            yc.setRequestMethod("POST");
+        }
+        else
+        {
+            yc.setRequestMethod("GET");
+        }
         if(headers!=null)
         {
             Iterator<String> names = headers.keySet().iterator();
@@ -102,7 +110,7 @@ public class HTTPClient
     }
     public static String sendHTTPRequest(String pack, String url) throws IOException
     {
-		return sendHTTPRequestWithHeaders(pack, url, null);
+		return sendHTTPRequestWithHeaders(pack, url, null,false);
     }
 
     public static String sendHTTPSRequestWithHeaders(String url,String method,HashMap<String,String> headers,byte[] pack) throws Exception
