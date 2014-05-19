@@ -32,7 +32,7 @@
                     </a>
                 </td>
                 <td class="name">
-                    <a href="/catalog/item/8122266/">${good.get('Name')}</a>
+                    <a href="/good?id=${good.get('ItemId')}">${good.get('Name')}</a>
                 </td>
                 <td class="price">
                     <em class="style-prices">
@@ -70,7 +70,7 @@
                     </a>
                 </td>
                 <td class="name">
-                    <a href="/catalog/item/">${good.get('Name')}<br><p style="color: red;">Нет в наличии.</p></a>
+                    <a href="/good?id=${good.get('ItemId')}">${good.get('Name')}<br><p style="color: red;">Нет в наличии.</p></a>
                 </td>
                 <td class="price">
                     <em class="style-prices">
