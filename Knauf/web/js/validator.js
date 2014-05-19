@@ -1515,7 +1515,7 @@
     $.formUtils.addValidator({
         name : 'alphanumeric',
         validatorFunction : function(val, $el, conf, language) {
-            var patternStart = '^([a-zA-Zа-яА-Я0-9',
+            var patternStart = '^([a-zA-Zа-яА-Я0-9 /s ^([a-zA-Zа-яА-Я0-9',
                 patternEnd = ']+)$',
                 additionalChars = $el.attr('data-validation-allowing'),
                 pattern = '';
