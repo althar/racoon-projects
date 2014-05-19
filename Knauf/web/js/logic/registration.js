@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $.datepicker.regional['ru'] = {
         closeText: 'Закрыть',
         prevText: '&#x3c;Пред',
@@ -21,13 +22,10 @@ $(document).ready(function(){
 
     jQuery("#registration_form").submit(function(e) {
         var self = this;
-        var validationSuccess = false;
+        var validationSuccess = true;
         e.preventDefault();
 
-        // Тут нужна валидация всех полей.
-
-
-        if(validationSuccess)
+            if(validationSuccess)
         {
             self.submit();
         }
