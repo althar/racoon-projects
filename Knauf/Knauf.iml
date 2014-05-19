@@ -22,7 +22,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0" level="application_server_libraries" />
     <orderEntry type="library" name="spring-3.2.2" level="project" />
     <orderEntry type="library" name="spring-webflow-2.3.2" level="project" />
     <orderEntry type="library" name="spring-integration-2.2.3" level="project" />
@@ -37,6 +36,7 @@
     <orderEntry type="library" name="commons-io:commons-io:2.1" level="project" />
     <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="org.liquibase:liquibase-core:2.0.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.53" level="application_server_libraries" />
   </component>
 </module>
 

@@ -4,7 +4,19 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<script type="text/javascript" src="/js/logic/registration.js"></script>
+<style>
+    span.form-error.help-block {
+        display: block;
+        color: red;
+        margin-top: 6px;
+        padding-left: 0;
+</style>
+<script src="/js/logic/registration.js"></script>
+<script src="js/mask/jquery.inputmask.js" type="text/javascript"></script>
+<script src="js/mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
+<script src="js/mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+<script src="js/mask/jquery.inputmask.numeric.extensions.js" type="text/javascript"></script>
+<script src="js/mask/jquery.inputmask.custom.extensions.js" type="text/javascript"></script>
 <div class="content layout">
 
     <ul class="breadcrumbs"><li class="item"><a href="/" class="link">Главная</a><span class="arrow"></span></li><li class="item"><a href="/my/" class="link">Личный кабинет</a><span class="arrow"></span></li><li class="item">Регистрация</li></ul>
@@ -21,13 +33,13 @@
                         <div class="control-group">
                             <label class="control-label" for="first_name_field">Имя</label>
                             <div class="controls">
-                                <input required="" name="first_name" id="first_name_field" type="text" value="${first_name}">
+                                <input required="" name="first_name" id="first_name_field" type="text" value="${first_name}" data-validation="length alphanumeric" data-validation-length="3-12" data-validation-error-msg="Имя должно составлять 3-12 символов">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="last_name_field">Фамилия</label>
                             <div class="controls">
-                                <input required="" name="last_name" id="last_name_field" type="text" value="${last_name}">
+                                <input required="" name="last_name" id="last_name_field" type="text" value="${last_name}" data-validation="length alphanumeric" data-validation-length="3-12" data-validation-error-msg="Фамилия должна составлять 3-12 символов">
                             </div>
                         </div>
                         <div class="control-group">
@@ -40,45 +52,45 @@
                         <div class="control-group">
                             <label class="control-label" for="birthday">Дата рождения</label>
                             <div class="controls">
-                                <input required="" name="birthday" id="birthday" type="text" value="">
+                                <input required="" name="birthday" id="birthday" type="text" value="" data-validation="date" data-validation-format="dd.mm.yyyy" data-validation-error-msg="Дата была введена неверно! Пример даты: 01.01.2000">
                                 <span class="help-inline">ДД.ММ.ГГГГ</span>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="email">E-mail</label>
                             <div class="controls">
-                                <input required="" name="login" id="email" type="email" value="${login}">
+                                <input required="" name="login" id="email" type="email" value="${login}" data-validation="email" data-validation-error-msg="E-mail был ввыден не верно!">
                                 <span class="help-inline">для рассылки сертификатов</span>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="phone_field">Контактный телефон</label>
                             <div class="controls">
-                                <input required="" name="phone" id="phone_field" type="text" value="${phone}">
+                                <input required="" name="phone" id="phone_field" type="text" value="${phone}" data-validation="number" data-validation-length="1-100" data-validation-error-msg="Номер был ввыден не верно!" >
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_field">Название компании работодателя</label>
                             <div class="controls">
-                                <input required="" name="company" id="employer_field" type="text" value="${company}">
+                                <input required="" name="company" id="employer_field" type="text" value="${company}" data-validation="length alphanumeric" data-validation-length="3-12" data-validation-error-msg="Название компании должно составлять 3-12 символов">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_address_field">Адрес компании работодателя</label>
                             <div class="controls">
-                                <input required="" name="address" id="employer_address_field" type="text" value="${address}">
+                                <input required="" name="address" id="employer_address_field" type="text" value="${address}" data-validation="length alphanumeric" data-validation-length="5-30" data-validation-error-msg="Адрес компании должн составлять 5-30 символов" >
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="employer_phone_field">Телефон работодателя</label>
                             <div class="controls">
-                                <input required="" name="phone" id="employer_phone_field" type="text" value="${phone}">
+                                <input required="" name="phone_work" id="employer_phone_field" type="text" value="${phone}" data-validation="number" data-validation-length="1-100" data-validation-error-msg="Номер был ввыден не верно!">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="position_field">Ваша должность</label>
                             <div class="controls">
-                                <input required="" name="post" id="position_field" type="text" value="${post}">
+                                <input required="" name="post" id="position_field" type="text" value="${post}" data-validation="length alphanumeric" data-validation-length="3-12" data-validation-error-msg="Должность должна составлять 3-12 символов">
                             </div>
                         </div>
                     </div>
@@ -188,3 +200,7 @@
 
     </div>
 </div>
+
+
+<script src="/js/validator.js"></script>
+<script src="/js/logic/registration_validator.js"></script>
