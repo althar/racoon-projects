@@ -45,7 +45,7 @@
                         <div class="control-group">
                             <label class="control-label">Пол</label>
                             <div class="controls">
-                                <label class="radio inline"><input required="" type="radio" name="gender" <c:if test="${gender=='М'}">checked</c:if> value="М"> мужской</label>
+                                <label class="radio inline"><input required="" type="radio" name="gender" checked<c:if test="${gender=='М'}">checked</c:if> value="М"> мужской</label>
                                 <label class="radio inline"><input required="" type="radio" name="gender" <c:if test="${gender=='Ж'}">checked</c:if> value="Ж"> женский</label>
                             </div>
                         </div>

@@ -20,15 +20,15 @@ $(document).ready(function(){
         yearSuffix: ''};
     $("#birthday").datepicker();
 
-    jQuery("#registration_form").submit(function(e) {
-        var self = this;
-        var validationSuccess = true;
-        e.preventDefault();
-
-            if(validationSuccess)
-        {
-            self.submit();
-        }
-        return false;
-    });
+//    jQuery("#registration_form").submit(function(e) {
+//        var self = this;
+//        var validationSuccess = true;
+//        e.preventDefault();
+//
+//        if(validationSuccess)
+//        {
+//            self.submit();
+//        }
+//        return true;
+//    });
 });
