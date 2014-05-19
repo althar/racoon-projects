@@ -17,7 +17,7 @@
         </c:if>
         <c:if test="${(attribute.get('Name')=='Изображения'||attribute.get('Name')=='Изображение')&&(not image_set)}">
             <c:set var="image" value="http://static.ozone.ru/multimedia/${attribute.get('Value')}"/>
-            <c:set var="image_set" scope="session" value="true"/>
+            <c:set var="image_set"  value="true"/>
         </c:if>
     </c:forEach>
     <div class="container ">
@@ -34,7 +34,7 @@
                     <ul class="inline item-images">
                         <c:forEach items="${good.get('Detail').get('ClassAttributes')}" var="attribute">
                             <c:if test="${attribute.get('Name')=='Изображения'||attribute.get('Name')=='Изображение'}">
-                                <c:set var="image" scope="session" value="http://static.ozone.ru/multimedia/${attribute.get('Value')}"/>
+                                <c:set var="image"  value="http://static.ozone.ru/multimedia/${attribute.get('Value')}"/>
                                 <li><a class="fancybox-gallery" href="${image}" rel="thumbnails"><img src="${image}" alt=""></a></li>
                             </c:if>
                         </c:forEach>

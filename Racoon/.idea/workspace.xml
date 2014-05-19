@@ -40,60 +40,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="59fd7cfa-8504-45b1-8730-d482f0c97bca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/animated-overlay.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/doc/info.doc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/img/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/funcs.tld" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/js/jq/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/js/jq/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/price_section.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/recover_password.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" />
-      <change type="DELETED" beforePath="C:\Users\AlThar\Documents\Racoon Projects\RacoonFramework\src\racoonsoft\library\mailru\torg\ContentAPIProcessor.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\AlThar\Documents\Racoon Projects\RacoonFramework\src\racoonsoft\library\mailru\torg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/APIProcessor.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/APIProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java" afterPath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" afterPath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/GameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" afterPath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/service/GameService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GameWorld.java" afterPath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/structure/model/GameWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/http/HTTPClient.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/http/HTTPClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java" afterPath="$PROJECT_DIR$/../BusinessWin/src/racoonsoft/businesswin/controller/api/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" afterPath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/mail/MailMessage.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/mail/MailMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/ozon/OzonProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java" afterPath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/PageController.java" afterPath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/PageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java" afterPath="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java" afterPath="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/test/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/js/logic/catalogue.js" afterPath="$PROJECT_DIR$/../Knauf/web/js/logic/catalogue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/main.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order_2.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order_2.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order_3.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/order_3.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Racoon.iws" />
@@ -885,7 +833,7 @@
     <file path="/Cache.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250782636" ignored="false" />
     <file path="/CacheJson.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250509139" ignored="false" />
     <file path="/CacheProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398251794303" ignored="false" />
-    <file path="/basket-inner.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400084062215" ignored="false" />
+    <file path="/basket-inner.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400506613122" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/js/jq/lightbox.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398427514428" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/css/lightbox.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398427631721" ignored="false" />
     <file path="/lightbox.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398427631721" ignored="false" />
@@ -1036,41 +984,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/../Select/src/racoonsoft/select/controller/BasketController.java" line="189" class="racoonsoft.select.controller.BasketController" package="racoonsoft.select.controller">
         <option name="ENABLED" value="true" />
@@ -1129,6 +1042,41 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -1141,7 +1089,25 @@
       <file leaf-file-name="good.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="88" selection-start="1342" selection-end="1342" vertical-scroll-proportion="-13.730769">
+            <state line="29" column="185" selection-start="1659" selection-end="1659" vertical-scroll-proportion="-14.346154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/basket.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="61" selection-start="1062" selection-end="1062" vertical-scroll-proportion="-12.346154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket-inner.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.34501845">
               <folding />
             </state>
           </provider>
@@ -1150,16 +1116,16 @@
       <file leaf-file-name="registration.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="-6.730769">
+            <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="registration.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="13" selection-start="877" selection-end="877" vertical-scroll-proportion="0.62852114">
+            <state line="28" column="196" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1169,10 +1135,7 @@
         <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="95" column="50" selection-start="4323" selection-end="4323" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2643#2659#0" expanded="true" />
-                <element signature="e#2714#2730#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1180,7 +1143,7 @@
       <file leaf-file-name="page.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="53" selection-start="909" selection-end="909" vertical-scroll-proportion="-10.461538">
+            <state line="16" column="53" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1228,7 +1191,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/price_section.jsp" />
         <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" />
@@ -1237,13 +1199,14 @@
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/service/OzonService.java" />
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/recover_password.jsp" />
-        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/css/jquery-ui.css" />
         <option value="$PROJECT_DIR$/../Knauf/web/js/jq/jquery-ui.js" />
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" />
       </list>
     </option>
   </component>
@@ -1588,14 +1551,14 @@
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.20410156" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.20410156" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="C:\Users\AlThar\Documents\IdeaProjects\rzd_scanner\rzd_scanner_1.8.10.apk" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Zoomag" />
@@ -1612,15 +1575,15 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="project.structure.side.proportion" value="0.33100232" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="project.structure.side.proportion" value="0.33100232" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1727,6 +1690,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1755,34 +1731,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -1801,11 +1749,33 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1829,11 +1799,11 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1849,13 +1819,6 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
-      <deployment />
-      <server-settings />
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="false" name="rzd_scanner_emulator" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2533,37 +2496,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="87" selection-start="2498" selection-end="2498" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="70" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/js/jq/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="47" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="88" selection-start="1342" selection-end="1342" vertical-scroll-proportion="-13.730769">
           <folding />
         </state>
       </provider>
@@ -2582,18 +2522,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/css/jquery-ui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="603" column="39" selection-start="13123" selection-end="13123" vertical-scroll-proportion="0.3604651">
-          <folding>
-            <element signature="e#11943#12026#2" expanded="true" />
-          </folding>
-        </state>
+        <state line="603" column="39" selection-start="13123" selection-end="13123" vertical-scroll-proportion="0.3604651" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/js/jq/jquery-ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6859" column="22" selection-start="205273" selection-end="205273" vertical-scroll-proportion="0.56845754">
-          <folding />
-        </state>
+        <state line="6859" column="22" selection-start="205273" selection-end="205273" vertical-scroll-proportion="0.56845754" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/recover_password.jsp">
@@ -2605,45 +2539,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="53" selection-start="909" selection-end="909" vertical-scroll-proportion="-10.461538">
+        <state line="16" column="53" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/spring-web.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.71235955">
-          <folding />
-        </state>
+        <state line="33" column="29" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.71235955" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/spring-beans-3.2.2.RELEASE.jar!/org/springframework/beans/propertyeditors/CustomDateEditor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="384" selection-end="384" vertical-scroll-proportion="0.37117904">
-          <folding />
-        </state>
+        <state line="11" column="11" selection-start="384" selection-end="384" vertical-scroll-proportion="0.37117904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="50" selection-start="4323" selection-end="4323" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2643#2659#0" expanded="true" />
-            <element signature="e#2714#2730#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="-6.730769">
+        <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="877" selection-end="877" vertical-scroll-proportion="0.62852114">
+        <state line="28" column="196" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="185" selection-start="1659" selection-end="1659" vertical-scroll-proportion="-14.346154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/basket.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="61" selection-start="1062" selection-end="1062" vertical-scroll-proportion="-12.346154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.34501845">
           <folding />
         </state>
       </provider>
