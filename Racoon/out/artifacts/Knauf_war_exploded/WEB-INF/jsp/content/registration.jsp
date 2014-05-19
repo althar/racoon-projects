@@ -176,13 +176,14 @@
                         <div class="control-group">
                             <label class="control-label" for="password_field">Укажите свой пароль</label>
                             <div class="controls">
-                                <input required="" autocomplete="off" name="password" id="password_field" type="password">
+                                <input required="" autocomplete="off" name="password" id="password_field" type="password" data-validation="strength"
+                                        data-validation-strength="2">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="password_confirmation_field">Повторите пароль</label>
                             <div class="controls">
-                                <input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="">
+                                <input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="" data-validation="confirmation">
                             </div>
                         </div>
                         <div class="control-group">

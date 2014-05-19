@@ -529,7 +529,7 @@
     <file path="/PostgresqlDataSource.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1386169662362" ignored="false" />
     <file path="/StudentController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390300854214" ignored="false" />
     <file path="/LoginController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400409913747" ignored="false" />
-    <file path="/registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400410628641" ignored="false" />
+    <file path="/registration.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400524766823" ignored="false" />
     <file path="/access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387446564117" ignored="false" />
     <file path="/no_access.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1385914719749" ignored="false" />
     <file path="$PROJECT_DIR$/../Zoomag/src/ftwo/zoomag/servlets/UserServlet.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1392226061071" ignored="false" />
@@ -1106,7 +1106,7 @@
       <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="113" selection-start="3246" selection-end="3246" vertical-scroll-proportion="0.5463138">
+            <state line="185" column="168" selection-start="16179" selection-end="16179" vertical-scroll-proportion="0.5463138">
               <folding />
             </state>
           </provider>
@@ -2589,7 +2589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="113" selection-start="3246" selection-end="3246" vertical-scroll-proportion="0.5463138">
+        <state line="185" column="168" selection-start="16179" selection-end="16179" vertical-scroll-proportion="0.5463138">
           <folding />
         </state>
       </provider>
