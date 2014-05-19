@@ -40,9 +40,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="59fd7cfa-8504-45b1-8730-d482f0c97bca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" afterPath="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" afterPath="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" />
     </list>
     <ignored path="Racoon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,13 +56,13 @@
     <file path="/Admin.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1367585512637" ignored="false" />
     <file path="/admin_login.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365432112412" ignored="false" />
     <file path="/header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400092547656" ignored="false" />
-    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400098047646" ignored="false" />
+    <file path="/a.dummy" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400524232782" ignored="false" />
     <file path="/web.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1399288063505" ignored="false" />
     <file path="/ServiceConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365428553109" ignored="false" />
     <file path="/WebConfig.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390990221611" ignored="false" />
     <file path="/dispatcher-servlet.xml" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365430637325" ignored="false" />
     <file path="/User.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1399278053102" ignored="false" />
-    <file path="/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1399840737248" ignored="false" />
+    <file path="/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521513503" ignored="false" />
     <file path="/article.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1372066292120" ignored="false" />
     <file path="/ContentGod.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365435038098" ignored="false" />
     <file path="/Article.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1365598763530" ignored="false" />
@@ -228,7 +228,7 @@
     <file path="/TaxWizardDao.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380803790636" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/controller/taxes/FSSWizardController.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380885883063" ignored="false" />
     <file path="/step3.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1384170076759" ignored="false" />
-    <file path="/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398428454850" ignored="false" />
+    <file path="/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521109767" ignored="false" />
     <file path="/about.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1387366878414" ignored="false" />
     <file path="/contact.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1383650715042" ignored="false" />
     <file path="/basket.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400086018201" ignored="false" />
@@ -342,7 +342,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/jq/mask.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373880987674" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/document.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373881025310" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/main.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373882309664" ignored="false" />
-    <file path="/main.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373882326038" ignored="false" />
+    <file path="/main.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521521638" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/js/jq/price-format.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373882373188" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/webapp/WEB-INF/jsp/document_item_orders.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1375696152530" ignored="false" />
     <file path="/price-format.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1373882344502" ignored="false" />
@@ -413,7 +413,7 @@
     <file path="/YandexDirectProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377876013689" ignored="false" />
     <file path="/YandexDirectPackage.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377875940801" ignored="false" />
     <file path="/GetCampaignsList.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1377875818429" ignored="false" />
-    <file path="/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1399281653579" ignored="false" />
+    <file path="/JSONProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400520847888" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/resources/tax_declaration_template/pfr/PFR-700-Y-2013-ORG-087-105-038446-DCK-00001-DPT-000000-DCK-00000.XML" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390398154039" ignored="false" />
     <file path="/PFR-700-Y-2013-ORG-087-105-038446-DCK-00001-DPT-000000-DCK-00000.XML" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1390398152063" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/erdicto/finance/src/main/java/erdicto/fin/structure/TaxDeclarationData.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1380803680128" ignored="false" />
@@ -782,7 +782,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-header.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397029713951" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/structure/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030254691" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398427822201" ignored="false" />
-    <file path="/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400404309868" ignored="false" />
+    <file path="/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521645479" ignored="false" />
     <file path="/body.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400092468273" ignored="false" />
     <file path="/service-page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397030253435" ignored="false" />
     <file path="/MailProcessor.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1397827606286" ignored="false" />
@@ -828,7 +828,7 @@
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/js/jq/bootstrap.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398088148734" ignored="false" />
     <file path="$PROJECT_DIR$/../../IDEA Projects/MyBuh/web/css/bootstrap.css" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398088250636" ignored="false" />
     <file path="/OzonService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400093723055" ignored="false" />
-    <file path="/aside.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400078315196" ignored="false" />
+    <file path="/aside.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400519618154" ignored="false" />
     <file path="/CacheService.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398245789586" ignored="false" />
     <file path="/Cache.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250782636" ignored="false" />
     <file path="/CacheJson.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1398250509139" ignored="false" />
@@ -969,7 +969,11 @@
     <file path="/recover_password.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400094294663" ignored="false" />
     <file path="/MailMessage.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400093269286" ignored="false" />
     <file path="$PROJECT_DIR$/../Zoomag/src/ftwo/zoomag/service/Test.java" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400107062681" ignored="false" />
-    <file path="/registration.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400410595352" ignored="false" />
+    <file path="/registration.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400524332743" ignored="false" />
+    <file path="$PROJECT_DIR$/../../My buh/MyBuh/web/WEB-INF/jsp/structure/footer.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521111599" ignored="false" />
+    <file path="$PROJECT_DIR$/../../My buh/MyBuh/web/js/logic/main.js" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521547799" ignored="false" />
+    <file path="$PROJECT_DIR$/../../My buh/MyBuh/web/WEB-INF/jsp/content/main.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521513142" ignored="false" />
+    <file path="$PROJECT_DIR$/../../My buh/MyBuh/web/WEB-INF/jsp/structure/page.jsp" changelist="59fd7cfa-8504-45b1-8730-d482f0c97bca" time="1400521655802" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1014,20 +1018,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" line="53" class="racoonsoft.knauf.controller.LoginController" package="racoonsoft.knauf.controller">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" line="84" class="racoonsoft.knauf.controller.LoginController" package="racoonsoft.knauf.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -1104,19 +1094,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket-inner.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="basket-inner.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.34501845">
+            <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="-12.923077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="0.0">
+            <state line="47" column="113" selection-start="3246" selection-end="3246" vertical-scroll-proportion="0.5463138">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalogue.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="60" selection-start="712" selection-end="712" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aside.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="202" selection-start="1409" selection-end="1409" vertical-scroll-proportion="-10.461538">
               <folding />
             </state>
           </provider>
@@ -1125,7 +1133,7 @@
       <file leaf-file-name="registration.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="196" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+            <state line="32" column="9" selection-start="871" selection-end="1138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1134,7 +1142,7 @@
       <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="50" selection-start="4323" selection-end="4323" vertical-scroll-proportion="0.0">
+            <state line="87" column="29" selection-start="4029" selection-end="4029" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1144,24 +1152,6 @@
         <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/page.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="53" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="35" selection-start="6045" selection-end="6045" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/PageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="58" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1191,7 +1181,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/price_section.jsp" />
         <option value="$PROJECT_DIR$/../RacoonFramework/src/racoonsoft/library/helper/StringHelper.java" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/body.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/header.jsp" />
@@ -1203,10 +1192,11 @@
         <option value="$PROJECT_DIR$/../Knauf/web/css/jquery-ui.css" />
         <option value="$PROJECT_DIR$/../Knauf/web/js/jq/jquery-ui.js" />
         <option value="$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" />
-        <option value="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp" />
         <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp" />
+        <option value="$PROJECT_DIR$/../Knauf/web/js/logic/registration.js" />
+        <option value="$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp" />
       </list>
     </option>
   </component>
@@ -1444,10 +1434,6 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1464,6 +1450,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1561,7 +1551,7 @@
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="ExportedModule" value="rzd_scanner" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Zoomag" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../My buh/ichensky_mybuh/MyBuh" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="racoon" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -2397,14 +2387,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1936" height="1040" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42338252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32576618" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32576618" sideWeight="0.61152613" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28762543" sideWeight="0.38847384" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17289221" sideWeight="0.2419175" order="2" side_tool="true" content_ui="tabs" />
@@ -2427,7 +2418,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.57079154" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42363435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2496,40 +2486,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/jq/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/catalogue.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="47" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/price_section.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="89" selection-start="6273" selection-end="6273" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/img/animated-overlay.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/css/jquery-ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="603" column="39" selection-start="13123" selection-end="13123" vertical-scroll-proportion="0.3604651" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/jq/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6859" column="22" selection-start="205273" selection-end="205273" vertical-scroll-proportion="0.56845754" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/recover_password.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="70" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.14409722">
@@ -2554,27 +2510,6 @@
         <state line="11" column="11" selection-start="384" selection-end="384" vertical-scroll-proportion="0.37117904" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="50" selection-start="4323" selection-end="4323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="976" selection-end="993" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="196" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/good.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="185" selection-start="1659" selection-end="1659" vertical-scroll-proportion="-14.346154">
@@ -2589,9 +2524,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/ServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="35" selection-start="6045" selection-end="6045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration_validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="191" selection-start="570" selection-end="570" vertical-scroll-proportion="0.59859157">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/widget/basket-inner.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.34501845">
+        <state line="101" column="186" selection-start="4714" selection-end="4714" vertical-scroll-proportion="-12.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/catalogue.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="60" selection-start="712" selection-end="712" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="58" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/structure/aside.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="202" selection-start="1409" selection-end="1409" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/js/logic/registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="9" selection-start="871" selection-end="1138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/src/racoonsoft/knauf/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="29" selection-start="4029" selection-end="4029" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Knauf/web/WEB-INF/jsp/content/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="113" selection-start="3246" selection-end="3246" vertical-scroll-proportion="0.5463138">
           <folding />
         </state>
       </provider>
