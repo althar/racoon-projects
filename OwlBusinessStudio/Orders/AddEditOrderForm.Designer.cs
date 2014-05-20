@@ -142,6 +142,7 @@
             this.ButtLoadClient.TabIndex = 55;
             this.ButtLoadClient.Text = "Подтянуть данные лкиента";
             this.ButtLoadClient.UseVisualStyleBackColor = true;
+            this.ButtLoadClient.Visible = false;
             this.ButtLoadClient.Click += new System.EventHandler(this.TxtPhone1_TextChanged);
             // 
             // button1
