@@ -12,7 +12,7 @@
                 <ul>
                     <c:forEach items="${catalogue.get('WebSection').get('Childs')}" var="cat">
                         <%--<c:if test="${catalogue_categories.contains(cat.get('Name'))}">--%>
-                        <c:if test="${cat.get('Name')!='div_travel'}">
+                        <c:if test="${cat.get('Name')!='div_travel'&&cat.get('Name')!='div_luxury_gifts'}">
                             <%--${fn:toUpperCase(fn:substring(linkName, 0, 1))}${fn:toLowerCase(fn:substring(linkName, 1,fn:length(linkName)))}--%>
                             <li class="item ">
                                 <a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&title=${cat.get('DisplayName')}">${cat.get('DisplayName')}</a>
