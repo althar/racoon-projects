@@ -174,16 +174,17 @@
                     <div class="step-no-3">
                         <legend>Шаг 3</legend>
                         <div class="control-group">
-                            <label class="control-label" for="password_field">Укажите свой пароль</label>
+                            <label class="control-label" for="pass_field">Укажите свой пароль</label>
                             <div class="controls">
-                                <input required="" autocomplete="off" name="password" id="password_field" type="password" data-validation="strength"
-                                        data-validation-strength="2">
+                                <%--<input required="" autocomplete="off" name="password" id="password_field" type="password" data-validation="strength" data-validation-strength="2">--%>
+                                <input type="password" id="pass_field" name="password_confirmation" data-validation="length" value="" data-validation-length="min4" data-validation-error-msg="Минимум 4 символа.">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="password_confirmation_field">Повторите пароль</label>
                             <div class="controls">
-                                <input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="" data-validation="confirmation">
+                                <%--<input required="" name="password_confirmation" id="password_confirmation_field" type="password" value="" data-validation="confirmation">--%>
+                                    <input type="password" id="password_confirmation_field" name="password" value="" data-validation="confirmation" data-validation-error-msg="Пароли не совпадают.">
                             </div>
                         </div>
                         <div class="control-group">
@@ -205,3 +206,4 @@
 
 <script src="/js/validator.js"></script>
 <script src="/js/logic/registration_validator.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/security.js"></script>

@@ -101,7 +101,7 @@
             <td align="right">Всего</td>
             <td>
                 <em class="style-prices">
-                    <span class="color" id="cart_summary_price">${cart.get('CartSummary').get('FullSum')}</span>
+                    <span class="color" id="cart_summary_price">${fns:price(cart.get('CartSummary').get('FullSum'))}</span>
                     теплуноса
                 </em>
             </td>
