@@ -21,9 +21,9 @@ public class PageController extends KnaufController
         ModelAndView model = model("main");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
-        JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0-2500","");
-        JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","2500-5000","");
-        JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","5000-10000","");
+        JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0-2499","");
+        JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","2500-4999","");
+        JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","5000-9999","");
         JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult("div_tech","4","10000-500000","");
         model.addObject("base_section",true);
         model.addObject("catalogue_name","div_tech");
@@ -73,9 +73,9 @@ public class PageController extends KnaufController
 
             if(catalogue_id==null)
             {
-                JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0-2500","");
-                JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","2500-5000","");
-                JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","5000-10000","");
+                JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0-2499","");
+                JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","2500-4999","");
+                JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","5000-9999","");
                 JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult(catalogue,"4","10000-5000000","");
                 model.addObject("base_section",true);
                 model.addObject("catalogue_name",catalogue);

@@ -51,13 +51,9 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
             result = result.replace(" ","");
             result = result.replace("-","");
             result = result.replace("_","");
-            result = result.replace("+","");
-            if(result.length()==11
-                    &&
-                    (result.substring(0,1).equalsIgnoreCase("7")||result.substring(0,1).equalsIgnoreCase("8")))
-            {
-                result = result.substring(1);
-            }
+            result = result.replace("+7","");
+            result = result.replace("+8","");
+
             finRes = "("+result.substring(0,3)+")";
             finRes += result.substring(3,6)+"-";
             finRes += result.substring(6,8)+"-";
@@ -78,7 +74,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
             DBProcessor dbProc = BaseServlet.DBProc;
             long seq1 = dbProc.sequenceGetCurrentValue(seqName);
             // 1 - Get all orders
-            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID,customerID, 0 AS client_id, shipping_type!='Самовывоз' AS deliver,customers_comment,order_amount," +
+            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID,customerID, 0 AS client_id, shipping_type LIKE '%Самовывоз%' AS deliver,shipping_type,customers_comment,order_amount," +
                     "CONCAT(customer_firstname, ' ', customer_lastname) AS client_name, customer_email,shipping_address FROM SC_orders WHERE orderID > "+seq1+" AND DATE(order_time)=DATE(NOW()) ORDER BY orderID");
             System.out.println("Orders: "+orders.size());
             // 2 - Insert data
@@ -95,12 +91,24 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     String address = order.getStringValue("shipping_address");
                     String client_name = order.getStringValue("client_name");
                     Integer customer_id = order.getIntValue("customerID");
+                    String shipping_type = order.getStringValue("shipping_type");
+                    String metro = "";
 
                     Integer clientId = null;
-                    DBRecord client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
+                     DBRecord client = null;
+                    client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
+                    String phoneFromSite = "";
                     if(client==null)
                     {
                         HashMap<String,Object> clPars = new HashMap<String, Object>();
+
+                        // Metro
+                        ArrayList<DBRecord> clientFieldsMetro = proc.getRecords("SELECT * FROM SC_customer_reg_fields_values WHERE reg_field_ID=3 AND customerID="+customer_id);
+                        if(clientFieldsMetro!=null&&clientFieldsMetro.size()>0)
+                        {
+                            metro = clientFieldsMetro.get(0).getStringValue("reg_field_value");
+                        }
+
                         ArrayList<DBRecord> clientFields = proc.getRecords("SELECT * FROM SC_customer_reg_fields_values WHERE reg_field_ID=1 AND customerID="+customer_id);
                         if(clientFields==null||clientFields.size()==0)
                         {
@@ -110,7 +118,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                         }
                         else if(clientFields.size()>0)
                         {
-                            String phoneFromSite = clientFields.get(0).getStringValue("reg_field_value");
+                            phoneFromSite = clientFields.get(0).getStringValue("reg_field_value");
                             phoneFromSite = normalizePhone(phoneFromSite);
                             clPars.put("phone_1",clientFields.get(0).getStringValue("reg_field_value"));
                             client = dbProc.getRecord("SELECT * FROM clients WHERE phone_1='"+phoneFromSite+"' OR phone_2='"+phoneFromSite+"' OR phone_3='"+phoneFromSite+"'");
@@ -128,20 +136,52 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                             clientId = client.getID();
                         }
 
+
                         client = dbProc.getRecord("SELECT * FROM clients WHERE id="+clientId+"");
                     }
 
                     HashMap<String,Object> orderPars = new HashMap<String, Object>();
-                    orderPars.put("client_id",client.getIntValue("id"));
+                    Integer clId = client.getIntValue("id");
+                    orderPars.put("client_id",clId);
                     orderPars.put("phone_1",client.getStringValue("phone_1"));
+
+                    if(client.getStringValue("phone_2")!=null)
+                    {
+                        orderPars.put("phone_2",client.getStringValue("phone_2"));
+                    }
+                    if(client.getStringValue("phone_3")!=null)
+                    {
+                        orderPars.put("phone_3",client.getStringValue("phone_3"));
+                    }
+
                     orderPars.put("deliver",deliver);
-                    orderPars.put("street",address);
-                    orderPars.put("city","");
-                    orderPars.put("house","");
-                    orderPars.put("room","");
-                    orderPars.put("porch","");
-                    orderPars.put("floor","");
-                    orderPars.put("description",comment);
+                    orderPars.put("street",client.getStringValue("street"));
+                    orderPars.put("city",client.getStringValue("city"));
+                    orderPars.put("house",client.getStringValue("house"));
+                    orderPars.put("room",client.getStringValue("room"));
+                    orderPars.put("porch",client.getStringValue("porch"));
+                    orderPars.put("floor",client.getStringValue("floor"));
+
+                    String commentFull = comment;
+                    if(address!=null)
+                    {
+                        commentFull+=address+".";
+                    }
+                    if(client_name!=null)
+                    {
+                        commentFull+=client_name+".";
+                    }
+                    if(phoneFromSite!=null)
+                    {
+                        commentFull+=phoneFromSite+".";
+                    }
+                    if(shipping_type!=null)
+                    {
+                        commentFull+=shipping_type+".";
+                    }
+                    commentFull+=metro+".";
+
+                    orderPars.put("description",commentFull);
                     orderPars.put("goods_price",order_amount);
                     orderPars.put("deliver_date",new SQLExpression("now()+INTERVAL '1 DAYS'"));
                     orderPars.put("discount_percent",0);
