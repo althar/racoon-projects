@@ -19,11 +19,11 @@ public class Warehouse
     {
         try
         {
+            BaseServlet.siteIntegrator.start();
             Goods = BaseServlet.dbProc().getGoods();
             Brands = BaseServlet.dbProc().getBrands();
             AnimalFoodTypes = BaseServlet.dbProc().getAnimalFoodTypes(null);
             BrandAnimalFoodTypes = BaseServlet.dbProc().getBrandAnimalFoodTypes();
-            BaseServlet.siteIntegrator.start();
         }
         catch(Exception ex)
         {

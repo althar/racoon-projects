@@ -2393,7 +2393,7 @@
             // TimerChecker
             // 
             this.TimerChecker.Enabled = true;
-            this.TimerChecker.Interval = 1000;
+            this.TimerChecker.Interval = 5000;
             this.TimerChecker.Tick += new System.EventHandler(this.TimerChecker_Tick);
             // 
             // saveOrdersDialog

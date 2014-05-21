@@ -49,7 +49,7 @@ public class BaseServlet extends ftwo.library.web.BaseServlet
     }
 
     @Override
-    public void setUp() throws ClassNotFoundException,SQLException,NumberFormatException,InterruptedException
+    public synchronized void setUp() throws ClassNotFoundException,SQLException,NumberFormatException,InterruptedException
     {
         if(dbProc()!=null)
         {
@@ -74,7 +74,11 @@ public class BaseServlet extends ftwo.library.web.BaseServlet
             DBProc = new DatabaseProcessor(db_host, db_name, db_port, db_login, db_password, db_driver_class, db_connection_prefix);
             DBProc.connect();
             DBProc.loadSettings();
-            siteIntegrator = new OldSiteIntegrator("site integrator");
+            if(siteIntegrator==null)
+            {
+                siteIntegrator = new OldSiteIntegrator("site integrator");
+                Thread.sleep(1000);
+            }
             calculatorCaller = new GoodsCalculatorCaller("goods_calculator_caller",dbProc());
             Warehouse.load();
             //MailProc = new MailProcessor();

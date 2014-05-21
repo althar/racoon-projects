@@ -13,6 +13,8 @@
 <c:if test="${empty goods.get('GoodsItems')}">
     <c:set var="gs" value="${goods.get('Items')}"></c:set>
 </c:if>
+
+<%-- Category Items --%>
 <c:forEach items="${gs}" var="good" varStatus="status">
     <%--<c:if test="${good.get('Availability')=='На складе'||good.get('AvailabilityId')==1}">--%>
     <li class="item <c:if test="${index%3==1}">reset</c:if>">
@@ -37,6 +39,8 @@
     <%--</c:if>--%>
 </c:forEach>
 
+
+<%-- Search Items --%>
 <c:forEach items="${goods.get('SearchedItems')}" var="good" varStatus="status">
     <li class="item <c:if test="${status.index%3==2}">reset</c:if>">
         <div class="block">

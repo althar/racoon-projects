@@ -18,13 +18,14 @@ public class PageController extends KnaufController
     @RequestMapping(value = "")
     public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
+        //database.synchronize();
         ModelAndView model = model("main");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
-        JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0-2499","");
-        JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","2500-4999","");
-        JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","5000-9999","");
-        JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult("div_tech","4","10000-500000","");
+        JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0","0-2499","");
+        JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0","2500-4999","");
+        JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult("div_tech","4","0","5000-9999","");
+        JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult("div_tech","4","0","10000-500000","");
         model.addObject("base_section",true);
         model.addObject("catalogue_name","div_tech");
         model.addObject("title","Luxe");
@@ -52,7 +53,7 @@ public class PageController extends KnaufController
         if(catalogue!=null)
         {
             model.addObject("catalogue_name",catalogue);
-            JSONProcessor goods = ozon.ozonProc.getSectionSearchResult(catalogue,"200",price,"");
+            JSONProcessor goods = ozon.ozonProc.getSectionSearchResult(catalogue,"200","0",price,"");
             model.addObject("goods",goods.BodyStructure);
             model.addObject("by_price",true);
         }
@@ -60,12 +61,17 @@ public class PageController extends KnaufController
         return model;
     }
     @RequestMapping(value = "/catalogue/items/**")
-    public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,String search) throws Exception
+    public ModelAndView catalogue(HttpServletRequest request, HttpServletResponse response, String catalogue,String catalogue_id,String search,String parent_catalogue) throws Exception
     {
 //        JSONProcessor best = ozon.ozonProc.getCatalogueItemsBestOfPrice("1000","6000");
         ModelAndView model = model("catalogue");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
+        if(parent_catalogue==null||parent_catalogue.equalsIgnoreCase(""))
+        {
+            parent_catalogue = catalogue;
+        }
+        model.addObject("parent_catalogue",parent_catalogue);
         JSONProcessor items = ozon.getItems(catalogue_id,catalogue,1,search);
         if(catalogue!=null)
         {
@@ -73,10 +79,10 @@ public class PageController extends KnaufController
 
             if(catalogue_id==null)
             {
-                JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0-2499","");
-                JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","2500-4999","");
-                JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","5000-9999","");
-                JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult(catalogue,"4","10000-5000000","");
+                JSONProcessor goods500 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0","0-2499","");
+                JSONProcessor goods1000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0","2500-4999","");
+                JSONProcessor goods2000 = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0","5000-9999","");
+                JSONProcessor goodsExpensive = ozon.ozonProc.getSectionSearchResult(catalogue,"4","0","10000-5000000","");
                 model.addObject("base_section",true);
                 model.addObject("catalogue_name",catalogue);
                 model.addObject("goods500",goods500.BodyStructure);
@@ -115,7 +121,7 @@ public class PageController extends KnaufController
         ModelAndView model = model("history");
         model = addAmount(model,request);
         model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.getOrders(id(request).toString());
+        JSONProcessor json = ozon.ozonProc.getOrders(ozonId(request).toString());
         model.addObject("orders",json.getStructure());
         return model;
     }
@@ -127,8 +133,8 @@ public class PageController extends KnaufController
         ModelAndView model = model("order_1");
         model = addAmount(model,request);
 //        model = addCatalogue(model,request);
-        JSONProcessor json = ozon.ozonProc.startOrder(id(request).toString());
-        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        JSONProcessor json = ozon.ozonProc.startOrder(ozonId(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(ozonId(request).toString());
         String status = json.getValue("Status").toString();
         if(!status.equalsIgnoreCase("2"))
         {
@@ -147,8 +153,8 @@ public class PageController extends KnaufController
         ModelAndView model = model("order_2");
         model = addAmount(model,request);
 
-        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
-        JSONProcessor jsonDelivery = ozon.ozonProc.getDeliveryVariants(id(request).toString(),guid,"0",areaId);
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(ozonId(request).toString());
+        JSONProcessor jsonDelivery = ozon.ozonProc.getDeliveryVariants(ozonId(request).toString(),guid,"0",areaId);
         model.addObject("guid",guid);
         model.addObject("area_id",areaId);
         model.addObject("basket",jsonBasket.getStructure());
@@ -167,7 +173,7 @@ public class PageController extends KnaufController
         ModelAndView model = model("order_3");
         model = addAmount(model,request);
 
-        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(ozonId(request).toString());
         model.addObject("guid",guid);
         model.addObject("area_id",area_id);
         model.addObject("delivery_variant_id",delivery_group_id);
@@ -196,12 +202,12 @@ public class PageController extends KnaufController
             ,String phone
             ,String comment) throws Exception
     {
-        JSONProcessor jsonForCollection = ozon.ozonProc.getOrderParametersForCollection(id(request).toString(),guid,"0",area_id,delivery_variant_id,"8",zip);
+        JSONProcessor jsonForCollection = ozon.ozonProc.getOrderParametersForCollection(ozonId(request).toString(),guid,"0",area_id,delivery_variant_id,"8",zip);
         if(delivery_point_address_id==null||delivery_point_address_id.equalsIgnoreCase(""))
         {
             delivery_point_address_id = "0";
         }
-        JSONProcessor saveJson = ozon.ozonProc.saveOrder(id(request).toString()
+        JSONProcessor saveJson = ozon.ozonProc.saveOrder(ozonId(request).toString()
                 ,guid
                 ,delivery_point_address_id
                 ,area_id
@@ -227,7 +233,7 @@ public class PageController extends KnaufController
             ModelAndView errModel = model("api_failed");
             return errModel;
         }
-        JSONProcessor summaryJson = ozon.ozonProc.summaryOrder(id(request).toString(), guid,newAddressId,delivery_variant_id,"8","1","0","false");
+        JSONProcessor summaryJson = ozon.ozonProc.summaryOrder(ozonId(request).toString(), guid,newAddressId,delivery_variant_id,"8","1","0","false");
         String deliveryName = summaryJson.getValue("TotalOrder.DeliveryVariantName").toString();
         String deliverySumm = summaryJson.getValue("TotalOrder.DeliverySumm").toString();
         String fullOrderSumm = summaryJson.getValue("TotalOrder.FullOrderSumm").toString();
@@ -236,7 +242,7 @@ public class PageController extends KnaufController
         System.out.println(" !!!!!! ");
         ModelAndView model = model("order_confirm");
         model = addAmount(model,request);
-        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(id(request).toString());
+        JSONProcessor jsonBasket = ozon.ozonProc.cartGet(ozonId(request).toString());
         model.addObject("guid",guid);
         model.addObject("area_id",area_id);
         model.addObject("delivery_variant_id",delivery_variant_id);
@@ -265,7 +271,7 @@ public class PageController extends KnaufController
     {
         ModelAndView model = model("order_done");
         model = addAmount(model,request);
-        JSONProcessor jsonCreate = ozon.ozonProc.createOrder(id(request).toString(),guid, address_id,delivery_variant_id,"8","1","0",phone,comment, "email@email.com",addressee,"false","36152",first_name,last_name);
+        JSONProcessor jsonCreate = ozon.ozonProc.createOrder(ozonId(request).toString(),guid, address_id,delivery_variant_id,"8","1","0",phone,comment, "email@email.com",addressee,"false","36152",first_name,last_name);
         Integer status = jsonCreate.getIntValue("Status");
         if(status!=2)
         {
