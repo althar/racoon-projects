@@ -46,6 +46,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
         try
         {
             String result = phone;
+            result = result.replaceAll("[^x0-9]","");
             result = result.replace("(","");
             result = result.replace(")","");
             result = result.replace(" ","");
@@ -53,7 +54,10 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
             result = result.replace("_","");
             result = result.replace("+7","");
             result = result.replace("+8","");
-
+            if(result.length()>=11)
+            {
+                result = result.substring(result.length()-10);
+            }
             finRes = "("+result.substring(0,3)+")";
             finRes += result.substring(3,6)+"-";
             finRes += result.substring(6,8)+"-";
@@ -62,7 +66,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
         }
         catch(Exception ex)
         {
-
+            System.out.println(Helper.getStackTraceString(ex));
         }
         return finRes;
     }
@@ -70,7 +74,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     {
         try
         {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
             DBProcessor dbProc = BaseServlet.DBProc;
             long seq1 = dbProc.sequenceGetCurrentValue(seqName);
             // 1 - Get all orders
@@ -96,8 +100,9 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
 
                     Integer clientId = null;
                      DBRecord client = null;
-                    client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
+                    //client = dbProc.getRecord("SELECT * FROM clients WHERE email='"+email+"'");
                     String phoneFromSite = "";
+                    String phoneAsIs = "";
                     if(client==null)
                     {
                         HashMap<String,Object> clPars = new HashMap<String, Object>();
@@ -118,7 +123,9 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                         }
                         else if(clientFields.size()>0)
                         {
+
                             phoneFromSite = clientFields.get(0).getStringValue("reg_field_value");
+                            phoneAsIs = new String(phoneFromSite);
                             phoneFromSite = normalizePhone(phoneFromSite);
                             clPars.put("phone_1",clientFields.get(0).getStringValue("reg_field_value"));
                             client = dbProc.getRecord("SELECT * FROM clients WHERE phone_1='"+phoneFromSite+"' OR phone_2='"+phoneFromSite+"' OR phone_3='"+phoneFromSite+"'");
@@ -143,7 +150,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     HashMap<String,Object> orderPars = new HashMap<String, Object>();
                     Integer clId = client.getIntValue("id");
                     orderPars.put("client_id",clId);
-                    orderPars.put("phone_1",client.getStringValue("phone_1"));
+                    orderPars.put("phone_1",phoneFromSite);
 
                     if(client.getStringValue("phone_2")!=null)
                     {
@@ -173,7 +180,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     }
                     if(phoneFromSite!=null)
                     {
-                        commentFull+=phoneFromSite+".";
+                        commentFull+=phoneAsIs+".";
                     }
                     if(shipping_type!=null)
                     {
@@ -202,22 +209,24 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                         String article = name.substring(index1+1,index2);
                         Double price = good.getDoubleValue("Price");
                         Double count = good.getDoubleValue("Quantity");
-                        DBRecord good_art = dbProc.getRecord("SELECT id FROM goods WHERE articul='"+article+"'");
+                        DBRecord good_art = dbProc.getRecord("SELECT id,name_for_order FROM goods WHERE articul='"+article+"'");
                         Long good_id = 0l;
+                        HashMap<String,Object> goodPars = new HashMap<String, Object>();
                         if(good_art!=null)
                         {
                             good_id = good_art.getLongValue("id");
+                            goodPars.put("good_name",good_art.getStringValue("name_for_order"));
                         }
                         else
                         {
                             System.out.println("Fail article: "+article);
                         }
 
-                        HashMap<String,Object> goodPars = new HashMap<String, Object>();
+
                         goodPars.put("order_id",order_id);
                         goodPars.put("good_id",good_id);
                         goodPars.put("count",count);
-                        goodPars.put("good_name",name);
+
                         goodPars.put("price",price);
                         dbProc.executeInsert("order_goods",goodPars);
 

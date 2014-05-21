@@ -10,20 +10,46 @@
             <div class="catalog section dark-title">
                 <h2 class="title">Каталог</h2>
                 <ul>
-                    <c:forEach items="${catalogue.get('WebSection').get('Childs')}" var="cat">
+
+                    <%-- Simple --%>
+                    <%--<c:forEach items="${catalogue.get('WebSection').get('Childs')}" var="cat">--%>
+                        <%--&lt;%&ndash;<c:if test="${catalogue_categories.contains(cat.get('Name'))}">&ndash;%&gt;--%>
+                        <%--<c:if test="${cat.get('Name')!='div_travel'&&cat.get('Name')!='div_luxury_gifts'}">--%>
+                            <%--&lt;%&ndash;${fn:toUpperCase(fn:substring(linkName, 0, 1))}${fn:toLowerCase(fn:substring(linkName, 1,fn:length(linkName)))}&ndash;%&gt;--%>
+                            <%--<li class="item ">--%>
+                                <%--<a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&title=${cat.get('DisplayName')}">${cat.get('DisplayName')}</a>--%>
+                                <%--<c:if test="${subcatalogue_name==cat.get('Name')}">--%>
+                                    <%--<ul class="subsection">--%>
+                                        <%--<c:forEach items="${subcatalogue.get('CatalogItems')}" var="subcat">--%>
+
+                                            <%--<c:set var="subcat_name" value="${fn:toUpperCase(fn:substring(subcat.get('Name'), 0, 1))}${fn:toLowerCase(fn:substring(subcat.get('Name'), 1,fn:length(subcat.get('Name'))))}"></c:set>--%>
+                                            <%--<c:if test="${subcat_name!='Аудио-видео техника'}">--%>
+                                                <%--<li class="item ">--%>
+                                                    <%--<a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&catalogue_id=${subcat.get('Id')}&title=${subcat_name}">${subcat_name}</a>--%>
+                                                <%--</li>--%>
+                                            <%--</c:if>--%>
+                                        <%--</c:forEach>--%>
+                                    <%--</ul>--%>
+                                <%--</c:if>--%>
+                            <%--</li>--%>
+                        <%--</c:if>--%>
+                    <%--</c:forEach>--%>
+
+                    <%-- Facet --%>
+                    <c:forEach items="${catalogue.get('Sections')}" var="cat">
                         <%--<c:if test="${catalogue_categories.contains(cat.get('Name'))}">--%>
-                        <c:if test="${cat.get('Name')!='div_travel'&&cat.get('Name')!='div_luxury_gifts'}">
+                        <c:if test="${cat.get('SectionName')!='div_travel'&&cat.get('SectionName')!='div_luxury_gifts'}">
                             <%--${fn:toUpperCase(fn:substring(linkName, 0, 1))}${fn:toLowerCase(fn:substring(linkName, 1,fn:length(linkName)))}--%>
                             <li class="item ">
-                                <a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&title=${cat.get('DisplayName')}">${cat.get('DisplayName')}</a>
-                                <c:if test="${subcatalogue_name==cat.get('Name')}">
+                                <a class="link" href="/catalogue/items/?catalogue=${cat.get('SectionName')}&title=${cat.get('DisplayName')}">${cat.get('DisplayName')}</a>
+                                <c:if test="${subcatalogue_name==cat.get('SectionName')||parent_catalogue==cat.get('SectionName')}">
                                     <ul class="subsection">
-                                        <c:forEach items="${subcatalogue.get('CatalogItems')}" var="subcat">
+                                        <c:forEach items="${cat.get('Childs')}" var="subcat">
 
-                                            <c:set var="subcat_name" value="${fn:toUpperCase(fn:substring(subcat.get('Name'), 0, 1))}${fn:toLowerCase(fn:substring(subcat.get('Name'), 1,fn:length(subcat.get('Name'))))}"></c:set>
+                                            <c:set var="subcat_name" value="${fn:toUpperCase(fn:substring(subcat.get('DisplayName'), 0, 1))}${fn:toLowerCase(fn:substring(subcat.get('DisplayName'), 1,fn:length(subcat.get('DisplayName'))))}"></c:set>
                                             <c:if test="${subcat_name!='Аудио-видео техника'}">
                                                 <li class="item ">
-                                                    <a class="link" href="/catalogue/items/?catalogue=${cat.get('Name')}&catalogue_id=${subcat.get('Id')}&title=${subcat_name}">${subcat_name}</a>
+                                                    <a class="link" href="/catalogue/items/?catalogue=${subcat.get('SectionName')}&parent_catalogue=${parent_catalogue}&catalogue_id=&title=${subcat_name}">${subcat_name}</a>
                                                 </li>
                                             </c:if>
                                         </c:forEach>

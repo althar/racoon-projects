@@ -60,7 +60,7 @@ public class ServiceController extends KnaufController
     @RequestMapping("/activate_certificate")
     public ModelAndView activateCert(HttpServletRequest request, HttpServletResponse response,String code) throws Exception
     {
-        JSONProcessor json = ozon.ozonProc.activateCard(id(request).toString(),code);
+        JSONProcessor json = ozon.ozonProc.activateCard(ozonId(request).toString(),code);
         System.out.println(json.jsonString());
         ModelAndView model = model("certificate_result");
         model = addAmount(model,request);
@@ -88,7 +88,7 @@ public class ServiceController extends KnaufController
     @RequestMapping("/remove_good")
     public ModelAndView removeGood(HttpServletRequest request, HttpServletResponse response,String good_id) throws Exception
     {
-        ozon.ozonProc.cartRemove(id(request).toString(),good_id);
+        ozon.ozonProc.cartRemove(ozonId(request).toString(),good_id);
         ModelAndView model = new ModelAndView("widget/basket-inner");
         model = addAmount(model,request);
         return model;

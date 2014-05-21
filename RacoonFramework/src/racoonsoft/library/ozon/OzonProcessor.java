@@ -406,7 +406,7 @@ public class OzonProcessor extends APIProcessor
     //<editor-fold desc="Facet">
 
     // Allows to get category content by search parameters.
-    public JSONProcessor getSectionSearchResult(String section_name,String page_size,String price_range,String catalogue_id) throws Exception
+    public JSONProcessor getSectionSearchResult(String section_name,String page_size,String page,String price_range,String catalogue_id) throws Exception
     {
         StringBuilder builder = new StringBuilder("{");
         builder.append("\"Data\": {\"SectionName\": ");
@@ -418,19 +418,39 @@ public class OzonProcessor extends APIProcessor
         {
             builder.append("null");
         }
-        builder.append(",\"SearchText\": null,\"FacetParams\": [{\"Name\": \"price\", \"Value\": \""+price_range+"\"},{\"Name\": \"sort\", \"Value\": \"bests\"},{\"Name\": \"catalog\", \"Value\": \""+catalogue_id+"\"}],\"Attributes\": null" +
-                ", \"PageNumber\":3, \"Page\":3, \"ItemsOnPage\": ");
+        if(page_size!=null&&!page_size.equalsIgnoreCase(""))
+        {
+            builder.append(",\"ItemsOnPage\":");
+            builder.append(page_size);
+        }
+        builder.append(",\"SearchText\": null,\"FacetParams\": [{\"Name\": \"price\", \"Value\": \""+price_range+"\"},{\"Name\": \"sort\", \"Value\": \"bests\"}");
+        builder.append(",{\"Name\": \"store\", \"Value\": \"1\"}");
+        if(catalogue_id!=null&&!catalogue_id.equalsIgnoreCase(""))
+        {
+            builder.append(",{\"Name\": \"catalog\", \"Value\": \""+catalogue_id+"\"}");
+        }
+        if(page!=null&&!page.equalsIgnoreCase(""))
+        {
+            builder.append(",{\"Name\": \"page\", \"Value\": "+page+"}");
+        }
+        builder.append("],\"Attributes\": null" +
+                ", \"ItemsOnPage\": ");
         builder.append(page_size);
         builder.append("},\"Login\": \"");
         builder.append(OzonLogin);
         builder.append("\", \"Password\": \"");
         builder.append(OzonPassword);
-        builder.append("\", \"PageNumber\": ");
-        builder.append("3");
-        builder.append(",\"PartnerClientId\": null}");
+        builder.append("\",\"PartnerClientId\": null}");
 
 
         JSONProcessor proc = executeFacetAPIMethod("FacetService", "GetSectionSearchResult",builder.toString(), new HashMap<String, String>(),true);
+        return proc;
+    }
+    public JSONProcessor getStieSections() throws Exception
+    {
+        StringBuilder builder = new StringBuilder("");
+        builder.append("{\"Login\": \""+OzonLogin+"\",\"Password\": \""+OzonPassword+"\",\"PartnerClientId\": null}");
+        JSONProcessor proc = executeFacetAPIMethod("FacetService", "GetSiteSections",builder.toString(), new HashMap<String, String>(),true);
         return proc;
     }
     //</editor-fold>

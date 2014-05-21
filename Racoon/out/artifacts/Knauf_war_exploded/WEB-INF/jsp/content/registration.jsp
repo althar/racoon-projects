@@ -78,7 +78,7 @@
                         <div class="control-group">
                             <label class="control-label" for="employer_address_field">Адрес компании работодателя</label>
                             <div class="controls">
-                                <input required="" name="address" id="employer_address_field" type="text" value="${address}" data-validation="length alphanumeric" data-validation-length="5-30" data-validation-error-msg="Адрес компании должн составлять 5-30 символов" >
+                                <input required="" name="address" id="employer_address_field" type="text" value="${address}" data-validation="length" data-validation-length="5-50" data-validation-error-msg="Адрес компании должн составлять 5-30 символов" >
                             </div>
                         </div>
                         <div class="control-group">

@@ -34,6 +34,14 @@ public class KnaufController extends MainController
             add("div_home");
     }};
 
+    public String ozonId(HttpServletRequest request)
+    {
+        if(user(request).getID()==-1l)
+        {
+            return "";
+        }
+        return user(request).getStringValue("ozon_id");
+    }
     public ModelAndView model(String page)
     {
         ModelAndView model = new ModelAndView("structure/page");
@@ -48,7 +56,7 @@ public class KnaufController extends MainController
     }
     public ModelAndView addAmount(ModelAndView model,HttpServletRequest request) throws Exception
     {
-        String id = id(request).toString();
+        String id = ozonId(request).toString();
         JSONProcessor json = ozon.ozonProc.getUserInfo(id);
         JSONProcessor jsonCart = ozon.ozonProc.cartGet(id);
         Double amount = json.getDoubleValue("ClientAccountEntryInformationForWeb.Accessible");
@@ -59,14 +67,15 @@ public class KnaufController extends MainController
     public ModelAndView addCatalogue(ModelAndView model,HttpServletRequest request) throws Exception
     {
         String cat = request.getParameter("catalogue");
-        JSONProcessor catalogue = ozon.catalogue();
+//        JSONProcessor catalogue = ozon.catalogue();
+        JSONProcessor catalogue = ozon.catalogueFacet();
         model.addObject("catalogue",catalogue.getStructure());
-        model.addObject("catalogue_categories",catalogueCategories);
-        JSONProcessor subcatalogue = null;
+//        model.addObject("catalogue_categories",catalogueCategories);
+//        JSONProcessor subcatalogue = null;
         if(cat!=null)
         {
-            subcatalogue = ozon.subCatalogue(cat);
-            model.addObject("subcatalogue",subcatalogue.getStructure());
+//            subcatalogue = ozon.subCatalogue(cat);
+//            model.addObject("subcatalogue",subcatalogue.getStructure());
             model.addObject("subcatalogue_name",cat);
         }
         return model;

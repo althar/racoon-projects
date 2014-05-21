@@ -2665,6 +2665,7 @@ namespace OwlBusinessStudio
                     url += "check";
                 }
                 WebRequest webRequest = WebRequest.Create(url);
+                webRequest.Timeout = 600;
                 WebResponse webResp = webRequest.GetResponse();
                 byte[] buff = new byte[webResp.ContentLength];
                 Stream stream = webResp.GetResponseStream();
