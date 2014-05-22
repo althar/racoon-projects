@@ -1,5 +1,6 @@
 package racoonsoft.racoonspring.data.database;
 
+import racoonsoft.racoonspring.data.annotation.DataStructureField;
 import racoonsoft.racoonspring.data.annotation.DataStructureFieldExclude;
 import racoonsoft.racoonspring.data.annotation.DataStructureTable;
 import racoonsoft.racoonspring.data.structure.DatabaseStructure;
@@ -36,14 +37,24 @@ public class InsertQuery extends Query
         StringBuilder builder = new StringBuilder("INSERT INTO ");
         builder.append(table);
         builder.append(" (");
+
         ArrayList<Object> values = new ArrayList<Object>();
         StringBuilder valueBuilder = new StringBuilder(" VALUES (");
+
+        // From fields
         for(int i=0; i<fs.length; i++)
         {
             fs[i].setAccessible(true);
             if(!fs[i].isAnnotationPresent(DataStructureFieldExclude.class))
             {
-                builder.append(fs[i].getName());
+                String name = fs[i].getName();
+
+                Field f = fs[i];
+                if(f.isAnnotationPresent(DataStructureField.class))
+                {
+                    name = f.getAnnotation(DataStructureField.class).name();
+                }
+                builder.append(name);
                 values.add(fs[i].get(structure));
                 valueBuilder.append("?");
                 if(i+1<fs.length)
@@ -53,12 +64,15 @@ public class InsertQuery extends Query
                 }
             }
         }
+
+        // From HashMap
         HashMap<String,Object> fields = structure.fields();
         Iterator<String> iter = fields.keySet().iterator();
         while(iter.hasNext())
         {
             String name = iter.next();
             Object value = fields.get(name);
+
             builder.append(name);
             values.add(value);
             valueBuilder.append("?");

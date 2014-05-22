@@ -69,7 +69,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
     @Override
     public void addInterceptors(InterceptorRegistry registry)
     {
-        HistoryInterceptor history = new HistoryInterceptor(HistoryItem.class);
+        HistoryInterceptor history = new HistoryInterceptor(HistoryItem.class,pgsqlDataSource(),null);
         InterceptorRegistration historyInterceptor = registry.addInterceptor(history);
         historyInterceptor.addPathPatterns("/**");
         history.dbProc = pgsqlDataSource();

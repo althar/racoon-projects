@@ -3,7 +3,8 @@ package racoonsoft.racoonspring.mvc.interceptor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
-import racoonsoft.racoonspring.access.UserProcessor;
+import racoonsoft.racoonspring.access.AccessProcessor;
+import racoonsoft.racoonspring.data.database.DatabaseProcessor;
 import racoonsoft.racoonspring.data.structure.ActionResult;
 import racoonsoft.racoonspring.data.structure.User;
 import racoonsoft.racoonspring.mvc.annotation.RequiresRole;
@@ -15,6 +16,11 @@ import java.util.ArrayList;
 @Controller
 public class AccessInterceptor extends MainInterceptor
 {
+    public AccessInterceptor(DatabaseProcessor dbProc, AccessProcessor userProc)
+    {
+        super(dbProc,userProc);
+    }
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception
     {
@@ -85,7 +91,7 @@ public class AccessInterceptor extends MainInterceptor
 
     public void checkAccess(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        ActionResult res = UserProcessor.authorization(request, response, dbProc);
+        ActionResult res = accessProc.authorization(request, response);
         User user = res.getUser();
         ArrayList<String> roles = res.getRoles();
         boolean anonymous = res.anonymous();

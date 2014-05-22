@@ -1,5 +1,7 @@
 package racoonsoft.racoonspring.access;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import racoonsoft.racoonspring.data.database.DatabaseProcessor;
 import racoonsoft.racoonspring.data.structure.ActionResult;
 import racoonsoft.racoonspring.data.structure.ActionResultCode;
@@ -14,45 +16,34 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class UserProcessor
+@Service
+public class AccessProcessor
 {
-    private static HashMap<String,UserSession> sessions = new HashMap<String, UserSession>();
-    private static String loginColumnName = "login";
-    private static String passwordColumnName = "password";
-    private static String userTableName = "\"user\"";
-    private static Long sessionPeriod = 8640000l;
+    @Autowired
+    private DatabaseProcessor dbProc;
+
+    private HashMap<String,AccessSession> sessions = new HashMap<String, AccessSession>();
+    private String loginColumnName = "login";
+    private String passwordColumnName = "password";
+    private String userTableName = "\"user\"";
+    private String confirmationLinkColumnName = "confirmation_link";
+    private String confirmedColumnName = "\"confirmed\"";
+    private Long sessionPeriod = 8640000l;
 
 
     //<editor-fold desc="Init">
-    public static String getLoginColumnName() {
-        return loginColumnName;
-    }
-    public static void setLoginColumnName(String loginColumnName) {
-        UserProcessor.loginColumnName = loginColumnName;
-    }
-    public static String getPasswordColumnName() {
-        return passwordColumnName;
-    }
-    public static void setPasswordColumnName(String passwordColumnName) {
-        UserProcessor.passwordColumnName = passwordColumnName;
-    }
-    public static String getUserTableName() {
-        return userTableName;
-    }
-    public static void setUserTableName(String userTableName) {
-        UserProcessor.userTableName = userTableName;
-    }
+
     //</editor-fold>
 
     //<editor-fold desc="Main">
-    public static ActionResult logout(HttpServletRequest request)
+    public ActionResult logout(HttpServletRequest request)
     {
         String sessionId = getCookie(request,"session_id");
         sessions.remove(sessionId);
         ActionResult res = new ActionResult(ActionResultCode.ACTION_FAILED.ACTION_SUCCESSFUL);
         return res;
     }
-    public static ActionResult registration(DatabaseProcessor dbProc,HttpServletRequest request, HttpServletResponse response, HashMap<String,Object> parameters,String[] roles) throws SQLException
+    public ActionResult registration(HttpServletRequest request, HttpServletResponse response, HashMap<String,Object> parameters,String[] roles) throws SQLException
     {
         try
         {
@@ -90,12 +81,12 @@ public class UserProcessor
             setCookie(response,"session_id",sessionId,8640000);
 
             // Add session
-            UserSession session = new UserSession(8640000,id,sessionId);
+            AccessSession session = new AccessSession(8640000,id,sessionId);
             cleanSessions();
             sessions.put(sessionId,session);
 
             // Get registered user
-            User u = getUser(id,dbProc);
+            User u = getUser(id);
 
             // Return result
             ActionResult res = new ActionResult(ActionResultCode.REGISTRATION_SUCCESSFUL);
@@ -111,7 +102,37 @@ public class UserProcessor
             return res;
         }
     }
-    public static ActionResult authorization(HttpServletRequest request,HttpServletResponse response,DatabaseProcessor dbProc) throws SQLException
+    public ActionResult confirm(HttpServletRequest request)
+    {
+        try
+        {
+            String link = request.getParameter(confirmationLinkColumnName);
+            if(link==null||link.equalsIgnoreCase(""))
+            {
+                return new ActionResult(ActionResultCode.CONFIRMATION_FAILED_WRONG_CONFIRMATION_LINK);
+            }
+            HashMap<String,Object> pars = new HashMap<String, Object>();
+            pars.put(confirmedColumnName,true);
+            Long count = dbProc.executeUpdate(userTableName,pars,confirmationLinkColumnName+"='"+link.replace("'","`")+"'");
+            if(count>0)
+            {
+                return new ActionResult(ActionResultCode.CONFIRMATION_SUCCESSFUL);
+            }
+            else
+            {
+                return new ActionResult(ActionResultCode.CONFIRMATION_FAILED_WRONG_CONFIRMATION_LINK);
+            }
+        }
+        catch (Exception ex)
+        {
+            return new ActionResult(ActionResultCode.CONFIRMATION_FAILED_UNKNOWN);
+        }
+    }
+    public ActionResult authorization(HttpServletRequest request,HttpServletResponse response) throws SQLException
+    {
+        return authorization(request,response,false);
+    }
+    public ActionResult authorization(HttpServletRequest request,HttpServletResponse response,Boolean needConfirmation) throws SQLException
     {
         try
         {
@@ -128,8 +149,9 @@ public class UserProcessor
             if(login!=null&&password!=null)
             {
                 logout(request);
-                User u = getUser(login,password,dbProc);
-                UserSession session = null;
+                User uWithoutConfirmation = getUser(login,password,false);
+                User u = getUser(login,password,needConfirmation);
+                AccessSession session = null;
                 if(u==null)
                 {
                     User anonymous = new User();
@@ -139,11 +161,15 @@ public class UserProcessor
                     setCookie(response,"session_id",sessionId,8640000);
                     setCookie(response,"u_id","-1",8640000);
                     // Add session
-                    session = new UserSession(8640000,anonymous.getLongValue("id"),sessionId);
+                    session = new AccessSession(8640000,anonymous.getLongValue("id"),sessionId);
                     session.setAnonymous(anonymous);
                     cleanSessions();
                     sessions.put(sessionId,session);
                     result.setResult(ActionResultCode.AUTHORIZATION_FAILED_WRONG_LOGIN_PASSWORD);
+                    if(uWithoutConfirmation!=null)
+                    {
+                        result.setResult(ActionResultCode.AUTHORIZATION_FAILED_NEED_CONFIRMATION);
+                    }
                     result.setUser(anonymous);
                     result.setData("session_id",sessionId);
                     return result;
@@ -152,7 +178,7 @@ public class UserProcessor
                 {
                     DatabaseStructure sessionRec = dbProc.selectQuery("SELECT md5(" + loginColumnName + "||" + passwordColumnName + "||random())||md5(" + loginColumnName + "||" + passwordColumnName + "||random()) AS session_id FROM " + userTableName + " WHERE id=" + u.getLongValue("id")).selectOne();
                     sessionId = sessionRec.getStringValue("session_id");
-                    UserSession s = new UserSession(8640000,u.getLongValue("id"),sessionId);
+                    AccessSession s = new AccessSession(8640000,u.getLongValue("id"),sessionId);
                     sessions.put(sessionId,s);
                     setCookie(response,"session_id",sessionId,8640000);
                     setCookie(response,"u_id",u.getLongValue("id").toString(),8640000);
@@ -167,7 +193,7 @@ public class UserProcessor
                 {
                     sessionId="";
                 }
-                UserSession session = sessions.get(sessionId);
+                AccessSession session = sessions.get(sessionId);
                 if(session==null)
                 {
                     User anonymous = new User();
@@ -177,7 +203,7 @@ public class UserProcessor
                     setCookie(response,"session_id",sessionId,8640000);
                     setCookie(response,"u_id","-1",8640000);
                     // Add session
-                    session = new UserSession(8640000,anonymous.getLongValue("id"),sessionId);
+                    session = new AccessSession(8640000,anonymous.getLongValue("id"),sessionId);
                     session.setAnonymous(anonymous);
                     cleanSessions();
                     sessions.put(sessionId,session);
@@ -186,7 +212,7 @@ public class UserProcessor
                 }
                 else
                 {
-                    User u = getUser(session.getUserId(),dbProc);
+                    User u = getUser(session.getUserId());
                     if(u!=null)
                     {
                         setCookie(response,"u_id",u.getLongValue("id").toString(),8640000);
@@ -213,7 +239,7 @@ public class UserProcessor
     //</editor-fold>
 
     //<editor-fold desc="Helpers">
-    private static User getUser(Long id, DatabaseProcessor dbProc) throws Exception
+    private User getUser(Long id) throws Exception
     {
         DatabaseStructure rec = dbProc.selectQuery("SELECT * FROM "+userTableName+" WHERE id=" + id).selectOne();
         if(rec == null)
@@ -230,9 +256,15 @@ public class UserProcessor
         u.setRoles(roles);
         return u;
     }
-    private static User getUser(String login,String password, DatabaseProcessor dbProc) throws Exception
+    private User getUser(String login,String password,Boolean needConfirmation) throws Exception
     {
-        DatabaseStructure rec = dbProc.selectQuery("SELECT * FROM "+userTableName+" WHERE "+loginColumnName+"='" + login.replace("'","") + "' AND "+passwordColumnName+"='" + password.replace("'","") + "'").selectOne();
+        String confCondition = " AND "+confirmedColumnName+" = TRUE";
+        String queryString = "SELECT * FROM "+userTableName+" WHERE "+loginColumnName+"='" + login.replace("'","") + "' AND "+passwordColumnName+"='" + password.replace("'","") + "'";
+        if(needConfirmation)
+        {
+            queryString+=confCondition;
+        }
+        DatabaseStructure rec = dbProc.selectQuery(queryString).selectOne();
         if(rec == null)
         {
             return null;
@@ -248,13 +280,13 @@ public class UserProcessor
         u.setRoles(roles);
         return u;
     }
-    private static void setCookie(HttpServletResponse response,String name,String value,Integer duration)
+    private void setCookie(HttpServletResponse response,String name,String value,Integer duration)
     {
         String cookie = name+"="+value+"; path=/; Expires="+getCookieExpires(duration);
         //response.setHeader("Set-Cookie", cookie);
         response.addHeader("Set-Cookie",cookie);
     }
-    private static String getCookieExpires(Integer duration)
+    private String getCookieExpires(Integer duration)
     {
         duration = sessionPeriod.intValue();
         Calendar c = Calendar.getInstance(Locale.ENGLISH);
@@ -264,11 +296,11 @@ public class UserProcessor
         //System.out.println(exp);
         return exp;
     }
-    public static String getSessionId(HttpServletRequest request)
+    public String getSessionId(HttpServletRequest request)
     {
         return getCookie(request,"session_id");
     }
-    public static String getCookie(HttpServletRequest request,String name)
+    public String getCookie(HttpServletRequest request,String name)
     {
         Cookie[] cookies = request.getCookies();
         if(cookies==null)
@@ -290,14 +322,14 @@ public class UserProcessor
         }
         return sid;
     }
-    private static void cleanSessions()
+    private void cleanSessions()
     {
         Long now = new Date().getTime();
         Iterator<String> keyIter = sessions.keySet().iterator();
         while(keyIter.hasNext())
         {
             String key = keyIter.next();
-            UserSession sess = sessions.get(key);
+            AccessSession sess = sessions.get(key);
             if(sess.expired(now))
             {
                 sessions.remove(key);

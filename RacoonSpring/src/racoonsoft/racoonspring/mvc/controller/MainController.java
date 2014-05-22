@@ -3,6 +3,7 @@ package racoonsoft.racoonspring.mvc.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
+import racoonsoft.racoonspring.access.AccessProcessor;
 import racoonsoft.racoonspring.data.database.DatabaseProcessor;
 import racoonsoft.racoonspring.data.structure.User;
 
@@ -17,6 +18,9 @@ public class MainController
 {
     @Autowired
     public DatabaseProcessor dbProc;
+
+    @Autowired
+    public AccessProcessor accessProc;
 
     public HashMap<String,Object> getParameters(HttpServletRequest request)
     {

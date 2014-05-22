@@ -13,8 +13,10 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import racoonsoft.circos.database.PostgresqlDataSource;
-import racoonsoft.library.web.interceptor.AccessInterceptor;
-import racoonsoft.library.web.interceptor.HistoryInterceptor;
+import racoonsoft.circos.structure.HistoryStructure;
+import racoonsoft.racoonspring.access.AccessProcessor;
+import racoonsoft.racoonspring.mvc.interceptor.AccessInterceptor;
+import racoonsoft.racoonspring.mvc.interceptor.HistoryInterceptor;
 
 @Configuration
 @Import({WebConfig.class })
@@ -70,14 +72,21 @@ public class MainConfig extends WebMvcConfigurerAdapter
         }
     }
 
+    @Bean
+    public AccessProcessor userProcessor()
+    {
+        AccessProcessor userProc = new AccessProcessor();
+        return userProc;
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        AccessInterceptor access = new AccessInterceptor();
-        HistoryInterceptor history = new HistoryInterceptor();
+        AccessInterceptor access = new AccessInterceptor(pgsqlDataSource(), userProcessor());
+        HistoryInterceptor history = new HistoryInterceptor(HistoryStructure.class,pgsqlDataSource(), userProcessor());
         InterceptorRegistration historyInterceptor = registry.addInterceptor(history);
         historyInterceptor.addPathPatterns("/**");
         InterceptorRegistration accessInterceptor = registry.addInterceptor(access);
-        accessInterceptor.addPathPatterns("/service/**");
+        accessInterceptor.addPathPatterns("/**");
         access.dbProc = pgsqlDataSource();
         history.dbProc = pgsqlDataSource();
     }

@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="Circos:war exploded">
+    <output-path>$PROJECT_DIR$/../Circos/out/artifact</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Circos" />
+          <element id="module-output" name="RacoonSpring" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="project" name="org.json:json:20140107" />
+          <element id="library" level="project" name="postgresql:postgresql:9.2-1002.jdbc4" />
+          <element id="library" level="project" name="spring-4.0.3.RELEASE" />
+          <element id="library" level="project" name="spring-batch-2.2.6" />
+          <element id="library" level="project" name="spring-data-jpa-1.3.3" />
+          <element id="library" level="project" name="spring-integration-3.0.0" />
+          <element id="library" level="project" name="spring-mvc-4.0.2.RELEASE" />
+          <element id="library" level="project" name="spring-security-3.2.3" />
+          <element id="library" level="project" name="spring-webflow-2.3.3" />
+          <element id="library" level="project" name="spring-ws-2.0.2" />
+          <element id="library" level="project" name="uk.com.robust-it:cloning:1.9.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Circos/web/Web" />
+    </root>
+  </artifact>
+</component>
