@@ -4,7 +4,7 @@ import racoonsoft.racoonspring.data.structure.User;
 
 import java.util.Date;
 
-public class UserSession
+public class AccessSession
 {
     private long created;
     private long duration;
@@ -32,7 +32,7 @@ public class UserSession
         return (now-created)>(duration*1000);
     }
 
-    public UserSession(int duration, Long userId, String sessionId)
+    public AccessSession(int duration, Long userId, String sessionId)
     {
         this.created = new Date().getTime();
         this.duration = duration;

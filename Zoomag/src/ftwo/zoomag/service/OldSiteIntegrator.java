@@ -37,6 +37,22 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
     @Override
     public void process()
     {
+        try
+        {
+            mySqlProc1.disconnect();
+            mySqlProc1 = new DatabaseProcessor("zverovod.ru","zverovod?useUnicode=true&characterEncoding=UTF-8",3306,"racoon","racoonracoon2000","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc1.connect();
+            System.out.println("Site 1 integrator connected");
+            mySqlProc2.disconnect();
+            mySqlProc2 = new DatabaseProcessor("myzoomag.ru","wwwmyzoomagru?useUnicode=true&characterEncoding=UTF-8",3306,"racoon","racoonracoon2000","com.mysql.jdbc.Driver","jdbc:mysql:");
+            mySqlProc2.connect();
+            System.out.println("Site 2 integrator connected");
+        }
+        catch (Exception ex)
+        {
+            System.out.println(Helper.getStackTraceString(ex));
+        }
+
         doSite(mySqlProc1,"site_1_order_id",3);
         doSite(mySqlProc2,"site_2_order_id",2);
     }
@@ -78,7 +94,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
             DBProcessor dbProc = BaseServlet.DBProc;
             long seq1 = dbProc.sequenceGetCurrentValue(seqName);
             // 1 - Get all orders
-            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID,customerID, 0 AS client_id, shipping_type LIKE '%Самовывоз%' AS deliver,shipping_type,customers_comment,order_amount," +
+            ArrayList<DBRecord> orders = proc.getRecords("SELECT orderID,customerID, 0 AS client_id, shipping_type NOT LIKE '%Самовывоз%' AS deliver,shipping_type,customers_comment,order_amount," +
                     "CONCAT(customer_firstname, ' ', customer_lastname) AS client_name, customer_email,shipping_address FROM SC_orders WHERE orderID > "+seq1+" AND DATE(order_time)=DATE(NOW()) ORDER BY orderID");
             System.out.println("Orders: "+orders.size());
             // 2 - Insert data
@@ -169,7 +185,7 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     orderPars.put("porch",client.getStringValue("porch"));
                     orderPars.put("floor",client.getStringValue("floor"));
 
-                    String commentFull = comment;
+                    String commentFull = "Номер заказа: "+id+". "+comment;
                     if(address!=null)
                     {
                         commentFull+=address+".";
@@ -193,8 +209,8 @@ public class OldSiteIntegrator extends SeparateThreadProcessor
                     orderPars.put("deliver_date",new SQLExpression("now()+INTERVAL '1 DAYS'"));
                     orderPars.put("discount_percent",0);
                     orderPars.put("deliver_price",0);
-                    orderPars.put("metro_id",0);
-                    orderPars.put("deliver_distance","");
+                    orderPars.put("metro_id",client.getIntValue("metro_id"));
+                    orderPars.put("deliver_distance",client.getStringValue("distance"));
                     orderPars.put("type_id",source);
                     Integer order_id = dbProc.executeInsert("orders",orderPars);
                     System.out.println("Order inserted: "+order_id);

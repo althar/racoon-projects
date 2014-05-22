@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import racoonsoft.racoonspring.access.AccessProcessor;
 import racoonsoft.racoonspring.data.database.DatabaseProcessor;
 import racoonsoft.racoonspring.data.structure.User;
 
@@ -22,6 +23,9 @@ public abstract class MainInterceptor implements HandlerInterceptor
     @Autowired
     public DatabaseProcessor dbProc;
 
+    @Autowired
+    public AccessProcessor accessProc;
+
     @Override
     public abstract boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception;
 
@@ -31,6 +35,11 @@ public abstract class MainInterceptor implements HandlerInterceptor
     @Override
     public abstract void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object o, Exception e) throws Exception;
 
+    public MainInterceptor(DatabaseProcessor dbProc, AccessProcessor accessProc)
+    {
+        this.dbProc = dbProc;
+        this.accessProc = accessProc;
+    }
     public void setDbProc(DatabaseProcessor dbProc)
     {
         this.dbProc = dbProc;
@@ -91,9 +100,26 @@ public abstract class MainInterceptor implements HandlerInterceptor
         while(names.hasMoreElements())
         {
             String n = names.nextElement();
-            if(n.equalsIgnoreCase(name)||n.equalsIgnoreCase(name.replace("_","-")))
+            String nameToCompareHeader = n.replace("_","").replace("-","").toLowerCase();
+            String nameToCompareRequest = name.replace("_","").replace("-","").toLowerCase();
+            if(nameToCompareHeader.equalsIgnoreCase(nameToCompareRequest))
             {
                 return request.getHeader(n);
+            }
+        }
+        return null;
+    }
+    public static String getParameter(String name,HttpServletRequest request)
+    {
+        Enumeration<String> names = request.getParameterNames();
+        while(names.hasMoreElements())
+        {
+            String n = names.nextElement();
+            String nameToCompareHeader = n.replace("_", "").replace("-","").toLowerCase();
+            String nameToCompareRequest = name.replace("_","").replace("-","").toLowerCase();
+            if(nameToCompareHeader.equalsIgnoreCase(nameToCompareRequest))
+            {
+                return request.getParameter(n);
             }
         }
         return null;
