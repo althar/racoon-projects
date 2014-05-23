@@ -69,6 +69,8 @@ namespace OwlBusinessStudio.Goods
                 txtDescription.Text = good.Rows[0]["description"].ToString();
                 txtShortDescription.Text = good.Rows[0]["description_short"].ToString();
                 ComboFoodCategory.Text = good.Rows[0]["food_type_category"].ToString();
+
+                TxtGoodCode.Text = good.Rows[0]["good_code"].ToString();
             }
         }
         private bool checkFilling()
@@ -133,6 +135,7 @@ namespace OwlBusinessStudio.Goods
                 parameters.Add("description", txtDescription.Text);
                 parameters.Add("description_short", txtShortDescription.Text);
                 parameters.Add("food_type_category", ComboFoodCategory.Text);
+                parameters.Add("good_code", TxtGoodCode.Text);
                 parameters.Add("name_for_order_full", TxtNameForOrder.Text+" "+TxtWeight.Text.Replace(",",".")+" kg.");
                 if (is_edit)
                 {

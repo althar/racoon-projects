@@ -252,6 +252,7 @@
             this.TimerChecker = new System.Windows.Forms.Timer(this.components);
             this.saveOrdersDialog = new System.Windows.Forms.SaveFileDialog();
             this.DialogPurchaseExportFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.ButtCloseSetGoodCode = new System.Windows.Forms.Button();
             this.StatusBarMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.TabControlMain.SuspendLayout();
@@ -1421,6 +1422,7 @@
             // PanelSetGoodCode
             // 
             this.PanelSetGoodCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelSetGoodCode.Controls.Add(this.ButtCloseSetGoodCode);
             this.PanelSetGoodCode.Controls.Add(this.ButtSetGoodCode);
             this.PanelSetGoodCode.Controls.Add(this.label28);
             this.PanelSetGoodCode.Controls.Add(this.label27);
@@ -2400,6 +2402,16 @@
             // 
             this.saveOrdersDialog.Filter = "CSV|*.csv";
             // 
+            // ButtCloseSetGoodCode
+            // 
+            this.ButtCloseSetGoodCode.Location = new System.Drawing.Point(481, 5);
+            this.ButtCloseSetGoodCode.Name = "ButtCloseSetGoodCode";
+            this.ButtCloseSetGoodCode.Size = new System.Drawing.Size(22, 23);
+            this.ButtCloseSetGoodCode.TabIndex = 6;
+            this.ButtCloseSetGoodCode.Text = "X";
+            this.ButtCloseSetGoodCode.UseVisualStyleBackColor = true;
+            this.ButtCloseSetGoodCode.Click += new System.EventHandler(this.ButtCloseSetGoodCode_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2694,6 +2706,7 @@
         private System.Windows.Forms.TextBox TxtGoodCode;
         private System.Windows.Forms.Label LabelGoodToSetCode;
         private System.Windows.Forms.ToolStripButton ButtMakeOrderBill;
+        private System.Windows.Forms.Button ButtCloseSetGoodCode;
     }
 }
 
