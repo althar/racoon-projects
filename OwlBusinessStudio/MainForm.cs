@@ -373,13 +373,13 @@ namespace OwlBusinessStudio
     //+ "||' на складе)' AS name_for_order,g.company,g.food_type_age,g.animal,g.food_type,g.food_type_category,g.weight,g.photo_url,ords.ordered FROM "
     //+ "goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
     //+ "WHERE g.articul IS NOT NULL ORDER BY g.name_for_order"
-                goods = dbProc.executeGet("SELECT articul, name_for_order_full,price_basic,price_discount,price,description_short,supplier,company,minimum,quantity,(quantity - COALESCE(ords.ordered,0)) AS on_warehouse,id FROM goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
+                goods = dbProc.executeGet("SELECT articul, name_for_order_full,price_basic,price_discount,price,description_short,supplier,company,minimum,quantity,(quantity - COALESCE(ords.ordered,0)) AS on_warehouse,id,good_code FROM goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 GROUP BY good_id) ords ON g.id = ords.good_id "
     + "WHERE g.articul IS NOT NULL AND "+ name + "='" + value + "' ORDER BY g.id");
                 //" + name + "='" + value + "' ORDER BY id"
             }
             else
             {
-                goods = dbProc.executeGet("SELECT articul, name_for_order_full,price_basic,price_discount,price,description_short,supplier,company,minimum,quantity,(quantity - COALESCE(ords.ordered,0)) AS on_warehouse,id FROM goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 AND date(deliver_date)=date(now()) GROUP BY good_id) ords ON g.id = ords.good_id "
+                goods = dbProc.executeGet("SELECT articul, name_for_order_full,price_basic,price_discount,price,description_short,supplier,company,minimum,quantity,(quantity - COALESCE(ords.ordered,0)) AS on_warehouse,id,good_code FROM goods g LEFT JOIN (SELECT good_id,sum(count) AS ordered FROM orders_with_details WHERE status_id=1 AND date(deliver_date)=date(now()) GROUP BY good_id) ords ON g.id = ords.good_id "
     + "WHERE g.articul IS NOT NULL ORDER BY g.id");
             }
             DataGridViewGoods.DataSource = goods;
@@ -428,6 +428,10 @@ namespace OwlBusinessStudio
             view.Columns[10].Width = 70;
             view.Columns[10].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             view.Columns[10].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight;
+
+            view.Columns[11].Width = 70;
+            view.Columns[11].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            view.Columns[11].DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopRight;
             //view.Columns[10].Visible = false;
             view.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             Padding newPadding = new Padding(10, 0, 10, 0);
@@ -3029,8 +3033,10 @@ namespace OwlBusinessStudio
                 LabelExportPurcahseName.Text = listName;
             }
         }
+        private bool exitExportPurchase = false;
         private void createPurchaseExportFile(string purchase_name,string path,string supplierCode,string supplierName)
         {
+            exitExportPurchase = false;
             DataTable purchaseTab = dbProc.executeGet("SELECT pl.*,g.good_code AS good_code FROM purchase_lists pl LEFT JOIN goods g ON g.id=pl.good_id WHERE list_name='"+purchase_name.Replace("'","`")+"'");
             for (int i = 0; i < purchaseTab.Rows.Count; i++)
             {
@@ -3043,6 +3049,11 @@ namespace OwlBusinessStudio
                     while (PanelSetGoodCode.Visible)
                     {
                         Application.DoEvents();
+                        if (exitExportPurchase)
+                        {
+                            PanelSetGoodCode.Visible = false;
+                            return;
+                        }
                     }
                     purchaseTab.Rows[i]["good_code"] = TxtGoodCode.Text;
                 }
@@ -3384,6 +3395,7 @@ namespace OwlBusinessStudio
                     + order["phone_1"]
                     + "");
                 int totalPrice = 0;
+                int totalNoDiscount = 0;
                 for (int i = 0; i < orders.Rows.Count; i++)
                 {
                     DataRow item = orders.Rows[i];
@@ -3395,10 +3407,23 @@ namespace OwlBusinessStudio
                     excel.text(20 + i, 6, item["count"].ToString());
                     excel.text(20 + i, 7, item["good_price"].ToString());
                     excel.text(20 + i, 8, ((int)item["good_price"] * (int)item["count"]).ToString());
-                    totalPrice += ((int)item["good_price"] * (int)item["count"]);
+                    totalNoDiscount += ((int)item["good_price"] * (int)item["count"]);
+                    totalPrice = (int)item["total_price"];
                 }
-                excel.text(21 + orders.Rows.Count, 8, totalPrice.ToString());
-                excel.text(23 + orders.Rows.Count, 8, totalPrice.ToString());
+                DataRow item1 = orders.Rows[0];
+                Microsoft.Office.Interop.Excel.Range RngToCopy1 = excel.getRange(2, 20, 8, 20);
+                Microsoft.Office.Interop.Excel.Range RngToInsert1 = excel.getRange(2, 20 + orders.Rows.Count, 8, 20 + orders.Rows.Count);
+                RngToInsert1.Insert(Microsoft.Office.Interop.Excel.XlInsertShiftDirection.xlShiftDown, RngToCopy1.Copy(Type.Missing));
+                excel.text(20 + orders.Rows.Count, 2, (orders.Rows.Count + 1).ToString());
+                excel.text(20 + orders.Rows.Count, 3, "Услуги по доставке товара до грузополучателя");
+                excel.text(20 + orders.Rows.Count, 6, " -- ");
+                excel.text(20 + orders.Rows.Count, 7, item1["deliver_price"].ToString());
+                excel.text(20 + orders.Rows.Count, 8, item1["deliver_price"].ToString());
+
+
+                excel.text(22 + orders.Rows.Count, 8, ((int)item1["goods_price"] + (int)item1["deliver_price"]).ToString());
+                excel.text(23 + orders.Rows.Count, 8, (totalPrice-((int)item1["goods_price"] + (int)item1["deliver_price"])).ToString());
+                excel.text(24 + orders.Rows.Count, 8, totalPrice.ToString());
                 string total_price_string = RusCurrency.Str(totalPrice);
                 excel.text(25 + orders.Rows.Count, 2, "Всего наименований " + orders.Rows.Count + " на сумму " + totalPrice + " руб.");
                 excel.text(26 + orders.Rows.Count, 2, total_price_string);
@@ -3411,6 +3436,11 @@ namespace OwlBusinessStudio
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void ButtCloseSetGoodCode_Click(object sender, EventArgs e)
+        {
+            exitExportPurchase = true;
         }
     }
 }

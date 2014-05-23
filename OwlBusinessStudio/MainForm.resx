@@ -392,7 +392,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABW
-        EAAAAk1TRnQBSQFMAgEBBAEAAVgBBwFYAQcBGAEAARgBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EAAAAk1TRnQBSQFMAgEBBAEAAWABBwFgAQcBGAEAARgBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABYAMAATADAAEBAQABCAYAARIYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -581,18 +581,18 @@
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVDhPfZBbSJNhHMa/qZg20syJx1bGmhZhVO4qa0xv
-        VEyJEk1Lk0pSK4wWuEpIKzLTDhfBRhqlhlPLytMG1aIIkm0WpMvUDtalUIjeKfn0Pt8UTKQ//Pj+PIeX
-        732lRRMqKBKcERgoLBlq9Jhh9p9J3rhu9e/T+xNRfcSAHL0GQQF+vUIPINyp0WOGWXZY5CjVa/wnDu6O
-        wQIF+hhk6SKgUEjVhPtij1922OUBaclbVCg0qHF2XwKsl/Mx/tSEqvytCAte4SEslKRqUFeaguFH59FZ
-        lYn07eFgVwpd5d8wZM4CXPXANxvw04G5z22Y6j2BitxEmam+k5gbbpU9fLcD7hsYMmeCXcnPRzpVa0qa
-        g1sc8LUbGH8Ot/UCKrITYMrdIcPdba2UPXwRGVcdrokOu7xCSEiE79iorQwY6cDk+xYUpcTiQFK0TN6u
-        aJSmbpA1ehhpx6itFOywK60MUTzJubMW9X0ZGBm4iRZzOox741B1SIf7ldniVrX49eISbhfrZI8ZZtlh
-        V4rMUM7U2NWwOuPw2KVFj2UnpnuKAU+TuPNL4IfA8wDT3cdkj5lWpxZXbWqwK6liffrPdYShuT8WXR80
-        aG3bhInOQmCw0ftgZLBBaAWy90xkmt7FwtSuArt8g8jAYEXz5rSAybTiIOwpC0a5MQ6zA7eAsU6ZWfHb
-        1Ogxwyw77PKAhfER6CINypmjDzVwvL2CUedFGe7U6DEzn112yksao2B5o0GHcxvaXfFexG55rcFx4THj
-        jS4/eYevq2B5FQX7oBaOT/FweOJh/6iFWWj0mPFGlx/fwCDFPb1e+cd4Nxw1XdEy3KnRY8Yb/f+sF+QL
-        jPNwp7ZkJOkvWr2cT/3/C90AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVDhPfZBbSJNhHMa/qZg20syJx1aLNS3CqNxV1pje
+        qJgSJZqWJpWkVhgtcJWQVmSlHS6CjTTKDKeWlacNqkURJNssSJepHaxLoRC9U/Lpfb4pmEh/+PH9eQ4v
+        3/tKCyZcUCw4JTBSWDTU6DHD7D+Tsn7Nyt8n9yah5pARuQYtQoICeoQeRLhTo8cMs+ywyFGqVwWO798Z
+        h3kKDXHI1kdBoZBqCPeFHr/ssMsD0lM2qVBkVOP0nkTYLhZg7KkZ1QWbERG6zEtYKE3Toq4sFUOPzqKj
+        OgsZWyPBrhS+IrBh0JINuOuBb3bgpxOzn1sx2XMMlXlJMpO9xzE71CJ7+O4APNcxaMkCu1KAn3Tiijl5
+        Fh5xwNcuYOw5PLZzqMxJhDlvmwx3j61K9vBFZNx1qBUddnmFsLAo/9ERezkw3I6J980oTtVgX3KsTP6O
+        WJSlrZM1ehhuw4i9DOywKy0PUzzJvb0a9b2ZGO6/gWZLBky741F9QI97VTniVlfx68UF3CrRyx4zzLLD
+        rhSdqZyudahhc8XjsVuHbut2THWXAN4mceeXwA+B9z6muo7IHjMtLh0u29VgV1Jp/PrOtEfgQZ8GnR+0
+        aGndgPGOImCg0fdgZKBBaIWy90xkmt5pYG5TgV2+QXRwqOLBxvSgifSSEOwqD0WFKR4z/TeB0Q6ZGfHb
+        1Ogxwyw77PKA+fET6KONyunDD7Vwvr2EEdd5Ge7U6DEzl11yKkobY2B9o0W7awva3Ak+xG59rcVR4THj
+        iy49+QevqWB9FQPHgA7OTwlwehPg+KiDRWj0mPFFlx7/4BDFXYNB+cd0JxK1nbEy3KnRY8YX/f+sFRQI
+        THNwp7ZoJOkvVWWcTTW5YXMAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="ButtMakeOrderBill.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -619,10 +619,10 @@
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF1SURBVDhPYxiCoJ6BCcoiHfCU8oQW7yl+xZLPYg4VIh7w
         l/IHZO3P+rni6Yr/Pmt83qnWqxpApaDAmIE1ZFZIqXy8vABUBA5ECkS8oxdH/5h4fsL/CWf6/9tvsf8r
         XysfCJUGAnsGFqV6+VVVe0v+W06wPCEULcQHlWGQzJV081/l/73hYNX/ur2V/+1X2v9lyWTJgEpDgGSe
-        ZE7amsj/hTtS/hftSv5v2WxyRDRUlEc6QdwpcpHv15I9qf8LtqX8T22I+cebwZsH1YYEXBj4NaqUTqVs
-        8PufvjPgf+augP+mVTqnvGaZfs7aG/g/c0fQ/6yWmH/C6YIlUB1YgBuDkH6V4rnYrRb/Y/ea/k/cZ/o/
-        bp/x//Ctuv8D6vX+iaUIVUFV4gY89jwieiWSl/z3ivz3PSbw3+co/3/fRul/4rGCDVAlhAG3E7e4cZn0
-        1bhb4v+jDsj9lwgVbINKkQBsGSQdaxSvy4YJdUNFyALkJ1k6AgYGAOLLgQ9kXKnyAAAAAElFTkSuQmCC
+        ZE7amsj/hTtS/hftSv5v2WxyRDRUlEc6QdwpcpHv15I9qf8LtqX8T62P+cebwZsH1YYEXBj4NaqUTqVs
+        8PufvjPgf+augP+mVTqnvGaZfs7aG/g/c0fQ/6zmmH/C6YIlUB1YgBuDkH6V4rnYrRb/Y/ea/k/cZ/o/
+        bp/x//Ctuv8D6vX+iaUIVUFV4gY89jwieiWSl/z3ivz3PSbw3+co/3/fBul/4rGCDVAlhAG3E7e4cZn0
+        1bhb4v+jDsj9lwgVbINKkQBsGSQdaxSvy4YJdUNFyALkJ1k6AgYGAN1ugQzfc9sdAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ButtExportGoods.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
