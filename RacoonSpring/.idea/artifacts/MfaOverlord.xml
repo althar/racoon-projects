@@ -3,6 +3,11 @@
     <output-path>$PROJECT_DIR$/out/artifacts/MfaOverlord</output-path>
     <root id="archive" name="MfaOverlord.war">
       <element id="artifact" artifact-name="MfaOverlord:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.sun.mail:javax.mail:1.5.2" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

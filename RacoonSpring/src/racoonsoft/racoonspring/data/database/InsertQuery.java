@@ -40,7 +40,7 @@ public class InsertQuery extends Query
 
         ArrayList<Object> values = new ArrayList<Object>();
         StringBuilder valueBuilder = new StringBuilder(" VALUES (");
-
+        ArrayList<String> columnsAdded = new ArrayList<String>();
         // From fields
         for(int i=0; i<fs.length; i++)
         {
@@ -57,29 +57,39 @@ public class InsertQuery extends Query
                 builder.append(name);
                 values.add(fs[i].get(structure));
                 valueBuilder.append("?");
-                if(i+1<fs.length)
+                if(i<fs.length-1)
                 {
                     builder.append(",");
                     valueBuilder.append(",");
                 }
             }
+            columnsAdded.add(fs[i].getName());
         }
 
         // From HashMap
         HashMap<String,Object> fields = structure.fields();
         Iterator<String> iter = fields.keySet().iterator();
+        boolean semicolonAdded = false;
         while(iter.hasNext())
         {
             String name = iter.next();
             Object value = fields.get(name);
-
-            builder.append(name);
-            values.add(value);
-            valueBuilder.append("?");
-            if(iter.hasNext())
+            if(!columnsAdded.contains(name))
             {
-                builder.append(",");
-                valueBuilder.append(",");
+                if(!semicolonAdded)
+                {
+                    builder.append(",");
+                    valueBuilder.append(",");
+                    semicolonAdded = true;
+                }
+                builder.append(name);
+                values.add(value);
+                valueBuilder.append("?");
+                if(iter.hasNext())
+                {
+                    builder.append(",");
+                    valueBuilder.append(",");
+                }
             }
         }
         builder.append(") ");

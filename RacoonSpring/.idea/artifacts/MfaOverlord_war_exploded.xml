@@ -21,6 +21,7 @@
           <element id="library" level="project" name="org.json:json:20140107" />
           <element id="library" level="project" name="postgresql:postgresql:9.2-1002.jdbc4" />
           <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="project" name="com.sun.mail:javax.mail:1.5.2" />
         </element>
       </element>
     </root>
