@@ -10,7 +10,7 @@ public class HistoryStructure extends DatabaseStructure
     @DataStructureField(name = "tracking_id")
     private String trackingId;
     @DataStructureField(name = "user_id")
-    private String user_id;
+    private Long user_id;
     @DataStructureField(name = "user_agent")
     private String userAgent;
     @DataStructureField(name = "ip")

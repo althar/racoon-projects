@@ -172,6 +172,10 @@ public class DatabaseProcessor implements DataSource
     }
 
     // Insert...
+    public Long executeInsert(String table_name, DatabaseStructure structure) throws Exception
+    {
+        return executeInsert(table_name,structure.toHashmap(true));
+    }
     public Long executeInsert(String table_name, HashMap<String,Object> fields) throws SQLException
     {
         StringBuilder query = new StringBuilder();

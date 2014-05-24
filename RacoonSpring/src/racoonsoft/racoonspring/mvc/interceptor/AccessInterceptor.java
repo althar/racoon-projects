@@ -91,13 +91,6 @@ public class AccessInterceptor extends MainInterceptor
 
     public void checkAccess(HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-        ActionResult res = accessProc.authorization(request, response);
-        User user = res.getUser();
-        ArrayList<String> roles = res.getRoles();
-        boolean anonymous = res.anonymous();
-        request.setAttribute("anonymous",anonymous);
-        request.setAttribute("user_id",user.getLongValue("id"));
-        request.setAttribute("user",user);
-        request.setAttribute("roles",roles);
+        accessProc.checkAuthorization(request, response);
     }
 }

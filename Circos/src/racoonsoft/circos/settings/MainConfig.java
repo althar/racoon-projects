@@ -9,12 +9,16 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor;
+import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import racoonsoft.circos.database.PostgresqlDataSource;
 import racoonsoft.circos.structure.HistoryStructure;
 import racoonsoft.racoonspring.access.AccessProcessor;
+import racoonsoft.racoonspring.mail.MailProcessor;
 import racoonsoft.racoonspring.mvc.interceptor.AccessInterceptor;
 import racoonsoft.racoonspring.mvc.interceptor.HistoryInterceptor;
 
@@ -37,7 +41,22 @@ public class MainConfig extends WebMvcConfigurerAdapter
     @Value("${sms.password}")
     private String smsPassword;
 
-	@Bean
+    @Value("${smtp.login}")
+    private String smtpLogin;
+    @Value("${smtp.password}")
+    private String smtpPassword;
+    @Value("${smtp.host}")
+    private String smtpHost;
+    @Value("${smtp.enable_tls}")
+    private Boolean smtpEnableTls;
+
+    @Value("${host}")
+    private String hostt;
+
+    public static String host;
+
+
+    @Bean
 	public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer()
     {
         PropertySourcesPlaceholderConfigurer pspc =
@@ -60,6 +79,7 @@ public class MainConfig extends WebMvcConfigurerAdapter
     {
         try
         {
+            MainConfig.host = hostt;
             System.out.println("Get data source - start: "+dbHost);
             PostgresqlDataSource result = new PostgresqlDataSource(dbHost,dbName,5432,dbLogin,dbPassword,"org.postgresql.Driver","jdbc:postgresql:");
             System.out.println("Get data source - success");
@@ -79,8 +99,15 @@ public class MainConfig extends WebMvcConfigurerAdapter
         return userProc;
     }
 
+    @Bean
+    public MailProcessor mailProcessor()
+    {
+        MailProcessor proc = new MailProcessor(smtpHost,smtpLogin,smtpPassword,smtpEnableTls);
+        return proc;
+    }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+
         AccessInterceptor access = new AccessInterceptor(pgsqlDataSource(), userProcessor());
         HistoryInterceptor history = new HistoryInterceptor(HistoryStructure.class,pgsqlDataSource(), userProcessor());
         InterceptorRegistration historyInterceptor = registry.addInterceptor(history);
