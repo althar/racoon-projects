@@ -13,6 +13,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -85,14 +87,45 @@ public class MailProcessor implements Runnable
             T.join();
         }
     }
+
+    public boolean send(MailMessage message) throws Exception
+    {
+        if(Helper.isUnix())
+        {
+            System.out.println("Linux");
+            return sendMailLinux(message);
+        }
+        System.out.println("Not linux");
+        return sendMail(message);
+    }
+    public boolean sendMailLinux(MailMessage message) throws Exception
+    {
+        try
+        {
+            String to = message.to()[0];
+            for(int i=1; i<message.to().length; i++)
+            {
+                to+=","+message.to()[i];
+            }
+            String command = "sudo php -r \"mail('"+to+"','"+message.subject()+"', '"+message.getText()+"', 'FROM: "+message.from()+"');";
+            Process p = Runtime.getRuntime().exec(command);
+            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String s = "";
+            while ((s = stdInput.readLine()) != null) {
+                Logger.getAnonymousLogger().info(s);
+            }
+            return true;
+        }
+        catch (Exception ex)
+        {
+            System.out.println(Helper.getStackTraceString(ex));
+            return false;
+        }
+    }
     public boolean sendMail(MailMessage message)
     {
         try
         {
-//            String smtpHost = Settings.getStringSetting("smtp_server");
-//            String smtpLogin = Settings.getStringSetting("smtp_user");
-//            String smtpPassword = Settings.getStringSetting("smtp_password");
-//	        Boolean enableTls = Settings.getBooleanSetting("mail_enable_tls");
             if(message.isAuthorized())
             {
                 smtpHost = message.smtpHost();

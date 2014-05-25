@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" build-on-make="true" name="Circos:war exploded">
-    <output-path>$PROJECT_DIR$/../Circos/out/artifact</output-path>
+    <output-path>$PROJECT_DIR$/../Circos/out/artifacts/Circos_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
