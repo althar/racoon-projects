@@ -108,7 +108,7 @@ public class MailProcessor implements Runnable
             {
                 to+=","+message.to()[i];
             }
-            String command = "sudo php -r \"mail('"+to+"','"+message.subject()+"', '"+message.getText()+"', 'FROM: "+message.from()+"');\"";
+            String command = "php -r \"mail('"+to+"','"+message.subject()+"', '"+message.getText()+"', 'FROM: "+message.from()+"');\"";
             System.out.println(command + " (command)");
             Process p = Runtime.getRuntime().exec(command);
             p.waitFor();
