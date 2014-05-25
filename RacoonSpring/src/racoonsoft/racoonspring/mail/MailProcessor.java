@@ -102,18 +102,21 @@ public class MailProcessor implements Runnable
     {
         try
         {
+            System.out.print("Sending mail on Linux:");
             String to = message.to()[0];
             for(int i=1; i<message.to().length; i++)
             {
                 to+=","+message.to()[i];
             }
             String command = "sudo php -r \"mail('"+to+"','"+message.subject()+"', '"+message.getText()+"', 'FROM: "+message.from()+"');";
+            System.out.println(command + " (command)");
             Process p = Runtime.getRuntime().exec(command);
-            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            String s = "";
-            while ((s = stdInput.readLine()) != null) {
-                Logger.getAnonymousLogger().info(s);
-            }
+            p.waitFor();
+//            BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+//            String s = "";
+//            while ((s = stdInput.readLine()) != null) {
+//                Logger.getAnonymousLogger().info(s);
+//            }
             return true;
         }
         catch (Exception ex)
