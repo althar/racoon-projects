@@ -1,0 +1,10 @@
+# =================== Email on linux ===============
+1. sudo apt-get install php-mail
+2. sudo apt-get install sendmail
+3. sudo sendmailconfig
+4.
+
+# ================= Transfer file ==================
+1. apt-get install netcat (deploy server)
+2. nc -l -p 1234 > out.file (deploy server)
+3. nc -w 3 [destination] 1234 < out.file

@@ -11,6 +11,13 @@ import java.util.*;
 
 public class Helper
 {
+
+    public static boolean isUnix() {
+
+        String OS = System.getProperty("os.name").toLowerCase();
+        return (OS.indexOf("nix") >= 0 || OS.indexOf("nux") >= 0 || OS.indexOf("aix") > 0 );
+
+    }
     public static <T extends Object> T clone(Cloneable<T> baseObject) throws Exception
     {
         T resultObject = baseObject.createInstance();
