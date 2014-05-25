@@ -64,7 +64,7 @@
     <file path="/deploy.bat" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1401045566504" ignored="false" />
     <file path="/HistoryStructure.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400936234592" ignored="false" />
     <file path="/PostgresqlDataSource.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400768670753" ignored="false" />
-    <file path="/LoginController.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400952284272" ignored="false" />
+    <file path="/LoginController.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1401046451725" ignored="false" />
     <file path="$PROJECT_DIR$/../Zoomag/src/ftwo/zoomag/service/OldSiteIntegrator.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400769536981" ignored="false" />
     <file path="/OldSiteIntegrator.java" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400769536981" ignored="false" />
     <file path="/welcome.jsp" changelist="4f7c9a4a-8c03-4dcb-b3d4-388675fc8d0f" time="1400777980697" ignored="false" />
@@ -143,19 +143,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LoginController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/controller/face/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="24" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
+            <state line="45" column="8" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.3463588">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailProcessor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MailProcessor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/racoonsoft/racoonspring/mail/MailProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="5" selection-start="3704" selection-end="3704" vertical-scroll-proportion="0.8819444">
+            <state line="119" column="40" selection-start="3598" selection-end="3598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/properties/main.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -246,10 +255,10 @@
         <option value="$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/structure/header.jsp" />
         <option value="$PROJECT_DIR$/../Circos/web/WEB-INF/jsp/content/access.jsp" />
         <option value="$PROJECT_DIR$/src/racoonsoft/racoonspring/helper/Helper.java" />
-        <option value="$PROJECT_DIR$/../Circos/src/racoonsoft/circos/controller/face/LoginController.java" />
         <option value="$PROJECT_DIR$/doc/env-config" />
         <option value="$PROJECT_DIR$/../Circos/deploy/deploy.bat" />
         <option value="$PROJECT_DIR$/src/racoonsoft/racoonspring/mail/MailProcessor.java" />
+        <option value="$PROJECT_DIR$/../Circos/src/racoonsoft/circos/controller/face/LoginController.java" />
       </list>
     </option>
   </component>
@@ -1137,7 +1146,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43143812" sideWeight="0.56077796" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37012264" sideWeight="0.56077796" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25802615" sideWeight="0.43354943" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1287,23 +1296,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/properties/main.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.27324915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/racoonsoft/racoonspring/helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="64" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/controller/face/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="24" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1322,9 +1317,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/properties/main.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/racoonsoft/racoonspring/mail/MailProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="5" selection-start="3704" selection-end="3704" vertical-scroll-proportion="0.8819444">
+        <state line="119" column="40" selection-start="3598" selection-end="3598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Circos/src/racoonsoft/circos/controller/face/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="8" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.3463588">
           <folding />
         </state>
       </provider>
