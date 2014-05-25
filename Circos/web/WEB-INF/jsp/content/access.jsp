@@ -41,7 +41,7 @@
             <input type="submit" value="Войти">
 
             <h3>Вход через "Вконтакте"</h3>
-            <a href="https://oauth.vk.com/authorize?client_id=4378615&scope=friends,video,offline&redirect_uri=http://<%=MainConfig.host%>/vklogin&display=page">Войти</a>
+            <a href="https://oauth.vk.com/authorize?client_id=4378615&scope=friends,wall,messages,notify,offline&redirect_uri=http://<%=MainConfig.host%>/vklogin&display=page">Войти</a>
         </form>
     </c:otherwise>
 </c:choose>

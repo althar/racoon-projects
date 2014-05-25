@@ -44,7 +44,7 @@ public class LoginController extends CircosController
             return model;
         }
         MailMessage mess = new MailMessage("dfedorovich85@gmail.com",request.getParameter("login"),"Подтвреждение регистрации","Для подтверждения регистрации пройдите по ссылке http://localhost:8080/confirm?confirmation_link="+result.getData("confirmation_link"));
-        mail.sendMail(mess);
+        mail.send(mess);
         model = addHint(model,"Вам на почту отправлено письмо с подтверждением регистрации");
         model.addObject("action","registration");
         return model;

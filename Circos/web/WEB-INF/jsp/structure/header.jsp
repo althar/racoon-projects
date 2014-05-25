@@ -10,7 +10,7 @@
         <c:when test="${anonymous}">
             <a href="/login">Войти</a>
             /
-            <a href="https://oauth.vk.com/authorize?client_id=4378615&scope=friends,video,offline&redirect_uri=http://<%=MainConfig.host%>/vklogin&display=page">Войти через вконтакте </a>
+            <a href="https://oauth.vk.com/authorize?client_id=4378615&scope=friends,wall,messages,notify,offline&redirect_uri=http://<%=MainConfig.host%>/vklogin&display=page">Войти через вконтакте </a>
             или
             <a href="/registration"> Зарегистрироваться</a>
         </c:when>
